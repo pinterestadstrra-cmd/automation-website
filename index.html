@@ -8,16 +8,17 @@
 <style>
   /* FLAT UI - white / sky-blue / red / teal, all bright. No gradients,
      no heavy shadows, no black backgrounds. Contained, lag-free layout.
-     TABBED PAGES: one page per area (Overview / Blogger / Bluesky /
-     Cards / Logs / Settings). Click a tab at the top to switch pages.
-     LOGIN: only the repo owner's GitHub token can log in. The token is
-     checked against the owner (pinterestadstrra-cmd) - someone else's
-     token cannot log in. The token stays saved in YOUR browser
-     (localStorage) and you are logged in again automatically after a
-     refresh. LIVE: each page shows its own live log, refreshed every
-     15 seconds (GitHub Pages is static, so there is no server to push
-     live events - auto-refresh is the live view here). CARDS and
-     ACCOUNTS are UNLIMITED - add as many as you want, no cap. */
+     TABS: Overview / Blogger / Bluesky / Logs / Settings. Blogger cards
+     live on the Blogger tab, Bluesky cards on the Bluesky tab - each
+     card has its own schedule (hours + minutes, posts per day), its own
+     source/topic, and (Bluesky) its own reply settings. LOGIN: only the
+     repo owner's GitHub token can log in. The token stays saved in YOUR
+     browser (localStorage) and you are logged in again automatically
+     after a refresh. LIVE LOG: every tab shows a live log panel. GitHub
+     Pages is static, so there is no server to push live events (no real
+     SSE) - the panels auto-refresh every few seconds instead, and they
+     say so honestly. CARDS and ACCOUNTS are UNLIMITED - add as many as
+     you want, no cap. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #ffffff; color: #0f172a;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -25,6 +26,7 @@
   .wrap { max-width: 1180px; margin: 0 auto; padding: 16px; width: 100%; }
   h1 { font-size: 22px; color: #0ea5e9; }
   h2 { font-size: 17px; margin-bottom: 10px; color: #0f172a; }
+  h3 { font-size: 15px; margin: 14px 0 6px; color: #0369a1; }
   a { color: #0ea5e9; }
   button { cursor: pointer; border: none; border-radius: 8px;
     padding: 8px 14px; font-size: 14px; font-weight: 600; }
@@ -38,6 +40,7 @@
   .btn-teal { background: #14b8a6; color: #ffffff; }
   .btn-red { background: #ef4444; color: #ffffff; }
   .btn-ghost { background: #e2e8f0; color: #0f172a; }
+  .btn-small { padding: 6px 10px; font-size: 13px; }
   .hidden { display: none !important; }
 
   header { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
@@ -83,6 +86,12 @@
     border-radius: 999px; padding: 4px 12px; margin: 3px 4px 3px 0;
     font-size: 13px; font-weight: 600; }
   .chip-btn { cursor: pointer; border: none; }
+  /* Suggested preset chips (schedule quick-picks) */
+  .preset { display: inline-block; background: #e0f2fe; color: #0369a1;
+    border: 1px solid #bae6fd; border-radius: 999px; padding: 5px 12px;
+    margin: 3px 4px 3px 0; font-size: 13px; font-weight: 700; cursor: pointer; }
+  .preset:hover { background: #bae6fd; }
+  .preset.on { background: #0ea5e9; color: #ffffff; border-color: #0ea5e9; }
 
   .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px;
     padding: 14px; margin-bottom: 16px; }
@@ -93,12 +102,23 @@
   .card-row .meta { font-size: 13px; color: #475569; }
   .card-row .actions { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
   .card-row .actions button { padding: 6px 10px; font-size: 13px; }
+  .card-row.sel { background: #f0f9ff; border-radius: 8px; padding-left: 8px; padding-right: 8px; }
+  .badge { display: inline-block; border-radius: 999px; padding: 2px 10px;
+    font-size: 12px; font-weight: 700; }
+  .badge-active { background: #dcfce7; color: #166534; }
+  .badge-paused { background: #e2e8f0; color: #475569; }
+  .badge-error { background: #fee2e2; color: #991b1b; }
   .paused-tag { background: #fee2e2; color: #991b1b; border-radius: 999px;
     padding: 2px 10px; font-size: 12px; font-weight: 700; }
   .on-tag { background: #dcfce7; color: #166534; border-radius: 999px;
     padding: 2px 10px; font-size: 12px; font-weight: 700; }
   .off-tag { background: #e2e8f0; color: #475569; border-radius: 999px;
     padding: 2px 10px; font-size: 12px; font-weight: 700; }
+  .color-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%;
+    margin-right: 6px; vertical-align: middle; border: 1px solid #cbd5e1; }
+  .color-red { background: #ef4444; } .color-blue { background: #0ea5e9; }
+  .color-teal { background: #14b8a6; } .color-green { background: #22c55e; }
+  .color-amber { background: #f59e0b; } .color-purple { background: #a855f7; }
   .run-row { padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
   .run-row:last-child { border-bottom: none; }
   .run-ok { color: #166534; font-weight: 700; }
@@ -125,9 +145,23 @@
     border: 1px solid #bae6fd; border-radius: 10px; padding: 12px 14px;
     margin-bottom: 16px; overflow-wrap: break-word; }
   .note code { background: #e0f2fe; padding: 1px 6px; border-radius: 6px; }
+  .live-note { font-size: 12px; color: #94a3b8; margin-top: 6px; }
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
   .form-grid .full { grid-column: 1 / -1; }
   .row-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    margin-bottom: 10px; }
+  .toolbar input[type="text"], .toolbar select { width: auto; flex: 1 1 140px; min-width: 120px; }
+  .toolbar input[type="text"] { flex: 2 1 180px; }
+  .bulk-bar { display: none; gap: 8px; flex-wrap: wrap; align-items: center;
+    background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px;
+    padding: 10px 12px; margin-bottom: 10px; }
+  .bulk-bar.show { display: flex; }
+  .sched-preview { background: #f0fdfa; border: 1px solid #99f6e4;
+    border-radius: 10px; padding: 10px 12px; font-size: 13px; margin-top: 8px; }
+  .sched-preview b { color: #0369a1; }
+  .card-log { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;
+    padding: 10px; margin-top: 8px; max-height: 180px; overflow-y: auto; font-size: 13px; }
   .issue { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
   .issue:last-child { border-bottom: none; }
   .issue .lvl { display: inline-block; border-radius: 999px; padding: 2px 10px;
@@ -157,6 +191,10 @@
   .toggle-row .lbl { font-weight: 700; }
   .toggle-row .desc { font-size: 13px; color: #475569; }
   .toggle-row input[type="checkbox"] { width: 22px; height: 22px; }
+  .seg { display: inline-flex; gap: 0; border: 1px solid #cbd5e1;
+    border-radius: 8px; overflow: hidden; }
+  .seg button { border-radius: 0; background: #ffffff; color: #0f172a; padding: 8px 14px; }
+  .seg button.on { background: #0ea5e9; color: #ffffff; }
 
   @media (max-width: 820px) {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -232,12 +270,13 @@
       </div>
     </div>
 
-    <!-- Tabs: one page per area -->
+    <!-- Tabs: Overview / Blogger / Bluesky / Logs / Settings.
+         Blogger cards live on the Blogger tab, Bluesky cards on the
+         Bluesky tab - no separate Cards tab any more. -->
     <nav class="tabs" id="tabBar">
       <button class="tab-btn active" data-tab="overview">Overview</button>
       <button class="tab-btn" data-tab="blogger">Blogger</button>
       <button class="tab-btn" data-tab="bluesky">Bluesky</button>
-      <button class="tab-btn" data-tab="cards">Cards</button>
       <button class="tab-btn" data-tab="logs">Logs</button>
       <button class="tab-btn" data-tab="settings">Settings</button>
     </nav>
@@ -274,14 +313,20 @@
       </div>
 
       <div class="panel">
+        <h2>Cards due soon</h2>
+        <div id="dueSoonList"><span class="empty">No cards yet.</span></div>
+      </div>
+
+      <div class="panel">
         <h2>Recent articles</h2>
         <div id="postList"></div>
         <div id="daySummary" style="font-size:13px;color:#475569;margin-top:8px"></div>
       </div>
 
       <div class="panel">
-        <h2>Live log (latest)</h2>
+        <h2>Live log (latest) <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="overviewLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -293,6 +338,11 @@
           <div><div class="lbl">Blogger articles</div>
             <div class="desc">Write + publish articles from Bluesky trending topics.</div></div>
           <input type="checkbox" class="wf-toggle" data-config="blogger_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Bold formatting</div>
+            <div class="desc">Published articles use bold headings and a bold lead sentence, so they look organised and eye-catching (not plain text). Each Blogger card can turn this off for itself.</div></div>
+          <input type="checkbox" id="setBoldFormat" checked>
         </div>
         <div class="row-btns">
           <button class="btn-red" id="pauseBtn">Pause all</button>
@@ -335,9 +385,52 @@
         </div>
       </div>
 
+      <!-- Blogger cards: only blogger_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Blogger cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card writes + publishes its own articles on its own
+          schedule. Pick a suggested time below, or set your own hours
+          and minutes. A card with a custom topic writes about that
+          topic; otherwise it writes from Bluesky trending topics.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="bloggerCardSearch" placeholder="Search cards…">
+          <select id="bloggerCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="bloggerCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="bloggerBulkBar">
+          <b id="bloggerBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="bloggerBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="bloggerBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="bloggerBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="bloggerBulkClear">Clear</button>
+        </div>
+        <div id="bloggerCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addBloggerCardBtn">+ Add Blogger card</button>
+          <button class="btn-ghost" id="exportBloggerCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importBloggerCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="bloggerCardFormSlot"></div>
+      </div>
+
       <div class="panel">
-        <h2>Blogger live log</h2>
+        <h2>Blogger live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="bloggerLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -402,73 +495,53 @@
         </div>
       </div>
 
+      <!-- Bluesky cards: post / promo / reply cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Bluesky cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts, promotes a link, or replies on its own
+          schedule. Every card has its own reply settings: reply to
+          comments on <b>your own posts</b>, reply to <b>others'</b>
+          comments/posts, and how many replies per run. Make many cards
+          - one per account, topic or link.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="blueskyCardSearch" placeholder="Search cards…">
+          <select id="blueskyCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="blueskyCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="blueskyBulkBar">
+          <b id="blueskyBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="blueskyBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="blueskyBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="blueskyBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="blueskyBulkClear">Clear</button>
+        </div>
+        <div id="blueskyCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addBlueskyCardBtn">+ Add Bluesky card</button>
+          <button class="btn-ghost" id="exportBlueskyCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importBlueskyCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="blueskyCardFormSlot"></div>
+      </div>
+
       <div class="panel">
-        <h2>Bluesky live log</h2>
+        <h2>Bluesky live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="blueskyLog"><span class="empty">—</span></div>
-      </div>
-    </div>
-
-    <!-- ============ PAGE: CARDS ============ -->
-    <div id="page-cards" class="page hidden">
-      <div class="panel">
-        <h2>Cards workflow</h2>
-        <div class="toggle-row">
-          <div><div class="lbl">Manual cards</div>
-            <div class="desc">Run your cards on their schedule (or auto).</div></div>
-          <input type="checkbox" class="wf-toggle" data-config="cards_enabled" checked>
-        </div>
-        <div class="row-btns">
-          <button class="btn-ghost" id="pauseAllCardsBtn">Pause all cards</button>
-          <button class="btn-ghost" id="resumeAllCardsBtn">Resume all cards</button>
-        </div>
-        <div class="note" style="margin-top:10px">
-          Cards are <b>unlimited</b> - create as many as you want. A card
-          can post to Blogger, post to Bluesky, promote any link, or send
-          replies. Give it times (Dhaka) to schedule it, or leave the
-          times empty to run it automatically every interval.
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2>Cards</h2>
-        <div id="cardList"></div>
-        <div class="row-btns">
-          <button class="btn-blue" id="addCardBtn">+ Add card</button>
-        </div>
-        <form id="cardForm" class="hidden" style="margin-top:14px">
-          <div class="form-grid">
-            <div><label for="cfName">Card name</label>
-              <input id="cfName" required placeholder="e.g. Morning post"></div>
-            <div><label for="cfType">Type</label>
-              <select id="cfType">
-                <option value="blogger_post">Blogger post (write + publish)</option>
-                <option value="bluesky_post">Bluesky post (link the latest article)</option>
-                <option value="bluesky_promo">Bluesky promo (market ANY link you give)</option>
-                <option value="bluesky_reply">Bluesky replies (to comments)</option>
-              </select></div>
-            <div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>
-              <input id="cfLink" placeholder="https://..."></div>
-            <div><label for="cfAccount">Bluesky account (optional)</label>
-              <select id="cfAccount"><option value="">Any account</option></select></div>
-            <div><label for="cfCount">Count (how many per run)</label>
-              <input id="cfCount" type="number" min="0" value="1"></div>
-            <div><label for="cfInterval">Interval (minutes between runs)</label>
-              <input id="cfInterval" type="number" min="1" value="30"></div>
-            <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
-              <input id="cfTimes" placeholder="07:00, 19:00"></div>
-            <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
-              <textarea id="cfText" rows="2"></textarea></div>
-          </div>
-          <div class="row-btns">
-            <button type="submit" class="btn-teal">Save card</button>
-            <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="panel">
-        <h2>Cards live log</h2>
-        <div class="mini-log" id="cardsLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -493,13 +566,14 @@
       </div>
 
       <div class="log">
-        <h2>Activity Log</h2>
+        <h2>Activity log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <label for="logSearch">Search the log</label>
         <input id="logSearch" placeholder="type to filter, e.g. blogger, error, reply…">
         <div class="row-btns">
           <button class="btn-ghost" id="exportLogsBtn">Download log (.txt)</button>
         </div>
         <div class="log-list" id="logList" style="margin-top:10px"></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -555,6 +629,26 @@
       </div>
 
       <div class="panel">
+        <h2>New card defaults</h2>
+        <div class="note">Every new card starts with these settings. You can still change them per card.</div>
+        <div class="form-grid">
+          <div><label for="setDefHours">Default interval - hours</label>
+            <input id="setDefHours" type="number" min="0" value="0"></div>
+          <div><label for="setDefMinutes">Default interval - minutes</label>
+            <input id="setDefMinutes" type="number" min="0" value="30"></div>
+          <div><label for="setDefPerDay">Default posts per day (0 = unlimited)</label>
+            <input id="setDefPerDay" type="number" min="0" value="0"></div>
+          <div><label style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="setDefReplyOwn" checked> Default: reply to OWN posts</label></div>
+          <div><label style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="setDefReplyOthers" checked> Default: reply to OTHERS</label></div>
+        </div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveDefaultsBtn">Save card defaults</button>
+        </div>
+      </div>
+
+      <div class="panel">
         <h2>Setup checklist</h2>
         <div id="checkList"><span class="empty">Loading…</span></div>
         <div class="note" style="margin-top:10px">
@@ -579,6 +673,12 @@
           Passwords are never in the backup.
         </div>
       </div>
+
+      <div class="panel">
+        <h2>Settings live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="settingsLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -587,11 +687,14 @@
 /* GitHub-only control panel. LOGIN: the token must belong to the repo
    owner (pinterestadstrra-cmd). Someone else's token cannot log in.
    The token stays saved in this browser (localStorage) and you are
-   logged in again automatically after a refresh. TABBED PAGES: one
-   page per area - click a tab at the top to switch. Every page has
-   its own live log, refreshed automatically. GitHub Pages is static,
-   so there is no server to push live events - auto-refresh is the
-   live view here. CARDS and ACCOUNTS are UNLIMITED. */
+   logged in again automatically after a refresh. TABS: Overview /
+   Blogger / Bluesky / Logs / Settings. Blogger cards live on the
+   Blogger tab, Bluesky cards on the Bluesky tab. Every card has its
+   own schedule (hours + minutes, posts per day), its own source/topic
+   and (Bluesky) its own reply settings. LIVE LOG: every tab shows a
+   live log panel. GitHub Pages is static, so there is no server to
+   push live events (no real SSE) - the panels auto-refresh instead.
+   CARDS and ACCOUNTS are UNLIMITED. */
 const OWNER = "pinterestadstrra-cmd";
 const REPO = "automation-website";
 const BRANCH = "main";
@@ -600,6 +703,8 @@ const TOKEN_KEY = "gh_token";
 const BSKY_KEY = "bsky_accounts";
 const SEEN_KEY = "seen_issues";
 const REFRESH_KEY = "refresh_seconds";
+const TMPL_KEY = "card_templates";
+const DHAKA_TZ = "Asia/Dhaka";
 
 const $ = (id) => document.getElementById(id);
 
@@ -610,6 +715,17 @@ function esc(s) {
 function fmtTime(iso) {
   if (!iso) return "—";
   return String(iso).slice(0, 19).replace("T", " ") + " UTC";
+}
+function fmtDhaka(iso) {
+  if (!iso) return "—";
+  try {
+    const d = new Date(iso);
+    if (isNaN(d)) return "—";
+    return new Intl.DateTimeFormat("en-GB", {
+      timeZone: DHAKA_TZ, day: "2-digit", month: "short",
+      hour: "2-digit", minute: "2-digit", hour12: false,
+    }).format(d) + " Dhaka";
+  } catch (e) { return fmtTime(iso); }
 }
 function utf8ToB64(str) {
   const bytes = new TextEncoder().encode(str);
@@ -726,6 +842,9 @@ let accountHandles = [];
 let accountsDetail = [];
 let lastData = null;
 let lastRuns = -1;
+let fileCardRuns = {};
+let fileCardsEnriched = [];
+let lastFileCardsJson = "";
 async function loadStatus() {
   let data = null;
   try {
@@ -743,6 +862,7 @@ async function loadStatus() {
   $("noData").classList.add("hidden");
   lastData = data;
   fileCardRuns = data.file_card_runs || {};
+  fileCardsEnriched = data.file_cards || [];
 
   // New-run detection: show a banner when a fresh run finished.
   const runs = data.runs ?? 0;
@@ -764,14 +884,6 @@ async function loadStatus() {
 
   accountHandles = data.account_handles || [];
   accountsDetail = data.accounts_detail || [];
-  const accSel = $("cfAccount");
-  const cur = accSel.value;
-  accSel.innerHTML = '<option value="">Any account</option>';
-  accountHandles.forEach((h) => {
-    const o = document.createElement("option");
-    o.value = h; o.textContent = h; accSel.appendChild(o);
-  });
-  accSel.value = cur;
   renderAccountList();
   renderAccountControls();
 
@@ -800,8 +912,17 @@ async function loadStatus() {
   renderHealth(data.health || null);
   renderPosts(data.recent_posts || []);
   renderTrending(data.trending || []);
+  renderDueSoon();
   renderPageLogs(data.logs || []);
   renderFullLog(data.logs || []);
+  // Rebuild the card lists only when the worker's card data changed,
+  // so the auto-refresh never yanks the list out from under the user.
+  const fcJson = JSON.stringify(fileCardsEnriched);
+  if (fcJson !== lastFileCardsJson) {
+    lastFileCardsJson = fcJson;
+    renderCardLists();
+  }
+  tickCountdowns();
 }
 
 /* ---------- Problems + Health ---------- */
@@ -919,12 +1040,14 @@ function renderPosts(recent) {
       .map((d) => d + ": " + byDay[d]).join("  ·  ");
 }
 
-/* ---------- per-page live logs (filtered by area) ---------- */
+/* ---------- per-page live logs (filtered by area) ----------
+   Honest note: GitHub Pages is static, so there is no server push
+   (no real SSE). These panels auto-refresh with the dashboard. */
 const LOG_FILTERS = {
   overview: null, // all, latest 8
   blogger: ["blogger", "publish", "article", "photo", "topic", "forced", "no photo"],
   bluesky: ["bluesky", "bsky", "reply", "replied", "login"],
-  cards: ["card"],
+  settings: ["settings", "config", "toggle", "saved", "paused", "resume"],
 };
 function logLineHtml(l) {
   return '<div class="log-line' +
@@ -950,7 +1073,7 @@ function renderPageLogs(logs) {
   render("overviewLog", null, 8);
   render("bloggerLog", LOG_FILTERS.blogger, 10);
   render("blueskyLog", LOG_FILTERS.bluesky, 10);
-  render("cardsLog", LOG_FILTERS.cards, 10);
+  render("settingsLog", LOG_FILTERS.settings, 10);
 }
 function renderFullLog(logs) {
   const q = ($("logSearch").value || "").trim().toLowerCase();
@@ -1005,6 +1128,9 @@ const CONFIG_DEFAULTS = {
   post_window_end: "", dry_run: false, max_consecutive_failures: 5,
   paused: false, force_topic: "", blogger_enabled: true, bsky_enabled: true,
   replies_enabled: true, cards_enabled: true, topic_blacklist: "",
+  blogger_bold_format: true, card_default_interval_hours: 0,
+  card_default_interval_minutes: 30, card_default_posts_per_day: 0,
+  card_default_reply_own: true, card_default_reply_others: true,
 };
 async function loadConfig() {
   if (!getToken()) return;
@@ -1016,6 +1142,10 @@ async function loadConfig() {
     fillConfigInputs();
     syncToggles();
   } catch (e) { /* leave defaults */ }
+}
+function cfgBool(key, def) {
+  if (config[key] === undefined || config[key] === null) return def;
+  return String(config[key]).toLowerCase() !== "false";
 }
 function fillConfigInputs() {
   $("setBlogger").value = config.blogger_daily_limit ?? 0;
@@ -1032,6 +1162,12 @@ function fillConfigInputs() {
   $("setDryRun").checked =
     String(config.dry_run || "false").toLowerCase() === "true";
   $("blacklistInput").value = config.topic_blacklist || "";
+  $("setBoldFormat").checked = cfgBool("blogger_bold_format", true);
+  $("setDefHours").value = config.card_default_interval_hours ?? 0;
+  $("setDefMinutes").value = config.card_default_interval_minutes ?? 30;
+  $("setDefPerDay").value = config.card_default_posts_per_day ?? 0;
+  $("setDefReplyOwn").checked = cfgBool("card_default_reply_own", true);
+  $("setDefReplyOthers").checked = cfgBool("card_default_reply_others", true);
   const paused = String(config.paused || false).toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
@@ -1058,6 +1194,12 @@ function readConfigInputs() {
   config.max_consecutive_failures = Number($("setMaxFail").value) || 5;
   config.dry_run = $("setDryRun").checked;
   config.topic_blacklist = $("blacklistInput").value.trim();
+  config.blogger_bold_format = $("setBoldFormat").checked;
+  config.card_default_interval_hours = Number($("setDefHours").value) || 0;
+  config.card_default_interval_minutes = Number($("setDefMinutes").value) || 0;
+  config.card_default_posts_per_day = Number($("setDefPerDay").value) || 0;
+  config.card_default_reply_own = $("setDefReplyOwn").checked;
+  config.card_default_reply_others = $("setDefReplyOthers").checked;
 }
 async function saveConfig(msg) {
   if (needToken()) return false;
@@ -1087,6 +1229,14 @@ $("saveSchedulingBtn").addEventListener("click", () => saveAllSettings("Update s
 $("saveBloggerBtn").addEventListener("click", () => saveAllSettings("Update Blogger settings from dashboard"));
 $("saveBlueskyBtn").addEventListener("click", () => saveAllSettings("Update Bluesky settings from dashboard"));
 $("saveBlacklistBtn").addEventListener("click", () => saveAllSettings("Update topic blacklist from dashboard"));
+$("saveDefaultsBtn").addEventListener("click", () => saveAllSettings("Update card defaults from dashboard"));
+$("setBoldFormat").addEventListener("change", async () => {
+  if (needToken()) { fillConfigInputs(); return; }
+  config.blogger_bold_format = $("setBoldFormat").checked;
+  if (await saveConfig("Toggle bold formatting from dashboard")) {
+    showMsg("Bold formatting is now " + (config.blogger_bold_format ? "ON" : "OFF") + ".", true);
+  } else { fillConfigInputs(); }
+});
 async function setForceTopic(topic) {
   if (needToken()) return;
   await loadConfig();
@@ -1197,15 +1347,35 @@ async function loadChecklist() {
   }
 }
 
-/* ---------- cards (GitHub API) - UNLIMITED ---------- */
+/* ================= CARDS (GitHub API, data/cards.json) - UNLIMITED =================
+   Blogger cards live on the Blogger tab, Bluesky cards on the Bluesky
+   tab. Every card has its own schedule (hours + minutes, posts per
+   day), its own source/topic and (Bluesky) its own reply settings. */
 let cardsSha = "";
 let cards = [];
-let editingCardIndex = -1;
-let fileCardRuns = {};
+let editingCard = null; // { tab: "blogger"|"bluesky", index: -1 }
+const BLOGGER_TYPES = ["blogger_post"];
+const BLUESKY_TYPES = ["bluesky_post", "bluesky_promo", "bluesky_reply"];
+const TYPE_LABELS = {
+  blogger_post: "Blogger post",
+  bluesky_post: "Bluesky post",
+  bluesky_promo: "Bluesky promo",
+  bluesky_reply: "Bluesky replies",
+};
+const COLOR_LABELS = {
+  "": "No colour", red: "Red", blue: "Blue", teal: "Teal",
+  green: "Green", amber: "Amber", purple: "Purple",
+};
+const cardUI = {
+  blogger: { q: "", sort: "name", filter: "all", selected: new Set() },
+  bluesky: { q: "", sort: "name", filter: "all", selected: new Set() },
+};
 
 async function loadCards() {
   if (!getToken()) {
-    $("cardList").innerHTML = '<div class="empty">Log in to load and edit cards.</div>';
+    ["bloggerCardList", "blueskyCardList"].forEach((id) => {
+      $(id).innerHTML = '<div class="empty">Log in to load and edit cards.</div>';
+    });
     return;
   }
   try {
@@ -1213,49 +1383,253 @@ async function loadCards() {
     cardsSha = file.sha || "";
     cards = JSON.parse(b64ToUtf8(file.content || ""));
     if (!Array.isArray(cards)) cards = [];
-    renderCards();
+    renderCardLists();
   } catch (e) {
-    $("cardList").innerHTML = '<div class="empty">Could not load cards: ' + esc(e.message) + "</div>";
+    ["bloggerCardList", "blueskyCardList"].forEach((id) => {
+      $(id).innerHTML = '<div class="empty">Could not load cards: ' + esc(e.message) + "</div>";
+    });
   }
 }
 
-function renderCards() {
-  const list = $("cardList");
-  list.innerHTML = "";
-  if (!cards.length) {
-    list.innerHTML = '<div class="empty">No cards yet. Add your first card below. (Unlimited - add as many as you want.)</div>';
+/* ---------- per-card schedule math (Dhaka) - same math as the worker ---------- */
+const DHAKA_MS = 6 * 3600 * 1000; // Asia/Dhaka is UTC+6, no daylight saving
+function cardIntervalMin(c) {
+  const h = Number(c.interval_hours || 0) || 0;
+  const m = Number(c.interval_minutes || 0) || 0;
+  const total = h * 60 + m;
+  return total > 0 ? total : 30;
+}
+function parseScheduleTimes(c) {
+  let raw = c.schedule_times || [];
+  if (typeof raw === "string") {
+    try { raw = JSON.parse(raw); }
+    catch (e) { raw = raw.split(",").map((s) => s.trim()).filter(Boolean); }
+  }
+  const out = [];
+  (Array.isArray(raw) ? raw : []).forEach((t) => {
+    const m = String(t).match(/^(\d{1,2}):(\d{2})$/);
+    if (m) {
+      const hh = Number(m[1]), mm = Number(m[2]);
+      if (hh >= 0 && hh <= 23 && mm >= 0 && mm <= 59) out.push([hh, mm]);
+    }
+  });
+  return out.sort((a, b) => (a[0] * 60 + a[1]) - (b[0] * 60 + b[1]));
+}
+function nextRunsForCard(c, count, lastRunIso) {
+  count = count || 5;
+  const now = Date.now();
+  const out = [];
+  const times = parseScheduleTimes(c);
+  if (times.length) {
+    // Dhaka wall clock = UTC ms + 6h. Find Dhaka midnight (as a UTC instant).
+    let dayStart = Math.floor((now + DHAKA_MS) / 86400000) * 86400000 - DHAKA_MS;
+    for (let d = 0; d < 370 && out.length < count; d++) {
+      for (const [hh, mm] of times) {
+        const cand = dayStart + d * 86400000 + (hh * 60 + mm) * 60000;
+        if (cand > now) out.push(new Date(cand));
+        if (out.length >= count) break;
+      }
+    }
+    return out.slice(0, count);
+  }
+  const interval = cardIntervalMin(c) * 60000;
+  let base = lastRunIso ? new Date(lastRunIso).getTime() : NaN;
+  let nxt = isNaN(base) ? now + interval : base + interval;
+  while (nxt <= now) nxt += interval;
+  for (let i = 0; i < count; i++) { out.push(new Date(nxt)); nxt += interval; }
+  return out;
+}
+function intervalLabel(c) {
+  const h = Number(c.interval_hours || 0) || 0;
+  const m = Number(c.interval_minutes || 0) || 0;
+  if (h > 0 && m > 0) return "every " + h + "h " + m + "m";
+  if (h > 0) return "every " + h + "h";
+  return "every " + (m > 0 ? m : 30) + "m";
+}
+function countdownText(iso) {
+  if (!iso) return "never run";
+  const diff = new Date(iso).getTime() - Date.now();
+  if (diff <= 0) return "due now";
+  const mins = Math.floor(diff / 60000);
+  if (mins < 60) return "in " + mins + "m";
+  const h = Math.floor(mins / 60);
+  if (h < 24) return "in " + h + "h " + (mins % 60) + "m";
+  return "in " + Math.floor(h / 24) + "d " + (h % 24) + "h";
+}
+function tickCountdowns() {
+  document.querySelectorAll("[data-next]").forEach((el) => {
+    el.textContent = countdownText(el.dataset.next);
+  });
+}
+setInterval(tickCountdowns, 30000);
+
+/* ---------- card enrichment (status, counters, next runs) ---------- */
+function enrichCard(c) {
+  const e = fileCardsEnriched.find((x) => x.name === c.name) || {};
+  const lastRun = e.last_run || fileCardRuns[c.name || ""] || "";
+  const nextRuns = (e.next_runs && e.next_runs.length)
+    ? e.next_runs
+    : nextRunsForCard(c, 5, lastRun).map((d) => d.toISOString());
+  const status = (c.status || "active");
+  const computed = status !== "active" ? "paused"
+    : (e.computed_status || (e.fail > 0 && e.last_error ? "error" : "active"));
+  return {
+    lastRun: lastRun,
+    nextRuns: nextRuns,
+    nextRun: nextRuns[0] || "",
+    computed: computed,
+    success: e.success ?? 0,
+    fail: e.fail ?? 0,
+    lastError: e.last_error || "",
+    runsToday: e.runs_today ?? 0,
+  };
+}
+function statusBadge(computed) {
+  if (computed === "paused") return '<span class="badge badge-paused">Paused</span>';
+  if (computed === "error") return '<span class="badge badge-error">Error</span>';
+  return '<span class="badge badge-active">Active</span>';
+}
+function colorDot(color) {
+  if (!color) return "";
+  return '<span class="color-dot color-' + esc(color) + '" title="' +
+    esc(COLOR_LABELS[color] || color) + '"></span>';
+}
+
+/* ---------- card lists (one per tab) ---------- */
+function cardsForTab(tab) {
+  const types = tab === "blogger" ? BLOGGER_TYPES : BLUESKY_TYPES;
+  return cards
+    .map((c, i) => ({ c: c, i: i }))
+    .filter((x) => types.includes(x.c.type));
+}
+function renderCardLists() {
+  renderCardList("blogger");
+  renderCardList("bluesky");
+  renderDueSoon();
+}
+function renderCardList(tab) {
+  const ui = cardUI[tab];
+  const listEl = $(tab === "blogger" ? "bloggerCardList" : "blueskyCardList");
+  if (!listEl) return;
+  let rows = cardsForTab(tab);
+  if (ui.filter !== "all") {
+    rows = rows.filter((x) => enrichCard(x.c).computed === ui.filter);
+  }
+  if (ui.q) {
+    const q = ui.q.toLowerCase();
+    rows = rows.filter((x) => {
+      const c = x.c;
+      return [c.name, c.link, c.topic_override, c.notes, c.account_handle, c.type]
+        .some((v) => String(v || "").toLowerCase().includes(q));
+    });
+  }
+  const sorters = {
+    name: (a, b) => String(a.c.name || "").localeCompare(String(b.c.name || "")),
+    lastrun: (a, b) => String(enrichCard(b.c).lastRun || "").localeCompare(String(enrichCard(a.c).lastRun || "")),
+    status: (a, b) => String(enrichCard(a.c).computed).localeCompare(String(enrichCard(b.c).computed)),
+    nextrun: (a, b) => String(enrichCard(a.c).nextRun || "9999").localeCompare(String(enrichCard(b.c).nextRun || "9999")),
+  };
+  rows.sort(sorters[ui.sort] || sorters.name);
+  listEl.innerHTML = "";
+  if (!rows.length) {
+    listEl.innerHTML = '<div class="empty">No cards here yet. Add your first card below. (Unlimited - add as many as you want.)</div>';
+    updateBulkBar(tab);
     return;
   }
-  cards.forEach((c, i) => {
+  rows.forEach((x) => {
+    const c = x.c, i = x.i;
+    const e = enrichCard(c);
     const div = document.createElement("div");
-    div.className = "card-row";
-    const paused = (c.status || "active") !== "active";
-    const lastRun = fileCardRuns[c.name || ""];
+    div.className = "card-row" + (ui.selected.has(i) ? " sel" : "");
+    const perDay = Number(c.posts_per_day || 0);
     div.innerHTML =
-      "<b>" + esc(c.name || ("Card " + (i + 1))) + "</b> " +
-      (paused ? '<span class="paused-tag">Paused</span>' : '<span class="on-tag">Active</span>') +
-      '<div class="meta">' + esc(c.type || "") +
+      '<label style="display:flex;gap:8px;align-items:flex-start;margin:0">' +
+      '<input type="checkbox" class="card-check" data-tab="' + tab + '" data-i="' + i + '"' +
+      (ui.selected.has(i) ? " checked" : "") + ' style="margin-top:4px">' +
+      "<span style=\"flex:1\">" +
+      colorDot(c.color) + "<b>" + esc(c.name || ("Card " + (i + 1))) + "</b> " +
+      statusBadge(e.computed) +
+      '<div class="meta">' + esc(TYPE_LABELS[c.type] || c.type) +
       (c.link ? " · " + esc(c.link) : "") +
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
-      " · every " + esc(c.interval_minutes || 30) + " min" +
+      " · " + esc(intervalLabel(c)) +
+      (perDay > 0 ? " · " + perDay + "/day (today: " + e.runsToday + ")" : " · unlimited/day") +
       (c.schedule_times && c.schedule_times.length
-        ? " · " + esc(c.schedule_times.join(", ")) : "") +
-      (lastRun ? " · last run: " + esc(fmtTime(lastRun)) : " · never run") +
+        ? " · " + esc((Array.isArray(c.schedule_times) ? c.schedule_times : [c.schedule_times]).join(", ")) : "") +
+      " · last: " + esc(e.lastRun ? fmtDhaka(e.lastRun) : "never") +
+      ' · next: <span data-next="' + esc(e.nextRun) + '">' + esc(countdownText(e.nextRun)) + "</span>" +
+      " · ✓" + e.success + " ✗" + e.fail +
+      (c.source === "custom" && c.topic_override ? " · topic: " + esc(c.topic_override) : "") +
+      (c.type !== "blogger_post" && (c.reply_own || c.reply_others)
+        ? " · replies: " + (c.reply_own ? "own " : "") + (c.reply_others ? "others" : "") : "") +
+      (c.type === "blogger_post" && c.bold_format === false ? " · no bold" : "") +
       "</div>" +
+      (c.notes ? '<div class="meta">Note: ' + esc(c.notes) + "</div>" : "") +
+      (e.lastError ? '<div class="meta" style="color:#dc2626">Last error: ' + esc(e.lastError) + "</div>" : "") +
+      "</span></label>" +
       '<div class="actions">' +
-      '<button class="btn-ghost" data-act="edit" data-i="' + i + '">Edit</button>' +
-      '<button class="btn-ghost" data-act="dup" data-i="' + i + '">Duplicate</button>' +
-      '<button class="btn-ghost" data-act="toggle" data-i="' + i + '">' +
-        (paused ? "Resume" : "Pause") + "</button>" +
-      '<button class="btn-red" data-act="del" data-i="' + i + '">Delete</button>' +
-      "</div>";
-    list.appendChild(div);
+      '<button class="btn-teal btn-small" data-act="run" data-i="' + i + '">Run now</button>' +
+      '<button class="btn-ghost btn-small" data-act="edit" data-i="' + i + '">Edit</button>' +
+      '<button class="btn-ghost btn-small" data-act="dup" data-i="' + i + '">Duplicate</button>' +
+      '<button class="btn-ghost btn-small" data-act="toggle" data-i="' + i + '">' +
+        ((c.status || "active") === "active" ? "Pause" : "Resume") + "</button>" +
+      '<button class="btn-ghost btn-small" data-act="logs" data-i="' + i + '">Logs</button>' +
+      '<button class="btn-ghost btn-small" data-act="tmpl" data-i="' + i + '">Save as template</button>' +
+      '<button class="btn-red btn-small" data-act="del" data-i="' + i + '">Delete</button>' +
+      "</div>" +
+      '<div class="card-log hidden" id="cardLog-' + i + '"></div>';
+    listEl.appendChild(div);
   });
-  list.querySelectorAll("button[data-act]").forEach((btn) => {
-    btn.addEventListener("click", () => cardAction(btn.dataset.act, Number(btn.dataset.i)));
+  listEl.querySelectorAll("button[data-act]").forEach((btn) => {
+    btn.addEventListener("click", () => cardAction(btn.dataset.act, Number(btn.dataset.i), tab));
+  });
+  listEl.querySelectorAll(".card-check").forEach((box) => {
+    box.addEventListener("change", () => {
+      const idx = Number(box.dataset.i);
+      if (box.checked) cardUI[tab].selected.add(idx);
+      else cardUI[tab].selected.delete(idx);
+      updateBulkBar(tab);
+      box.closest(".card-row").classList.toggle("sel", box.checked);
+    });
+  });
+  updateBulkBar(tab);
+}
+function updateBulkBar(tab) {
+  const ui = cardUI[tab];
+  const bar = $(tab === "blogger" ? "bloggerBulkBar" : "blueskyBulkBar");
+  const cnt = $(tab === "blogger" ? "bloggerBulkCount" : "blueskyBulkCount");
+  cnt.textContent = ui.selected.size + " selected";
+  bar.classList.toggle("show", ui.selected.size > 0);
+}
+function renderDueSoon() {
+  const el = $("dueSoonList");
+  if (!el) return;
+  if (!cards.length) {
+    el.innerHTML = '<span class="empty">No cards yet.</span>';
+    return;
+  }
+  const rows = cards.map((c, i) => ({ c: c, i: i, e: enrichCard(c) }))
+    .filter((x) => (x.c.status || "active") === "active" && x.e.nextRun)
+    .sort((a, b) => String(a.e.nextRun).localeCompare(String(b.e.nextRun)))
+    .slice(0, 5);
+  if (!rows.length) {
+    el.innerHTML = '<span class="empty">No active cards with a next run.</span>';
+    return;
+  }
+  el.innerHTML = "";
+  rows.forEach((x) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = colorDot(x.c.color) + "<b>" + esc(x.c.name || "") + "</b> " +
+      statusBadge(x.e.computed) +
+      '<div class="meta">' + esc(TYPE_LABELS[x.c.type] || x.c.type) +
+      ' · next: <span data-next="' + esc(x.e.nextRun) + '">' +
+      esc(countdownText(x.e.nextRun)) + "</span> (" + esc(fmtDhaka(x.e.nextRun)) + ")</div>";
+    el.appendChild(div);
   });
 }
 
+/* ---------- card actions ---------- */
 async function saveCards(msg) {
   if (needToken()) return false;
   try {
@@ -1273,79 +1647,481 @@ async function saveCards(msg) {
     return false;
   }
 }
-
-async function cardAction(act, i) {
+async function requestCardRun(name) {
+  if (needToken()) return;
+  // 1) Ask the worker to run this card first (state.json flag).
+  try {
+    let sha = "";
+    let state = {};
+    try {
+      const file = await gh("/contents/data/state.json");
+      sha = file.sha || "";
+      state = JSON.parse(b64ToUtf8(file.content || "")) || {};
+    } catch (e) { /* no state file yet - create it */ }
+    state.run_card_now = name;
+    const body = {
+      message: "Run card now: " + name,
+      content: utf8ToB64(JSON.stringify(state, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (sha) body.sha = sha;
+    await gh("/contents/data/state.json", "PUT", body);
+  } catch (e) {
+    showMsg("Could not set run-now (" + e.message + ") - dispatching the worker anyway.", false);
+  }
+  // 2) Start the worker.
+  try {
+    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
+    showMsg("Worker started - card '" + name + "' will run first.", true);
+  } catch (e) {
+    showMsg("Could not start the worker: " + e.message, false);
+  }
+}
+function cardLogLines(name) {
+  const logs = (lastData && lastData.logs) || [];
+  const list = logs.filter((l) => String(l.message || "").toLowerCase().includes(String(name || "").toLowerCase()));
+  if (!list.length) return '<div class="empty">No log entries for this card yet.</div>';
+  return list.slice(0, 10).map(logLineHtml).join("");
+}
+async function cardAction(act, i, tab) {
+  const c = cards[i];
+  if (!c) return;
+  if (act === "run") { requestCardRun(c.name || ""); return; }
   if (act === "del") {
-    if (!confirm("Delete this card?")) return;
+    if (!confirm("Delete card '" + (c.name || "") + "'?")) return;
     cards.splice(i, 1);
-    if (await saveCards("Delete card from dashboard")) renderCards();
+    cardUI[tab].selected.delete(i);
+    if (await saveCards("Delete card from dashboard")) renderCardLists();
     return;
   }
   if (act === "toggle") {
-    cards[i].status = (cards[i].status || "active") === "active" ? "paused" : "active";
-    if (await saveCards("Toggle card from dashboard")) renderCards();
+    c.status = (c.status || "active") === "active" ? "paused" : "active";
+    if (await saveCards("Toggle card from dashboard")) renderCardLists();
     return;
   }
   if (act === "dup") {
-    const copy = JSON.parse(JSON.stringify(cards[i]));
+    const copy = JSON.parse(JSON.stringify(c));
     copy.name = (copy.name || "Card") + " (copy)";
     copy.status = "active";
     cards.push(copy);
-    if (await saveCards("Duplicate card from dashboard")) renderCards();
+    if (await saveCards("Duplicate card from dashboard")) renderCardLists();
+    return;
+  }
+  if (act === "tmpl") {
+    saveTemplate(c.name || "Card", c);
+    return;
+  }
+  if (act === "logs") {
+    const box = $("cardLog-" + i);
+    if (!box) return;
+    if (box.classList.contains("hidden")) {
+      box.innerHTML = cardLogLines(c.name || "");
+      box.classList.remove("hidden");
+    } else {
+      box.classList.add("hidden");
+    }
     return;
   }
   if (act === "edit") {
-    editingCardIndex = i;
-    const c = cards[i];
-    $("cfName").value = c.name || "";
-    $("cfType").value = c.type || "blogger_post";
-    $("cfLink").value = c.link || "";
-    $("cfAccount").value = c.account_handle || "";
-    $("cfCount").value = c.count || 1;
-    $("cfInterval").value = c.interval_minutes || 30;
-    $("cfTimes").value = (c.schedule_times || []).join(", ");
-    $("cfText").value = c.text || "";
-    $("cardForm").classList.remove("hidden");
-    $("cardForm").scrollIntoView({ behavior: "smooth", block: "center" });
+    openCardForm(tab, i);
   }
 }
-$("pauseAllCardsBtn").addEventListener("click", async () => {
-  if (!cards.length) return;
-  cards.forEach((c) => { c.status = "paused"; });
-  if (await saveCards("Pause all cards from dashboard")) renderCards();
-});
-$("resumeAllCardsBtn").addEventListener("click", async () => {
-  if (!cards.length) return;
-  cards.forEach((c) => { c.status = "active"; });
-  if (await saveCards("Resume all cards from dashboard")) renderCards();
+function bulkAction(tab, action) {
+  const ui = cardUI[tab];
+  if (!ui.selected.size) return;
+  const idxs = Array.from(ui.selected).sort((a, b) => b - a);
+  if (action === "delete") {
+    if (!confirm("Delete " + idxs.length + " selected card(s)?")) return;
+    idxs.forEach((i) => cards.splice(i, 1));
+  } else if (action === "pause") {
+    idxs.forEach((i) => { if (cards[i]) cards[i].status = "paused"; });
+  } else if (action === "resume") {
+    idxs.forEach((i) => { if (cards[i]) cards[i].status = "active"; });
+  }
+  ui.selected.clear();
+  saveCards("Bulk " + action + " cards from dashboard").then((ok) => {
+    if (ok) renderCardLists();
+  });
+}
+["blogger", "bluesky"].forEach((tab) => {
+  $(tab + "BulkPause").addEventListener("click", () => bulkAction(tab, "pause"));
+  $(tab + "BulkResume").addEventListener("click", () => bulkAction(tab, "resume"));
+  $(tab + "BulkDelete").addEventListener("click", () => bulkAction(tab, "delete"));
+  $(tab + "BulkClear").addEventListener("click", () => {
+    cardUI[tab].selected.clear();
+    renderCardLists();
+  });
+  $(tab + "CardSearch").addEventListener("input", (e) => {
+    cardUI[tab].q = e.target.value.trim().toLowerCase();
+    renderCardList(tab);
+  });
+  $(tab + "CardSort").addEventListener("change", (e) => {
+    cardUI[tab].sort = e.target.value;
+    renderCardList(tab);
+  });
+  $(tab + "CardFilter").addEventListener("change", (e) => {
+    cardUI[tab].filter = e.target.value;
+    renderCardList(tab);
+  });
 });
 
-$("cardForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  if (needToken()) return;
-  const times = $("cfTimes").value.split(",").map((s) => s.trim()).filter(Boolean);
-  const card = {
+/* ---------- card export / import (JSON file) ---------- */
+function downloadJson(filename, data) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+function exportCards() {
+  downloadJson("automation-cards.json", cards);
+  showMsg("Cards downloaded (" + cards.length + " cards).", true);
+}
+$("exportBloggerCardsBtn").addEventListener("click", exportCards);
+$("exportBlueskyCardsBtn").addEventListener("click", exportCards);
+async function importCardsFile(file) {
+  if (!file) return;
+  try {
+    const data = JSON.parse(await file.text());
+    if (!Array.isArray(data)) throw new Error("the file must contain a list of cards");
+    const good = data.filter((c) => c && typeof c === "object" && c.name && c.type);
+    if (!good.length) throw new Error("no valid cards in the file");
+    if (!confirm("Replace all " + cards.length + " cards with the " + good.length + " imported card(s)?")) return;
+    cards = good;
+    cardUI.blogger.selected.clear();
+    cardUI.bluesky.selected.clear();
+    if (await saveCards("Import cards from dashboard")) renderCardLists();
+  } catch (e) {
+    showMsg("Import failed: " + e.message, false);
+  }
+}
+$("importBloggerCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importBlueskyCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+
+/* ---------- card form (one form, rendered into the active tab) ---------- */
+const INTERVAL_PRESETS = [
+  { label: "15 min", h: 0, m: 15 }, { label: "30 min", h: 0, m: 30 },
+  { label: "1 hr", h: 1, m: 0 }, { label: "2 hr", h: 2, m: 0 },
+  { label: "4 hr", h: 4, m: 0 }, { label: "6 hr", h: 6, m: 0 },
+  { label: "12 hr", h: 12, m: 0 }, { label: "24 hr", h: 24, m: 0 },
+];
+const PERDAY_PRESETS = [1, 2, 3, 5, 10];
+
+function openCardForm(tab, index) {
+  // Only one form open at a time (the other tab's slot is cleared).
+  $("bloggerCardFormSlot").innerHTML = "";
+  $("blueskyCardFormSlot").innerHTML = "";
+  editingCard = { tab: tab, index: (index === undefined ? -1 : index) };
+  const existing = index >= 0 ? cards[index] : null;
+  const isBlogger = tab === "blogger";
+  const types = isBlogger ? BLOGGER_TYPES : BLUESKY_TYPES;
+  const defH = Number(config.card_default_interval_hours ?? 0) || 0;
+  const defM = Number(config.card_default_interval_minutes ?? 30) || 30;
+  const defPerDay = Number(config.card_default_posts_per_day ?? 0) || 0;
+  const c = existing || {
+    name: "", type: types[0], link: "", account_handle: "", count: 1,
+    interval_hours: defH, interval_minutes: defM, posts_per_day: defPerDay,
+    schedule_times: [], text: "", status: "active",
+    source: "trending", topic_override: "",
+    reply_own: cfgBool("card_default_reply_own", true),
+    reply_others: cfgBool("card_default_reply_others", true),
+    replies_per_run: 0, bold_format: true, notes: "", color: "",
+  };
+  const typeOptions = types.map((t) =>
+    '<option value="' + t + '"' + (c.type === t ? " selected" : "") + ">" +
+    esc(TYPE_LABELS[t]) + "</option>").join("");
+  const accOptions = '<option value="">Any account</option>' +
+    accountHandles.map((h) =>
+      '<option value="' + esc(h) + '"' + (c.account_handle === h ? " selected" : "") + ">" +
+      esc(h) + "</option>").join("");
+  const colorOptions = Object.keys(COLOR_LABELS).map((k) =>
+    '<option value="' + k + '"' + ((c.color || "") === k ? " selected" : "") + ">" +
+    esc(COLOR_LABELS[k]) + "</option>").join("");
+  const tmplOptions = '<option value="">Load a template…</option>' +
+    getTemplates().map((t, i) =>
+      '<option value="' + i + '">' + esc(t.name) + "</option>").join("");
+  const slot = $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot");
+  slot.innerHTML =
+    '<form id="cardForm" style="margin-top:14px;border-top:2px solid #e0f2fe;padding-top:14px">' +
+    "<h3>" + (existing ? "Edit card" : "New " + (isBlogger ? "Blogger" : "Bluesky") + " card") + "</h3>" +
+    '<div class="form-grid">' +
+    '<div><label for="cfName">Card name</label>' +
+    '<input id="cfName" required placeholder="e.g. Morning post" value="' + esc(c.name || "") + '"></div>' +
+    '<div><label for="cfType">Type</label><select id="cfType">' + typeOptions + "</select></div>" +
+    '<div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>' +
+    '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
+    '<div><label for="cfAccount">Bluesky account (optional)</label>' +
+    '<select id="cfAccount">' + accOptions + "</select></div>" +
+    '<div><label for="cfCount">Count (how many per run)</label>' +
+    '<input id="cfCount" type="number" min="0" value="' + esc(c.count ?? 1) + '"></div>' +
+    "</div>" +
+
+    "<h3>Schedule - when this card runs</h3>" +
+    '<div><label>Suggested (tap one)</label><div id="cfIntervalPresets">' +
+    INTERVAL_PRESETS.map((p) =>
+      '<button type="button" class="preset" data-h="' + p.h + '" data-m="' + p.m + '">' +
+      esc(p.label) + "</button>").join("") + "</div></div>" +
+    '<div class="form-grid">' +
+    '<div><label for="cfHours">Hours (custom)</label>' +
+    '<input id="cfHours" type="number" min="0" value="' + esc(c.interval_hours ?? defH) + '"></div>' +
+    '<div><label for="cfMinutes">Minutes (custom)</label>' +
+    '<input id="cfMinutes" type="number" min="0" value="' + esc(c.interval_minutes ?? defM) + '"></div>' +
+    "</div>" +
+    '<div><label>Posts per day - suggested (tap one, 0 = unlimited)</label><div id="cfPerDayPresets">' +
+    PERDAY_PRESETS.map((n) =>
+      '<button type="button" class="preset" data-n="' + n + '">' + n + "</button>").join("") +
+    '<button type="button" class="preset" data-n="0">Unlimited</button></div></div>' +
+    '<div class="form-grid">' +
+    '<div><label for="cfPerDay">Posts per day (custom, 0 = unlimited)</label>' +
+    '<input id="cfPerDay" type="number" min="0" value="' + esc(c.posts_per_day ?? defPerDay) + '"></div>' +
+    '<div><label for="cfTimes">Fixed times (Dhaka, comma-separated HH:MM, optional)</label>' +
+    '<input id="cfTimes" placeholder="07:00, 19:00" value="' +
+    esc((Array.isArray(c.schedule_times) ? c.schedule_times : []).join(", ")) + '"></div>' +
+    "</div>" +
+    '<div class="sched-preview" id="cfPreview"></div>' +
+
+    '<div id="cfSourceSection">' +
+    "<h3>Source - what to write about</h3>" +
+    '<div class="seg" id="cfSourceSeg">' +
+    '<button type="button" data-src="trending">Bluesky trending</button>' +
+    '<button type="button" data-src="custom">Custom topic</button>' +
+    "</div>" +
+    '<div id="cfTopicWrap" class="hidden">' +
+    '<label for="cfTopic">Custom topic (this card writes about this topic)</label>' +
+    '<input id="cfTopic" placeholder="e.g. Bangladesh cricket" value="' + esc(c.topic_override || "") + '"></div>' +
+    "</div>" +
+
+    '<div id="cfReplySection">' +
+    "<h3>Replies - what this card replies to</h3>" +
+    '<div class="toggle-row"><div><div class="lbl">Reply to comments on MY posts</div>' +
+    '<div class="desc">Reply to comments people leave on this account\'s own posts.</div></div>' +
+    '<input type="checkbox" id="cfReplyOwn"' + (c.reply_own !== false ? " checked" : "") + "></div>" +
+    '<div class="toggle-row"><div><div class="lbl">Reply to OTHERS\' comments / posts</div>' +
+    '<div class="desc">Reply to fresh comments on high-engagement posts by others.</div></div>' +
+    '<input type="checkbox" id="cfReplyOthers"' + (c.reply_others !== false ? " checked" : "") + "></div>" +
+    '<div class="form-grid"><div><label for="cfRepliesPerRun">Replies per run (0 = global setting)</label>' +
+    '<input id="cfRepliesPerRun" type="number" min="0" value="' + esc(c.replies_per_run ?? 0) + '"></div></div>' +
+    "</div>" +
+
+    '<div id="cfBoldSection">' +
+    "<h3>Article formatting</h3>" +
+    '<label style="display:flex;align-items:center;gap:8px">' +
+    '<input type="checkbox" id="cfBold"' + (c.bold_format !== false ? " checked" : "") + "> " +
+    "Bold formatting (bold headings + bold lead sentence in Blogger articles)</label>" +
+    "</div>" +
+
+    '<div class="form-grid">' +
+    '<div><label for="cfColor">Colour label</label><select id="cfColor">' + colorOptions + "</select></div>" +
+    '<div><label for="cfText">Custom text (optional - overrides the AI text)</label>' +
+    '<textarea id="cfText" rows="2">' + esc(c.text || "") + "</textarea></div>" +
+    '<div class="full"><label for="cfNotes">Notes (for you - shown on the card)</label>' +
+    '<input id="cfNotes" placeholder="e.g. for the morning news slot" value="' + esc(c.notes || "") + '"></div>' +
+    "</div>" +
+
+    "<h3>Template</h3>" +
+    '<div class="toolbar"><select id="cfTemplate" style="flex:2">' + tmplOptions + "</select>" +
+    '<button type="button" class="btn-ghost btn-small" id="cfLoadTmplBtn">Load template</button>' +
+    '<button type="button" class="btn-ghost btn-small" id="cfSaveTmplBtn">Save as template</button>' +
+    '<button type="button" class="btn-ghost btn-small" id="cfDelTmplBtn">Delete template</button></div>' +
+
+    '<div class="row-btns">' +
+    '<button type="submit" class="btn-teal">Save card</button>' +
+    '<button type="button" class="btn-ghost" id="cfCancelBtn">Cancel</button>' +
+    "</div></form>";
+  wireCardForm(tab, c);
+  slot.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function wireCardForm(tab, card) {
+  const isBlogger = tab === "blogger";
+  const form = $("cardForm");
+  const showSource = () => {
+    const isBlog = $("cfType").value === "blogger_post";
+    $("cfSourceSection").classList.toggle("hidden", !isBlog);
+    $("cfReplySection").classList.toggle("hidden", isBlog);
+    $("cfBoldSection").classList.toggle("hidden", !isBlog);
+  };
+  let source = card.source || "trending";
+  const syncSourceSeg = () => {
+    document.querySelectorAll("#cfSourceSeg button").forEach((b) => {
+      b.classList.toggle("on", b.dataset.src === source);
+    });
+    $("cfTopicWrap").classList.toggle("hidden", source !== "custom");
+  };
+  document.querySelectorAll("#cfSourceSeg button").forEach((b) => {
+    b.addEventListener("click", () => { source = b.dataset.src; syncSourceSeg(); updatePreview(); });
+  });
+  $("cfType").addEventListener("change", () => { showSource(); updatePreview(); });
+  const updatePreview = () => {
+    const h = Number($("cfHours").value) || 0;
+    const m = Number($("cfMinutes").value) || 0;
+    const times = $("cfTimes").value.split(",").map((s) => s.trim()).filter(Boolean);
+    const perDay = Number($("cfPerDay").value) || 0;
+    const lastRun = card && card.name ? (fileCardRuns[card.name] || "") : "";
+    const preview = nextRunsForCard(
+      { interval_hours: h, interval_minutes: m, schedule_times: times }, 5, lastRun);
+    $("cfPreview").innerHTML = "<b>Next 5 runs (Dhaka):</b><br>" +
+      preview.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>") +
+      (perDay > 0 ? "<br><b>" + perDay + " per day max</b>" : "<br>Unlimited per day");
+  };
+  ["cfHours", "cfMinutes", "cfTimes", "cfPerDay"].forEach((id) => {
+    $(id).addEventListener("input", updatePreview);
+  });
+  document.querySelectorAll("#cfIntervalPresets .preset").forEach((b) => {
+    b.addEventListener("click", () => {
+      $("cfHours").value = b.dataset.h;
+      $("cfMinutes").value = b.dataset.m;
+      document.querySelectorAll("#cfIntervalPresets .preset").forEach((x) => x.classList.remove("on"));
+      b.classList.add("on");
+      updatePreview();
+    });
+  });
+  document.querySelectorAll("#cfPerDayPresets .preset").forEach((b) => {
+    b.addEventListener("click", () => {
+      $("cfPerDay").value = b.dataset.n;
+      document.querySelectorAll("#cfPerDayPresets .preset").forEach((x) => x.classList.remove("on"));
+      b.classList.add("on");
+      updatePreview();
+    });
+  });
+  $("cfLoadTmplBtn").addEventListener("click", () => {
+    const idx = Number($("cfTemplate").value);
+    const tmpls = getTemplates();
+    if (isNaN(idx) || !tmpls[idx]) { showMsg("Pick a template first.", false); return; }
+    const t = tmpls[idx].card;
+    openCardForm(tab, -1);
+    // Fill the fresh form from the template (keep the tab's type list).
+    const tc = JSON.parse(JSON.stringify(t));
+    if (!((isBlogger ? BLOGGER_TYPES : BLUESKY_TYPES).includes(tc.type))) {
+      tc.type = isBlogger ? "blogger_post" : "bluesky_post";
+    }
+    fillCardForm(tc);
+    showMsg("Template loaded: " + tmpls[idx].name, true);
+  });
+  $("cfSaveTmplBtn").addEventListener("click", () => {
+    const data = readCardForm(tab);
+    if (!data.name) { showMsg("Give the card a name first.", false); return; }
+    saveTemplate(data.name, data);
+  });
+  $("cfDelTmplBtn").addEventListener("click", () => {
+    const idx = Number($("cfTemplate").value);
+    const tmpls = getTemplates();
+    if (isNaN(idx) || !tmpls[idx]) { showMsg("Pick a template first.", false); return; }
+    if (!confirm("Delete template '" + tmpls[idx].name + "'?")) return;
+    tmpls.splice(idx, 1);
+    saveTemplates(tmpls);
+    openCardForm(tab, editingCard.index);
+    showMsg("Template deleted.", true);
+  });
+  $("cfCancelBtn").addEventListener("click", () => {
+    $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+    editingCard = null;
+  });
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (needToken()) return;
+    const data = readCardForm(tab);
+    if (!data.name) { showMsg("Give the card a name.", false); return; }
+    if (editingCard.index >= 0) {
+      data.status = cards[editingCard.index].status || "active";
+      cards[editingCard.index] = data;
+    } else {
+      data.status = "active";
+      cards.push(data);
+    }
+    if (await saveCards(editingCard.index >= 0 ? "Edit card from dashboard" : "Add card from dashboard")) {
+      $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+      editingCard = null;
+      renderCardLists();
+    }
+  });
+  showSource();
+  syncSourceSeg();
+  updatePreview();
+}
+function readCardForm(tab) {
+  const isBlog = $("cfType").value === "blogger_post";
+  return {
     name: $("cfName").value.trim(),
     type: $("cfType").value,
     link: $("cfLink").value.trim(),
     account_handle: $("cfAccount").value || "",
     count: Number($("cfCount").value) || 1,
-    interval_minutes: Number($("cfInterval").value) || 30,
-    schedule_times: times,
+    interval_hours: Number($("cfHours").value) || 0,
+    interval_minutes: Number($("cfMinutes").value) || 0,
+    posts_per_day: Number($("cfPerDay").value) || 0,
+    schedule_times: $("cfTimes").value.split(",").map((s) => s.trim()).filter(Boolean),
     text: $("cfText").value.trim(),
-    status: editingCardIndex >= 0
-      ? (cards[editingCardIndex].status || "active") : "active",
+    source: isBlog ? ($("cfTopic").value.trim() ? "custom" : sourceOfForm()) : "trending",
+    topic_override: isBlog ? $("cfTopic").value.trim() : "",
+    reply_own: isBlog ? false : $("cfReplyOwn").checked,
+    reply_others: isBlog ? false : $("cfReplyOthers").checked,
+    replies_per_run: isBlog ? 0 : (Number($("cfRepliesPerRun").value) || 0),
+    bold_format: isBlog ? $("cfBold").checked : true,
+    notes: $("cfNotes").value.trim(),
+    color: $("cfColor").value || "",
   };
-  if (!card.name) { showMsg("Give the card a name.", false); return; }
-  if (editingCardIndex >= 0) cards[editingCardIndex] = card;
-  else cards.push(card);
-  if (await saveCards(editingCardIndex >= 0 ? "Edit card from dashboard" : "Add card from dashboard")) {
-    renderCards();
-    $("cardForm").classList.add("hidden");
-    editingCardIndex = -1;
-    e.target.reset();
-  }
-});
+}
+function sourceOfForm() {
+  const on = document.querySelector("#cfSourceSeg button.on");
+  return on ? on.dataset.src : "trending";
+}
+function fillCardForm(c) {
+  $("cfName").value = c.name || "";
+  $("cfType").value = c.type || "blogger_post";
+  $("cfLink").value = c.link || "";
+  $("cfAccount").value = c.account_handle || "";
+  $("cfCount").value = c.count ?? 1;
+  $("cfHours").value = c.interval_hours ?? 0;
+  $("cfMinutes").value = c.interval_minutes ?? 30;
+  $("cfPerDay").value = c.posts_per_day ?? 0;
+  $("cfTimes").value = (Array.isArray(c.schedule_times) ? c.schedule_times : []).join(", ");
+  $("cfText").value = c.text || "";
+  $("cfTopic").value = c.topic_override || "";
+  $("cfReplyOwn").checked = c.reply_own !== false;
+  $("cfReplyOthers").checked = c.reply_others !== false;
+  $("cfRepliesPerRun").value = c.replies_per_run ?? 0;
+  $("cfBold").checked = c.bold_format !== false;
+  $("cfNotes").value = c.notes || "";
+  $("cfColor").value = c.color || "";
+  const src = c.source || "trending";
+  document.querySelectorAll("#cfSourceSeg button").forEach((b) => {
+    b.classList.toggle("on", b.dataset.src === src);
+  });
+  $("cfTopicWrap").classList.toggle("hidden", src !== "custom");
+  const evt = new Event("change");
+  $("cfType").dispatchEvent(evt);
+}
+
+/* ---------- card templates (saved in this browser) ---------- */
+function getTemplates() {
+  try {
+    const list = JSON.parse(localStorage.getItem(TMPL_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((t) => t && t.card) : [];
+  } catch (e) { return []; }
+}
+function saveTemplates(list) {
+  try { localStorage.setItem(TMPL_KEY, JSON.stringify(list)); } catch (e) {}
+}
+function saveTemplate(name, card) {
+  const tmpls = getTemplates();
+  const idx = tmpls.findIndex((t) => t.name === name);
+  const entry = { name: name, card: JSON.parse(JSON.stringify(card)) };
+  if (idx >= 0) tmpls[idx] = entry;
+  else tmpls.push(entry);
+  saveTemplates(tmpls);
+  showMsg("Template saved: " + name, true);
+  if (editingCard) openCardForm(editingCard.tab, editingCard.index);
+}
+$("addBloggerCardBtn").addEventListener("click", () => openCardForm("blogger", -1));
+$("addBlueskyCardBtn").addEventListener("click", () => openCardForm("bluesky", -1));
 
 /* ---------- Bluesky accounts (saved to the GitHub Secret) - UNLIMITED ---------- */
 function getSavedAccounts() {
@@ -1559,7 +2335,7 @@ $("importFile").addEventListener("change", async (e) => {
     if (Array.isArray(backup.cards)) {
       cards = backup.cards;
       await saveCards("Import backup from dashboard");
-      renderCards();
+      renderCardLists();
     }
     showMsg("Backup imported.", true);
     await refreshAll();
@@ -1624,16 +2400,7 @@ $("runWorkerBtn").addEventListener("click", async () => {
     showMsg("Could not start the worker: " + e.message, false);
   }
 });
-$("addCardBtn").addEventListener("click", () => {
-  editingCardIndex = -1;
-  $("cardForm").reset();
-  $("cardForm").classList.remove("hidden");
-  $("cardForm").scrollIntoView({ behavior: "smooth", block: "center" });
-});
-$("cancelCardBtn").addEventListener("click", () => {
-  $("cardForm").classList.add("hidden");
-  editingCardIndex = -1;
-});
+$("refreshBtn").addEventListener("click", refreshAll);
 async function refreshAll() {
   await loadStatus();
   await loadConfig();
@@ -1643,9 +2410,8 @@ async function refreshAll() {
   await loadAccountCtl();
   renderAccountList();
   renderAccountControls();
-  renderCards();
+  renderCardLists();
 }
-$("refreshBtn").addEventListener("click", refreshAll);
 
 /* ---------- start: auto-login with the saved token ---------- */
 (async function init() {
