@@ -145,6 +145,12 @@ DEFAULT_POST_WINDOW_START = ""        # e.g. "07:00" Dhaka (empty = no window)
 DEFAULT_POST_WINDOW_END = ""          # e.g. "23:00" Dhaka (empty = no window)
 DEFAULT_DRY_RUN = "false"             # "true" = test mode, nothing is posted
 DEFAULT_MAX_CONSECUTIVE_FAILURES = 5  # circuit breaker: pause after N failed runs
+# --- per-workflow On/Off toggles (each cycle can be switched off) ---
+DEFAULT_BLOGGER_ENABLED = "true"      # Blogger article cycle on/off
+DEFAULT_BSKY_ENABLED = "true"         # Bluesky posting cycle on/off
+DEFAULT_REPLIES_ENABLED = "true"      # Bluesky replies cycle on/off
+DEFAULT_CARDS_ENABLED = "true"        # manual cards cycle on/off
+DEFAULT_TOPIC_BLACKLIST = ""          # comma-separated topics to never write about
 
 UTC = timezone.utc
 
@@ -259,6 +265,11 @@ def init_db():
         "post_window_end": str(DEFAULT_POST_WINDOW_END),
         "dry_run": str(DEFAULT_DRY_RUN),
         "max_consecutive_failures": str(DEFAULT_MAX_CONSECUTIVE_FAILURES),
+        "blogger_enabled": str(DEFAULT_BLOGGER_ENABLED),
+        "bsky_enabled": str(DEFAULT_BSKY_ENABLED),
+        "replies_enabled": str(DEFAULT_REPLIES_ENABLED),
+        "cards_enabled": str(DEFAULT_CARDS_ENABLED),
+        "topic_blacklist": str(DEFAULT_TOPIC_BLACKLIST),
     }
     for k, v in defaults.items():
         cur.execute("INSERT OR IGNORE INTO settings(key, value) VALUES(?, ?)", (k, v))
@@ -437,7 +448,10 @@ def write_dashboard_json(state):
                           "blogger_posts_per_run", "reply_own_per_run",
                           "post_interval_minutes", "post_window_start",
                           "post_window_end", "dry_run",
-                          "max_consecutive_failures")},
+                          "max_consecutive_failures", "blogger_enabled",
+                          "bsky_enabled", "replies_enabled", "cards_enabled",
+                          "topic_blacklist")},
+            "file_card_runs": state.get("file_card_runs", {}),
             "account_handles": [a["handle"] for a in list_accounts()],
             "accounts_detail": accounts_detail,
             "health": health_check(state),
@@ -1106,7 +1120,7 @@ def candidate_topics(state, limit=5):
     posted = [t.lower() for t in state.get("posted_topics", [])]
     # Forced topic (set from the dashboard) goes FIRST, if not already posted.
     forced = str(get_setting("force_topic", "") or "").strip()
-    if forced and forced.lower() not in posted:
+    if forced and forced.lower() not in posted and not topic_blacklisted(forced):
         verified, sources, items = verify_news(forced)
         if verified:
             facts = "\n".join(f"- {i['title']} ({i['source']})" for i in items[:5])
@@ -1116,6 +1130,9 @@ def candidate_topics(state, limit=5):
             log("info", f"forced topic not verified (needs 2 sources): {forced}")
     for topic in get_bluesky_trending(limit=10):
         if topic.lower() in posted:
+            continue
+        if topic_blacklisted(topic):
+            log("info", f"topic skipped (blacklisted): {topic}")
             continue
         verified, sources, items = verify_news(topic)
         if verified:
@@ -1267,10 +1284,11 @@ def record_reply(post_uri, comment_uri, reply_text, account_handle):
         conn.close()
 
 
-def run_bluesky_cycle(state, article=None):
+def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True):
     """Post to Bluesky accounts (unique post per account) + replies.
     Respects: per-account enable/disable + posts-per-day, separate reply
-    limits for OWN posts vs OTHERS' posts, daily reply cap, dry-run."""
+    limits for OWN posts vs OTHERS' posts, daily reply cap, dry-run,
+    and the do_posts / do_replies workflow switches."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
@@ -1283,41 +1301,44 @@ def run_bluesky_cycle(state, article=None):
     per_run = int(get_setting("bsky_posts_per_run", str(DEFAULT_BSKY_POSTS_PER_RUN)) or 1)
     state.setdefault("bsky_posted", [])
     # --- 1) One UNIQUE post per account (same post never goes to all accounts).
-    for acc in accounts:
-        handle = acc["handle"]
-        if not account_enabled(handle):
-            log("info", f"bluesky: account {handle} is disabled - skipping")
-            continue
-        limit = account_posts_limit(handle)
-        if limit > 0 and posts_today_for_account(state, handle) >= limit:
-            log("info", f"bluesky: account {handle} hit its daily post limit ({limit})")
-            continue
-        key = f"{handle}|{article['url']}"
-        if key in state["bsky_posted"]:
-            continue
-        if dry:
-            log("warning", f"[DRY RUN] would post to Bluesky ({handle}): {article['title']}")
-            continue
-        client = bsky_login(handle, acc["app_password"])
-        if not client:
-            record_issue("warning", "bsky_login", f"Bluesky login failed: {handle}")
-            continue
-        text = ai_write(BSKY_POST_PROMPT.format(headline=article["title"],
-                                                link=article["url"]),
-                        max_tokens=400)
-        if not text:
-            text = f"{article['title']}\n{article['url']}"
-        img = article.get("image_path") or ""
-        posted = retry_with_backoff(
-            lambda: bluesky_post(client, text,
-                                 image_path=img if img and os.path.exists(img) else None,
-                                 image_alt=article["title"][:100]),
-            attempts=3, base_delay=5, label=f"bluesky post ({handle})")
-        if posted:
-            state["bsky_posted"].append(key)
-            record_bsky_post(state, handle)
-            log("info", f"bluesky posted ({handle}): {posted[1]}")
-        time.sleep(5)
+    if do_posts:
+        for acc in accounts:
+            handle = acc["handle"]
+            if not account_enabled(handle):
+                log("info", f"bluesky: account {handle} is disabled - skipping")
+                continue
+            limit = account_posts_limit(handle)
+            if limit > 0 and posts_today_for_account(state, handle) >= limit:
+                log("info", f"bluesky: account {handle} hit its daily post limit ({limit})")
+                continue
+            key = f"{handle}|{article['url']}"
+            if key in state["bsky_posted"]:
+                continue
+            if dry:
+                log("warning", f"[DRY RUN] would post to Bluesky ({handle}): {article['title']}")
+                continue
+            client = bsky_login(handle, acc["app_password"])
+            if not client:
+                record_issue("warning", "bsky_login", f"Bluesky login failed: {handle}")
+                continue
+            text = ai_write(BSKY_POST_PROMPT.format(headline=article["title"],
+                                                    link=article["url"]),
+                            max_tokens=400)
+            if not text:
+                text = f"{article['title']}\n{article['url']}"
+            img = article.get("image_path") or ""
+            posted = retry_with_backoff(
+                lambda: bluesky_post(client, text,
+                                     image_path=img if img and os.path.exists(img) else None,
+                                     image_alt=article["title"][:100]),
+                attempts=3, base_delay=5, label=f"bluesky post ({handle})")
+            if posted:
+                state["bsky_posted"].append(key)
+                record_bsky_post(state, handle)
+                log("info", f"bluesky posted ({handle}): {posted[1]}")
+            time.sleep(5)
+    if not do_replies:
+        return
     # --- 2) Replies to fresh comments on high-engagement posts (OTHERS).
     # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
     daily_cap = int(get_setting("bsky_reply_daily_cap", str(DEFAULT_BSKY_REPLY_DAILY_CAP)) or 0)
@@ -1684,6 +1705,28 @@ def is_dry_run():
     return str(get_setting("dry_run", str(DEFAULT_DRY_RUN))).strip().lower() == "true"
 
 
+def workflow_enabled(name):
+    """Is a workflow cycle switched on? name: blogger|bsky|replies|cards."""
+    key = {"blogger": "blogger_enabled", "bsky": "bsky_enabled",
+           "replies": "replies_enabled", "cards": "cards_enabled"}.get(name)
+    if not key:
+        return True
+    default = {"blogger": DEFAULT_BLOGGER_ENABLED, "bsky": DEFAULT_BSKY_ENABLED,
+               "replies": DEFAULT_REPLIES_ENABLED,
+               "cards": DEFAULT_CARDS_ENABLED}[name]
+    return str(get_setting(key, default)).strip().lower() != "false"
+
+
+def topic_blacklisted(topic):
+    """True if the topic matches the blacklist (comma-separated, substring)."""
+    raw = str(get_setting("topic_blacklist", "") or "")
+    words = [w.strip().lower() for w in raw.split(",") if w.strip()]
+    if not words:
+        return False
+    low = (topic or "").lower()
+    return any(w in low for w in words)
+
+
 def in_post_window():
     """True if now (Dhaka) is inside the posting window, or no window set."""
     start = str(get_setting("post_window_start", "") or "").strip()
@@ -1868,22 +1911,35 @@ def run_worker():
         pass
     else:
         failures = 0
-        try:
-            article = run_blogger_cycle(state)
-        except Exception as e:
-            record_issue("error", "blogger_cycle", f"blogger cycle failed: {e}")
-            failures += 1
+        # --- per-workflow On/Off: each cycle can be switched off in Settings.
+        if workflow_enabled("blogger"):
+            try:
+                article = run_blogger_cycle(state)
+            except Exception as e:
+                record_issue("error", "blogger_cycle", f"blogger cycle failed: {e}")
+                failures += 1
+                article = None
+        else:
+            log("info", "blogger workflow is OFF - skipping")
             article = None
-        try:
-            run_bluesky_cycle(state, article=article)
-        except Exception as e:
-            record_issue("error", "bluesky_cycle", f"bluesky cycle failed: {e}")
-            failures += 1
-        try:
-            run_cards_cycle(state)
-        except Exception as e:
-            record_issue("error", "cards_cycle", f"cards cycle failed: {e}")
-            failures += 1
+        if workflow_enabled("bsky") or workflow_enabled("replies"):
+            try:
+                run_bluesky_cycle(state, article=article,
+                                  do_posts=workflow_enabled("bsky"),
+                                  do_replies=workflow_enabled("replies"))
+            except Exception as e:
+                record_issue("error", "bluesky_cycle", f"bluesky cycle failed: {e}")
+                failures += 1
+        else:
+            log("info", "bluesky workflows are OFF - skipping")
+        if workflow_enabled("cards"):
+            try:
+                run_cards_cycle(state)
+            except Exception as e:
+                record_issue("error", "cards_cycle", f"cards cycle failed: {e}")
+                failures += 1
+        else:
+            log("info", "cards workflow is OFF - skipping")
         if failures >= 3:
             state["consecutive_failures"] = int(state.get("consecutive_failures", 0) or 0) + 1
         else:
