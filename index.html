@@ -10,9 +10,14 @@
      no heavy shadows, no black backgrounds. Contained layout.
      LOGIN: only the repo owner's GitHub token can log in. The token is
      checked against the owner (pinterestadstrra-cmd) - someone else's
-     token cannot even log in. The token stays saved in YOUR browser
+     token cannot log in. The token stays saved in YOUR browser
      (localStorage) and you are logged in again automatically after a
-     refresh. No server, no Render. */
+     refresh. ALL control panels work right after login - only the
+     stats wait for the worker. LIVE: the dashboard refreshes itself
+     every 15 seconds (GitHub Pages is static, so there is no server
+     to push live events - auto-refresh is the live view here).
+     PROBLEMS: every error the worker finds is shown in the Problems
+     panel at the top, in one place. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #ffffff; color: #0f172a;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -26,6 +31,7 @@
   button:disabled { opacity: .5; cursor: not-allowed; }
   input, select, textarea { width: 100%; padding: 9px 10px; font-size: 14px;
     border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff; }
+  input[type="checkbox"] { width: auto; padding: 0; }
   label { display: block; font-size: 13px; font-weight: 600; color: #475569;
     margin: 10px 0 4px; }
   .btn-blue { background: #0ea5e9; color: #ffffff; }
@@ -39,6 +45,8 @@
     border-bottom: 2px solid #e0f2fe; }
   .pill { display: inline-block; padding: 4px 12px; border-radius: 999px;
     background: #e0f2fe; color: #0369a1; font-size: 13px; font-weight: 600; }
+  .pill-live { background: #dcfce7; color: #166534; }
+  .pill-bad { background: #fee2e2; color: #991b1b; }
   .status-msg { padding: 10px 14px; border-radius: 10px; margin: 12px 0;
     font-size: 14px; display: none; }
   .status-ok { display: block; background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
@@ -47,9 +55,11 @@
   .login-box { max-width: 520px; margin: 48px auto; background: #ffffff;
     border: 2px solid #bae6fd; border-radius: 14px; padding: 24px; }
   .login-box h1 { margin-bottom: 8px; }
-  .paused-banner { background: #fef2f2; border: 2px solid #ef4444;
-    color: #991b1b; border-radius: 10px; padding: 12px 14px; margin: 16px 0;
+  .banner { border-radius: 10px; padding: 12px 14px; margin: 16px 0;
     font-weight: 700; }
+  .banner-paused { background: #fef2f2; border: 2px solid #ef4444; color: #991b1b; }
+  .banner-dry { background: #fefce8; border: 2px solid #eab308; color: #854d0e; }
+  .banner-breaker { background: #fef2f2; border: 2px solid #dc2626; color: #991b1b; }
 
   .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px; margin: 16px 0; }
@@ -67,6 +77,8 @@
 
   .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px;
     padding: 14px; margin-bottom: 16px; }
+  .panel-red { border: 2px solid #fca5a5; }
+  .panel-teal { border: 2px solid #99f6e4; }
   .card-row { padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
   .card-row:last-child { border-bottom: none; }
   .card-row .meta { font-size: 13px; color: #475569; }
@@ -99,6 +111,29 @@
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
   .form-grid .full { grid-column: 1 / -1; }
   .row-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .issue { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+  .issue:last-child { border-bottom: none; }
+  .issue .lvl { display: inline-block; border-radius: 999px; padding: 2px 10px;
+    font-size: 12px; font-weight: 700; margin-right: 6px; }
+  .lvl-error { background: #fee2e2; color: #991b1b; }
+  .lvl-warning { background: #fef3c7; color: #92400e; }
+  .lvl-info { background: #e0f2fe; color: #0369a1; }
+  .issue .t { color: #94a3b8; font-size: 12px; margin-left: 6px; }
+  .health-row { display: flex; justify-content: space-between; gap: 10px;
+    padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+  .health-row:last-child { border-bottom: none; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+    margin-right: 6px; }
+  .dot-ok { background: #22c55e; }
+  .dot-bad { background: #ef4444; }
+  .check-row { padding: 6px 0; font-size: 14px; }
+  .acc-ctl { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+  .acc-ctl:last-child { border-bottom: none; }
+  .acc-ctl .name { font-weight: 700; min-width: 180px; }
+  .acc-ctl input[type="number"] { width: 110px; }
+  .acc-ctl label { margin: 0; font-weight: 400; display: inline-flex;
+    align-items: center; gap: 6px; }
 
   @media (max-width: 820px) {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -112,6 +147,7 @@
     <div>
       <h1>Automation Website</h1>
       <span class="pill" id="lastRunPill">Last run: —</span>
+      <span class="pill pill-live hidden" id="livePill">LIVE · auto-refresh 15s</span>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap" id="headerBtns" class="hidden">
       <button class="btn-teal" id="refreshBtn">Refresh</button>
@@ -123,7 +159,7 @@
   <div id="statusMsg" class="status-msg"></div>
 
   <!-- LOGIN: only the repo owner's token works. Someone else's token
-       cannot log in at all. The token stays saved in YOUR browser. -->
+       cannot log in at all. The token stays saved in this browser. -->
   <div id="loginView">
     <div class="login-box">
       <h1>Log in</h1>
@@ -149,21 +185,47 @@
     </div>
   </div>
 
-  <!-- DASHBOARD (hidden until logged in) -->
+  <!-- DASHBOARD (hidden until logged in). All control panels are
+       visible right after login - only the stats wait for the worker. -->
   <div id="dashView" class="hidden">
-    <div id="pausedBanner" class="paused-banner hidden">
+    <div id="pausedBanner" class="banner banner-paused hidden">
       PAUSED - automation is stopped. Press "Resume all" to start it again.
+    </div>
+    <div id="dryBanner" class="banner banner-dry hidden">
+      DRY RUN - test mode is ON. Nothing is posted. Turn it off in Scheduling to post for real.
+    </div>
+    <div id="breakerBanner" class="banner banner-breaker hidden">
+      CIRCUIT BREAKER - several runs failed in a row, so automation stopped itself.
+      Fix the problem in the Problems panel, then the next run resumes.
     </div>
 
     <div id="noData" class="hidden">
       <div class="note" style="margin-top:16px">
-        <b>No data yet.</b> The worker has not finished a run. Check the
-        <b>Actions</b> tab in the GitHub repo - the Automation workflow runs
-        every 30 minutes and writes its status here after each run.
+        <b>No data yet.</b> The worker has not finished a run, so the
+        stats below are empty. The controls on this page already work -
+        add a card, add a Bluesky account, then press "Run worker now".
       </div>
     </div>
 
-    <div id="dash" class="hidden">
+    <!-- PROBLEMS: every error in one place (live, from the last run). -->
+    <div class="panel panel-red">
+      <h2>Problems (live)</h2>
+      <div id="issueList"><span class="empty">Waiting for the first worker run…</span></div>
+      <div class="note" style="margin-top:10px">
+        A problem disappears from this list on the next run after it is
+        fixed. The worker retries every post 3 times, keeps a backup of
+        its state, and stops itself after several failed runs in a row.
+      </div>
+    </div>
+
+    <!-- HEALTH: which services are configured. -->
+    <div class="panel panel-teal">
+      <h2>Service health</h2>
+      <div id="healthList"><span class="empty">Waiting for the first worker run…</span></div>
+    </div>
+
+    <!-- Stats (need dashboard.json - hidden until the worker runs) -->
+    <div id="dashStats" class="hidden">
       <div class="stats">
         <div class="stat"><b id="statBloggerToday">0</b><span>Blogger posts today</span></div>
         <div class="stat"><b id="statRepliesToday">0</b><span>Bluesky replies today</span></div>
@@ -171,116 +233,15 @@
         <div class="stat"><b id="statTotalReplies">0</b><span>Total replies sent</span></div>
         <div class="stat"><b id="statAccounts">0</b><span>Bluesky accounts</span></div>
       </div>
+      <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+        <div class="stat"><b id="statFailures">0</b><span>Failed runs in a row</span></div>
+        <div class="stat"><b id="statIssues">0</b><span>Open problems</span></div>
+        <div class="stat"><b id="statWindow">—</b><span>Posting window</span></div>
+      </div>
 
       <div class="trending">
         <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first - tap one to write about it next)</span></h2>
         <div id="trendingChips"><span class="empty">—</span></div>
-      </div>
-
-      <!-- Controls: Pause All + Force topic -->
-      <div class="panel">
-        <h2>Controls</h2>
-        <div class="row-btns" style="margin-top:0">
-          <button class="btn-red" id="pauseBtn">Pause all</button>
-          <span class="pill" id="pauseState">Running</span>
-        </div>
-        <label for="forceTopicInput">Write about this topic next (forced topic)</label>
-        <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
-        <div class="row-btns">
-          <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
-          <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
-          <span class="pill" id="forceTopicState">No forced topic</span>
-        </div>
-      </div>
-
-      <!-- Workflow run history -->
-      <div class="panel">
-        <h2>Worker runs (GitHub Actions)</h2>
-        <div id="runList"><span class="empty">Loading…</span></div>
-      </div>
-
-      <!-- Cards: the manual control panel -->
-      <div class="panel">
-        <h2>Cards (manual jobs)</h2>
-        <div id="cardList"></div>
-        <div class="row-btns">
-          <button class="btn-blue" id="addCardBtn">+ Add card</button>
-        </div>
-        <form id="cardForm" class="hidden" style="margin-top:14px">
-          <div class="form-grid">
-            <div><label for="cfName">Card name</label>
-              <input id="cfName" required placeholder="e.g. Morning post"></div>
-            <div><label for="cfType">Type</label>
-              <select id="cfType">
-                <option value="blogger_post">Blogger post (write + publish)</option>
-                <option value="bluesky_post">Bluesky post (link the latest article)</option>
-                <option value="bluesky_reply">Bluesky replies (to comments)</option>
-              </select></div>
-            <div class="full"><label for="cfLink">Link (optional - e.g. market / article URL)</label>
-              <input id="cfLink" placeholder="https://..."></div>
-            <div><label for="cfAccount">Bluesky account (optional)</label>
-              <select id="cfAccount"><option value="">Any account</option></select></div>
-            <div><label for="cfCount">Count (how many per run)</label>
-              <input id="cfCount" type="number" min="0" value="1"></div>
-            <div><label for="cfInterval">Interval (minutes between runs)</label>
-              <input id="cfInterval" type="number" min="1" value="30"></div>
-            <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
-              <input id="cfTimes" placeholder="07:00, 19:00"></div>
-            <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
-              <textarea id="cfText" rows="2"></textarea></div>
-          </div>
-          <div class="row-btns">
-            <button type="submit" class="btn-teal">Save card</button>
-            <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Settings: limits. 0 = unlimited -->
-      <div class="panel">
-        <h2>Daily limits (0 = unlimited)</h2>
-        <form id="settingsForm">
-          <div class="form-grid">
-            <div><label for="setBlogger">Blogger posts per day</label>
-              <input id="setBlogger" type="number" min="0" value="0"></div>
-            <div><label for="setPostsRun">Bluesky posts per run</label>
-              <input id="setPostsRun" type="number" min="0" value="1"></div>
-            <div><label for="setReplyRun">Bluesky replies per 30-min run</label>
-              <input id="setReplyRun" type="number" min="0" value="0"></div>
-            <div><label for="setReplyDay">Bluesky replies per day</label>
-              <input id="setReplyDay" type="number" min="0" value="0"></div>
-            <div><label for="setGap">Gap between replies (seconds)</label>
-              <input id="setGap" type="number" min="0" value="0"></div>
-          </div>
-          <div class="row-btns">
-            <button type="submit" class="btn-teal">Save limits</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Accounts: added here, saved to the GitHub Secret (encrypted). -->
-      <div class="panel">
-        <h2>Bluesky accounts</h2>
-        <div id="accountList"></div>
-        <form id="accountForm" style="margin-top:12px">
-          <div class="form-grid">
-            <div><label for="afHandle">Bluesky handle</label>
-              <input id="afHandle" required placeholder="e.g. myname.bsky.social"></div>
-            <div><label for="afPassword">App password</label>
-              <input id="afPassword" type="password" required placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="off"></div>
-          </div>
-          <div class="row-btns">
-            <button type="submit" class="btn-teal">Add / update account</button>
-          </div>
-        </form>
-        <div class="note" style="margin-top:10px">
-          Accounts you add here are saved <b>in this browser</b> and in the
-          <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
-          see it). The password is never saved in the repo or on this page.
-          If you clear this browser's data, re-enter your accounts here.
-          Accounts added directly in Secrets will not be in this browser's
-          list - add them here instead.
-        </div>
       </div>
 
       <div class="panel">
@@ -293,6 +254,182 @@
         <div class="log-list" id="logList"></div>
       </div>
     </div>
+
+    <!-- Controls: Pause All + Force topic (always visible) -->
+    <div class="panel">
+      <h2>Controls</h2>
+      <div class="row-btns" style="margin-top:0">
+        <button class="btn-red" id="pauseBtn">Pause all</button>
+        <span class="pill" id="pauseState">Running</span>
+      </div>
+      <label for="forceTopicInput">Write about this topic next (forced topic)</label>
+      <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
+      <div class="row-btns">
+        <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
+        <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
+        <span class="pill" id="forceTopicState">No forced topic</span>
+      </div>
+    </div>
+
+    <!-- Scheduling: posting window + interval + dry run (always visible) -->
+    <div class="panel">
+      <h2>Scheduling</h2>
+      <div class="form-grid">
+        <div><label for="setWindowStart">Posting window start (Dhaka, HH:MM)</label>
+          <input id="setWindowStart" placeholder="07:00 (empty = no window)"></div>
+        <div><label for="setWindowEnd">Posting window end (Dhaka, HH:MM)</label>
+          <input id="setWindowEnd" placeholder="23:00 (empty = no window)"></div>
+        <div><label for="setInterval">Minutes between posts in one run</label>
+          <input id="setInterval" type="number" min="0" value="30"></div>
+        <div><label for="setMaxFail">Stop after this many failed runs in a row</label>
+          <input id="setMaxFail" type="number" min="1" value="5"></div>
+        <div class="full"><label style="display:flex;align-items:center;gap:8px">
+          <input type="checkbox" id="setDryRun"> DRY RUN (test mode - log what would be posted, post nothing)</label></div>
+      </div>
+      <div class="row-btns">
+        <button class="btn-teal" id="saveSchedulingBtn">Save scheduling</button>
+      </div>
+      <div class="note" style="margin-top:10px">
+        The worker itself runs every 30 minutes (GitHub Actions). Each run
+        publishes up to the "posts per run" below, spaced by the minutes
+        above. The window stops posting outside those Dhaka hours.
+      </div>
+    </div>
+
+    <!-- Blogger controls (always visible) -->
+    <div class="panel">
+      <h2>Blogger - how many posts</h2>
+      <div class="form-grid">
+        <div><label for="setBlogger">Blogger posts per day (0 = unlimited)</label>
+          <input id="setBlogger" type="number" min="0" value="0"></div>
+        <div><label for="setBloggerRun">Articles per worker run</label>
+          <input id="setBloggerRun" type="number" min="1" value="1"></div>
+      </div>
+      <div class="row-btns">
+        <button class="btn-teal" id="saveBloggerBtn">Save Blogger settings</button>
+      </div>
+    </div>
+
+    <!-- Bluesky controls: posts + replies, own vs others (always visible) -->
+    <div class="panel">
+      <h2>Bluesky - posts and replies</h2>
+      <div class="form-grid">
+        <div><label for="setPostsRun">Bluesky posts per run</label>
+          <input id="setPostsRun" type="number" min="0" value="1"></div>
+        <div><label for="setReplyRun">Replies to OTHERS' posts per run (0 = unlimited)</label>
+          <input id="setReplyRun" type="number" min="0" value="0"></div>
+        <div><label for="setReplyOwn">Replies to OWN posts per run (0 = unlimited)</label>
+          <input id="setReplyOwn" type="number" min="0" value="0"></div>
+        <div><label for="setReplyDay">All replies per day (0 = unlimited)</label>
+          <input id="setReplyDay" type="number" min="0" value="0"></div>
+        <div><label for="setGap">Gap between replies (seconds, 0 = none)</label>
+          <input id="setGap" type="number" min="0" value="0"></div>
+      </div>
+      <div class="row-btns">
+        <button class="btn-teal" id="saveBlueskyBtn">Save Bluesky settings</button>
+      </div>
+    </div>
+
+    <!-- Workflow run history (always visible) -->
+    <div class="panel">
+      <h2>Worker runs (GitHub Actions)</h2>
+      <div id="runList"><span class="empty">Loading…</span></div>
+    </div>
+
+    <!-- Cards: the manual control panel (always visible) -->
+    <div class="panel">
+      <h2>Cards (manual jobs - scheduled or auto)</h2>
+      <div id="cardList"></div>
+      <div class="row-btns">
+        <button class="btn-blue" id="addCardBtn">+ Add card</button>
+      </div>
+      <form id="cardForm" class="hidden" style="margin-top:14px">
+        <div class="form-grid">
+          <div><label for="cfName">Card name</label>
+            <input id="cfName" required placeholder="e.g. Morning post"></div>
+          <div><label for="cfType">Type</label>
+            <select id="cfType">
+              <option value="blogger_post">Blogger post (write + publish)</option>
+              <option value="bluesky_post">Bluesky post (link the latest article)</option>
+              <option value="bluesky_promo">Bluesky promo (market ANY link you give)</option>
+              <option value="bluesky_reply">Bluesky replies (to comments)</option>
+            </select></div>
+          <div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>
+            <input id="cfLink" placeholder="https://..."></div>
+          <div><label for="cfAccount">Bluesky account (optional)</label>
+            <select id="cfAccount"><option value="">Any account</option></select></div>
+          <div><label for="cfCount">Count (how many per run)</label>
+            <input id="cfCount" type="number" min="0" value="1"></div>
+          <div><label for="cfInterval">Interval (minutes between runs)</label>
+            <input id="cfInterval" type="number" min="1" value="30"></div>
+          <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
+            <input id="cfTimes" placeholder="07:00, 19:00"></div>
+          <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
+            <textarea id="cfText" rows="2"></textarea></div>
+        </div>
+        <div class="row-btns">
+          <button type="submit" class="btn-teal">Save card</button>
+          <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Accounts: add here, saved to the GitHub Secret (encrypted).
+         Per-account controls live in data/accounts.json. -->
+    <div class="panel">
+      <h2>Bluesky accounts (multiple)</h2>
+      <div id="accountList"></div>
+      <form id="accountForm" style="margin-top:12px">
+        <div class="form-grid">
+          <div><label for="afHandle">Bluesky handle</label>
+            <input id="afHandle" required placeholder="e.g. myname.bsky.social"></div>
+          <div><label for="afPassword">App password</label>
+            <input id="afPassword" type="password" required placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="off"></div>
+        </div>
+        <div class="row-btns">
+          <button type="submit" class="btn-teal">Add / update account</button>
+        </div>
+      </form>
+      <div class="note" style="margin-top:10px">
+        Accounts you add here are saved <b>in this browser</b> and in the
+        <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
+        see it). The password is never saved in the repo or on this page.
+        If you clear this browser's data, re-enter your accounts here.
+        Accounts added directly in Secrets will not be in this browser's
+        list - add them here instead.
+      </div>
+      <h2 style="margin-top:16px">Per-account controls</h2>
+      <div id="accountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+      <div class="row-btns">
+        <button class="btn-teal" id="saveAccountCtlBtn">Save account controls</button>
+      </div>
+    </div>
+
+    <!-- Setup checklist: which Secrets are present (names only). -->
+    <div class="panel">
+      <h2>Setup checklist</h2>
+      <div id="checkList"><span class="empty">Loading…</span></div>
+      <div class="note" style="margin-top:10px">
+        GitHub → repo → Settings → Secrets and variables → Actions.
+        A missing secret means that part of the worker cannot run.
+      </div>
+    </div>
+
+    <!-- Export / Import settings + cards. -->
+    <div class="panel">
+      <h2>Backup - export / import</h2>
+      <div class="row-btns" style="margin-top:0">
+        <button class="btn-blue" id="exportBtn">Download backup (settings + cards)</button>
+        <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+          Import backup<input type="file" id="importFile" accept=".json" class="hidden">
+        </label>
+      </div>
+      <div class="note" style="margin-top:10px">
+        The backup is a JSON file with your settings and cards. Keep it
+        safe - importing it overwrites the settings and cards in the repo.
+        Passwords are never in the backup.
+      </div>
+    </div>
   </div>
 </div>
 
@@ -300,7 +437,11 @@
 /* GitHub-only control panel. LOGIN: the token must belong to the repo
    owner (pinterestadstrra-cmd). Someone else's token cannot log in.
    The token stays saved in this browser (localStorage) and you are
-   logged in again automatically after a refresh. No server, no Render. */
+   logged in again automatically after a refresh. All control panels
+   work right after login - only the stats wait for the worker.
+   LIVE: the dashboard refreshes itself every 15 seconds. GitHub Pages
+   is static, so there is no server to push live events - auto-refresh
+   is the live view here. */
 const OWNER = "pinterestadstrra-cmd";
 const REPO = "automation-website";
 const BRANCH = "main";
@@ -377,12 +518,14 @@ function showLogin() {
   $("loginView").classList.remove("hidden");
   $("dashView").classList.add("hidden");
   $("headerBtns").classList.add("hidden");
+  $("livePill").classList.add("hidden");
 }
 function showDashboard() {
   loggedIn = true;
   $("loginView").classList.add("hidden");
   $("dashView").classList.remove("hidden");
   $("headerBtns").classList.remove("hidden");
+  $("livePill").classList.remove("hidden");
 }
 async function doLogin(token) {
   const who = await verifyToken(token);
@@ -410,8 +553,9 @@ $("logoutBtn").addEventListener("click", () => {
   showMsg("Logged out.", true);
 });
 
-/* ---------- status (public, no token) ---------- */
+/* ---------- status (public, no token). Only stats need it. ---------- */
 let accountHandles = [];
+let accountsDetail = [];
 async function loadStatus() {
   let data = null;
   try {
@@ -420,11 +564,14 @@ async function loadStatus() {
   } catch (e) { /* no data yet */ }
   if (!data) {
     $("noData").classList.remove("hidden");
-    $("dash").classList.add("hidden");
+    $("dashStats").classList.add("hidden");
+    renderIssues([]);
+    renderHealth(null);
+    $("lastRunPill").textContent = "Last run: —";
     return;
   }
   $("noData").classList.add("hidden");
-  $("dash").classList.remove("hidden");
+  $("dashStats").classList.remove("hidden");
 
   const stats = data.stats || {};
   $("statBloggerToday").textContent = stats.blogger_today ?? 0;
@@ -433,9 +580,11 @@ async function loadStatus() {
   $("statTotalReplies").textContent = stats.total_replies ?? 0;
   $("statAccounts").textContent = stats.accounts ?? 0;
   $("lastRunPill").textContent =
-    "Last run: " + fmtTime(data.last_run) + "  ·  Runs: " + (data.runs ?? 0);
+    "Last run: " + fmtTime(data.last_run) + "  ·  Runs: " + (data.runs ?? 0) +
+    "  ·  Updated: " + fmtTime(data.generated_at);
 
   accountHandles = data.account_handles || [];
+  accountsDetail = data.accounts_detail || [];
   const accSel = $("cfAccount");
   const cur = accSel.value;
   accSel.innerHTML = '<option value="">Any account</option>';
@@ -445,6 +594,7 @@ async function loadStatus() {
   });
   accSel.value = cur;
   renderAccountList();
+  renderAccountControls();
 
   const settings = data.settings || {};
   const paused = String(settings.paused || "false").toLowerCase() === "true";
@@ -456,6 +606,19 @@ async function loadStatus() {
   if (document.activeElement !== $("forceTopicInput")) {
     $("forceTopicInput").value = ft;
   }
+  const dry = String(settings.dry_run || data.dry_run || "false").toLowerCase() === "true";
+  $("dryBanner").classList.toggle("hidden", !dry);
+  const cb = data.circuit_breaker || {};
+  const failures = cb.consecutive_failures ?? 0;
+  $("breakerBanner").classList.toggle("hidden", !cb.open);
+  $("statFailures").textContent = failures;
+  $("statIssues").textContent = (data.issues || []).length;
+  const pw = data.post_window || {};
+  $("statWindow").textContent = (pw.start && pw.end)
+    ? (pw.start + "–" + pw.end + (pw.in_window ? " (now)" : " (off)")) : "always";
+
+  renderIssues(data.issues || []);
+  renderHealth(data.health || null);
 
   const chips = $("trendingChips");
   chips.innerHTML = "";
@@ -510,27 +673,109 @@ async function loadStatus() {
   }
 }
 
+/* ---------- Problems + Health panels ---------- */
+function renderIssues(issues) {
+  const el = $("issueList");
+  el.innerHTML = "";
+  if (!issues.length) {
+    el.innerHTML = '<div class="empty">No problems. Everything looks good.</div>';
+    return;
+  }
+  issues.forEach((it) => {
+    const div = document.createElement("div");
+    div.className = "issue";
+    const lvl = (it.level || "info").toLowerCase();
+    div.innerHTML =
+      '<span class="lvl lvl-' + esc(lvl) + '">' + esc(lvl.toUpperCase()) + "</span>" +
+      "<b>" + esc(it.code || "") + "</b> - " + esc(it.message || "") +
+      '<span class="t">' + esc(fmtTime(it.time)) + "</span>";
+    el.appendChild(div);
+  });
+}
+function renderHealth(health) {
+  const el = $("healthList");
+  el.innerHTML = "";
+  if (!health) {
+    el.innerHTML = '<div class="empty">Waiting for the first worker run…</div>';
+    return;
+  }
+  const labels = {
+    gemini: "Gemini (article writing)",
+    groq: "Groq (replies / extras)",
+    blogger: "Blogger (publishing)",
+    bluesky: "Bluesky (accounts)",
+    pexels: "Pexels (photos)",
+  };
+  Object.keys(labels).forEach((key) => {
+    const h = health[key];
+    if (!h) return;
+    const div = document.createElement("div");
+    div.className = "health-row";
+    div.innerHTML =
+      '<span><span class="dot ' + (h.ok ? "dot-ok" : "dot-bad") + '"></span>' +
+      esc(labels[key]) + "</span>" +
+      "<span>" + esc(h.detail || "") + "</span>";
+    el.appendChild(div);
+  });
+}
+
 /* ---------- config (GitHub API) ---------- */
 let configSha = "";
 let config = {};
+let configLoaded = false;
 async function loadConfig() {
   if (!getToken()) return;
   try {
     const file = await gh("/contents/data/config.json");
     configSha = file.sha || "";
     config = JSON.parse(b64ToUtf8(file.content || ""));
-    $("setBlogger").value = config.blogger_daily_limit ?? 0;
-    $("setPostsRun").value = config.bsky_posts_per_run ?? 1;
-    $("setReplyRun").value = config.bsky_reply_per_run ?? 0;
-    $("setReplyDay").value = config.bsky_reply_daily_cap ?? 0;
-    $("setGap").value = config.reply_gap_seconds ?? 0;
-    if (document.activeElement !== $("forceTopicInput")) {
-      $("forceTopicInput").value = config.force_topic || "";
-    }
+    configLoaded = true;
+    fillConfigInputs();
   } catch (e) { /* leave defaults */ }
+}
+function fillConfigInputs() {
+  $("setBlogger").value = config.blogger_daily_limit ?? 0;
+  $("setBloggerRun").value = config.blogger_posts_per_run ?? 1;
+  $("setPostsRun").value = config.bsky_posts_per_run ?? 1;
+  $("setReplyRun").value = config.bsky_reply_per_run ?? 0;
+  $("setReplyOwn").value = config.reply_own_per_run ?? 0;
+  $("setReplyDay").value = config.bsky_reply_daily_cap ?? 0;
+  $("setGap").value = config.reply_gap_seconds ?? 0;
+  $("setWindowStart").value = config.post_window_start || "";
+  $("setWindowEnd").value = config.post_window_end || "";
+  $("setInterval").value = config.post_interval_minutes ?? 30;
+  $("setMaxFail").value = config.max_consecutive_failures ?? 5;
+  $("setDryRun").checked =
+    String(config.dry_run || "false").toLowerCase() === "true";
+  const paused = String(config.paused || false).toLowerCase() === "true";
+  $("pausedBanner").classList.toggle("hidden", !paused);
+  $("pauseState").textContent = paused ? "Paused" : "Running";
+  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
+  $("dryBanner").classList.toggle("hidden",
+    String(config.dry_run || "false").toLowerCase() !== "true");
+  const ft = config.force_topic || "";
+  $("forceTopicState").textContent = ft ? ("Forced: " + ft) : "No forced topic";
+  if (document.activeElement !== $("forceTopicInput")) {
+    $("forceTopicInput").value = ft;
+  }
+}
+function readConfigInputs() {
+  config.blogger_daily_limit = Number($("setBlogger").value) || 0;
+  config.blogger_posts_per_run = Number($("setBloggerRun").value) || 1;
+  config.bsky_posts_per_run = Number($("setPostsRun").value) || 1;
+  config.bsky_reply_per_run = Number($("setReplyRun").value) || 0;
+  config.reply_own_per_run = Number($("setReplyOwn").value) || 0;
+  config.bsky_reply_daily_cap = Number($("setReplyDay").value) || 0;
+  config.reply_gap_seconds = Number($("setGap").value) || 0;
+  config.post_window_start = $("setWindowStart").value.trim();
+  config.post_window_end = $("setWindowEnd").value.trim();
+  config.post_interval_minutes = Number($("setInterval").value) || 30;
+  config.max_consecutive_failures = Number($("setMaxFail").value) || 5;
+  config.dry_run = $("setDryRun").checked;
 }
 async function saveConfig(msg) {
   if (needToken()) return false;
+  if (!configLoaded) { showMsg("Settings are still loading - try again.", false); return false; }
   try {
     const res = await gh("/contents/data/config.json", "PUT", {
       message: msg || "Update config from dashboard",
@@ -545,6 +790,16 @@ async function saveConfig(msg) {
     return false;
   }
 }
+async function saveAllSettings(msg) {
+  readConfigInputs();
+  if (await saveConfig(msg)) {
+    showMsg("Settings saved.", true);
+    await loadStatus();
+  }
+}
+$("saveSchedulingBtn").addEventListener("click", () => saveAllSettings("Update scheduling from dashboard"));
+$("saveBloggerBtn").addEventListener("click", () => saveAllSettings("Update Blogger settings from dashboard"));
+$("saveBlueskyBtn").addEventListener("click", () => saveAllSettings("Update Bluesky settings from dashboard"));
 async function setForceTopic(topic) {
   if (needToken()) return;
   await loadConfig();
@@ -598,6 +853,38 @@ async function loadRuns() {
     });
   } catch (e) {
     $("runList").innerHTML = '<div class="empty">Could not load runs: ' + esc(e.message) + "</div>";
+  }
+}
+
+/* ---------- setup checklist (Secret NAMES only, no values) ---------- */
+const REQUIRED_SECRETS = [
+  ["GEMINI_API_KEYS", "Gemini keys (article writing)"],
+  ["GROQ_API_KEYS", "Groq keys (replies)"],
+  ["BLOGGER_CLIENT_ID", "Blogger client ID"],
+  ["BLOGGER_CLIENT_SECRET", "Blogger client secret"],
+  ["BLOGGER_REFRESH_TOKEN", "Blogger refresh token"],
+  ["BLOG_ID", "Blog ID"],
+  ["BLUESKY_ACCOUNTS", "Bluesky accounts"],
+];
+async function loadChecklist() {
+  if (!getToken()) return;
+  try {
+    const data = await gh("/actions/secrets");
+    const names = new Set((data.secrets || []).map((s) => s.name));
+    const el = $("checkList");
+    el.innerHTML = "";
+    REQUIRED_SECRETS.forEach(([name, label]) => {
+      const ok = names.has(name);
+      const div = document.createElement("div");
+      div.className = "check-row";
+      div.innerHTML =
+        '<span class="dot ' + (ok ? "dot-ok" : "dot-bad") + '"></span>' +
+        "<b>" + esc(name) + "</b> - " + esc(label) +
+        (ok ? "" : ' <span class="pill-bad pill">MISSING</span>');
+      el.appendChild(div);
+    });
+  } catch (e) {
+    $("checkList").innerHTML = '<div class="empty">Could not load secrets: ' + esc(e.message) + "</div>";
   }
 }
 
@@ -729,21 +1016,6 @@ $("cardForm").addEventListener("submit", async (e) => {
   }
 });
 
-/* ---------- settings (limits) ---------- */
-$("settingsForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  if (needToken()) return;
-  await loadConfig();
-  config.blogger_daily_limit = Number($("setBlogger").value) || 0;
-  config.bsky_posts_per_run = Number($("setPostsRun").value) || 1;
-  config.bsky_reply_per_run = Number($("setReplyRun").value) || 0;
-  config.bsky_reply_daily_cap = Number($("setReplyDay").value) || 0;
-  config.reply_gap_seconds = Number($("setGap").value) || 0;
-  if (await saveConfig("Update limits from dashboard")) {
-    showMsg("Limits saved (0 = unlimited).", true);
-  }
-});
-
 /* ---------- Bluesky accounts (saved to the GitHub Secret) ---------- */
 function getSavedAccounts() {
   try {
@@ -809,6 +1081,7 @@ async function removeAccount(i) {
   if (await updateBskySecret(saved)) {
     saveSavedAccounts(saved);
     renderAccountList();
+    renderAccountControls();
     showMsg("Account removed.", true);
   }
 }
@@ -830,10 +1103,132 @@ $("accountForm").addEventListener("submit", async (e) => {
   if (await updateBskySecret(saved)) {
     saveSavedAccounts(saved);
     renderAccountList();
+    renderAccountControls();
     $("accountForm").reset();
     showMsg("Account saved (in this browser + in the Secret).", true);
     await loadStatus();
   }
+});
+
+/* ---------- per-account controls (data/accounts.json) ---------- */
+let accountCtlSha = "";
+let accountCtl = {};
+async function loadAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/accounts.json");
+    accountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    accountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.handle) accountCtl[a.handle] = a; });
+    }
+    renderAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function allAccountHandles() {
+  const set = new Set(accountHandles);
+  getSavedAccounts().forEach((a) => set.add(a.handle));
+  Object.keys(accountCtl).forEach((h) => set.add(h));
+  return Array.from(set);
+}
+function renderAccountControls() {
+  const handles = allAccountHandles();
+  const el = $("accountCtlList");
+  el.innerHTML = "";
+  if (!handles.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  handles.forEach((h) => {
+    const cfg = accountCtl[h] || {};
+    const detail = accountsDetail.find((d) => d.handle === h);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.handle = h;
+    div.innerHTML =
+      '<span class="name">' + esc(h) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#accountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      handle: row.dataset.handle,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (accountCtlSha) body.sha = accountCtlSha;
+    const res = await gh("/contents/data/accounts.json", "PUT", body);
+    accountCtlSha = (res.content && res.content.sha) || accountCtlSha;
+    list.forEach((a) => { accountCtl[a.handle] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
+/* ---------- export / import (backup) ---------- */
+$("exportBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  await loadConfig();
+  await loadCards();
+  const backup = {
+    exported_at: new Date().toISOString(),
+    config: config,
+    cards: cards,
+  };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "automation-backup.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  showMsg("Backup downloaded.", true);
+});
+$("importFile").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  if (!confirm("Import this backup? It overwrites the settings and cards in the repo.")) {
+    e.target.value = "";
+    return;
+  }
+  try {
+    const backup = JSON.parse(await file.text());
+    if (backup.config) {
+      config = backup.config;
+      configLoaded = true;
+      fillConfigInputs();
+      await saveConfig("Import backup from dashboard");
+    }
+    if (Array.isArray(backup.cards)) {
+      cards = backup.cards;
+      await saveCards("Import backup from dashboard");
+      renderCards();
+    }
+    showMsg("Backup imported.", true);
+    await refreshAll();
+  } catch (err) {
+    showMsg("Import failed: " + err.message, false);
+  }
+  e.target.value = "";
 });
 
 /* ---------- run worker + refresh ---------- */
@@ -861,7 +1256,10 @@ async function refreshAll() {
   await loadConfig();
   await loadCards();
   await loadRuns();
+  await loadChecklist();
+  await loadAccountCtl();
   renderAccountList();
+  renderAccountControls();
 }
 $("refreshBtn").addEventListener("click", refreshAll);
 
@@ -880,7 +1278,9 @@ $("refreshBtn").addEventListener("click", refreshAll);
   }
   showLogin();
 })();
-setInterval(() => { if (loggedIn) loadStatus(); }, 60000);
+/* LIVE: refresh the status every 15 seconds. GitHub Pages is static,
+   so this polling is the live view - there is no server to push events. */
+setInterval(() => { if (loggedIn) loadStatus(); }, 15000);
 </script>
 </body>
 </html>
