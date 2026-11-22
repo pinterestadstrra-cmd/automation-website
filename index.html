@@ -7,17 +7,17 @@
 <script src="https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js"></script>
 <style>
   /* FLAT UI - white / sky-blue / red / teal, all bright. No gradients,
-     no heavy shadows, no black backgrounds. Contained layout.
+     no heavy shadows, no black backgrounds. Contained, lag-free layout.
+     TABBED PAGES: one page per area (Overview / Blogger / Bluesky /
+     Cards / Logs / Settings). Click a tab at the top to switch pages.
      LOGIN: only the repo owner's GitHub token can log in. The token is
      checked against the owner (pinterestadstrra-cmd) - someone else's
      token cannot log in. The token stays saved in YOUR browser
      (localStorage) and you are logged in again automatically after a
-     refresh. ALL control panels work right after login - only the
-     stats wait for the worker. LIVE: the dashboard refreshes itself
-     every 15 seconds (GitHub Pages is static, so there is no server
-     to push live events - auto-refresh is the live view here).
-     PROBLEMS: every error the worker finds is shown in the Problems
-     panel at the top, in one place. */
+     refresh. LIVE: each page shows its own live log, refreshed every
+     15 seconds (GitHub Pages is static, so there is no server to push
+     live events - auto-refresh is the live view here). CARDS and
+     ACCOUNTS are UNLIMITED - add as many as you want, no cap. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #ffffff; color: #0f172a;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -52,6 +52,14 @@
   .status-ok { display: block; background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
   .status-err { display: block; background: #fef2f2; border: 1px solid #fca5a5; color: #991b1b; }
 
+  /* Tabs (top navigation between pages) */
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 16px 0 4px; }
+  .tab-btn { background: #e2e8f0; color: #0f172a; border-radius: 8px;
+    padding: 10px 16px; font-size: 14px; font-weight: 700; }
+  .tab-btn.active { background: #0ea5e9; color: #ffffff; }
+  .page { padding-top: 12px; }
+  .page.hidden { display: none; }
+
   .login-box { max-width: 520px; margin: 48px auto; background: #ffffff;
     border: 2px solid #bae6fd; border-radius: 14px; padding: 24px; }
   .login-box h1 { margin-bottom: 8px; }
@@ -60,6 +68,7 @@
   .banner-paused { background: #fef2f2; border: 2px solid #ef4444; color: #991b1b; }
   .banner-dry { background: #fefce8; border: 2px solid #eab308; color: #854d0e; }
   .banner-breaker { background: #fef2f2; border: 2px solid #dc2626; color: #991b1b; }
+  .banner-new { background: #f0fdf4; border: 2px solid #22c55e; color: #166534; }
 
   .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px; margin: 16px 0; }
@@ -86,18 +95,26 @@
   .card-row .actions button { padding: 6px 10px; font-size: 13px; }
   .paused-tag { background: #fee2e2; color: #991b1b; border-radius: 999px;
     padding: 2px 10px; font-size: 12px; font-weight: 700; }
+  .on-tag { background: #dcfce7; color: #166534; border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; font-weight: 700; }
+  .off-tag { background: #e2e8f0; color: #475569; border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; font-weight: 700; }
   .run-row { padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
   .run-row:last-child { border-bottom: none; }
   .run-ok { color: #166534; font-weight: 700; }
   .run-bad { color: #991b1b; font-weight: 700; }
   .run-busy { color: #0369a1; font-weight: 700; }
   .post-row { padding: 10px 0; border-bottom: 1px solid #f1f5f9;
-    overflow-wrap: break-word; }
+    overflow-wrap: break-word; display: flex; gap: 12px; align-items: flex-start; }
   .post-row:last-child { border-bottom: none; }
+  .post-row img { width: 96px; height: 54px; object-fit: cover; border-radius: 8px;
+    border: 1px solid #e2e8f0; flex-shrink: 0; }
   .post-row .meta { font-size: 13px; color: #475569; }
   .log { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
     padding: 14px; margin-top: 16px; }
   .log-list { max-height: 320px; overflow-y: auto; font-size: 13px; }
+  .mini-log { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+    padding: 12px; max-height: 220px; overflow-y: auto; font-size: 13px; }
   .log-line { padding: 5px 0; border-bottom: 1px solid #f1f5f9;
     overflow-wrap: break-word; }
   .log-line .t { color: #94a3b8; margin-right: 6px; }
@@ -134,6 +151,12 @@
   .acc-ctl input[type="number"] { width: 110px; }
   .acc-ctl label { margin: 0; font-weight: 400; display: inline-flex;
     align-items: center; gap: 6px; }
+  .toggle-row { display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+  .toggle-row:last-child { border-bottom: none; }
+  .toggle-row .lbl { font-weight: 700; }
+  .toggle-row .desc { font-size: 13px; color: #475569; }
+  .toggle-row input[type="checkbox"] { width: 22px; height: 22px; }
 
   @media (max-width: 820px) {
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -185,18 +208,20 @@
     </div>
   </div>
 
-  <!-- DASHBOARD (hidden until logged in). All control panels are
-       visible right after login - only the stats wait for the worker. -->
+  <!-- DASHBOARD (hidden until logged in) -->
   <div id="dashView" class="hidden">
+    <div id="newRunBanner" class="banner banner-new hidden">
+      Worker finished a new run - stats updated.
+    </div>
     <div id="pausedBanner" class="banner banner-paused hidden">
       PAUSED - automation is stopped. Press "Resume all" to start it again.
     </div>
     <div id="dryBanner" class="banner banner-dry hidden">
-      DRY RUN - test mode is ON. Nothing is posted. Turn it off in Scheduling to post for real.
+      DRY RUN - test mode is ON. Nothing is posted. Turn it off in Settings to post for real.
     </div>
     <div id="breakerBanner" class="banner banner-breaker hidden">
       CIRCUIT BREAKER - several runs failed in a row, so automation stopped itself.
-      Fix the problem in the Problems panel, then the next run resumes.
+      Fix the problem in the Logs page, then the next run resumes.
     </div>
 
     <div id="noData" class="hidden">
@@ -207,25 +232,24 @@
       </div>
     </div>
 
-    <!-- PROBLEMS: every error in one place (live, from the last run). -->
-    <div class="panel panel-red">
-      <h2>Problems (live)</h2>
-      <div id="issueList"><span class="empty">Waiting for the first worker run…</span></div>
-      <div class="note" style="margin-top:10px">
-        A problem disappears from this list on the next run after it is
-        fixed. The worker retries every post 3 times, keeps a backup of
-        its state, and stops itself after several failed runs in a row.
+    <!-- Tabs: one page per area -->
+    <nav class="tabs" id="tabBar">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="blogger">Blogger</button>
+      <button class="tab-btn" data-tab="bluesky">Bluesky</button>
+      <button class="tab-btn" data-tab="cards">Cards</button>
+      <button class="tab-btn" data-tab="logs">Logs</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </nav>
+
+    <!-- ============ PAGE: OVERVIEW ============ -->
+    <div id="page-overview" class="page">
+      <div class="panel">
+        <h2>Next worker run</h2>
+        <div style="font-size:18px;font-weight:700;color:#0284c7" id="nextRunText">—</div>
+        <div class="meta" style="font-size:13px;color:#475569">The worker runs every 30 minutes (GitHub Actions). Press "Run worker now" to run it immediately.</div>
       </div>
-    </div>
 
-    <!-- HEALTH: which services are configured. -->
-    <div class="panel panel-teal">
-      <h2>Service health</h2>
-      <div id="healthList"><span class="empty">Waiting for the first worker run…</span></div>
-    </div>
-
-    <!-- Stats (need dashboard.json - hidden until the worker runs) -->
-    <div id="dashStats" class="hidden">
       <div class="stats">
         <div class="stat"><b id="statBloggerToday">0</b><span>Blogger posts today</span></div>
         <div class="stat"><b id="statRepliesToday">0</b><span>Bluesky replies today</span></div>
@@ -239,6 +263,11 @@
         <div class="stat"><b id="statWindow">—</b><span>Posting window</span></div>
       </div>
 
+      <div class="panel panel-teal">
+        <h2>Service health</h2>
+        <div id="healthList"><span class="empty">Waiting for the first worker run…</span></div>
+      </div>
+
       <div class="trending">
         <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first - tap one to write about it next)</span></h2>
         <div id="trendingChips"><span class="empty">—</span></div>
@@ -247,187 +276,308 @@
       <div class="panel">
         <h2>Recent articles</h2>
         <div id="postList"></div>
+        <div id="daySummary" style="font-size:13px;color:#475569;margin-top:8px"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Live log (latest)</h2>
+        <div class="mini-log" id="overviewLog"><span class="empty">—</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: BLOGGER ============ -->
+    <div id="page-blogger" class="page hidden">
+      <div class="panel">
+        <h2>Blogger workflow</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Blogger articles</div>
+            <div class="desc">Write + publish articles from Bluesky trending topics.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="blogger_enabled" checked>
+        </div>
+        <div class="row-btns">
+          <button class="btn-red" id="pauseBtn">Pause all</button>
+          <span class="pill" id="pauseState">Running</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>How many posts</h2>
+        <div class="form-grid">
+          <div><label for="setBlogger">Blogger posts per day (0 = unlimited)</label>
+            <input id="setBlogger" type="number" min="0" value="0"></div>
+          <div><label for="setBloggerRun">Articles per worker run</label>
+            <input id="setBloggerRun" type="number" min="1" value="1"></div>
+          <div><label for="setInterval">Minutes between posts in one run</label>
+            <input id="setInterval" type="number" min="0" value="30"></div>
+          <div><label for="setWindowStart">Posting window start (Dhaka, HH:MM)</label>
+            <input id="setWindowStart" placeholder="07:00 (empty = no window)"></div>
+          <div><label for="setWindowEnd">Posting window end (Dhaka, HH:MM)</label>
+            <input id="setWindowEnd" placeholder="23:00 (empty = no window)"></div>
+        </div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveBloggerBtn">Save Blogger settings</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Topics</h2>
+        <label for="forceTopicInput">Write about this topic next (forced topic)</label>
+        <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
+        <div class="row-btns">
+          <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
+          <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
+          <span class="pill" id="forceTopicState">No forced topic</span>
+        </div>
+        <label for="blacklistInput">Never write about (comma-separated topics)</label>
+        <input id="blacklistInput" placeholder="e.g. cricket, politics">
+        <div class="row-btns">
+          <button class="btn-teal" id="saveBlacklistBtn">Save blacklist</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Blogger live log</h2>
+        <div class="mini-log" id="bloggerLog"><span class="empty">—</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: BLUESKY ============ -->
+    <div id="page-bluesky" class="page hidden">
+      <div class="panel">
+        <h2>Bluesky workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Bluesky posts</div>
+            <div class="desc">Post the latest article (one unique post per account).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="bsky_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Bluesky replies</div>
+            <div class="desc">Reply to comments on your posts and on hot posts.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="replies_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Posts and replies</h2>
+        <div class="form-grid">
+          <div><label for="setPostsRun">Bluesky posts per run</label>
+            <input id="setPostsRun" type="number" min="0" value="1"></div>
+          <div><label for="setReplyRun">Replies to OTHERS' posts per run (0 = unlimited)</label>
+            <input id="setReplyRun" type="number" min="0" value="0"></div>
+          <div><label for="setReplyOwn">Replies to OWN posts per run (0 = unlimited)</label>
+            <input id="setReplyOwn" type="number" min="0" value="0"></div>
+          <div><label for="setReplyDay">All replies per day (0 = unlimited)</label>
+            <input id="setReplyDay" type="number" min="0" value="0"></div>
+          <div><label for="setGap">Gap between replies (seconds, 0 = none)</label>
+            <input id="setGap" type="number" min="0" value="0"></div>
+        </div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveBlueskyBtn">Save Bluesky settings</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Bluesky accounts (unlimited - add as many as you want)</h2>
+        <div id="accountList"></div>
+        <form id="accountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="afHandle">Bluesky handle</label>
+              <input id="afHandle" required placeholder="e.g. myname.bsky.social"></div>
+            <div><label for="afPassword">App password</label>
+              <input id="afPassword" type="password" required placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="off"></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
+          see it). The password is never saved in the repo or on this page.
+        </div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="accountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Bluesky live log</h2>
+        <div class="mini-log" id="blueskyLog"><span class="empty">—</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: CARDS ============ -->
+    <div id="page-cards" class="page hidden">
+      <div class="panel">
+        <h2>Cards workflow</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Manual cards</div>
+            <div class="desc">Run your cards on their schedule (or auto).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="cards_enabled" checked>
+        </div>
+        <div class="row-btns">
+          <button class="btn-ghost" id="pauseAllCardsBtn">Pause all cards</button>
+          <button class="btn-ghost" id="resumeAllCardsBtn">Resume all cards</button>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Cards are <b>unlimited</b> - create as many as you want. A card
+          can post to Blogger, post to Bluesky, promote any link, or send
+          replies. Give it times (Dhaka) to schedule it, or leave the
+          times empty to run it automatically every interval.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Cards</h2>
+        <div id="cardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addCardBtn">+ Add card</button>
+        </div>
+        <form id="cardForm" class="hidden" style="margin-top:14px">
+          <div class="form-grid">
+            <div><label for="cfName">Card name</label>
+              <input id="cfName" required placeholder="e.g. Morning post"></div>
+            <div><label for="cfType">Type</label>
+              <select id="cfType">
+                <option value="blogger_post">Blogger post (write + publish)</option>
+                <option value="bluesky_post">Bluesky post (link the latest article)</option>
+                <option value="bluesky_promo">Bluesky promo (market ANY link you give)</option>
+                <option value="bluesky_reply">Bluesky replies (to comments)</option>
+              </select></div>
+            <div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>
+              <input id="cfLink" placeholder="https://..."></div>
+            <div><label for="cfAccount">Bluesky account (optional)</label>
+              <select id="cfAccount"><option value="">Any account</option></select></div>
+            <div><label for="cfCount">Count (how many per run)</label>
+              <input id="cfCount" type="number" min="0" value="1"></div>
+            <div><label for="cfInterval">Interval (minutes between runs)</label>
+              <input id="cfInterval" type="number" min="1" value="30"></div>
+            <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
+              <input id="cfTimes" placeholder="07:00, 19:00"></div>
+            <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
+              <textarea id="cfText" rows="2"></textarea></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Save card</button>
+            <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Cards live log</h2>
+        <div class="mini-log" id="cardsLog"><span class="empty">—</span></div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: LOGS ============ -->
+    <div id="page-logs" class="page hidden">
+      <div class="panel panel-red">
+        <h2>Problems (live)</h2>
+        <div id="issueList"><span class="empty">Waiting for the first worker run…</span></div>
+        <div class="row-btns">
+          <button class="btn-ghost" id="markSeenBtn">Mark all as seen</button>
+        </div>
+        <div class="note" style="margin-top:10px">
+          A problem disappears from this list on the next run after it is
+          fixed. The worker retries every post 3 times, keeps a backup of
+          its state, and stops itself after several failed runs in a row.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Worker runs (GitHub Actions)</h2>
+        <div id="runList"><span class="empty">Loading…</span></div>
       </div>
 
       <div class="log">
         <h2>Activity Log</h2>
-        <div class="log-list" id="logList"></div>
+        <label for="logSearch">Search the log</label>
+        <input id="logSearch" placeholder="type to filter, e.g. blogger, error, reply…">
+        <div class="row-btns">
+          <button class="btn-ghost" id="exportLogsBtn">Download log (.txt)</button>
+        </div>
+        <div class="log-list" id="logList" style="margin-top:10px"></div>
       </div>
     </div>
 
-    <!-- Controls: Pause All + Force topic (always visible) -->
-    <div class="panel">
-      <h2>Controls</h2>
-      <div class="row-btns" style="margin-top:0">
-        <button class="btn-red" id="pauseBtn">Pause all</button>
-        <span class="pill" id="pauseState">Running</span>
+    <!-- ============ PAGE: SETTINGS ============ -->
+    <div id="page-settings" class="page hidden">
+      <div class="panel">
+        <h2>Workflows (On / Off)</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Blogger articles</div>
+            <div class="desc">Write + publish articles.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="blogger_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Bluesky posts</div>
+            <div class="desc">Post the latest article to Bluesky.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="bsky_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Bluesky replies</div>
+            <div class="desc">Reply to comments.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="replies_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Manual cards</div>
+            <div class="desc">Run cards on their schedule.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="cards_enabled" checked>
+        </div>
       </div>
-      <label for="forceTopicInput">Write about this topic next (forced topic)</label>
-      <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
-      <div class="row-btns">
-        <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
-        <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
-        <span class="pill" id="forceTopicState">No forced topic</span>
-      </div>
-    </div>
 
-    <!-- Scheduling: posting window + interval + dry run (always visible) -->
-    <div class="panel">
-      <h2>Scheduling</h2>
-      <div class="form-grid">
-        <div><label for="setWindowStart">Posting window start (Dhaka, HH:MM)</label>
-          <input id="setWindowStart" placeholder="07:00 (empty = no window)"></div>
-        <div><label for="setWindowEnd">Posting window end (Dhaka, HH:MM)</label>
-          <input id="setWindowEnd" placeholder="23:00 (empty = no window)"></div>
-        <div><label for="setInterval">Minutes between posts in one run</label>
-          <input id="setInterval" type="number" min="0" value="30"></div>
-        <div><label for="setMaxFail">Stop after this many failed runs in a row</label>
-          <input id="setMaxFail" type="number" min="1" value="5"></div>
-        <div class="full"><label style="display:flex;align-items:center;gap:8px">
-          <input type="checkbox" id="setDryRun"> DRY RUN (test mode - log what would be posted, post nothing)</label></div>
-      </div>
-      <div class="row-btns">
-        <button class="btn-teal" id="saveSchedulingBtn">Save scheduling</button>
-      </div>
-      <div class="note" style="margin-top:10px">
-        The worker itself runs every 30 minutes (GitHub Actions). Each run
-        publishes up to the "posts per run" below, spaced by the minutes
-        above. The window stops posting outside those Dhaka hours.
-      </div>
-    </div>
-
-    <!-- Blogger controls (always visible) -->
-    <div class="panel">
-      <h2>Blogger - how many posts</h2>
-      <div class="form-grid">
-        <div><label for="setBlogger">Blogger posts per day (0 = unlimited)</label>
-          <input id="setBlogger" type="number" min="0" value="0"></div>
-        <div><label for="setBloggerRun">Articles per worker run</label>
-          <input id="setBloggerRun" type="number" min="1" value="1"></div>
-      </div>
-      <div class="row-btns">
-        <button class="btn-teal" id="saveBloggerBtn">Save Blogger settings</button>
-      </div>
-    </div>
-
-    <!-- Bluesky controls: posts + replies, own vs others (always visible) -->
-    <div class="panel">
-      <h2>Bluesky - posts and replies</h2>
-      <div class="form-grid">
-        <div><label for="setPostsRun">Bluesky posts per run</label>
-          <input id="setPostsRun" type="number" min="0" value="1"></div>
-        <div><label for="setReplyRun">Replies to OTHERS' posts per run (0 = unlimited)</label>
-          <input id="setReplyRun" type="number" min="0" value="0"></div>
-        <div><label for="setReplyOwn">Replies to OWN posts per run (0 = unlimited)</label>
-          <input id="setReplyOwn" type="number" min="0" value="0"></div>
-        <div><label for="setReplyDay">All replies per day (0 = unlimited)</label>
-          <input id="setReplyDay" type="number" min="0" value="0"></div>
-        <div><label for="setGap">Gap between replies (seconds, 0 = none)</label>
-          <input id="setGap" type="number" min="0" value="0"></div>
-      </div>
-      <div class="row-btns">
-        <button class="btn-teal" id="saveBlueskyBtn">Save Bluesky settings</button>
-      </div>
-    </div>
-
-    <!-- Workflow run history (always visible) -->
-    <div class="panel">
-      <h2>Worker runs (GitHub Actions)</h2>
-      <div id="runList"><span class="empty">Loading…</span></div>
-    </div>
-
-    <!-- Cards: the manual control panel (always visible) -->
-    <div class="panel">
-      <h2>Cards (manual jobs - scheduled or auto)</h2>
-      <div id="cardList"></div>
-      <div class="row-btns">
-        <button class="btn-blue" id="addCardBtn">+ Add card</button>
-      </div>
-      <form id="cardForm" class="hidden" style="margin-top:14px">
+      <div class="panel">
+        <h2>Scheduling</h2>
         <div class="form-grid">
-          <div><label for="cfName">Card name</label>
-            <input id="cfName" required placeholder="e.g. Morning post"></div>
-          <div><label for="cfType">Type</label>
-            <select id="cfType">
-              <option value="blogger_post">Blogger post (write + publish)</option>
-              <option value="bluesky_post">Bluesky post (link the latest article)</option>
-              <option value="bluesky_promo">Bluesky promo (market ANY link you give)</option>
-              <option value="bluesky_reply">Bluesky replies (to comments)</option>
+          <div><label for="setMaxFail">Stop after this many failed runs in a row</label>
+            <input id="setMaxFail" type="number" min="1" value="5"></div>
+          <div><label for="refreshSelect">Live refresh (this dashboard)</label>
+            <select id="refreshSelect">
+              <option value="15">Every 15 seconds</option>
+              <option value="30">Every 30 seconds</option>
+              <option value="60">Every 60 seconds</option>
+              <option value="0">Off</option>
             </select></div>
-          <div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>
-            <input id="cfLink" placeholder="https://..."></div>
-          <div><label for="cfAccount">Bluesky account (optional)</label>
-            <select id="cfAccount"><option value="">Any account</option></select></div>
-          <div><label for="cfCount">Count (how many per run)</label>
-            <input id="cfCount" type="number" min="0" value="1"></div>
-          <div><label for="cfInterval">Interval (minutes between runs)</label>
-            <input id="cfInterval" type="number" min="1" value="30"></div>
-          <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
-            <input id="cfTimes" placeholder="07:00, 19:00"></div>
-          <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
-            <textarea id="cfText" rows="2"></textarea></div>
+          <div class="full"><label style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="setDryRun"> DRY RUN (test mode - log what would be posted, post nothing)</label></div>
         </div>
         <div class="row-btns">
-          <button type="submit" class="btn-teal">Save card</button>
-          <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
+          <button class="btn-teal" id="saveSchedulingBtn">Save scheduling</button>
         </div>
-      </form>
-    </div>
-
-    <!-- Accounts: add here, saved to the GitHub Secret (encrypted).
-         Per-account controls live in data/accounts.json. -->
-    <div class="panel">
-      <h2>Bluesky accounts (multiple)</h2>
-      <div id="accountList"></div>
-      <form id="accountForm" style="margin-top:12px">
-        <div class="form-grid">
-          <div><label for="afHandle">Bluesky handle</label>
-            <input id="afHandle" required placeholder="e.g. myname.bsky.social"></div>
-          <div><label for="afPassword">App password</label>
-            <input id="afPassword" type="password" required placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="off"></div>
+        <div class="note" style="margin-top:10px">
+          The worker itself runs every 30 minutes (GitHub Actions). Each run
+          publishes up to the "posts per run" on the Blogger page, spaced by
+          the minutes there. The window stops posting outside those Dhaka hours.
         </div>
-        <div class="row-btns">
-          <button type="submit" class="btn-teal">Add / update account</button>
+      </div>
+
+      <div class="panel">
+        <h2>Setup checklist</h2>
+        <div id="checkList"><span class="empty">Loading…</span></div>
+        <div class="note" style="margin-top:10px">
+          GitHub → repo → Settings → Secrets and variables → Actions.
+          A missing secret means that part of the worker cannot run.
         </div>
-      </form>
-      <div class="note" style="margin-top:10px">
-        Accounts you add here are saved <b>in this browser</b> and in the
-        <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
-        see it). The password is never saved in the repo or on this page.
-        If you clear this browser's data, re-enter your accounts here.
-        Accounts added directly in Secrets will not be in this browser's
-        list - add them here instead.
       </div>
-      <h2 style="margin-top:16px">Per-account controls</h2>
-      <div id="accountCtlList"><span class="empty">Add an account above to control it here.</span></div>
-      <div class="row-btns">
-        <button class="btn-teal" id="saveAccountCtlBtn">Save account controls</button>
-      </div>
-    </div>
 
-    <!-- Setup checklist: which Secrets are present (names only). -->
-    <div class="panel">
-      <h2>Setup checklist</h2>
-      <div id="checkList"><span class="empty">Loading…</span></div>
-      <div class="note" style="margin-top:10px">
-        GitHub → repo → Settings → Secrets and variables → Actions.
-        A missing secret means that part of the worker cannot run.
-      </div>
-    </div>
-
-    <!-- Export / Import settings + cards. -->
-    <div class="panel">
-      <h2>Backup - export / import</h2>
-      <div class="row-btns" style="margin-top:0">
-        <button class="btn-blue" id="exportBtn">Download backup (settings + cards)</button>
-        <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
-          Import backup<input type="file" id="importFile" accept=".json" class="hidden">
-        </label>
-      </div>
-      <div class="note" style="margin-top:10px">
-        The backup is a JSON file with your settings and cards. Keep it
-        safe - importing it overwrites the settings and cards in the repo.
-        Passwords are never in the backup.
+      <div class="panel">
+        <h2>Backup - export / import / reset</h2>
+        <div class="row-btns" style="margin-top:0">
+          <button class="btn-blue" id="exportBtn">Download backup (settings + cards)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import backup<input type="file" id="importFile" accept=".json" class="hidden">
+          </label>
+          <button class="btn-ghost" id="copyConfigBtn">Copy settings (JSON)</button>
+          <button class="btn-red" id="resetConfigBtn">Reset settings to defaults</button>
+        </div>
+        <div class="note" style="margin-top:10px">
+          The backup is a JSON file with your settings and cards. Keep it
+          safe - importing it overwrites the settings and cards in the repo.
+          Passwords are never in the backup.
+        </div>
       </div>
     </div>
   </div>
@@ -437,17 +587,19 @@
 /* GitHub-only control panel. LOGIN: the token must belong to the repo
    owner (pinterestadstrra-cmd). Someone else's token cannot log in.
    The token stays saved in this browser (localStorage) and you are
-   logged in again automatically after a refresh. All control panels
-   work right after login - only the stats wait for the worker.
-   LIVE: the dashboard refreshes itself every 15 seconds. GitHub Pages
-   is static, so there is no server to push live events - auto-refresh
-   is the live view here. */
+   logged in again automatically after a refresh. TABBED PAGES: one
+   page per area - click a tab at the top to switch. Every page has
+   its own live log, refreshed automatically. GitHub Pages is static,
+   so there is no server to push live events - auto-refresh is the
+   live view here. CARDS and ACCOUNTS are UNLIMITED. */
 const OWNER = "pinterestadstrra-cmd";
 const REPO = "automation-website";
 const BRANCH = "main";
 const API = "https://api.github.com/repos/" + OWNER + "/" + REPO;
 const TOKEN_KEY = "gh_token";
 const BSKY_KEY = "bsky_accounts";
+const SEEN_KEY = "seen_issues";
+const REFRESH_KEY = "refresh_seconds";
 
 const $ = (id) => document.getElementById(id);
 
@@ -498,6 +650,20 @@ async function gh(path, method, body) {
   return data;
 }
 
+/* ---------- TABS (one page per area) ---------- */
+function showTab(name) {
+  document.querySelectorAll(".tab-btn").forEach((b) => {
+    b.classList.toggle("active", b.dataset.tab === name);
+  });
+  document.querySelectorAll(".page").forEach((p) => {
+    p.classList.toggle("hidden", p.id !== "page-" + name);
+  });
+  try { localStorage.setItem("last_tab", name); } catch (e) {}
+}
+document.querySelectorAll(".tab-btn").forEach((b) => {
+  b.addEventListener("click", () => showTab(b.dataset.tab));
+});
+
 /* ---------- LOGIN (token must belong to the repo owner) ---------- */
 let loggedIn = false;
 async function verifyToken(token) {
@@ -526,6 +692,8 @@ function showDashboard() {
   $("dashView").classList.remove("hidden");
   $("headerBtns").classList.remove("hidden");
   $("livePill").classList.remove("hidden");
+  const tab = localStorage.getItem("last_tab") || "overview";
+  showTab(tab);
 }
 async function doLogin(token) {
   const who = await verifyToken(token);
@@ -553,9 +721,11 @@ $("logoutBtn").addEventListener("click", () => {
   showMsg("Logged out.", true);
 });
 
-/* ---------- status (public, no token). Only stats need it. ---------- */
+/* ---------- status (public, no token) ---------- */
 let accountHandles = [];
 let accountsDetail = [];
+let lastData = null;
+let lastRuns = -1;
 async function loadStatus() {
   let data = null;
   try {
@@ -564,14 +734,23 @@ async function loadStatus() {
   } catch (e) { /* no data yet */ }
   if (!data) {
     $("noData").classList.remove("hidden");
-    $("dashStats").classList.add("hidden");
     renderIssues([]);
     renderHealth(null);
+    renderPageLogs([]);
     $("lastRunPill").textContent = "Last run: —";
     return;
   }
   $("noData").classList.add("hidden");
-  $("dashStats").classList.remove("hidden");
+  lastData = data;
+  fileCardRuns = data.file_card_runs || {};
+
+  // New-run detection: show a banner when a fresh run finished.
+  const runs = data.runs ?? 0;
+  if (lastRuns >= 0 && runs > lastRuns) {
+    $("newRunBanner").classList.remove("hidden");
+    setTimeout(() => $("newRunBanner").classList.add("hidden"), 15000);
+  }
+  lastRuns = runs;
 
   const stats = data.stats || {};
   $("statBloggerToday").textContent = stats.blogger_today ?? 0;
@@ -580,7 +759,7 @@ async function loadStatus() {
   $("statTotalReplies").textContent = stats.total_replies ?? 0;
   $("statAccounts").textContent = stats.accounts ?? 0;
   $("lastRunPill").textContent =
-    "Last run: " + fmtTime(data.last_run) + "  ·  Runs: " + (data.runs ?? 0) +
+    "Last run: " + fmtTime(data.last_run) + "  ·  Runs: " + runs +
     "  ·  Updated: " + fmtTime(data.generated_at);
 
   accountHandles = data.account_handles || [];
@@ -619,69 +798,30 @@ async function loadStatus() {
 
   renderIssues(data.issues || []);
   renderHealth(data.health || null);
-
-  const chips = $("trendingChips");
-  chips.innerHTML = "";
-  const topics = data.trending || [];
-  if (!topics.length) {
-    chips.innerHTML = '<span class="empty">No trending topics in the last run.</span>';
-  } else {
-    topics.forEach((topic) => {
-      const chip = document.createElement("button");
-      chip.className = "chip chip-btn";
-      chip.type = "button";
-      chip.textContent = topic;
-      chip.title = "Write about this topic next";
-      chip.addEventListener("click", () => setForceTopic(topic));
-      chips.appendChild(chip);
-    });
-  }
-
-  const posts = $("postList");
-  posts.innerHTML = "";
-  const recent = data.recent_posts || [];
-  if (!recent.length) {
-    posts.innerHTML = '<div class="empty">No articles published yet.</div>';
-  } else {
-    recent.forEach((p) => {
-      const div = document.createElement("div");
-      div.className = "post-row";
-      div.innerHTML =
-        (p.url
-          ? '<b><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></b>"
-          : "<b>" + esc(p.title) + "</b>") +
-        '<div class="meta">' + esc(p.topic || "") +
-        (p.source ? " · " + esc(p.source) : "") +
-        " · " + fmtTime(p.created_at) + "</div>";
-      posts.appendChild(div);
-    });
-  }
-
-  const logs = $("logList");
-  logs.innerHTML = "";
-  const entries = data.logs || [];
-  if (!entries.length) {
-    logs.innerHTML = '<div class="empty">No activity yet.</div>';
-  } else {
-    entries.forEach((l) => {
-      const div = document.createElement("div");
-      div.className = "log-line" +
-        (l.level === "error" ? " log-error" : l.level === "warning" ? " log-warning" : "");
-      div.innerHTML = '<span class="t">' + esc(fmtTime(l.created_at)) + "</span>" + esc(l.message);
-      logs.appendChild(div);
-    });
-  }
+  renderPosts(data.recent_posts || []);
+  renderTrending(data.trending || []);
+  renderPageLogs(data.logs || []);
+  renderFullLog(data.logs || []);
 }
 
-/* ---------- Problems + Health panels ---------- */
+/* ---------- Problems + Health ---------- */
+function getSeenIssues() {
+  try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || "[]")); }
+  catch (e) { return new Set(); }
+}
 function renderIssues(issues) {
   const el = $("issueList");
   el.innerHTML = "";
-  if (!issues.length) {
+  const seen = getSeenIssues();
+  const open = issues.filter((it) => {
+    const key = (it.code || "") + "|" + (it.message || "") + "|" + (it.time || "");
+    return !seen.has(key);
+  });
+  if (!open.length) {
     el.innerHTML = '<div class="empty">No problems. Everything looks good.</div>';
     return;
   }
-  issues.forEach((it) => {
+  open.forEach((it) => {
     const div = document.createElement("div");
     div.className = "issue";
     const lvl = (it.level || "info").toLowerCase();
@@ -692,6 +832,16 @@ function renderIssues(issues) {
     el.appendChild(div);
   });
 }
+$("markSeenBtn").addEventListener("click", () => {
+  if (!lastData || !(lastData.issues || []).length) return;
+  const seen = getSeenIssues();
+  lastData.issues.forEach((it) => {
+    seen.add((it.code || "") + "|" + (it.message || "") + "|" + (it.time || ""));
+  });
+  try { localStorage.setItem(SEEN_KEY, JSON.stringify(Array.from(seen))); } catch (e) {}
+  renderIssues(lastData.issues || []);
+  showMsg("Problems marked as seen.", true);
+});
 function renderHealth(health) {
   const el = $("healthList");
   el.innerHTML = "";
@@ -718,11 +868,144 @@ function renderHealth(health) {
     el.appendChild(div);
   });
 }
+function renderTrending(topics) {
+  const chips = $("trendingChips");
+  chips.innerHTML = "";
+  if (!topics.length) {
+    chips.innerHTML = '<span class="empty">No trending topics in the last run.</span>';
+    return;
+  }
+  topics.forEach((topic) => {
+    const chip = document.createElement("button");
+    chip.className = "chip chip-btn";
+    chip.type = "button";
+    chip.textContent = topic;
+    chip.title = "Write about this topic next";
+    chip.addEventListener("click", () => setForceTopic(topic));
+    chips.appendChild(chip);
+  });
+}
+function renderPosts(recent) {
+  const posts = $("postList");
+  posts.innerHTML = "";
+  if (!recent.length) {
+    posts.innerHTML = '<div class="empty">No articles published yet.</div>';
+    $("daySummary").textContent = "";
+    return;
+  }
+  recent.forEach((p) => {
+    const div = document.createElement("div");
+    div.className = "post-row";
+    const img = p.image_url
+      ? '<img src="' + esc(p.image_url) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      : "";
+    div.innerHTML = img +
+      "<div>" +
+      (p.url
+        ? '<b><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></b>"
+        : "<b>" + esc(p.title) + "</b>") +
+      '<div class="meta">' + esc(p.topic || "") +
+      (p.source ? " · " + esc(p.source) : "") +
+      " · " + fmtTime(p.created_at) + "</div></div>";
+    posts.appendChild(div);
+  });
+  const byDay = {};
+  recent.forEach((p) => {
+    const d = String(p.created_at || "").slice(0, 10);
+    if (d) byDay[d] = (byDay[d] || 0) + 1;
+  });
+  $("daySummary").textContent = "Posts by day (latest 10): " +
+    Object.keys(byDay).sort().reverse()
+      .map((d) => d + ": " + byDay[d]).join("  ·  ");
+}
+
+/* ---------- per-page live logs (filtered by area) ---------- */
+const LOG_FILTERS = {
+  overview: null, // all, latest 8
+  blogger: ["blogger", "publish", "article", "photo", "topic", "forced", "no photo"],
+  bluesky: ["bluesky", "bsky", "reply", "replied", "login"],
+  cards: ["card"],
+};
+function logLineHtml(l) {
+  return '<div class="log-line' +
+    (l.level === "error" ? " log-error" : l.level === "warning" ? " log-warning" : "") + '">' +
+    '<span class="t">' + esc(fmtTime(l.created_at)) + "</span>" + esc(l.message) + "</div>";
+}
+function renderPageLogs(logs) {
+  const render = (id, keys, limit) => {
+    const el = $(id);
+    if (!el) return;
+    let list = logs;
+    if (keys) {
+      list = logs.filter((l) => {
+        const m = String(l.message || "").toLowerCase();
+        return keys.some((k) => m.includes(k));
+      });
+    }
+    list = list.slice(0, limit);
+    el.innerHTML = list.length
+      ? list.map(logLineHtml).join("")
+      : '<div class="empty">No matching log entries yet.</div>';
+  };
+  render("overviewLog", null, 8);
+  render("bloggerLog", LOG_FILTERS.blogger, 10);
+  render("blueskyLog", LOG_FILTERS.bluesky, 10);
+  render("cardsLog", LOG_FILTERS.cards, 10);
+}
+function renderFullLog(logs) {
+  const q = ($("logSearch").value || "").trim().toLowerCase();
+  const el = $("logList");
+  let list = logs;
+  if (q) list = logs.filter((l) => String(l.message || "").toLowerCase().includes(q));
+  el.innerHTML = list.length
+    ? list.map(logLineHtml).join("")
+    : '<div class="empty">No log entries match.</div>';
+}
+$("logSearch").addEventListener("input", () => {
+  if (lastData) renderFullLog(lastData.logs || []);
+});
+$("exportLogsBtn").addEventListener("click", () => {
+  const logs = (lastData && lastData.logs) || [];
+  const text = logs.map((l) => fmtTime(l.created_at) + " [" + (l.level || "") + "] " + (l.message || "")).join("\n");
+  const blob = new Blob([text || "No logs yet."], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "automation-log.txt";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+/* ---------- next-run countdown (cron every 30 min) ---------- */
+function updateCountdown() {
+  const el = $("nextRunText");
+  if (!el) return;
+  const now = new Date();
+  const next = new Date(now);
+  next.setSeconds(0, 0);
+  if (now.getMinutes() < 30) next.setMinutes(30);
+  else { next.setMinutes(0); next.setHours(next.getHours() + 1); }
+  const diff = Math.max(0, Math.floor((next - now) / 1000));
+  const mm = String(Math.floor(diff / 60)).padStart(2, "0");
+  const ss = String(diff % 60).padStart(2, "0");
+  el.textContent = "Next run in " + mm + ":" + ss + " (at " +
+    String(next.getHours()).padStart(2, "0") + ":" +
+    String(next.getMinutes()).padStart(2, "0") + " Dhaka)";
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
 /* ---------- config (GitHub API) ---------- */
 let configSha = "";
 let config = {};
 let configLoaded = false;
+const CONFIG_DEFAULTS = {
+  blogger_daily_limit: 0, blogger_posts_per_run: 1, bsky_posts_per_run: 1,
+  bsky_reply_daily_cap: 0, bsky_reply_per_run: 0, reply_own_per_run: 0,
+  reply_gap_seconds: 0, post_interval_minutes: 30, post_window_start: "",
+  post_window_end: "", dry_run: false, max_consecutive_failures: 5,
+  paused: false, force_topic: "", blogger_enabled: true, bsky_enabled: true,
+  replies_enabled: true, cards_enabled: true, topic_blacklist: "",
+};
 async function loadConfig() {
   if (!getToken()) return;
   try {
@@ -731,6 +1014,7 @@ async function loadConfig() {
     config = JSON.parse(b64ToUtf8(file.content || ""));
     configLoaded = true;
     fillConfigInputs();
+    syncToggles();
   } catch (e) { /* leave defaults */ }
 }
 function fillConfigInputs() {
@@ -747,6 +1031,7 @@ function fillConfigInputs() {
   $("setMaxFail").value = config.max_consecutive_failures ?? 5;
   $("setDryRun").checked =
     String(config.dry_run || "false").toLowerCase() === "true";
+  $("blacklistInput").value = config.topic_blacklist || "";
   const paused = String(config.paused || false).toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
@@ -772,6 +1057,7 @@ function readConfigInputs() {
   config.post_interval_minutes = Number($("setInterval").value) || 30;
   config.max_consecutive_failures = Number($("setMaxFail").value) || 5;
   config.dry_run = $("setDryRun").checked;
+  config.topic_blacklist = $("blacklistInput").value.trim();
 }
 async function saveConfig(msg) {
   if (needToken()) return false;
@@ -800,6 +1086,7 @@ async function saveAllSettings(msg) {
 $("saveSchedulingBtn").addEventListener("click", () => saveAllSettings("Update scheduling from dashboard"));
 $("saveBloggerBtn").addEventListener("click", () => saveAllSettings("Update Blogger settings from dashboard"));
 $("saveBlueskyBtn").addEventListener("click", () => saveAllSettings("Update Bluesky settings from dashboard"));
+$("saveBlacklistBtn").addEventListener("click", () => saveAllSettings("Update topic blacklist from dashboard"));
 async function setForceTopic(topic) {
   if (needToken()) return;
   await loadConfig();
@@ -824,6 +1111,28 @@ $("pauseBtn").addEventListener("click", async () => {
     showMsg(config.paused ? "Automation PAUSED." : "Automation resumed.", true);
     await loadStatus();
   }
+});
+
+/* ---------- workflow On/Off toggles (all pages share one source) ---------- */
+function syncToggles() {
+  document.querySelectorAll(".wf-toggle").forEach((box) => {
+    const key = box.dataset.config;
+    box.checked = String(config[key] ?? "true").toLowerCase() !== "false";
+  });
+}
+document.querySelectorAll(".wf-toggle").forEach((box) => {
+  box.addEventListener("change", async () => {
+    if (needToken()) { syncToggles(); return; }
+    if (!configLoaded) { showMsg("Settings are still loading - try again.", false); syncToggles(); return; }
+    config[box.dataset.config] = box.checked;
+    if (await saveConfig("Toggle workflow from dashboard")) {
+      showMsg(box.dataset.config + " is now " + (box.checked ? "ON" : "OFF") + ".", true);
+      syncToggles();
+      await loadStatus();
+    } else {
+      syncToggles();
+    }
+  });
 });
 
 /* ---------- workflow run history ---------- */
@@ -888,10 +1197,11 @@ async function loadChecklist() {
   }
 }
 
-/* ---------- cards (GitHub API) ---------- */
+/* ---------- cards (GitHub API) - UNLIMITED ---------- */
 let cardsSha = "";
 let cards = [];
 let editingCardIndex = -1;
+let fileCardRuns = {};
 
 async function loadCards() {
   if (!getToken()) {
@@ -913,25 +1223,28 @@ function renderCards() {
   const list = $("cardList");
   list.innerHTML = "";
   if (!cards.length) {
-    list.innerHTML = '<div class="empty">No cards yet. Add your first card below.</div>';
+    list.innerHTML = '<div class="empty">No cards yet. Add your first card below. (Unlimited - add as many as you want.)</div>';
     return;
   }
   cards.forEach((c, i) => {
     const div = document.createElement("div");
     div.className = "card-row";
     const paused = (c.status || "active") !== "active";
+    const lastRun = fileCardRuns[c.name || ""];
     div.innerHTML =
       "<b>" + esc(c.name || ("Card " + (i + 1))) + "</b> " +
-      (paused ? '<span class="paused-tag">Paused</span>' : "") +
+      (paused ? '<span class="paused-tag">Paused</span>' : '<span class="on-tag">Active</span>') +
       '<div class="meta">' + esc(c.type || "") +
       (c.link ? " · " + esc(c.link) : "") +
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
       " · every " + esc(c.interval_minutes || 30) + " min" +
       (c.schedule_times && c.schedule_times.length
         ? " · " + esc(c.schedule_times.join(", ")) : "") +
+      (lastRun ? " · last run: " + esc(fmtTime(lastRun)) : " · never run") +
       "</div>" +
       '<div class="actions">' +
       '<button class="btn-ghost" data-act="edit" data-i="' + i + '">Edit</button>' +
+      '<button class="btn-ghost" data-act="dup" data-i="' + i + '">Duplicate</button>' +
       '<button class="btn-ghost" data-act="toggle" data-i="' + i + '">' +
         (paused ? "Resume" : "Pause") + "</button>" +
       '<button class="btn-red" data-act="del" data-i="' + i + '">Delete</button>' +
@@ -973,6 +1286,14 @@ async function cardAction(act, i) {
     if (await saveCards("Toggle card from dashboard")) renderCards();
     return;
   }
+  if (act === "dup") {
+    const copy = JSON.parse(JSON.stringify(cards[i]));
+    copy.name = (copy.name || "Card") + " (copy)";
+    copy.status = "active";
+    cards.push(copy);
+    if (await saveCards("Duplicate card from dashboard")) renderCards();
+    return;
+  }
   if (act === "edit") {
     editingCardIndex = i;
     const c = cards[i];
@@ -988,6 +1309,16 @@ async function cardAction(act, i) {
     $("cardForm").scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
+$("pauseAllCardsBtn").addEventListener("click", async () => {
+  if (!cards.length) return;
+  cards.forEach((c) => { c.status = "paused"; });
+  if (await saveCards("Pause all cards from dashboard")) renderCards();
+});
+$("resumeAllCardsBtn").addEventListener("click", async () => {
+  if (!cards.length) return;
+  cards.forEach((c) => { c.status = "active"; });
+  if (await saveCards("Resume all cards from dashboard")) renderCards();
+});
 
 $("cardForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -1016,7 +1347,7 @@ $("cardForm").addEventListener("submit", async (e) => {
   }
 });
 
-/* ---------- Bluesky accounts (saved to the GitHub Secret) ---------- */
+/* ---------- Bluesky accounts (saved to the GitHub Secret) - UNLIMITED ---------- */
 function getSavedAccounts() {
   try {
     const list = JSON.parse(localStorage.getItem(BSKY_KEY) || "[]");
@@ -1035,13 +1366,19 @@ function renderAccountList() {
   const el = $("accountList");
   el.innerHTML = "";
   if (!saved.length && !accountHandles.length) {
-    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below.</div>';
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
     return;
   }
   saved.forEach((a, i) => {
+    const detail = accountsDetail.find((d) => d.handle === a.handle);
     const div = document.createElement("div");
     div.className = "card-row";
-    div.innerHTML = "<b>" + esc(a.handle) + "</b>" +
+    div.innerHTML = "<b>" + esc(a.handle) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
       '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
     el.appendChild(div);
   });
@@ -1185,7 +1522,7 @@ $("saveAccountCtlBtn").addEventListener("click", async () => {
   }
 });
 
-/* ---------- export / import (backup) ---------- */
+/* ---------- export / import (backup) + copy + reset ---------- */
 $("exportBtn").addEventListener("click", async () => {
   if (needToken()) return;
   await loadConfig();
@@ -1216,6 +1553,7 @@ $("importFile").addEventListener("change", async (e) => {
       config = backup.config;
       configLoaded = true;
       fillConfigInputs();
+      syncToggles();
       await saveConfig("Import backup from dashboard");
     }
     if (Array.isArray(backup.cards)) {
@@ -1230,6 +1568,51 @@ $("importFile").addEventListener("change", async (e) => {
   }
   e.target.value = "";
 });
+$("copyConfigBtn").addEventListener("click", async () => {
+  await loadConfig();
+  const text = JSON.stringify(config, null, 2);
+  try {
+    await navigator.clipboard.writeText(text);
+    showMsg("Settings copied to clipboard.", true);
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); showMsg("Settings copied to clipboard.", true); }
+    catch (err) { showMsg("Copy failed - select the text manually.", false); }
+    document.body.removeChild(ta);
+  }
+});
+$("resetConfigBtn").addEventListener("click", async () => {
+  if (!confirm("Reset ALL settings to defaults? (Cards are not touched.)")) return;
+  config = JSON.parse(JSON.stringify(CONFIG_DEFAULTS));
+  configLoaded = true;
+  fillConfigInputs();
+  syncToggles();
+  if (await saveConfig("Reset settings to defaults from dashboard")) {
+    showMsg("Settings reset to defaults.", true);
+    await loadStatus();
+  }
+});
+
+/* ---------- live refresh control ---------- */
+let refreshTimer = null;
+function setRefreshInterval() {
+  if (refreshTimer) { clearInterval(refreshTimer); refreshTimer = null; }
+  const secs = Number($("refreshSelect").value || 15);
+  try { localStorage.setItem(REFRESH_KEY, String(secs)); } catch (e) {}
+  $("livePill").textContent = secs > 0
+    ? ("LIVE · auto-refresh " + secs + "s") : "LIVE · refresh off";
+  if (secs > 0) {
+    refreshTimer = setInterval(() => { if (loggedIn) loadStatus(); }, secs * 1000);
+  }
+}
+$("refreshSelect").addEventListener("change", setRefreshInterval);
+(function initRefreshSelect() {
+  const saved = localStorage.getItem(REFRESH_KEY);
+  if (saved !== null) $("refreshSelect").value = saved;
+})();
 
 /* ---------- run worker + refresh ---------- */
 $("runWorkerBtn").addEventListener("click", async () => {
@@ -1260,6 +1643,7 @@ async function refreshAll() {
   await loadAccountCtl();
   renderAccountList();
   renderAccountControls();
+  renderCards();
 }
 $("refreshBtn").addEventListener("click", refreshAll);
 
@@ -1271,6 +1655,7 @@ $("refreshBtn").addEventListener("click", refreshAll);
     if (who) {
       showDashboard();
       await refreshAll();
+      setRefreshInterval();
       return;
     }
     localStorage.removeItem(TOKEN_KEY);
@@ -1278,9 +1663,6 @@ $("refreshBtn").addEventListener("click", refreshAll);
   }
   showLogin();
 })();
-/* LIVE: refresh the status every 15 seconds. GitHub Pages is static,
-   so this polling is the live view - there is no server to push events. */
-setInterval(() => { if (loggedIn) loadStatus(); }, 15000);
 </script>
 </body>
 </html>
