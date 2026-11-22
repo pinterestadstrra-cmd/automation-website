@@ -137,6 +137,14 @@ DEFAULT_BSKY_REPLY_PER_RUN = 0        # 0 = unlimited replies per run
 DEFAULT_BSKY_REPLY_DAILY_CAP = 0      # 0 = unlimited replies per day
 DEFAULT_REPLY_GAP_SECONDS = 0         # 0 = no gap between replies
 DEFAULT_BSKY_POSTS_PER_RUN = 1        # max 1 Bluesky post per run
+# --- robust backend settings (all changeable from the dashboard) ---
+DEFAULT_BLOGGER_POSTS_PER_RUN = 1     # articles published per worker run
+DEFAULT_REPLY_OWN_PER_RUN = 0         # 0 = unlimited replies to OWN posts
+DEFAULT_POST_INTERVAL_MINUTES = 30    # minutes between posts in a run
+DEFAULT_POST_WINDOW_START = ""        # e.g. "07:00" Dhaka (empty = no window)
+DEFAULT_POST_WINDOW_END = ""          # e.g. "23:00" Dhaka (empty = no window)
+DEFAULT_DRY_RUN = "false"             # "true" = test mode, nothing is posted
+DEFAULT_MAX_CONSECUTIVE_FAILURES = 5  # circuit breaker: pause after N failed runs
 
 UTC = timezone.utc
 
@@ -244,6 +252,13 @@ def init_db():
         "bsky_reply_daily_cap": str(DEFAULT_BSKY_REPLY_DAILY_CAP),
         "reply_gap_seconds": str(DEFAULT_REPLY_GAP_SECONDS),
         "bsky_posts_per_run": str(DEFAULT_BSKY_POSTS_PER_RUN),
+        "blogger_posts_per_run": str(DEFAULT_BLOGGER_POSTS_PER_RUN),
+        "reply_own_per_run": str(DEFAULT_REPLY_OWN_PER_RUN),
+        "post_interval_minutes": str(DEFAULT_POST_INTERVAL_MINUTES),
+        "post_window_start": str(DEFAULT_POST_WINDOW_START),
+        "post_window_end": str(DEFAULT_POST_WINDOW_END),
+        "dry_run": str(DEFAULT_DRY_RUN),
+        "max_consecutive_failures": str(DEFAULT_MAX_CONSECUTIVE_FAILURES),
     }
     for k, v in defaults.items():
         cur.execute("INSERT OR IGNORE INTO settings(key, value) VALUES(?, ?)", (k, v))
@@ -319,23 +334,39 @@ def log(level, message):
 # between runs. data/state.json IS committed back to the repo, so dedup
 # (posted news, replied comments) survives across runs.
 def load_state():
-    if os.path.exists(STATE_PATH):
-        try:
-            with open(STATE_PATH, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            if isinstance(data, dict):
-                return data
-        except Exception:
-            pass
+    # BACKUP PLAN: if state.json is corrupt, fall back to state.json.bak.
+    for path in (STATE_PATH, STATE_PATH + ".bak"):
+        if os.path.exists(path):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict):
+                    if path.endswith(".bak"):
+                        print("state.json corrupt - restored from state.json.bak", flush=True)
+                    return data
+            except Exception:
+                continue
     return {"posted_urls": [], "posted_topics": [], "replied_comments": [],
             "last_run": "", "runs": 0}
 
 
+def backup_state():
+    """Keep a backup copy of state.json before overwriting it."""
+    try:
+        if os.path.exists(STATE_PATH):
+            import shutil
+            shutil.copyfile(STATE_PATH, STATE_PATH + ".bak")
+    except Exception:
+        pass
+
+
 def save_state(state):
     try:
+        backup_state()
         state["posted_urls"] = state.get("posted_urls", [])[-500:]
         state["posted_topics"] = state.get("posted_topics", [])[-500:]
         state["replied_comments"] = state.get("replied_comments", [])[-2000:]
+        state["issues"] = state.get("issues", [])[-50:]
         with open(STATE_PATH, "w", encoding="utf-8") as f:
             json.dump(state, f, ensure_ascii=False, indent=2)
     except Exception as e:
@@ -379,6 +410,15 @@ def write_dashboard_json(state):
             trending = get_bluesky_trending(limit=10)
         except Exception:
             trending = []
+        accounts_detail = []
+        for a in list_accounts():
+            h = a["handle"]
+            accounts_detail.append({
+                "handle": h,
+                "enabled": account_enabled(h),
+                "posts_limit": account_posts_limit(h),
+                "posts_today": posts_today_for_account(state, h),
+            })
         data = {
             "generated_at": now_iso(),
             "last_run": state.get("last_run", ""),
@@ -393,8 +433,25 @@ def write_dashboard_json(state):
             "settings": {k: get_setting(k, "") for k in
                          ("blogger_daily_limit", "bsky_reply_per_run",
                           "bsky_reply_daily_cap", "reply_gap_seconds",
-                          "bsky_posts_per_run", "paused", "force_topic")},
+                          "bsky_posts_per_run", "paused", "force_topic",
+                          "blogger_posts_per_run", "reply_own_per_run",
+                          "post_interval_minutes", "post_window_start",
+                          "post_window_end", "dry_run",
+                          "max_consecutive_failures")},
             "account_handles": [a["handle"] for a in list_accounts()],
+            "accounts_detail": accounts_detail,
+            "health": health_check(state),
+            "issues": get_issues(state),
+            "dry_run": is_dry_run(),
+            "post_window": {
+                "start": str(get_setting("post_window_start", "") or ""),
+                "end": str(get_setting("post_window_end", "") or ""),
+                "in_window": in_post_window(),
+            },
+            "circuit_breaker": {
+                "consecutive_failures": int(state.get("consecutive_failures", 0) or 0),
+                "open": int(state.get("consecutive_failures", 0) or 0) >= 5,
+            },
             "trending": trending,
             "recent_posts": posts,
             "logs": logs,
@@ -976,6 +1033,13 @@ News: {headline}
 Blog link: {link}
 """
 
+BSKY_PROMO_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH that markets
+this link and makes people want to click it. Sound like a real person
+sharing something worth seeing, not an ad. Keep it under 250 characters.
+End with the link on its own line.
+Link: {link}
+"""
+
 REPLY_PROMPT = """Write ONE short, natural, relevant Bluesky reply in ENGLISH to
 this comment. It must sound like a real person, not an ad. Do NOT repeat
 the comment. Keep it under 200 characters. End with this link on its own
@@ -1098,41 +1162,76 @@ def record_post(title, url, topic, source, image_url):
 
 
 def run_blogger_cycle(state):
-    """Write + publish ONE article from a Bluesky-trending topic.
-    Returns the article dict or None."""
+    """Write + publish up to N articles (blogger_posts_per_run) from
+    Bluesky-trending topics. Returns the LAST published article or None.
+    Respects: daily cap, posting window, dry-run, retry on publish."""
     cap = int(get_setting("blogger_daily_limit", str(DEFAULT_BLOGGER_DAILY_LIMIT)) or 0)
     if cap > 0 and blogger_posts_today() >= cap:
         log("info", f"blogger daily cap reached ({cap}/day) - skipping publish")
         return None
+    if not in_post_window():
+        log("info", "outside posting window - skipping publish this run")
+        return None
+    try:
+        per_run = int(get_setting("blogger_posts_per_run",
+                                  str(DEFAULT_BLOGGER_POSTS_PER_RUN)) or 1)
+    except Exception:
+        per_run = 1
+    per_run = max(1, per_run)
+    try:
+        interval = int(get_setting("post_interval_minutes",
+                                   str(DEFAULT_POST_INTERVAL_MINUTES)) or 30)
+    except Exception:
+        interval = 30
+    dry = is_dry_run()
+    published = []
     for topic, sources, facts in candidate_topics(state, limit=5)[:3]:
+        if len(published) >= per_run:
+            break
+        if published and interval > 0:
+            log("info", f"waiting {interval} min before next post")
+            time.sleep(interval * 60)
         article_text = ai_write(ARTICLE_PROMPT.format(topic=topic, facts=facts),
                                 max_tokens=2000)
         if not article_text:
-            log("warning", f"article writing failed for '{topic}'")
+            record_issue("warning", "ai_write",
+                         f"article writing failed for '{topic}'")
             continue
         headline = extract_headline(article_text)
         # STRICT RULE: no photo = no post. Drop this topic, try the next.
         photo = fetch_photo(topic)
         if not photo:
             state.setdefault("posted_topics", []).append(topic.lower())
-            log("warning", f"topic dropped (no photo): {topic}")
+            record_issue("warning", "no_photo", f"topic dropped (no photo): {topic}")
             continue
         html_body = build_article_html(article_text,
                                        photo.get("url", ""),
                                        ", ".join(sources))
-        url = blogger_publish(headline, html_body, labels=["News"])
+        if dry:
+            log("warning", f"[DRY RUN] would publish: {headline}")
+            published.append({"title": headline, "url": "",
+                              "image_path": photo.get("local_path", ""),
+                              "image_url": photo.get("url", ""),
+                              "topic": topic})
+            continue
+        url = retry_with_backoff(
+            lambda: blogger_publish(headline, html_body, labels=["News"]),
+            attempts=3, base_delay=10, label=f"blogger publish '{headline}'")
         if not url:
-            log("warning", f"blogger publish failed for '{headline}'")
+            record_issue("error", "blogger_publish",
+                         f"blogger publish failed for '{headline}'")
             continue
         record_post(headline, url, topic, ", ".join(sources), photo.get("url", ""))
         state.setdefault("posted_urls", []).append(url)
         state.setdefault("posted_topics", []).append(topic.lower())
         log("info", f"published: {headline} -> {url}")
-        return {"title": headline, "url": url,
-                "image_path": photo.get("local_path", ""),
-                "image_url": photo.get("url", ""), "topic": topic}
-    log("info", "blogger cycle: no publishable topic this run")
-    return None
+        published.append({"title": headline, "url": url,
+                          "image_path": photo.get("local_path", ""),
+                          "image_url": photo.get("url", ""), "topic": topic})
+    if not published:
+        log("info", "blogger cycle: no publishable topic this run")
+        return None
+    return published[-1]
 
 
 def latest_article():
@@ -1169,7 +1268,9 @@ def record_reply(post_uri, comment_uri, reply_text, account_handle):
 
 
 def run_bluesky_cycle(state, article=None):
-    """Post to Bluesky accounts (unique post per account) + replies."""
+    """Post to Bluesky accounts (unique post per account) + replies.
+    Respects: per-account enable/disable + posts-per-day, separate reply
+    limits for OWN posts vs OTHERS' posts, daily reply cap, dry-run."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
@@ -1178,15 +1279,28 @@ def run_bluesky_cycle(state, article=None):
     if not article:
         log("info", "bluesky cycle: no article to link yet")
         return
+    dry = is_dry_run()
     per_run = int(get_setting("bsky_posts_per_run", str(DEFAULT_BSKY_POSTS_PER_RUN)) or 1)
     state.setdefault("bsky_posted", [])
     # --- 1) One UNIQUE post per account (same post never goes to all accounts).
     for acc in accounts:
-        key = f"{acc['handle']}|{article['url']}"
+        handle = acc["handle"]
+        if not account_enabled(handle):
+            log("info", f"bluesky: account {handle} is disabled - skipping")
+            continue
+        limit = account_posts_limit(handle)
+        if limit > 0 and posts_today_for_account(state, handle) >= limit:
+            log("info", f"bluesky: account {handle} hit its daily post limit ({limit})")
+            continue
+        key = f"{handle}|{article['url']}"
         if key in state["bsky_posted"]:
             continue
-        client = bsky_login(acc["handle"], acc["app_password"])
+        if dry:
+            log("warning", f"[DRY RUN] would post to Bluesky ({handle}): {article['title']}")
+            continue
+        client = bsky_login(handle, acc["app_password"])
         if not client:
+            record_issue("warning", "bsky_login", f"Bluesky login failed: {handle}")
             continue
         text = ai_write(BSKY_POST_PROMPT.format(headline=article["title"],
                                                 link=article["url"]),
@@ -1194,14 +1308,17 @@ def run_bluesky_cycle(state, article=None):
         if not text:
             text = f"{article['title']}\n{article['url']}"
         img = article.get("image_path") or ""
-        posted = bluesky_post(client, text,
-                              image_path=img if img and os.path.exists(img) else None,
-                              image_alt=article["title"][:100])
+        posted = retry_with_backoff(
+            lambda: bluesky_post(client, text,
+                                 image_path=img if img and os.path.exists(img) else None,
+                                 image_alt=article["title"][:100]),
+            attempts=3, base_delay=5, label=f"bluesky post ({handle})")
         if posted:
             state["bsky_posted"].append(key)
-            log("info", f"bluesky posted ({acc['handle']}): {posted[1]}")
+            record_bsky_post(state, handle)
+            log("info", f"bluesky posted ({handle}): {posted[1]}")
         time.sleep(5)
-    # --- 2) Replies to fresh comments on high-engagement posts.
+    # --- 2) Replies to fresh comments on high-engagement posts (OTHERS).
     # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
     daily_cap = int(get_setting("bsky_reply_daily_cap", str(DEFAULT_BSKY_REPLY_DAILY_CAP)) or 0)
     per_run_replies = int(get_setting("bsky_reply_per_run", str(DEFAULT_BSKY_REPLY_PER_RUN)) or 0)
@@ -1225,6 +1342,11 @@ def run_bluesky_cycle(state, article=None):
                     continue
                 acc = accounts[acc_idx % len(accounts)]
                 acc_idx += 1
+                if not account_enabled(acc["handle"]):
+                    continue
+                if dry:
+                    log("warning", f"[DRY RUN] would reply to {comment['author']} ({acc['handle']})")
+                    continue
                 client = bsky_login(acc["handle"], acc["app_password"])
                 if not client:
                     continue
@@ -1233,8 +1355,10 @@ def run_bluesky_cycle(state, article=None):
                     context=post["text"]), max_tokens=400)
                 if not reply_text:
                     continue
-                uri = bluesky_reply(client, reply_text, comment["uri"],
-                                    comment["cid"], post["uri"], post["cid"])
+                uri = retry_with_backoff(
+                    lambda: bluesky_reply(client, reply_text, comment["uri"],
+                                          comment["cid"], post["uri"], post["cid"]),
+                    attempts=2, base_delay=5, label="bluesky reply (others)")
                 if uri:
                     state["replied_comments"].append(comment["uri"])
                     record_reply(post["uri"], comment["uri"], reply_text, acc["handle"])
@@ -1242,15 +1366,30 @@ def run_bluesky_cycle(state, article=None):
                     log("info", f"replied ({acc['handle']}) to {comment['author']}")
                     if gap > 0:
                         time.sleep(gap)
-    # --- 3) Reply to ALL comments on our OWN posts.
+    # --- 3) Reply to ALL comments on our OWN posts (separate limit).
+    try:
+        own_per_run = int(get_setting("reply_own_per_run",
+                                      str(DEFAULT_REPLY_OWN_PER_RUN)) or 0)
+    except Exception:
+        own_per_run = 0
+    done_own = 0
     for acc in accounts:
-        if per_run_replies > 0 and done_replies >= per_run_replies + 5:
+        if own_per_run > 0 and done_own >= own_per_run:
             break
+        if not account_enabled(acc["handle"]):
+            continue
+        if daily_cap > 0 and replies_today() >= daily_cap:
+            break
+        if dry:
+            log("warning", f"[DRY RUN] would check own-post comments ({acc['handle']})")
+            continue
         client = bsky_login(acc["handle"], acc["app_password"])
         if not client:
             continue
         for own in bluesky_own_posts_with_replies(client, acc["handle"], limit=3):
             for comment in own["replies"]:
+                if own_per_run > 0 and done_own >= own_per_run:
+                    break
                 if comment["uri"] in state["replied_comments"]:
                     continue
                 if comment["author"] == acc["handle"]:
@@ -1259,11 +1398,14 @@ def run_bluesky_cycle(state, article=None):
                                        max_tokens=300)
                 if not reply_text:
                     continue
-                uri = bluesky_reply(client, reply_text, comment["uri"],
-                                    comment["cid"], own["uri"], own["cid"])
+                uri = retry_with_backoff(
+                    lambda: bluesky_reply(client, reply_text, comment["uri"],
+                                          comment["cid"], own["uri"], own["cid"]),
+                    attempts=2, base_delay=5, label="bluesky reply (own)")
                 if uri:
                     state["replied_comments"].append(comment["uri"])
                     record_reply(own["uri"], comment["uri"], reply_text, acc["handle"])
+                    done_own += 1
                     done_replies += 1
                     log("info", f"replied to own-post comment ({acc['handle']})")
 
@@ -1367,6 +1509,16 @@ def execute_card(card, state):
                     a["handle"] == card["account_handle"]]
             ok = False
             for acc in accs[:1]:
+                if not account_enabled(acc["handle"]):
+                    continue
+                limit = account_posts_limit(acc["handle"])
+                if limit > 0 and posts_today_for_account(state, acc["handle"]) >= limit:
+                    continue
+                if is_dry_run():
+                    log("warning", f"[DRY RUN] card '{card['name']}': would post "
+                                   f"({acc['handle']}): {article['title']}")
+                    ok = True
+                    continue
                 client = bsky_login(acc["handle"], acc["app_password"])
                 if not client:
                     continue
@@ -1375,7 +1527,45 @@ def execute_card(card, state):
                                             link=article["url"]), max_tokens=400)
                 if not text:
                     text = f"{article['title']}\n{article['url']}"
-                if bluesky_post(client, text):
+                if retry_with_backoff(lambda: bluesky_post(client, text),
+                                      attempts=3, base_delay=5,
+                                      label=f"card post ({acc['handle']})"):
+                    record_bsky_post(state, acc["handle"])
+                    ok = True
+        elif ctype == "bluesky_promo":
+            # Market ANY link the user gives (product, market, article...).
+            link = (card.get("link") or "").strip()
+            if not link:
+                log("warning", f"card '{card['name']}': no link to promote")
+                return False
+            accs = [a for a in list_accounts()
+                    if not card.get("account_handle") or
+                    a["handle"] == card["account_handle"]]
+            ok = False
+            for acc in accs[:1]:
+                if not account_enabled(acc["handle"]):
+                    continue
+                limit = account_posts_limit(acc["handle"])
+                if limit > 0 and posts_today_for_account(state, acc["handle"]) >= limit:
+                    continue
+                if is_dry_run():
+                    log("warning", f"[DRY RUN] card '{card['name']}': would promote "
+                                   f"{link} ({acc['handle']})")
+                    ok = True
+                    continue
+                client = bsky_login(acc["handle"], acc["app_password"])
+                if not client:
+                    continue
+                text = card.get("text") or ai_write(
+                    BSKY_PROMO_PROMPT.format(link=link), max_tokens=400)
+                if not text:
+                    text = link
+                if link not in text:
+                    text = f"{text}\n{link}"
+                if retry_with_backoff(lambda: bluesky_post(client, text),
+                                      attempts=3, base_delay=5,
+                                      label=f"card promo ({acc['handle']})"):
+                    record_bsky_post(state, acc["handle"])
                     ok = True
         elif ctype == "bluesky_reply":
             article = latest_article()
@@ -1429,6 +1619,218 @@ def run_cards_cycle(state):
         execute_card(card, state)
 
 
+# ---------------------------------------------------------------- robustness systems
+# BACKUP PLAN: every risky step has a fallback, and every failure is
+# recorded as a structured issue so the dashboard shows it in one place.
+_ISSUES = []
+
+
+def record_issue(level, code, message):
+    """Record a structured problem (dashboard Problems panel).
+    level: 'error' | 'warning' | 'info'. Duplicates are ignored."""
+    entry = {"level": level, "code": code, "message": str(message)[:300],
+             "time": now_iso()}
+    for item in _ISSUES:
+        if item.get("code") == code and item.get("message") == entry["message"]:
+            return
+    _ISSUES.append(entry)
+    if len(_ISSUES) > 50:
+        del _ISSUES[:-50]
+    log(level if level in ("error", "warning", "info") else "info",
+        f"[{code}] {message}")
+
+
+def get_issues(state=None):
+    """All current issues: previous runs' (state) + this run's. Deduped."""
+    prev = []
+    if isinstance(state, dict):
+        prev = [i for i in state.get("issues", []) if isinstance(i, dict)]
+    seen = set()
+    out = []
+    for item in prev + _ISSUES:
+        key = (item.get("code"), item.get("message"))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(item)
+    return out[-50:]
+
+
+def retry_with_backoff(fn, attempts=3, base_delay=5, label="operation"):
+    """Run fn(); on failure retry with exponential backoff.
+    Returns fn()'s result, or None after all attempts fail."""
+    delay = base_delay
+    for attempt in range(1, attempts + 1):
+        try:
+            result = fn()
+            if result is not None and result is not False:
+                return result
+            if attempt < attempts:
+                log("warning", f"{label}: empty result, retry {attempt}/{attempts} in {delay}s")
+        except Exception as e:
+            if attempt < attempts:
+                log("warning", f"{label}: failed ({e}), retry {attempt}/{attempts} in {delay}s")
+            else:
+                record_issue("error", "retry_exhausted",
+                             f"{label} failed after {attempts} attempts: {e}")
+                return None
+        time.sleep(delay)
+        delay *= 2
+    return None
+
+
+def is_dry_run():
+    """Test mode: log what WOULD be posted, post nothing."""
+    return str(get_setting("dry_run", str(DEFAULT_DRY_RUN))).strip().lower() == "true"
+
+
+def in_post_window():
+    """True if now (Dhaka) is inside the posting window, or no window set."""
+    start = str(get_setting("post_window_start", "") or "").strip()
+    end = str(get_setting("post_window_end", "") or "").strip()
+    if not start or not end:
+        return True
+    try:
+        sh, sm = [int(x) for x in start.split(":")]
+        eh, em = [int(x) for x in end.split(":")]
+    except Exception:
+        return True
+    now_local = now_utc().astimezone(USER_TZ)
+    cur = now_local.hour * 60 + now_local.minute
+    s = sh * 60 + sm
+    e = eh * 60 + em
+    if s <= e:
+        return s <= cur <= e
+    return cur >= s or cur <= e
+
+
+ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "accounts.json")
+
+
+def get_account_settings():
+    """Per-account settings from data/accounts.json (public, no passwords):
+    [{handle, enabled, posts_per_day}]. Missing file = all enabled."""
+    if not os.path.exists(ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {a["handle"]: a for a in data
+                    if isinstance(a, dict) and a.get("handle")}
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"accounts.json load failed: {e}")
+    return {}
+
+
+def account_enabled(handle):
+    cfg = get_account_settings().get(handle)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def account_posts_limit(handle):
+    cfg = get_account_settings().get(handle)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+def record_bsky_post(state, handle):
+    """Count a Bluesky post for this account today (per-account limits)."""
+    counts = state.setdefault("bsky_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[handle] = int(today.get(handle, 0)) + 1
+    # Prune old dates (keep 3 days).
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_account(state, handle):
+    counts = state.get("bsky_post_counts", {})
+    return int(counts.get(today_str(), {}).get(handle, 0))
+
+
+def validate_config():
+    """Check config values; record a warning issue for each bad one."""
+    warnings = []
+    def _int(key, default=0):
+        try:
+            return int(get_setting(key, str(default)) or default)
+        except Exception:
+            warnings.append(f"{key} is not a number - using {default}")
+            return default
+    for key in ("blogger_daily_limit", "bsky_reply_per_run",
+                "bsky_reply_daily_cap", "reply_gap_seconds",
+                "bsky_posts_per_run", "blogger_posts_per_run",
+                "reply_own_per_run", "post_interval_minutes",
+                "max_consecutive_failures"):
+        _int(key, 0)
+    for key in ("post_window_start", "post_window_end"):
+        val = str(get_setting(key, "") or "").strip()
+        if val:
+            try:
+                hh, mm = [int(x) for x in val.split(":")]
+                if not (0 <= hh <= 23 and 0 <= mm <= 59):
+                    raise ValueError
+            except Exception:
+                warnings.append(f"{key} '{val}' is not HH:MM - window ignored")
+    for w in warnings:
+        record_issue("warning", "config", w)
+    return warnings
+
+
+def health_check(state=None):
+    """Fast config-level health report (no quota used). Real failures are
+    also surfaced by the issues tracker during the actual cycles."""
+    health = {}
+    gemini_keys = [k for k in (os.environ.get("GEMINI_API_KEYS") or "").split(",")
+                   if k.strip()]
+    groq_keys = [k for k in (os.environ.get("GROQ_API_KEYS") or "").split(",")
+                 if k.strip()]
+    health["gemini"] = {
+        "ok": bool(gemini_keys),
+        "detail": f"{len(gemini_keys)} key(s) configured" if gemini_keys
+                  else "no GEMINI_API_KEYS secret"}
+    health["groq"] = {
+        "ok": bool(groq_keys),
+        "detail": f"{len(groq_keys)} key(s) configured" if groq_keys
+                  else "no GROQ_API_KEYS secret"}
+    health["blogger"] = {
+        "ok": bool(os.environ.get("BLOGGER_REFRESH_TOKEN")),
+        "detail": "refresh token present" if os.environ.get("BLOGGER_REFRESH_TOKEN")
+                  else "no BLOGGER_REFRESH_TOKEN secret"}
+    accounts = list_accounts()
+    health["bluesky"] = {
+        "ok": bool(accounts),
+        "detail": f"{len(accounts)} account(s)" if accounts
+                  else "no BLUESKY_ACCOUNTS secret"}
+    health["pexels"] = {
+        "ok": bool(os.environ.get("PEXELS_API_KEY")),
+        "detail": "key present" if os.environ.get("PEXELS_API_KEY")
+                  else "no key (fallback: Pixabay / Openverse / Pollinations)"}
+    if not health["gemini"]["ok"]:
+        record_issue("error", "health",
+                     "Gemini keys missing - articles cannot be written")
+    if not health["blogger"]["ok"]:
+        record_issue("error", "health",
+                     "Blogger refresh token missing - cannot publish")
+    if not health["bluesky"]["ok"]:
+        record_issue("warning", "health",
+                     "No Bluesky accounts - posts and replies are skipped")
+    return health
+
+
 def run_worker():
     global WORKER_RUNNING
     if WORKER_RUNNING:
@@ -1440,23 +1842,55 @@ def run_worker():
     state["runs"] = state.get("runs", 0) + 1
     state["last_run"] = now_iso()
     log("info", f"worker run #{state['runs']} started")
+    # --- startup checks: config validation + health (no quota used) ---
+    validate_config()
+    health_check(state)
+    if is_dry_run():
+        log("warning", "DRY RUN mode - nothing will be posted (dry_run=true)")
+    # --- circuit breaker: stop after N fully-failed runs in a row ---
+    max_fail = 5
+    try:
+        max_fail = int(get_setting("max_consecutive_failures",
+                                   str(DEFAULT_MAX_CONSECUTIVE_FAILURES)) or 5)
+    except Exception:
+        max_fail = 5
+    breaker_open = int(state.get("consecutive_failures", 0) or 0) >= max_fail
+    if breaker_open:
+        record_issue("error", "circuit_breaker",
+                     f"{max_fail} runs failed in a row - automation stopped. "
+                     "Fix the problem, then the next run resumes automatically "
+                     "after a successful cycle.")
+        log("error", f"circuit breaker OPEN ({max_fail} failed runs) - skipping cycles")
     paused = str(get_setting("paused", "false")).strip().lower() == "true"
     if paused:
         log("info", "automation is PAUSED (paused=true in config) - skipping all cycles")
+    elif breaker_open:
+        pass
     else:
+        failures = 0
         try:
             article = run_blogger_cycle(state)
         except Exception as e:
-            log("error", f"blogger cycle failed: {e}")
+            record_issue("error", "blogger_cycle", f"blogger cycle failed: {e}")
+            failures += 1
             article = None
         try:
             run_bluesky_cycle(state, article=article)
         except Exception as e:
-            log("error", f"bluesky cycle failed: {e}")
+            record_issue("error", "bluesky_cycle", f"bluesky cycle failed: {e}")
+            failures += 1
         try:
             run_cards_cycle(state)
         except Exception as e:
-            log("error", f"cards cycle failed: {e}")
+            record_issue("error", "cards_cycle", f"cards cycle failed: {e}")
+            failures += 1
+        if failures >= 3:
+            state["consecutive_failures"] = int(state.get("consecutive_failures", 0) or 0) + 1
+        else:
+            state["consecutive_failures"] = 0
+    # --- persist this run's issues so the dashboard shows them.
+    # Issues are per-run: a fixed problem disappears on the next run.
+    state["issues"] = list(_ISSUES)
     save_state(state)
     append_logs_json()
     write_dashboard_json(state)
@@ -1562,7 +1996,7 @@ def api_cards():
         data = request.get_json(silent=True) or {}
         name = (data.get("name") or "Card").strip()
         ctype = data.get("type") or "bluesky_post"
-        if ctype not in ("bluesky_post", "bluesky_reply", "blogger_post"):
+        if ctype not in ("bluesky_post", "bluesky_reply", "blogger_post", "bluesky_promo"):
             return jsonify({"error": "bad type"}), 400
         times = data.get("schedule_times") or []
         if isinstance(times, str):
