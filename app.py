@@ -89,6 +89,8 @@ IMAGES_DIR = os.path.join(DATA_DIR, "images")
 DB_PATH = os.path.join(DATA_DIR, "app.db")
 STATE_PATH = os.path.join(DATA_DIR, "state.json")
 LOGS_PATH = os.path.join(DATA_DIR, "logs.json")
+CONFIG_PATH = os.path.join(DATA_DIR, "config.json")
+DASHBOARD_PATH = os.path.join(DATA_DIR, "dashboard.json")
 os.makedirs(IMAGES_DIR, exist_ok=True)
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "change-this-secret-key")
@@ -127,11 +129,13 @@ GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash"
 # Groq models to try, in order (free tier, confirmed model ids).
 GROQ_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
-# Safety defaults (the user can change all of these from the dashboard).
-DEFAULT_BLOGGER_DAILY_LIMIT = 5        # posts per day on Blogger
-DEFAULT_BSKY_REPLY_PER_RUN = 2        # safe: 2-3 replies per 30-min run
-DEFAULT_BSKY_REPLY_DAILY_CAP = 50     # max link-replies per day, all accounts
-DEFAULT_REPLY_GAP_SECONDS = 90        # gap between two replies (60-120s)
+# Limits: 0 = UNLIMITED (no cap). The user chose unlimited.
+# WARNING: unlimited posting risks a Blogger suspension and Bluesky
+# spam flags / account bans. The 429 auto-pause is still active.
+DEFAULT_BLOGGER_DAILY_LIMIT = 0        # 0 = unlimited posts per day
+DEFAULT_BSKY_REPLY_PER_RUN = 0        # 0 = unlimited replies per run
+DEFAULT_BSKY_REPLY_DAILY_CAP = 0      # 0 = unlimited replies per day
+DEFAULT_REPLY_GAP_SECONDS = 0         # 0 = no gap between replies
 DEFAULT_BSKY_POSTS_PER_RUN = 1        # max 1 Bluesky post per run
 
 UTC = timezone.utc
@@ -247,7 +251,32 @@ def init_db():
     conn.close()
 
 
+_FILE_CONFIG = None
+
+
+def file_config():
+    """Settings from data/config.json (the GitHub-only control panel).
+    Edit this file in the repo to change limits - no server needed.
+    Returns {} when the file is missing."""
+    global _FILE_CONFIG
+    if _FILE_CONFIG is None:
+        _FILE_CONFIG = {}
+        if os.path.exists(CONFIG_PATH):
+            try:
+                with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict):
+                    _FILE_CONFIG = data
+            except Exception as e:
+                print(f"config.json load failed: {e}", flush=True)
+    return _FILE_CONFIG
+
+
 def get_setting(key, default=""):
+    # data/config.json wins over the database (GitHub-only control).
+    cfg = file_config()
+    if key in cfg:
+        return str(cfg[key])
     conn = db_connect()
     try:
         row = conn.execute("SELECT value FROM settings WHERE key=?", (key,)).fetchone()
@@ -326,6 +355,54 @@ def append_logs_json():
             json.dump([dict(r) for r in rows], f, ensure_ascii=False, indent=2)
     except Exception:
         pass
+
+
+def write_dashboard_json(state):
+    """Write data/dashboard.json - the status file the STATIC Pages
+    dashboard reads. Contains NO secrets (only public status: posts,
+    logs, trending topics, settings). The workflow commits it back so
+    GitHub Pages always shows the latest run."""
+    try:
+        conn = db_connect()
+        try:
+            posts = [dict(r) for r in conn.execute(
+                "SELECT title, url, topic, source, image_url, created_at FROM posts "
+                "ORDER BY id DESC LIMIT 10").fetchall()]
+            logs = [dict(r) for r in conn.execute(
+                "SELECT level, message, created_at FROM logs ORDER BY id DESC LIMIT 50"
+                ).fetchall()]
+            total_posts = conn.execute("SELECT COUNT(*) c FROM posts").fetchone()["c"]
+            total_replies = conn.execute("SELECT COUNT(*) c FROM replies").fetchone()["c"]
+        finally:
+            conn.close()
+        try:
+            trending = get_bluesky_trending(limit=10)
+        except Exception:
+            trending = []
+        data = {
+            "generated_at": now_iso(),
+            "last_run": state.get("last_run", ""),
+            "runs": state.get("runs", 0),
+            "stats": {
+                "blogger_today": blogger_posts_today(),
+                "replies_today": replies_today(),
+                "total_posts": total_posts,
+                "total_replies": total_replies,
+                "accounts": len(list_accounts()),
+            },
+            "settings": {k: get_setting(k, "") for k in
+                         ("blogger_daily_limit", "bsky_reply_per_run",
+                          "bsky_reply_daily_cap", "reply_gap_seconds",
+                          "bsky_posts_per_run", "paused", "force_topic")},
+            "account_handles": [a["handle"] for a in list_accounts()],
+            "trending": trending,
+            "recent_posts": posts,
+            "logs": logs,
+        }
+        with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"dashboard.json write failed: {e}", flush=True)
 
 
 def slugify(text):
@@ -963,6 +1040,16 @@ def candidate_topics(state, limit=5):
     Falls back to RSS top stories if Bluesky trending is unavailable."""
     cands = []
     posted = [t.lower() for t in state.get("posted_topics", [])]
+    # Forced topic (set from the dashboard) goes FIRST, if not already posted.
+    forced = str(get_setting("force_topic", "") or "").strip()
+    if forced and forced.lower() not in posted:
+        verified, sources, items = verify_news(forced)
+        if verified:
+            facts = "\n".join(f"- {i['title']} ({i['source']})" for i in items[:5])
+            cands.append((forced, sources, facts))
+            log("info", f"forced topic queued: {forced}")
+        else:
+            log("info", f"forced topic not verified (needs 2 sources): {forced}")
     for topic in get_bluesky_trending(limit=10):
         if topic.lower() in posted:
             continue
@@ -1013,8 +1100,8 @@ def record_post(title, url, topic, source, image_url):
 def run_blogger_cycle(state):
     """Write + publish ONE article from a Bluesky-trending topic.
     Returns the article dict or None."""
-    cap = int(get_setting("blogger_daily_limit", str(DEFAULT_BLOGGER_DAILY_LIMIT)) or 5)
-    if blogger_posts_today() >= cap:
+    cap = int(get_setting("blogger_daily_limit", str(DEFAULT_BLOGGER_DAILY_LIMIT)) or 0)
+    if cap > 0 and blogger_posts_today() >= cap:
         log("info", f"blogger daily cap reached ({cap}/day) - skipping publish")
         return None
     for topic, sources, facts in candidate_topics(state, limit=5)[:3]:
@@ -1114,20 +1201,25 @@ def run_bluesky_cycle(state, article=None):
             state["bsky_posted"].append(key)
             log("info", f"bluesky posted ({acc['handle']}): {posted[1]}")
         time.sleep(5)
-    # --- 2) Replies to fresh comments on high-engagement posts (strict caps).
-    daily_cap = int(get_setting("bsky_reply_daily_cap", str(DEFAULT_BSKY_REPLY_DAILY_CAP)) or 50)
-    per_run_replies = int(get_setting("bsky_reply_per_run", str(DEFAULT_BSKY_REPLY_PER_RUN)) or 2)
-    gap = int(get_setting("reply_gap_seconds", str(DEFAULT_REPLY_GAP_SECONDS)) or 90)
+    # --- 2) Replies to fresh comments on high-engagement posts.
+    # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
+    daily_cap = int(get_setting("bsky_reply_daily_cap", str(DEFAULT_BSKY_REPLY_DAILY_CAP)) or 0)
+    per_run_replies = int(get_setting("bsky_reply_per_run", str(DEFAULT_BSKY_REPLY_PER_RUN)) or 0)
+    gap = int(get_setting("reply_gap_seconds", str(DEFAULT_REPLY_GAP_SECONDS)) or 0)
     state.setdefault("replied_comments", [])
     done_replies = 0
-    if replies_today() < daily_cap and per_run_replies > 0:
+    def under_daily_cap():
+        return daily_cap <= 0 or replies_today() < daily_cap
+    def under_run_cap():
+        return per_run_replies <= 0 or done_replies < per_run_replies
+    if under_daily_cap():
         hot = get_high_engagement_posts(limit=5)
         acc_idx = 0
         for post in hot:
-            if done_replies >= per_run_replies or replies_today() >= daily_cap:
+            if not under_run_cap() or not under_daily_cap():
                 break
             for comment in get_fresh_comments(post["uri"], minutes=5):
-                if done_replies >= per_run_replies or replies_today() >= daily_cap:
+                if not under_run_cap() or not under_daily_cap():
                     break
                 if comment["uri"] in state["replied_comments"]:
                     continue
@@ -1148,10 +1240,11 @@ def run_bluesky_cycle(state, article=None):
                     record_reply(post["uri"], comment["uri"], reply_text, acc["handle"])
                     done_replies += 1
                     log("info", f"replied ({acc['handle']}) to {comment['author']}")
-                    time.sleep(gap)
+                    if gap > 0:
+                        time.sleep(gap)
     # --- 3) Reply to ALL comments on our OWN posts.
     for acc in accounts:
-        if done_replies >= per_run_replies + 5:
+        if per_run_replies > 0 and done_replies >= per_run_replies + 5:
             break
         client = bsky_login(acc["handle"], acc["app_password"])
         if not client:
@@ -1176,10 +1269,14 @@ def run_bluesky_cycle(state, article=None):
 
 
 def next_run_for_card(card):
-    try:
-        times = json.loads(card.get("schedule_times") or "[]")
-    except Exception:
-        times = []
+    raw = card.get("schedule_times") or []
+    if isinstance(raw, str):
+        try:
+            times = json.loads(raw)
+        except Exception:
+            times = []
+    else:
+        times = raw if isinstance(raw, list) else []
     now_local = now_utc().astimezone(USER_TZ)
     if times:
         candidates = []
@@ -1196,6 +1293,61 @@ def next_run_for_card(card):
             return min(candidates).astimezone(UTC).isoformat()
     interval = int(card.get("interval_minutes") or 30)
     return (now_utc() + timedelta(minutes=interval)).isoformat()
+
+
+CARDS_PATH = os.path.join(DATA_DIR, "cards.json")
+
+
+def load_file_cards():
+    """Cards from data/cards.json (edited via the dashboard / GitHub).
+    This is the GitHub-only control panel - no server needed."""
+    if not os.path.exists(CARDS_PATH):
+        return []
+    try:
+        with open(CARDS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return [c for c in data if isinstance(c, dict)]
+    except Exception as e:
+        log("warning", f"cards.json load failed: {e}")
+    return []
+
+
+def file_card_due(card, state):
+    """Is a file-based card due? Uses schedule_times (Dhaka) or the
+    interval since its last run (tracked in state.json)."""
+    runs = state.get("file_card_runs", {})
+    last = runs.get(card.get("name", ""))
+    last_dt = None
+    if last:
+        try:
+            last_dt = datetime.fromisoformat(last)
+            if last_dt.tzinfo is None:
+                last_dt = last_dt.replace(tzinfo=UTC)
+        except Exception:
+            last_dt = None
+    raw = card.get("schedule_times") or []
+    times = raw if isinstance(raw, list) else []
+    if times:
+        now_local = now_utc().astimezone(USER_TZ)
+        recent = None
+        for t in times:
+            try:
+                hh, mm = [int(x) for x in str(t).split(":")]
+                cand = now_local.replace(hour=hh, minute=mm, second=0, microsecond=0)
+                if cand <= now_local and (recent is None or cand > recent):
+                    recent = cand
+            except Exception:
+                continue
+        if recent is None:
+            return False
+        if last_dt is None:
+            return True
+        return last_dt.astimezone(USER_TZ) < recent
+    if last_dt is None:
+        return True
+    interval = int(card.get("interval_minutes") or 30)
+    return now_utc() >= last_dt + timedelta(minutes=interval)
 
 
 def execute_card(card, state):
@@ -1237,15 +1389,20 @@ def execute_card(card, state):
     except Exception as e:
         log("error", f"card '{card['name']}' failed: {e}")
         return False
-    conn = db_connect()
-    try:
-        conn.execute(
-            "UPDATE cards SET done_count=done_count+1, last_run=?, next_run=?, "
-            "updated_at=? WHERE id=?",
-            (now_iso(), next_run_for_card(card), now_iso(), card["id"]))
-        conn.commit()
-    finally:
-        conn.close()
+    if card.get("id"):
+        conn = db_connect()
+        try:
+            conn.execute(
+                "UPDATE cards SET done_count=done_count+1, last_run=?, next_run=?, "
+                "updated_at=? WHERE id=?",
+                (now_iso(), next_run_for_card(card), now_iso(), card["id"]))
+            conn.commit()
+        finally:
+            conn.close()
+    else:
+        # File-based card (data/cards.json): track last run in state.json.
+        runs = state.setdefault("file_card_runs", {})
+        runs[card.get("name", "")] = now_iso()
     log("info", f"card '{card['name']}' ran ({'ok' if ok else 'no-op'})")
     return ok
 
@@ -1263,6 +1420,13 @@ def run_cards_cycle(state):
         if nxt and nxt > now_iso():
             continue
         execute_card(card, state)
+    # File-based cards (data/cards.json) - the GitHub-only control panel.
+    for card in load_file_cards():
+        if (card.get("status") or "active") != "active":
+            continue
+        if not file_card_due(card, state):
+            continue
+        execute_card(card, state)
 
 
 def run_worker():
@@ -1276,21 +1440,26 @@ def run_worker():
     state["runs"] = state.get("runs", 0) + 1
     state["last_run"] = now_iso()
     log("info", f"worker run #{state['runs']} started")
-    try:
-        article = run_blogger_cycle(state)
-    except Exception as e:
-        log("error", f"blogger cycle failed: {e}")
-        article = None
-    try:
-        run_bluesky_cycle(state, article=article)
-    except Exception as e:
-        log("error", f"bluesky cycle failed: {e}")
-    try:
-        run_cards_cycle(state)
-    except Exception as e:
-        log("error", f"cards cycle failed: {e}")
+    paused = str(get_setting("paused", "false")).strip().lower() == "true"
+    if paused:
+        log("info", "automation is PAUSED (paused=true in config) - skipping all cycles")
+    else:
+        try:
+            article = run_blogger_cycle(state)
+        except Exception as e:
+            log("error", f"blogger cycle failed: {e}")
+            article = None
+        try:
+            run_bluesky_cycle(state, article=article)
+        except Exception as e:
+            log("error", f"bluesky cycle failed: {e}")
+        try:
+            run_cards_cycle(state)
+        except Exception as e:
+            log("error", f"cards cycle failed: {e}")
     save_state(state)
     append_logs_json()
+    write_dashboard_json(state)
     WORKER_RUNNING = False
     log("info", "worker run finished")
 
