@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automation Website - Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js"></script>
 <style>
   /* FLAT UI - white / sky-blue / red / teal, all bright. No gradients,
-     no heavy shadows, no black backgrounds. Everything stays inside
-     the frame: max-width container, border-box, grids that wrap. */
+     no heavy shadows, no black backgrounds. Contained layout.
+     LOGIN: only the repo owner's GitHub token can log in. The token is
+     checked against the owner (pinterestadstrra-cmd) - someone else's
+     token cannot even log in. The token stays saved in YOUR browser
+     (localStorage) and you are logged in again automatically after a
+     refresh. No server, no Render. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #ffffff; color: #0f172a;
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -15,74 +20,69 @@
   .wrap { max-width: 1180px; margin: 0 auto; padding: 16px; width: 100%; }
   h1 { font-size: 22px; color: #0ea5e9; }
   h2 { font-size: 17px; margin-bottom: 10px; color: #0f172a; }
-  h3 { font-size: 15px; margin-bottom: 6px; }
   a { color: #0ea5e9; }
   button { cursor: pointer; border: none; border-radius: 8px;
     padding: 8px 14px; font-size: 14px; font-weight: 600; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
   input, select, textarea { width: 100%; padding: 9px 10px; font-size: 14px;
-    border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff;
-    color: #0f172a; outline: none; }
-  input:focus, select:focus, textarea:focus { border-color: #0ea5e9; }
-  label { display: block; font-size: 13px; font-weight: 600;
-    color: #475569; margin: 10px 0 4px; }
+    border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff; }
+  label { display: block; font-size: 13px; font-weight: 600; color: #475569;
+    margin: 10px 0 4px; }
   .btn-blue { background: #0ea5e9; color: #ffffff; }
-  .btn-red { background: #ef4444; color: #ffffff; }
   .btn-teal { background: #14b8a6; color: #ffffff; }
-  .btn-white { background: #ffffff; color: #0ea5e9;
-    border: 1px solid #0ea5e9; }
-  .btn-sm { padding: 5px 10px; font-size: 13px; }
+  .btn-red { background: #ef4444; color: #ffffff; }
+  .btn-ghost { background: #e2e8f0; color: #0f172a; }
   .hidden { display: none !important; }
 
-  /* Header */
   header { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
     justify-content: space-between; padding: 12px 0 16px;
     border-bottom: 2px solid #e0f2fe; }
-  .header-actions { display: flex; flex-wrap: wrap; gap: 8px; }
   .pill { display: inline-block; padding: 4px 12px; border-radius: 999px;
     background: #e0f2fe; color: #0369a1; font-size: 13px; font-weight: 600; }
+  .status-msg { padding: 10px 14px; border-radius: 10px; margin: 12px 0;
+    font-size: 14px; display: none; }
+  .status-ok { display: block; background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
+  .status-err { display: block; background: #fef2f2; border: 1px solid #fca5a5; color: #991b1b; }
 
-  /* Stats */
-  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  .login-box { max-width: 520px; margin: 48px auto; background: #ffffff;
+    border: 2px solid #bae6fd; border-radius: 14px; padding: 24px; }
+  .login-box h1 { margin-bottom: 8px; }
+  .paused-banner { background: #fef2f2; border: 2px solid #ef4444;
+    color: #991b1b; border-radius: 10px; padding: 12px 14px; margin: 16px 0;
+    font-weight: 700; }
+
+  .stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px; margin: 16px 0; }
   .stat { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 10px;
     padding: 14px; }
   .stat b { display: block; font-size: 26px; color: #0284c7; }
   .stat span { font-size: 13px; color: #475569; }
 
-  /* Trending */
   .trending { background: #f0fdfa; border: 1px solid #99f6e4;
     border-radius: 10px; padding: 14px; margin-bottom: 16px; }
   .chip { display: inline-block; background: #14b8a6; color: #ffffff;
     border-radius: 999px; padding: 4px 12px; margin: 3px 4px 3px 0;
     font-size: 13px; font-weight: 600; }
-
-  /* Main grid: cards (wide) + sidebar (forms) */
-  .main { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 16px; align-items: start; }
-  .card-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 12px; }
-  .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px;
-    padding: 14px; overflow: hidden; }
-  .card.paused { opacity: 0.6; }
-  .badge { display: inline-block; font-size: 12px; font-weight: 700;
-    border-radius: 999px; padding: 2px 10px; color: #ffffff; }
-  .badge-bluesky_post { background: #0ea5e9; }
-  .badge-bluesky_reply { background: #14b8a6; }
-  .badge-blogger_post { background: #ef4444; }
-  .card h3 { margin: 8px 0 4px; overflow-wrap: break-word; }
-  .card .meta { font-size: 13px; color: #475569; overflow-wrap: break-word; }
-  .card .meta b { color: #0f172a; }
-  .card .actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .chip-btn { cursor: pointer; border: none; }
 
   .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px;
     padding: 14px; margin-bottom: 16px; }
-  .panel form { margin-top: 4px; }
-  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .account-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
-    justify-content: space-between; padding: 8px 0;
-    border-bottom: 1px solid #f1f5f9; font-size: 14px; }
-
-  /* Log */
+  .card-row { padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+  .card-row:last-child { border-bottom: none; }
+  .card-row .meta { font-size: 13px; color: #475569; }
+  .card-row .actions { margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .card-row .actions button { padding: 6px 10px; font-size: 13px; }
+  .paused-tag { background: #fee2e2; color: #991b1b; border-radius: 999px;
+    padding: 2px 10px; font-size: 12px; font-weight: 700; }
+  .run-row { padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+  .run-row:last-child { border-bottom: none; }
+  .run-ok { color: #166534; font-weight: 700; }
+  .run-bad { color: #991b1b; font-weight: 700; }
+  .run-busy { color: #0369a1; font-weight: 700; }
+  .post-row { padding: 10px 0; border-bottom: 1px solid #f1f5f9;
+    overflow-wrap: break-word; }
+  .post-row:last-child { border-bottom: none; }
+  .post-row .meta { font-size: 13px; color: #475569; }
   .log { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
     padding: 14px; margin-top: 16px; }
   .log-list { max-height: 320px; overflow-y: auto; font-size: 13px; }
@@ -91,475 +91,796 @@
   .log-line .t { color: #94a3b8; margin-right: 6px; }
   .log-error { color: #dc2626; }
   .log-warning { color: #d97706; }
-
-  /* Login */
-  .login-box { max-width: 380px; margin: 80px auto; background: #ffffff;
-    border: 1px solid #bae6fd; border-radius: 12px; padding: 24px; }
-  .login-box h1 { margin-bottom: 6px; }
-  .login-box p { color: #475569; font-size: 14px; margin-bottom: 12px; }
-  .msg { margin-top: 10px; font-size: 14px; font-weight: 600; }
-  .msg.err { color: #dc2626; }
-  .msg.ok { color: #059669; }
   .empty { color: #94a3b8; font-size: 14px; padding: 12px 0; }
+  .note { font-size: 13px; color: #475569; background: #f0f9ff;
+    border: 1px solid #bae6fd; border-radius: 10px; padding: 12px 14px;
+    margin-bottom: 16px; overflow-wrap: break-word; }
+  .note code { background: #e0f2fe; padding: 1px 6px; border-radius: 6px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .form-grid .full { grid-column: 1 / -1; }
+  .row-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
 
   @media (max-width: 820px) {
-    .main { grid-template-columns: minmax(0, 1fr); }
     .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .form-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <!-- LOGIN -->
-  <div id="loginView" class="hidden">
-    <div class="login-box">
+  <header>
+    <div>
       <h1>Automation Website</h1>
-      <p>Admin panel - enter your dashboard password to continue.</p>
-      <form id="loginForm">
-        <label for="loginPassword">Password</label>
-        <input type="password" id="loginPassword" autocomplete="current-password" required>
-        <div style="margin-top:14px">
-          <button type="submit" class="btn-blue" style="width:100%">Log in</button>
-        </div>
-        <div id="loginMsg" class="msg err"></div>
-      </form>
+      <span class="pill" id="lastRunPill">Last run: —</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap" id="headerBtns" class="hidden">
+      <button class="btn-teal" id="refreshBtn">Refresh</button>
+      <button class="btn-blue" id="runWorkerBtn">Run worker now</button>
+      <button class="btn-ghost" id="logoutBtn">Log out</button>
+    </div>
+  </header>
+
+  <div id="statusMsg" class="status-msg"></div>
+
+  <!-- LOGIN: only the repo owner's token works. Someone else's token
+       cannot log in at all. The token stays saved in YOUR browser. -->
+  <div id="loginView">
+    <div class="login-box">
+      <h1>Log in</h1>
+      <p style="color:#475569;margin-bottom:8px">
+        Enter <b>your</b> GitHub Personal Access Token (classic,
+        <code>repo</code> scope). Only the token of this site's owner
+        (<code>pinterestadstrra-cmd</code>) can log in - someone else's
+        token will not log in at all. The token stays saved in this
+        browser, so you stay logged in after a refresh.
+      </p>
+      <label for="tokenInput">Personal Access Token</label>
+      <input type="password" id="tokenInput" placeholder="ghp_... or github_pat_..." autocomplete="off">
+      <div class="row-btns">
+        <button class="btn-blue" id="loginBtn">Log in</button>
+      </div>
+      <div class="note" style="margin-top:14px">
+        Create a token: GitHub → your profile → Settings → Developer
+        settings → Personal access tokens → Tokens (classic) →
+        Generate new token (classic), check <code>repo</code>, Generate.
+        If you think someone else has your token, delete it there and
+        make a new one - the old one stops working at once.
+      </div>
     </div>
   </div>
 
-  <!-- DASHBOARD -->
+  <!-- DASHBOARD (hidden until logged in) -->
   <div id="dashView" class="hidden">
-    <header>
-      <div>
-        <h1>Automation Website</h1>
-        <span class="pill" id="lastRunPill">Last run: never</span>
-      </div>
-      <div class="header-actions">
-        <button class="btn-teal" id="runWorkerBtn">Run worker now</button>
-        <button class="btn-red" id="pauseAllBtn">Pause All</button>
-        <button class="btn-white" id="exportBtn">Backup / Export</button>
-        <button class="btn-white" id="logoutBtn">Log out</button>
-      </div>
-    </header>
-
-    <div class="stats">
-      <div class="stat"><b id="statBloggerToday">0</b><span>Blogger posts today</span></div>
-      <div class="stat"><b id="statRepliesToday">0</b><span>Bluesky replies today</span></div>
-      <div class="stat"><b id="statTotalPosts">0</b><span>Total articles published</span></div>
-      <div class="stat"><b id="statAccounts">0</b><span>Bluesky accounts</span></div>
+    <div id="pausedBanner" class="paused-banner hidden">
+      PAUSED - automation is stopped. Press "Resume all" to start it again.
     </div>
 
-    <div class="trending">
-      <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first)</span></h2>
-      <div id="trendingChips"><span class="empty">Loading…</span></div>
-      <div style="margin-top:8px"><button class="btn-sm btn-teal" id="refreshTrendingBtn">Refresh trending</button></div>
-    </div>
-
-    <div class="main">
-      <div>
-        <h2>Cards <span style="font-weight:400;font-size:13px;color:#475569">(fully manual - you control everything)</span></h2>
-        <div class="card-list" id="cardList"></div>
-        <div id="cardEmpty" class="empty hidden">No cards yet. Add your first card on the right.</div>
-      </div>
-
-      <div>
-        <div class="panel">
-          <h2 id="cardFormTitle">Add Card</h2>
-          <form id="cardForm">
-            <input type="hidden" id="cardId" value="">
-            <label for="cardName">Card name</label>
-            <input id="cardName" placeholder="e.g. Morning news post" required>
-            <label for="cardType">Card type</label>
-            <select id="cardType">
-              <option value="bluesky_post">Bluesky Post</option>
-              <option value="bluesky_reply">Bluesky Reply</option>
-              <option value="blogger_post">Blogger Article</option>
-            </select>
-            <label for="cardLink">Link to market (Blogger URL)</label>
-            <input id="cardLink" placeholder="https://yourblog.blogspot.com/...">
-            <label for="cardAccount">Bluesky account</label>
-            <select id="cardAccount"><option value="">(any account)</option></select>
-            <div class="row2">
-              <div>
-                <label for="cardCount">How many (posts / replies)</label>
-                <input id="cardCount" type="number" min="1" value="1">
-              </div>
-              <div>
-                <label for="cardInterval">Interval (minutes)</label>
-                <input id="cardInterval" type="number" min="5" value="30">
-              </div>
-            </div>
-            <label for="cardSchedule">Schedule times (Dhaka time, comma separated, e.g. 07:00, 13:00, 19:00)</label>
-            <input id="cardSchedule" placeholder="07:00, 13:00, 19:00">
-            <label for="cardText">Post text (leave empty = AI writes it)</label>
-            <textarea id="cardText" rows="3" placeholder="Optional custom text…"></textarea>
-            <div style="margin-top:12px;display:flex;gap:8px">
-              <button type="submit" class="btn-blue" id="cardSaveBtn">Save card</button>
-              <button type="button" class="btn-white hidden" id="cardCancelEditBtn">Cancel edit</button>
-            </div>
-            <div id="cardMsg" class="msg"></div>
-          </form>
-        </div>
-
-        <div class="panel">
-          <h2>Bluesky Accounts</h2>
-          <div id="accountList"></div>
-          <form id="accountForm">
-            <label for="accHandle">Handle (e.g. yourname.bsky.social)</label>
-            <input id="accHandle" placeholder="handle.bsky.social" required>
-            <label for="accPassword">App Password</label>
-            <input id="accPassword" type="password" placeholder="xxxx-xxxx-xxxx-xxxx" required>
-            <div style="margin-top:12px">
-              <button type="submit" class="btn-teal">Add account</button>
-            </div>
-            <div id="accMsg" class="msg"></div>
-          </form>
-          <p style="font-size:12px;color:#64748b;margin-top:10px">
-            Tip: for the GitHub Actions runner, also add the same accounts to the
-            <b>BLUESKY_ACCOUNTS</b> secret (JSON list) in your repo settings.
-          </p>
-        </div>
-
-        <div class="panel">
-          <h2>Daily Limits (safety)</h2>
-          <form id="settingsForm">
-            <label for="setBloggerLimit">Blogger posts per day (too many = suspension risk)</label>
-            <input id="setBloggerLimit" type="number" min="1" max="20" value="5">
-            <label for="setReplyPerRun">Bluesky replies per 30-min run (safe: 2-3)</label>
-            <input id="setReplyPerRun" type="number" min="0" max="10" value="2">
-            <label for="setReplyDaily">Bluesky replies per day (all accounts)</label>
-            <input id="setReplyDaily" type="number" min="0" max="500" value="50">
-            <label for="setGap">Gap between replies (seconds, 60-120)</label>
-            <input id="setGap" type="number" min="30" max="300" value="90">
-            <div style="margin-top:12px">
-              <button type="submit" class="btn-blue">Save limits</button>
-            </div>
-            <div id="settingsMsg" class="msg"></div>
-          </form>
-        </div>
+    <div id="noData" class="hidden">
+      <div class="note" style="margin-top:16px">
+        <b>No data yet.</b> The worker has not finished a run. Check the
+        <b>Actions</b> tab in the GitHub repo - the Automation workflow runs
+        every 30 minutes and writes its status here after each run.
       </div>
     </div>
 
-    <div class="log">
-      <h2>Activity Log</h2>
-      <div class="log-list" id="logList"></div>
+    <div id="dash" class="hidden">
+      <div class="stats">
+        <div class="stat"><b id="statBloggerToday">0</b><span>Blogger posts today</span></div>
+        <div class="stat"><b id="statRepliesToday">0</b><span>Bluesky replies today</span></div>
+        <div class="stat"><b id="statTotalPosts">0</b><span>Total articles published</span></div>
+        <div class="stat"><b id="statTotalReplies">0</b><span>Total replies sent</span></div>
+        <div class="stat"><b id="statAccounts">0</b><span>Bluesky accounts</span></div>
+      </div>
+
+      <div class="trending">
+        <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first - tap one to write about it next)</span></h2>
+        <div id="trendingChips"><span class="empty">—</span></div>
+      </div>
+
+      <!-- Controls: Pause All + Force topic -->
+      <div class="panel">
+        <h2>Controls</h2>
+        <div class="row-btns" style="margin-top:0">
+          <button class="btn-red" id="pauseBtn">Pause all</button>
+          <span class="pill" id="pauseState">Running</span>
+        </div>
+        <label for="forceTopicInput">Write about this topic next (forced topic)</label>
+        <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
+        <div class="row-btns">
+          <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
+          <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
+          <span class="pill" id="forceTopicState">No forced topic</span>
+        </div>
+      </div>
+
+      <!-- Workflow run history -->
+      <div class="panel">
+        <h2>Worker runs (GitHub Actions)</h2>
+        <div id="runList"><span class="empty">Loading…</span></div>
+      </div>
+
+      <!-- Cards: the manual control panel -->
+      <div class="panel">
+        <h2>Cards (manual jobs)</h2>
+        <div id="cardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addCardBtn">+ Add card</button>
+        </div>
+        <form id="cardForm" class="hidden" style="margin-top:14px">
+          <div class="form-grid">
+            <div><label for="cfName">Card name</label>
+              <input id="cfName" required placeholder="e.g. Morning post"></div>
+            <div><label for="cfType">Type</label>
+              <select id="cfType">
+                <option value="blogger_post">Blogger post (write + publish)</option>
+                <option value="bluesky_post">Bluesky post (link the latest article)</option>
+                <option value="bluesky_reply">Bluesky replies (to comments)</option>
+              </select></div>
+            <div class="full"><label for="cfLink">Link (optional - e.g. market / article URL)</label>
+              <input id="cfLink" placeholder="https://..."></div>
+            <div><label for="cfAccount">Bluesky account (optional)</label>
+              <select id="cfAccount"><option value="">Any account</option></select></div>
+            <div><label for="cfCount">Count (how many per run)</label>
+              <input id="cfCount" type="number" min="0" value="1"></div>
+            <div><label for="cfInterval">Interval (minutes between runs)</label>
+              <input id="cfInterval" type="number" min="1" value="30"></div>
+            <div><label for="cfTimes">Times (Dhaka, comma-separated HH:MM, optional)</label>
+              <input id="cfTimes" placeholder="07:00, 19:00"></div>
+            <div class="full"><label for="cfText">Custom text (optional - overrides the AI text)</label>
+              <textarea id="cfText" rows="2"></textarea></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Save card</button>
+            <button type="button" class="btn-ghost" id="cancelCardBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Settings: limits. 0 = unlimited -->
+      <div class="panel">
+        <h2>Daily limits (0 = unlimited)</h2>
+        <form id="settingsForm">
+          <div class="form-grid">
+            <div><label for="setBlogger">Blogger posts per day</label>
+              <input id="setBlogger" type="number" min="0" value="0"></div>
+            <div><label for="setPostsRun">Bluesky posts per run</label>
+              <input id="setPostsRun" type="number" min="0" value="1"></div>
+            <div><label for="setReplyRun">Bluesky replies per 30-min run</label>
+              <input id="setReplyRun" type="number" min="0" value="0"></div>
+            <div><label for="setReplyDay">Bluesky replies per day</label>
+              <input id="setReplyDay" type="number" min="0" value="0"></div>
+            <div><label for="setGap">Gap between replies (seconds)</label>
+              <input id="setGap" type="number" min="0" value="0"></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Save limits</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Accounts: added here, saved to the GitHub Secret (encrypted). -->
+      <div class="panel">
+        <h2>Bluesky accounts</h2>
+        <div id="accountList"></div>
+        <form id="accountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="afHandle">Bluesky handle</label>
+              <input id="afHandle" required placeholder="e.g. myname.bsky.social"></div>
+            <div><label for="afPassword">App password</label>
+              <input id="afPassword" type="password" required placeholder="xxxx-xxxx-xxxx-xxxx" autocomplete="off"></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
+          see it). The password is never saved in the repo or on this page.
+          If you clear this browser's data, re-enter your accounts here.
+          Accounts added directly in Secrets will not be in this browser's
+          list - add them here instead.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Recent articles</h2>
+        <div id="postList"></div>
+      </div>
+
+      <div class="log">
+        <h2>Activity Log</h2>
+        <div class="log-list" id="logList"></div>
+      </div>
     </div>
   </div>
 </div>
+
 <script>
-/* Dashboard logic - talks to the Flask API in app.py.
-   Everything is saved on the server, so a refresh loses nothing. */
+/* GitHub-only control panel. LOGIN: the token must belong to the repo
+   owner (pinterestadstrra-cmd). Someone else's token cannot log in.
+   The token stays saved in this browser (localStorage) and you are
+   logged in again automatically after a refresh. No server, no Render. */
+const OWNER = "pinterestadstrra-cmd";
+const REPO = "automation-website";
+const BRANCH = "main";
+const API = "https://api.github.com/repos/" + OWNER + "/" + REPO;
+const TOKEN_KEY = "gh_token";
+const BSKY_KEY = "bsky_accounts";
+
 const $ = (id) => document.getElementById(id);
 
 function esc(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
-
-async function api(path, method, body) {
-  const res = await fetch(path, {
+function fmtTime(iso) {
+  if (!iso) return "—";
+  return String(iso).slice(0, 19).replace("T", " ") + " UTC";
+}
+function utf8ToB64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = "";
+  bytes.forEach((b) => { bin += String.fromCharCode(b); });
+  return btoa(bin);
+}
+function b64ToUtf8(b64) {
+  const bin = atob(b64.replace(/\n/g, ""));
+  const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+function showMsg(text, ok) {
+  const el = $("statusMsg");
+  el.textContent = text;
+  el.className = "status-msg " + (ok ? "status-ok" : "status-err");
+}
+function getToken() { return localStorage.getItem(TOKEN_KEY) || ""; }
+function needToken() {
+  if (!getToken()) { showMsg("Log in first (above).", false); return true; }
+  return false;
+}
+async function gh(path, method, body) {
+  const res = await fetch(API + path, {
     method: method || "GET",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Authorization": "Bearer " + getToken(),
+      "Accept": "application/vnd.github+json",
+      "Content-Type": "application/json",
+    },
     body: body ? JSON.stringify(body) : undefined,
   });
-  let data = {};
-  try { data = await res.json(); } catch (e) { /* ignore */ }
-  if (!res.ok) throw new Error(data.error || ("HTTP " + res.status));
+  let data = null;
+  try { data = await res.json(); } catch (e) { /* empty body */ }
+  if (!res.ok) {
+    throw new Error((data && data.message) ? data.message : ("GitHub error " + res.status));
+  }
   return data;
 }
 
+/* ---------- LOGIN (token must belong to the repo owner) ---------- */
+let loggedIn = false;
+async function verifyToken(token) {
+  try {
+    const res = await fetch("https://api.github.com/user", {
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Accept": "application/vnd.github+json",
+      },
+    });
+    if (!res.ok) return null;
+    const user = await res.json();
+    return user && user.login === OWNER ? user.login : null;
+  } catch (e) { return null; }
+}
 function showLogin() {
+  loggedIn = false;
   $("loginView").classList.remove("hidden");
   $("dashView").classList.add("hidden");
+  $("headerBtns").classList.add("hidden");
 }
-function showDash() {
+function showDashboard() {
+  loggedIn = true;
   $("loginView").classList.add("hidden");
   $("dashView").classList.remove("hidden");
+  $("headerBtns").classList.remove("hidden");
 }
-
-async function checkAuth() {
-  try {
-    const me = await api("/api/me");
-    if (me.authenticated) { showDash(); await loadAll(); }
-    else showLogin();
-  } catch (e) { showLogin(); }
-}
-
-function renderCards(cards) {
-  const list = $("cardList");
-  list.innerHTML = "";
-  $("cardEmpty").classList.toggle("hidden", cards.length > 0);
-  const typeLabel = { bluesky_post: "Bluesky Post", bluesky_reply: "Bluesky Reply", blogger_post: "Blogger Article" };
-  cards.forEach((c) => {
-    const div = document.createElement("div");
-    div.className = "card" + (c.status === "paused" ? " paused" : "");
-    const times = (() => { try { return JSON.parse(c.schedule_times || "[]"); } catch (e) { return []; } })();
-    div.innerHTML =
-      '<span class="badge badge-' + esc(c.type) + '">' + esc(typeLabel[c.type] || c.type) + "</span> " +
-      '<span class="pill" style="background:' + (c.status === "active" ? "#dcfce7;color:#166534" : "#fee2e2;color:#991b1b") + '">' + esc(c.status) + "</span>" +
-      "<h3>" + esc(c.name) + "</h3>" +
-      '<div class="meta">' +
-      (c.link ? "<div>Link: <a href=\"" + esc(c.link) + '" target="_blank" rel="noopener">' + esc(c.link) + "</a></div>" : "") +
-      (c.account_handle ? "<div>Account: <b>" + esc(c.account_handle) + "</b></div>" : "") +
-      "<div>Count: <b>" + esc(c.count) + "</b> &middot; Interval: <b>" + esc(c.interval_minutes) + " min</b></div>" +
-      (times.length ? "<div>Schedule (Dhaka): <b>" + esc(times.join(", ")) + "</b></div>" : "") +
-      "<div>Done: <b>" + esc(c.done_count) + "</b></div>" +
-      (c.next_run ? "<div>Next run: " + esc(c.next_run.slice(0, 16).replace("T", " ")) + " UTC</div>" : "") +
-      "</div>" +
-      '<div class="actions">' +
-      '<button class="btn-sm btn-teal" data-act="run">Run now</button>' +
-      (c.status === "active"
-        ? '<button class="btn-sm btn-white" data-act="pause">Pause</button>'
-        : '<button class="btn-sm btn-blue" data-act="resume">Resume</button>') +
-      '<button class="btn-sm btn-white" data-act="edit">Edit</button>' +
-      '<button class="btn-sm btn-red" data-act="delete">Delete</button>' +
-      "</div>";
-    div.querySelector('[data-act="run"]').onclick = async () => {
-      try { await api("/api/cards/" + c.id + "/run", "POST"); await loadAll(); }
-      catch (e) { alert("Run failed: " + e.message); }
-    };
-    div.querySelector('[data-act="pause"], [data-act="resume"]').onclick = async () => {
-      try {
-        await api("/api/cards/" + c.id + (c.status === "active" ? "/pause" : "/resume"), "POST");
-        await loadAll();
-      } catch (e) { alert("Failed: " + e.message); }
-    };
-    div.querySelector('[data-act="edit"]').onclick = () => startEditCard(c);
-    div.querySelector('[data-act="delete"]').onclick = async () => {
-      if (!confirm("Delete card '" + c.name + "'?")) return;
-      try { await api("/api/cards/" + c.id, "DELETE"); await loadAll(); }
-      catch (e) { alert("Delete failed: " + e.message); }
-    };
-    list.appendChild(div);
-  });
-}
-
-function renderAccounts(accounts) {
-  const list = $("accountList");
-  list.innerHTML = "";
-  if (!accounts.length) {
-    list.innerHTML = '<div class="empty">No Bluesky accounts yet. Add one below.</div>';
+async function doLogin(token) {
+  const who = await verifyToken(token);
+  if (!who) {
+    showMsg("Login failed - this token is not the site owner's token.", false);
+    return false;
   }
-  accounts.forEach((a) => {
-    const row = document.createElement("div");
-    row.className = "account-row";
-    row.innerHTML = "<span><b>" + esc(a.handle) + "</b>" +
-      (a.display_name ? " (" + esc(a.display_name) + ")" : "") + "</span>";
-    const del = document.createElement("button");
-    del.className = "btn-sm btn-red";
-    del.textContent = "Remove";
-    del.onclick = async () => {
-      if (!confirm("Remove account " + a.handle + "?")) return;
-      try { await api("/api/accounts/" + a.id, "DELETE"); await loadAll(); }
-      catch (e) { alert("Remove failed: " + e.message); }
-    };
-    row.appendChild(del);
-    list.appendChild(row);
-  });
-  const sel = $("cardAccount");
-  const current = sel.value;
-  sel.innerHTML = '<option value="">(any account)</option>';
-  accounts.forEach((a) => {
-    const opt = document.createElement("option");
-    opt.value = a.handle; opt.textContent = a.handle;
-    sel.appendChild(opt);
-  });
-  if (current) sel.value = current;
+  localStorage.setItem(TOKEN_KEY, token);
+  showDashboard();
+  showMsg("Logged in as " + who + ".", true);
+  await refreshAll();
+  return true;
 }
+$("loginBtn").addEventListener("click", async () => {
+  const t = $("tokenInput").value.trim();
+  if (!t) { showMsg("Paste your token first.", false); return; }
+  $("loginBtn").disabled = true;
+  await doLogin(t);
+  $("loginBtn").disabled = false;
+  $("tokenInput").value = "";
+});
+$("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem(TOKEN_KEY);
+  showLogin();
+  showMsg("Logged out.", true);
+});
 
-function renderLogs(logs) {
-  const list = $("logList");
-  list.innerHTML = "";
-  if (!logs.length) { list.innerHTML = '<div class="empty">No activity yet.</div>'; return; }
-  logs.forEach((l) => {
-    const div = document.createElement("div");
-    div.className = "log-line" + (l.level === "error" ? " log-error" : l.level === "warning" ? " log-warning" : "");
-    div.innerHTML = '<span class="t">' + esc((l.created_at || "").slice(0, 19).replace("T", " ")) + "</span>" + esc(l.message);
-    list.appendChild(div);
-  });
-}
-
-function fillSettings(settings) {
-  if (settings.blogger_daily_limit) $("setBloggerLimit").value = settings.blogger_daily_limit;
-  if (settings.bsky_reply_per_run) $("setReplyPerRun").value = settings.bsky_reply_per_run;
-  if (settings.bsky_reply_daily_cap) $("setReplyDaily").value = settings.bsky_reply_daily_cap;
-  if (settings.reply_gap_seconds) $("setGap").value = settings.reply_gap_seconds;
-}
-
-async function loadAll() {
+/* ---------- status (public, no token) ---------- */
+let accountHandles = [];
+async function loadStatus() {
+  let data = null;
   try {
-    const s = await api("/api/status");
-    $("statBloggerToday").textContent = s.stats.blogger_today;
-    $("statRepliesToday").textContent = s.stats.replies_today;
-    $("statTotalPosts").textContent = s.stats.total_posts;
-    $("statAccounts").textContent = s.stats.accounts;
-    $("lastRunPill").textContent = "Last run: " + (s.stats.last_run ? s.stats.last_run.slice(0, 19).replace("T", " ") + " UTC" : "never") + "  ·  Runs: " + s.stats.runs;
-    renderCards(s.cards || []);
-    renderAccounts(s.accounts || []);
-    renderLogs(s.logs || []);
-    fillSettings(s.settings || {});
+    const res = await fetch("data/dashboard.json", { cache: "no-store" });
+    if (res.ok) data = await res.json();
+  } catch (e) { /* no data yet */ }
+  if (!data) {
+    $("noData").classList.remove("hidden");
+    $("dash").classList.add("hidden");
+    return;
+  }
+  $("noData").classList.add("hidden");
+  $("dash").classList.remove("hidden");
+
+  const stats = data.stats || {};
+  $("statBloggerToday").textContent = stats.blogger_today ?? 0;
+  $("statRepliesToday").textContent = stats.replies_today ?? 0;
+  $("statTotalPosts").textContent = stats.total_posts ?? 0;
+  $("statTotalReplies").textContent = stats.total_replies ?? 0;
+  $("statAccounts").textContent = stats.accounts ?? 0;
+  $("lastRunPill").textContent =
+    "Last run: " + fmtTime(data.last_run) + "  ·  Runs: " + (data.runs ?? 0);
+
+  accountHandles = data.account_handles || [];
+  const accSel = $("cfAccount");
+  const cur = accSel.value;
+  accSel.innerHTML = '<option value="">Any account</option>';
+  accountHandles.forEach((h) => {
+    const o = document.createElement("option");
+    o.value = h; o.textContent = h; accSel.appendChild(o);
+  });
+  accSel.value = cur;
+  renderAccountList();
+
+  const settings = data.settings || {};
+  const paused = String(settings.paused || "false").toLowerCase() === "true";
+  $("pausedBanner").classList.toggle("hidden", !paused);
+  $("pauseState").textContent = paused ? "Paused" : "Running";
+  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
+  const ft = settings.force_topic || "";
+  $("forceTopicState").textContent = ft ? ("Forced: " + ft) : "No forced topic";
+  if (document.activeElement !== $("forceTopicInput")) {
+    $("forceTopicInput").value = ft;
+  }
+
+  const chips = $("trendingChips");
+  chips.innerHTML = "";
+  const topics = data.trending || [];
+  if (!topics.length) {
+    chips.innerHTML = '<span class="empty">No trending topics in the last run.</span>';
+  } else {
+    topics.forEach((topic) => {
+      const chip = document.createElement("button");
+      chip.className = "chip chip-btn";
+      chip.type = "button";
+      chip.textContent = topic;
+      chip.title = "Write about this topic next";
+      chip.addEventListener("click", () => setForceTopic(topic));
+      chips.appendChild(chip);
+    });
+  }
+
+  const posts = $("postList");
+  posts.innerHTML = "";
+  const recent = data.recent_posts || [];
+  if (!recent.length) {
+    posts.innerHTML = '<div class="empty">No articles published yet.</div>';
+  } else {
+    recent.forEach((p) => {
+      const div = document.createElement("div");
+      div.className = "post-row";
+      div.innerHTML =
+        (p.url
+          ? '<b><a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.title) + "</a></b>"
+          : "<b>" + esc(p.title) + "</b>") +
+        '<div class="meta">' + esc(p.topic || "") +
+        (p.source ? " · " + esc(p.source) : "") +
+        " · " + fmtTime(p.created_at) + "</div>";
+      posts.appendChild(div);
+    });
+  }
+
+  const logs = $("logList");
+  logs.innerHTML = "";
+  const entries = data.logs || [];
+  if (!entries.length) {
+    logs.innerHTML = '<div class="empty">No activity yet.</div>';
+  } else {
+    entries.forEach((l) => {
+      const div = document.createElement("div");
+      div.className = "log-line" +
+        (l.level === "error" ? " log-error" : l.level === "warning" ? " log-warning" : "");
+      div.innerHTML = '<span class="t">' + esc(fmtTime(l.created_at)) + "</span>" + esc(l.message);
+      logs.appendChild(div);
+    });
+  }
+}
+
+/* ---------- config (GitHub API) ---------- */
+let configSha = "";
+let config = {};
+async function loadConfig() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/config.json");
+    configSha = file.sha || "";
+    config = JSON.parse(b64ToUtf8(file.content || ""));
+    $("setBlogger").value = config.blogger_daily_limit ?? 0;
+    $("setPostsRun").value = config.bsky_posts_per_run ?? 1;
+    $("setReplyRun").value = config.bsky_reply_per_run ?? 0;
+    $("setReplyDay").value = config.bsky_reply_daily_cap ?? 0;
+    $("setGap").value = config.reply_gap_seconds ?? 0;
+    if (document.activeElement !== $("forceTopicInput")) {
+      $("forceTopicInput").value = config.force_topic || "";
+    }
+  } catch (e) { /* leave defaults */ }
+}
+async function saveConfig(msg) {
+  if (needToken()) return false;
+  try {
+    const res = await gh("/contents/data/config.json", "PUT", {
+      message: msg || "Update config from dashboard",
+      content: utf8ToB64(JSON.stringify(config, null, 2) + "\n"),
+      sha: configSha,
+      branch: BRANCH,
+    });
+    configSha = (res.content && res.content.sha) || configSha;
+    return true;
   } catch (e) {
-    if (String(e.message).includes("401") || String(e.message).includes("login")) showLogin();
+    showMsg("Could not save config: " + e.message, false);
+    return false;
   }
 }
+async function setForceTopic(topic) {
+  if (needToken()) return;
+  await loadConfig();
+  config.force_topic = topic;
+  if (await saveConfig("Set forced topic from dashboard")) {
+    showMsg(topic ? ("Forced topic set: " + topic) : "Forced topic cleared.", true);
+    await loadStatus();
+  }
+}
+$("saveForceTopicBtn").addEventListener("click", () => {
+  setForceTopic($("forceTopicInput").value.trim());
+});
+$("clearForceTopicBtn").addEventListener("click", () => {
+  setForceTopic("");
+});
+$("pauseBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  await loadConfig();
+  const paused = String(config.paused || false).toLowerCase() === "true";
+  config.paused = !paused;
+  if (await saveConfig(paused ? "Resume automation from dashboard" : "Pause automation from dashboard")) {
+    showMsg(config.paused ? "Automation PAUSED." : "Automation resumed.", true);
+    await loadStatus();
+  }
+});
 
-async function loadTrending() {
-  const box = $("trendingChips");
+/* ---------- workflow run history ---------- */
+async function loadRuns() {
+  if (!getToken()) return;
   try {
-    const t = await api("/api/trending");
-    box.innerHTML = "";
-    if (!t.topics || !t.topics.length) {
-      box.innerHTML = '<span class="empty">No trending topics right now.</span>';
+    const data = await gh("/actions/runs?per_page=5");
+    const runs = (data.workflow_runs || []);
+    const el = $("runList");
+    el.innerHTML = "";
+    if (!runs.length) {
+      el.innerHTML = '<div class="empty">No runs yet.</div>';
       return;
     }
-    t.topics.forEach((topic) => {
-      const chip = document.createElement("span");
-      chip.className = "chip";
-      chip.textContent = topic;
-      box.appendChild(chip);
+    runs.forEach((r) => {
+      const div = document.createElement("div");
+      div.className = "run-row";
+      const cls = r.status === "completed"
+        ? (r.conclusion === "success" ? "run-ok" : "run-bad") : "run-busy";
+      const label = r.status === "completed" ? (r.conclusion || "done") : r.status;
+      div.innerHTML =
+        '<span class="' + cls + '">' + esc(label) + "</span> · " +
+        '<a href="' + esc(r.html_url) + '" target="_blank" rel="noopener">' +
+        esc(fmtTime(r.created_at)) + "</a>" +
+        (r.display_title ? " · " + esc(r.display_title) : "");
+      el.appendChild(div);
     });
   } catch (e) {
-    box.innerHTML = '<span class="empty">Could not load trending topics.</span>';
+    $("runList").innerHTML = '<div class="empty">Could not load runs: ' + esc(e.message) + "</div>";
   }
 }
 
-function startEditCard(c) {
-  $("cardId").value = c.id;
-  $("cardName").value = c.name;
-  $("cardType").value = c.type;
-  $("cardLink").value = c.link || "";
-  $("cardAccount").value = c.account_handle || "";
-  $("cardCount").value = c.count;
-  $("cardInterval").value = c.interval_minutes;
-  try { $("cardSchedule").value = (JSON.parse(c.schedule_times || "[]")).join(", "); }
-  catch (e) { $("cardSchedule").value = ""; }
-  $("cardText").value = c.text || "";
-  $("cardFormTitle").textContent = "Edit Card";
-  $("cardSaveBtn").textContent = "Update card";
-  $("cardCancelEditBtn").classList.remove("hidden");
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+/* ---------- cards (GitHub API) ---------- */
+let cardsSha = "";
+let cards = [];
+let editingCardIndex = -1;
 
-function resetCardForm() {
-  $("cardId").value = "";
-  $("cardForm").reset();
-  $("cardCount").value = "1";
-  $("cardInterval").value = "30";
-  $("cardFormTitle").textContent = "Add Card";
-  $("cardSaveBtn").textContent = "Save card";
-  $("cardCancelEditBtn").classList.add("hidden");
-  $("cardMsg").textContent = "";
-}
-
-$("loginForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  $("loginMsg").textContent = "";
+async function loadCards() {
+  if (!getToken()) {
+    $("cardList").innerHTML = '<div class="empty">Log in to load and edit cards.</div>';
+    return;
+  }
   try {
-    await api("/api/login", "POST", { password: $("loginPassword").value });
-    $("loginPassword").value = "";
-    showDash();
-    await loadAll();
-    await loadTrending();
-  } catch (err) { $("loginMsg").textContent = "Wrong password."; }
-});
+    const file = await gh("/contents/data/cards.json");
+    cardsSha = file.sha || "";
+    cards = JSON.parse(b64ToUtf8(file.content || ""));
+    if (!Array.isArray(cards)) cards = [];
+    renderCards();
+  } catch (e) {
+    $("cardList").innerHTML = '<div class="empty">Could not load cards: ' + esc(e.message) + "</div>";
+  }
+}
 
-$("logoutBtn").addEventListener("click", async () => {
-  try { await api("/api/logout", "POST"); } catch (e) { /* ignore */ }
-  showLogin();
-});
+function renderCards() {
+  const list = $("cardList");
+  list.innerHTML = "";
+  if (!cards.length) {
+    list.innerHTML = '<div class="empty">No cards yet. Add your first card below.</div>';
+    return;
+  }
+  cards.forEach((c, i) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    const paused = (c.status || "active") !== "active";
+    div.innerHTML =
+      "<b>" + esc(c.name || ("Card " + (i + 1))) + "</b> " +
+      (paused ? '<span class="paused-tag">Paused</span>' : "") +
+      '<div class="meta">' + esc(c.type || "") +
+      (c.link ? " · " + esc(c.link) : "") +
+      (c.account_handle ? " · " + esc(c.account_handle) : "") +
+      " · every " + esc(c.interval_minutes || 30) + " min" +
+      (c.schedule_times && c.schedule_times.length
+        ? " · " + esc(c.schedule_times.join(", ")) : "") +
+      "</div>" +
+      '<div class="actions">' +
+      '<button class="btn-ghost" data-act="edit" data-i="' + i + '">Edit</button>' +
+      '<button class="btn-ghost" data-act="toggle" data-i="' + i + '">' +
+        (paused ? "Resume" : "Pause") + "</button>" +
+      '<button class="btn-red" data-act="del" data-i="' + i + '">Delete</button>' +
+      "</div>";
+    list.appendChild(div);
+  });
+  list.querySelectorAll("button[data-act]").forEach((btn) => {
+    btn.addEventListener("click", () => cardAction(btn.dataset.act, Number(btn.dataset.i)));
+  });
+}
+
+async function saveCards(msg) {
+  if (needToken()) return false;
+  try {
+    const res = await gh("/contents/data/cards.json", "PUT", {
+      message: msg || "Update cards from dashboard",
+      content: utf8ToB64(JSON.stringify(cards, null, 2) + "\n"),
+      sha: cardsSha,
+      branch: BRANCH,
+    });
+    cardsSha = (res.content && res.content.sha) || cardsSha;
+    showMsg("Cards saved.", true);
+    return true;
+  } catch (e) {
+    showMsg("Could not save cards: " + e.message, false);
+    return false;
+  }
+}
+
+async function cardAction(act, i) {
+  if (act === "del") {
+    if (!confirm("Delete this card?")) return;
+    cards.splice(i, 1);
+    if (await saveCards("Delete card from dashboard")) renderCards();
+    return;
+  }
+  if (act === "toggle") {
+    cards[i].status = (cards[i].status || "active") === "active" ? "paused" : "active";
+    if (await saveCards("Toggle card from dashboard")) renderCards();
+    return;
+  }
+  if (act === "edit") {
+    editingCardIndex = i;
+    const c = cards[i];
+    $("cfName").value = c.name || "";
+    $("cfType").value = c.type || "blogger_post";
+    $("cfLink").value = c.link || "";
+    $("cfAccount").value = c.account_handle || "";
+    $("cfCount").value = c.count || 1;
+    $("cfInterval").value = c.interval_minutes || 30;
+    $("cfTimes").value = (c.schedule_times || []).join(", ");
+    $("cfText").value = c.text || "";
+    $("cardForm").classList.remove("hidden");
+    $("cardForm").scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
 
 $("cardForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const body = {
-    name: $("cardName").value.trim(),
-    type: $("cardType").value,
-    link: $("cardLink").value.trim(),
-    account_handle: $("cardAccount").value,
-    count: parseInt($("cardCount").value || "1", 10),
-    interval_minutes: parseInt($("cardInterval").value || "30", 10),
-    schedule_times: $("cardSchedule").value.split(",").map((t) => t.trim()).filter(Boolean),
-    text: $("cardText").value.trim(),
+  if (needToken()) return;
+  const times = $("cfTimes").value.split(",").map((s) => s.trim()).filter(Boolean);
+  const card = {
+    name: $("cfName").value.trim(),
+    type: $("cfType").value,
+    link: $("cfLink").value.trim(),
+    account_handle: $("cfAccount").value || "",
+    count: Number($("cfCount").value) || 1,
+    interval_minutes: Number($("cfInterval").value) || 30,
+    schedule_times: times,
+    text: $("cfText").value.trim(),
+    status: editingCardIndex >= 0
+      ? (cards[editingCardIndex].status || "active") : "active",
   };
-  const editingId = $("cardId").value;
-  try {
-    if (editingId) await api("/api/cards/" + editingId, "PUT", body);
-    else await api("/api/cards", "POST", body);
-    $("cardMsg").className = "msg ok";
-    $("cardMsg").textContent = editingId ? "Card updated." : "Card saved.";
-    resetCardForm();
-    await loadAll();
-  } catch (err) {
-    $("cardMsg").className = "msg err";
-    $("cardMsg").textContent = "Save failed: " + err.message;
+  if (!card.name) { showMsg("Give the card a name.", false); return; }
+  if (editingCardIndex >= 0) cards[editingCardIndex] = card;
+  else cards.push(card);
+  if (await saveCards(editingCardIndex >= 0 ? "Edit card from dashboard" : "Add card from dashboard")) {
+    renderCards();
+    $("cardForm").classList.add("hidden");
+    editingCardIndex = -1;
+    e.target.reset();
   }
 });
 
-$("cardCancelEditBtn").addEventListener("click", resetCardForm);
-
-$("accountForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  try {
-    await api("/api/accounts", "POST", {
-      handle: $("accHandle").value.trim(),
-      app_password: $("accPassword").value.trim(),
-    });
-    $("accMsg").className = "msg ok";
-    $("accMsg").textContent = "Account added.";
-    $("accountForm").reset();
-    await loadAll();
-  } catch (err) {
-    $("accMsg").className = "msg err";
-    $("accMsg").textContent = "Add failed: " + err.message;
-  }
-});
-
+/* ---------- settings (limits) ---------- */
 $("settingsForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  try {
-    await api("/api/settings", "POST", {
-      blogger_daily_limit: $("setBloggerLimit").value,
-      bsky_reply_per_run: $("setReplyPerRun").value,
-      bsky_reply_daily_cap: $("setReplyDaily").value,
-      reply_gap_seconds: $("setGap").value,
-    });
-    $("settingsMsg").className = "msg ok";
-    $("settingsMsg").textContent = "Limits saved.";
-  } catch (err) {
-    $("settingsMsg").className = "msg err";
-    $("settingsMsg").textContent = "Save failed: " + err.message;
+  if (needToken()) return;
+  await loadConfig();
+  config.blogger_daily_limit = Number($("setBlogger").value) || 0;
+  config.bsky_posts_per_run = Number($("setPostsRun").value) || 1;
+  config.bsky_reply_per_run = Number($("setReplyRun").value) || 0;
+  config.bsky_reply_daily_cap = Number($("setReplyDay").value) || 0;
+  config.reply_gap_seconds = Number($("setGap").value) || 0;
+  if (await saveConfig("Update limits from dashboard")) {
+    showMsg("Limits saved (0 = unlimited).", true);
   }
 });
 
+/* ---------- Bluesky accounts (saved to the GitHub Secret) ---------- */
+function getSavedAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(BSKY_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.handle) : [];
+  } catch (e) { return []; }
+}
+function saveSavedAccounts(list) {
+  localStorage.setItem(BSKY_KEY, JSON.stringify(list));
+}
+function missingFromBrowser() {
+  const saved = new Set(getSavedAccounts().map((a) => a.handle));
+  return accountHandles.filter((h) => !saved.has(h));
+}
+function renderAccountList() {
+  const saved = getSavedAccounts();
+  const el = $("accountList");
+  el.innerHTML = "";
+  if (!saved.length && !accountHandles.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below.</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(a.handle) + "</b>" +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeAccount(Number(btn.dataset.acc)));
+  });
+  missingFromBrowser().forEach((h) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(h) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+async function updateBskySecret(list) {
+  if (needToken()) return false;
+  try {
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/BLUESKY_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    return true;
+  } catch (e) {
+    showMsg("Could not save to the Secret: " + e.message, false);
+    return false;
+  }
+}
+async function removeAccount(i) {
+  if (!confirm("Remove this account?")) return;
+  const saved = getSavedAccounts();
+  saved.splice(i, 1);
+  if (await updateBskySecret(saved)) {
+    saveSavedAccounts(saved);
+    renderAccountList();
+    showMsg("Account removed.", true);
+  }
+}
+$("accountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const handle = $("afHandle").value.trim();
+  const pw = $("afPassword").value.trim();
+  if (!handle || !pw) { showMsg("Enter the handle and the app password.", false); return; }
+  const missing = missingFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedAccounts();
+  const idx = saved.findIndex((a) => a.handle === handle);
+  if (idx >= 0) saved[idx].app_password = pw;
+  else saved.push({ handle: handle, app_password: pw });
+  if (await updateBskySecret(saved)) {
+    saveSavedAccounts(saved);
+    renderAccountList();
+    $("accountForm").reset();
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  }
+});
+
+/* ---------- run worker + refresh ---------- */
 $("runWorkerBtn").addEventListener("click", async () => {
+  if (needToken()) return;
   try {
-    await api("/api/run-worker", "POST");
-    alert("Worker started. Check the activity log in a moment.");
-    setTimeout(loadAll, 5000);
-  } catch (err) { alert("Worker start failed: " + err.message); }
+    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
+    showMsg("Worker started. Check the Actions tab; status updates here after it finishes.", true);
+  } catch (e) {
+    showMsg("Could not start the worker: " + e.message, false);
+  }
 });
-
-$("pauseAllBtn").addEventListener("click", async () => {
-  if (!confirm("Pause ALL cards?")) return;
-  try { await api("/api/pause-all", "POST"); await loadAll(); }
-  catch (err) { alert("Pause all failed: " + err.message); }
+$("addCardBtn").addEventListener("click", () => {
+  editingCardIndex = -1;
+  $("cardForm").reset();
+  $("cardForm").classList.remove("hidden");
+  $("cardForm").scrollIntoView({ behavior: "smooth", block: "center" });
 });
-
-$("exportBtn").addEventListener("click", async () => {
-  try {
-    const data = await api("/api/export");
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "automation-backup.json";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  } catch (err) { alert("Export failed: " + err.message); }
+$("cancelCardBtn").addEventListener("click", () => {
+  $("cardForm").classList.add("hidden");
+  editingCardIndex = -1;
 });
+async function refreshAll() {
+  await loadStatus();
+  await loadConfig();
+  await loadCards();
+  await loadRuns();
+  renderAccountList();
+}
+$("refreshBtn").addEventListener("click", refreshAll);
 
-$("refreshTrendingBtn").addEventListener("click", loadTrending);
-
-checkAuth();
-setInterval(() => { if (!$("dashView").classList.contains("hidden")) loadAll(); }, 30000);
+/* ---------- start: auto-login with the saved token ---------- */
+(async function init() {
+  const saved = getToken();
+  if (saved) {
+    const who = await verifyToken(saved);
+    if (who) {
+      showDashboard();
+      await refreshAll();
+      return;
+    }
+    localStorage.removeItem(TOKEN_KEY);
+    showMsg("Saved token no longer works - log in again.", false);
+  }
+  showLogin();
+})();
+setInterval(() => { if (loggedIn) loadStatus(); }, 60000);
 </script>
 </body>
 </html>
