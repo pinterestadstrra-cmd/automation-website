@@ -16,6 +16,11 @@ WHAT IT DOES
    in data/cards.json - each card has its own schedule, posts-per-day,
    posts-per-run, posting window, topic and bold toggle. There is NO
    global cycle any more (it once auto-published unwanted posts).
+   AUTO-SPREAD: a card's posting times are computed from its posts
+   per day + posting window (evenly, or at peak "best times"). The
+   card RUNS every X minutes to check replies; it only PUBLISHES at
+   a scheduled posting time. A card can also be Draft-only (write
+   the article, save as a draft, never publish).
    Too many posts risks a Blogger suspension, so posts are spaced out.
 6. Posts to Bluesky only through Bluesky cards. The SAME post never
    goes to all Bluesky accounts - each account gets a different /
@@ -151,12 +156,19 @@ DEFAULT_CARDS_ENABLED = "true"        # cards cycle on/off
 # --- Blogger article formatting ---
 DEFAULT_BLOGGER_BOLD_FORMAT = "true"  # bold headings + bold lead sentence
 # --- per-card defaults (a new card starts with these) ---
-DEFAULT_CARD_INTERVAL_HOURS = 0       # per-card interval hours
-DEFAULT_CARD_INTERVAL_MINUTES = 30    # per-card interval minutes
+DEFAULT_CARD_INTERVAL_HOURS = 0       # per-card run interval hours (reply checks)
+DEFAULT_CARD_INTERVAL_MINUTES = 30    # per-card run interval minutes
 DEFAULT_CARD_POSTS_PER_DAY = 0        # per-card posts per day (0 = unlimited)
 DEFAULT_CARD_REPLY_OWN = "true"       # per-card: reply to own-post comments
 DEFAULT_CARD_REPLY_OTHERS = "true"    # per-card: reply to others' comments
 DEFAULT_CARD_LOOKBACK_DAYS = 7        # per-card: check comments from the last N days (1-30)
+DEFAULT_CARD_SPREAD_MODE = "even"     # auto-spread: "even" | "best" (peak hours)
+DEFAULT_CARD_LENGTH_MODE = "auto"     # article length: "auto"|"short"|"medium"|"long"
+DEFAULT_CARD_TONE = "dramatic"        # tone: "dramatic"|"serious"|"funny"|"simple"
+DEFAULT_CARD_JITTER_MINUTES = 10      # random +/- jitter on posting times (0-30)
+DEFAULT_CARD_BSKY_IMAGE_RATIO = "16:9"  # Bluesky image ratio: "16:9"|"1:1"|"4:5"
+DEFAULT_CARD_RETRY_AFTER_MINUTES = 30 # retry a failed run after this many minutes
+DEFAULT_CARD_RETRY_MAX = 2            # max retries after a failed run
 
 UTC = timezone.utc
 
@@ -277,6 +289,23 @@ def init_db():
         "color": "TEXT DEFAULT ''",
         "window_start": "TEXT DEFAULT ''",
         "window_end": "TEXT DEFAULT ''",
+        # Rebuild #5 (advanced card features):
+        "spread_mode": "TEXT DEFAULT 'even'",
+        "length_mode": "TEXT DEFAULT 'auto'",
+        "tone": "TEXT DEFAULT 'dramatic'",
+        "draft_only": "INTEGER DEFAULT 0",
+        "days_of_week": "TEXT DEFAULT '[0,1,2,3,4,5,6]'",
+        "jitter_minutes": "INTEGER DEFAULT 10",
+        "labels": "TEXT DEFAULT ''",
+        "max_posts_per_week": "INTEGER DEFAULT 0",
+        "max_posts_per_month": "INTEGER DEFAULT 0",
+        "retry_after_minutes": "INTEGER DEFAULT 30",
+        "retry_max": "INTEGER DEFAULT 2",
+        "replies_per_day": "INTEGER DEFAULT 0",
+        "reply_never": "TEXT DEFAULT ''",
+        "reply_only": "TEXT DEFAULT ''",
+        "reply_skip_words": "TEXT DEFAULT ''",
+        "bsky_image_ratio": "TEXT DEFAULT '16:9'",
     }
     try:
         existing = {r[1] for r in cur.execute("PRAGMA table_info(cards)").fetchall()}
@@ -299,6 +328,13 @@ def init_db():
         "card_default_reply_own": str(DEFAULT_CARD_REPLY_OWN),
         "card_default_reply_others": str(DEFAULT_CARD_REPLY_OTHERS),
         "card_default_lookback_days": str(DEFAULT_CARD_LOOKBACK_DAYS),
+        "card_default_spread_mode": str(DEFAULT_CARD_SPREAD_MODE),
+        "card_default_length_mode": str(DEFAULT_CARD_LENGTH_MODE),
+        "card_default_tone": str(DEFAULT_CARD_TONE),
+        "card_default_jitter_minutes": str(DEFAULT_CARD_JITTER_MINUTES),
+        "card_default_bsky_image_ratio": str(DEFAULT_CARD_BSKY_IMAGE_RATIO),
+        "card_default_retry_after_minutes": str(DEFAULT_CARD_RETRY_AFTER_MINUTES),
+        "card_default_retry_max": str(DEFAULT_CARD_RETRY_MAX),
     }
     for k, v in defaults.items():
         cur.execute("INSERT OR IGNORE INTO settings(key, value) VALUES(?, ?)", (k, v))
@@ -491,10 +527,13 @@ def write_dashboard_json(state):
                 "schedule_times": _parse_schedule_times(c),
                 "last_run": file_runs.get(nm, ""),
                 "runs_today": card_runs_today(state, nm),
+                "posts_today": card_posts_today(state, nm),
                 "next_runs": [d.isoformat()
                               for d in next_runs_for_card(
                                   c, count=5,
                                   last_run_iso=file_runs.get(nm, ""))],
+                "next_post_times": [d.isoformat()
+                                    for d in next_post_times_for_card(c, count=5)],
                 "success": int(s.get("success", 0) or 0),
                 "fail": int(s.get("fail", 0) or 0),
                 "last_error": s.get("last_error", ""),
@@ -510,6 +549,22 @@ def write_dashboard_json(state):
                 "reply_others": c.get("reply_others", True),
                 "replies_per_run": c.get("replies_per_run", 0),
                 "lookback_days": card_reply_settings(c)[3],
+                "spread_mode": card_spread_mode(c),
+                "length_mode": card_length_mode(c),
+                "tone": card_tone(c),
+                "draft_only": card_draft_only(c),
+                "days_of_week": sorted(card_days_of_week(c)),
+                "jitter_minutes": card_jitter_minutes(c),
+                "labels": card_labels(c),
+                "max_posts_per_week": card_max_posts_per_week(c),
+                "max_posts_per_month": card_max_posts_per_month(c),
+                "retry_after_minutes": card_retry_after_minutes(c),
+                "retry_max": card_retry_max(c),
+                "replies_per_day": card_replies_per_day(c),
+                "reply_never": c.get("reply_never", ""),
+                "reply_only": c.get("reply_only", ""),
+                "reply_skip_words": c.get("reply_skip_words", ""),
+                "bsky_image_ratio": card_bsky_image_ratio(c),
             })
         data = {
             "generated_at": now_iso(),
@@ -532,7 +587,14 @@ def write_dashboard_json(state):
                           "card_default_posts_per_day",
                           "card_default_reply_own",
                           "card_default_reply_others",
-                          "card_default_lookback_days")},
+                          "card_default_lookback_days",
+                          "card_default_spread_mode",
+                          "card_default_length_mode",
+                          "card_default_tone",
+                          "card_default_jitter_minutes",
+                          "card_default_bsky_image_ratio",
+                          "card_default_retry_after_minutes",
+                          "card_default_retry_max")},
             "file_card_runs": state.get("file_card_runs", {}),
             "file_card_stats": file_stats,
             "file_cards": file_cards_out,
@@ -914,11 +976,14 @@ def verify_news(topic):
         return False, [], []
 
 # ---------------------------------------------------------------- Blogger
-def blogger_publish(title, html_body, labels=None, bold=True):
+def blogger_publish(title, html_body, labels=None, bold=True, draft=False):
     """Publish an article to Blogger. Returns the post URL or None.
     bold=True (default) post-processes the HTML so headings are bold
     and the lead sentence is bold - the article looks organised and
-    eye-catching on the blog, not plain text."""
+    eye-catching on the blog, not plain text.
+    draft=True saves the post as a Blogger DRAFT (never published) -
+    the card's Draft-only mode. The user reviews and publishes it
+    manually from Blogger."""
     title = clean_title(title)  # safety net: no '**' ever reaches Blogger
     if bold:
         html_body = bold_format_html(html_body)
@@ -939,7 +1004,7 @@ def blogger_publish(title, html_body, labels=None, bold=True):
                 scopes=["https://www.googleapis.com/auth/blogger"])
             service = google_build("blogger", "v3", credentials=creds)
             post = service.posts().insert(blogId=BLOG_ID, body=body,
-                                          isDraft=False).execute()
+                                          isDraft=bool(draft)).execute()
             return post.get("url")
         except Exception as e:
             log("warning", f"blogger publish (sdk) failed: {e}")
@@ -956,6 +1021,7 @@ def blogger_publish(title, html_body, labels=None, bold=True):
             return None
         r = requests.post(
             f"https://blogger.googleapis.com/v3/blogs/{BLOG_ID}/posts",
+            params={"isDraft": "true"} if draft else {},
             json=body, headers={"Authorization": f"Bearer {access}"}, timeout=30)
         if r.status_code in (200, 201):
             return r.json().get("url")
@@ -1222,10 +1288,13 @@ Topic: {topic}
 Verified facts / sources:
 {facts}
 
+Style: {tone}
+Length: {length}
+
 Rules:
 - Start with a STRONG hook in the first 2 lines (clickbait style, but honest).
 - Headline first, on its own line, starting with "HEADLINE: ".
-- Then the article: 500-700 words, well organised with subheadings
+- Then the article: well organised with subheadings
   (use ## for subheadings), short paragraphs, bold key facts.
 - BOLD FORMATTING (important - the article must look bold and
   eye-catching, not plain text): make the FIRST sentence of the article
@@ -1239,9 +1308,32 @@ Rules:
   given above. If a fact is unverified, say so.
 """
 
+# Article length modes (per card). "auto" lets the AI judge the length
+# from the story itself - a big story gets longer, a small one stays short.
+ARTICLE_LENGTHS = {
+    "auto": ("judge from the story itself - a big, important story gets a "
+             "longer article (up to about 900 words); a small story stays "
+             "short (about 350 words). Do not pad a small story.", 2000),
+    "short": ("SHORT - about 300-400 words.", 1200),
+    "medium": ("about 500-700 words.", 2000),
+    "long": ("LONG - about 900-1200 words, with more detail and background.", 3200),
+}
+
+# Tone / style modes (per card). Used for the article AND for the
+# Bluesky post text (the hook).
+ARTICLE_TONES = {
+    "dramatic": ("DRAMATIC and clickbait - a strong hook, punchy lines, "
+                 "excitement - but stay honest and factual."),
+    "serious": ("SERIOUS straight news - calm, factual, no hype."),
+    "funny": ("LIGHT and funny - witty, playful lines - but keep the facts straight."),
+    "simple": ("VERY SIMPLE plain English - short sentences, easy words, "
+               "anyone can understand."),
+}
+
 BSKY_POST_PROMPT = """Write ONE clickbait Bluesky post in ENGLISH about this news.
 It must be different from the others (unique wording and angle).
 Keep it under 250 characters. End with the blog link on its own line.
+Style: {tone}
 News: {headline}
 Blog link: {link}
 """
@@ -1250,6 +1342,7 @@ BSKY_PROMO_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH that ma
 this link and makes people want to click it. Sound like a real person
 sharing something worth seeing, not an ad. Keep it under 250 characters.
 End with the link on its own line.
+Style: {tone}
 Link: {link}
 """
 
@@ -1432,13 +1525,13 @@ def candidate_topics(state, limit=5, force_topic=None):
     return cands
 
 
-def record_post(title, url, topic, source, image_url):
+def record_post(title, url, topic, source, image_url, status="published"):
     conn = db_connect()
     try:
         conn.execute(
             "INSERT INTO posts(title, url, topic, source, image_url, status, created_at) "
-            "VALUES(?, ?, ?, ?, ?, 'published', ?)",
-            (title, url, topic, source, image_url, now_iso()))
+            "VALUES(?, ?, ?, ?, ?, ?, ?)",
+            (title, url, topic, source, image_url, status, now_iso()))
         conn.commit()
     finally:
         conn.close()
@@ -1473,27 +1566,435 @@ def card_posts_per_run(card):
         return 1
 
 
+# ---------------------------------------------------------------- rebuild #5
+# ADVANCED card features: auto-spread posting times, run-interval vs
+# posting gate, draft mode, days of week, jitter, labels, weekly/monthly
+# caps, retry, replies-per-day cap, reply skip/allow lists, per-card
+# Bluesky account, test runs, article length + tone, Bluesky image ratio.
+
+def _fnv1a(text):
+    """FNV-1a 32-bit hash - deterministic in Python AND in the dashboard
+    JavaScript, so the worker and the dashboard compute the SAME jitter
+    for the SAME card / day / slot."""
+    h = 0x811C9DC5
+    for b in str(text).encode("utf-8"):
+        h ^= b
+        h = (h * 0x01000193) & 0xFFFFFFFF
+    return h
+
+
+def card_spread_mode(card):
+    m = str(card.get("spread_mode") or "even").strip().lower()
+    return m if m in ("even", "best") else "even"
+
+
+def card_length_mode(card):
+    m = str(card.get("length_mode") or "auto").strip().lower()
+    return m if m in ("auto", "short", "medium", "long") else "auto"
+
+
+def card_tone(card):
+    t = str(card.get("tone") or "dramatic").strip().lower()
+    return t if t in ("dramatic", "serious", "funny", "simple") else "dramatic"
+
+
+def card_draft_only(card):
+    v = card.get("draft_only")
+    if isinstance(v, bool):
+        return v
+    return str(v or "").strip().lower() not in ("", "false", "0", "no", "off")
+
+
+def card_days_of_week(card):
+    """Weekdays (Mon=0 .. Sun=6) this card runs on. Default: every day."""
+    raw = card.get("days_of_week")
+    days = set()
+    if isinstance(raw, (list, tuple)):
+        items = raw
+    elif isinstance(raw, str):
+        try:
+            items = json.loads(raw)
+            if not isinstance(items, list):
+                items = [int(x) for x in raw.split(",") if x.strip() != ""]
+        except Exception:
+            items = [int(x) for x in raw.split(",") if x.strip() != ""]
+    else:
+        items = []
+    for x in items:
+        try:
+            d = int(x)
+            if 0 <= d <= 6:
+                days.add(d)
+        except Exception:
+            continue
+    return days if days else {0, 1, 2, 3, 4, 5, 6}
+
+
+def card_jitter_minutes(card):
+    try:
+        return max(0, min(30, int(card.get("jitter_minutes") or 0)))
+    except Exception:
+        return 10
+
+
+def card_labels(card):
+    """Blogger labels for this card's posts. Empty = ["News"]."""
+    raw = card.get("labels") or ""
+    if isinstance(raw, (list, tuple)):
+        out = [str(x).strip() for x in raw if str(x).strip()]
+    else:
+        out = [x.strip() for x in str(raw).split(",") if x.strip()]
+    return out or ["News"]
+
+
+def card_max_posts_per_week(card):
+    try:
+        return max(0, int(card.get("max_posts_per_week") or 0))
+    except Exception:
+        return 0
+
+
+def card_max_posts_per_month(card):
+    try:
+        return max(0, int(card.get("max_posts_per_month") or 0))
+    except Exception:
+        return 0
+
+
+def card_retry_after_minutes(card):
+    try:
+        return max(1, int(card.get("retry_after_minutes") or 30))
+    except Exception:
+        return 30
+
+
+def card_retry_max(card):
+    try:
+        return max(0, int(card.get("retry_max") or 0))
+    except Exception:
+        return 2
+
+
+def card_replies_per_day(card):
+    try:
+        return max(0, int(card.get("replies_per_day") or 0))
+    except Exception:
+        return 0
+
+
+def _parse_handle_list(raw):
+    out = set()
+    if isinstance(raw, (list, tuple)):
+        items = raw
+    else:
+        items = str(raw or "").replace(",", " ").split()
+    for h in items:
+        h = str(h).strip().lstrip("@").lower()
+        if h:
+            out.add(h)
+    return out
+
+
+def card_reply_lists(card):
+    """(never_reply_handles, only_reply_handles, skip_words).
+    never: never reply to these accounts. only: if non-empty, reply
+    ONLY to these accounts. skip_words: never reply to a comment
+    containing any of these words (case-insensitive)."""
+    never = _parse_handle_list(card.get("reply_never") or "")
+    only = _parse_handle_list(card.get("reply_only") or "")
+    words = [w.strip().lower() for w in
+             str(card.get("reply_skip_words") or "").replace(",", " ").split()
+             if w.strip()]
+    return never, only, words
+
+
+def card_bsky_image_ratio(card):
+    r = str(card.get("bsky_image_ratio") or "16:9").strip()
+    return r if r in ("16:9", "1:1", "4:5") else "16:9"
+
+
+# Peak hours for "best times" auto-spread (Dhaka clock):
+# morning 07:00-09:00, midday 12:00-13:00, evening 18:00-21:00.
+PEAK_WINDOWS = [(7 * 60, 9 * 60), (12 * 60, 13 * 60), (18 * 60, 21 * 60)]
+
+
+def _window_minutes(card):
+    """This card's posting window as (start_min, end_min) minutes of day.
+    Empty window = the whole day (0-1440). Overnight windows
+    (end <= start) are normalised by adding 1440 to the end."""
+    ws = str(card.get("window_start") or "").strip()
+    we = str(card.get("window_end") or "").strip()
+    if ws and we:
+        try:
+            sh, sm = [int(x) for x in ws.split(":")]
+            eh, em = [int(x) for x in we.split(":")]
+            start = sh * 60 + sm
+            end = eh * 60 + em
+            if end <= start:
+                end += 24 * 60
+            return start, end
+        except Exception:
+            pass
+    return 0, 24 * 60
+
+
+def auto_spread_slots(card, start_date):
+    """Posting slots for ONE card for the Dhaka day starting at
+    `start_date` (a date). Returns a list of (slot_index, datetime)
+    in Dhaka time, jitter already applied (deterministic per card /
+    day / slot, so the dashboard shows the same times the worker uses).
+    - posts_per_day <= 0 (unlimited) -> [] (no slots; every run may post).
+    - Fixed schedule_times (if set) win over auto-spread (exact times,
+      no jitter).
+    - "even": slots spread evenly across the window.
+      Example: 12 posts in 07:00-23:00 (960 min) = every 80 min.
+    - "best": slots spread across peak hours only (07-09, 12-13, 18-21
+      Dhaka), clipped to the card's window when one is set."""
+    per_day = card_posts_per_day(card)
+    if per_day <= 0:
+        return []
+    fixed = _parse_schedule_times(card)
+    day_start = datetime(start_date.year, start_date.month, start_date.day,
+                         tzinfo=USER_TZ)
+    if fixed:
+        return [(i, day_start + timedelta(hours=hh, minutes=mm))
+                for i, (hh, mm) in enumerate(fixed)]
+    wstart, wend = _window_minutes(card)
+    total = wend - wstart
+    minutes = []
+    if card_spread_mode(card) == "best":
+        peak = []
+        for a, b in PEAK_WINDOWS:
+            peak.extend(range(a, b))
+        # Clip peak minutes to the card's window (window may be overnight).
+        clipped = []
+        for m in peak:
+            mm = m
+            if mm < wstart:
+                mm += 24 * 60
+            if wstart <= mm < wend:
+                clipped.append(mm)
+        if clipped:
+            n = len(clipped)
+            for i in range(per_day):
+                idx = int(round(i * n / per_day))
+                minutes.append(clipped[min(idx, n - 1)])
+        else:
+            for i in range(per_day):
+                minutes.append(int(wstart + i * total / per_day))
+    else:
+        for i in range(per_day):
+            minutes.append(int(wstart + i * total / per_day))
+    name = card.get("name", "")
+    jit = card_jitter_minutes(card)
+    date_str = start_date.isoformat()
+    out = []
+    for i, mins in enumerate(minutes):
+        j = 0
+        if jit > 0:
+            span = 2 * jit + 1
+            j = (_fnv1a(f"{name}|{date_str}|{i}") % span) - jit
+        out.append((i, day_start + timedelta(minutes=mins + j)))
+    out.sort(key=lambda x: x[1])
+    return out
+
+
+def card_post_due(card, state):
+    """The POSTING gate. Returns (due, due_slots) where due_slots is a
+    list of (date_str, slot_index) that are due RIGHT NOW and not used
+    yet. A slot is due when its time has passed. Slots are checked for
+    today AND yesterday (so an overnight window's early-morning slots
+    still count). Unlimited cards (posts_per_day 0) have no slots and
+    are ALWAYS due. Fixed schedule_times are used as-is (exact)."""
+    name = card.get("name", "")
+    if card_posts_per_day(card) <= 0:
+        return True, []
+    now_local = now_utc().astimezone(USER_TZ)
+    used = state.get("file_card_post_slots", {}).get(name, {}) or {}
+    due = []
+    for delta in (0, 1):
+        day = (now_local - timedelta(days=delta)).date()
+        for idx, slot_dt in auto_spread_slots(card, day):
+            # Only slots that fall on TODAY count. Yesterday's
+            # computation matters only for overnight windows, whose
+            # early-morning slots land on today - a stale slot from
+            # yesterday evening must never trigger a post today.
+            if slot_dt.date() != now_local.date():
+                continue
+            key = day.isoformat()
+            if idx in (used.get(key) or []):
+                continue
+            if slot_dt <= now_local:
+                due.append((key, idx))
+    return (len(due) > 0), due
+
+
+def mark_slots_used(state, name, slots):
+    """Mark posting slots as used so they are never published twice."""
+    if not slots:
+        return
+    store = state.setdefault("file_card_post_slots", {})
+    per_card = store.setdefault(name, {})
+    for date_str, idx in slots:
+        lst = per_card.setdefault(date_str, [])
+        if idx not in lst:
+            lst.append(idx)
+    # Prune slots older than 3 days.
+    cutoff = (now_utc().astimezone(USER_TZ).date() - timedelta(days=3)).isoformat()
+    for key in list(per_card.keys()):
+        if key < cutoff:
+            per_card.pop(key, None)
+
+
+def _week_key(dt):
+    iso = dt.isocalendar()
+    return f"{iso[0]}-W{iso[1]:02d}"
+
+
+def card_posts_today(state, name):
+    """Articles THIS card actually published today (Dhaka day)."""
+    counts = state.get("file_card_post_counts", {}).get(name, {}) or {}
+    if counts.get("day") != now_utc().astimezone(USER_TZ).date().isoformat():
+        return 0
+    return int(counts.get("day_n") or 0)
+
+
+def card_posts_this_week(state, name):
+    counts = state.get("file_card_post_counts", {}).get(name, {}) or {}
+    now_local = now_utc().astimezone(USER_TZ)
+    if counts.get("week") != _week_key(now_local):
+        return 0
+    return int(counts.get("week_n") or 0)
+
+
+def card_posts_this_month(state, name):
+    counts = state.get("file_card_post_counts", {}).get(name, {}) or {}
+    now_local = now_utc().astimezone(USER_TZ)
+    if counts.get("month") != now_local.strftime("%Y-%m"):
+        return 0
+    return int(counts.get("month_n") or 0)
+
+
+def record_card_post(state, name):
+    """Count one published article for this card (day / week / month)."""
+    now_local = now_utc().astimezone(USER_TZ)
+    counts = state.setdefault("file_card_post_counts", {}).setdefault(name, {})
+    day = now_local.date().isoformat()
+    if counts.get("day") != day:
+        counts["day"], counts["day_n"] = day, 0
+    week = _week_key(now_local)
+    if counts.get("week") != week:
+        counts["week"], counts["week_n"] = week, 0
+    month = now_local.strftime("%Y-%m")
+    if counts.get("month") != month:
+        counts["month"], counts["month_n"] = month, 0
+    counts["day_n"] = int(counts.get("day_n") or 0) + 1
+    counts["week_n"] = int(counts.get("week_n") or 0) + 1
+    counts["month_n"] = int(counts.get("month_n") or 0) + 1
+
+
+def card_replies_today(state, name):
+    """Replies THIS card sent today (Dhaka day) - the per-day reply cap."""
+    counts = state.get("file_card_reply_counts", {}).get(name, {}) or {}
+    if counts.get("day") != now_utc().astimezone(USER_TZ).date().isoformat():
+        return 0
+    return int(counts.get("n") or 0)
+
+
+def record_card_reply_today(state, name):
+    counts = state.setdefault("file_card_reply_counts", {}).setdefault(name, {})
+    day = now_utc().astimezone(USER_TZ).date().isoformat()
+    if counts.get("day") != day:
+        counts["day"], counts["n"] = day, 0
+    counts["n"] = int(counts.get("n") or 0) + 1
+
+
+def reply_allowed(author, text, card):
+    """True if this comment may be replied to under the card's
+    skip/allow lists: never-reply accounts, only-reply accounts, and
+    skip words. Returns (allowed, reason)."""
+    never, only, words = card_reply_lists(card)
+    author_l = str(author or "").strip().lstrip("@").lower()
+    if author_l and author_l in never:
+        return False, f"author {author_l} is on the never-reply list"
+    if only and author_l not in only:
+        return False, f"author {author_l} is not on the only-reply list"
+    text_l = str(text or "").lower()
+    for w in words:
+        if w and w in text_l:
+            return False, f"comment contains skipped word '{w}'"
+    return True, ""
+
+
+def prepare_bsky_image(local_path, ratio):
+    """Crop a local image file to the card's Bluesky image ratio
+    (16:9, 1:1 or 4:5) with a centre crop. Returns the new file path.
+    Bluesky accepts any ratio - this controls how the image is
+    prepared so it looks right in the post. If Pillow is missing or
+    the crop fails, the original file is used unchanged."""
+    if not local_path or not os.path.exists(local_path):
+        return local_path
+    target = {"16:9": 16 / 9, "1:1": 1.0, "4:5": 4 / 5}.get(ratio or "16:9", 16 / 9)
+    try:
+        from PIL import Image
+        img = Image.open(local_path)
+        if img.mode in ("RGBA", "LA", "P"):
+            img = img.convert("RGB")
+        w, h = img.size
+        cur = w / h if h else target
+        if abs(cur - target) < 0.01:
+            return local_path
+        if cur > target:
+            nw = int(h * target)
+            x0 = (w - nw) // 2
+            img = img.crop((x0, 0, x0 + nw, h))
+        else:
+            nh = int(w / target)
+            y0 = (h - nh) // 2
+            img = img.crop((0, y0, w, y0 + nh))
+        base, _ = os.path.splitext(local_path)
+        out = f"{base}-{str(ratio).replace(':', 'x')}.jpg"
+        img.save(out, "JPEG", quality=88)
+        return out
+    except Exception as e:
+        log("warning", f"prepare_bsky_image failed ({e}) - using original image")
+        return local_path
+
+
 def run_card_blogger(state, card):
     """Write + publish articles for ONE Blogger card - the ONLY way
     the worker publishes to Blogger (card-only operation).
-    Respects the card's own posts-per-day cap, posting window,
-    posts-per-run, topic/source and bold toggle.
+    Respects the card's own posts-per-day / per-week / per-month caps,
+    posting window, posts-per-run, topic/source, bold toggle, labels
+    and draft mode.
     PHOTO-FIRST order (hard rule): for each topic, fetch + verify a
     photo BEFORE the AI writes anything. No verified photo = the
     topic is dropped entirely, never text-only. Returns the LAST
     published article or None."""
     name = card.get("name", "")
     bold = card_bold_enabled(card)
-    # Per-card daily cap (0 = unlimited).
+    # Per-card caps - counted in PUBLISHED articles, not runs.
     cap = card_posts_per_day(card)
-    if cap > 0 and card_runs_today(state, name) >= cap:
+    if cap > 0 and card_posts_today(state, name) >= cap:
         log("info", f"card '{name}': daily cap reached ({cap}/day) - skipping")
+        return None
+    wcap = card_max_posts_per_week(card)
+    if wcap > 0 and card_posts_this_week(state, name) >= wcap:
+        log("info", f"card '{name}': weekly cap reached ({wcap}/week) - skipping")
+        return None
+    mcap = card_max_posts_per_month(card)
+    if mcap > 0 and card_posts_this_month(state, name) >= mcap:
+        log("info", f"card '{name}': monthly cap reached ({mcap}/month) - skipping")
         return None
     if not card_in_window(card):
         log("info", f"card '{name}': outside its posting window - skipping")
         return None
     per_run = card_posts_per_run(card)
     dry = is_dry_run()
+    draft_only = card_draft_only(card)
+    labels = card_labels(card)
+    length_text, max_tokens = ARTICLE_LENGTHS[card_length_mode(card)]
+    tone_text = ARTICLE_TONES[card_tone(card)]
     force = None
     if (card.get("source") or "trending") == "custom":
         force = (card.get("topic_override") or "").strip() or None
@@ -1511,8 +2012,9 @@ def run_card_blogger(state, card):
             record_issue("warning", "no_photo",
                          f"card '{name}': topic dropped (no verified photo): {topic}")
             continue
-        article_text = ai_write(ARTICLE_PROMPT.format(topic=topic, facts=facts),
-                                max_tokens=2000)
+        article_text = ai_write(ARTICLE_PROMPT.format(
+            topic=topic, facts=facts, tone=tone_text, length=length_text),
+            max_tokens=max_tokens)
         if not article_text:
             record_issue("warning", "ai_write",
                          f"card '{name}': article writing failed for '{topic}'")
@@ -1529,16 +2031,23 @@ def run_card_blogger(state, card):
                               "topic": topic})
             continue
         url = retry_with_backoff(
-            lambda: blogger_publish(headline, html_body, labels=["News"], bold=bold),
+            lambda: blogger_publish(headline, html_body, labels=labels,
+                                    bold=bold, draft=draft_only),
             attempts=3, base_delay=10, label=f"blogger publish '{headline}'")
         if not url:
             record_issue("error", "blogger_publish",
                          f"card '{name}': blogger publish failed for '{headline}'")
             continue
-        record_post(headline, url, topic, ", ".join(sources), photo.get("url", ""))
+        status = "draft" if draft_only else "published"
+        record_post(headline, url, topic, ", ".join(sources),
+                    photo.get("url", ""), status=status)
+        record_card_post(state, name)
         state.setdefault("posted_urls", []).append(url)
         state.setdefault("posted_topics", []).append(topic.lower())
-        log("info", f"card '{name}' published: {headline} -> {url}")
+        if draft_only:
+            log("info", f"card '{name}' saved DRAFT (not published): {headline} -> {url}")
+        else:
+            log("info", f"card '{name}' published: {headline} -> {url}")
         published.append({"title": headline, "url": url,
                           "image_path": photo.get("local_path", ""),
                           "image_url": photo.get("url", ""), "topic": topic})
@@ -1582,19 +2091,35 @@ def record_reply(post_uri, comment_uri, reply_text, account_handle):
 
 
 def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
-                      replies_per_run=0, lookback_days=7, card_name=""):
+                      replies_per_run=0, lookback_days=7, card_name="",
+                      account_handle="", replies_per_day=0,
+                      reply_never="", reply_only="", reply_skip_words=""):
     """Reply to comments for ONE Bluesky card (card-only operation).
-    Posting itself is done by each card via _card_bluesky_post - this
-    function only replies. replies_per_run caps ALL replies in this
-    run (own + others, 0 = unlimited). reply_own / reply_others are
-    the card's toggles. lookback_days = how far back (in days) the
-    worker looks for comments on our OWN posts - old posts are scanned
-    too, not just the newest one. Every reply is logged with the card
-    name, so it shows up in that card's own log."""
+    Only the card's own account is used (account_handle, or the first
+    account when empty). Posting itself is done by each card via
+    _card_bluesky_post - this function only replies.
+    - OWN posts: reply to EVERY unanswered comment (no per-run cap) -
+      over runs the card answers all of them inside the lookback window.
+    - OTHERS' posts: replies_per_run caps the replies per run (0 = no cap).
+    - replies_per_day caps ALL replies this card sends in a day (0 = no cap).
+    - reply_never / reply_only / reply_skip_words filter every comment.
+    lookback_days = how far back (in days) the worker looks for comments
+    on our OWN posts - old posts are scanned too, not just the newest
+    one. Every reply is logged with the card name, so it shows up in
+    that card's own log."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
         return
+    # Per-card account: this card posts/replies as ONE account only.
+    if account_handle:
+        use_accounts = [a for a in accounts if a["handle"] == account_handle]
+        if not use_accounts:
+            log("warning", f"bluesky cycle: card '{card_name}' account "
+                           f"'{account_handle}' not found - using first account")
+            use_accounts = accounts[:1]
+    else:
+        use_accounts = accounts[:1]
     article = article or latest_article()
     if not article:
         log("info", "bluesky cycle: no article to link yet")
@@ -1609,29 +2134,44 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
     except Exception:
         lb = 7
     lb = max(1, min(30, lb))
+    try:
+        day_cap = int(replies_per_day or 0)
+    except Exception:
+        day_cap = 0
     tag = f"card '{card_name}': " if card_name else ""
+    filter_card = {"reply_never": reply_never, "reply_only": reply_only,
+                   "reply_skip_words": reply_skip_words}
     state.setdefault("replied_comments", [])
-    done_replies = 0
+    own_done = 0
+    others_done = 0
 
-    def under_cap():
-        return per_run_replies <= 0 or done_replies < per_run_replies
+    def day_cap_reached():
+        return day_cap > 0 and card_replies_today(state, card_name) >= day_cap
+
+    def others_under_cap():
+        return per_run_replies <= 0 or others_done < per_run_replies
 
     # --- 1) Replies to fresh comments on high-engagement posts (OTHERS).
-    # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
+    # Capped by replies_per_run per run AND by the replies-per-day cap.
     if reply_others is False:
         log("info", f"{tag}bluesky replies to others are OFF for this card - skipping")
     else:
         hot = get_high_engagement_posts(limit=5)
         acc_idx = 0
         for post in hot:
-            if not under_cap():
+            if not others_under_cap() or day_cap_reached():
                 break
             for comment in get_fresh_comments(post["uri"], minutes=5):
-                if not under_cap():
+                if not others_under_cap() or day_cap_reached():
                     break
                 if comment["uri"] in state["replied_comments"]:
                     continue
-                acc = accounts[acc_idx % len(accounts)]
+                ok, why = reply_allowed(comment["author"], comment["text"],
+                                        filter_card)
+                if not ok:
+                    log("info", f"{tag}skipped reply to {comment['author']}: {why}")
+                    continue
+                acc = use_accounts[acc_idx % len(use_accounts)]
                 acc_idx += 1
                 if not account_enabled(acc["handle"]):
                     continue
@@ -1654,21 +2194,23 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                 if uri:
                     state["replied_comments"].append(comment["uri"])
                     record_reply(post["uri"], comment["uri"], reply_text, acc["handle"])
-                    done_replies += 1
+                    record_card_reply_today(state, card_name)
+                    others_done += 1
                     log("info", f"{tag}replied to {comment['author']} "
                                 f"(hot post by {post['author']}, "
                                 f"comment: '{comment['text'][:60]}') "
                                 f"as {acc['handle']}: '{reply_text[:80]}'")
                     time.sleep(2)
     # --- 2) Reply to comments on our OWN posts (ALL of them, lookback window).
+    # No per-run cap: over runs the card answers every unanswered comment.
     # Old posts are scanned too - a comment left days ago still gets an
     # answer, as long as the post is inside the lookback window.
     if reply_own is False:
         log("info", f"{tag}bluesky replies to own posts are OFF for this card - skipping")
         return
     own_cutoff = now_utc() - timedelta(days=lb)
-    for acc in accounts:
-        if not under_cap():
+    for acc in use_accounts:
+        if day_cap_reached():
             break
         if not account_enabled(acc["handle"]):
             continue
@@ -1687,11 +2229,16 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                     f"({acc['handle']})")
         for own in own_posts:
             for comment in own["replies"]:
-                if not under_cap():
+                if day_cap_reached():
                     break
                 if comment["uri"] in state["replied_comments"]:
                     continue
                 if comment["author"] == acc["handle"]:
+                    continue
+                ok, why = reply_allowed(comment["author"], comment["text"],
+                                        filter_card)
+                if not ok:
+                    log("info", f"{tag}skipped reply to {comment['author']}: {why}")
                     continue
                 reply_text = groq_text(OWN_REPLY_PROMPT.format(comment=comment["text"]),
                                        max_tokens=300)
@@ -1704,13 +2251,14 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                 if uri:
                     state["replied_comments"].append(comment["uri"])
                     record_reply(own["uri"], comment["uri"], reply_text, acc["handle"])
-                    done_replies += 1
+                    record_card_reply_today(state, card_name)
+                    own_done += 1
                     log("info", f"{tag}replied to {comment['author']} on your "
                                 f"post (comment: '{comment['text'][:60]}') "
                                 f"as {acc['handle']}: '{reply_text[:80]}'")
                     time.sleep(2)
-    log("info", f"{tag}reply run done: {done_replies} reply/replies sent "
-                f"(lookback {lb} day(s))")
+    log("info", f"{tag}reply run done: {own_done} own + {others_done} others "
+                f"replies sent (lookback {lb} day(s))")
 
 
 def card_interval_minutes(card):
@@ -1755,25 +2303,13 @@ def _parse_schedule_times(card):
 
 
 def next_runs_for_card(card, count=5, last_run_iso=None):
-    """The next `count` run times for one card (aware datetimes, Dhaka).
-    Fixed schedule_times (Dhaka) win over the interval; otherwise the
-    runs are last_run + interval, stepping forward until in the future.
+    """The next `count` RUN times for one card (aware datetimes, Dhaka).
+    Runs are interval-based: last_run + interval, stepping forward
+    until in the future. (Fixed schedule_times no longer drive runs -
+    they are POSTING times now, handled by the auto-spread gate.)
     This is the SAME math the dashboard preview uses (in JS)."""
-    times = _parse_schedule_times(card)
     now_local = now_utc().astimezone(USER_TZ)
     out = []
-    if times:
-        day = now_local.replace(hour=0, minute=0, second=0, microsecond=0)
-        d = 0
-        while len(out) < count and d < 370:
-            for hh, mm in times:
-                cand = day + timedelta(days=d, hours=hh, minutes=mm)
-                if cand > now_local:
-                    out.append(cand)
-                    if len(out) >= count:
-                        break
-            d += 1
-        return out[:count]
     interval = card_interval_minutes(card)
     base = None
     if last_run_iso:
@@ -1791,6 +2327,25 @@ def next_runs_for_card(card, count=5, last_run_iso=None):
         out.append(nxt)
         nxt += timedelta(minutes=interval)
     return out
+
+
+def next_post_times_for_card(card, count=5):
+    """The next `count` POSTING times for one card (aware datetimes,
+    Dhaka) - the auto-spread slots (or fixed schedule_times) that have
+    not passed yet. Unlimited cards (posts_per_day 0) have no slots:
+    every run may post, so this returns []."""
+    if card_posts_per_day(card) <= 0 and not _parse_schedule_times(card):
+        return []
+    now_local = now_utc().astimezone(USER_TZ)
+    out = []
+    for delta in (0, 1, 2):
+        day = (now_local + timedelta(days=delta)).date()
+        for _idx, slot_dt in auto_spread_slots(card, day):
+            if slot_dt > now_local:
+                out.append(slot_dt)
+            if len(out) >= count:
+                return out[:count]
+    return out[:count]
 
 
 def next_run_for_card(card):
@@ -1835,14 +2390,37 @@ def load_file_cards():
 
 
 def file_card_due(card, state):
-    """Is a file-based card due? Uses schedule_times (Dhaka) or the
-    interval since its last run (tracked in state.json). Also respects
-    the per-card posts-per-day cap (0 = unlimited)."""
-    if card_posts_per_day(card) > 0 and \
-            card_runs_today(state, card.get("name", "")) >= card_posts_per_day(card):
+    """Is a file-based card due for a RUN (reply checks + maybe a post)?
+    - Card must be active.
+    - Today (Dhaka) must be one of the card's days of week.
+    - A failed run may retry early: if the card failed and retries are
+      left and the retry time has passed, it is due even before the
+      normal interval.
+    - Otherwise: the run interval since the last run must have passed.
+    NOTE: the posts-per-day cap does NOT gate runs - a card still runs
+    (for replies) when its posting cap is hit; it just does not publish.
+    Publishing itself is gated separately by card_post_due()."""
+    name = card.get("name", "")
+    today_wd = now_utc().astimezone(USER_TZ).weekday()
+    if today_wd not in card_days_of_week(card):
         return False
+    retries = (state.get("file_card_retries", {}) or {}).get(name, {}) or {}
+    fails = int(retries.get("fails") or 0)
+    if fails > 0 and fails <= card_retry_max(card):
+        nxt = retries.get("next_retry") or ""
+        if nxt:
+            try:
+                nxt_dt = datetime.fromisoformat(nxt)
+                if nxt_dt.tzinfo is None:
+                    nxt_dt = nxt_dt.replace(tzinfo=UTC)
+                if now_utc() >= nxt_dt:
+                    log("info", f"card '{name}': retry {fails}/{card_retry_max(card)} "
+                                f"after failure - due now")
+                    return True
+            except Exception:
+                pass
     runs = state.get("file_card_runs", {})
-    last = runs.get(card.get("name", ""))
+    last = runs.get(name, "")
     last_dt = None
     if last:
         try:
@@ -1851,21 +2429,33 @@ def file_card_due(card, state):
                 last_dt = last_dt.replace(tzinfo=UTC)
         except Exception:
             last_dt = None
-    if _parse_schedule_times(card):
-        now_local = now_utc().astimezone(USER_TZ)
-        recent = None
-        for hh, mm in _parse_schedule_times(card):
-            cand = now_local.replace(hour=hh, minute=mm, second=0, microsecond=0)
-            if cand <= now_local and (recent is None or cand > recent):
-                recent = cand
-        if recent is None:
-            return False
-        if last_dt is None:
-            return True
-        return last_dt.astimezone(USER_TZ) < recent
     if last_dt is None:
         return True
     return now_utc() >= last_dt + timedelta(minutes=card_interval_minutes(card))
+
+
+def record_card_retry(state, name, card):
+    """A run failed: count it and schedule the next retry (if any left)."""
+    retries = state.setdefault("file_card_retries", {})
+    entry = retries.setdefault(name, {"fails": 0, "next_retry": ""})
+    entry["fails"] = int(entry.get("fails") or 0) + 1
+    if entry["fails"] <= card_retry_max(card):
+        nxt = now_utc() + timedelta(minutes=card_retry_after_minutes(card))
+        entry["next_retry"] = nxt.isoformat()
+        log("info", f"card '{name}': run failed ({entry['fails']}/"
+                    f"{card_retry_max(card)} retries) - next retry at "
+                    f"{nxt.astimezone(USER_TZ).strftime('%H:%M')} Dhaka")
+    else:
+        entry["next_retry"] = ""
+        log("info", f"card '{name}': retries exhausted "
+                    f"({card_retry_max(card)}) - waiting for the normal interval")
+
+
+def clear_card_retries(state, name):
+    """A run succeeded: forget past failures."""
+    retries = state.get("file_card_retries", {}) or {}
+    if name in retries:
+        retries.pop(name, None)
 
 
 def card_reply_settings(card):
@@ -1909,9 +2499,12 @@ def card_reply_settings(card):
 
 def _card_bluesky_post(card, state, article, promo=False):
     """Post one Bluesky card (post or promo). Returns True on success.
-    Shared by bluesky_post and bluesky_promo cards. Only the first
-    matching account posts (same as before)."""
+    Shared by bluesky_post and bluesky_promo cards. Only the card's
+    own account posts (account_handle, or the first account).
+    The article's image is attached, cropped to the card's Bluesky
+    image ratio (16:9 / 1:1 / 4:5). The post text uses the card's tone."""
     name = card.get("name", "")
+    tone_text = ARTICLE_TONES[card_tone(card)]
     accs = [a for a in list_accounts()
             if not card.get("account_handle") or
             a["handle"] == card["account_handle"]]
@@ -1933,7 +2526,7 @@ def _card_bluesky_post(card, state, article, promo=False):
             if not client:
                 continue
             text = card.get("text") or ai_write(
-                BSKY_PROMO_PROMPT.format(link=link), max_tokens=400)
+                BSKY_PROMO_PROMPT.format(link=link, tone=tone_text), max_tokens=400)
             if not text:
                 text = link
             if link not in text:
@@ -1950,22 +2543,48 @@ def _card_bluesky_post(card, state, article, promo=False):
                 continue
             text = card.get("text") or ai_write(
                 BSKY_POST_PROMPT.format(headline=article["title"],
-                                        link=article["url"]), max_tokens=400)
+                                        link=article["url"], tone=tone_text),
+                max_tokens=400)
             if not text:
                 text = f"{article['title']}\n{article['url']}"
             label = f"card post ({acc['handle']})"
-        if retry_with_backoff(lambda: bluesky_post(client, text),
-                              attempts=3, base_delay=5, label=label):
+        # Attach the article image (cropped to this card's ratio).
+        image_path = None
+        if not promo and article and article.get("image_url"):
+            local = download_image(article["image_url"], article.get("title", ""))
+            if local:
+                image_path = prepare_bsky_image(
+                    local, card_bsky_image_ratio(card))
+                log("info", f"card '{name}': Bluesky image prepared "
+                            f"({card_bsky_image_ratio(card)})")
+        if retry_with_backoff(
+                lambda: bluesky_post(client, text, image_path=image_path,
+                                     image_alt=article["title"] if article else ""),
+                attempts=3, base_delay=5, label=label):
             record_bsky_post(state, acc["handle"])
             ok = True
     return ok
 
 
-def execute_card(card, state):
-    """Run one manual card once. Returns True on success.
-    Per-card settings honoured here: topic override + source (Blogger),
-    bold formatting (Blogger), and reply toggles (Bluesky). Success /
-    failure counters and the last error are stored per card."""
+def execute_card(card, state, test_mode=False):
+    """Run one card once. Returns True on success.
+    RUN MODEL (rebuild #5):
+    - The card RUNS every `interval` (run every X minutes) to check
+      replies. Replies (own + others) happen on EVERY run.
+    - PUBLISHING happens ONLY at a scheduled posting time: the
+      auto-spread slots computed from posts-per-day + posting window
+      (or fixed schedule_times, or every run when posts-per-day is
+      unlimited). Off-schedule runs do replies only and publish nothing.
+    - test_mode=True: a TEST run - forces dry-run for THIS card only
+      (the article is written and the photo is verified, but nothing
+      is published and no reply is sent). The posting gate is bypassed
+      so the test actually exercises the article path. Test runs do
+      not touch the success/fail counters.
+    Per-card settings honoured here: topic override + source, bold,
+    labels, draft mode, length + tone (Blogger), and reply toggles +
+    caps + lists + account (Bluesky). Success / failure counters and
+    the last error are stored per card."""
+    global FORCE_DRY
     ctype = card["type"]
     name = card.get("name", "")
     last_error = ""
@@ -1980,57 +2599,91 @@ def execute_card(card, state):
     if ctype == "bluesky_reply" and not workflow_enabled("replies"):
         log("info", f"card '{name}': Bluesky replies are OFF - skipping")
         return False
+    prev_dry = FORCE_DRY
+    if test_mode:
+        FORCE_DRY = True
+        log("warning", f"TEST RUN card '{name}': dry-run forced - the article "
+                       "will be written and the photo verified, but NOTHING "
+                       "will be published and NO reply will be sent")
+    # The posting gate: is it a scheduled posting time right now?
+    # (Bypassed for test runs so the test exercises the article path.)
+    post_due, due_slots = card_post_due(card, state)
+    if test_mode:
+        post_due = True
+        due_slots = []
+
+    def _do_replies(article):
+        """Replies for this card (own + others) - runs on EVERY run."""
+        reply_own, reply_others, rpr, lb = card_reply_settings(card)
+        if not (reply_own or reply_others):
+            return
+        if not workflow_enabled("replies"):
+            return
+        run_bluesky_cycle(state, article=article,
+                          reply_own=reply_own,
+                          reply_others=reply_others,
+                          replies_per_run=rpr,
+                          lookback_days=lb, card_name=name,
+                          account_handle=card.get("account_handle") or "",
+                          replies_per_day=card_replies_per_day(card),
+                          reply_never=card.get("reply_never") or "",
+                          reply_only=card.get("reply_only") or "",
+                          reply_skip_words=card.get("reply_skip_words") or "")
+
     try:
         if ctype == "blogger_post":
             # Card-only: the card's own settings drive everything.
-            article = run_card_blogger(state, card)
-            ok = article is not None
-            if not ok:
-                last_error = "no article published this run"
+            # Blogger cards have no replies - they only publish, and
+            # only at a scheduled posting time.
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing published this run (replies: n/a)")
+                ok = True
+            else:
+                article = run_card_blogger(state, card)
+                ok = article is not None
+                if ok:
+                    mark_slots_used(state, name, due_slots)
+                else:
+                    last_error = "no article published this run"
         elif ctype == "bluesky_post":
             article = latest_article()
+            _do_replies(article)
             if not article:
                 log("warning", f"card '{name}': no article to post")
                 last_error = "no article to post yet"
+            elif not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "replies only, nothing posted this run")
+                ok = True
             else:
                 ok = _card_bluesky_post(card, state, article, promo=False)
-                if not ok:
+                if ok:
+                    mark_slots_used(state, name, due_slots)
+                else:
                     last_error = "post failed or skipped"
-                # Per-card replies after posting (if the card enables them).
-                reply_own, reply_others, rpr, lb = card_reply_settings(card)
-                if (reply_own or reply_others) and workflow_enabled("replies"):
-                    run_bluesky_cycle(state, article=article,
-                                      reply_own=reply_own,
-                                      reply_others=reply_others,
-                                      replies_per_run=rpr,
-                                      lookback_days=lb, card_name=name)
         elif ctype == "bluesky_promo":
             link = (card.get("link") or "").strip()
+            _do_replies(latest_article())
             if not link:
                 log("warning", f"card '{name}': no link to promote")
                 last_error = "no link to promote"
+            elif not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "replies only, nothing promoted this run")
+                ok = True
             else:
                 ok = _card_bluesky_post(card, state, None, promo=True)
-                if not ok:
+                if ok:
+                    mark_slots_used(state, name, due_slots)
+                else:
                     last_error = "promo failed or skipped"
-                reply_own, reply_others, rpr, lb = card_reply_settings(card)
-                if (reply_own or reply_others) and workflow_enabled("replies"):
-                    run_bluesky_cycle(state, article=latest_article(),
-                                      reply_own=reply_own,
-                                      reply_others=reply_others,
-                                      replies_per_run=rpr,
-                                      lookback_days=lb, card_name=name)
         elif ctype == "bluesky_reply":
             article = latest_article()
             if not article:
                 last_error = "no article yet"
             else:
-                reply_own, reply_others, rpr, lb = card_reply_settings(card)
-                run_bluesky_cycle(state, article=article,
-                                  reply_own=reply_own,
-                                  reply_others=reply_others,
-                                  replies_per_run=rpr,
-                                  lookback_days=lb, card_name=name)
+                _do_replies(article)
                 ok = True
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
@@ -2039,6 +2692,19 @@ def execute_card(card, state):
         log("error", f"card '{name}' failed: {e}")
         last_error = str(e)[:200]
         ok = False
+    finally:
+        FORCE_DRY = prev_dry
+    if test_mode:
+        # A test run never touches counters or retry state - its result
+        # lives only in the card's log.
+        log("info", f"TEST RUN card '{name}' finished "
+                    f"({'ok' if ok else 'no-op'}) - nothing was published")
+        return ok
+    # --- retry bookkeeping: a failed run may retry early (per card) ---
+    if ok:
+        clear_card_retries(state, name)
+    else:
+        record_card_retry(state, name, card)
     # --- per-card stats: success/fail counters + last error + last run ---
     if card.get("id"):
         conn = db_connect()
@@ -2084,6 +2750,9 @@ def run_cards_cycle(state):
     No card due (or no cards at all) = nothing is published."""
     # "Run now" from the dashboard: a card name in state["run_card_now"].
     # Runs that card at once (even if not due), then clears the flag.
+    # "Test" from the dashboard: state["test_card_now"] runs the card
+    # once in dry-run mode (article + photo verified, nothing published,
+    # no reply sent).
     file_cards = load_file_cards()
     ran_any = False
     run_now = state.get("run_card_now") or ""
@@ -2098,6 +2767,18 @@ def run_cards_cycle(state):
                 break
         else:
             log("warning", f"run-now: card '{run_now}' not found or paused")
+    test_now = state.get("test_card_now") or ""
+    if test_now:
+        state["test_card_now"] = ""
+        for card in file_cards:
+            if card.get("name") == test_now and \
+                    (card.get("status") or "active") == "active":
+                log("info", f"test requested for card '{test_now}'")
+                execute_card(card, state, test_mode=True)
+                ran_any = True
+                break
+        else:
+            log("warning", f"test: card '{test_now}' not found or paused")
     if not file_cards:
         log("info", "no cards configured (data/cards.json is empty) - nothing to do")
         return
@@ -2174,8 +2855,16 @@ def retry_with_backoff(fn, attempts=3, base_delay=5, label="operation"):
 
 
 def is_dry_run():
-    """Test mode: log what WOULD be posted, post nothing."""
+    """Test mode: log what WOULD be posted, post nothing.
+    FORCE_DRY is set by a per-card TEST run (execute_card test_mode) -
+    only that card runs dry, the rest of the worker is unaffected."""
+    if globals().get("FORCE_DRY"):
+        return True
     return str(get_setting("dry_run", str(DEFAULT_DRY_RUN))).strip().lower() == "true"
+
+
+# Set to True while one card is running as a TEST (dry) run.
+FORCE_DRY = False
 
 
 def workflow_enabled(name):
@@ -2257,7 +2946,9 @@ def validate_config():
             warnings.append(f"{key} is not a number - using {default}")
             return default
     for key in ("max_consecutive_failures", "card_default_interval_hours",
-                "card_default_interval_minutes", "card_default_posts_per_day"):
+                "card_default_interval_minutes", "card_default_posts_per_day",
+                "card_default_jitter_minutes", "card_default_retry_after_minutes",
+                "card_default_retry_max"):
         _int(key, 0)
     for w in warnings:
         record_issue("warning", "config", w)
@@ -2482,8 +3173,12 @@ def api_cards():
             "interval_minutes, interval_hours, posts_per_day, schedule_times, "
             "text, status, source, topic_override, reply_own, reply_others, "
             "replies_per_run, lookback_days, bold_format, notes, color, window_start, "
-            "window_end, created_at, updated_at) "
-            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "window_end, spread_mode, length_mode, tone, draft_only, "
+            "days_of_week, jitter_minutes, labels, max_posts_per_week, "
+            "max_posts_per_month, retry_after_minutes, retry_max, "
+            "replies_per_day, reply_never, reply_only, reply_skip_words, "
+            "bsky_image_ratio, created_at, updated_at) "
+            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             (name, ctype, data.get("link", ""), data.get("account_handle", ""),
              int(data.get("count") or 1), int(data.get("interval_minutes") or 30),
              int(data.get("interval_hours") or 0),
@@ -2497,6 +3192,22 @@ def api_cards():
              _b(data.get("bold_format"), True),
              data.get("notes", ""), data.get("color", ""),
              data.get("window_start", ""), data.get("window_end", ""),
+             data.get("spread_mode") or "even",
+             data.get("length_mode") or "auto",
+             data.get("tone") or "dramatic",
+             _b(data.get("draft_only"), False),
+             json.dumps(data.get("days_of_week") or [0, 1, 2, 3, 4, 5, 6]),
+             int(data.get("jitter_minutes") or 10),
+             data.get("labels") if isinstance(data.get("labels"), str)
+             else ", ".join(str(x) for x in (data.get("labels") or [])),
+             int(data.get("max_posts_per_week") or 0),
+             int(data.get("max_posts_per_month") or 0),
+             int(data.get("retry_after_minutes") or 30),
+             int(data.get("retry_max") or 2),
+             int(data.get("replies_per_day") or 0),
+             data.get("reply_never", ""), data.get("reply_only", ""),
+             data.get("reply_skip_words", ""),
+             data.get("bsky_image_ratio") or "16:9",
              now_iso(), now_iso()))
         conn.commit()
         return jsonify({"ok": True, "id": cur.lastrowid})
@@ -2519,14 +3230,40 @@ def api_card_one(cid):
         fields = {}
         for key in ("name", "type", "link", "account_handle", "text", "status",
                     "source", "topic_override", "notes", "color",
-                    "window_start", "window_end"):
+                    "window_start", "window_end",
+                    "spread_mode", "length_mode", "tone",
+                    "reply_never", "reply_only", "reply_skip_words",
+                    "bsky_image_ratio"):
             if key in data:
                 fields[key] = data[key]
+        if "labels" in data:
+            v = data["labels"]
+            fields["labels"] = v if isinstance(v, str) else \
+                ", ".join(str(x) for x in (v or []))
+        if "days_of_week" in data:
+            days = []
+            raw = data["days_of_week"]
+            if isinstance(raw, (list, tuple)):
+                items = raw
+            else:
+                items = str(raw).split(",")
+            for x in items:
+                try:
+                    d = int(x)
+                    if 0 <= d <= 6 and d not in days:
+                        days.append(d)
+                except Exception:
+                    pass
+            fields["days_of_week"] = json.dumps(
+                sorted(days) if days else [0, 1, 2, 3, 4, 5, 6])
         for key in ("count", "interval_minutes", "interval_hours",
-                    "posts_per_day", "replies_per_run", "lookback_days"):
+                    "posts_per_day", "posts_per_run", "replies_per_run",
+                    "lookback_days", "jitter_minutes", "max_posts_per_week",
+                    "max_posts_per_month", "retry_after_minutes",
+                    "retry_max", "replies_per_day"):
             if key in data:
                 fields[key] = int(data[key] or 0)
-        for key in ("reply_own", "reply_others", "bold_format"):
+        for key in ("reply_own", "reply_others", "bold_format", "draft_only"):
             if key in data:
                 v = data[key]
                 if isinstance(v, bool):
@@ -2568,6 +3305,30 @@ def api_card_run(cid):
     ok = execute_card(card, state)
     save_state(state)
     return jsonify({"ok": ok})
+
+
+@app.route("/api/cards/<int:cid>/test", methods=["POST"])
+def api_card_test(cid):
+    """TEST a card once (dry-run): the article is written and the photo
+    is verified, but NOTHING is published and NO reply is sent. The
+    result shows in the card's log. Counters are not touched."""
+    err = require_login()
+    if err:
+        return err
+    conn = db_connect()
+    try:
+        row = conn.execute("SELECT * FROM cards WHERE id=?", (cid,)).fetchone()
+        card = dict(row) if row else None
+    finally:
+        conn.close()
+    if not card:
+        return jsonify({"error": "card not found"}), 404
+    state = load_state()
+    ok = execute_card(card, state, test_mode=True)
+    save_state(state)
+    return jsonify({"ok": ok, "test": True,
+                    "message": "test run done - check the card log; "
+                               "nothing was published"})
 
 
 @app.route("/api/cards/<int:cid>/pause", methods=["POST"])
@@ -2717,7 +3478,11 @@ def api_settings():
             "cards_enabled", "blogger_bold_format",
             "card_default_interval_hours", "card_default_interval_minutes",
             "card_default_posts_per_day", "card_default_reply_own",
-            "card_default_reply_others", "card_default_lookback_days")
+            "card_default_reply_others", "card_default_lookback_days",
+            "card_default_spread_mode", "card_default_length_mode",
+            "card_default_tone", "card_default_jitter_minutes",
+            "card_default_bsky_image_ratio",
+            "card_default_retry_after_minutes", "card_default_retry_max")
     if request.method == "GET":
         return jsonify({k: get_setting(k, "") for k in keys})
     data = request.get_json(silent=True) or {}
