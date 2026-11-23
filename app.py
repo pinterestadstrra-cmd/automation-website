@@ -488,6 +488,16 @@ def save_state(state):
         state["posted_topics"] = state.get("posted_topics", [])[-500:]
         state["replied_comments"] = state.get("replied_comments", [])[-2000:]
         state["issues"] = state.get("issues", [])[-50:]
+        # Rebuild #7.3: cap the promo cooldown stores too. They are
+        # DICTS {key: iso_timestamp} (not lists) - keep only the 500
+        # newest entries. (_store_record already prunes them to 7 days
+        # on write; this is a safety cap so state.json stays small.)
+        for _key in ("posted_promo_topics", "posted_promo_captions"):
+            _store = state.get(_key)
+            if isinstance(_store, dict) and len(_store) > 500:
+                _items = sorted(_store.items(),
+                                key=lambda kv: str(kv[1] or ""))
+                state[_key] = dict(_items[-500:])
         with open(STATE_PATH, "w", encoding="utf-8") as f:
             json.dump(state, f, ensure_ascii=False, indent=2)
     except Exception as e:
@@ -835,6 +845,47 @@ def ai_write(prompt, max_tokens=1500):
     return ""
 
 
+def _ai_health_check():
+    """Startup AI health check (rebuild #7.3). Logs the key counts
+    (counts only, never values) and the result of ONE tiny test call
+    per provider (first model only, keys in order until one works),
+    so the workflow log shows WHY Gemini/Groq fail even when the
+    photo step fails first and AI is never attempted for a caption.
+    Called at worker startup, before the card cycle. Never raises."""
+    try:
+        log("info", f"ai health: Gemini {len(GEMINI_KEYS)} key(s), "
+                    f"Groq {len(GROQ_KEYS)} key(s) configured")
+        for label, keys, models, call in (
+                ("gemini", GEMINI_KEYS, GEMINI_MODELS, _gemini_call),
+                ("groq", GROQ_KEYS, GROQ_MODELS, _groq_call)):
+            if not keys:
+                log("warning", f"ai health: {label} FAIL (0 keys configured)")
+                continue
+            if not models:
+                log("warning", f"ai health: {label} FAIL (no models configured)")
+                continue
+            detail = "all keys failed"
+            ok = False
+            for key in keys:
+                try:
+                    text, code, err = call(key, models[0],
+                                           AI_HEALTH_TEST_PROMPT,
+                                           AI_HEALTH_MAX_TOKENS)
+                except Exception as e:
+                    code, err, text = 0, f"network: {type(e).__name__}", None
+                if text:
+                    ok = True
+                    detail = "ok"
+                    break
+                detail = f"HTTP {code}: {err or 'no text returned'}"[:150]
+            if ok:
+                log("info", f"ai health: {label} ok")
+            else:
+                log("warning", f"ai health: {label} FAIL ({detail})")
+    except Exception as e:
+        log("warning", f"ai health check failed: {e}")
+
+
 # ---------------------------------------------------------------- photos
 # STRICT RULE: no photo = no post. Real stock photos first (clean, no
 # logo/text). Pollinations (AI image, nologo) is only the last fallback.
@@ -888,21 +939,35 @@ def _pixabay_photo(topic):
     return None
 
 
-def _openverse_photo(topic):
+def _openverse_photos(topic, limit=5):
+    """Up to `limit` real-photo candidates from Openverse (free, no
+    key). Returns a list of {url, source, alt} dicts (may be empty).
+    Several candidates are needed because a single file may 429 or
+    fail verification - the caller tries each until one downloads
+    and verifies as a real photo (rebuild #7.3)."""
     try:
         r = requests.get("https://api.openverse.org/v1/images/",
-                         params={"q": topic, "page_size": 5, "license_type": "commercial"},
+                         params={"q": topic, "page_size": limit,
+                                 "license_type": "commercial"},
                          timeout=20)
         if r.status_code != 200:
-            return None
-        for item in r.json().get("results", []):
+            return []
+        out = []
+        for item in r.json().get("results", [])[:limit]:
             url = item.get("url") or item.get("foreign_landing_url")
             meta = {"alt": item.get("title") or "", "title": item.get("title") or ""}
             if url and _photo_ok(meta):
-                return {"url": url, "source": "openverse", "alt": meta["alt"]}
+                out.append({"url": url, "source": "openverse",
+                            "alt": meta["alt"]})
+        return out
     except Exception as e:
         log("warning", f"openverse error: {e}")
-    return None
+        return []
+
+
+def _openverse_photo(topic):
+    found = _openverse_photos(topic, limit=1)
+    return found[0] if found else None
 
 
 def _pollinations_photo(topic):
@@ -1049,6 +1114,15 @@ def fetch_og_image(url, _depth=0):
                 log("info", f"og:image: following Google News link to "
                            f"publisher {urlparse(target).netloc}")
                 return fetch_og_image(target, _depth=1)
+        if "news.google.com" in final_host:
+            # Rebuild #7.3: a Google News article page has NO publisher
+            # redirect (its canonical points to itself) and its
+            # og:image IS the Google News logo - parsing it would only
+            # ever return that logo. Return None at once; the caller
+            # falls back to a real-photo search for the story instead.
+            log("info", "og:image: no publisher redirect (Google News "
+                        "page) - skipping, og:image would be the logo")
+            return None
         m = (re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
                        html, re.IGNORECASE)
              or re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
@@ -1138,8 +1212,13 @@ def _news_photo(topic, state=None):
     Uses Google News RSS (verify_news) and takes the first article
     whose og:image downloads and verifies as a real image. Text, logo
     or watermark on the image is FINE (news photos carry them) - the
-    image is never rejected for that. Never Pollinations, never stock.
-    Returns a photo dict with local_path, or None."""
+    image is never rejected for that. Never Pollinations. Rebuild
+    #7.3: a Google News article link is never fetched for its
+    og:image (it IS the Google News logo) - instead a REAL photo is
+    searched for the topic from real-photo sources (Openverse /
+    Pexels / Pixabay); a real stock / editorial photo is acceptable
+    when the article's own image is unavailable. Returns a photo
+    dict with local_path, or None."""
     topic = (topic or "").strip()
     if not topic:
         return None
@@ -1154,8 +1233,18 @@ def _news_photo(topic, state=None):
         if not link or link in seen:
             continue
         seen.add(link)
+        # Rebuild #7.3: a Google News link's og:image IS the Google
+        # News logo - do not fetch it, go straight to the real-photo
+        # search below.
+        if "news.google.com" in (urlparse(link).netloc or "").lower():
+            log("info", f"photo candidate for '{topic}': Google News "
+                        "link (og:image is the logo) - skipping")
+            continue
         img = fetch_og_image(link)
         if not img or _is_pollinations_url(img) or _is_logo_image_url(img):
+            log("info", f"photo candidate for '{topic}': "
+                        f"'{(item.get('title') or '')[:50]}' - rejected "
+                        "(no usable og:image)")
             continue
         local = download_image(img, topic)
         if local:
@@ -1163,6 +1252,14 @@ def _news_photo(topic, state=None):
                         f"(from {item.get('source') or 'news'})")
             return {"url": img, "source": "news",
                     "alt": item.get("title", ""), "local_path": local}
+        log("info", f"photo candidate for '{topic}': "
+                    f"'{(item.get('title') or '')[:50]}' - rejected "
+                    "(og:image download failed)")
+    # Rebuild #7.3: no article image worked - search real-photo
+    # sources for this topic instead of giving up.
+    photo = _real_photo_for_topic(topic)
+    if photo and photo.get("local_path"):
+        return photo
     log("info", f"photo: no real news image found for '{topic}'")
     return None
 
@@ -1200,6 +1297,81 @@ def _promo_photo(card, link, state=None):
     return None
 
 
+# Stopwords stripped when a headline is shortened into a photo-search
+# query (Openverse matches far better on short keyword queries than
+# on a full sentence).
+_PHOTO_QUERY_STOPWORDS = frozenset(
+    "the a an and or of to in on for with is are was were be by at from "
+    "as it its this that can one you your how why what when after before "
+    "new top".split())
+
+
+def _photo_search_queries(topic):
+    """Search queries for a real photo, longest first: the full
+    headline, then the headline without its trailing ' - Source',
+    then its first 5 keywords, then its first 3 keywords. Capped at
+    3 queries - a full-sentence query almost never matches, the short
+    keyword queries are the ones that find a photo."""
+    raw = (topic or "").strip()
+    if not raw:
+        return []
+    queries = [raw]
+    head = raw.split(" - ")[0].strip()
+    if head and head != raw:
+        queries.append(head)
+    keys = [w for w in re.split(r"[^A-Za-z0-9]+", head)
+            if w and w.lower() not in _PHOTO_QUERY_STOPWORDS]
+    if len(keys) > 5:
+        queries.append(" ".join(keys[:5]))
+    if len(keys) > 3:
+        queries.append(" ".join(keys[:3]))
+    elif keys and " ".join(keys) not in queries:
+        queries.append(" ".join(keys))
+    seen, out = set(), []
+    for q in queries:
+        k = q.lower()
+        if k and k not in seen:
+            seen.add(k)
+            out.append(q)
+    return out[:3]
+
+
+def _real_photo_for_topic(topic):
+    """A REAL photo for a topic from real-photo sources only
+    (Pexels / Pixabay / Openverse). Never AI-generated, never a
+    logo, never a generic icon. Tries progressively shorter search
+    queries and several candidates per query, because a single file
+    may 429 or fail verification - the caller must not give up on
+    the first failure. Every candidate still passes the real-photo
+    check (valid JPEG/PNG, >=400px wide, not a logo) in
+    download_image. Returns a photo dict with local_path, or None."""
+    for q in _photo_search_queries(topic):
+        cands = []
+        for fn in (_pexels_photo, _pixabay_photo):
+            try:
+                found = fn(q)
+            except Exception:
+                found = None
+            if found:
+                cands.append(found)
+        try:
+            cands.extend(_openverse_photos(q, limit=PICK_MAX_PHOTO_CANDIDATES))
+        except Exception:
+            pass
+        for cand in cands:
+            url = (cand or {}).get("url", "")
+            if not url or _is_pollinations_url(url) or _is_logo_image_url(url):
+                continue
+            local = download_image(url, topic)
+            if local:
+                log("info", f"photo: real photo for '{topic}' "
+                            f"(from {cand.get('source') or 'stock'}, "
+                            f"query '{q}')")
+                return {"url": url, "source": cand.get("source") or "stock",
+                        "alt": cand.get("alt") or topic, "local_path": local}
+    return None
+
+
 # ---------------------------------------------------------------- rebuild #7.1
 # BLUESKY PROMO FIXES (user's strict orders, 2026-11-23):
 # - ONE link always (the card's link never changes), but the caption
@@ -1227,6 +1399,20 @@ BSKY_MAX_CHARS = 300
 # Concurrent workflow runs (or a Run-now right after a scheduled run)
 # must never produce a burst of posts at once.
 BSKY_MIN_POST_GAP_MINUTES = 5
+
+# Rebuild #7.3: bounds for the promo photo search. A Google News RSS
+# article link can never yield a real og:image (its page's og:image IS
+# the Google News logo), so the picker must not grind through dozens
+# of doomed fetches - it tries different stories, then a real-photo
+# search, and stops after these budgets.
+PICK_MAX_ITEMS = 25            # max news items examined per promo pick
+PICK_MAX_FALLBACK_SEARCHES = 6  # max real-photo searches per promo pick
+PICK_MAX_PHOTO_CANDIDATES = 5  # max real-photo candidates tried per search
+
+# Rebuild #7.3: startup AI health check (one tiny test call per
+# provider, first model only - NOT the full key/model failover).
+AI_HEALTH_TEST_PROMPT = "Reply with the single word OK."
+AI_HEALTH_MAX_TOKENS = 10
 
 # Why the last _card_bluesky_post skipped a post: "cooldown" (no fresh
 # news topic/caption left within 24h), "no_photo" (fresh news exists
@@ -1402,9 +1588,17 @@ def _pick_fresh_promo_news(card, state):
     promo post in the last 24h (per-topic cooldown). The photo is the
     story's REAL online image (the news article's og:image, downloaded
     and verified); text/logo/watermark on it is FINE. Pollinations
-    (AI) images are never used. Returns (None, None, None) when no
-    fresh story with a real image exists; LAST_BSKY_SKIP says why
-    ("cooldown" = every story used within 24h, "no_photo" = fresh
+    (AI) images are never used. Rebuild #7.3: a Google News article
+    link is never fetched for its og:image (it IS the Google News
+    logo) - instead a REAL photo is searched for that story from
+    real-photo sources (Openverse / Pexels / Pixabay); a real stock /
+    editorial photo is acceptable when the article's own image is
+    unavailable. Every candidate tried is logged (story + image URL +
+    accept/reject) so the log shows the search, and the search is
+    bounded (max items + max fallback searches) so a run can never
+    grind through dozens of doomed fetches. Returns (None, None, None)
+    when no fresh story with a real image exists; LAST_BSKY_SKIP says
+    why ("cooldown" = every story used within 24h, "no_photo" = fresh
     stories exist but no real image could be fetched, "no_news" =
     no trending/top news at all)."""
     global LAST_BSKY_SKIP
@@ -1432,6 +1626,11 @@ def _pick_fresh_promo_news(card, state):
     topics = uniq
     had_items = False
     fresh_no_photo = False
+    tried = 0            # news items examined (budgeted)
+    fallback_tries = 0   # real-photo searches done (budgeted)
+    seen_imgs = set()    # image URLs already rejected this pick - the
+    # same logo must never be fetched/downloaded twice in one run
+    tried_fallback = set()  # normalised headlines already fallback-searched
     for topic in topics:
         try:
             _verified, _sources, items = verify_news(topic)
@@ -1441,24 +1640,88 @@ def _pick_fresh_promo_news(card, state):
             had_items = True
         seen = set()
         for item in (items or [])[:5]:
+            if tried >= PICK_MAX_ITEMS:
+                log("info", "promo: candidate budget reached "
+                            f"({PICK_MAX_ITEMS} items) - stopping the search")
+                break
             link = (item.get("link") or "").strip()
             if not link or link in seen:
                 continue
             seen.add(link)
+            tried += 1
             headline = (item.get("title") or "").strip() or topic
             if _promo_topic_cooldown_left(state, headline) is not None:
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "skipped (already used within 24h)")
                 continue
-            img = fetch_og_image(link)
-            if not img or _is_pollinations_url(img) or _is_logo_image_url(img):
-                fresh_no_photo = True
-                continue
-            local = download_image(img, topic)
-            if local:
-                log("info", f"photo: real news image for '{headline[:60]}' "
-                            f"(from {item.get('source') or 'news'})")
-                return topic, headline, {"url": img, "source": "news",
-                                         "alt": headline, "local_path": local}
+            src = item.get("source") or "news"
+            # 1) The article's own og:image - EXCEPT for Google News
+            # links: their page's og:image IS the Google News logo
+            # (verified live 2026-11-23 - the canonical points to the
+            # Google News page itself, there is no publisher redirect),
+            # so fetching it only ever returns that same logo.
+            is_gnews = "news.google.com" in \
+                (urlparse(link).netloc or "").lower()
+            photo = None
+            skip_fallback = False
+            if not is_gnews:
+                img = fetch_og_image(link)
+                if img and img in seen_imgs:
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                "rejected (same image already tried)")
+                elif not img:
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                "rejected (no og:image)")
+                elif _is_pollinations_url(img):
+                    # An AI-generated og:image taints the story: skip
+                    # it entirely (rebuild #7.1) - never rescue it
+                    # with a fallback photo.
+                    seen_imgs.add(img)
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                f"rejected (AI-generated og:image): {img[:100]}")
+                    skip_fallback = True
+                elif _is_logo_image_url(img):
+                    seen_imgs.add(img)
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                f"rejected (logo og:image): {img[:100]}")
+                else:
+                    local = download_image(img, topic)
+                    if local:
+                        log("info", f"photo candidate: '{headline[:60]}' - "
+                                    f"ACCEPTED og:image (from {src})")
+                        return topic, headline, {
+                            "url": img, "source": "news",
+                            "alt": headline, "local_path": local}
+                    seen_imgs.add(img)
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                "rejected (og:image download failed)")
+            else:
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "Google News link (og:image is the logo), "
+                            "trying a real-photo search instead")
+            # 2) Real-photo fallback (rebuild #7.3, user order): a REAL
+            # photo for this story from real-photo sources (Openverse /
+            # Pexels / Pixabay) - never AI, never a logo. A real stock
+            # / editorial photo is acceptable when the article's own
+            # image is unavailable. (Skipped for an AI-image story.)
+            key = _norm_news_key(headline)
+            if not skip_fallback and key not in tried_fallback and \
+                    fallback_tries < PICK_MAX_FALLBACK_SEARCHES:
+                tried_fallback.add(key)
+                fallback_tries += 1
+                photo = _real_photo_for_topic(headline)
+                if photo and photo.get("local_path"):
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                f"ACCEPTED real photo (from "
+                                f"{photo.get('source') or 'stock'})")
+                    return topic, headline, photo
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "rejected (no real photo found for this story)")
             fresh_no_photo = True
+        if tried >= PICK_MAX_ITEMS:
+            break
+    log("info", f"promo: photo search done - {tried} candidate(s) tried, "
+                f"{fallback_tries} real-photo search(es), no usable photo")
     if not had_items:
         LAST_BSKY_SKIP = "no_news"
         log("info", "promo: no trending/top news available - skipping")
@@ -2871,11 +3134,15 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
     lookback_days = how far back (in days) the worker looks for comments
     on our OWN posts - old posts are scanned too, not just the newest
     one. Every reply is logged with the card name, so it shows up in
-    that card's own log."""
+    that card's own log.
+    Returns (own_replies_sent, others_replies_sent) - rebuild #7.3:
+    the caller must know whether anything was actually sent, so the
+    card's run is only logged as 'ok' when a post or a reply really
+    happened."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
-        return
+        return 0, 0
     # Per-card account: this card posts/replies as ONE account only.
     # NO silent fallback: if the card's account is missing, the card
     # does nothing (it must never reply as some other account).
@@ -2885,13 +3152,13 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
             log("warning", f"bluesky cycle: card '{card_name}' account "
                            f"'{account_handle}' not found - skipping replies "
                            "(add that account first)")
-            return
+            return 0, 0
     else:
         use_accounts = accounts[:1]
     article = article or latest_article(state)
     if not article:
         log("info", "bluesky cycle: no article to link yet")
-        return
+        return 0, 0
     dry = is_dry_run()
     try:
         per_run_replies = int(replies_per_run or 0)
@@ -2975,7 +3242,7 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
     # answer, as long as the post is inside the lookback window.
     if reply_own is False:
         log("info", f"{tag}bluesky replies to own posts are OFF for this card - skipping")
-        return
+        return own_done, others_done
     own_cutoff = now_utc() - timedelta(days=lb)
     for acc in use_accounts:
         if day_cap_reached():
@@ -3027,6 +3294,7 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                     time.sleep(2)
     log("info", f"{tag}reply run done: {own_done} own + {others_done} others "
                 f"replies sent (lookback {lb} day(s))")
+    return own_done, others_done
 
 
 def card_interval_minutes(card):
@@ -3517,6 +3785,11 @@ def _post_bsky_card(card, state, due_slots):
         return 0, "cooldown"
     if cap_hit and made == 0:
         return 0, "post cap reached"
+    if made == 0 and LAST_BSKY_SKIP == "no_photo":
+        # Rebuild #7.3: say the REAL reason in the run line, so the
+        # card's final log reads 'skipped: no photo, skipped' instead
+        # of the vague 'post failed or skipped'.
+        return 0, "no photo, skipped"
     return made, ("" if made else "post failed or skipped")
 
 
@@ -3602,6 +3875,11 @@ def execute_card(card, state, test_mode=False, post_only=False):
     last_error = ""
     ok = False
     no_account = False
+    # Rebuild #7.3: what this run ACTUALLY did - the final log line
+    # must say so truthfully. 'ran (ok)' is only logged when a post
+    # or a reply really happened; a skip is logged as a skip.
+    made = 0           # posts actually published this run
+    replies_sent = 0   # replies actually sent this run
     # Master safety switches: a card never runs when its workflow is OFF.
     if ctype == "blogger_post" and not workflow_enabled("blogger"):
         log("info", f"card '{name}': Blogger workflow is OFF - skipping")
@@ -3632,25 +3910,29 @@ def execute_card(card, state, test_mode=False, post_only=False):
         due_slots = []
 
     def _do_replies(article):
-        """Replies for this card (own + others) - runs on EVERY run."""
+        """Replies for this card (own + others) - runs on EVERY run.
+        Returns how many replies were actually sent (rebuild #7.3)."""
         if post_only:
             # Rebuild #7: a slot-triggered run never checks replies.
-            return
+            return 0
         reply_own, reply_others, rpr, lb = card_reply_settings(card)
         if not (reply_own or reply_others):
-            return
+            return 0
         if not workflow_enabled("replies"):
-            return
-        run_bluesky_cycle(state, article=article,
-                          reply_own=reply_own,
-                          reply_others=reply_others,
-                          replies_per_run=rpr,
-                          lookback_days=lb, card_name=name,
-                          account_handle=card.get("account_handle") or "",
-                          replies_per_day=card_replies_per_day(card),
-                          reply_never=card.get("reply_never") or "",
-                          reply_only=card.get("reply_only") or "",
-                          reply_skip_words=card.get("reply_skip_words") or "")
+            return 0
+        res = run_bluesky_cycle(state, article=article,
+                                reply_own=reply_own,
+                                reply_others=reply_others,
+                                replies_per_run=rpr,
+                                lookback_days=lb, card_name=name,
+                                account_handle=card.get("account_handle") or "",
+                                replies_per_day=card_replies_per_day(card),
+                                reply_never=card.get("reply_never") or "",
+                                reply_only=card.get("reply_only") or "",
+                                reply_skip_words=card.get("reply_skip_words") or "")
+        if isinstance(res, (tuple, list)) and len(res) == 2:
+            return int(res[0] or 0) + int(res[1] or 0)
+        return 0
 
     try:
         # A Bluesky card with NO account cannot run at all.
@@ -3667,6 +3949,7 @@ def execute_card(card, state, test_mode=False, post_only=False):
             if not post_due:
                 log("info", f"card '{name}': not a posting time - "
                             "nothing published this run (replies: n/a)")
+                last_error = "not a posting time"
                 ok = True
             else:
                 remaining = card_caps_remaining(state, name, card)
@@ -3680,6 +3963,7 @@ def execute_card(card, state, test_mode=False, post_only=False):
                     if remaining is not None:
                         max_posts = min(max_posts, remaining)
                     articles = run_card_blogger(state, card, max_posts=max_posts)
+                    made = len(articles or [])
                     ok = bool(articles)
                     if ok:
                         mark_slots_used(state, name, due_slots[:len(articles)])
@@ -3687,7 +3971,7 @@ def execute_card(card, state, test_mode=False, post_only=False):
                         last_error = "no article published this run"
         elif ctype == "bluesky_post":
             article = latest_article(state)
-            _do_replies(article)
+            replies_sent = _do_replies(article)
             link = (card.get("link") or "").strip()
             if not link and not article:
                 log("warning", f"card '{name}': no article to post")
@@ -3695,6 +3979,7 @@ def execute_card(card, state, test_mode=False, post_only=False):
             elif not post_due:
                 log("info", f"card '{name}': not a posting time - "
                             "replies only, nothing posted this run")
+                last_error = "not a posting time"
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
@@ -3704,13 +3989,14 @@ def execute_card(card, state, test_mode=False, post_only=False):
                     last_error = err or "post failed or skipped"
         elif ctype == "bluesky_promo":
             link = (card.get("link") or "").strip()
-            _do_replies(latest_article(state))
+            replies_sent = _do_replies(latest_article(state))
             if not link:
                 log("warning", f"card '{name}': no link to promote")
                 last_error = "no link to promote"
             elif not post_due:
                 log("info", f"card '{name}': not a posting time - "
                             "replies only, nothing promoted this run")
+                last_error = "not a posting time"
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
@@ -3723,13 +4009,14 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 # Rebuild #7: a slot-triggered run never checks replies.
                 log("info", f"card '{name}': post-only run - replies stay "
                             "on the interval rhythm")
+                last_error = "not a posting time"
                 ok = True
             else:
                 article = latest_article(state)
                 if not article:
                     last_error = "no article yet"
                 else:
-                    _do_replies(article)
+                    replies_sent = _do_replies(article)
                     ok = True
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
@@ -3753,7 +4040,23 @@ def execute_card(card, state, test_mode=False, post_only=False):
     elif not no_account:
         record_card_retry(state, name, card)
     _update_card_stats(state, card, ok, last_error, post_only=post_only)
-    log("info", f"card '{name}' ran ({'ok' if ok else 'no-op'})")
+    # Rebuild #7.3: the run line must say what REALLY happened.
+    # 'ok' is only logged when a post or a reply actually happened;
+    # a skip is logged as a skip (never as ok), so a run that posted
+    # nothing can never again look like a success. (The stats/retry
+    # bookkeeping above still treats a clean skip - cooldown, too
+    # soon, cap - as a no-op that burns no retry; only the LOG is
+    # made truthful here.)
+    if made > 0:
+        outcome = f"ok - posted {made}"
+    elif replies_sent > 0:
+        outcome = (f"ok - {replies_sent} "
+                   f"repl{'y' if replies_sent == 1 else 'ies'} sent")
+    elif last_error:
+        outcome = f"skipped: {last_error}"
+    else:
+        outcome = "no-op"
+    log("info", f"card '{name}' ran ({outcome})")
     return ok
 
 
@@ -4051,18 +4354,16 @@ def health_check(state=None):
     return health
 
 
-def run_worker(only=None):
-    """One worker run. only: 'blogger' runs Blogger cards only,
-    'bluesky' runs Bluesky cards only, None runs all cards.
+def _run_worker_once(only=None):
+    """One worker run (inner). only: 'blogger' runs Blogger cards
+    only, 'bluesky' runs Bluesky cards only, None runs all cards.
     The global paused=true in config is the emergency "Pause All"
     switch - it stops everything. Day-to-day pausing is PER CARD
     (each card's own Pause button); a paused card is skipped while
-    every other card runs normally."""
-    global WORKER_RUNNING
-    if WORKER_RUNNING:
-        log("info", "worker already running - skipping")
-        return
-    WORKER_RUNNING = True
+    every other card runs normally. Returns the state dict. This
+    function must NOT print 'worker run finished' itself - the
+    run_worker wrapper guarantees the finish flush (even on crash).
+    Rebuild #7.3."""
     init_db()
     state = load_state()
     state["runs"] = state.get("runs", 0) + 1
@@ -4072,6 +4373,10 @@ def run_worker(only=None):
     # --- startup checks: config validation + health (no quota used) ---
     validate_config()
     health_check(state)
+    # Rebuild #7.3: AI health check FIRST, before the card cycle -
+    # the log must show why Gemini/Groq fail even when the photo
+    # step fails and AI is never attempted for a caption.
+    _ai_health_check()
     if is_dry_run():
         log("warning", "DRY RUN mode - nothing will be posted (dry_run=true)")
     # --- circuit breaker: stop after N fully-failed runs in a row ---
@@ -4113,12 +4418,64 @@ def run_worker(only=None):
     # --- persist this run's issues so the dashboard shows them.
     # Issues are per-run: a fixed problem disappears on the next run.
     state["issues"] = list(_ISSUES)
-    save_state(state)
-    append_logs_json()
-    write_dashboard_json(state)
-    WORKER_RUNNING = False
-    log("info", "worker run finished")
-    append_logs_json()  # flush the final line too (only new entries)
+    return state
+
+
+def run_worker(only=None):
+    """One worker run (wrapper). only: 'blogger' runs Blogger cards
+    only, 'bluesky' runs Bluesky cards only, None runs all cards.
+    Rebuild #7.3 - NEVER ends silently: state.json + logs.json +
+    dashboard.json are flushed and 'worker run finished' is printed
+    on EVERY run - posted, skipped, or crashed. A crash is printed
+    as a traceback and logged, never swallowed."""
+    global WORKER_RUNNING
+    if WORKER_RUNNING:
+        log("info", "worker already running - skipping")
+        return
+    WORKER_RUNNING = True
+    state = None
+    try:
+        state = _run_worker_once(only)
+    except Exception:
+        import traceback
+        print("worker run CRASHED:\n" + traceback.format_exc(),
+              flush=True)
+        try:
+            log("error", "worker run crashed - state and logs are "
+                         "still being saved (see traceback above)")
+        except Exception:
+            pass
+    finally:
+        # Never end silently: persist state + logs and print the
+        # finish line even when the run crashed. (On the normal path
+        # this just re-flushes what the inner run already saved -
+        # append_logs_json is idempotent, so nothing duplicates.)
+        try:
+            if state is None:
+                state = load_state()
+            state["issues"] = list(_ISSUES)
+            save_state(state)
+        except Exception as e:
+            print(f"worker finish: state save failed: {e}", flush=True)
+        try:
+            append_logs_json()
+        except Exception as e:
+            print(f"worker finish: logs.json write failed: {e}",
+                  flush=True)
+        try:
+            write_dashboard_json(state)
+        except Exception as e:
+            print(f"worker finish: dashboard.json write failed: {e}",
+                  flush=True)
+        WORKER_RUNNING = False
+        try:
+            log("info", "worker run finished")
+        except Exception:
+            print("worker run finished", flush=True)
+        try:
+            append_logs_json()
+        except Exception:
+            pass
 
 
 # ---------------------------------------------------------------- web routes
@@ -4641,7 +4998,16 @@ if __name__ == "__main__":
             idx = sys.argv.index("--only")
             if idx + 1 < len(sys.argv) and sys.argv[idx + 1] in ("blogger", "bluesky"):
                 only = sys.argv[idx + 1]
-        run_worker(only=only)
+        # Rebuild #7.3: last defense - a worker crash must be
+        # visible (traceback + non-zero exit), never a silent
+        # success. (run_worker itself already flushes state/logs
+        # and prints 'worker run finished' in its finally block.)
+        try:
+            run_worker(only=only)
+        except Exception:
+            import traceback
+            print("worker FAILED:\n" + traceback.format_exc(), flush=True)
+            sys.exit(1)
     else:
         port = int(os.environ.get("PORT", "5000"))
         print(f"Automation Website running on http://0.0.0.0:{port}", flush=True)
