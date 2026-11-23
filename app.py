@@ -151,9 +151,19 @@ def _load_env_bluesky_accounts():
 ENV_BLUESKY_ACCOUNTS = _load_env_bluesky_accounts()
 
 # Gemini models to try, in order (free-tier friendly first).
-GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash"]
-# Groq models to try, in order (free tier, confirmed model ids).
-GROQ_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
+# Rebuild #7.4: gemini-2.5-flash-lite is DEAD for new users (live
+# API error 2026-11-23: HTTP 404 "no longer available to new users -
+# use models/gemini-3.5-flash-lite") - it is now LAST, never first.
+# The list stays a LIST on purpose: one retirement must never kill
+# the AI again, failover walks the whole list.
+GEMINI_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite",
+                 "gemini-2.5-flash", "gemini-2.0-flash",
+                 "gemini-2.5-flash-lite"]
+# Groq models to try, in order (free tier, confirmed model ids on
+# console.groq.com/docs/models, 2026-11-23). gpt-oss are reasoning
+# models - see _groq_call (reasoning_effort + max_completion_tokens).
+GROQ_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b",
+               "qwen/qwen3.8-27b"]
 
 # CARD-ONLY operation: every posting limit lives inside a card
 # (data/cards.json). There is no global posts-per-day, per-run,
@@ -739,10 +749,17 @@ def _gemini_call(key, model, prompt, max_tokens):
     if r.status_code != 200:
         return None, r.status_code, _api_error_detail(r)
     try:
-        text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+        data = r.json()
+        text = data["candidates"][0]["content"]["parts"][0]["text"]
         return (text or "").strip(), 200, ""
     except Exception:
-        return None, 200, "bad response shape (no candidates/parts)"
+        keys = []
+        try:
+            keys = sorted((r.json() or {}).keys())[:6]
+        except Exception:
+            pass
+        return None, 200, ("bad response shape (no candidates/parts; "
+                           f"top-level keys={','.join(keys) or 'none'})")
 
 
 def gemini_text(prompt, max_tokens=1500):
@@ -777,14 +794,40 @@ def gemini_text(prompt, max_tokens=1500):
     return ""
 
 
+def _groq_shape_detail(data, problem, finish=None):
+    """Short shape summary of a Groq HTTP 200 response with no usable
+    text (never the key, never the text): which top-level keys exist,
+    how many choices, the finish_reason. Used so the log shows WHY
+    Groq gave no text instead of swallowing it (rebuild #7.4)."""
+    try:
+        keys = sorted((data or {}).keys())[:6] if isinstance(data, dict) else []
+        n = len((data or {}).get("choices") or [])
+        out = f"{problem} (keys={','.join(keys) or 'none'}, choices={n}"
+        if finish is not None:
+            out += f", finish_reason={finish}"
+        return (out + ")")[:150]
+    except Exception:
+        return problem[:150]
+
+
 def _groq_call(key, model, prompt, max_tokens):
     """One Groq call. Returns (text, http_code, error_detail).
-    error_detail is '' on success. Network errors return code 0."""
+    error_detail is '' on success. Network errors return code 0.
+    Rebuild #7.4: gpt-oss are REASONING models - their reasoning
+    tokens eat the output budget, so a tiny max_tokens (or the legacy
+    `max_tokens` param) can return HTTP 200 with NO text at all.
+    The request therefore uses `max_completion_tokens` and
+    `reasoning_effort: low` for gpt-oss, and when a 200 still has no
+    text the detail describes the RESPONSE SHAPE (choices present?
+    how many? content null or empty? finish_reason? reasoning
+    present?) - never the key or the full text."""
     url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
     body = {"model": model,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": max_tokens, "temperature": 0.7}
+            "max_completion_tokens": max_tokens, "temperature": 0.7}
+    if "gpt-oss" in model:
+        body["reasoning_effort"] = "low"
     try:
         r = requests.post(url, json=body, headers=headers, timeout=60)
     except Exception as e:
@@ -792,10 +835,33 @@ def _groq_call(key, model, prompt, max_tokens):
     if r.status_code != 200:
         return None, r.status_code, _api_error_detail(r)
     try:
-        text = r.json()["choices"][0]["message"]["content"]
-        return (text or "").strip(), 200, ""
+        data = r.json()
     except Exception:
-        return None, 200, "bad response shape (no choices/message)"
+        return None, 200, "bad JSON response"
+    if isinstance(data, dict) and data.get("error"):
+        err = data["error"]
+        msg = (err.get("message") if isinstance(err, dict)
+               else str(err)) or ""
+        return None, 200, f"error field: {msg}"[:150]
+    choices = data.get("choices") if isinstance(data, dict) else None
+    if not isinstance(choices, list) or not choices:
+        return None, 200, _groq_shape_detail(data, "no text returned: no choices")
+    first = choices[0] if isinstance(choices[0], dict) else {}
+    finish = first.get("finish_reason")
+    msg = first.get("message")
+    if not isinstance(msg, dict):
+        return None, 200, _groq_shape_detail(
+            data, "no text returned: no message in choice", finish)
+    content = msg.get("content")
+    if isinstance(content, str) and content.strip():
+        return content.strip(), 200, ""
+    reasoning = msg.get("reasoning")
+    note = "content null" if content is None else "content empty"
+    extra = ""
+    if isinstance(reasoning, str) and reasoning:
+        extra = f", reasoning present ({len(reasoning)} chars)"
+    return None, 200, (f"no text returned ({note}, choices={len(choices)}, "
+                       f"finish_reason={finish}{extra})")[:150]
 
 
 def groq_text(prompt, max_tokens=800):
@@ -846,11 +912,16 @@ def ai_write(prompt, max_tokens=1500):
 
 
 def _ai_health_check():
-    """Startup AI health check (rebuild #7.3). Logs the key counts
-    (counts only, never values) and the result of ONE tiny test call
-    per provider (first model only, keys in order until one works),
-    so the workflow log shows WHY Gemini/Groq fail even when the
-    photo step fails first and AI is never attempted for a caption.
+    """Startup AI health check (rebuild #7.3, model failover #7.4).
+    Logs the key counts (counts only, never values) and the result
+    of ONE tiny test call per provider, so the workflow log shows WHY
+    Gemini/Groq fail even when the photo step fails first and AI is
+    never attempted for a caption. Rebuild #7.4: the check walks
+    EVERY model in order (up to 3 keys per model - a retired model
+    404s for every key, so trying all 10 keys per model would only
+    waste time) and logs WHICH model answered ok, e.g. 'ai health:
+    gemini ok (gemini-3.5-flash-lite)'. A provider whose first model
+    is dead must NOT report FAIL when a later model works.
     Called at worker startup, before the card cycle. Never raises."""
     try:
         log("info", f"ai health: Gemini {len(GEMINI_KEYS)} key(s), "
@@ -864,24 +935,31 @@ def _ai_health_check():
             if not models:
                 log("warning", f"ai health: {label} FAIL (no models configured)")
                 continue
-            detail = "all keys failed"
-            ok = False
-            for key in keys:
-                try:
-                    text, code, err = call(key, models[0],
-                                           AI_HEALTH_TEST_PROMPT,
-                                           AI_HEALTH_MAX_TOKENS)
-                except Exception as e:
-                    code, err, text = 0, f"network: {type(e).__name__}", None
-                if text:
-                    ok = True
-                    detail = "ok"
+            ok_model = None
+            seen = {}  # (code, detail) -> attempts
+            for model in models:
+                for key in keys[:3]:
+                    try:
+                        text, code, err = call(key, model,
+                                               AI_HEALTH_TEST_PROMPT,
+                                               AI_HEALTH_MAX_TOKENS)
+                    except Exception as e:
+                        code, err, text = 0, f"network: {type(e).__name__}", None
+                    if text:
+                        ok_model = model
+                        break
+                    sig = (code, err or "no text returned")
+                    seen[sig] = seen.get(sig, 0) + 1
+                if ok_model:
                     break
-                detail = f"HTTP {code}: {err or 'no text returned'}"[:150]
-            if ok:
-                log("info", f"ai health: {label} ok")
+            if ok_model:
+                log("info", f"ai health: {label} ok ({ok_model})")
             else:
-                log("warning", f"ai health: {label} FAIL ({detail})")
+                summary = "; ".join(
+                    f"HTTP {c} x{n}: {d}"
+                    for (c, d), n in list(seen.items())[:3])
+                log("warning", f"ai health: {label} FAIL (tried "
+                               f"{len(models)} model(s) - {summary})")
     except Exception as e:
         log("warning", f"ai health check failed: {e}")
 
@@ -899,27 +977,40 @@ def _photo_ok(meta):
 
 
 def _pexels_photo(topic):
+    """First real photo from Pexels (needs PEXELS_API_KEY). Rebuild
+    #7.4: logs WHY nothing is found (no key / HTTP status / result
+    count / rejection reason) instead of silently returning None -
+    the workflow log must show which source failed and why."""
     if not PEXELS_API_KEY:
+        log("info", "pexels: API key not configured - skipping")
         return None
     try:
         r = requests.get("https://api.pexels.com/v1/search",
                          params={"query": topic, "per_page": 5, "orientation": "landscape"},
                          headers={"Authorization": PEXELS_API_KEY}, timeout=20)
         if r.status_code != 200:
+            log("info", f"pexels: search HTTP {r.status_code} for '{topic[:60]}'")
             return None
-        for p in r.json().get("photos", []):
+        photos = r.json().get("photos", [])
+        log("info", f"pexels: {len(photos)} result(s) for '{topic[:60]}'")
+        for p in photos:
             src = p.get("src", {})
             url = src.get("large2x") or src.get("large") or src.get("original")
             meta = {"alt": p.get("alt") or "", "title": ""}
             if url and _photo_ok(meta):
                 return {"url": url, "source": "pexels", "alt": meta["alt"]}
+            if url:
+                log("info", f"pexels: rejected candidate (bad title): {url[:100]}")
     except Exception as e:
         log("warning", f"pexels error: {e}")
     return None
 
 
 def _pixabay_photo(topic):
+    """First real photo from Pixabay (needs PIXABAY_API_KEY). Rebuild
+    #7.4: logs WHY nothing is found, like _pexels_photo."""
     if not PIXABAY_API_KEY:
+        log("info", "pixabay: API key not configured - skipping")
         return None
     try:
         r = requests.get("https://pixabay.com/api/",
@@ -928,12 +1019,17 @@ def _pixabay_photo(topic):
                                  "orientation": "horizontal", "safesearch": "true"},
                          timeout=20)
         if r.status_code != 200:
+            log("info", f"pixabay: search HTTP {r.status_code} for '{topic[:60]}'")
             return None
-        for h in r.json().get("hits", []):
+        hits = r.json().get("hits", [])
+        log("info", f"pixabay: {len(hits)} result(s) for '{topic[:60]}'")
+        for h in hits:
             url = h.get("largeImageURL") or h.get("webformatURL")
             meta = {"alt": h.get("tags") or "", "title": ""}
             if url and _photo_ok(meta):
                 return {"url": url, "source": "pixabay", "alt": meta["alt"]}
+            if url:
+                log("info", f"pixabay: rejected candidate (bad title): {url[:100]}")
     except Exception as e:
         log("warning", f"pixabay error: {e}")
     return None
@@ -944,21 +1040,27 @@ def _openverse_photos(topic, limit=5):
     key). Returns a list of {url, source, alt} dicts (may be empty).
     Several candidates are needed because a single file may 429 or
     fail verification - the caller tries each until one downloads
-    and verifies as a real photo (rebuild #7.3)."""
+    and verifies as a real photo (rebuild #7.3). Rebuild #7.4: logs
+    the HTTP status, result count and rejection reasons."""
     try:
         r = requests.get("https://api.openverse.org/v1/images/",
                          params={"q": topic, "page_size": limit,
                                  "license_type": "commercial"},
                          timeout=20)
         if r.status_code != 200:
+            log("info", f"openverse: search HTTP {r.status_code} for '{topic[:60]}'")
             return []
+        results = r.json().get("results", [])
+        log("info", f"openverse: {len(results)} result(s) for '{topic[:60]}'")
         out = []
-        for item in r.json().get("results", [])[:limit]:
+        for item in results[:limit]:
             url = item.get("url") or item.get("foreign_landing_url")
             meta = {"alt": item.get("title") or "", "title": item.get("title") or ""}
             if url and _photo_ok(meta):
                 out.append({"url": url, "source": "openverse",
                             "alt": meta["alt"]})
+            elif url:
+                log("info", f"openverse: rejected candidate (bad title): {url[:100]}")
         return out
     except Exception as e:
         log("warning", f"openverse error: {e}")
@@ -968,6 +1070,167 @@ def _openverse_photos(topic, limit=5):
 def _openverse_photo(topic):
     found = _openverse_photos(topic, limit=1)
     return found[0] if found else None
+
+
+# Browser User-Agent for keyless image searches (Google/Bing serve a
+# bot page or a 403 to a bare requests UA).
+_IMAGE_SEARCH_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/120.0.0.0 Safari/537.36")
+
+
+def _wikimedia_photos(topic, limit=5):
+    """Real-photo candidates from Wikimedia Commons (free, no key).
+    Returns a list of {url, source, alt} dicts (may be empty).
+    Rebuild #7.4: a keyless source so a photo can be found even when
+    Pexels/Pixabay have no key and Openverse returns nothing. The
+    1280px thumbnail URL is used (iiurlwidth=1280); mime must be
+    JPEG/PNG and the file at least 400px wide."""
+    try:
+        r = requests.get("https://commons.wikimedia.org/w/api.php",
+                         params={"action": "query", "generator": "search",
+                                 "gsrsearch": f"{topic} filetype:bitmap",
+                                 "gsrnamespace": 6, "gsrlimit": limit,
+                                 "prop": "imageinfo",
+                                 "iiprop": "url|size|mime", "iiurlwidth": 1280,
+                                 "format": "json"},
+                         headers={"User-Agent": _IMAGE_SEARCH_UA},
+                         timeout=20)
+        if r.status_code != 200:
+            log("info", f"wikimedia: search HTTP {r.status_code} for '{topic[:60]}'")
+            return []
+        pages = (r.json().get("query") or {}).get("pages", {})
+        log("info", f"wikimedia: {len(pages)} result(s) for '{topic[:60]}'")
+        out = []
+        for page in pages.values():
+            info = (page.get("imageinfo") or [{}])[0]
+            mime = info.get("mime") or ""
+            width = info.get("width") or 0
+            url = info.get("thumburl") or info.get("url") or ""
+            if not url:
+                continue
+            if mime not in ("image/jpeg", "image/png"):
+                log("info", f"wikimedia: rejected candidate (mime={mime or 'unknown'}): {url[:100]}")
+                continue
+            if width and width < 400:
+                log("info", f"wikimedia: rejected candidate (width {width}px < 400): {url[:100]}")
+                continue
+            meta = {"alt": page.get("title") or "", "title": page.get("title") or ""}
+            if _photo_ok(meta):
+                out.append({"url": url, "source": "wikimedia",
+                            "alt": meta["alt"]})
+            else:
+                log("info", f"wikimedia: rejected candidate (bad title): {url[:100]}")
+        return out[:limit]
+    except Exception as e:
+        log("warning", f"wikimedia error: {e}")
+        return []
+
+
+def _add_image_url(found, seen, url, source, topic):
+    """Append one scraped image URL to `found` (deduped, logo/icon
+    and AI URLs rejected, webp skipped - the download gate only
+    accepts JPEG/PNG). Rebuild #7.4 (live finding): Bing's results
+    HTML double-encodes its JSON (quotes become &quot;), so a raw
+    regex match can run on through the escaped blob and swallow the
+    page URL + the next entry's image URL as one junk string - the
+    URL is therefore HTML-unescaped, cut at the first quote /
+    whitespace, and must end with a real image extension. Search
+    engines' own UI images (bing.com, google.com, gstatic) are
+    never real photos."""
+    try:
+        u = html_lib.unescape(str(url or "")).strip()
+        for stop in ('"', "'", " ", "\t", "\n", "<"):
+            if stop in u:
+                u = u.split(stop, 1)[0]
+        if not u.startswith("http") or u in seen:
+            return
+        seen.add(u)
+        if u.lower().split("?")[0].endswith(".webp"):
+            return
+        if not re.search(r"\.(?:jpg|jpeg|png)(?:\?|$)", u, re.IGNORECASE):
+            return
+        netloc = (urlparse(u).netloc or "").lower()
+        if any(h in netloc for h in ("bing.com", "google.com",
+                                     "gstatic", "googleusercontent")):
+            return
+        if _is_logo_image_url(u) or _is_pollinations_url(u):
+            return
+        found.append({"url": u, "source": source, "alt": topic})
+    except Exception:
+        return
+
+
+def _extract_image_search_urls(html, source, topic, limit=5):
+    """Direct image URLs from an image-search results page. Google
+    Images embeds the original URL as "ou":"https://..."; Bing
+    Images as "murl":"https://...". Falls back to any direct image
+    file URL in the page. Google/gstatic hosts and logo/icon URLs
+    are skipped. Returns a list of {url, source, alt} dicts."""
+    # Bing double-encodes its JSON (quotes become &quot;): unescape
+    # the page FIRST, or one regex match swallows a page URL + the
+    # next entry's image URL as a single junk string.
+    html = html_lib.unescape(html or "")
+    found, seen = [], set()
+    for m in re.finditer(r'"(?:ou|murl)"\s*:\s*"(https?://[^"\\]+)"',
+                         html or ""):
+        _add_image_url(found, seen, m.group(1), source, topic)
+        if len(found) >= limit:
+            break
+    if len(found) < limit:
+        for m in re.finditer(
+                r'https?://[^\s"\'\\<>]+\.(?:jpg|jpeg|png)(?:\?[^\s"\'\\<>]*)?',
+                html or "", re.IGNORECASE):
+            _add_image_url(found, seen, m.group(0), source, topic)
+            if len(found) >= limit:
+                break
+    log("info", f"{source}: {len(found)} candidate(s) for '{topic[:60]}'")
+    return found[:limit]
+
+
+def _google_images_photos(topic, limit=5):
+    """Real-photo candidates from a Google Images search (keyless).
+    Fetches the image-search page with a browser User-Agent and
+    extracts direct image URLs. Candidates still pass the logo/AI
+    rejection + Pillow real-photo check in the caller, so a logo or
+    icon scraped from the results can never be posted. Rebuild #7.4:
+    Google has plenty of images - when every API source fails, search
+    the web's biggest image index instead of giving up. LIVE FINDING
+    (2026-11-23): Google now serves a JavaScript shell to plain
+    requests (noscript 'enablejs' page, zero image URLs in the HTML),
+    so this usually returns 0 candidates and logs it - Bing Images
+    is the working image-search fallback; this stays as a best-effort
+    source in case Google ever serves a plain page again."""
+    try:
+        r = requests.get("https://www.google.com/search",
+                         params={"tbm": "isch", "q": topic, "hl": "en"},
+                         headers={"User-Agent": _IMAGE_SEARCH_UA},
+                         timeout=20)
+        if r.status_code != 200:
+            log("info", f"google images: search HTTP {r.status_code} for '{topic[:60]}'")
+            return []
+        return _extract_image_search_urls(r.text, "google-images", topic, limit)
+    except Exception as e:
+        log("warning", f"google images error: {e}")
+        return []
+
+
+def _bing_images_photos(topic, limit=5):
+    """Real-photo candidates from a Bing Images search (keyless) -
+    same idea as _google_images_photos, second fallback when Google
+    blocks or returns nothing."""
+    try:
+        r = requests.get("https://www.bing.com/images/search",
+                         params={"q": topic},
+                         headers={"User-Agent": _IMAGE_SEARCH_UA},
+                         timeout=20)
+        if r.status_code != 200:
+            log("info", f"bing images: search HTTP {r.status_code} for '{topic[:60]}'")
+            return []
+        return _extract_image_search_urls(r.text, "bing-images", topic, limit)
+    except Exception as e:
+        log("warning", f"bing images error: {e}")
+        return []
 
 
 def _pollinations_photo(topic):
@@ -1115,13 +1378,16 @@ def fetch_og_image(url, _depth=0):
                            f"publisher {urlparse(target).netloc}")
                 return fetch_og_image(target, _depth=1)
         if "news.google.com" in final_host:
-            # Rebuild #7.3: a Google News article page has NO publisher
-            # redirect (its canonical points to itself) and its
-            # og:image IS the Google News logo - parsing it would only
-            # ever return that logo. Return None at once; the caller
-            # falls back to a real-photo search for the story instead.
+            # Rebuild #7.4: the page did NOT redirect to a publisher
+            # (no HTTP 302, no meta-refresh, canonical points to
+            # itself) and its og:image IS the Google News logo -
+            # parsing it would only ever return that logo. Log the
+            # final URL so the run shows where it got stuck, return
+            # None at once; the caller falls back to a real-photo
+            # search for the story instead.
             log("info", "og:image: no publisher redirect (Google News "
-                        "page) - skipping, og:image would be the logo")
+                        f"page, final URL {r.url[:120]}) - skipping, "
+                        "og:image would be the logo")
             return None
         m = (re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
                        html, re.IGNORECASE)
@@ -1188,22 +1454,32 @@ def _is_logo_image_url(url):
 
 def _extract_redirect_url(html, base_url):
     """Publisher URL from a Google News redirect/interstitial page:
-    the <link rel="canonical"> or a meta refresh. Returns the URL or
-    None. Google News article links often redirect via meta-refresh,
-    which requests cannot follow - without this, the og:image fetched
-    is the Google News logo itself (rebuild #7.2)."""
+    a meta refresh or the <link rel="canonical">. Returns the URL or
+    None. Rebuild #7.4: the meta-refresh is tried FIRST - Google News
+    interstitial pages redirect via meta-refresh to the publisher,
+    while their canonical often points to the Google News page
+    ITSELF; a candidate still on news.google.com is never returned
+    (fetch_og_image would only ever read the Google News logo from
+    it). The HTTP 302 redirect is separate: requests follows it
+    automatically, so fetch_og_image usually never reaches this
+    function - this is for pages that do NOT 302."""
     if not html:
         return None
+    candidates = []
+    m = re.search(r'<meta[^>]+http-equiv=["\']refresh["\'][^>]+content=["\'][^"\']*?url=([^"\';]+)',
+                  html, re.IGNORECASE)
+    if m:
+        candidates.append(m.group(1).strip())
     m = (re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']',
                    html, re.IGNORECASE)
          or re.search(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']',
                       html, re.IGNORECASE))
     if m:
-        return urljoin(base_url or "", m.group(1).strip())
-    m = re.search(r'<meta[^>]+http-equiv=["\']refresh["\'][^>]+content=["\'][^"\']*?url=([^"\';]+)',
-                  html, re.IGNORECASE)
-    if m:
-        return urljoin(base_url or "", m.group(1).strip())
+        candidates.append(m.group(1).strip())
+    for c in candidates:
+        u = urljoin(base_url or "", c)
+        if "news.google.com" not in (urlparse(u).netloc or "").lower():
+            return u
     return None
 
 
@@ -1213,12 +1489,20 @@ def _news_photo(topic, state=None):
     whose og:image downloads and verifies as a real image. Text, logo
     or watermark on the image is FINE (news photos carry them) - the
     image is never rejected for that. Never Pollinations. Rebuild
-    #7.3: a Google News article link is never fetched for its
-    og:image (it IS the Google News logo) - instead a REAL photo is
-    searched for the topic from real-photo sources (Openverse /
-    Pexels / Pixabay); a real stock / editorial photo is acceptable
-    when the article's own image is unavailable. Returns a photo
-    dict with local_path, or None."""
+    #7.4: a Google News article link IS fetched for its og:image -
+    IF it redirects (HTTP 302) to the publisher, fetch_og_image
+    follows it to the PUBLISHER's og:image (a meta-refresh redirect
+    is resolved too). LIVE CHECK 2026-11-23: plain requests gets NO
+    redirect from these links (the page serves the Google News
+    article itself, og:image IS the logo) - so in practice the
+    redirect path rarely fires and the real-photo search below is
+    what usually finds the photo; the fetch is still tried because
+    a redirect may happen for other links. If no article image works,
+    a REAL photo is searched for the topic from real-photo sources
+    (Openverse / Pexels / Pixabay / Wikimedia / Google Images /
+    Bing Images); a real stock / editorial photo is acceptable when
+    the article's own image is unavailable. Returns a photo dict
+    with local_path, or None."""
     topic = (topic or "").strip()
     if not topic:
         return None
@@ -1233,13 +1517,6 @@ def _news_photo(topic, state=None):
         if not link or link in seen:
             continue
         seen.add(link)
-        # Rebuild #7.3: a Google News link's og:image IS the Google
-        # News logo - do not fetch it, go straight to the real-photo
-        # search below.
-        if "news.google.com" in (urlparse(link).netloc or "").lower():
-            log("info", f"photo candidate for '{topic}': Google News "
-                        "link (og:image is the logo) - skipping")
-            continue
         img = fetch_og_image(link)
         if not img or _is_pollinations_url(img) or _is_logo_image_url(img):
             log("info", f"photo candidate for '{topic}': "
@@ -1270,7 +1547,11 @@ def _promo_photo(card, link, state=None):
     Order: the link's og:image, then a real news article's image for
     the card's topic (or a current trending topic when the card has no
     topic of its own). Text, logo or watermark on the image is FINE.
-    Pollinations (AI) and stock photos are NEVER used. Returns a photo
+    Pollinations (AI) images are NEVER used. Rebuild #7.3/#7.4: when
+    the article's own image is unavailable, a REAL photo from
+    real-photo sources (Openverse / Pexels / Pixabay / Wikimedia /
+    Google Images / Bing Images) is acceptable - a real stock /
+    editorial photo, never AI, never a logo. Returns a photo
     dict with local_path, or None - then the post is SKIPPED, never
     text-only."""
     if link:
@@ -1338,13 +1619,19 @@ def _photo_search_queries(topic):
 
 def _real_photo_for_topic(topic):
     """A REAL photo for a topic from real-photo sources only
-    (Pexels / Pixabay / Openverse). Never AI-generated, never a
-    logo, never a generic icon. Tries progressively shorter search
-    queries and several candidates per query, because a single file
-    may 429 or fail verification - the caller must not give up on
-    the first failure. Every candidate still passes the real-photo
-    check (valid JPEG/PNG, >=400px wide, not a logo) in
-    download_image. Returns a photo dict with local_path, or None."""
+    (Pexels / Pixabay / Openverse / Wikimedia Commons / Google Images
+    / Bing Images). Never AI-generated, never a logo, never a generic
+    icon. Tries progressively shorter search queries and several
+    candidates per query, because a single file may 429 or fail
+    verification - the caller must not give up on the first failure.
+    Every candidate still passes the real-photo check (valid JPEG/PNG,
+    >=400px wide, not a logo) in download_image. Rebuild #7.4: the
+    search is logged per source (status / result count / rejection
+    reason) and has two more keyless sources (Wikimedia Commons,
+    Google Images, Bing Images) so a photo is actually found - a
+    download budget bounds the run. Returns a photo dict with
+    local_path, or None (with a summary log of what was tried)."""
+    tried_downloads = 0
     for q in _photo_search_queries(topic):
         cands = []
         for fn in (_pexels_photo, _pixabay_photo):
@@ -1358,10 +1645,30 @@ def _real_photo_for_topic(topic):
             cands.extend(_openverse_photos(q, limit=PICK_MAX_PHOTO_CANDIDATES))
         except Exception:
             pass
+        try:
+            cands.extend(_wikimedia_photos(q, limit=PICK_MAX_PHOTO_CANDIDATES))
+        except Exception:
+            pass
+        try:
+            cands.extend(_google_images_photos(q, limit=4))
+        except Exception:
+            pass
+        try:
+            cands.extend(_bing_images_photos(q, limit=4))
+        except Exception:
+            pass
         for cand in cands:
             url = (cand or {}).get("url", "")
-            if not url or _is_pollinations_url(url) or _is_logo_image_url(url):
+            if not url or _is_pollinations_url(url):
                 continue
+            if _is_logo_image_url(url):
+                log("info", f"photo: rejected (logo/icon URL): {url[:100]}")
+                continue
+            if tried_downloads >= MAX_REAL_PHOTO_DOWNLOADS:
+                log("info", "photo: download budget reached "
+                            f"({MAX_REAL_PHOTO_DOWNLOADS}) - stopping")
+                return None
+            tried_downloads += 1
             local = download_image(url, topic)
             if local:
                 log("info", f"photo: real photo for '{topic}' "
@@ -1369,6 +1676,9 @@ def _real_photo_for_topic(topic):
                             f"query '{q}')")
                 return {"url": url, "source": cand.get("source") or "stock",
                         "alt": cand.get("alt") or topic, "local_path": local}
+            log("info", f"photo: candidate rejected (download/verify failed): {url[:100]}")
+    log("info", f"photo: no real photo found for '{topic}' "
+                f"({tried_downloads} download(s) tried)")
     return None
 
 
@@ -1408,11 +1718,16 @@ BSKY_MIN_POST_GAP_MINUTES = 5
 PICK_MAX_ITEMS = 25            # max news items examined per promo pick
 PICK_MAX_FALLBACK_SEARCHES = 6  # max real-photo searches per promo pick
 PICK_MAX_PHOTO_CANDIDATES = 5  # max real-photo candidates tried per search
+MAX_REAL_PHOTO_DOWNLOADS = 12  # max image downloads per real-photo search (bounds the run)
 
 # Rebuild #7.3: startup AI health check (one tiny test call per
 # provider, first model only - NOT the full key/model failover).
 AI_HEALTH_TEST_PROMPT = "Reply with the single word OK."
-AI_HEALTH_MAX_TOKENS = 10
+# Rebuild #7.4: 10 tokens was too small - Groq gpt-oss are reasoning
+# models, their reasoning tokens eat the output budget, so a 10-token
+# test call returns HTTP 200 with NO text (the live Groq failure).
+# 150 leaves room for a short reasoning trace + the one-word answer.
+AI_HEALTH_MAX_TOKENS = 150
 
 # Why the last _card_bluesky_post skipped a post: "cooldown" (no fresh
 # news topic/caption left within 24h), "no_photo" (fresh news exists
@@ -1588,12 +1903,17 @@ def _pick_fresh_promo_news(card, state):
     promo post in the last 24h (per-topic cooldown). The photo is the
     story's REAL online image (the news article's og:image, downloaded
     and verified); text/logo/watermark on it is FINE. Pollinations
-    (AI) images are never used. Rebuild #7.3: a Google News article
-    link is never fetched for its og:image (it IS the Google News
-    logo) - instead a REAL photo is searched for that story from
-    real-photo sources (Openverse / Pexels / Pixabay); a real stock /
-    editorial photo is acceptable when the article's own image is
-    unavailable. Every candidate tried is logged (story + image URL +
+    (AI) images are never used. Rebuild #7.4: a Google News article
+    link IS fetched for its og:image - IF it redirects (HTTP 302) to
+    the publisher, fetch_og_image follows it (meta-refresh resolved
+    too); live check 2026-11-23: plain requests gets NO redirect
+    from these links (the page serves the Google News logo as
+    og:image), so the real-photo fallback below is what usually
+    finds the photo. When the article's own image is unavailable, a
+    REAL photo is searched for that story from real-photo sources
+    (Openverse / Pexels / Pixabay / Wikimedia / Google Images /
+    Bing Images); a real stock / editorial photo is acceptable.
+    Every candidate tried is logged (story + image URL +
     accept/reject) so the log shows the search, and the search is
     bounded (max items + max fallback searches) so a run can never
     grind through dozens of doomed fetches. Returns (None, None, None)
@@ -1655,54 +1975,50 @@ def _pick_fresh_promo_news(card, state):
                             "skipped (already used within 24h)")
                 continue
             src = item.get("source") or "news"
-            # 1) The article's own og:image - EXCEPT for Google News
-            # links: their page's og:image IS the Google News logo
-            # (verified live 2026-11-23 - the canonical points to the
-            # Google News page itself, there is no publisher redirect),
-            # so fetching it only ever returns that same logo.
-            is_gnews = "news.google.com" in \
-                (urlparse(link).netloc or "").lower()
+            # 1) The article's own og:image. Rebuild #7.4: a Google
+            # News link IS fetched - IF it redirects (HTTP 302) to
+            # the publisher, fetch_og_image follows that redirect to
+            # the publisher's og:image (a meta-refresh redirect is
+            # resolved too). Live check 2026-11-23: plain requests
+            # gets NO redirect from these links, so the logo is
+            # rejected below and the real-photo fallback runs.
             photo = None
             skip_fallback = False
-            if not is_gnews:
-                img = fetch_og_image(link)
-                if img and img in seen_imgs:
-                    log("info", f"photo candidate: '{headline[:60]}' - "
-                                "rejected (same image already tried)")
-                elif not img:
-                    log("info", f"photo candidate: '{headline[:60]}' - "
-                                "rejected (no og:image)")
-                elif _is_pollinations_url(img):
-                    # An AI-generated og:image taints the story: skip
-                    # it entirely (rebuild #7.1) - never rescue it
-                    # with a fallback photo.
-                    seen_imgs.add(img)
-                    log("info", f"photo candidate: '{headline[:60]}' - "
-                                f"rejected (AI-generated og:image): {img[:100]}")
-                    skip_fallback = True
-                elif _is_logo_image_url(img):
-                    seen_imgs.add(img)
-                    log("info", f"photo candidate: '{headline[:60]}' - "
-                                f"rejected (logo og:image): {img[:100]}")
-                else:
-                    local = download_image(img, topic)
-                    if local:
-                        log("info", f"photo candidate: '{headline[:60]}' - "
-                                    f"ACCEPTED og:image (from {src})")
-                        return topic, headline, {
-                            "url": img, "source": "news",
-                            "alt": headline, "local_path": local}
-                    seen_imgs.add(img)
-                    log("info", f"photo candidate: '{headline[:60]}' - "
-                                "rejected (og:image download failed)")
-            else:
+            img = fetch_og_image(link)
+            if img and img in seen_imgs:
                 log("info", f"photo candidate: '{headline[:60]}' - "
-                            "Google News link (og:image is the logo), "
-                            "trying a real-photo search instead")
+                            "rejected (same image already tried)")
+            elif not img:
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "rejected (no og:image)")
+            elif _is_pollinations_url(img):
+                # An AI-generated og:image taints the story: skip
+                # it entirely (rebuild #7.1) - never rescue it
+                # with a fallback photo.
+                seen_imgs.add(img)
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            f"rejected (AI-generated og:image): {img[:100]}")
+                skip_fallback = True
+            elif _is_logo_image_url(img):
+                seen_imgs.add(img)
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            f"rejected (logo og:image): {img[:100]}")
+            else:
+                local = download_image(img, topic)
+                if local:
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                f"ACCEPTED og:image (from {src})")
+                    return topic, headline, {
+                        "url": img, "source": "news",
+                        "alt": headline, "local_path": local}
+                seen_imgs.add(img)
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "rejected (og:image download failed)")
             # 2) Real-photo fallback (rebuild #7.3, user order): a REAL
             # photo for this story from real-photo sources (Openverse /
-            # Pexels / Pixabay) - never AI, never a logo. A real stock
-            # / editorial photo is acceptable when the article's own
+            # Pexels / Pixabay / Wikimedia / Google Images / Bing
+            # Images) - never AI, never a logo. A real stock /
+            # editorial photo is acceptable when the article's own
             # image is unavailable. (Skipped for an AI-image story.)
             key = _norm_news_key(headline)
             if not skip_fallback and key not in tried_fallback and \
