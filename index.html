@@ -867,6 +867,7 @@ $("logoutBtn").addEventListener("click", () => {
 let accountHandles = [];
 let accountsDetail = [];
 let lastData = null;
+let lastLogs = [];
 let lastRuns = -1;
 let fileCardRuns = {};
 let fileCardsEnriched = [];
@@ -881,6 +882,7 @@ async function loadStatus() {
     $("noData").classList.remove("hidden");
     renderIssues([]);
     renderHealth(null);
+    lastLogs = [];
     renderPageLogs([]);
     $("lastRunPill").textContent = "Last run: —";
     return;
@@ -934,8 +936,9 @@ async function loadStatus() {
   renderPosts(data.recent_posts || []);
   renderTrending(data.trending || []);
   renderDueSoon();
-  renderPageLogs(data.logs || []);
-  renderFullLog(data.logs || []);
+  await loadWorkerLogs(data.logs || []);
+  renderPageLogs(lastLogs);
+  renderFullLog(lastLogs);
   // Rebuild the card lists only when the worker's card data changed,
   // so the auto-refresh never yanks the list out from under the user.
   const fcJson = JSON.stringify(fileCardsEnriched);
@@ -1076,9 +1079,39 @@ function openCardForTopic(topic) {
 const LOG_FILTERS = {
   overview: null, // all, latest 8
   blogger: ["blogger", "publish", "article", "photo", "topic", "no_photo", "card"],
-  bluesky: ["bluesky", "bsky", "reply", "replied", "login"],
+  bluesky: ["bluesky", "bsky", "reply", "replied", "login", "photo",
+            "promo", "cooldown", "too soon", "gemini", "groq", "ai_write",
+            "og:image", "logo", "skipped", "skipping"],
   settings: ["settings", "config", "toggle", "saved", "paused", "resume"],
 };
+function parseWorkerLogs(raw) {
+  /* Normalise a data/logs.json payload into display entries, newest
+     first, capped at 200. Accepts an array or {logs:[...]}; drops bad
+     rows. Rebuild #7.2 - the worker writes this file every run. */
+  const arr = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.logs) ? raw.logs : []);
+  const out = [];
+  for (const e of arr) {
+    if (!e || typeof e.message !== "string" || !e.message) continue;
+    out.push({ level: e.level || "info", message: e.message,
+               created_at: e.created_at || "", card: e.card || "" });
+    if (out.length >= 200) break;
+  }
+  return out;
+}
+async function loadWorkerLogs(fallbackLogs) {
+  /* Rebuild #7.2: the worker writes its structured log to
+     data/logs.json (committed back each run). Prefer it - it holds the
+     last ~200 entries across runs - and fall back to the dashboard
+     file's own logs when it is missing or empty. */
+  lastLogs = Array.isArray(fallbackLogs) ? fallbackLogs : [];
+  try {
+    const res = await fetch("data/logs.json", { cache: "no-store" });
+    if (res.ok) {
+      const parsed = parseWorkerLogs(await res.json());
+      if (parsed.length) lastLogs = parsed;
+    }
+  } catch (e) { /* keep the fallback logs */ }
+}
 function logLineHtml(l) {
   return '<div class="log-line' +
     (l.level === "error" ? " log-error" : l.level === "warning" ? " log-warning" : "") + '">' +
@@ -1115,10 +1148,10 @@ function renderFullLog(logs) {
     : '<div class="empty">No log entries match.</div>';
 }
 $("logSearch").addEventListener("input", () => {
-  if (lastData) renderFullLog(lastData.logs || []);
+  renderFullLog(lastLogs.length ? lastLogs : (lastData && lastData.logs) || []);
 });
 $("exportLogsBtn").addEventListener("click", () => {
-  const logs = (lastData && lastData.logs) || [];
+  const logs = lastLogs.length ? lastLogs : (lastData && lastData.logs) || [];
   const text = logs.map((l) => fmtTime(l.created_at) + " [" + (l.level || "") + "] " + (l.message || "")).join("\n");
   const blob = new Blob([text || "No logs yet."], { type: "text/plain" });
   const a = document.createElement("a");
@@ -1849,8 +1882,10 @@ async function requestCardTest(name) {
   }
 }
 function cardLogLines(name) {
-  const logs = (lastData && lastData.logs) || [];
-  const list = logs.filter((l) => String(l.message || "").toLowerCase().includes(String(name || "").toLowerCase()));
+  const logs = (lastLogs.length ? lastLogs : (lastData && lastData.logs) || []);
+  const needle = String(name || "").toLowerCase();
+  const list = logs.filter((l) => (l.card && String(l.card).toLowerCase() === needle) ||
+    String(l.message || "").toLowerCase().includes(needle));
   if (!list.length) return '<div class="empty">No log entries for this card yet.</div>';
   return list.slice(0, 10).map(logLineHtml).join("");
 }
