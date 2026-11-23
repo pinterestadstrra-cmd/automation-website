@@ -15,9 +15,9 @@
      repo owner's GitHub token can log in. The token stays saved in YOUR
      browser (localStorage) and you are logged in again automatically
      after a refresh. LIVE LOG: every tab shows a live log panel. GitHub
-     Pages is static, so there is no server to push live events (no real
-     SSE) - the panels auto-refresh every few seconds instead, and they
-     say so honestly. CARDS and ACCOUNTS are UNLIMITED - add as many as
+     Pages is static, so there is no server to push live events - the
+     panels auto-refresh every few seconds instead, and they say so
+     honestly. CARDS and ACCOUNTS are UNLIMITED - add as many as
      you want, no cap. */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #ffffff; color: #0f172a;
@@ -148,6 +148,11 @@
   .live-note { font-size: 12px; color: #94a3b8; margin-top: 6px; }
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
   .form-grid .full { grid-column: 1 / -1; }
+  /* BIG settings: the 3 numbers that matter most are large and obvious. */
+  .big-field label { font-size: 16px; font-weight: 800; color: #0369a1; }
+  .big-field input { font-size: 20px; font-weight: 700; padding: 12px;
+    border: 2px solid #0ea5e9; border-radius: 10px; }
+  .field-help { font-size: 13px; color: #475569; margin-top: 2px; }
   .row-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
   .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
     margin-bottom: 10px; }
@@ -326,12 +331,21 @@
       <div class="panel">
         <h2>Live log (latest) <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="overviewLog"><span class="empty">—</span></div>
-        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
     <!-- ============ PAGE: BLOGGER ============ -->
     <div id="page-blogger" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Make a card below.</b> One card = one job (for example: morning news).<br>
+          2) <b>Set the big numbers on the card:</b> how many posts per day, and every how many hours.<br>
+          3) <b>The worker runs your cards every 30 minutes.</b> A card only posts when it finds a photo that really loads - no photo, no post.<br>
+          4) <b>Nothing posts without a card.</b> No card, no post. That is the rule.
+        </div>
+      </div>
       <div class="panel">
         <h2>Blogger workflow</h2>
         <div class="toggle-row">
@@ -398,12 +412,21 @@
       <div class="panel">
         <h2>Blogger live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="bloggerLog"><span class="empty">—</span></div>
-        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
     <!-- ============ PAGE: BLUESKY ============ -->
     <div id="page-bluesky" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Add your Bluesky account below</b> (handle + app password).<br>
+          2) <b>Make a card:</b> post the latest article, promote a link, or reply to comments.<br>
+          3) <b>A reply card answers comments on YOUR posts</b> - it checks old posts too, from the last few days you set on the card - and fresh comments on hot posts by others.<br>
+          4) <b>Every reply is different,</b> and every reply is written in that card's own log (tap "Logs" on the card).
+        </div>
+      </div>
       <div class="panel">
         <h2>Bluesky workflows</h2>
         <div class="toggle-row">
@@ -490,7 +513,7 @@
       <div class="panel">
         <h2>Bluesky live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="blueskyLog"><span class="empty">—</span></div>
-        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -522,7 +545,7 @@
           <button class="btn-ghost" id="exportLogsBtn">Download log (.txt)</button>
         </div>
         <div class="log-list" id="logList" style="margin-top:10px"></div>
-        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
       </div>
     </div>
 
@@ -559,6 +582,7 @@
             <input id="setMaxFail" type="number" min="1" value="5"></div>
           <div><label for="refreshSelect">Live refresh (this dashboard)</label>
             <select id="refreshSelect">
+              <option value="5">Every 5 seconds</option>
               <option value="15">Every 15 seconds</option>
               <option value="30">Every 30 seconds</option>
               <option value="60">Every 60 seconds</option>
@@ -592,6 +616,8 @@
             <input type="checkbox" id="setDefReplyOwn" checked> Default: reply to OWN posts</label></div>
           <div><label style="display:flex;align-items:center;gap:8px">
             <input type="checkbox" id="setDefReplyOthers" checked> Default: reply to OTHERS</label></div>
+          <div><label for="setDefLookback">Default: check comments from the last __ days (1-30)</label>
+            <input id="setDefLookback" type="number" min="1" max="30" value="7"></div>
         </div>
         <div class="row-btns">
           <button class="btn-teal" id="saveDefaultsBtn">Save card defaults</button>
@@ -627,7 +653,7 @@
       <div class="panel">
         <h2>Settings live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
         <div class="mini-log" id="settingsLog"><span class="empty">—</span></div>
-        <div class="live-note">Live (auto-refresh) - this page is static, so there is no server push (SSE). The log refreshes itself every few seconds.</div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
       </div>
     </div>
   </div>
@@ -643,7 +669,7 @@
    own schedule (hours + minutes, posts per day), its own source/topic
    and (Bluesky) its own reply settings. LIVE LOG: every tab shows a
    live log panel. GitHub Pages is static, so there is no server to
-   push live events (no real SSE) - the panels auto-refresh instead.
+   push live events - the panels auto-refresh instead.
    CARDS and ACCOUNTS are UNLIMITED. */
 const OWNER = "pinterestadstrra-cmd";
 const REPO = "automation-website";
@@ -995,8 +1021,8 @@ function openCardForTopic(topic) {
 }
 
 /* ---------- per-page live logs (filtered by area) ----------
-   Honest note: GitHub Pages is static, so there is no server push
-   (no real SSE). These panels auto-refresh with the dashboard. */
+   Honest note: GitHub Pages is static, so there is no server push.
+   These panels auto-refresh with the dashboard. */
 const LOG_FILTERS = {
   overview: null, // all, latest 8
   blogger: ["blogger", "publish", "article", "photo", "topic", "no_photo", "card"],
@@ -1084,6 +1110,7 @@ const CONFIG_DEFAULTS = {
   blogger_bold_format: true, card_default_interval_hours: 0,
   card_default_interval_minutes: 30, card_default_posts_per_day: 0,
   card_default_reply_own: true, card_default_reply_others: true,
+  card_default_lookback_days: 7,
 };
 async function loadConfig() {
   if (!getToken()) return;
@@ -1110,6 +1137,7 @@ function fillConfigInputs() {
   $("setDefPerDay").value = config.card_default_posts_per_day ?? 0;
   $("setDefReplyOwn").checked = cfgBool("card_default_reply_own", true);
   $("setDefReplyOthers").checked = cfgBool("card_default_reply_others", true);
+  $("setDefLookback").value = config.card_default_lookback_days ?? 7;
   const paused = String(config.paused || false).toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
@@ -1126,6 +1154,8 @@ function readConfigInputs() {
   config.card_default_posts_per_day = Number($("setDefPerDay").value) || 0;
   config.card_default_reply_own = $("setDefReplyOwn").checked;
   config.card_default_reply_others = $("setDefReplyOthers").checked;
+  config.card_default_lookback_days = Math.max(1, Math.min(30,
+    Number($("setDefLookback").value) || 7));
 }
 async function saveConfig(msg) {
   if (needToken()) return false;
@@ -1471,7 +1501,9 @@ function renderCardList(tab) {
       " · ✓" + e.success + " ✗" + e.fail +
       (c.source === "custom" && c.topic_override ? " · topic: " + esc(c.topic_override) : "") +
       (c.type !== "blogger_post" && (c.reply_own || c.reply_others)
-        ? " · replies: " + (c.reply_own ? "own " : "") + (c.reply_others ? "others" : "") : "") +
+        ? " · replies: " + (c.reply_own ? "own " : "") + (c.reply_others ? "others " : "") +
+          (Number(c.replies_per_run || 0) > 0 ? "· " + c.replies_per_run + "/run " : "· unlimited/run ") +
+          "· last " + (Number(c.lookback_days ?? 7) || 7) + " days" : "") +
       (c.type === "blogger_post" && c.bold_format === false ? " · no bold" : "") +
       "</div>" +
       (c.notes ? '<div class="meta">Note: ' + esc(c.notes) + "</div>" : "") +
@@ -1742,7 +1774,8 @@ function openCardForm(tab, index, preset) {
     source: "trending", topic_override: "",
     reply_own: cfgBool("card_default_reply_own", true),
     reply_others: cfgBool("card_default_reply_others", true),
-    replies_per_run: 0, bold_format: true, notes: "", color: "",
+    replies_per_run: 0, lookback_days: Number(config.card_default_lookback_days ?? 7) || 7,
+    bold_format: true, notes: "", color: "",
     window_start: "", window_end: "",
   };
   if (!existing && preset) Object.assign(c, preset);
@@ -1771,7 +1804,7 @@ function openCardForm(tab, index, preset) {
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
     '<div><label for="cfAccount">Bluesky account (optional)</label>' +
     '<select id="cfAccount">' + accOptions + "</select></div>" +
-    '<div><label for="cfCount">Posts per run (how many articles each run publishes)</label>' +
+    '<div><label for="cfCount">Posts per run - how many posts each time the card runs</label>' +
     '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
 
@@ -1781,18 +1814,21 @@ function openCardForm(tab, index, preset) {
       '<button type="button" class="preset" data-h="' + p.h + '" data-m="' + p.m + '">' +
       esc(p.label) + "</button>").join("") + "</div></div>" +
     '<div class="form-grid">' +
-    '<div><label for="cfHours">Hours (custom)</label>' +
-    '<input id="cfHours" type="number" min="0" value="' + esc(c.interval_hours ?? defH) + '"></div>' +
-    '<div><label for="cfMinutes">Minutes (custom)</label>' +
-    '<input id="cfMinutes" type="number" min="0" value="' + esc(c.interval_minutes ?? defM) + '"></div>' +
+    '<div class="big-field"><label for="cfHours">Run every __ hours</label>' +
+    '<input id="cfHours" type="number" min="0" value="' + esc(c.interval_hours ?? defH) + '">' +
+    '<div class="field-help">How often this card runs. Example: 4 hours 0 minutes = every 4 hours.</div></div>' +
+    '<div class="big-field"><label for="cfMinutes">Run every __ minutes</label>' +
+    '<input id="cfMinutes" type="number" min="0" value="' + esc(c.interval_minutes ?? defM) + '">' +
+    '<div class="field-help">Minutes part of the same "every how long".</div></div>' +
     "</div>" +
     '<div><label>Posts per day - suggested (tap one, 0 = unlimited)</label><div id="cfPerDayPresets">' +
     PERDAY_PRESETS.map((n) =>
       '<button type="button" class="preset" data-n="' + n + '">' + n + "</button>").join("") +
     '<button type="button" class="preset" data-n="0">Unlimited</button></div></div>' +
     '<div class="form-grid">' +
-    '<div><label for="cfPerDay">Posts per day (custom, 0 = unlimited)</label>' +
-    '<input id="cfPerDay" type="number" min="0" value="' + esc(c.posts_per_day ?? defPerDay) + '"></div>' +
+    '<div class="big-field"><label for="cfPerDay">Posts per day - how many posts in one day (0 = no limit)</label>' +
+    '<input id="cfPerDay" type="number" min="0" value="' + esc(c.posts_per_day ?? defPerDay) + '">' +
+    '<div class="field-help">Example: 5 means this card makes at most 5 posts a day. 0 means no limit.</div></div>' +
     '<div><label for="cfTimes">Fixed times (Dhaka, comma-separated HH:MM, optional)</label>' +
     '<input id="cfTimes" placeholder="07:00, 19:00" value="' +
     esc((Array.isArray(c.schedule_times) ? c.schedule_times : []).join(", ")) + '"></div>' +
@@ -1824,8 +1860,12 @@ function openCardForm(tab, index, preset) {
     '<div class="toggle-row"><div><div class="lbl">Reply to OTHERS\' comments / posts</div>' +
     '<div class="desc">Reply to fresh comments on high-engagement posts by others.</div></div>' +
     '<input type="checkbox" id="cfReplyOthers"' + (c.reply_others !== false ? " checked" : "") + "></div>" +
-    '<div class="form-grid"><div><label for="cfRepliesPerRun">Replies per run (0 = unlimited)</label>' +
-    '<input id="cfRepliesPerRun" type="number" min="0" value="' + esc(c.replies_per_run ?? 0) + '"></div></div>' +
+    '<div class="form-grid"><div class="big-field"><label for="cfRepliesPerRun">Replies per run - how many replies to give each time the card runs (0 = no limit)</label>' +
+    '<input id="cfRepliesPerRun" type="number" min="0" value="' + esc(c.replies_per_run ?? 0) + '">' +
+    '<div class="field-help">Example: 3 means at most 3 replies every time this card runs.</div></div>' +
+    '<div><label for="cfLookback">Check comments from the last __ days</label>' +
+    '<input id="cfLookback" type="number" min="1" max="30" value="' + esc(c.lookback_days ?? 7) + '">' +
+    '<div class="field-help">The card looks back this many days on YOUR posts and answers comments it has not answered yet. 7 = the last 7 days. Old posts are checked too.</div></div></div>' +
     "</div>" +
 
     '<div id="cfBoldSection">' +
@@ -1986,6 +2026,8 @@ function readCardForm(tab) {
     reply_own: isBlog ? false : $("cfReplyOwn").checked,
     reply_others: isBlog ? false : $("cfReplyOthers").checked,
     replies_per_run: isBlog ? 0 : (Number($("cfRepliesPerRun").value) || 0),
+    lookback_days: isBlog ? 7 : Math.max(1, Math.min(30,
+      Number($("cfLookback").value) || 7)),
     bold_format: isBlog ? $("cfBold").checked : true,
     window_start: isBlog ? $("cfWindowStart").value.trim() : "",
     window_end: isBlog ? $("cfWindowEnd").value.trim() : "",
@@ -2012,6 +2054,7 @@ function fillCardForm(c) {
   $("cfReplyOwn").checked = c.reply_own !== false;
   $("cfReplyOthers").checked = c.reply_others !== false;
   $("cfRepliesPerRun").value = c.replies_per_run ?? 0;
+  $("cfLookback").value = c.lookback_days ?? 7;
   $("cfBold").checked = c.bold_format !== false;
   $("cfWindowStart").value = c.window_start || "";
   $("cfWindowEnd").value = c.window_end || "";
