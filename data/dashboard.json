@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T17:07:03.533511+00:00",
-  "last_run": "2026-11-23T17:06:57.801743+00:00",
-  "runs": 14,
+  "generated_at": "2026-11-23T17:48:49.692002+00:00",
+  "last_run": "2026-11-23T17:44:18.873484+00:00",
+  "runs": 15,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -33,15 +33,15 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T16:50:20.987891+00:00"
+    "BlueSky Trend": "2026-11-23T17:48:49.393162+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 4,
+      "success": 5,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-23T16:50:20.991029+00:00"
+      "last_run": "2026-11-23T17:48:49.393159+00:00"
     }
   },
   "file_cards": [
@@ -55,15 +55,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-23T16:50:20.987891+00:00",
-      "runs_today": 4,
-      "posts_today": 3,
+      "last_run": "2026-11-23T17:48:49.393162+00:00",
+      "runs_today": 5,
+      "posts_today": 4,
       "next_runs": [
-        "2026-11-23T23:20:20.987891+06:00",
-        "2026-11-23T23:35:20.987891+06:00",
-        "2026-11-23T23:50:20.987891+06:00",
-        "2026-11-24T00:05:20.987891+06:00",
-        "2026-11-24T00:20:20.987891+06:00"
+        "2026-11-24T00:03:49.393162+06:00",
+        "2026-11-24T00:18:49.393162+06:00",
+        "2026-11-24T00:33:49.393162+06:00",
+        "2026-11-24T00:48:49.393162+06:00",
+        "2026-11-24T01:03:49.393162+06:00"
       ],
       "next_post_times": [
         "2026-11-23T23:56:00+06:00",
@@ -72,7 +72,7 @@
         "2026-11-24T03:01:00+06:00",
         "2026-11-24T03:55:00+06:00"
       ],
-      "success": 4,
+      "success": 5,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -115,8 +115,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 2
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -127,12 +136,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -141,10 +150,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T17:06:57.803293+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T17:44:18.875444+00:00"
     }
   ],
   "dry_run": false,
@@ -153,317 +162,317 @@
     "open": false
   },
   "trending": [
-    "Pope Leo praises cycling",
-    "Israel's military campaign in Gaza",
-    "Alice Huang espionage allegations",
+    "Cyclops in Avengers: Doomsday footage",
+    "Medicare for All and universal healthcare",
     "Trump says he protected Musk",
+    "Women's World Cup host vote",
     "SEC probes Nvidia accounting",
+    "Alice Huang espionage allegations",
+    "Weather forecasts include lead plume",
     "Avengers: Doomsday runtime confirmed",
     "Grand Theft Auto VI release",
-    "Cyclops in Avengers: Doomsday footage",
-    "Weather forecasts include lead plume",
-    "Women's World Cup host vote"
+    "Pope Leo praises cycling"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T17:07:03.252870+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T17:07:03.251111+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T17:07:02.855275+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T17:06:57.804334+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T17:06:57.803303+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #14 started (--only blogger)",
-      "created_at": "2026-11-23T17:06:57.801767+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T16:50:21.015316+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Pope Leo praises cycling', 'Grand Theft Auto VI release', 'Cyclops in Avengers: Doomsday footage', \"Israel's military campaign in Gaza\", \"Women's World Cup host vote\"]",
-      "created_at": "2026-11-23T16:50:21.012059+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend' ran (no-op)",
-      "created_at": "2026-11-23T16:50:20.991047+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': posted less than 5 minutes ago - too soon, skipping",
-      "created_at": "2026-11-23T16:50:20.990465+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-      "created_at": "2026-11-23T16:50:20.989399+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T16:50:20.988808+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-      "created_at": "2026-11-23T16:50:20.987909+00:00",
+      "created_at": "2026-11-23T17:48:49.393195+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
       "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T16:50:20.987209+00:00",
+      "created_at": "2026-11-23T17:48:49.255764+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "card 'BlueSky Trend': promo posted - event 'altcoin bitcoin crypto ether insight invest network news tod' on 24h cooldown (topic + link+event recorded)",
-      "created_at": "2026-11-23T16:50:20.985790+00:00",
+      "message": "card 'BlueSky Trend': promo posted - event '2026 broadway carroll celebrity death lance larry poindexter' on 24h cooldown (topic + link+event recorded)",
+      "created_at": "2026-11-23T17:48:49.253833+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1200x630 (ratio 1.90) - unchanged",
-      "created_at": "2026-11-23T16:49:40.125190+00:00",
+      "message": "prepare_bsky_image: published 1800x1012 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-23T17:47:29.859777+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1200x630 (ratio 1.90) - kept, no crop",
-      "created_at": "2026-11-23T16:49:40.124407+00:00",
+      "message": "prepare_bsky_image: original 1800x1012 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-23T17:47:29.858646+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-23T16:49:40.123389+00:00",
+      "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-23T17:47:29.857342+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA finance news",
-      "created_at": "2026-11-23T16:49:40.122679+00:00",
+      "message": "promo category: USA celebrity news",
+      "created_at": "2026-11-23T17:47:29.856343+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I': https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/mp (from bing-images, query 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - Investing News Network', page: https://nbcuniversalnewsgroup.com/nbcnews/2026/11/16/coming-up-on-nbc-news-today-november-16-novembe - matches 2 key entities (news, today))",
-      "created_at": "2026-11-23T16:49:40.121888+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr': https://cruisefever.net/wp-content/uploads/2025/05/celebrityxcelship.jpg (from bing-images, query 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larry Poindexter and More - Us Weekly', page: https://www.usatoday.com/story/travel/cruises/2023/06/27/celebrity-cruises-caribbean-cococay-weekend - matches 2 key entities (2026, celebrity))",
+      "created_at": "2026-11-23T17:47:29.855262+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Today's Crypto News: Bitcoin, Ether and Altcoin In': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-23T16:49:40.120392+00:00",
+      "message": "vision: unavailable - keyword check decides ('Celebrity Deaths of 2026: E.J. Carroll, Lance Broa': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-23T17:47:29.853622+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Today's Crypto News: Bitcoin, Ether and Altcoin In'): https://thumbs.dreamstime.com/z/what-today-23666894.jpg (page: https://www.today.com/video/full-episode-today-show-nov-9-273138245947 | Victoria Gifford Kennedy To - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:27.172433+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://mycelebritybio.com/wp-content/uploads/2025/05/image-10.png",
+      "created_at": "2026-11-23T17:47:16.651285+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
-      "created_at": "2026-11-23T16:49:27.170373+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
+      "created_at": "2026-11-23T17:47:15.928339+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
-      "created_at": "2026-11-23T16:49:26.899242+00:00",
+      "message": "google-images: 0 candidate(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
+      "created_at": "2026-11-23T17:47:15.691985+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
-      "created_at": "2026-11-23T16:49:26.794985+00:00",
+      "message": "wikimedia: 0 result(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
+      "created_at": "2026-11-23T17:47:15.560419+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
-      "created_at": "2026-11-23T16:49:26.416641+00:00",
+      "message": "openverse: 0 result(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
+      "created_at": "2026-11-23T17:47:15.077019+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:19.002461+00:00",
+      "created_at": "2026-11-23T17:47:09.313848+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:19.001786+00:00",
+      "created_at": "2026-11-23T17:47:09.307849+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - rejected (no og:image)",
-      "created_at": "2026-11-23T16:49:19.000993+00:00",
+      "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - rejected (no og:image)",
+      "created_at": "2026-11-23T17:47:09.306593+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFV) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T16:49:18.998723+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZjlCdHlXVERmNXlKZ3FNbndsOEc3WHNPZURITWdjN05kZHZzaTFFN2tyTlRwQmgxWll) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T17:47:09.142435+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-23T16:49:18.834909+00:00",
+      "message": "photo candidate: 'The unlikely winner from war in the Gulf - The Economist' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-23T17:47:08.640275+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance' (0 download(s) tried)",
-      "created_at": "2026-11-23T16:49:18.834332+00:00",
+      "message": "photo: no real photo found for 'The unlikely winner from war in the Gulf - The Economist' (0 download(s) tried)",
+      "created_at": "2026-11-23T17:47:08.639289+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://images.vexels.com/media/users/3/147483/raw/d21eb38a9df19c4817652a638b2b61ff-usa-map-with-sta (page: https://www.worldmap1.com/usa-globe-map | USA Map With States Vector Download - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:18.833725+00:00",
+      "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://static.foxnews.com/foxnews.com/content/uploads/2025/02/trump-gavel-judge-rules-against-feder (page: Judges v Trump: Early wave of court injunctions blocks top White House ... - only 0 of 5 key entities in the source page)",
+      "created_at": "2026-11-23T17:47:08.638283+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://ichef.bbci.co.uk/news/1024/branded_news/9A5B/production/_130151593_bbcm_usa_country_profile_ (page: https://www.vexels.com/vectors/preview/147483/usa-map-with-states | United States country profile -  - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:18.833068+00:00",
+      "message": "bing-images: 1 candidate(s) for 'unlikely winner war'",
+      "created_at": "2026-11-23T17:47:08.635993+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg (page: https://www.bbc.co.uk/news/world-us-canada-16761057 | State police | United States agencies | Britan - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:18.832192+00:00",
+      "message": "google-images: 0 candidate(s) for 'unlikely winner war'",
+      "created_at": "2026-11-23T17:47:08.478987+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://static.vecteezy.com/system/resources/previews/020/583/552/original/map-of-united-states-free (page: https://www.britannica.com/topic/state-police | Map of United States Free Vector 20583552 Vector Art - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:18.831397+00:00",
+      "message": "wikimedia: 0 result(s) for 'unlikely winner war'",
+      "created_at": "2026-11-23T17:47:08.329893+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'USA Rare Earth Stock Rising'",
-      "created_at": "2026-11-23T16:49:18.829108+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'USA Rare Earth Stock Rising'",
-      "created_at": "2026-11-23T16:49:18.625008+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'USA Rare Earth Stock Rising'",
-      "created_at": "2026-11-23T16:49:18.412070+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'USA Rare Earth Stock Rising'",
-      "created_at": "2026-11-23T16:49:18.001817+00:00",
+      "message": "openverse: search HTTP 504 for 'unlikely winner war'",
+      "created_at": "2026-11-23T17:47:07.890612+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:15.202513+00:00",
+      "created_at": "2026-11-23T17:46:56.836831+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:15.201892+00:00",
+      "created_at": "2026-11-23T17:46:56.835843+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn-icons-png.flaticon.com/512/8776/8776768.png (page: https://www.alamy.com/why-question-word-speech-bubble-lettering-why-question-text-hand-drawn-quote-d - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:15.201175+00:00",
+      "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://cakevows.com/wp-content/uploads/2024/09/tort_xyz_A_traditional_three-tier_wedding_cake_with_ (page: Classy 3-Tier Wedding Cake Designs in 2024 - cakevows.com - only 0 of 5 key entities in the source page)",
+      "created_at": "2026-11-23T17:46:56.830079+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://clipground.com/images/why-png-3.png (page: https://www.flaticon.com/free-icon/why_8776768 | About Why: Why 使い方 ビジネス – How To Write A Personal ‘ - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:15.200534+00:00",
+      "message": "bing-images: 1 candidate(s) for 'The unlikely winner from war in the Gulf'",
+      "created_at": "2026-11-23T17:46:56.811848+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): http://3.bp.blogspot.com/_AsW-lOVBuzE/TAPSsrNPeQI/AAAAAAAADAo/o4-CXqVCr2A/s1600/Why2.PNG (page: https://perform.hon-area.org/about-why-why-使い方-ヒシネス-how-to-write-a-personal-why-statement-with-50-ex - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:15.199890+00:00",
+      "message": "google-images: 0 candidate(s) for 'The unlikely winner from war in the Gulf'",
+      "created_at": "2026-11-23T17:46:56.693696+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://digitalbloggers.com/assets/media/images/3bev_bigthumb_Why.jpg (page: http://juicyfreeware.weebly.com/blog/category/all/3 | Why you should start with why - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:15.199089+00:00",
+      "message": "wikimedia: 0 result(s) for 'The unlikely winner from war in the Gulf'",
+      "created_at": "2026-11-23T17:46:56.491686+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today'",
-      "created_at": "2026-11-23T16:49:15.197177+00:00",
+      "message": "openverse: 0 result(s) for 'The unlikely winner from war in the Gulf'",
+      "created_at": "2026-11-23T17:46:55.826344+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today'",
-      "created_at": "2026-11-23T16:49:14.996387+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T17:46:50.683944+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Why USA Rare Earth Stock Is Rising Today'",
-      "created_at": "2026-11-23T16:49:14.874146+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T17:46:50.675202+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Why USA Rare Earth Stock Is Rising Today'",
-      "created_at": "2026-11-23T16:49:14.290850+00:00",
+      "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://mybritishshorthair.com/wp-content/uploads/2023/07/Lilac-Point-Siamese-Cat-Breed.jpg (page: Lilac Point Siamese - Everything You Need To Know About Lilac Point ... - only 0 of 5 key entities in the source page)",
+      "created_at": "2026-11-23T17:46:50.673980+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'The unlikely winner from war in the Gulf - The Economist'",
+      "created_at": "2026-11-23T17:46:50.671416+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'The unlikely winner from war in the Gulf - The Economist'",
+      "created_at": "2026-11-23T17:46:50.548719+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'The unlikely winner from war in the Gulf - The Economist'",
+      "created_at": "2026-11-23T17:46:50.396354+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'The unlikely winner from war in the Gulf - The Economist'",
+      "created_at": "2026-11-23T17:46:49.963493+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T17:46:44.616808+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T17:46:44.615759+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'The unlikely winner from war in the Gulf - The Economist' - rejected (no og:image)",
+      "created_at": "2026-11-23T17:46:44.614609+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxNT2JPYU5QMXVfYndSdjBfRkpMVDBrSG9nZkJIM1duZkVlc0p1T3NhR1diZ1hWVkx4RE4) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T17:46:44.612326+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'President Trump is 'stuck', has not learned much from the Ir' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-23T17:46:44.457303+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'President Trump is 'stuck', has not learned much from the Iran war: Analyst - CNBC' (0 download(s) tried)",
+      "created_at": "2026-11-23T17:46:44.456190+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://mobileimages.lowes.com/productimages/2497b246-1c2f-4e3f-9205-9804abab1afb/106341876.jpeg?siz (page: IUEST 8.6 in LED Grow Light Strips Full Spectrum 3500 K 4 Head Timer 1 ... - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T17:46:44.455193+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'President Trump stuck has not'",
+      "created_at": "2026-11-23T17:46:44.452727+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'President Trump stuck has not'",
+      "created_at": "2026-11-23T17:46:44.336737+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'President Trump stuck has not'",
+      "created_at": "2026-11-23T17:46:44.179196+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: search HTTP 504 for 'President Trump stuck has not'",
+      "created_at": "2026-11-23T17:46:43.592179+00:00",
       "card": ""
     }
   ]
