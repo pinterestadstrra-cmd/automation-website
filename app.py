@@ -66,6 +66,7 @@ import json
 import time
 import random
 import re
+import hashlib
 import sqlite3
 import threading
 import html as html_lib
@@ -902,29 +903,370 @@ def fetch_og_image(url):
     return None
 
 
+def _is_pollinations_url(url):
+    """True if the URL is a Pollinations (AI-generated) image. Bluesky
+    posts NEVER use AI-generated images (rebuild #7, strict user order)."""
+    try:
+        return "pollinations" in (urlparse(str(url or "")).netloc or "").lower()
+    except Exception:
+        return False
+
+
+def _news_photo(topic, state=None):
+    """A REAL image from online news for a topic (rebuild #7).
+    Uses Google News RSS (verify_news) and takes the first article
+    whose og:image downloads and verifies as a real image. Text, logo
+    or watermark on the image is FINE (news photos carry them) - the
+    image is never rejected for that. Never Pollinations, never stock.
+    Returns a photo dict with local_path, or None."""
+    topic = (topic or "").strip()
+    if not topic:
+        return None
+    try:
+        _verified, _sources, items = verify_news(topic)
+    except Exception as e:
+        log("warning", f"news photo error for '{topic}': {e}")
+        return None
+    seen = set()
+    for item in (items or [])[:5]:
+        link = (item.get("link") or "").strip()
+        if not link or link in seen:
+            continue
+        seen.add(link)
+        img = fetch_og_image(link)
+        if not img or _is_pollinations_url(img):
+            continue
+        local = download_image(img, topic)
+        if local:
+            log("info", f"photo: real news image for '{topic}' "
+                        f"(from {item.get('source') or 'news'})")
+            return {"url": img, "source": "news",
+                    "alt": item.get("title", ""), "local_path": local}
+    log("info", f"photo: no real news image found for '{topic}'")
+    return None
+
+
 def _promo_photo(card, link, state=None):
-    """A verified photo for a link-promo post (PHOTO-FIRST).
-    Order: the link's og:image, then the latest article's image, then
-    a stock photo for the card's topic. Returns a photo dict with
-    local_path, or None - then the post is SKIPPED, never text-only."""
+    """A verified REAL photo for a link-promo post (PHOTO-FIRST).
+    Rebuild #7 (strict user order): real images from online news only.
+    Order: the link's og:image, then a real news article's image for
+    the card's topic (or a current trending topic when the card has no
+    topic of its own). Text, logo or watermark on the image is FINE.
+    Pollinations (AI) and stock photos are NEVER used. Returns a photo
+    dict with local_path, or None - then the post is SKIPPED, never
+    text-only."""
     if link:
         og = fetch_og_image(link)
-        if og:
+        if og and not _is_pollinations_url(og):
             local = download_image(og, "promo")
             if local:
                 return {"url": og, "source": "og:image", "alt": "promo",
                         "local_path": local}
-    art = latest_article(state)
-    if art and art.get("image_url"):
-        local = download_image(art["image_url"], art.get("title", "promo"))
-        if local:
-            return {"url": art["image_url"], "source": "article",
-                    "alt": art.get("title", ""), "local_path": local}
-    topic = (card.get("topic_override") or "").strip() or "breaking news"
-    photo = fetch_verified_photo(topic)
+    topic = (card.get("topic_override") or "").strip()
+    if not topic:
+        try:
+            topics = get_bluesky_trending(limit=3)
+        except Exception:
+            topics = []
+        for t in topics or []:
+            photo = _news_photo(t, state)
+            if photo and photo.get("local_path"):
+                return photo
+        topic = "breaking news"
+    photo = _news_photo(topic, state)
     if photo and photo.get("local_path"):
         return photo
     return None
+
+
+# ---------------------------------------------------------------- rebuild #7.1
+# BLUESKY PROMO FIXES (user's strict orders, 2026-11-23):
+# - ONE link always (the card's link never changes), but the caption
+#   is DIFFERENT every time: written about a current/trending news
+#   story (Bluesky trending first, else a Google News top story).
+# - The cooldown is PER-CAPTION / PER-TOPIC (24h), NOT per-link:
+#   the same link may post many times a day (up to posts_per_day),
+#   but the same news topic / caption is never reused within 24h.
+# - The photo is a REAL image from online news FOR THAT NEWS STORY
+#   (the news article's og:image). Text/logo/watermark on the image
+#   is FINE. Pollinations (AI) and stock photos are NEVER used for a
+#   Bluesky post. No verified real photo for that news = no post.
+# - The worker re-reads the card's UI settings fresh from
+#   data/cards.json BEFORE EACH POST and logs the effective settings,
+#   so the workflow log proves the UI was checked for every post.
+#   Settings are never cached across posts within a run.
+# - A promo post's text is a real caption (hook + link), NEVER just
+#   the bare link. If the AI fails, a built-in hook is used instead.
+# - posts_per_run is enforced strictly (a run can never post more
+#   than the card's count, even if several slots are due).
+PROMO_TOPIC_COOLDOWN_HOURS = 24
+BSKY_MAX_CHARS = 300
+
+# Why the last _card_bluesky_post skipped a post: "cooldown" (no fresh
+# news topic/caption left within 24h), "no_photo" (fresh news exists
+# but no real image could be fetched), "no_news" (no trending/top
+# news at all - network/API down), or None (posted / other reason).
+LAST_BSKY_SKIP = None
+
+PROMO_HOOK_FALLBACKS = [
+    "You need to see this - it is everywhere right now.",
+    "This one is blowing up today. Take a look.",
+    "Everyone is talking about this right now.",
+    "Worth a minute of your time - check this out.",
+    "This caught my eye today. Have a look.",
+    "Big story doing the rounds today - see for yourself.",
+    "Fresh news you should not miss - have a look.",
+    "This is the story everyone will be talking about.",
+    "Just in - this one is worth your attention.",
+    "Do not scroll past this one. Take a look.",
+]
+
+
+def _promo_fallback_hook(card, link, state=None):
+    """A human-sounding hook used ONLY when the AI returns nothing
+    (keys down, rate limit). Never the bare link: a promo post always
+    carries a hook. Rebuild #7.1: the hook must be one whose caption
+    was NOT used in the last 24h (per-caption cooldown) - the list is
+    walked in a day-rotated order so repeated posts do not all read
+    the same. Returns None when every fallback hook was already used
+    within 24h (then the post is skipped, never repeated). If the
+    card has a topic, it is named in the hook. With no state given
+    (last-resort call from _fit_bsky_text) the day-rotated hook is
+    returned without a dedup check."""
+    topic = ""
+    if isinstance(card, dict):
+        topic = (card.get("topic_override") or "").strip()
+    cands = []
+    if topic:
+        cands.append(f"Big news on {topic} - worth a look. Do not miss this one.")
+    start = (now_utc().toordinal() + len(link or "")) % len(PROMO_HOOK_FALLBACKS)
+    cands.extend(PROMO_HOOK_FALLBACKS[start:] + PROMO_HOOK_FALLBACKS[:start])
+    for hook in cands:
+        if state is None:
+            return hook
+        if _promo_caption_cooldown_left(state, _fit_bsky_text(hook, link)) is None:
+            return hook
+    return None
+
+
+def _fit_bsky_text(hook, link):
+    """Combine a hook and a link into ONE Bluesky post (max 300 chars).
+    The link always stays; the hook is trimmed to fit. Never returns
+    just the bare link unless the link alone already fills the post."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    # Drop a link the AI already appended, so it is not doubled.
+    if link and link in hook:
+        hook = hook.replace(link, "").strip()
+    if not hook:
+        hook = _promo_fallback_hook(None, link)
+    if not link:
+        return hook[:BSKY_MAX_CHARS]
+    room = BSKY_MAX_CHARS - len(link) - 1
+    if room < 10:
+        return link
+    if len(hook) > room:
+        hook = hook[:room - 1].rstrip() + "\u2026"
+    return f"{hook}\n{link}"
+
+
+def _norm_news_key(text):
+    """Normalise a news headline/topic into a dedup key (lowercase,
+    single spaces). Two posts about the same story share a key."""
+    return re.sub(r"\s+", " ", (text or "").strip().lower())
+
+
+def _store_dt(store, key):
+    """When a timestamp-store entry was recorded (aware datetime) or None."""
+    rec = (store or {}).get(key or "")
+    if not rec:
+        return None
+    try:
+        dt = datetime.fromisoformat(rec)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+        return dt
+    except Exception:
+        return None
+
+
+def _store_cooldown_left(store, key, hours):
+    """Time left on a no-reuse cooldown for a key, or None when the
+    key may be used again."""
+    dt = _store_dt(store, key)
+    if not dt:
+        return None
+    left = dt + timedelta(hours=hours) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _store_record(store, key, max_age_days=7):
+    """Remember that a key was used now. Entries older than
+    max_age_days are pruned."""
+    if not key:
+        return
+    store[key] = now_iso()
+    cutoff = now_utc() - timedelta(days=max_age_days)
+    for k in list(store.keys()):
+        dt = _store_dt(store, k)
+        if dt is None or dt < cutoff:
+            store.pop(k, None)
+
+
+def _promo_topic_cooldown_left(state, key):
+    """Time left on the 24h no-reuse cooldown for a news topic /
+    headline key, or None when it may be used again."""
+    return _store_cooldown_left(state.get("posted_promo_topics") or {},
+                                _norm_news_key(key), PROMO_TOPIC_COOLDOWN_HOURS)
+
+
+def _record_promo_topic_posted(state, key):
+    """Remember that this news topic/headline was used for a promo
+    post now (state.json, so it survives across worker runs)."""
+    _store_record(state.setdefault("posted_promo_topics", {}),
+                  _norm_news_key(key))
+
+
+def _caption_hash(text):
+    """Stable hash of a caption (normalised) for dedup."""
+    return hashlib.sha1(_norm_news_key(text).encode("utf-8")).hexdigest()
+
+
+def _promo_caption_cooldown_left(state, text):
+    """Time left on the 24h no-reuse cooldown for an exact caption,
+    or None when it may be used again."""
+    return _store_cooldown_left(state.get("posted_promo_captions") or {},
+                                _caption_hash(text), PROMO_TOPIC_COOLDOWN_HOURS)
+
+
+def _record_promo_caption_posted(state, text):
+    """Remember that this exact caption was posted now (state.json)."""
+    _store_record(state.setdefault("posted_promo_captions", {}),
+                  _caption_hash(text))
+
+
+def _pick_fresh_promo_news(card, state):
+    """Pick a FRESH news story for a promo post: (topic, headline, photo).
+    Candidates: the card's custom-text words first (a custom caption's
+    own words are the image search topic), then the card's topic, then
+    Bluesky trending topics, then a Google News top story ("breaking
+    news"). A story is fresh only if its headline was NOT used for a
+    promo post in the last 24h (per-topic cooldown). The photo is the
+    story's REAL online image (the news article's og:image, downloaded
+    and verified); text/logo/watermark on it is FINE. Pollinations
+    (AI) images are never used. Returns (None, None, None) when no
+    fresh story with a real image exists; LAST_BSKY_SKIP says why
+    ("cooldown" = every story used within 24h, "no_photo" = fresh
+    stories exist but no real image could be fetched, "no_news" =
+    no trending/top news at all)."""
+    global LAST_BSKY_SKIP
+    LAST_BSKY_SKIP = None
+    topics = []
+    if isinstance(card, dict):
+        custom = (card.get("text") or "").strip()
+        if custom:
+            topics.append(" ".join(custom.split()[:8]))
+        override = (card.get("topic_override") or "").strip()
+        if override:
+            topics.append(override)
+    try:
+        topics.extend(get_bluesky_trending(limit=10) or [])
+    except Exception:
+        pass
+    topics.append("breaking news")  # Google News top-story fallback
+    seen_topics = set()
+    uniq = []
+    for t in topics:
+        k = _norm_news_key(t)
+        if k and k not in seen_topics:
+            seen_topics.add(k)
+            uniq.append(t)
+    topics = uniq
+    had_items = False
+    fresh_no_photo = False
+    for topic in topics:
+        try:
+            _verified, _sources, items = verify_news(topic)
+        except Exception:
+            continue
+        if items:
+            had_items = True
+        seen = set()
+        for item in (items or [])[:5]:
+            link = (item.get("link") or "").strip()
+            if not link or link in seen:
+                continue
+            seen.add(link)
+            headline = (item.get("title") or "").strip() or topic
+            if _promo_topic_cooldown_left(state, headline) is not None:
+                continue
+            img = fetch_og_image(link)
+            if not img or _is_pollinations_url(img):
+                fresh_no_photo = True
+                continue
+            local = download_image(img, topic)
+            if local:
+                log("info", f"photo: real news image for '{headline[:60]}' "
+                            f"(from {item.get('source') or 'news'})")
+                return topic, headline, {"url": img, "source": "news",
+                                         "alt": headline, "local_path": local}
+            fresh_no_photo = True
+    if not had_items:
+        LAST_BSKY_SKIP = "no_news"
+        log("info", "promo: no trending/top news available - skipping")
+    elif fresh_no_photo:
+        LAST_BSKY_SKIP = "no_photo"
+        log("info", "promo: fresh news exists but no real image could "
+                    "be fetched - skipping")
+    else:
+        LAST_BSKY_SKIP = "cooldown"
+        log("info", "promo: every fresh news story was already used "
+                    "within 24h - cooldown, skipping")
+    return None, None, None
+
+
+def _refresh_card(card):
+    """Re-read a card's UI settings fresh from data/cards.json - the
+    UI is the source of truth for EVERY post (user's strict order,
+    2026-11-23). File cards are matched by name; a card deleted or
+    renamed mid-run falls back to the in-memory card. The worker runs
+    file cards only (the DB is empty on GitHub Actions), so DB cards
+    are returned unchanged."""
+    if not isinstance(card, dict) or card.get("id"):
+        return card
+    name = card.get("name", "")
+    try:
+        for c in load_file_cards():
+            if c.get("name") == name:
+                return c
+    except Exception as e:
+        log("warning", f"card '{name}': could not re-read settings, "
+                       f"using in-memory card: {e}")
+    return card
+
+
+def log_card_settings(card):
+    """Rebuild #7: print the card's EFFECTIVE settings at the start of
+    every run, so the workflow log proves the worker is using exactly
+    the values saved in the UI (data/cards.json) - nothing invented,
+    nothing defaulted silently."""
+    name = card.get("name", "")
+    reply_own, reply_others, rpr, lb = card_reply_settings(card)
+    log("info", f"card '{name}': settings type={card.get('type', '')} "
+                f"posts/day={card_posts_per_day(card)} "
+                f"posts/run={card_posts_per_run(card)} "
+                f"interval={card_interval_minutes(card)}m "
+                f"image_ratio={card_bsky_image_ratio(card)} "
+                f"tone={card_tone(card)} spread={card_spread_mode(card)} "
+                f"replies: own={reply_own} others={reply_others} "
+                f"{rpr}/run lookback={lb}d "
+                f"days={sorted(card_days_of_week(card))} "
+                f"jitter={card_jitter_minutes(card)}m "
+                f"week_cap={card_max_posts_per_week(card)} "
+                f"month_cap={card_max_posts_per_month(card)} "
+                f"retry={card_retry_after_minutes(card)}m/"
+                f"{card_retry_max(card)} "
+                f"replies/day={card_replies_per_day(card)}")
 
 
 def fetch_photo(topic):
@@ -1402,11 +1744,9 @@ News: {headline}
 Blog link: {link}
 """
 
-BSKY_PROMO_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH that markets
-this link and makes people want to click it. Sound like a real person
-sharing something worth seeing, not an ad. Keep it under 250 characters.
-End with the link on its own line.
+BSKY_PROMO_NEWS_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 200 characters. End with the link on its own line.
 Style: {tone}
+News: {headline}
 Link: {link}
 """
 
@@ -1695,8 +2035,14 @@ def card_days_of_week(card):
 
 
 def card_jitter_minutes(card):
+    """Rebuild #7: a MISSING jitter means 10 (the dashboard default) -
+    the worker and the UI must agree, so a card saved without the field
+    still jitters like the UI shows. An explicit 0 still means no jitter."""
+    v = card.get("jitter_minutes")
+    if v is None:
+        return 10
     try:
-        return max(0, min(30, int(card.get("jitter_minutes") or 0)))
+        return max(0, min(30, int(v)))
     except Exception:
         return 10
 
@@ -1733,8 +2079,14 @@ def card_retry_after_minutes(card):
 
 
 def card_retry_max(card):
+    """Rebuild #7: a MISSING retry_max means 2 (the dashboard default)
+    - the worker and the UI must agree. An explicit 0 still means
+    no retries."""
+    v = card.get("retry_max")
+    if v is None:
+        return 2
     try:
-        return max(0, int(card.get("retry_max") or 0))
+        return max(0, int(v))
     except Exception:
         return 2
 
@@ -2674,12 +3026,25 @@ def _card_bluesky_post(card, state, article, promo=False):
       (content-type image/*) and cropped to the card's Bluesky image
       ratio (16:9 / 1:1 / 4:5). No image, or a download that fails =
       the post is SKIPPED ("no photo, skipped") - never text-only.
-    - Promo (or a post card with a link): the link's og:image, then
-      the latest article's image, then a stock photo for the card's
-      topic. No verified photo = skipped, never link-only.
+    - Promo (or a post card with a link): a FRESH news story is picked
+      (rebuild #7.1 - Bluesky trending first, else a Google News top
+      story) and the photo is that story's REAL online image (the
+      news article's og:image; text/logo/watermark is FINE; never
+      Pollinations or stock). No verified real photo for that news =
+      skipped, never link-only. The caption is written about THAT
+      news story, so the same link gets a different caption every time.
+    - The post text is ALWAYS a caption (hook + link), never the bare
+      link: the card's custom text, else an AI hook about the news,
+      else a built-in hook. Total text stays under 300 chars.
+    - Per-topic / per-caption cooldown (rebuild #7.1, 24h): the same
+      news story / caption is never reused within 24h. The LINK itself
+      has no cooldown - it may post many times a day with different
+      captions. A cooldown skip is a clean no-op (LAST_BSKY_SKIP).
     The photo is verified BEFORE logging in or writing any text, so a
     failed photo never wastes an AI call. The post text uses the
     card's tone."""
+    global LAST_BSKY_SKIP
+    LAST_BSKY_SKIP = None
     name = card.get("name", "")
     tone_text = ARTICLE_TONES[card_tone(card)]
     accs = [a for a in list_accounts()
@@ -2694,23 +3059,52 @@ def _card_bluesky_post(card, state, article, promo=False):
         log("warning", f"card '{name}': no photo, skipped - nothing to post")
         return False
     # --- PHOTO-FIRST gate (before login, before any AI text) ---
+    # Rebuild #7.1: a promo post's photo is a REAL image from online
+    # news FOR THE NEWS STORY in its caption (picked fresh here, so
+    # the caption and the image are always about the same story).
     image_path = None
     image_alt = ""
+    news_topic = ""
+    news_headline = ""
     if use_link:
-        photo = _promo_photo(card, link, state)
+        news_topic, news_headline, photo = _pick_fresh_promo_news(card, state)
         if not photo:
+            # _pick_fresh_promo_news already logged why (LAST_BSKY_SKIP).
             log("warning", f"card '{name}': no photo, skipped - Bluesky post "
-                           "needs a verified photo")
+                           "needs a verified real news photo")
+            return False
+        if _is_pollinations_url(photo.get("url", "")):
+            log("warning", f"card '{name}': no photo, skipped - promo photo "
+                           "is AI-generated, not a real news image")
+            LAST_BSKY_SKIP = "no_photo"
+            return False
+        # Defense in depth: the picker already skips used stories,
+        # but never post a story that was used within 24h even if
+        # the pick came from somewhere else.
+        if _promo_topic_cooldown_left(state, news_headline) is not None:
+            log("info", f"card '{name}': news story already used within "
+                        "24h - cooldown, skipping")
+            LAST_BSKY_SKIP = "cooldown"
             return False
         image_path = prepare_bsky_image(photo["local_path"],
                                         card_bsky_image_ratio(card))
-        image_alt = photo.get("alt", "") or (article.get("title", "")
-                                             if article else "")
+        image_alt = photo.get("alt", "") or news_headline
     else:
         image_url = (article or {}).get("image_url", "")
         if not image_url:
             log("warning", f"card '{name}': no photo, skipped - article has no image")
             return False
+        if _is_pollinations_url(image_url):
+            # Rebuild #7: an AI-generated article image must never go
+            # to Bluesky - swap it for a real news image, or skip.
+            news = _news_photo((article or {}).get("title", "") or "breaking news",
+                               state)
+            if not news:
+                log("warning", f"card '{name}': no photo, skipped - article "
+                               "image is AI-generated and no real news "
+                               "image was found")
+                return False
+            image_url = news["url"]
         local = download_image(image_url, article.get("title", ""))
         if not local:
             log("warning", f"card '{name}': no photo, skipped - article image "
@@ -2735,26 +3129,57 @@ def _card_bluesky_post(card, state, article, promo=False):
         if not client:
             continue
         if use_link:
-            text = card.get("text") or ai_write(
-                BSKY_PROMO_PROMPT.format(link=link, tone=tone_text), max_tokens=400)
+            # Rebuild #7.1: the caption is written about THIS post's
+            # news story (news_headline from the fresh pick above),
+            # so every post about the same link reads differently.
+            text = (card.get("text") or "").strip()
             if not text:
-                text = link
-            if link not in text:
-                text = f"{text}\n{link}"
+                text = (ai_write(
+                    BSKY_PROMO_NEWS_PROMPT.format(
+                        headline=(news_headline or news_topic)[:150],
+                        link=link, tone=tone_text),
+                    max_tokens=400) or "").strip()
+            if not text or text == link:
+                # The AI failed (keys down / rate limit): use a
+                # built-in hook - NEVER the bare link on its own.
+                hook = _promo_fallback_hook(card, link, state)
+                if hook is None:
+                    log("info", f"card '{name}': no fresh caption "
+                                "available within 24h - cooldown, skipping")
+                    LAST_BSKY_SKIP = "cooldown"
+                    return False
+                text = hook
+            text = _fit_bsky_text(text, link)
+            # Per-caption cooldown (rebuild #7.1): the same caption
+            # is never posted twice within 24h.
+            if _promo_caption_cooldown_left(state, text) is not None:
+                log("info", f"card '{name}': caption already used "
+                            "within 24h - cooldown, skipping")
+                LAST_BSKY_SKIP = "cooldown"
+                return False
             label = f"card promo ({acc['handle']})"
         else:
-            text = card.get("text") or ai_write(
-                BSKY_POST_PROMPT.format(headline=article["title"],
-                                        link=article["url"], tone=tone_text),
-                max_tokens=400)
+            text = (card.get("text") or "").strip()
             if not text:
-                text = f"{article['title']}\n{article['url']}"
+                text = (ai_write(
+                    BSKY_POST_PROMPT.format(headline=article["title"],
+                                            link=article["url"], tone=tone_text),
+                    max_tokens=400) or "").strip()
+            if not text:
+                text = article["title"]
+            text = _fit_bsky_text(text, article["url"])
             label = f"card post ({acc['handle']})"
         if retry_with_backoff(
                 lambda: bluesky_post(client, text, image_path=image_path,
                                      image_alt=image_alt or (article["title"] if article else "")),
                 attempts=3, base_delay=5, label=label):
             record_bsky_post(state, acc["handle"])
+            if use_link:
+                # Rebuild #7.1: record the news story AND the exact
+                # caption as used, so neither is reused within 24h.
+                if news_headline:
+                    _record_promo_topic_posted(state, news_headline)
+                _record_promo_caption_posted(state, text)
             ok = True
     return ok
 
@@ -2768,21 +3193,40 @@ def _post_bsky_card(card, state, due_slots):
     A post card with a link posts the link; without a link it posts
     the newest article this card has not posted yet (rotation - the
     same article is never posted all day). In dry-run/test mode nothing
-    is counted and no slot is marked used."""
+    is counted and no slot is marked used.
+    Rebuild #7.1: the same LINK may post many times a day (up to
+    posts_per_day), but the same news topic / caption is never reused
+    within 24h (posted_promo_topics + posted_promo_captions in
+    state.json) - a cooldown skip is a clean no-op, not a failure.
+    The card's UI settings are re-read fresh from data/cards.json
+    BEFORE EACH POST and the effective settings are logged, so the
+    workflow log proves the UI was checked for every single post."""
     name = card.get("name", "")
-    link = (card.get("link") or "").strip()
-    remaining = card_caps_remaining(state, name, card)
-    if remaining is not None and remaining <= 0:
-        log("info", f"card '{name}': post cap reached - skipping")
-        return 0, "post cap reached"
-    max_posts = card_posts_per_run(card)
-    if due_slots:
-        max_posts = min(max_posts, len(due_slots))
-    if remaining is not None:
-        max_posts = min(max_posts, remaining)
     dry = is_dry_run()
     made = 0
-    while made < max_posts:
+    cooldown_hit = False
+    cap_hit = False
+    while True:
+        # Strict UI obedience (user order 2026-11-23): re-read the
+        # card fresh from data/cards.json BEFORE EACH POST and log
+        # its effective settings, so the workflow log proves the UI
+        # was checked for every single post. Settings are never
+        # cached across posts within a run - a UI change mid-run
+        # (new link, lower cap, fewer posts/run) takes effect on
+        # the very next post.
+        card = _refresh_card(card)
+        log_card_settings(card)
+        # Caps re-derived from the FRESH settings.
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        link = (card.get("link") or "").strip()
         if link:
             target, use_promo = None, True
         else:
@@ -2798,16 +3242,27 @@ def _post_bsky_card(card, state, due_slots):
                 if target and target.get("url"):
                     _mark_bsky_posted(state, name, target["url"])
         else:
+            if LAST_BSKY_SKIP == "cooldown":
+                cooldown_hit = True
             break
-    if made and not dry:
+    if made and not dry and due_slots:
         mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        # A cooldown skip is a clean no-op, NOT a failure (no retry).
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
     return made, ("" if made else "post failed or skipped")
 
 
-def _update_card_stats(state, card, ok, last_error):
+def _update_card_stats(state, card, ok, last_error, post_only=False):
     """Per-card stats: success/fail counters + last error + last run.
     DB cards (Flask) update the cards table; file cards (data/cards.json)
-    are tracked in state.json (committed back to the repo)."""
+    are tracked in state.json (committed back to the repo).
+    Rebuild #7: a post-only run (slot-triggered) does NOT reset the
+    card's interval clock (file_card_runs), so the next interval run
+    - and its reply checks - still happens on schedule. The
+    success/fail counters still update."""
     name = card.get("name", "")
     if card.get("id"):
         conn = db_connect()
@@ -2841,11 +3296,12 @@ def _update_card_stats(state, card, ok, last_error):
             s["last_ok"] = False
             s["last_error"] = last_error
         s["last_run"] = now_iso()
-        state.setdefault("file_card_runs", {})[name] = now_iso()
+        if not post_only:
+            state.setdefault("file_card_runs", {})[name] = now_iso()
         record_card_run_today(state, name)
 
 
-def execute_card(card, state, test_mode=False):
+def execute_card(card, state, test_mode=False, post_only=False):
     """Run one card once. Returns True on success.
     RUN MODEL (rebuild #5, kept):
     - The card RUNS every `interval` (run every X minutes) to check
@@ -2859,6 +3315,12 @@ def execute_card(card, state, test_mode=False):
       is published and no reply is sent). The posting gate is bypassed
       so the test actually exercises the article path. Test runs do
       not touch the success/fail counters.
+    - post_only=True (rebuild #7): this run was triggered by a DUE
+      POSTING SLOT, not by the card's run interval. It publishes the
+      due post and does NOT check replies (replies stay on the
+      interval rhythm, so they never spam). It also does NOT reset
+      the interval clock, so the next interval run still happens on
+      schedule.
     PAUSE is per-card: pausing one card pauses ONLY that card (the
     caller skips paused cards). The global paused=true in config is
     only the emergency "Pause All" switch.
@@ -2891,6 +3353,12 @@ def execute_card(card, state, test_mode=False):
         log("warning", f"TEST RUN card '{name}': dry-run forced - the article "
                        "will be written and the photo verified, but NOTHING "
                        "will be published and NO reply will be sent")
+    # Rebuild #7: log the card's EFFECTIVE settings first, so the
+    # workflow log proves the worker uses exactly the UI values.
+    log_card_settings(card)
+    if post_only:
+        log("info", f"card '{name}': post-only run (a posting slot is due; "
+                    "replies stay on the interval rhythm)")
     # The posting gate: is it a scheduled posting time right now?
     # (Bypassed for test runs so the test exercises the article path.)
     post_due, due_slots = card_post_due(card, state)
@@ -2900,6 +3368,9 @@ def execute_card(card, state, test_mode=False):
 
     def _do_replies(article):
         """Replies for this card (own + others) - runs on EVERY run."""
+        if post_only:
+            # Rebuild #7: a slot-triggered run never checks replies.
+            return
         reply_own, reply_others, rpr, lb = card_reply_settings(card)
         if not (reply_own or reply_others):
             return
@@ -2962,7 +3433,8 @@ def execute_card(card, state, test_mode=False):
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
-                ok = made > 0
+                # A 24h-cooldown skip is a clean no-op, not a failure.
+                ok = made > 0 or err == "cooldown"
                 if not ok:
                     last_error = err or "post failed or skipped"
         elif ctype == "bluesky_promo":
@@ -2977,16 +3449,23 @@ def execute_card(card, state, test_mode=False):
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
-                ok = made > 0
+                # A 24h-cooldown skip is a clean no-op, not a failure.
+                ok = made > 0 or err == "cooldown"
                 if not ok:
                     last_error = err or "promo failed or skipped"
         elif ctype == "bluesky_reply":
-            article = latest_article(state)
-            if not article:
-                last_error = "no article yet"
-            else:
-                _do_replies(article)
+            if post_only:
+                # Rebuild #7: a slot-triggered run never checks replies.
+                log("info", f"card '{name}': post-only run - replies stay "
+                            "on the interval rhythm")
                 ok = True
+            else:
+                article = latest_article(state)
+                if not article:
+                    last_error = "no article yet"
+                else:
+                    _do_replies(article)
+                    ok = True
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
             last_error = f"unknown type {ctype}"
@@ -3008,7 +3487,7 @@ def execute_card(card, state, test_mode=False):
         clear_card_retries(state, name)
     elif not no_account:
         record_card_retry(state, name, card)
-    _update_card_stats(state, card, ok, last_error)
+    _update_card_stats(state, card, ok, last_error, post_only=post_only)
     log("info", f"card '{name}' ran ({'ok' if ok else 'no-op'})")
     return ok
 
@@ -3078,14 +3557,30 @@ def run_cards_cycle(state, only=None):
         log("info", "no cards configured (data/cards.json is empty) - nothing to do")
         return
     # File-based cards (data/cards.json) - the GitHub-only control panel.
+    # Rebuild #7 (prompt posting): a card runs when EITHER its run
+    # interval is due (replies + maybe a post) OR a posting slot is due
+    # (post-only run: publish the due post, no replies). A slot-due run
+    # only applies to cards that HAVE slots (posts_per_day > 0) - an
+    # unlimited card (0 = unlimited) has no slots, so its interval
+    # stays the only gate and it can never post on every workflow run.
+    # With the Bluesky workflow on a 10-minute cadence, a due post now
+    # waits at most ~10 minutes instead of a whole run interval.
     for card in file_cards:
         if (card.get("status") or "active") != "active":
             continue
         if only and _card_workflow(card) != only:
             continue
-        if not file_card_due(card, state):
+        interval_due = file_card_due(card, state)
+        post_only = False
+        if not interval_due and card.get("type") in (
+                "bluesky_post", "bluesky_promo", "blogger_post"):
+            if card_posts_per_day(card) > 0:
+                slot_due, _slots = card_post_due(card, state)
+                if slot_due:
+                    post_only = True
+        if not interval_due and not post_only:
             continue
-        execute_card(card, state)
+        execute_card(card, state, post_only=post_only)
         ran_any = True
     if not ran_any:
         log("info", "no card due - nothing published this run")
