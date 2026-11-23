@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T14:40:07.153383+00:00",
-  "last_run": "2026-11-23T14:39:50.915946+00:00",
-  "runs": 8,
+  "generated_at": "2026-11-23T15:02:26.802113+00:00",
+  "last_run": "2026-11-23T15:00:48.563107+00:00",
+  "runs": 9,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -66,11 +66,11 @@
         "2026-11-23T23:05:41.129395+06:00"
       ],
       "next_post_times": [
-        "2026-11-23T20:54:00+06:00",
         "2026-11-23T21:59:00+06:00",
         "2026-11-23T23:04:00+06:00",
         "2026-11-23T23:56:00+06:00",
-        "2026-11-24T00:51:00+06:00"
+        "2026-11-24T00:51:00+06:00",
+        "2026-11-24T02:06:00+06:00"
       ],
       "success": 2,
       "fail": 0,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primotodaynews.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primotodaynews.bsky.social",
-      "enabled": true,
-      "posts_limit": 24,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T14:39:50.917542+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T15:00:48.564612+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Nvidia rehires Huang",
     "SEC probes Nvidia accounting",
     "Avengers: Doomsday runtime confirmed",
-    "Alice Huang espionage allegations",
-    "Trump blames Democrats for selloff",
+    "Nvidia rehires Huang",
+    "Company board reinstates Huang",
     "Army plans Iowa lead detonation",
+    "Ukraine claims Libya warship sinking",
+    "Alice Huang espionage allegations",
+    "Steps to a drunkard's grave meme",
     "Doctor Who Day anniversary",
-    "Grand Theft Auto VI release",
-    "AI sell-off overshadows Anthropic IPO",
-    "Steps to a drunkard's grave meme"
+    "Grand Theft Auto VI release"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T15:02:26.577122+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T15:02:26.575417+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T15:02:26.231709+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T15:00:48.565725+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T15:00:48.564618+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #9 started (--only blogger)",
+      "created_at": "2026-11-23T15:00:48.563125+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T14:40:07.154949+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Avengers: Doomsday runtime confirmed', 'Alice Huang espionage allegations', 'Trump blames Democrats for selloff']",
+      "created_at": "2026-11-23T14:40:07.150693+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "ai health: groq ok (openai/gpt-oss-120b)",
       "created_at": "2026-11-23T11:28:07.026260+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-23T11:28:06.664977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T11:28:01.936351+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T11:28:01.935384+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #3 started (--only blogger)",
-      "created_at": "2026-11-23T11:28:01.933865+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T11:08:45.691473+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Theresa May urges accepting Brexit', 'EU rejects COP31 climate deal', 'Alice Huang espionage allegations', \"Amodei's video games for jobless idea\", 'Boreen daily trivia game']",
-      "created_at": "2026-11-23T11:08:45.686560+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T11:08:45.623695+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T11:08:45.622034+00:00",
       "card": ""
     }
   ]
