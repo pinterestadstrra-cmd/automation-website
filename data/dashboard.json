@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T21:24:29.080880+00:00",
-  "last_run": "2026-11-23T21:24:17.226688+00:00",
-  "runs": 22,
+  "generated_at": "2026-11-23T21:39:13.806698+00:00",
+  "last_run": "2026-11-23T21:37:39.869870+00:00",
+  "runs": 23,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -33,15 +33,15 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T20:50:12.458303+00:00"
+    "BlueSky Trend": "2026-11-23T21:39:13.564980+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 7,
+      "success": 8,
       "fail": 1,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-23T20:50:12.458300+00:00"
+      "last_run": "2026-11-23T21:39:13.564976+00:00"
     }
   },
   "file_cards": [
@@ -55,15 +55,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-23T20:50:12.458303+00:00",
-      "runs_today": 8,
-      "posts_today": 1,
+      "last_run": "2026-11-23T21:39:13.564980+00:00",
+      "runs_today": 9,
+      "posts_today": 2,
       "next_runs": [
-        "2026-11-24T03:35:12.458303+06:00",
-        "2026-11-24T03:50:12.458303+06:00",
-        "2026-11-24T04:05:12.458303+06:00",
-        "2026-11-24T04:20:12.458303+06:00",
-        "2026-11-24T04:35:12.458303+06:00"
+        "2026-11-24T03:54:13.564980+06:00",
+        "2026-11-24T04:09:13.564980+06:00",
+        "2026-11-24T04:24:13.564980+06:00",
+        "2026-11-24T04:39:13.564980+06:00",
+        "2026-11-24T04:54:13.564980+06:00"
       ],
       "next_post_times": [
         "2026-11-24T03:55:00+06:00",
@@ -72,7 +72,7 @@
         "2026-11-24T07:00:00+06:00",
         "2026-11-24T07:58:00+06:00"
       ],
-      "success": 7,
+      "success": 8,
       "fail": 1,
       "last_error": "",
       "color": "",
@@ -115,8 +115,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 4
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -127,12 +136,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -141,10 +150,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T21:24:17.227615+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T21:37:39.871543+00:00"
     }
   ],
   "dry_run": false,
@@ -153,317 +162,317 @@
     "open": false
   },
   "trending": [
-    "Washington girls' sports sex exam law",
-    "Google plans personalized AI TV channel",
-    "Trump says he protected Musk",
-    "Grand Theft Auto VI release",
-    "Claude AI coding tools",
+    "Nvidia rehires Huang",
     "Alice Huang espionage allegations",
     "SEC probes Nvidia accounting",
+    "Washington girls' sports sex exam law",
     "AI sell-off overshadows Anthropic IPO",
-    "Cyclops in Avengers: Doomsday footage",
-    "Ocarina of Time remake"
+    "Grand Theft Auto VI release",
+    "Google plans personalized AI TV channel",
+    "Weather forecasts include lead plume",
+    "Thanksgiving dinner preparations",
+    "Pope Leo praises cycling"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T21:24:28.880247+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T21:24:28.879274+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T21:24:28.525057+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T21:24:17.228144+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T21:24:17.227621+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #22 started (--only blogger)",
-      "created_at": "2026-11-23T21:24:17.226708+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T20:50:12.631770+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-23T20:50:12.627575+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-      "created_at": "2026-11-23T20:50:12.458319+00:00",
+      "created_at": "2026-11-23T21:39:13.565004+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
       "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T20:50:12.457291+00:00",
+      "created_at": "2026-11-23T21:39:13.562395+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "card 'BlueSky Trend': promo posted - event '2026 breakup celebrity news' on 24h cooldown (topic + link+event recorded)",
-      "created_at": "2026-11-23T20:50:12.455813+00:00",
+      "message": "card 'BlueSky Trend': promo posted - event 'cuba democrat exclusive free prisoner rise tension today top' on 24h cooldown (topic + link+event recorded)",
+      "created_at": "2026-11-23T21:39:13.560752+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1500x1500 (ratio 1.00) - unchanged",
-      "created_at": "2026-11-23T20:49:17.864667+00:00",
+      "message": "prepare_bsky_image: published 480x736 (ratio 0.65) - unchanged",
+      "created_at": "2026-11-23T21:38:40.356950+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1500x1500 (ratio 1.00) - kept, no crop",
-      "created_at": "2026-11-23T20:49:17.863795+00:00",
+      "message": "prepare_bsky_image: original 480x736 (ratio 0.65) - kept, no crop",
+      "created_at": "2026-11-23T21:38:40.355771+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: '2026 Celebrity Breakups - E! News' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-23T20:49:17.862349+00:00",
+      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-23T21:38:40.354179+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA celebrity news",
-      "created_at": "2026-11-23T20:49:17.861373+00:00",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-23T21:38:40.352427+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for '2026 Celebrity Breakups - E! News': https://store.fifa.com/cdn/shop/files/image_217bb8c0-803c-4772-9c18-18f1e677f831.jpg?v=1774372210 (from bing-images, query '2026 Celebrity Breakups - E! News', page: https://www.nbcmiami.com/news/sports/2026-world-cup-logo-officially-revealed-by-fifa/3036738/ | Offi - matches 2 key entities (2026, news))",
-      "created_at": "2026-11-23T20:49:17.860310+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Top Democrats urge Cuba to free prisoners as US tensions ris': https://n.nordstrommedia.com/it/848dfb90-7c30-4622-bd46-83ee2822ddd1.jpeg?h=368&w=240&dpr=2 (from bing-images, query 'Top Democrats urge Cuba to free prisoners as US tensions rise | Exclusive - USA Today', page: https://www.walmart.com/ip/FashionOutfit-Women-s-Made-in-USA-Basic-Casual-Solid-Stretchable-Scoop-Ne - matches 2 key entities (top, usa))",
+      "created_at": "2026-11-23T21:38:40.350811+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('2026 Celebrity Breakups - E! News': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-23T20:49:17.858533+00:00",
+      "message": "vision: unavailable - keyword check decides ('Top Democrats urge Cuba to free prisoners as US te': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-23T21:38:40.348977+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
-      "created_at": "2026-11-23T20:49:04.695676+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+      "created_at": "2026-11-23T21:38:27.515617+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
-      "created_at": "2026-11-23T20:49:04.351984+00:00",
+      "message": "google-images: 0 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+      "created_at": "2026-11-23T21:38:27.371017+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-      "created_at": "2026-11-23T20:49:04.189910+00:00",
+      "message": "wikimedia: 0 result(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+      "created_at": "2026-11-23T21:38:27.225798+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-      "created_at": "2026-11-23T20:49:03.912798+00:00",
+      "message": "openverse: search HTTP 500 for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+      "created_at": "2026-11-23T21:38:26.775295+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:49.750702+00:00",
+      "created_at": "2026-11-23T21:38:17.535122+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:49.749252+00:00",
+      "created_at": "2026-11-23T21:38:17.534077+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
-      "created_at": "2026-11-23T20:48:49.748248+00:00",
+      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - rejected (no og:image)",
+      "created_at": "2026-11-23T21:38:17.532604+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5BcDgzSGtkM0lGR0tSdXdLdkczbkNIa1EwRDhMekRrZ0VfejNvdzNmd3Z3bFlUdnFORnR) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T20:48:49.746018+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiswFBVV95cUxPclhXQlpqbzhCMWRZTFZ1RHRZSmppR2xKbUdOeFlfakFUc01zcWdnMDYtN3BJSGhmQms) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T21:38:17.530192+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-23T20:48:49.516798+00:00",
+      "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-23T21:38:17.370330+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette' (0 download(s) tried)",
-      "created_at": "2026-11-23T20:48:49.515879+00:00",
+      "message": "photo: no real photo found for 'Donald Trump News: Breaking Headlines and Video on President Trump - NBC News' (0 download(s) tried)",
+      "created_at": "2026-11-23T21:38:17.369166+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.cheapest-concert-tickets.com/images/artists/50-cent.jpg (page: https://allhiphop.com/news/50-cent-roasts-tony-yayo-for-stealing-his-clothes/ | 50 Cent Tour Tickets - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.514804+00:00",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.restaurantware.com/cdn/shop/files/RWP1207W-E2-LR.jpg?v=1709379050 (page:  - no source page to verify relevance)",
+      "created_at": "2026-11-23T21:38:17.368135+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.bravado.de/cdn/shop/files/50-Cent_Best-Of-50-Cent_2LP_s142079_o208424_a354365_v6825368.e (page: https://www.cheapest-concert-tickets.com/tickets/50-cent.html | 50 Cent auf Vinyl erleben | Bravado  - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.513850+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Donald Trump News Breaking Headlines'",
+      "created_at": "2026-11-23T21:38:17.365649+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://assets.foxdcg.com/dpp-uploaded/images/50-ways-to-catch-a-killer-with-50-cent-nation/seriesLi (page: https://thathollywoodshow.com/latest-news/50-cent-action-channel-ready-to-brawl-on-pluto-tv/ | Watch - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.512896+00:00",
+      "message": "google-images: 0 candidate(s) for 'Donald Trump News Breaking Headlines'",
+      "created_at": "2026-11-23T21:38:17.227758+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://hips.hearstapps.com/hmg-prod/images/hlh090123cvrsept-digitalcvrs-50-resized-64c4269317d23.jp (page: https://nation.foxnews.com/50-ways-to-catch-a-killer-with-50-cent-nation/ | 50 Cent Reveals How He B - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.511956+00:00",
+      "message": "wikimedia: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+      "created_at": "2026-11-23T21:38:17.101260+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._37,_No._50 - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.511025+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.509998+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.508750+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.507672+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:49.506627+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for '50 US news websites Four'",
-      "created_at": "2026-11-23T20:48:49.504189+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for '50 US news websites Four'",
-      "created_at": "2026-11-23T20:48:49.146496+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for '50 US news websites Four'",
-      "created_at": "2026-11-23T20:48:48.983631+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for '50 US news websites Four'",
-      "created_at": "2026-11-23T20:48:48.647441+00:00",
+      "message": "openverse: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+      "created_at": "2026-11-23T21:38:16.303106+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:36.917052+00:00",
+      "created_at": "2026-11-23T21:38:10.204144+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:36.916124+00:00",
+      "created_at": "2026-11-23T21:38:10.203069+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:36.915273+00:00",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): http://upload.wikimedia.org/wikipedia/commons/5/53/Tallest_Structures_in_China.png (page: List of tallest structures in China - Wikiwand - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-23T21:38:10.201521+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:36.914270+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:10.199065+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:36.913336+00:00",
+      "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:09.977475+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:36.912222+00:00",
+      "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:09.850515+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:36.895933+00:00",
+      "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:09.386135+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:36.614885+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T21:38:04.204967+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:36.473898+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T21:38:04.203456+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: search HTTP 500 for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:36.138864+00:00",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.ytimg.com/vi/Nz69XeJ4VHM/maxresdefault.jpg (page: https://vacuumdecision.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOO - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-23T21:38:04.202359+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.electronicshub.org/wp-content/uploads/2022/01/Types-Of-Vacuums.jpg (page: https://cray-fish.de/17-different-types-of-vacuum-cleaners/ | Vacuum Cleaner Types: Find Your Perfec - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-23T21:38:04.201161+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://cleanthefloor.com/wp-content/uploads/2018/01/infographic_types-of-vacuum-cleaners.png (page: https://www.electronicshub.org/types-of-vacuums/ | Different Types of Vacuum Cleaners [Infographic] - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-23T21:38:04.199993+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://allareaappliancellc.com/wp-content/uploads/2017/01/vacuum-cleaner-types.jpg (page: https://cleanthefloor.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOOI - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-23T21:38:04.198728+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:04.194580+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:04.056954+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:03.905526+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+      "created_at": "2026-11-23T21:38:03.451728+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T21:37:55.610217+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T21:37:55.609215+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
+      "created_at": "2026-11-23T21:37:55.607927+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T21:37:55.605299+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
+      "created_at": "2026-11-23T21:37:55.010996+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-23T21:37:54.736640+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "bluesky cycle: no article to link yet",
+      "created_at": "2026-11-23T21:37:54.735479+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-23T21:37:54.733129+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T21:37:54.731351+00:00",
       "card": ""
     }
   ]

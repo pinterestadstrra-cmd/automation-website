@@ -2,6 +2,342 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T21:39:13.808467+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
+    "created_at": "2026-11-23T21:39:13.803460+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+    "created_at": "2026-11-23T21:39:13.565004+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T21:39:13.562395+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': promo posted - event 'cuba democrat exclusive free prisoner rise tension today top' on 24h cooldown (topic + link+event recorded)",
+    "created_at": "2026-11-23T21:39:13.560752+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 480x736 (ratio 0.65) - unchanged",
+    "created_at": "2026-11-23T21:38:40.356950+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 480x736 (ratio 0.65) - kept, no crop",
+    "created_at": "2026-11-23T21:38:40.355771+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-23T21:38:40.354179+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-23T21:38:40.352427+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Top Democrats urge Cuba to free prisoners as US tensions ris': https://n.nordstrommedia.com/it/848dfb90-7c30-4622-bd46-83ee2822ddd1.jpeg?h=368&w=240&dpr=2 (from bing-images, query 'Top Democrats urge Cuba to free prisoners as US tensions rise | Exclusive - USA Today', page: https://www.walmart.com/ip/FashionOutfit-Women-s-Made-in-USA-Basic-Casual-Solid-Stretchable-Scoop-Ne - matches 2 key entities (top, usa))",
+    "created_at": "2026-11-23T21:38:40.350811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: unavailable - keyword check decides ('Top Democrats urge Cuba to free prisoners as US te': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+    "created_at": "2026-11-23T21:38:40.348977+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+    "created_at": "2026-11-23T21:38:27.515617+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+    "created_at": "2026-11-23T21:38:27.371017+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+    "created_at": "2026-11-23T21:38:27.225798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 500 for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+    "created_at": "2026-11-23T21:38:26.775295+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:17.535122+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:17.534077+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - rejected (no og:image)",
+    "created_at": "2026-11-23T21:38:17.532604+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiswFBVV95cUxPclhXQlpqbzhCMWRZTFZ1RHRZSmppR2xKbUdOeFlfakFUc01zcWdnMDYtN3BJSGhmQms) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T21:38:17.530192+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T21:38:17.370330+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Donald Trump News: Breaking Headlines and Video on President Trump - NBC News' (0 download(s) tried)",
+    "created_at": "2026-11-23T21:38:17.369166+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.restaurantware.com/cdn/shop/files/RWP1207W-E2-LR.jpg?v=1709379050 (page:  - no source page to verify relevance)",
+    "created_at": "2026-11-23T21:38:17.368135+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T21:38:17.365649+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T21:38:17.227758+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T21:38:17.101260+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T21:38:16.303106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:10.204144+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:10.203069+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): http://upload.wikimedia.org/wikipedia/commons/5/53/Tallest_Structures_in_China.png (page: List of tallest structures in China - Wikiwand - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T21:38:10.201521+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:10.199065+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:09.977475+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:09.850515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:09.386135+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:04.204967+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T21:38:04.203456+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.ytimg.com/vi/Nz69XeJ4VHM/maxresdefault.jpg (page: https://vacuumdecision.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOO - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T21:38:04.202359+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.electronicshub.org/wp-content/uploads/2022/01/Types-Of-Vacuums.jpg (page: https://cray-fish.de/17-different-types-of-vacuum-cleaners/ | Vacuum Cleaner Types: Find Your Perfec - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T21:38:04.201161+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://cleanthefloor.com/wp-content/uploads/2018/01/infographic_types-of-vacuum-cleaners.png (page: https://www.electronicshub.org/types-of-vacuums/ | Different Types of Vacuum Cleaners [Infographic] - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T21:38:04.199993+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://allareaappliancellc.com/wp-content/uploads/2017/01/vacuum-cleaner-types.jpg (page: https://cleanthefloor.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOOI - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T21:38:04.198728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:04.194580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:04.056954+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:03.905526+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T21:38:03.451728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T21:37:55.610217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T21:37:55.609215+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
+    "created_at": "2026-11-23T21:37:55.607927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T21:37:55.605299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
+    "created_at": "2026-11-23T21:37:55.010996+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T21:37:54.736640+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-23T21:37:54.735479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T21:37:54.733129+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T21:37:54.731351+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-23T21:37:54.478541+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T21:37:39.872561+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-23T21:37:39.871552+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #23 started (--only bluesky)",
+    "created_at": "2026-11-23T21:37:39.869893+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T21:24:29.081871+00:00",
     "card": ""
   },
@@ -861,342 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://images.pexels.com/photos/16465430/pexels-photo-16465430.jpeg?cs=srgb&dl=pexels-george-chambe (page:  - no source page to verify relevance)",
     "created_at": "2026-11-23T19:52:59.676167+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://images.pexels.com/photos/16465430/pexels-photo-16465430.jpeg?cs=srgb&dl=pexels-george-chambe (page: Older Latina Woman Photos, Download The BEST Free Older Latina Woman Stock Photos & HD Images - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:59.674971+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 2 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:59.672700+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:59.492901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:59.368250+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:59.016423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:49.815161+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:49.814228+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/9e97971ada656c60ed13268190771036l-m899522643rd-w960_h720.jpg (page: https://www.redfin.com/city/25016/WA/Ravensdale | Ravensdale, WA Homes for Sale & Real Estate | Real - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:49.813287+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/9e97971ada656c60ed13268190771036l-m2011726038rd-w960_h720.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | Ravensdale, WA Homes for Sale & Re - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:49.812257+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/7f4e8572abac2432cbc23f411c220073l-m4156798674od-w480_h360_x2.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | Ravensdale, WA Real Estate - Raven - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:49.810977+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://photos.zillowstatic.com/fp/1ba1c1efac3c4cf8e9f8c3580633879a-cc_ft_1536.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | 27230 SE 271st St, Ravensdale, WA  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:49.809415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:49.806720+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:49.629498+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:49.489550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-23T19:52:48.903825+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:40.849554+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:40.848204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:52:40.846866+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPZENfX1RlWTAwQWZEUnF2OTMyU2Mtb0N2Mi12R3ZzYUlmY1k2aGhka3JOZE82QWZUSUN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:52:40.844121+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T19:52:40.449262+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News' (0 download(s) tried)",
-    "created_at": "2026-11-23T19:52:40.448324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Red_for_the_Palestinian_and_Global_Intifada (page: https://commons.wikimedia.org/wiki/File:Red_for_the_Palestinian_and_Global_Intifada._A_Socialist_Int - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:40.447446+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Mikhaila_Peterson_Fuller_and_Jordan_Peterso (page: https://commons.wikimedia.org/wiki/File:Mikhaila_Peterson_Fuller_and_Jordan_Peterson_on_Ron_Johnson_ - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:40.446464+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/La_coalition_des_Rois%2C_ou_des_brigands_co (page: https://commons.wikimedia.org/wiki/File:La_coalition_des_Rois,_ou_des_brigands_couronn%C3%A9s,_contr - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:40.445419+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/e/ea/Jordan_Peterson_in_2024.jpg?utm_source=commons.w (page: https://commons.wikimedia.org/wiki/File:Jordan_Peterson_in_2024.jpg | File:Jordan Peterson in 2024.j - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:40.444338+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Coalition_The_fox_and_badger_both_in_a_hole (page: https://commons.wikimedia.org/wiki/File:Coalition_The_fox_and_badger_both_in_a_hole_(BM_1868,0808.49 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:40.443123+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 0 candidate(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-23T19:52:40.440622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-23T19:52:40.310833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-23T19:52:40.174602+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'US political coalition calls US'",
-    "created_at": "2026-11-23T19:52:39.697731+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:30.961044+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:30.959726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:30.957385+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:30.683258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:30.555334+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:30.176629+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:23.401966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:23.400993+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://www.worksheetsplanet.com/wp-content/uploads/2022/09/Area-of-a-Triangle-scaled.jpg (page: Area of a Triangle (Formula + Example) - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:23.399751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:23.397452+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:23.239326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:23.092791+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-23T19:52:22.673808+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:14.899570+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:14.898667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:52:14.897382+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxOS0Q3OWtMMEhzenZnb2tPZlAyTWZuRGdsRmlySGZkOGZUNS1lMTNBSXVGZ2FoOVZRaFJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:52:14.894955+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T19:52:14.510774+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Donald Trump News: Breaking Headlines and Video on President Trump - NBC News' (0 download(s) tried)",
-    "created_at": "2026-11-23T19:52:14.509744+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.husseyseating.com/wp-content/uploads/2024/10/15-Footprint-Center-Arena-Fixed-Quattro-Cla (page: Mortgage Matchup Center Seating by Hussey Seating Company - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T19:52:14.508422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T19:52:14.505945+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T19:52:14.366003+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T19:52:14.182646+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T19:52:13.649246+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:05.690952+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:52:05.689727+00:00",
     "card": ""
   }
 ]
