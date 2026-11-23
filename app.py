@@ -150,15 +150,19 @@ def _load_env_bluesky_accounts():
 
 ENV_BLUESKY_ACCOUNTS = _load_env_bluesky_accounts()
 
-# Gemini models to try, in order (free-tier friendly first).
+# Gemini models to try, in order (latest first).
 # Rebuild #7.4: gemini-2.5-flash-lite is DEAD for new users (live
 # API error 2026-11-23: HTTP 404 "no longer available to new users -
 # use models/gemini-3.5-flash-lite") - it is now LAST, never first.
-# The list stays a LIST on purpose: one retirement must never kill
-# the AI again, failover walks the whole list.
-GEMINI_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite",
-                 "gemini-2.5-flash", "gemini-2.0-flash",
-                 "gemini-2.5-flash-lite"]
+# User order 2026-11-23: install the LATEST Gemini model. Nov 2026
+# lineup: Gemini 4 Argon (flagship), Gemini 4 Hydrogen (fast,
+# lower-cost), Gemini 3.8 Flash (Google's recommended default for new
+# projects), then 3.5 Flash-Lite. Failover walks the whole list, so a
+# model that 404s costs one attempt and the next one is tried.
+GEMINI_MODELS = ["gemini-4-argon", "gemini-4-hydrogen",
+                 "gemini-3.8-flash", "gemini-3.5-flash-lite",
+                 "gemini-3.1-flash-lite", "gemini-2.5-flash",
+                 "gemini-2.0-flash", "gemini-2.5-flash-lite"]
 # Groq models to try, in order (free tier, confirmed model ids on
 # console.groq.com/docs/models, 2026-11-23). gpt-oss are reasoning
 # models - see _groq_call (reasoning_effort + max_completion_tokens).
