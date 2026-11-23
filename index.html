@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automation Website - Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js"></script>
+<!-- No synchronous libsodium script here on purpose: the library is
+  loaded ON DEMAND (see ensureSodium) from jsDelivr with an unpkg
+  fallback, so a slow connection can never block the page or break
+  adding a Bluesky account with "sodium is not defined". -->
 <style>
   /* FLAT UI - white / sky-blue / red / teal, all bright. No gradients,
      no heavy shadows, no black backgrounds. Contained, lag-free layout.
@@ -292,6 +295,15 @@
         <h2>Next worker run</h2>
         <div style="font-size:18px;font-weight:700;color:#0284c7" id="nextRunText">—</div>
         <div class="meta" style="font-size:13px;color:#475569">The worker runs every 30 minutes (GitHub Actions). Press "Run worker now" to run it immediately.</div>
+        <div class="note" style="margin-top:10px">
+          <b>Two separate workflows:</b> Blogger and Bluesky run as two
+          GitHub Actions workflows (<code>Automation Blogger</code> and
+          <code>Automation Bluesky</code>) - each can be enabled or
+          disabled on its own. While the Blogger API is restricted by
+          Google, keep the Blogger workflow disabled and run Bluesky
+          only. Pausing is per card - each card's own Pause button
+          stops only that card.
+        </div>
       </div>
 
       <div class="stats">
@@ -359,7 +371,7 @@
           <input type="checkbox" id="setBoldFormat" checked>
         </div>
         <div class="row-btns">
-          <button class="btn-red" id="pauseBtn">Pause all</button>
+          <button class="btn-red" id="pauseBtn">Pause all (emergency)</button>
           <span class="pill" id="pauseState">Running</span>
         </div>
       </div>
@@ -455,6 +467,10 @@
             <button type="submit" class="btn-teal">Add / update account</button>
           </div>
         </form>
+        <div id="secretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="secretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retrySecretBtn" style="margin-left:8px">Retry Secret save</button>
+        </div>
         <div class="note" style="margin-top:10px">
           Accounts you add here are saved <b>in this browser</b> and in the
           <code>BLUESKY_ACCOUNTS</code> secret (encrypted - only you can
@@ -898,7 +914,7 @@ async function loadStatus() {
   const paused = String(settings.paused || "false").toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
-  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
+  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all (emergency)";
   const dry = String(settings.dry_run || data.dry_run || "false").toLowerCase() === "true";
   $("dryBanner").classList.toggle("hidden", !dry);
   const cb = data.circuit_breaker || {};
@@ -1119,9 +1135,10 @@ function updateCountdown() {
   if (now.getMinutes() < 30) next.setMinutes(30);
   else { next.setMinutes(0); next.setHours(next.getHours() + 1); }
   const diff = Math.max(0, Math.floor((next - now) / 1000));
-  const mm = String(Math.floor(diff / 60)).padStart(2, "0");
+  const hh = String(Math.floor(diff / 3600)).padStart(2, "0");
+  const mm = String(Math.floor((diff % 3600) / 60)).padStart(2, "0");
   const ss = String(diff % 60).padStart(2, "0");
-  el.textContent = "Next run in " + mm + ":" + ss + " (at " +
+  el.textContent = "Next run in " + hh + ":" + mm + ":" + ss + " (at " +
     String(next.getHours()).padStart(2, "0") + ":" +
     String(next.getMinutes()).padStart(2, "0") + " Dhaka)";
 }
@@ -1183,7 +1200,7 @@ function fillConfigInputs() {
   const paused = String(config.paused || false).toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
-  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
+  $("pauseBtn").textContent = paused ? "Resume all" : "Pause all (emergency)";
   $("dryBanner").classList.toggle("hidden",
     String(config.dry_run || "false").toLowerCase() !== "true");
 }
@@ -1409,19 +1426,11 @@ function nextRunsForCard(c, count, lastRunIso) {
   count = count || 5;
   const now = Date.now();
   const out = [];
-  const times = parseScheduleTimes(c);
-  if (times.length) {
-    // Dhaka wall clock = UTC ms + 6h. Find Dhaka midnight (as a UTC instant).
-    let dayStart = Math.floor((now + DHAKA_MS) / 86400000) * 86400000 - DHAKA_MS;
-    for (let d = 0; d < 370 && out.length < count; d++) {
-      for (const [hh, mm] of times) {
-        const cand = dayStart + d * 86400000 + (hh * 60 + mm) * 60000;
-        if (cand > now) out.push(new Date(cand));
-        if (out.length >= count) break;
-      }
-    }
-    return out.slice(0, count);
-  }
+  // Runs are interval-based ONLY. Fixed schedule_times are POSTING
+  // times (handled by nextPostTimesForCard), not run times - the
+  // worker runs a card every `interval` and only posts at a scheduled
+  // posting time. (An earlier version used fixed times as run times;
+  // the worker never did, so the preview lied.)
   const interval = cardIntervalMin(c) * 60000;
   let base = lastRunIso ? new Date(lastRunIso).getTime() : NaN;
   let nxt = isNaN(base) ? now + interval : base + interval;
@@ -1521,22 +1530,29 @@ function intervalLabel(c) {
   if (h > 0) return "every " + h + "h";
   return "every " + (m > 0 ? m : 30) + "m";
 }
+/* ---------- live countdown (HH:MM:SS, ticks every second) ----------
+   Every card row (and the card edit view) shows a live countdown to
+   its NEXT POST and its NEXT RUN, in hours:minutes:seconds
+   (e.g. 01:23:45), ticking every second with no page refresh. The
+   countdown target is the card's real next posting slot (auto-spread
+   slot + jitter, or fixed time) and its real next run. When the time
+   is due or overdue it shows "due now", never a negative timer. */
 function countdownText(iso) {
   if (!iso) return "never run";
   const diff = new Date(iso).getTime() - Date.now();
   if (diff <= 0) return "due now";
-  const mins = Math.floor(diff / 60000);
-  if (mins < 60) return "in " + mins + "m";
-  const h = Math.floor(mins / 60);
-  if (h < 24) return "in " + h + "h " + (mins % 60) + "m";
-  return "in " + Math.floor(h / 24) + "d " + (h % 24) + "h";
+  const total = Math.floor(diff / 1000);
+  const h = String(Math.floor(total / 3600)).padStart(2, "0");
+  const m = String(Math.floor((total % 3600) / 60)).padStart(2, "0");
+  const s = String(total % 60).padStart(2, "0");
+  return h + ":" + m + ":" + s;
 }
 function tickCountdowns() {
   document.querySelectorAll("[data-next]").forEach((el) => {
     el.textContent = countdownText(el.dataset.next);
   });
 }
-setInterval(tickCountdowns, 30000);
+setInterval(tickCountdowns, 1000);
 
 /* ---------- card enrichment (status, counters, next runs) ---------- */
 function enrichCard(c) {
@@ -1620,6 +1636,7 @@ function renderCardList(tab) {
   rows.forEach((x) => {
     const c = x.c, i = x.i;
     const e = enrichCard(c);
+    const knownAccs = allAccountHandles();
     const div = document.createElement("div");
     div.className = "card-row" + (ui.selected.has(i) ? " sel" : "");
     const perDay = Number(c.posts_per_day || 0);
@@ -1657,6 +1674,10 @@ function renderCardList(tab) {
       (c.type === "blogger_post" && c.bold_format === false ? " · no bold" : "") +
       "</div>" +
       (c.notes ? '<div class="meta">Note: ' + esc(c.notes) + "</div>" : "") +
+      (c.type !== "blogger_post" && !knownAccs.length
+        ? '<div class="meta" style="color:#dc2626">No Bluesky account added — this card cannot post or reply. Add one in the Bluesky tab.</div>' : "") +
+      (c.type !== "blogger_post" && c.account_handle && knownAccs.length && !knownAccs.includes(c.account_handle)
+        ? '<div class="meta" style="color:#dc2626">Account ' + esc(c.account_handle) + ' not found — add it first (Bluesky tab).</div>' : "") +
       (e.lastError ? '<div class="meta" style="color:#dc2626">Last error: ' + esc(e.lastError) + "</div>" : "") +
       "</span></label>" +
       '<div class="actions">' +
@@ -1740,8 +1761,26 @@ async function saveCards(msg) {
     return false;
   }
 }
+/* ---------- workflow dispatch (Blogger and Bluesky are SEPARATE) ----------
+   Blogger and Bluesky run as TWO GitHub Actions workflows, each
+   independently enable/disable-able:
+   - automation-blogger.yml  -> python app.py --worker --only blogger
+   - automation-bluesky.yml  -> python app.py --worker --only bluesky
+   A card's Run/Test dispatches ONLY its own workflow. "Run worker now"
+   dispatches both (each in its own try, so a disabled workflow does
+   not block the other). The OLD single automation.yml must be DELETED
+   from the repo - if it stays enabled it runs everything a third
+   time and double-posts. */
+function workflowFileForCardType(type) {
+  return type === "blogger_post" ? "automation-blogger.yml" : "automation-bluesky.yml";
+}
+async function dispatchWorkflow(file) {
+  await gh("/actions/workflows/" + file + "/dispatches", "POST", { ref: BRANCH });
+}
 async function requestCardRun(name) {
   if (needToken()) return;
+  const card = cards.find((c) => c.name === name);
+  const wf = workflowFileForCardType(card ? card.type : "");
   // 1) Ask the worker to run this card first (state.json flag).
   try {
     let sha = "";
@@ -1762,16 +1801,19 @@ async function requestCardRun(name) {
   } catch (e) {
     showMsg("Could not set run-now (" + e.message + ") - dispatching the worker anyway.", false);
   }
-  // 2) Start the worker.
+  // 2) Start this card's own workflow only.
   try {
-    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
-    showMsg("Worker started - card '" + name + "' will run first.", true);
+    await dispatchWorkflow(wf);
+    showMsg("Worker started (" + wf.replace(".yml", "") + ") - card '" + name + "' will run first.", true);
   } catch (e) {
-    showMsg("Could not start the worker: " + e.message, false);
+    showMsg("Could not start the worker (" + wf + "): " + e.message +
+      " - the workflow may be disabled in GitHub Actions, or the file is not uploaded yet.", false);
   }
 }
 async function requestCardTest(name) {
   if (needToken()) return;
+  const card = cards.find((c) => c.name === name);
+  const wf = workflowFileForCardType(card ? card.type : "");
   // 1) Ask the worker to TEST this card (state.json flag).
   // A test writes the article and verifies the photo, but publishes
   // nothing and sends no reply.
@@ -1794,12 +1836,13 @@ async function requestCardTest(name) {
   } catch (e) {
     showMsg("Could not set test (" + e.message + ") - dispatching the worker anyway.", false);
   }
-  // 2) Start the worker.
+  // 2) Start this card's own workflow only.
   try {
-    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
-    showMsg("Worker started - card '" + name + "' will TEST (nothing published). Check the card log.", true);
+    await dispatchWorkflow(wf);
+    showMsg("Worker started (" + wf.replace(".yml", "") + ") - card '" + name + "' will TEST (nothing published). Check the card log.", true);
   } catch (e) {
-    showMsg("Could not start the worker: " + e.message, false);
+    showMsg("Could not start the worker (" + wf + "): " + e.message +
+      " - the workflow may be disabled in GitHub Actions, or the file is not uploaded yet.", false);
   }
 }
 function cardLogLines(name) {
@@ -1979,9 +2022,12 @@ function openCardForm(tab, index, preset) {
     '<option value="' + t + '"' + (c.type === t ? " selected" : "") + ">" +
     esc(TYPE_LABELS[t]) + "</option>").join("");
   const accOptions = '<option value="">Any account</option>' +
-    accountHandles.map((h) =>
+    allAccountHandles().map((h) =>
       '<option value="' + esc(h) + '"' + (c.account_handle === h ? " selected" : "") + ">" +
       esc(h) + "</option>").join("");
+  const accWarn = allAccountHandles().length === 0
+    ? '<div class="status-msg status-err" style="display:block;margin-top:6px">No Bluesky account added — add one first (Bluesky tab). This card cannot post or reply until an account exists.</div>'
+    : "";
   const colorOptions = Object.keys(COLOR_LABELS).map((k) =>
     '<option value="' + k + '"' + ((c.color || "") === k ? " selected" : "") + ">" +
     esc(COLOR_LABELS[k]) + "</option>").join("");
@@ -2000,7 +2046,7 @@ function openCardForm(tab, index, preset) {
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
     '<div><label for="cfAccount">Bluesky account - which account this card posts and replies as</label>' +
     '<select id="cfAccount">' + accOptions + "</select>" +
-    '<div class="field-help">Empty = the first account. The card always uses this one account.</div></div>' +
+    '<div class="field-help">Empty = the first account. The card always uses this one account.</div>' + accWarn + '</div>' +
     '<div><label for="cfCount">Posts per run - how many posts each time the card runs</label>' +
     '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
@@ -2206,14 +2252,29 @@ function wireCardForm(tab, card) {
       { name: card.name || $("cfName").value, posts_per_day: perDay,
         schedule_times: times, window_start: wStart, window_end: wEnd,
         spread_mode: spread, jitter_minutes: jitter }, 5);
+    const nextRunIso = preview.length ? preview[0].toISOString() : "";
+    const nextPostIso = postTimes.length ? postTimes[0].toISOString() : "";
     $("cfPreview").innerHTML = "<b>Next 5 runs (Dhaka):</b><br>" +
       preview.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>") +
+      (nextRunIso
+        ? '<br><b>Next run in:</b> <span data-next="' + esc(nextRunIso) + '">' +
+          esc(countdownText(nextRunIso)) + "</span>" : "") +
       (perDay > 0 ? "<br><b>" + perDay + " per day max</b>" : "<br>Unlimited per day") +
       (wStart && wEnd ? "<br>Window: " + esc(wStart) + "–" + esc(wEnd) + " Dhaka" : "") +
+      (times.length
+        ? "<br><b>Fixed times (" + esc(times.join(", ")) + ") win over auto-spread</b>" +
+          (perDay > times.length
+            ? " — only " + times.length + " posting time(s) per day, spread is ignored. Clear the fixed times to use auto-spread."
+            : "")
+        : "") +
       (postTimes.length
-        ? "<br><b>Next posting times (" + esc(spread === "best" ? "best times" : "evenly spread") +
+        ? "<br><b>Next posting times (" +
+          esc(times.length ? "fixed times" : (spread === "best" ? "best times" : "evenly spread")) +
           ", jitter ±" + jitter + "m):</b><br>" +
-          postTimes.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>")
+          postTimes.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>") +
+          (nextPostIso
+            ? '<br><b>Next post in:</b> <span data-next="' + esc(nextPostIso) + '">' +
+              esc(countdownText(nextPostIso)) + "</span>" : "")
         : (perDay > 0 ? "" : "<br>Posts at any run (unlimited per day)"));
   };
   ["cfHours", "cfMinutes", "cfTimes", "cfPerDay", "cfWindowStart", "cfWindowEnd", "cfJitter"].forEach((id) => {
@@ -2462,9 +2523,75 @@ function renderAccountList() {
     el.appendChild(div);
   });
 }
+/* ---------- libsodium loader (robust, for the BLUESKY_ACCOUNTS secret) ----------
+   The dashboard encrypts the Bluesky accounts with libsodium before
+   saving them to the GitHub Secret. The library comes from a CDN, and
+   on a slow connection that download can fail - when it did, adding an
+   account failed completely ("sodium is not defined") and the account
+   was lost. So: load it on demand (not at page load), try jsDelivr
+   first, then unpkg, each with a timeout - and NEVER let a failed
+   Secret save lose the account: the account is always saved in this
+   browser first, and a failed Secret save shows a warning + a Retry
+   button instead of an error. */
+const SODIUM_CDNS = [
+  "https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js",
+  "https://unpkg.com/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js",
+];
+let sodiumLoadPromise = null;
+function loadScriptWithTimeout(src, ms) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    const timer = setTimeout(() => { s.remove(); reject(new Error("timeout")); }, ms);
+    s.onload = () => { clearTimeout(timer); resolve(); };
+    s.onerror = () => { clearTimeout(timer); s.remove(); reject(new Error("load failed")); };
+    s.src = src;
+    document.head.appendChild(s);
+  });
+}
+function ensureSodium() {
+  if (typeof sodium !== "undefined" && sodium && sodium.ready) {
+    return Promise.resolve(true);
+  }
+  if (sodiumLoadPromise) return sodiumLoadPromise;
+  sodiumLoadPromise = (async () => {
+    for (const src of SODIUM_CDNS) {
+      try {
+        await loadScriptWithTimeout(src, 10000);
+        if (typeof sodium !== "undefined" && sodium && sodium.ready) {
+          await sodium.ready;
+          return true;
+        }
+      } catch (e) { /* try the next CDN */ }
+    }
+    sodiumLoadPromise = null; // let a later retry try again
+    return false;
+  })();
+  return sodiumLoadPromise;
+}
+const SECRET_PENDING_KEY = "bsky_secret_pending";
+function showSecretWarn(text) {
+  const el = $("secretWarn");
+  if (!el) return;
+  $("secretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideSecretWarn() {
+  const el = $("secretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(SECRET_PENDING_KEY) === "1") {
+      showSecretWarn("The GitHub Secret (BLUESKY_ACCOUNTS) does not have your latest accounts yet - the last save failed (slow connection). The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below.");
+    }
+  } catch (e) {}
+}
 async function updateBskySecret(list) {
   if (needToken()) return false;
   try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded (slow connection) - press \"Retry Secret save\" when your connection is better");
     const pk = await gh("/actions/secrets/public-key");
     await sodium.ready;
     const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
@@ -2474,9 +2601,14 @@ async function updateBskySecret(list) {
     await gh("/actions/secrets/BLUESKY_ACCOUNTS", "PUT", {
       encrypted_value: encB64, key_id: pk.key_id,
     });
+    try { localStorage.removeItem(SECRET_PENDING_KEY); } catch (e) {}
+    hideSecretWarn();
     return true;
   } catch (e) {
+    try { localStorage.setItem(SECRET_PENDING_KEY, "1"); } catch (err) {}
     showMsg("Could not save to the Secret: " + e.message, false);
+    showSecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below.");
     return false;
   }
 }
@@ -2484,11 +2616,15 @@ async function removeAccount(i) {
   if (!confirm("Remove this account?")) return;
   const saved = getSavedAccounts();
   saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedAccounts(saved);
+  renderAccountList();
+  renderAccountControls();
   if (await updateBskySecret(saved)) {
-    saveSavedAccounts(saved);
-    renderAccountList();
-    renderAccountControls();
     showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
   }
 }
 $("accountForm").addEventListener("submit", async (e) => {
@@ -2506,13 +2642,33 @@ $("accountForm").addEventListener("submit", async (e) => {
   const idx = saved.findIndex((a) => a.handle === handle);
   if (idx >= 0) saved[idx].app_password = pw;
   else saved.push({ handle: handle, app_password: pw });
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedAccounts(saved);
+  renderAccountList();
+  renderAccountControls();
+  $("accountForm").reset();
   if (await updateBskySecret(saved)) {
-    saveSavedAccounts(saved);
-    renderAccountList();
-    renderAccountControls();
-    $("accountForm").reset();
     showMsg("Account saved (in this browser + in the Secret).", true);
     await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retrySecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retrySecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateBskySecret(getSavedAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
   }
 });
 
@@ -2686,11 +2842,20 @@ $("refreshSelect").addEventListener("change", setRefreshInterval);
 /* ---------- run worker + refresh ---------- */
 $("runWorkerBtn").addEventListener("click", async () => {
   if (needToken()) return;
-  try {
-    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
-    showMsg("Worker started. Check the Actions tab; status updates here after it finishes.", true);
-  } catch (e) {
-    showMsg("Could not start the worker: " + e.message, false);
+  // Start BOTH workflows (each in its own try, so a disabled one
+  // does not block the other).
+  const started = [];
+  const failed = [];
+  for (const wf of ["automation-blogger.yml", "automation-bluesky.yml"]) {
+    try { await dispatchWorkflow(wf); started.push(wf.replace(".yml", "")); }
+    catch (e) { failed.push(wf.replace(".yml", "")); }
+  }
+  if (started.length) {
+    showMsg("Worker started: " + started.join(" + ") +
+      (failed.length ? " (not started - disabled or missing: " + failed.join(", ") + ")" : "") +
+      ". Check the Actions tab; status updates here after they finish.", true);
+  } else {
+    showMsg("Could not start either worker - check that the two workflow files exist in .github/workflows and are enabled.", false);
   }
 });
 $("refreshBtn").addEventListener("click", refreshAll);
@@ -2704,6 +2869,7 @@ async function refreshAll() {
   renderAccountList();
   renderAccountControls();
   renderCardLists();
+  syncSecretWarn();
 }
 
 /* ---------- start: auto-login with the saved token ---------- */
