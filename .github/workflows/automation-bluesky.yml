@@ -56,16 +56,84 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
 
       - name: Commit state back (dedup + activity)
-        # Rebuild #7.3: the push MUST NOT fail silently. If another
-        # commit landed while this run was working (a dashboard
-        # commit, or a concurrent run), rebase on top of it and retry
-        # the push. A push that still fails prints a loud WARNING in
-        # the run log (state/logs NOT persisted this run) instead of
-        # pretending everything was fine.
+        # Rebuild #7.5: the push MUST land. The old rebase-based
+        # commit-back NEVER persisted state (zero "automation state
+        # update" commits in the repo history): a rebase conflicts on
+        # data/state.json whenever the dashboard commits a flag
+        # mid-run, the abort drops the push, and the step still exits
+        # 0. Now: save the worker's files, reset to the remote,
+        # MERGE the worker's state into the remote state (newest
+        # timestamps win; dashboard flags set after the run started
+        # are kept), commit, and push with retries. A push that
+        # still fails prints a loud WARNING in the run log instead
+        # of pretending everything was fine.
         run: |
           git config user.name "automation-bot"
           git config user.email "automation-bot@users.noreply.github.com"
-          git add data/state.json data/logs.json data/dashboard.json || true
-          git diff --cached --quiet || git commit -m "automation state update (bluesky)"
-          git pull --rebase origin main || git rebase --abort || true
-          git push || echo "WARNING: state push failed - state/logs NOT persisted this run (check the next run)"
+          mkdir -p /tmp/worker-state
+          cp data/state.json data/logs.json data/dashboard.json /tmp/worker-state/ 2>/dev/null || true
+          cat > /tmp/merge_state.py <<'PYEOF'
+          """Merge the worker's just-saved state into the remote state.
+          Run AFTER `git checkout -B main origin/main` (so data/*.json
+          are the remote versions) with the worker's files in
+          /tmp/worker-state/. Uses app.merge_worker_state (tested)."""
+          import json, os, shutil, sys
+          sys.path.insert(0, ".")
+          from app import merge_worker_state
+          def load_dict(p):
+              try:
+                  with open(p, encoding="utf-8") as f:
+                      d = json.load(f)
+                  return d if isinstance(d, dict) else {}
+              except Exception:
+                  return {}
+          def load_list(p):
+              try:
+                  with open(p, encoding="utf-8") as f:
+                      d = json.load(f)
+                  return d if isinstance(d, list) else []
+              except Exception:
+                  return []
+          remote = load_dict("data/state.json")
+          local = load_dict("/tmp/worker-state/state.json")
+          merged = merge_worker_state(remote, local)
+          with open("data/state.json", "w", encoding="utf-8") as f:
+              json.dump(merged, f, ensure_ascii=False, indent=2)
+          seen = {}
+          for e in load_list("data/logs.json") + load_list("/tmp/worker-state/logs.json"):
+              if isinstance(e, dict):
+                  seen[(e.get("created_at"), e.get("level"), e.get("message"))] = e
+          merged_logs = sorted(seen.values(),
+                               key=lambda e: str(e.get("created_at") or ""),
+                               reverse=True)[:200]
+          with open("data/logs.json", "w", encoding="utf-8") as f:
+              json.dump(merged_logs, f, ensure_ascii=False, indent=2)
+          if os.path.exists("/tmp/worker-state/dashboard.json"):
+              shutil.copyfile("/tmp/worker-state/dashboard.json",
+                              "data/dashboard.json")
+          print("state merged: "
+                f"{len(merged.get('posted_promo_topics') or {})} topics, "
+                f"{len(merged.get('posted_promo_link_topics') or {})} link-topics, "
+                f"{len(merged_logs)} log entries")
+          PYEOF
+          pushed=""
+          for i in 1 2 3; do
+            git fetch origin main || true
+            git checkout -B main origin/main || git checkout main || true
+            python3 /tmp/merge_state.py
+            git add data/state.json data/logs.json data/dashboard.json
+            if git diff --cached --quiet; then
+              echo "no state changes to commit - state already current"
+              pushed="done"
+              break
+            fi
+            git commit -m "automation state update (bluesky)" || true
+            if git push origin main; then
+              echo "state pushed (attempt $i)"
+              pushed="done"
+              break
+            fi
+            echo "push attempt $i failed - retrying"
+            sleep 5
+          done
+          [ -n "$pushed" ] || echo "WARNING: state push failed - state/logs NOT persisted this run (check the next run)"
