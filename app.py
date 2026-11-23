@@ -20,9 +20,11 @@ WHAT IT DOES
 6. Posts to Bluesky only through Bluesky cards. The SAME post never
    goes to all Bluesky accounts - each account gets a different /
    rotated post. Dedup via data/state.json (same news never reposted).
-7. Replies to comments on the account's OWN posts (all of them), and -
-   with strict safety limits - to fresh comments on high-engagement posts.
-   Every reply is unique English text (never copy-paste duplicates).
+7. Replies to comments on the account's OWN posts (all of them inside
+   each card's lookback window, default 7 days - old posts included),
+   and - with strict safety limits - to fresh comments on
+   high-engagement posts. Every reply is unique English text (never
+   copy-paste duplicates) and is logged under its card's name.
 8. Dashboard (flat UI, white / sky-blue / red / teal) with fully MANUAL
    cards: link to market, account, post/reply count, interval (minutes),
    daily schedule (how many + at what times), Run / Pause / Delete,
@@ -154,6 +156,7 @@ DEFAULT_CARD_INTERVAL_MINUTES = 30    # per-card interval minutes
 DEFAULT_CARD_POSTS_PER_DAY = 0        # per-card posts per day (0 = unlimited)
 DEFAULT_CARD_REPLY_OWN = "true"       # per-card: reply to own-post comments
 DEFAULT_CARD_REPLY_OTHERS = "true"    # per-card: reply to others' comments
+DEFAULT_CARD_LOOKBACK_DAYS = 7        # per-card: check comments from the last N days (1-30)
 
 UTC = timezone.utc
 
@@ -268,6 +271,7 @@ def init_db():
         "reply_own": "INTEGER DEFAULT 1",
         "reply_others": "INTEGER DEFAULT 1",
         "replies_per_run": "INTEGER DEFAULT 0",
+        "lookback_days": "INTEGER DEFAULT 7",
         "bold_format": "INTEGER DEFAULT 1",
         "notes": "TEXT DEFAULT ''",
         "color": "TEXT DEFAULT ''",
@@ -294,6 +298,7 @@ def init_db():
         "card_default_posts_per_day": str(DEFAULT_CARD_POSTS_PER_DAY),
         "card_default_reply_own": str(DEFAULT_CARD_REPLY_OWN),
         "card_default_reply_others": str(DEFAULT_CARD_REPLY_OTHERS),
+        "card_default_lookback_days": str(DEFAULT_CARD_LOOKBACK_DAYS),
     }
     for k, v in defaults.items():
         cur.execute("INSERT OR IGNORE INTO settings(key, value) VALUES(?, ?)", (k, v))
@@ -501,6 +506,10 @@ def write_dashboard_json(state):
                 "window_start": c.get("window_start", ""),
                 "window_end": c.get("window_end", ""),
                 "posts_per_run": card_posts_per_run(c),
+                "reply_own": c.get("reply_own", True),
+                "reply_others": c.get("reply_others", True),
+                "replies_per_run": c.get("replies_per_run", 0),
+                "lookback_days": card_reply_settings(c)[3],
             })
         data = {
             "generated_at": now_iso(),
@@ -522,7 +531,8 @@ def write_dashboard_json(state):
                           "card_default_interval_minutes",
                           "card_default_posts_per_day",
                           "card_default_reply_own",
-                          "card_default_reply_others")},
+                          "card_default_reply_others",
+                          "card_default_lookback_days")},
             "file_card_runs": state.get("file_card_runs", {}),
             "file_card_stats": file_stats,
             "file_cards": file_cards_out,
@@ -1021,32 +1031,94 @@ def bluesky_reply(client, text, parent_uri, parent_cid, root_uri=None, root_cid=
         return None
 
 
-def bluesky_own_posts_with_replies(client, handle, limit=5):
+def bluesky_own_posts_with_replies(client, handle, limit=5, since=None,
+                                   max_posts=None):
     """Our recent posts + their un-replied comments. Returns
-    [{uri, cid, replies:[{uri, cid, author, text, created_at}]}]."""
+    [{uri, cid, replies:[{uri, cid, author, text, created_at}]}].
+    `since` (a datetime): only posts created at/after `since` are
+    scanned - this is the card's comment lookback window, so comments
+    on OLD posts are found too, not just the newest few. Posts come
+    newest-first, so scanning stops once a post is older than `since`.
+    A comment is skipped when we already replied to it (a nested reply
+    in the thread authored by our own handle) - so a comment is never
+    answered twice, even if the run state is lost."""
     out = []
+    cap = int(max_posts or limit or 5)
+    if cap <= 0:
+        cap = 5
+    cutoff = since
+    cursor = None
+    scanned = 0
     try:
-        feed = client.get_author_feed(actor=handle, limit=limit)
-        for item in (feed.feed or []):
-            post = item.post
-            uri, cid = post.uri, post.cid
+        while scanned < cap:
+            page = min(25, cap - scanned)
             try:
-                thread = client.get_post_thread(uri=uri)
-                replies = []
-                for rep in (getattr(thread.thread, "replies", None) or []):
-                    rp = getattr(rep, "post", None)
-                    if rp is None:
-                        continue
-                    rec = getattr(rp, "record", None)
-                    replies.append({
-                        "uri": rp.uri, "cid": rp.cid,
-                        "author": getattr(getattr(rp, "author", None), "handle", ""),
-                        "text": getattr(rec, "text", "") if rec else "",
-                        "created_at": getattr(rec, "created_at", "") if rec else "",
-                    })
-                out.append({"uri": uri, "cid": cid, "replies": replies})
-            except Exception as e:
-                log("warning", f"thread fetch failed for {uri}: {e}")
+                feed = client.get_author_feed(actor=handle, limit=page,
+                                              cursor=cursor)
+            except TypeError:
+                # Older atproto clients do not accept `cursor`.
+                feed = client.get_author_feed(actor=handle, limit=page)
+                cursor = None
+            items = list(getattr(feed, "feed", None) or [])
+            if not items:
+                break
+            stop_here = False
+            for item in items:
+                post = getattr(item, "post", None)
+                if post is None:
+                    continue
+                # Post date: newest-first, so an old post ends the scan.
+                created = getattr(getattr(post, "record", None),
+                                  "created_at", "") or ""
+                ts = None
+                if created:
+                    try:
+                        ts = datetime.fromisoformat(
+                            str(created).replace("Z", "+00:00"))
+                        if ts.tzinfo is None:
+                            ts = ts.replace(tzinfo=UTC)
+                    except Exception:
+                        ts = None
+                if cutoff is not None and ts is not None and ts < cutoff:
+                    stop_here = True
+                    break
+                scanned += 1
+                uri, cid = post.uri, post.cid
+                try:
+                    thread = client.get_post_thread(uri=uri)
+                    replies = []
+                    for rep in (getattr(thread.thread, "replies", None) or []):
+                        rp = getattr(rep, "post", None)
+                        if rp is None:
+                            continue
+                        # Already answered? A nested reply by our own
+                        # handle under this comment means: skip it.
+                        answered = False
+                        for nested in (getattr(rep, "replies", None) or []):
+                            na = getattr(getattr(nested, "post", None),
+                                         "author", None)
+                            if getattr(na, "handle", "") == handle:
+                                answered = True
+                                break
+                        if answered:
+                            continue
+                        rec = getattr(rp, "record", None)
+                        replies.append({
+                            "uri": rp.uri, "cid": rp.cid,
+                            "author": getattr(getattr(rp, "author", None),
+                                             "handle", ""),
+                            "text": getattr(rec, "text", "") if rec else "",
+                            "created_at": getattr(rec, "created_at", "")
+                            if rec else "",
+                        })
+                    out.append({"uri": uri, "cid": cid, "replies": replies})
+                except Exception as e:
+                    log("warning", f"thread fetch failed for {uri}: {e}")
+            if stop_here:
+                break
+            cursor = getattr(feed, "cursor", None)
+            if not cursor:
+                break
     except Exception as e:
         log("warning", f"author feed failed for {handle}: {e}")
     return out
@@ -1222,8 +1294,11 @@ def clean_title(title):
     A published title must never contain '**', a stray '*', or a
     leading 'HEADLINE:'."""
     t = (title or "").strip()
-    t = re.sub(r"^\s*HEADLINE\s*:\s*", "", t, flags=re.IGNORECASE)
+    # Strip the markers FIRST: a title like "**HEADLINE:** Foo" starts
+    # with asterisks, so the HEADLINE: prefix is only at the start
+    # after the markers are gone.
     t = t.replace("**", "").replace("*", "")
+    t = re.sub(r"^\s*HEADLINE\s*:\s*", "", t, flags=re.IGNORECASE)
     t = t.strip().strip('"').strip("'").strip()
     t = re.sub(r"\s+", " ", t)
     return t[:200] if t else "Breaking News"
@@ -1507,12 +1582,15 @@ def record_reply(post_uri, comment_uri, reply_text, account_handle):
 
 
 def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
-                      replies_per_run=0):
+                      replies_per_run=0, lookback_days=7, card_name=""):
     """Reply to comments for ONE Bluesky card (card-only operation).
     Posting itself is done by each card via _card_bluesky_post - this
     function only replies. replies_per_run caps ALL replies in this
     run (own + others, 0 = unlimited). reply_own / reply_others are
-    the card's toggles."""
+    the card's toggles. lookback_days = how far back (in days) the
+    worker looks for comments on our OWN posts - old posts are scanned
+    too, not just the newest one. Every reply is logged with the card
+    name, so it shows up in that card's own log."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
@@ -1526,6 +1604,12 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
         per_run_replies = int(replies_per_run or 0)
     except Exception:
         per_run_replies = 0
+    try:
+        lb = int(lookback_days or 7)
+    except Exception:
+        lb = 7
+    lb = max(1, min(30, lb))
+    tag = f"card '{card_name}': " if card_name else ""
     state.setdefault("replied_comments", [])
     done_replies = 0
 
@@ -1535,7 +1619,7 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
     # --- 1) Replies to fresh comments on high-engagement posts (OTHERS).
     # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
     if reply_others is False:
-        log("info", "bluesky replies to others are OFF for this card - skipping")
+        log("info", f"{tag}bluesky replies to others are OFF for this card - skipping")
     else:
         hot = get_high_engagement_posts(limit=5)
         acc_idx = 0
@@ -1552,7 +1636,8 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                 if not account_enabled(acc["handle"]):
                     continue
                 if dry:
-                    log("warning", f"[DRY RUN] would reply to {comment['author']} ({acc['handle']})")
+                    log("warning", f"[DRY RUN] {tag}would reply to "
+                                   f"{comment['author']} ({acc['handle']})")
                     continue
                 client = bsky_login(acc["handle"], acc["app_password"])
                 if not client:
@@ -1570,24 +1655,37 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                     state["replied_comments"].append(comment["uri"])
                     record_reply(post["uri"], comment["uri"], reply_text, acc["handle"])
                     done_replies += 1
-                    log("info", f"replied ({acc['handle']}) to {comment['author']}")
+                    log("info", f"{tag}replied to {comment['author']} "
+                                f"(hot post by {post['author']}, "
+                                f"comment: '{comment['text'][:60]}') "
+                                f"as {acc['handle']}: '{reply_text[:80]}'")
                     time.sleep(2)
-    # --- 2) Reply to comments on our OWN posts.
+    # --- 2) Reply to comments on our OWN posts (ALL of them, lookback window).
+    # Old posts are scanned too - a comment left days ago still gets an
+    # answer, as long as the post is inside the lookback window.
     if reply_own is False:
-        log("info", "bluesky replies to own posts are OFF for this card - skipping")
+        log("info", f"{tag}bluesky replies to own posts are OFF for this card - skipping")
         return
+    own_cutoff = now_utc() - timedelta(days=lb)
     for acc in accounts:
         if not under_cap():
             break
         if not account_enabled(acc["handle"]):
             continue
         if dry:
-            log("warning", f"[DRY RUN] would check own-post comments ({acc['handle']})")
+            log("warning", f"[DRY RUN] {tag}would check own-post comments "
+                           f"from the last {lb} days ({acc['handle']})")
             continue
         client = bsky_login(acc["handle"], acc["app_password"])
         if not client:
             continue
-        for own in bluesky_own_posts_with_replies(client, acc["handle"], limit=3):
+        own_posts = bluesky_own_posts_with_replies(
+            client, acc["handle"], limit=25, since=own_cutoff, max_posts=25)
+        pending = sum(len(o["replies"]) for o in own_posts)
+        log("info", f"{tag}found {pending} un-replied comment(s) on "
+                    f"{len(own_posts)} own post(s) from the last {lb} day(s) "
+                    f"({acc['handle']})")
+        for own in own_posts:
             for comment in own["replies"]:
                 if not under_cap():
                     break
@@ -1607,8 +1705,12 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
                     state["replied_comments"].append(comment["uri"])
                     record_reply(own["uri"], comment["uri"], reply_text, acc["handle"])
                     done_replies += 1
-                    log("info", f"replied to own-post comment ({acc['handle']})")
+                    log("info", f"{tag}replied to {comment['author']} on your "
+                                f"post (comment: '{comment['text'][:60]}') "
+                                f"as {acc['handle']}: '{reply_text[:80]}'")
                     time.sleep(2)
+    log("info", f"{tag}reply run done: {done_replies} reply/replies sent "
+                f"(lookback {lb} day(s))")
 
 
 def card_interval_minutes(card):
@@ -1768,8 +1870,21 @@ def file_card_due(card, state):
 
 def card_reply_settings(card):
     """Per-card Bluesky reply settings (reply_own / reply_others /
-    replies_per_run). Defaults depend on the card type: a reply card
-    replies by default; a post/promo card only posts by default."""
+    replies_per_run / lookback_days). Returns a 4-tuple.
+    Defaults depend on the card type: a reply card replies by default;
+    a post/promo card only posts by default. lookback_days = how far
+    back (in days) the worker looks for comments on our own posts:
+    1-30, default 7."""
+
+    def _lookback(v):
+        try:
+            n = int(v)
+        except Exception:
+            return 7
+        if n <= 0:
+            return 7
+        return max(1, min(30, n))
+
     ctype = card.get("type", "")
     if ctype == "bluesky_reply":
         d_own, d_others = True, True
@@ -1788,7 +1903,8 @@ def card_reply_settings(card):
     except Exception:
         rpr = 0
     return (_bool(card.get("reply_own"), d_own),
-            _bool(card.get("reply_others"), d_others), rpr)
+            _bool(card.get("reply_others"), d_others), rpr,
+            _lookback(card.get("lookback_days")))
 
 
 def _card_bluesky_post(card, state, article, promo=False):
@@ -1881,12 +1997,13 @@ def execute_card(card, state):
                 if not ok:
                     last_error = "post failed or skipped"
                 # Per-card replies after posting (if the card enables them).
-                reply_own, reply_others, rpr = card_reply_settings(card)
+                reply_own, reply_others, rpr, lb = card_reply_settings(card)
                 if (reply_own or reply_others) and workflow_enabled("replies"):
                     run_bluesky_cycle(state, article=article,
                                       reply_own=reply_own,
                                       reply_others=reply_others,
-                                      replies_per_run=rpr)
+                                      replies_per_run=rpr,
+                                      lookback_days=lb, card_name=name)
         elif ctype == "bluesky_promo":
             link = (card.get("link") or "").strip()
             if not link:
@@ -1896,22 +2013,24 @@ def execute_card(card, state):
                 ok = _card_bluesky_post(card, state, None, promo=True)
                 if not ok:
                     last_error = "promo failed or skipped"
-                reply_own, reply_others, rpr = card_reply_settings(card)
+                reply_own, reply_others, rpr, lb = card_reply_settings(card)
                 if (reply_own or reply_others) and workflow_enabled("replies"):
                     run_bluesky_cycle(state, article=latest_article(),
                                       reply_own=reply_own,
                                       reply_others=reply_others,
-                                      replies_per_run=rpr)
+                                      replies_per_run=rpr,
+                                      lookback_days=lb, card_name=name)
         elif ctype == "bluesky_reply":
             article = latest_article()
             if not article:
                 last_error = "no article yet"
             else:
-                reply_own, reply_others, rpr = card_reply_settings(card)
+                reply_own, reply_others, rpr, lb = card_reply_settings(card)
                 run_bluesky_cycle(state, article=article,
                                   reply_own=reply_own,
                                   reply_others=reply_others,
-                                  replies_per_run=rpr)
+                                  replies_per_run=rpr,
+                                  lookback_days=lb, card_name=name)
                 ok = True
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
@@ -2362,9 +2481,9 @@ def api_cards():
             "INSERT INTO cards(name, type, link, account_handle, count, "
             "interval_minutes, interval_hours, posts_per_day, schedule_times, "
             "text, status, source, topic_override, reply_own, reply_others, "
-            "replies_per_run, bold_format, notes, color, window_start, "
+            "replies_per_run, lookback_days, bold_format, notes, color, window_start, "
             "window_end, created_at, updated_at) "
-            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             (name, ctype, data.get("link", ""), data.get("account_handle", ""),
              int(data.get("count") or 1), int(data.get("interval_minutes") or 30),
              int(data.get("interval_hours") or 0),
@@ -2374,6 +2493,7 @@ def api_cards():
              _b(data.get("reply_own"), ctype == "bluesky_reply"),
              _b(data.get("reply_others"), ctype == "bluesky_reply"),
              int(data.get("replies_per_run") or 0),
+             max(1, min(30, int(data.get("lookback_days") or 7))),
              _b(data.get("bold_format"), True),
              data.get("notes", ""), data.get("color", ""),
              data.get("window_start", ""), data.get("window_end", ""),
@@ -2403,7 +2523,7 @@ def api_card_one(cid):
             if key in data:
                 fields[key] = data[key]
         for key in ("count", "interval_minutes", "interval_hours",
-                    "posts_per_day", "replies_per_run"):
+                    "posts_per_day", "replies_per_run", "lookback_days"):
             if key in data:
                 fields[key] = int(data[key] or 0)
         for key in ("reply_own", "reply_others", "bold_format"):
@@ -2597,7 +2717,7 @@ def api_settings():
             "cards_enabled", "blogger_bold_format",
             "card_default_interval_hours", "card_default_interval_minutes",
             "card_default_posts_per_day", "card_default_reply_own",
-            "card_default_reply_others")
+            "card_default_reply_others", "card_default_lookback_days")
     if request.method == "GET":
         return jsonify({k: get_setting(k, "") for k in keys})
     data = request.get_json(silent=True) or {}
