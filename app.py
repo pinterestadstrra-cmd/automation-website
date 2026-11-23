@@ -819,6 +819,43 @@ def _gemini_call(key, model, prompt, max_tokens):
                            f"top-level keys={','.join(keys) or 'none'})")
 
 
+def _gemini_vision_call(key, model, image_b64, mime, prompt):
+    """One Gemini VISION call (image + text). Returns
+    (text, http_code, error_detail) - same shape as _gemini_call.
+    Rebuild #7.7: Groq cannot see images (its Llama 4 vision
+    models were retired in 2026; gpt-oss is text-only), so Gemini -
+    the only provider that can see images - is the judge of
+    whether a photo matches its news story. The image rides as
+    inline_data; temperature is low (0.2) so the YES/NO answer is
+    deterministic; maxOutputTokens is small (200) because only a
+    YES/NO plus one short reason is needed. Network errors return
+    code 0."""
+    url = (f"https://generativelanguage.googleapis.com/v1beta/models/{model}"
+           f":generateContent?key={key}")
+    body = {"contents": [{"parts": [
+        {"inline_data": {"mime_type": mime, "data": image_b64}},
+        {"text": prompt}]}],
+        "generationConfig": {"maxOutputTokens": 200, "temperature": 0.2}}
+    try:
+        r = requests.post(url, json=body, timeout=90)
+    except Exception as e:
+        return None, 0, f"network: {type(e).__name__}: {e}"[:150]
+    if r.status_code != 200:
+        return None, r.status_code, _api_error_detail(r)
+    try:
+        data = r.json()
+        text = data["candidates"][0]["content"]["parts"][0]["text"]
+        return (text or "").strip(), 200, ""
+    except Exception:
+        keys = []
+        try:
+            keys = sorted((r.json() or {}).keys())[:6]
+        except Exception:
+            pass
+        return None, 200, ("bad response shape (no candidates/parts; "
+                           f"top-level keys={','.join(keys) or 'none'})")
+
+
 def gemini_text(prompt, max_tokens=1500):
     """Write with Gemini. Returns text or '' (never raises).
     Rebuild #7.2: on total failure, log the SPECIFIC reason (how many
@@ -1771,6 +1808,322 @@ def _photo_search_queries(topic):
     return out[:3]
 
 
+# ---------------------------------------------------------------- rebuild #7.7
+# GEMINI VISION CHECK (user order 2026-11-23): the photo must MATCH
+# the news story - and the judge must be an AI that can actually SEE
+# the image. Groq cannot (its Llama 4 Scout/Maverick vision models
+# were retired in 2026; gpt-oss-120b is text-only), so Gemini is the
+# judge. The vision check runs on the FINAL chosen photo only (not
+# on every candidate - the run must stay fast), at most
+# VISION_MAX_CHECKS_PER_POST checks per post: if the chosen photo
+# fails vision, the next best candidate is tried, up to that budget.
+# A vision API failure NEVER blocks a post by itself - the #7.6
+# keyword relevance check decides instead.
+VISION_MAX_CHECKS_PER_POST = 3  # max Gemini vision calls per promo post
+VISION_MAX_ATTEMPTS = 6         # max key/model attempts per vision check
+
+# Words that can never be part of a person's name in a headline:
+# places, organisations, publications, months, weekdays, titles,
+# media/event words - and the verbs headlines use ("Trump Blames
+# Biden" - "Blames" is a verb, not a surname).
+_PERSON_NAME_BLOCKWORDS = frozenset(
+    "united states kingdom union house court street york angeles korea "
+    "east west north south central federal reserve world cup bowl series "
+    "league day christmas thanksgiving new san las hong saudi arabia "
+    "africa zealand ireland republic bank rate sunday friday monday "
+    "saturday thursday tuesday wednesday january february march april "
+    "june july august september october november december prime "
+    # NOTE: 'may' is deliberately NOT in this list - it is Theresa
+    # May's surname as often as it is a month, and 'May Day' is
+    # already blocked by 'day'.
+    "minister president secretary general chief justice senator "
+    "governor mayor doctor professor captain colonel lieutenant "
+    "sergeant officer inspector detective sheriff deputy agent "
+    "director manager chairman ceo cfo cto founder valley journal "
+    "times post news mail guardian sun express mirror star standard "
+    "financial telegraph economist rolling vanity harper vogue forbes "
+    "bloomberg reuters associated press daily weekly monthly morning "
+    "evening tour album film movie song concert show award awards "
+    "festival season episode series book novel game match final semi "
+    "quarter".split())
+_HEADLINE_VERBS = frozenset(
+    "blames tells urges says warns slams hits backs vows pledges "
+    "unveils launches announces reveals confirms denies admits claims "
+    "insists demands threatens praises attacks defends accuses sues "
+    "wins loses dies marries splits joins leaves quits resigns "
+    "retires returns arrives visits meets calls asks wants needs gets "
+    "takes gives makes breaks shocks stuns blasts rips roasts drags "
+    "trolls mocks bashes hails cheers boos jeers beats tops leads "
+    "trails edges falls rises jumps drops soars sinks surges slumps "
+    "rallies tumbles plummets climbs slides gains".split())
+
+
+# Common first names (US politicians, world leaders, celebrities).
+# A capitalised pair is only treated as a person's name when its
+# FIRST word is a plausible first name - title-case headlines
+# capitalise every word, so 'High Prices' or 'Big Storm' would
+# otherwise look like names. A missed name only loses the
+# person-specific question (the prompt still carries the headline);
+# a WRONG name would make the vision check ask about a non-person
+# and wrongly reject good photos. So this gate prefers missing a
+# name over inventing one.
+_PERSON_FIRST_NAMES = frozenset(
+    "aaron abigail adam adrian alan albert alberto alejandro alex "
+    "alexander alexandra alfred alice alicia allan allen alma alonzo "
+    "alvin amanda amber amelia amos amy ana andre andrea andres andrew "
+    "andy angela angelo anita anna anne annette annie anthony antonio "
+    "april archie ariana ariel arlene arnold arthur ashley aubrey "
+    "audrey barack barbara benjamin bernie betty beyonce bill billy bob "
+    "bobby boris brandon brian bruce bryan caleb cameron camila carl "
+    "carlos carmen carol caroline carrie casey catherine cathy chad "
+    "charles charlie charlotte chase chelsea cheryl chris christian "
+    "christina christine christopher chuck cindy claire clara clarence "
+    "claudia clint clinton cody colin colleen connie corey courtney "
+    "craig crystal curtis cynthia dale dan daniel danielle danny darla "
+    "darlene darrell darren daryl dave david dawn dean debra deborah "
+    "denise dennis derek diana diane dominic don donald donna dora "
+    "doris dorothy doug douglas duane dustin dwight dylan earl ed eddie "
+    "edgar edith edward edwin eileen elaine eleanor elena eli elias "
+    "elijah elisa elizabeth ella ellen elliot eloise elsa emily emma "
+    "emmanuel eric erica erik erin ernest esther ethan ethel eugene eva "
+    "evan evelyn everett faith felicia felix fernando fiona flora floyd "
+    "frances francis frank franklin fred freddie frederick gabriel gail "
+    "garrett gary gavin gene geoffrey george gerald geraldine gilbert "
+    "gina ginger gladys glen glenn gloria gordon grace greg gregory "
+    "greta guy gwen hannah harold harriet harry harvey hassan hattie "
+    "hazel heather hector helen henry herbert herman hilda hillary "
+    "holly homer hope horace howard hubert hugh ian ida ike ilene ines "
+    "ingrid ira irene iris irma irving isaac isabel isabella israel ivan "
+    "jack jackie jacob jaime james jamie jan jane janet janice jared "
+    "jasmine jason javier jay jean jeanette jeff jeffrey jenna jennifer "
+    "jeremy jerome jesse jessica jill jim jimmie jimmy joan joanna "
+    "joanne jodi jodie jody joe joel john johnny jon jonathan jorge jose "
+    "joseph josephine josh joshua joyce juan juanita judith judy julia "
+    "julian julie julio june justin kara karen karl kate katherine "
+    "kathleen kathryn kathy katie katrina kay keith kelley kelli kellie "
+    "kelly ken kendra kenneth kenny kent kerry kevin kim kimberly kirk "
+    "kristen kristin kristina kurt kyle lamar lana lance larry laura "
+    "lauren laurie lawrence leah lee leigh leland lena leo leon leonard "
+    "leroy leslie lester levi lewis lillian lillie linda lindsay lionel "
+    "lisa lloyd lois lonnie lora loren lorenzo loretta lori lorraine lou "
+    "louise lucille lucy luis luke luther lydia lyle lynda lynn mabel "
+    "mack madeline mae manuel mara marc marcella marcia marcus margaret "
+    "margie maria marian marianne marie marilyn marion marjorie mark "
+    "marlene marsha marshall marta martha martin marvin mary matthew "
+    "maureen maurice max maxine melanie melinda melissa melvin mercedes "
+    "meredith michael michele michelle miguel mike mildred milton mindy "
+    "minnie miriam mitchell monica monique morris moses muriel myra "
+    "myrtle nadia nancy naomi natalie nathan nathaniel neal neil nellie "
+    "nelson nicholas nick nicolas nicole nina noah noel nora norma "
+    "norman olga olive oliver ollie omar opal orlando oscar owen pablo "
+    "pamela pat patricia patrick patti paul paula pauline pearl pedro "
+    "penny percy perry pete peter phil philip phillip phoebe phyllis "
+    "preston priscilla rachel rafael ralph ramiro ramon randall randy "
+    "raul ray raymond rebecca regina reginald renee rex rhonda ricardo "
+    "richard rick ricky rita robert roberta roberto robin rochelle rocky "
+    "roderick rodney rodrigo rogelio roland ron ronald ronnie rosa "
+    "rosalie rose rosemary ross roxanne roy ruben ruby rudolph rudy "
+    "rufus russell ruth ryan sabrina sadie sally salvador sam samantha "
+    "samuel sandra sandy santiago sara sarah saul scott sean sergio seth "
+    "shane shannon shari sharon shaun shawn sheila shelley shelly sheri "
+    "sherman sherry shirley sidney silvia simon sonia sonya sophia "
+    "stacey stacy stanley stella stephanie stephen steve steven stuart "
+    "susan suzanne sylvia tabitha tamara tammie tammy tanya tara taylor "
+    "ted terence teresa terrence terri terry thelma theodore theresa "
+    "thomas tiffany tim timothy tina tobias todd tom tommy toni tony "
+    "tonya tracy travis trevor tricia troy tyler tyrone valerie vanessa "
+    "vera vernon veronica vicente vickie vicky victor victoria vincent "
+    "viola violet virgil virginia vivian wade wallace walter wanda "
+    "warren wayne wendell wendy wesley wilbur wilfred willard william "
+    "willie wilma winifred winston wyatt xavier yolanda yvette yvonne "
+    "zachary zoe adele billie bradley camilla carmelo chappell conan "
+    "derrick devin drake dua draymond giannis gracie jalen jayson "
+    "kanye kawhi keir kendrick klay kyrie lebron luka meghan nikola "
+    "olivia rihanna rishi steph tyrese vladimir volodymyr narendra "
+    "suella priti sadiq nicola humza elon sundar satya jensen xi "
+    "jinping jong recep tayyip yair naftali ebrahim mohammed salman "
+    "bashar abdel uhuru cyril bola muhammadu goodluck olusegun yoweri "
+    "felix denis teodoro faustin idriss mahamat ismail abiy "
+    "hailemariam meles isaias".split())
+
+
+def _headline_person_names(headline):
+    """Likely person names in a headline: two consecutive capitalised
+    words whose FIRST word is a plausible first name (see
+    _PERSON_FIRST_NAMES) and neither word is a place/org/title/verb
+    word. Returns up to 2 names. This is a heuristic, not NER - the
+    vision prompt also carries the full headline, so a missed name
+    only loses the person-specific question, never the relevance
+    check itself. Examples: 'Theresa May tells Andy Burnham...' ->
+    ['Theresa May', 'Andy Burnham']; 'Donald Trump meets Vladimir
+    Putin' -> ['Donald Trump', 'Vladimir Putin']; 'Trump Blames
+    Biden for High Prices' -> [] ('Trump'/'High' are not first
+    names, 'Blames' is a verb, 'Biden' is a single word)."""
+    if not headline:
+        return []
+    names = []
+    for m in re.finditer(r"\b([A-Z][a-z]+ [A-Z][a-z]+)\b", headline):
+        words = m.group(1).split()
+        low = [w.lower() for w in words]
+        if low[0] not in _PERSON_FIRST_NAMES:
+            continue
+        if any(w in _PERSON_NAME_BLOCKWORDS or w in _HEADLINE_VERBS
+               for w in low):
+            continue
+        name = " ".join(words)
+        if name not in names:
+            names.append(name)
+        if len(names) >= 2:
+            break
+    return names
+
+
+def _vision_prompt(headline, person_names):
+    """The question Gemini's vision check answers. PERSON-AWARE:
+    when the headline names a person, the question names them
+    explicitly - a political post must show the named leader (Trump,
+    Putin, PMs), a celebrity post must show the named celebrity
+    being talked about. Without a name, the question is about the
+    headline's subject in general. The answer must start with YES
+    or NO, then one short reason."""
+    headline = (headline or "").strip()[:200]
+    if person_names:
+        names = " and ".join(person_names[:2])
+        return (f"News headline: \"{headline}\"\n"
+                f"Does this photo clearly show {names}? "
+                "Answer YES only if the named person is clearly visible "
+                "in the photo. Answer NO if the photo shows someone else, "
+                "a product, a cartoon, a chart, a poster, or anything "
+                "unrelated. Reply with YES or NO first, then one short reason.")
+    return (f"News headline: \"{headline}\"\n"
+            "Does this photo show the people, place or event in this "
+            "headline? Answer YES only if the photo clearly matches the "
+            "headline. Answer NO if it shows a product, a cartoon, a "
+            "chart, a poster, a different person, or anything unrelated. "
+            "Reply with YES or NO first, then one short reason.")
+
+
+def _vision_image_b64(local_path):
+    """A downloaded photo, downscaled to max 1024px on the long edge
+    and re-encoded as JPEG (quality 70), returned as (base64, mime).
+    Keeps the vision payload small (~100-200KB) so the call is fast
+    and cheap. Returns (None, None) when the file cannot be read or
+    Pillow is missing. Never raises."""
+    if not local_path or not os.path.exists(local_path):
+        return None, None
+    try:
+        from PIL import Image
+        import base64
+        import io
+        im = Image.open(local_path)
+        if im.mode in ("RGBA", "LA", "P"):
+            im = im.convert("RGB")
+        w, h = im.size
+        if max(w, h) > 1024:
+            scale = 1024 / max(w, h)
+            im = im.resize((max(1, int(w * scale)),
+                            max(1, int(h * scale))))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=70)
+        return base64.b64encode(buf.getvalue()).decode("ascii"), "image/jpeg"
+    except Exception as e:
+        log("warning", f"vision: could not prepare image ({e})")
+        return None, None
+
+
+def _gemini_vision_check(image_b64, mime, headline, person_names=None):
+    """Ask Gemini (the only provider that can see images) whether a
+    photo matches a news story. Returns (True, reason) / (False,
+    reason) / (None, reason) - None means the vision call could not
+    be made or its answer was unusable, and the caller must fall back
+    to the #7.6 keyword relevance check instead. A vision API failure
+    NEVER blocks a post by itself. Walks the GEMINI_MODELS failover
+    list (gemini-3.5-flash-lite is the working model live), bounded
+    to VISION_MAX_ATTEMPTS attempts so one check cannot grind through
+    all keys x models. Never raises. Key values are never logged."""
+    if not GEMINI_KEYS:
+        return None, "no GEMINI_API_KEYS configured"
+    if not image_b64:
+        return None, "no image data to check"
+    prompt = _vision_prompt(headline, person_names or [])
+    keys = GEMINI_KEYS[:]
+    random.shuffle(keys)
+    attempts = 0
+    seen = {}
+    for model in GEMINI_MODELS:
+        for key in keys:
+            if attempts >= VISION_MAX_ATTEMPTS:
+                break
+            attempts += 1
+            try:
+                text, code, detail = _gemini_vision_call(
+                    key, model, image_b64, mime, prompt)
+            except Exception as e:
+                sig = (0, f"network: {type(e).__name__}")
+                seen[sig] = seen.get(sig, 0) + 1
+                continue
+            if not text:
+                if code == 429:
+                    time.sleep(2)
+                sig = (code, detail or "no text returned")
+                seen[sig] = seen.get(sig, 0) + 1
+                continue
+            ans = text.strip().upper()
+            reason = text.strip()
+            if ans.startswith("YES"):
+                return True, (reason[3:].strip(" -:") or "vision: YES")[:150]
+            if ans.startswith("NO"):
+                return False, (reason[2:].strip(" -:") or "vision: NO")[:150]
+            return None, ("vision answer unusable (did not start YES/NO): "
+                          f"{reason[:80]}")
+        if attempts >= VISION_MAX_ATTEMPTS:
+            break
+    summary = "; ".join(
+        f"HTTP {c} x{n}: {d}" for (c, d), n in list(seen.items())[:3])
+    return None, (f"vision failed ({attempts} attempt(s) - "
+                  f"{summary or 'no detail'}")[:200]
+
+
+def _vision_gate(local_path, headline, vision_state):
+    """Gemini vision check on ONE downloaded candidate photo - the
+    FINAL gate before a photo is accepted (rebuild #7.7, user order
+    2026-11-23: the photo must MATCH the news, judged by an AI that
+    can actually see the image). Returns True (vision says the photo
+    matches), False (vision says NO - reject this candidate and try
+    the next), or None (vision could not run or its answer was
+    unusable - the caller falls back to the #7.6 keyword check,
+    which already passed for this candidate). Budget: at most
+    VISION_MAX_CHECKS_PER_POST vision calls per post (vision_state
+    is a shared {"used": n} dict); when the budget is used up, later
+    candidates are decided by the keyword check alone. Never raises."""
+    if vision_state is None:
+        vision_state = {"used": 0}
+    if vision_state.get("used", 0) >= VISION_MAX_CHECKS_PER_POST:
+        log("info", "vision: budget used "
+                    f"({VISION_MAX_CHECKS_PER_POST} checks) - keyword "
+                    "check decides this candidate")
+        return None
+    b64, mime = _vision_image_b64(local_path)
+    if not b64:
+        log("info", "vision: image could not be prepared - keyword "
+                    "check decides this candidate")
+        return None
+    vision_state["used"] = vision_state.get("used", 0) + 1
+    names = _headline_person_names(headline)
+    ok, reason = _gemini_vision_check(b64, mime, headline, names)
+    if ok is True:
+        log("info", f"vision: YES - photo matches '{headline[:50]}' "
+                    f"({reason})")
+        return True
+    if ok is False:
+        log("info", f"vision: NO - photo rejected for '{headline[:50]}' "
+                    f"({reason})")
+        return False
+    log("info", f"vision: unavailable - keyword check decides "
+                f"('{headline[:50]}': {reason})")
+    return None
+
+
 def _photo_relevant(page_url, page_title, headline):
     """Is a candidate photo RELEVANT to the news story? Rebuild #7.6
     (live failure, run #17, 2026-11-23): Bing attached REAL photos
@@ -1804,7 +2157,7 @@ def _photo_relevant(page_url, page_title, headline):
                    "in the source page")
 
 
-def _real_photo_for_topic(topic):
+def _real_photo_for_topic(topic, vision=None):
     """A REAL photo for a topic from real-photo sources only
     (Pexels / Pixabay / Openverse / Wikimedia Commons / Google Images
     / Bing Images). Never AI-generated, never a logo, never a generic
@@ -1821,8 +2174,13 @@ def _real_photo_for_topic(topic):
     must contain the story's key entities (_photo_relevant); a real
     photo from an unrelated page (a product photo, a wedding dress)
     is rejected before downloading, and an alt text that mentions a
-    name is never enough on its own. Returns a photo dict with
-    local_path, or None (with a summary log of what was tried)."""
+    name is never enough on its own. Rebuild #7.7: after download,
+    Gemini vision is the FINAL gate (vision) - a photo the vision
+    check says NO to is rejected and the next candidate is tried;
+    when vision cannot run, the keyword check above (already passed)
+    decides instead, so a vision failure never blocks the post.
+    Returns a photo dict with local_path, or None (with a summary log
+    of what was tried)."""
     tried_downloads = 0
     for q in _photo_search_queries(topic):
         cands = []
@@ -1880,6 +2238,16 @@ def _real_photo_for_topic(topic):
             tried_downloads += 1
             local = download_image(url, topic)
             if local:
+                # Rebuild #7.7: Gemini vision is the FINAL gate -
+                # the photo must MATCH the story, judged by an AI
+                # that can actually see the image. A vision NO
+                # rejects this candidate (the next candidate is
+                # tried); a vision failure falls back to the keyword
+                # check above, which already passed - it never
+                # blocks the post by itself.
+                if _vision_gate(local, topic, vision) is False:
+                    log("info", f"photo: rejected (vision NO): {url[:100]}")
+                    continue
                 log("info", f"photo: ACCEPTED relevant photo for "
                             f"'{topic[:60]}': {url[:100]} "
                             f"(from {cand.get('source') or 'stock'}, "
@@ -2006,17 +2374,49 @@ def _promo_fallback_hook(card, link, state=None):
     for hook in cands:
         if state is None:
             return hook
-        if _promo_caption_cooldown_left(state, _fit_bsky_text(hook, link)) is None:
+        if _promo_caption_cooldown_left(
+                state, _fit_bsky_text(hook, link, cta="")) is None:
             return hook
     return None
 
 
-def _fit_bsky_text(hook, link):
-    """Combine a hook and a link into ONE Bluesky post (max 300 chars).
-    The link always stays; the hook is trimmed to fit. Never returns
-    just the bare link unless the link alone already fills the post."""
+# Rebuild #7.7: every Bluesky promo caption ENDS with an explicit
+# call-to-action telling the reader to click/enter the link, THEN
+# the link itself (user order 2026-11-23 - "Caption যে দেয় তখন
+# লিংকে ডোকতে বলবে"). The CTA rotates deterministically by post
+# count (like the category rotation) so consecutive captions do not
+# all end identically.
+BSKY_CTA_VARIANTS = [
+    "Full story here 👇",
+    "Tap the link for more 👇",
+    "Read the full story at the link 👇",
+    "Click the link for the full story 👇",
+]
+
+
+def _next_bsky_cta(state):
+    """The CTA for the next promo post, rotated by the number of
+    promo posts already recorded in state - deterministic, survives
+    restarts, and advances after every post (the post is recorded
+    in state before the next pick)."""
+    n = len((state or {}).get("posted_promo_topics") or {})
+    return BSKY_CTA_VARIANTS[n % len(BSKY_CTA_VARIANTS)]
+
+
+def _fit_bsky_text(hook, link, cta=None):
+    """Combine a hook, a call-to-action and a link into ONE Bluesky
+    post (max 300 chars). Rebuild #7.7: the caption ALWAYS ends
+    with CTA + link - the CTA and the link are NEVER truncated, the
+    hook is trimmed to fit, so the final text always ends with the
+    CTA and then the link, and the link appears exactly once.
+    cta defaults to the first variant; the caller passes the
+    rotated variant via _next_bsky_cta(state). Never returns just
+    the bare link unless the link alone already fills the post."""
     hook = (hook or "").strip()
     link = (link or "").strip()
+    if cta is None:
+        cta = BSKY_CTA_VARIANTS[0]
+    cta = (cta or "").strip()
     # Drop a link the AI already appended, so it is not doubled.
     if link and link in hook:
         hook = hook.replace(link, "").strip()
@@ -2024,12 +2424,18 @@ def _fit_bsky_text(hook, link):
         hook = _promo_fallback_hook(None, link)
     if not link:
         return hook[:BSKY_MAX_CHARS]
-    room = BSKY_MAX_CHARS - len(link) - 1
-    if room < 10:
+    # CTA + link always fit (both are short); only the hook is trimmed.
+    # cta="" means NO call-to-action (used for the caption-dedup
+    # identity - see _card_bluesky_post): the tail is then just the link.
+    tail = f"{cta}\n{link}" if cta else link
+    if len(tail) >= BSKY_MAX_CHARS:
         return link
+    room = BSKY_MAX_CHARS - len(tail) - 1
+    if room < 10:
+        return tail
     if len(hook) > room:
         hook = hook[:room - 1].rstrip() + "\u2026"
-    return f"{hook}\n{link}"
+    return f"{hook}\n{tail}"
 
 
 # Words too generic to identify a news event (dropped from event
@@ -2309,6 +2715,10 @@ def _pick_fresh_promo_news(card, state):
     fresh_no_photo = False
     tried = 0            # news items examined (budgeted)
     fallback_tries = 0   # real-photo searches done (budgeted)
+    vision = {"used": 0}  # Rebuild #7.7: Gemini vision calls used
+    # this pick - at most VISION_MAX_CHECKS_PER_POST per post; the
+    # same budget covers the og:image gate and the fallback search,
+    # so one post can never burn more than 3 vision calls.
     seen_imgs = set()    # image URLs already rejected this pick - the
     # same logo must never be fetched/downloaded twice in one run
     tried_fallback = set()  # normalised headlines already fallback-searched
@@ -2382,17 +2792,32 @@ def _pick_fresh_promo_news(card, state):
             else:
                 local = download_image(img, topic)
                 if local:
-                    cat = category_of.get(_norm_news_key(topic))
-                    if cat:
-                        log("info", f"promo category: {cat}")
+                    # Rebuild #7.7: Gemini vision is the FINAL gate
+                    # on the article's own image too - a publisher
+                    # og:image can still be the wrong photo (a chart,
+                    # a poster, a different person). A vision NO
+                    # rejects it and the real-photo fallback below
+                    # runs for the same story; a vision failure falls
+                    # back to the #7.6 keyword check in
+                    # fetch_og_image, which already passed.
+                    if _vision_gate(local, headline, vision) is False:
+                        seen_imgs.add(img)
+                        log("info", f"photo candidate: '{headline[:60]}' - "
+                                    "rejected (vision NO - photo does not "
+                                    "match the story)")
+                    else:
+                        cat = category_of.get(_norm_news_key(topic))
+                        if cat:
+                            log("info", f"promo category: {cat}")
+                        log("info", f"photo candidate: '{headline[:60]}' - "
+                                    f"ACCEPTED og:image (from {src})")
+                        return topic, headline, {
+                            "url": img, "source": "news",
+                            "alt": headline, "local_path": local}
+                else:
+                    seen_imgs.add(img)
                     log("info", f"photo candidate: '{headline[:60]}' - "
-                                f"ACCEPTED og:image (from {src})")
-                    return topic, headline, {
-                        "url": img, "source": "news",
-                        "alt": headline, "local_path": local}
-                seen_imgs.add(img)
-                log("info", f"photo candidate: '{headline[:60]}' - "
-                            "rejected (og:image download failed)")
+                                "rejected (og:image download failed)")
             # 2) Real-photo fallback (rebuild #7.3, user order): a REAL
             # photo for this story from real-photo sources (Openverse /
             # Pexels / Pixabay / Wikimedia / Google Images / Bing
@@ -2404,7 +2829,7 @@ def _pick_fresh_promo_news(card, state):
                     fallback_tries < PICK_MAX_FALLBACK_SEARCHES:
                 tried_fallback.add(key)
                 fallback_tries += 1
-                photo = _real_photo_for_topic(headline)
+                photo = _real_photo_for_topic(headline, vision)
                 if photo and photo.get("local_path"):
                     cat = category_of.get(_norm_news_key(topic))
                     if cat:
@@ -2953,7 +3378,7 @@ News: {headline}
 Blog link: {link}
 """
 
-BSKY_PROMO_NEWS_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 200 characters. End with the link on its own line.
+BSKY_PROMO_NEWS_PROMPT = """Write ONE short, exciting Bluesky post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 200 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
 Style: {tone}
 News: {headline}
 Link: {link}
@@ -4379,10 +4804,16 @@ def _card_bluesky_post(card, state, article, promo=False):
                         LAST_BSKY_SKIP = "cooldown"
                         return False
                     text = hook
-            text = _fit_bsky_text(text, link)
+            hook_text = text
+            text = _fit_bsky_text(text, link, _next_bsky_cta(state))
             # Per-caption cooldown (rebuild #7.1): the same caption
-            # is never posted twice within 24h.
-            if _promo_caption_cooldown_left(state, text) is not None:
+            # is never posted twice within 24h. The identity is the
+            # caption WITHOUT the rotating CTA (#7.7) - the CTA is
+            # decoration, and a rotated CTA must not make a reused
+            # caption look new. The no-CTA form is also what
+            # pre-#7.7 captions hashed to, so old state still matches.
+            caption_id = _fit_bsky_text(hook_text, link, cta="")
+            if _promo_caption_cooldown_left(state, caption_id) is not None:
                 log("info", f"card '{name}': caption already used "
                             "within 24h - cooldown, skipping")
                 LAST_BSKY_SKIP = "cooldown"
@@ -4397,7 +4828,7 @@ def _card_bluesky_post(card, state, article, promo=False):
                     max_tokens=400) or "").strip()
             if not text:
                 text = article["title"]
-            text = _fit_bsky_text(text, article["url"])
+            text = _fit_bsky_text(text, article["url"], _next_bsky_cta(state))
             label = f"card post ({acc['handle']})"
         if retry_with_backoff(
                 lambda: bluesky_post(client, text, image_path=image_path,
@@ -4415,7 +4846,7 @@ def _card_bluesky_post(card, state, article, promo=False):
                     log("info", f"card '{name}': promo posted - event "
                                 f"'{_norm_news_key(news_headline)[:60]}' on "
                                 "24h cooldown (topic + link+event recorded)")
-                _record_promo_caption_posted(state, text)
+                _record_promo_caption_posted(state, caption_id)
             ok = True
     return ok
 
