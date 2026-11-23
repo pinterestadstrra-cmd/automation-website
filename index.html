@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automation Website - Dashboard</title>
 <!-- No synchronous libsodium script here on purpose: the library is
-  loaded ON DEMAND (see ensureSodium) from jsDelivr with an unpkg
-  fallback, so a slow connection can never block the page or break
-  adding a Bluesky account with "sodium is not defined". -->
+  loaded ON DEMAND (see ensureSodium) from the LOCAL libs/ folder
+  first (same host as this page, so it loads whenever the page does),
+  with jsDelivr / unpkg as fallbacks, so a slow connection can never
+  block the page or break adding a Bluesky account. -->
 <style>
   /* FLAT UI - white / sky-blue / red / teal, all bright. No gradients,
      no heavy shadows, no black backgrounds. Contained, lag-free layout.
@@ -470,6 +471,8 @@
         <div id="secretWarn" class="status-msg status-err hidden" style="margin-top:10px">
           <span id="secretWarnText"></span>
           <button type="button" class="btn-red btn-small" id="retrySecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copySecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>BLUESKY_ACCOUNTS</code>.</div>
         </div>
         <div class="note" style="margin-top:10px">
           Accounts you add here are saved <b>in this browser</b> and in the
@@ -2525,17 +2528,22 @@ function renderAccountList() {
 }
 /* ---------- libsodium loader (robust, for the BLUESKY_ACCOUNTS secret) ----------
    The dashboard encrypts the Bluesky accounts with libsodium before
-   saving them to the GitHub Secret. The library comes from a CDN, and
-   on a slow connection that download can fail - when it did, adding an
-   account failed completely ("sodium is not defined") and the account
-   was lost. So: load it on demand (not at page load), try jsDelivr
-   first, then unpkg, each with a timeout - and NEVER let a failed
-   Secret save lose the account: the account is always saved in this
-   browser first, and a failed Secret save shows a warning + a Retry
-   button instead of an error. */
-const SODIUM_CDNS = [
-  "https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js",
-  "https://unpkg.com/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js",
+   saving them to the GitHub Secret. TWO files are needed, IN THIS ORDER:
+   the core (libsodium.js) FIRST, then the wrappers
+   (libsodium-wrappers.js) which builds the friendly `sodium` API on top
+   of it. Loading the wrappers alone THROWS ("Cannot read properties of
+   undefined (reading 'ready')") - that was the real bug: the old loader
+   only fetched the wrappers file, so the Secret save could never work,
+   even on a good connection. Both files are bundled locally in libs/
+   (same host as this dashboard, so they load whenever the page itself
+   loads), with the CDNs as fallbacks. The core is the asm.js build - it
+   needs no .wasm file (there is none in the npm package). */
+const SODIUM_SOURCES = [
+  { core: "libs/libsodium.js", wrappers: "libs/libsodium-wrappers.js" },
+  { core: "https://cdn.jsdelivr.net/npm/libsodium@0.7.13/dist/modules/libsodium.js",
+    wrappers: "https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js" },
+  { core: "https://unpkg.com/libsodium@0.7.13/dist/modules/libsodium.js",
+    wrappers: "https://unpkg.com/libsodium-wrappers@0.7.13/dist/modules/libsodium-wrappers.js" },
 ];
 let sodiumLoadPromise = null;
 function loadScriptWithTimeout(src, ms) {
@@ -2554,14 +2562,20 @@ function ensureSodium() {
   }
   if (sodiumLoadPromise) return sodiumLoadPromise;
   sodiumLoadPromise = (async () => {
-    for (const src of SODIUM_CDNS) {
+    // Each source is a (core, wrappers) pair, tried in order: local
+    // libs/ first, then jsDelivr, then unpkg. The core MUST load before
+    // the wrappers, or the wrappers throw during evaluation and `sodium`
+    // stays undefined - so check `sodium` after each pair, not just
+    // that the scripts loaded.
+    for (const src of SODIUM_SOURCES) {
       try {
-        await loadScriptWithTimeout(src, 10000);
+        await loadScriptWithTimeout(src.core, 10000);
+        await loadScriptWithTimeout(src.wrappers, 10000);
         if (typeof sodium !== "undefined" && sodium && sodium.ready) {
           await sodium.ready;
           return true;
         }
-      } catch (e) { /* try the next CDN */ }
+      } catch (e) { /* try the next source */ }
     }
     sodiumLoadPromise = null; // let a later retry try again
     return false;
@@ -2583,7 +2597,7 @@ function syncSecretWarn() {
   // A Secret save failed before? Show the warning again on load.
   try {
     if (localStorage.getItem(SECRET_PENDING_KEY) === "1") {
-      showSecretWarn("The GitHub Secret (BLUESKY_ACCOUNTS) does not have your latest accounts yet - the last save failed (slow connection). The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below.");
+      showSecretWarn("The GitHub Secret (BLUESKY_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
     }
   } catch (e) {}
 }
@@ -2591,7 +2605,7 @@ async function updateBskySecret(list) {
   if (needToken()) return false;
   try {
     const ok = await ensureSodium();
-    if (!ok) throw new Error("the encryption library could not be loaded (slow connection) - press \"Retry Secret save\" when your connection is better");
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
     const pk = await gh("/actions/secrets/public-key");
     await sodium.ready;
     const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
@@ -2608,7 +2622,7 @@ async function updateBskySecret(list) {
     try { localStorage.setItem(SECRET_PENDING_KEY, "1"); } catch (err) {}
     showMsg("Could not save to the Secret: " + e.message, false);
     showSecretWarn("Could not save to the Secret: " + e.message +
-      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below.");
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
     return false;
   }
 }
@@ -2669,6 +2683,36 @@ $("retrySecretBtn").addEventListener("click", async () => {
   } finally {
     btn.disabled = false;
     btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact BLUESKY_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"handle": "...", "app_password": "..."}] (see app.py
+   _load_env_bluesky_accounts) - the libsodium encryption in
+   updateBskySecret only protects the value in transit to the GitHub
+   API, which decrypts it server-side. Pasting the same JSON straight
+   into the Secret on GitHub stores exactly the same value, so this
+   needs no library at all. The warning stays until a successful
+   "Retry Secret save" confirms the Secret - that is the only way the
+   dashboard can KNOW it is saved. */
+$("copySecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name BLUESKY_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    // Fallback for browsers without clipboard permission.
+    const ta = document.createElement("textarea");
+    ta.value = value;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); await copied(); }
+    catch (err) { showMsg("Copy failed - the value could not be copied automatically.", false); }
+    ta.remove();
   }
 });
 
