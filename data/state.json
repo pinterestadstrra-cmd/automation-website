@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 11,
-  "last_run": "2026-11-23T16:04:56.377036+00:00",
+  "runs": 12,
+  "last_run": "2026-11-23T16:42:57.404638+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2
@@ -62,10 +62,10 @@
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T16:04:56.378709+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T16:42:57.405814+00:00"
     }
   ],
   "posted_urls": [],
