@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T18:41:22.732238+00:00",
-  "last_run": "2026-11-23T18:40:54.085890+00:00",
-  "runs": 17,
+  "generated_at": "2026-11-23T19:35:21.160030+00:00",
+  "last_run": "2026-11-23T19:35:14.554516+00:00",
+  "runs": 18,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 6,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-24T00:56:22.665655+06:00",
-        "2026-11-24T01:11:22.665655+06:00",
-        "2026-11-24T01:26:22.665655+06:00",
         "2026-11-24T01:41:22.665655+06:00",
-        "2026-11-24T01:56:22.665655+06:00"
+        "2026-11-24T01:56:22.665655+06:00",
+        "2026-11-24T02:11:22.665655+06:00",
+        "2026-11-24T02:26:22.665655+06:00",
+        "2026-11-24T02:41:22.665655+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T00:51:00+06:00",
         "2026-11-24T02:06:00+06:00",
         "2026-11-24T03:01:00+06:00",
         "2026-11-24T03:55:00+06:00",
-        "2026-11-24T04:50:00+06:00"
+        "2026-11-24T04:50:00+06:00",
+        "2026-11-24T06:05:00+06:00"
       ],
       "success": 6,
       "fail": 0,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T18:40:54.087409+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T19:35:14.555923+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
+    "Leak reveals Russian war dead",
     "Nvidia rehires Huang",
     "SEC probes Nvidia accounting",
-    "Alice Huang espionage allegations",
-    "AI sell-off overshadows Anthropic IPO",
-    "Grand Theft Auto VI release",
-    "DNC unveils 2028 debate plan",
     "Cyclops in Avengers: Doomsday footage",
+    "Grand Theft Auto VI release",
+    "Pope Leo praises cycling",
     "Weather forecasts include lead plume",
     "Doctor Who Day anniversary",
-    "NFL Week 11 games"
+    "Alice Huang espionage allegations",
+    "Thanksgiving dinner preparations"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T19:35:20.839385+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T19:35:20.796589+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T19:35:20.570835+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T19:35:14.557123+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T19:35:14.555931+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #18 started (--only blogger)",
+      "created_at": "2026-11-23T19:35:14.554542+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T18:41:22.734003+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations', 'AI sell-off overshadows Anthropic IPO', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-23T18:41:22.729238+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (skipped: not a posting time)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'unlikely winner war'",
       "created_at": "2026-11-23T17:47:08.478987+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'unlikely winner war'",
-      "created_at": "2026-11-23T17:47:08.329893+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: search HTTP 504 for 'unlikely winner war'",
-      "created_at": "2026-11-23T17:47:07.890612+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T17:46:56.836831+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T17:46:56.835843+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://cakevows.com/wp-content/uploads/2024/09/tort_xyz_A_traditional_three-tier_wedding_cake_with_ (page: Classy 3-Tier Wedding Cake Designs in 2024 - cakevows.com - only 0 of 5 key entities in the source page)",
-      "created_at": "2026-11-23T17:46:56.830079+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'The unlikely winner from war in the Gulf'",
-      "created_at": "2026-11-23T17:46:56.811848+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The unlikely winner from war in the Gulf'",
-      "created_at": "2026-11-23T17:46:56.693696+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'The unlikely winner from war in the Gulf'",
-      "created_at": "2026-11-23T17:46:56.491686+00:00",
       "card": ""
     }
   ]
