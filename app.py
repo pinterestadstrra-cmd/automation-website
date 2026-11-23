@@ -506,7 +506,8 @@ def save_state(state):
         # DICTS {key: iso_timestamp} (not lists) - keep only the 500
         # newest entries. (_store_record already prunes them to 7 days
         # on write; this is a safety cap so state.json stays small.)
-        for _key in ("posted_promo_topics", "posted_promo_captions"):
+        for _key in ("posted_promo_topics", "posted_promo_captions",
+                     "posted_promo_link_topics"):
             _store = state.get(_key)
             if isinstance(_store, dict) and len(_store) > 500:
                 _items = sorted(_store.items(),
@@ -516,6 +517,58 @@ def save_state(state):
             json.dump(state, f, ensure_ascii=False, indent=2)
     except Exception as e:
         print(f"state save failed: {e}", flush=True)
+
+
+def merge_worker_state(remote, local):
+    """Merge a worker run's just-saved state (local) into the remote
+    state.json (fresh from origin/main) for the workflow commit-back.
+    Rebuild #7.5: the old rebase-based commit-back NEVER persisted
+    state (zero 'automation state update' commits in the repo
+    history) - a rebase conflicts on data/state.json whenever the
+    dashboard commits a flag mid-run, the abort drops the push, and
+    the step still exits 0. Merging is deterministic: newest
+    timestamps win for cooldown stores, counters take the max,
+    dashboard flags set after this run started (remote, non-empty)
+    are kept so a Run-now clicked mid-run is never lost. Pure
+    function (no I/O) - unit-tested."""
+    remote = remote if isinstance(remote, dict) else {}
+    local = local if isinstance(local, dict) else {}
+    merged = dict(remote)
+    for k in ("runs", "consecutive_failures"):
+        try:
+            merged[k] = max(int(remote.get(k) or 0), int(local.get(k) or 0))
+        except Exception:
+            merged[k] = remote.get(k) or local.get(k) or 0
+    for k in ("last_run", "issues"):
+        if local.get(k) is not None:
+            merged[k] = local[k]
+    for k in ("posted_promo_topics", "posted_promo_captions",
+              "posted_promo_link_topics", "last_bsky_post_at"):
+        m = dict(remote.get(k) or {})
+        for kk, vv in (local.get(k) or {}).items():
+            if kk not in m or str(vv or "") >= str(m.get(kk) or ""):
+                m[kk] = vv
+        if m:
+            merged[k] = m
+    for k, cap in (("posted_urls", 500), ("posted_topics", 500),
+                   ("replied_comments", 2000), ("recent_articles", 50)):
+        seen = {}
+        for e in (remote.get(k) or []) + (local.get(k) or []):
+            key = e.get("url") if isinstance(e, dict) else e
+            seen[key] = e
+        if seen:
+            merged[k] = list(seen.values())[-cap:]
+    for k in ("file_card_stats", "file_card_runs", "file_card_retries"):
+        m = dict(remote.get(k) or {})
+        m.update(local.get(k) or {})
+        if m:
+            merged[k] = m
+    for k in ("run_card_now", "test_card_now"):
+        if remote.get(k):
+            merged[k] = remote[k]
+        elif local.get(k):
+            merged[k] = local[k]
+    return merged
 
 
 def append_logs_json():
@@ -1801,10 +1854,78 @@ def _fit_bsky_text(hook, link):
     return f"{hook}\n{link}"
 
 
+# Words too generic to identify a news event (dropped from event
+# keys): articles, prepositions, and headline filler verbs.
+_NEWS_STOPWORDS = frozenset(
+    "a an and are as at be been by for from has have had he her his in "
+    "into is it its of on or per say says said she that the their they "
+    "this to via was were will with about after before over under "
+    "between through during new just not no more most can could should "
+    "would".split())
+
+
+def _stem_word(w):
+    """Light stem so 'accepting'/'accept' and 'urges'/'urge' match.
+    Conservative: only strips -ing/-ed/-s when enough of the word
+    is left, and never touches words ending in -ss/-us/-is."""
+    if len(w) > 5 and w.endswith("ing"):
+        return w[:-3]
+    if len(w) > 4 and w.endswith("ed"):
+        return w[:-2]
+    if len(w) > 4 and w.endswith("s") and not w.endswith(("ss", "us", "is")):
+        return w[:-1]
+    return w
+
+
+def _event_words(text):
+    """Core keywords of a headline/topic: lowercase alphanumeric
+    tokens, >=3 chars, stopwords dropped, lightly stemmed, sorted
+    and de-duplicated."""
+    words = re.findall(r"[a-z0-9]+", (text or "").lower())
+    return sorted({_stem_word(w) for w in words
+                   if len(w) >= 3 and w not in _NEWS_STOPWORDS})
+
+
+def _event_keys_match(words_a, words_b):
+    """True when two keyword sets are the SAME event: identical sets,
+    or >=3 shared words covering >=60% of the smaller set. Two
+    different headlines about one event share its names and keywords
+    ('Theresa May urges accepting Brexit' vs 'Theresa May tells
+    Burnham to accept Brexit' share theresa/may/brexit/accept);
+    two different events rarely share 3 keywords."""
+    if not words_a or not words_b:
+        return False
+    if list(words_a) == list(words_b):
+        return True
+    inter = set(words_a) & set(words_b)
+    return len(inter) >= 3 and \
+        len(inter) / min(len(words_a), len(words_b)) >= 0.6
+
+
 def _norm_news_key(text):
-    """Normalise a news headline/topic into a dedup key (lowercase,
-    single spaces). Two posts about the same story share a key."""
-    return re.sub(r"\s+", " ", (text or "").strip().lower())
+    """Normalise a news headline/topic into an EVENT key: lowercase,
+    punctuation stripped, stopwords dropped, core keywords sorted.
+    Two different headlines about the SAME event share most keywords,
+    so they map to overlapping keys (see _event_keys_match).
+    Rebuild #7.5: the old key was the exact headline string, which
+    is why the same event posted twice on 2026-11-23 (15:11 + 15:16)
+    with different headlines - the 24h cooldown never saw them as
+    the same story."""
+    return " ".join(_event_words(text))
+
+
+def _matching_event_key(store, words, hours):
+    """The stored event key (if any, not expired) that matches these
+    keywords, plus its time left - or (None, None). Stored keys are
+    canonicalised before comparing, so entries written before #7.5
+    (exact headline strings) still match."""
+    for stored_key in list((store or {}).keys()):
+        left = _store_cooldown_left(store, stored_key, hours)
+        if left is None:
+            continue  # expired (or unparseable) - may be reused
+        if _event_keys_match(words, _norm_news_key(stored_key).split()):
+            return stored_key, left
+    return None, None
 
 
 def _store_dt(store, key):
@@ -1846,9 +1967,15 @@ def _store_record(store, key, max_age_days=7):
 
 def _promo_topic_cooldown_left(state, key):
     """Time left on the 24h no-reuse cooldown for a news topic /
-    headline key, or None when it may be used again."""
-    return _store_cooldown_left(state.get("posted_promo_topics") or {},
-                                _norm_news_key(key), PROMO_TOPIC_COOLDOWN_HOURS)
+    headline, or None when it may be used again. Rebuild #7.5: the
+    match is by EVENT, not by exact headline - a stored event whose
+    keywords overlap this headline's keywords is the SAME event, even
+    if the headline is worded differently. Expired entries (older
+    than 24h) never match."""
+    _, left = _matching_event_key(
+        state.get("posted_promo_topics") or {},
+        _event_words(key), PROMO_TOPIC_COOLDOWN_HOURS)
+    return left
 
 
 def _record_promo_topic_posted(state, key):
@@ -1874,6 +2001,43 @@ def _record_promo_caption_posted(state, text):
     """Remember that this exact caption was posted now (state.json)."""
     _store_record(state.setdefault("posted_promo_captions", {}),
                   _caption_hash(text))
+
+
+def _promo_link_topic_key(link, headline):
+    """Key for the same-link + same-topic guard: the promo link plus
+    the event key of the headline."""
+    return f"{(link or '').strip()}||{_norm_news_key(headline)}"
+
+
+def _promo_link_topic_cooldown_left(state, link, headline):
+    """Time left on the 24h no-reuse guard for this exact (link,
+    event) pair, or None when it may be used again. Same link +
+    same event = BLOCK even with a different caption; same link +
+    a DIFFERENT event stays allowed (the user's rule). The event
+    match is the same fuzzy overlap as the topic cooldown, scoped
+    to this link - a second net if the topic check ever misses."""
+    store = state.get("posted_promo_link_topics") or {}
+    link = (link or "").strip()
+    words = _event_words(headline)
+    for stored_key in list(store.keys()):
+        if "||" not in stored_key:
+            continue
+        stored_link, stored_event = stored_key.split("||", 1)
+        if stored_link != link:
+            continue
+        left = _store_cooldown_left(store, stored_key,
+                                    PROMO_TOPIC_COOLDOWN_HOURS)
+        if left is None:
+            continue
+        if _event_keys_match(words, _norm_news_key(stored_event).split()):
+            return left
+    return None
+
+
+def _record_promo_link_topic_posted(state, link, headline):
+    """Remember that this (link, event) pair was posted now."""
+    _store_record(state.setdefault("posted_promo_link_topics", {}),
+                  _promo_link_topic_key(link, headline))
 
 
 def _bsky_gap_left(state, card_name):
@@ -1976,7 +2140,14 @@ def _pick_fresh_promo_news(card, state):
             headline = (item.get("title") or "").strip() or topic
             if _promo_topic_cooldown_left(state, headline) is not None:
                 log("info", f"photo candidate: '{headline[:60]}' - "
-                            "skipped (already used within 24h)")
+                            "skipped (same event used within 24h, event "
+                            f"key '{_norm_news_key(headline)[:60]}')")
+                continue
+            if _promo_link_topic_cooldown_left(
+                    state, (card.get("link") or ""), headline) is not None:
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "skipped (same link + same event within 24h, "
+                            f"event key '{_norm_news_key(headline)[:60]}')")
                 continue
             src = item.get("source") or "news"
             # 1) The article's own og:image. Rebuild #7.4: a Google
@@ -3198,42 +3369,44 @@ def reply_allowed(author, text, card):
     return True, ""
 
 
-def prepare_bsky_image(local_path, ratio):
-    """Crop a local image file to the card's Bluesky image ratio
-    (16:9, 1:1 or 4:5) with a centre crop. Returns the new file path.
-    Bluesky accepts any ratio - this controls how the image is
-    prepared so it looks right in the post. If Pillow is missing or
-    the crop fails, the original file is used unchanged."""
+def prepare_bsky_image(local_path, ratio=None):
+    """Prepare a local image for Bluesky WITHOUT cropping: the photo
+    is published in its ORIGINAL aspect ratio (user order 2026-11-23
+    - whatever ratio the online photo has, that is the ratio it is
+    published in). The card's image_ratio setting is accepted for
+    backward compatibility but intentionally IGNORED - no centre
+    crop to 16:9 / 1:1 / 4:5 ever happens. Only shrink (resize
+    preserving ratio) until the file is <=950KB, because Bluesky
+    rejects image blobs over 1 MB. The original ratio (WxH) and the
+    published ratio are logged so the log proves no crop happened.
+    If Pillow is missing or processing fails, the original file is
+    used unchanged."""
     if not local_path or not os.path.exists(local_path):
         return local_path
-    target = {"16:9": 16 / 9, "1:1": 1.0, "4:5": 4 / 5}.get(ratio or "16:9", 16 / 9)
     try:
         from PIL import Image
         img = Image.open(local_path)
         if img.mode in ("RGBA", "LA", "P"):
             img = img.convert("RGB")
         w, h = img.size
-        cur = w / h if h else target
-        if abs(cur - target) < 0.01:
+        log("info", f"prepare_bsky_image: original {w}x{h} "
+                    f"(ratio {w / h:.2f}) - kept, no crop")
+        if os.path.getsize(local_path) <= 950 * 1024:
+            log("info", f"prepare_bsky_image: published {w}x{h} "
+                        f"(ratio {w / h:.2f}) - unchanged")
             return local_path
-        if cur > target:
-            nw = int(h * target)
-            x0 = (w - nw) // 2
-            img = img.crop((x0, 0, x0 + nw, h))
-        else:
-            nh = int(w / target)
-            y0 = (h - nh) // 2
-            img = img.crop((0, y0, w, y0 + nh))
         base, _ = os.path.splitext(local_path)
-        out = f"{base}-{str(ratio).replace(':', 'x')}.jpg"
-        img.save(out, "JPEG", quality=88)
-        # Bluesky rejects image blobs over 1 MB - shrink until it fits.
-        for _ in range(2):
-            if os.path.getsize(out) <= 950 * 1024:
-                break
+        out = f"{base}-shrunk.jpg"
+        for _ in range(4):
             w2, h2 = img.size
             img = img.resize((max(1, w2 // 2), max(1, h2 // 2)))
             img.save(out, "JPEG", quality=80)
+            if os.path.getsize(out) <= 950 * 1024:
+                break
+        w3, h3 = img.size
+        log("info", f"prepare_bsky_image: published {w3}x{h3} "
+                    f"(ratio {w3 / h3:.2f}) - shrunk to fit 950KB, "
+                    "ratio preserved")
         return out
     except Exception as e:
         log("warning", f"prepare_bsky_image failed ({e}) - using original image")
@@ -3919,7 +4092,14 @@ def _card_bluesky_post(card, state, article, promo=False):
         # the pick came from somewhere else.
         if _promo_topic_cooldown_left(state, news_headline) is not None:
             log("info", f"card '{name}': news story already used within "
-                        "24h - cooldown, skipping")
+                        f"24h - cooldown, skipping (event key "
+                        f"'{_norm_news_key(news_headline)[:60]}')")
+            LAST_BSKY_SKIP = "cooldown"
+            return False
+        if _promo_link_topic_cooldown_left(state, link, news_headline) is not None:
+            log("info", f"card '{name}': same link + same event within "
+                        f"24h - cooldown, skipping (event key "
+                        f"'{_norm_news_key(news_headline)[:60]}')")
             LAST_BSKY_SKIP = "cooldown"
             return False
         image_path = prepare_bsky_image(photo["local_path"],
@@ -3950,7 +4130,7 @@ def _card_bluesky_post(card, state, article, promo=False):
         image_path = prepare_bsky_image(local, card_bsky_image_ratio(card))
         image_alt = article.get("title", "")
         log("info", f"card '{name}': Bluesky image prepared "
-                    f"({card_bsky_image_ratio(card)})")
+                    "(original ratio kept)")
     if is_dry_run():
         log("warning", f"[DRY RUN] card '{name}': would post "
                        f"({accs[0]['handle']}) with photo {image_path}")
@@ -4020,8 +4200,14 @@ def _card_bluesky_post(card, state, article, promo=False):
             if use_link:
                 # Rebuild #7.1: record the news story AND the exact
                 # caption as used, so neither is reused within 24h.
+                # Rebuild #7.5: also record the (link, event) pair,
+                # and log the event key so the log proves the guard.
                 if news_headline:
                     _record_promo_topic_posted(state, news_headline)
+                    _record_promo_link_topic_posted(state, link, news_headline)
+                    log("info", f"card '{name}': promo posted - event "
+                                f"'{_norm_news_key(news_headline)[:60]}' on "
+                                "24h cooldown (topic + link+event recorded)")
                 _record_promo_caption_posted(state, text)
             ok = True
     return ok
