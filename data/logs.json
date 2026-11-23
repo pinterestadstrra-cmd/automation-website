@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T23:27:14.600557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Israel's military campaign in Gaza\", 'Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-23T23:27:14.596310+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-23T23:27:14.553668+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T23:27:14.552130+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-23T23:27:14.124657+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T23:26:07.934691+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-23T23:26:07.933717+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #26 started (--only blogger)",
+    "created_at": "2026-11-23T23:26:07.932118+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T22:35:22.164316+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWF2N1A4NTZkR3ZDemlDLUIyYlUwNVY2bmRKeEdCaEluLVg5MUJXWU1BY2VZNjhZdWR) - skipping, og:image would be the logo",
     "created_at": "2026-11-23T19:53:14.437184+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Google adds Drive and Wallet to AI search personalization — ' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:14.067556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipwFBVV95cUxNOTJ2ekRXMlhWLVdpaEcybUtMa1JIMWJxblI2azkybUFmUVI4NDczUzYyTjNHU1QwcVJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:14.065170+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Google Wants To Make a 24/7 AI TV Channel. You’ll Be the Mai' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:13.823293+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxPWGp4T1lOaDJaX2RIUlFhOWRaUEMzbUJ1eU5TNW5fMlNYTDEtNXl0SnVBSkxDdE9HeGN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:13.820605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: no category yielded a fresh story with a real photo - falling back to custom/trending/breaking news",
-    "created_at": "2026-11-23T19:53:12.985736+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:12.984283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3hoekpkTmwxcjE1NnNid3RFSXVsVGtob3A3dFNKVjRNZzVnaXMxRnV6N3pIellLeVd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:12.981832+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian Soldiers Killed in Ukraine War, Ne' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:12.738863+00:00",
     "card": ""
   }
 ]

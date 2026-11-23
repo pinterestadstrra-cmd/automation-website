@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T22:35:22.162477+00:00",
-  "last_run": "2026-11-23T22:33:44.833636+00:00",
-  "runs": 25,
+  "generated_at": "2026-11-23T23:27:14.598860+00:00",
+  "last_run": "2026-11-23T23:26:07.932095+00:00",
+  "runs": 26,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 10,
       "posts_today": 3,
       "next_runs": [
-        "2026-11-24T04:50:22.089052+06:00",
-        "2026-11-24T05:05:22.089052+06:00",
-        "2026-11-24T05:20:22.089052+06:00",
         "2026-11-24T05:35:22.089052+06:00",
-        "2026-11-24T05:50:22.089052+06:00"
+        "2026-11-24T05:50:22.089052+06:00",
+        "2026-11-24T06:05:22.089052+06:00",
+        "2026-11-24T06:20:22.089052+06:00",
+        "2026-11-24T06:35:22.089052+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T04:50:00+06:00",
         "2026-11-24T06:05:00+06:00",
         "2026-11-24T07:00:00+06:00",
         "2026-11-24T07:58:00+06:00",
-        "2026-11-24T08:53:00+06:00"
+        "2026-11-24T08:53:00+06:00",
+        "2026-11-24T09:50:00+06:00"
       ],
       "success": 9,
       "fail": 1,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 5
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T22:33:44.835462+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T23:26:07.933708+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Nvidia rehires Huang",
-    "Grand Theft Auto VI release",
-    "Washington girls' sports sex exam law",
-    "Alice Huang espionage allegations",
+    "Israel's military campaign in Gaza",
     "Google plans personalized AI TV channel",
+    "Nvidia rehires Huang",
+    "Alice Huang espionage allegations",
     "SEC probes Nvidia accounting",
+    "Grand Theft Auto VI release",
+    "Thanksgiving dinner preparations",
     "Weather forecasts include lead plume",
-    "Ocarina of Time remake",
-    "Pope Leo praises cycling",
-    "Thanksgiving dinner preparations"
+    "King tides threaten Bay Area flooding",
+    "Pope Leo praises cycling"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T23:27:14.553668+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T23:27:14.552130+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T23:27:14.124657+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T23:26:07.934691+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T23:26:07.933717+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #26 started (--only blogger)",
+      "created_at": "2026-11-23T23:26:07.932118+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T22:35:22.164316+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Grand Theft Auto VI release', \"Washington girls' sports sex exam law\", 'Alice Huang espionage allegations', 'Google plans personalized AI TV channel']",
+      "created_at": "2026-11-23T22:35:22.159456+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "prepare_bsky_image: published 480x736 (ratio 0.65) - unchanged",
       "created_at": "2026-11-23T21:38:40.356950+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: original 480x736 (ratio 0.65) - kept, no crop",
-      "created_at": "2026-11-23T21:38:40.355771+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-23T21:38:40.354179+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-23T21:38:40.352427+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Top Democrats urge Cuba to free prisoners as US tensions ris': https://n.nordstrommedia.com/it/848dfb90-7c30-4622-bd46-83ee2822ddd1.jpeg?h=368&w=240&dpr=2 (from bing-images, query 'Top Democrats urge Cuba to free prisoners as US tensions rise | Exclusive - USA Today', page: https://www.walmart.com/ip/FashionOutfit-Women-s-Made-in-USA-Basic-Casual-Solid-Stretchable-Scoop-Ne - matches 2 key entities (top, usa))",
-      "created_at": "2026-11-23T21:38:40.350811+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Top Democrats urge Cuba to free prisoners as US te': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-23T21:38:40.348977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
-      "created_at": "2026-11-23T21:38:27.515617+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
-      "created_at": "2026-11-23T21:38:27.371017+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
-      "created_at": "2026-11-23T21:38:27.225798+00:00",
       "card": ""
     }
   ]
