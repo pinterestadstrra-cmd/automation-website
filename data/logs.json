@@ -2,6 +2,72 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T18:41:22.734003+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations', 'AI sell-off overshadows Anthropic IPO', 'Grand Theft Auto VI release']",
+    "created_at": "2026-11-23T18:41:22.729238+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend' ran (skipped: not a posting time)",
+    "created_at": "2026-11-23T18:41:22.665688+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': not a posting time - replies only, nothing posted this run",
+    "created_at": "2026-11-23T18:41:22.664613+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-23T18:41:22.663566+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T18:41:22.661264+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T18:41:22.658966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-23T18:41:22.376600+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T18:40:54.088367+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-23T18:40:54.087418+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #17 started (--only bluesky)",
+    "created_at": "2026-11-23T18:40:54.085911+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T18:24:41.062923+00:00",
     "card": ""
   },
@@ -1132,71 +1198,5 @@
     "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://helpsquad.com/wp-content/uploads/2023/11/Escalation-1024x1024.jpg (page: https://www.goodconsciouslife.com/conflict-escalation-model | How to Handle Escalations Effectively: - only 1 of 10 key entities in the source page)",
     "created_at": "2026-11-23T17:45:13.213133+00:00",
     "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.questionpro.com/blog/wp-content/uploads/2023/08/escalation_management_process.jpg (page: https://helpsquad.com/blog/escalation-management/ | Escalation Bedeutung _ ESCALATION – DTQFP - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:13.212026+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US '",
-    "created_at": "2026-11-23T17:45:13.196871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US '",
-    "created_at": "2026-11-23T17:45:13.054672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US '",
-    "created_at": "2026-11-23T17:45:12.908482+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US '",
-    "created_at": "2026-11-23T17:45:12.477282+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:06.155460+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:06.154488+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Escalation threat as Hormuz Strait stalemate stokes Iran-US ' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:45:06.153261+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:45:06.150880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Cyclops in Avengers: Doomsday footage', 'Medicare for All and universal healthcare', 'Trump says he protected Musk', \"Women's World Cup host vote\", 'SEC probes Nvidia accounting']",
-    "created_at": "2026-11-23T17:45:05.486992+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T17:45:05.098811+00:00",
-    "card": "BlueSky Trend"
   }
 ]
