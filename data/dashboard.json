@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T14:00:11.340114+00:00",
-  "last_run": "2026-11-23T13:58:02.208338+00:00",
-  "runs": 7,
+  "generated_at": "2026-11-23T14:40:07.153383+00:00",
+  "last_run": "2026-11-23T14:39:50.915946+00:00",
+  "runs": 8,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 2,
       "posts_today": 2,
       "next_runs": [
-        "2026-11-23T20:05:41.129395+06:00",
-        "2026-11-23T20:35:41.129395+06:00",
         "2026-11-23T21:05:41.129395+06:00",
         "2026-11-23T21:35:41.129395+06:00",
-        "2026-11-23T22:05:41.129395+06:00"
+        "2026-11-23T22:05:41.129395+06:00",
+        "2026-11-23T22:35:41.129395+06:00",
+        "2026-11-23T23:05:41.129395+06:00"
       ],
       "next_post_times": [
-        "2026-11-23T20:10:00+06:00",
         "2026-11-23T20:54:00+06:00",
         "2026-11-23T21:59:00+06:00",
         "2026-11-23T23:04:00+06:00",
-        "2026-11-23T23:56:00+06:00"
+        "2026-11-23T23:56:00+06:00",
+        "2026-11-24T00:51:00+06:00"
       ],
       "success": 2,
       "fail": 0,
@@ -115,8 +115,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primotodaynews.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primotodaynews.bsky.social",
+      "enabled": true,
+      "posts_limit": 24,
+      "posts_today": 2
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -127,12 +136,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -141,10 +150,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T13:58:02.209333+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T14:39:50.917542+00:00"
     }
   ],
   "dry_run": false,
@@ -153,19 +162,67 @@
     "open": false
   },
   "trending": [
+    "Nvidia rehires Huang",
+    "SEC probes Nvidia accounting",
+    "Avengers: Doomsday runtime confirmed",
+    "Alice Huang espionage allegations",
+    "Trump blames Democrats for selloff",
     "Army plans Iowa lead detonation",
-    "Smithsonian plan spotted on Metro",
-    "AI sell-off overshadows Anthropic IPO",
-    "Trump urges Nvidia to rehire Huang",
-    "Steps to a drunkard's grave meme",
-    "Amodei's video games for jobless idea",
-    "Bird photography",
     "Doctor Who Day anniversary",
-    "Favorite first Magic set card",
-    "Tarik Skubal signs with Mets"
+    "Grand Theft Auto VI release",
+    "AI sell-off overshadows Anthropic IPO",
+    "Steps to a drunkard's grave meme"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T14:40:07.063449+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T14:40:07.061766+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T14:40:06.783312+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T14:39:50.918526+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-23T14:39:50.917551+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #8 started (--only bluesky)",
+      "created_at": "2026-11-23T14:39:50.915966+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T14:00:11.341107+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Army plans Iowa lead detonation', 'Smithsonian plan spotted on Metro', 'AI sell-off overshadows Anthropic IPO', 'Trump urges Nvidia to rehire Huang', \"Steps to a drunkard's grave meme\"]",
+      "created_at": "2026-11-23T14:00:11.337724+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -417,54 +474,6 @@
       "message": "ai health: groq ok (openai/gpt-oss-120b)",
       "created_at": "2026-11-23T11:08:45.622034+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-23T11:08:45.390444+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T11:08:37.728270+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-23T11:08:37.727198+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #2 started (--only bluesky)",
-      "created_at": "2026-11-23T11:08:37.725474+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T10:35:41.340923+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Russian warship explodes in Libya', 'Theresa May urges accepting Brexit', \"Amodei's video games for jobless idea\", 'AI sell-off overshadows Anthropic IPO', \"GTA VI's Jason and Lucia\"]",
-      "created_at": "2026-11-23T10:35:41.336334+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend' ran (no-op)",
-      "created_at": "2026-11-23T10:35:41.135824+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': posted less than 5 minutes ago - too soon, skipping",
-      "created_at": "2026-11-23T10:35:41.134828+00:00",
-      "card": "BlueSky Trend"
     }
   ]
 }
