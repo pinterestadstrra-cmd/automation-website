@@ -55,6 +55,8 @@ RUN
 ---
   Web dashboard :  python app.py            (then open http://localhost:5000)
   One worker run:  python app.py --worker   (what GitHub Actions runs)
+  Blogger only :  python app.py --worker --only blogger
+  Bluesky only :  python app.py --worker --only bluesky
   Docker        :  docker build -t automation-website . && docker run -p 5000:5000 --env-file .env automation-website
 """
 
@@ -482,6 +484,10 @@ def write_dashboard_json(state):
             posts = [dict(r) for r in conn.execute(
                 "SELECT title, url, topic, source, image_url, created_at FROM posts "
                 "ORDER BY id DESC LIMIT 10").fetchall()]
+            if not posts:
+                # GitHub Actions runners have an empty DB - show the
+                # articles recorded in state.json instead.
+                posts = [dict(a) for a in (state.get("recent_articles") or [])[:10]]
             logs = [dict(r) for r in conn.execute(
                 "SELECT level, message, created_at FROM logs ORDER BY id DESC LIMIT 50"
                 ).fetchall()]
@@ -860,6 +866,64 @@ def fetch_verified_photo(topic):
     if verify_photo_url(url):
         return photo
     log("warning", f"photo URL failed verification for '{topic}': {url}")
+    return None
+
+
+def fetch_og_image(url):
+    """The og:image (or twitter:image) of a link, verified as a real
+    image. Used so a link-promo post still has a photo (no photo =
+    no post). Returns the image URL or None."""
+    if not url or not str(url).startswith("http"):
+        return None
+    try:
+        r = requests.get(url, timeout=20, allow_redirects=True,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code != 200:
+            return None
+        html = r.text
+        m = (re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+                       html, re.IGNORECASE)
+             or re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+                          html, re.IGNORECASE)
+             or re.search(r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+                          html, re.IGNORECASE))
+        if not m:
+            return None
+        img = m.group(1).strip()
+        if img.startswith("//"):
+            img = "https:" + img
+        elif img.startswith("/"):
+            p = urlparse(url)
+            img = f"{p.scheme}://{p.netloc}{img}"
+        if verify_photo_url(img):
+            return img
+    except Exception as e:
+        log("warning", f"og:image fetch error for {url}: {e}")
+    return None
+
+
+def _promo_photo(card, link, state=None):
+    """A verified photo for a link-promo post (PHOTO-FIRST).
+    Order: the link's og:image, then the latest article's image, then
+    a stock photo for the card's topic. Returns a photo dict with
+    local_path, or None - then the post is SKIPPED, never text-only."""
+    if link:
+        og = fetch_og_image(link)
+        if og:
+            local = download_image(og, "promo")
+            if local:
+                return {"url": og, "source": "og:image", "alt": "promo",
+                        "local_path": local}
+    art = latest_article(state)
+    if art and art.get("image_url"):
+        local = download_image(art["image_url"], art.get("title", "promo"))
+        if local:
+            return {"url": art["image_url"], "source": "article",
+                    "alt": art.get("title", ""), "local_path": local}
+    topic = (card.get("topic_override") or "").strip() or "breaking news"
+    photo = fetch_verified_photo(topic)
+    if photo and photo.get("local_path"):
+        return photo
     return None
 
 
@@ -1893,6 +1957,31 @@ def record_card_post(state, name):
     counts["month_n"] = int(counts.get("month_n") or 0) + 1
 
 
+def card_caps_remaining(state, name, card):
+    """Posts this card may still publish (day / week / month caps
+    combined). None = no cap at all (all three are 0 = unlimited).
+    0 or less = a cap is already reached."""
+    rem = None
+    cap = card_posts_per_day(card)
+    if cap > 0:
+        rem = cap - card_posts_today(state, name)
+    wcap = card_max_posts_per_week(card)
+    if wcap > 0:
+        w = wcap - card_posts_this_week(state, name)
+        rem = w if rem is None else min(rem, w)
+    mcap = card_max_posts_per_month(card)
+    if mcap > 0:
+        m = mcap - card_posts_this_month(state, name)
+        rem = m if rem is None else min(rem, m)
+    return rem
+
+
+def _card_caps_hit(state, name, card):
+    """True if any of this card's post caps (day/week/month) is reached."""
+    rem = card_caps_remaining(state, name, card)
+    return rem is not None and rem <= 0
+
+
 def card_replies_today(state, name):
     """Replies THIS card sent today (Dhaka day) - the per-day reply cap."""
     counts = state.get("file_card_reply_counts", {}).get(name, {}) or {}
@@ -1955,41 +2044,48 @@ def prepare_bsky_image(local_path, ratio):
         base, _ = os.path.splitext(local_path)
         out = f"{base}-{str(ratio).replace(':', 'x')}.jpg"
         img.save(out, "JPEG", quality=88)
+        # Bluesky rejects image blobs over 1 MB - shrink until it fits.
+        for _ in range(2):
+            if os.path.getsize(out) <= 950 * 1024:
+                break
+            w2, h2 = img.size
+            img = img.resize((max(1, w2 // 2), max(1, h2 // 2)))
+            img.save(out, "JPEG", quality=80)
         return out
     except Exception as e:
         log("warning", f"prepare_bsky_image failed ({e}) - using original image")
         return local_path
 
 
-def run_card_blogger(state, card):
+def run_card_blogger(state, card, max_posts=None):
     """Write + publish articles for ONE Blogger card - the ONLY way
     the worker publishes to Blogger (card-only operation).
     Respects the card's own posts-per-day / per-week / per-month caps,
     posting window, posts-per-run, topic/source, bold toggle, labels
-    and draft mode.
+    and draft mode. max_posts caps how many articles this run may
+    publish (the caller passes min(posts-per-run, due posting slots,
+    remaining cap) - so one run can NEVER publish more than its due
+    slots, and NEVER exceed the daily cap, even mid-run).
     PHOTO-FIRST order (hard rule): for each topic, fetch + verify a
     photo BEFORE the AI writes anything. No verified photo = the
-    topic is dropped entirely, never text-only. Returns the LAST
-    published article or None."""
+    topic is dropped entirely, never text-only.
+    Returns the LIST of published articles (empty list = nothing
+    published this run). Published articles are also recorded in
+    state.json (recent_articles) so Bluesky cards can promote them
+    on GitHub Actions, where the SQLite DB is empty."""
     name = card.get("name", "")
     bold = card_bold_enabled(card)
     # Per-card caps - counted in PUBLISHED articles, not runs.
-    cap = card_posts_per_day(card)
-    if cap > 0 and card_posts_today(state, name) >= cap:
-        log("info", f"card '{name}': daily cap reached ({cap}/day) - skipping")
-        return None
-    wcap = card_max_posts_per_week(card)
-    if wcap > 0 and card_posts_this_week(state, name) >= wcap:
-        log("info", f"card '{name}': weekly cap reached ({wcap}/week) - skipping")
-        return None
-    mcap = card_max_posts_per_month(card)
-    if mcap > 0 and card_posts_this_month(state, name) >= mcap:
-        log("info", f"card '{name}': monthly cap reached ({mcap}/month) - skipping")
-        return None
+    if _card_caps_hit(state, name, card):
+        log("info", f"card '{name}': post cap reached - skipping")
+        return []
     if not card_in_window(card):
         log("info", f"card '{name}': outside its posting window - skipping")
-        return None
+        return []
     per_run = card_posts_per_run(card)
+    limit = per_run if max_posts is None else max(0, int(max_posts))
+    if limit <= 0:
+        return []
     dry = is_dry_run()
     draft_only = card_draft_only(card)
     labels = card_labels(card)
@@ -1999,9 +2095,15 @@ def run_card_blogger(state, card):
     if (card.get("source") or "trending") == "custom":
         force = (card.get("topic_override") or "").strip() or None
     published = []
-    for topic, sources, facts in candidate_topics(state, limit=5,
-                                                  force_topic=force)[:3]:
-        if len(published) >= per_run:
+    for topic, sources, facts in candidate_topics(
+            state, limit=max(5, limit), force_topic=force)[:limit]:
+        if len(published) >= limit:
+            break
+        # Re-check the caps before EVERY publish - the cap is counted
+        # in published articles, so a run with posts-per-run 5 must
+        # stop at the cap instead of publishing 5 past it.
+        if _card_caps_hit(state, name, card):
+            log("info", f"card '{name}': post cap reached mid-run - stopping")
             break
         if published:
             time.sleep(5)
@@ -2044,6 +2146,12 @@ def run_card_blogger(state, card):
         record_card_post(state, name)
         state.setdefault("posted_urls", []).append(url)
         state.setdefault("posted_topics", []).append(topic.lower())
+        # Remember the article in state.json (survives GitHub Actions).
+        arts = state.setdefault("recent_articles", [])
+        arts.insert(0, {"title": headline, "url": url,
+                        "image_url": photo.get("url", ""), "topic": topic,
+                        "created_at": now_iso()})
+        del arts[20:]
         if draft_only:
             log("info", f"card '{name}' saved DRAFT (not published): {headline} -> {url}")
         else:
@@ -2053,18 +2161,75 @@ def run_card_blogger(state, card):
                           "image_url": photo.get("url", ""), "topic": topic})
     if not published:
         log("info", f"card '{name}': no publishable topic this run (photo-first)")
-        return None
-    return published[-1]
+    return published
 
 
-def latest_article():
+def latest_article(state=None):
+    """The newest published article (for Bluesky cards to promote).
+    GitHub Actions runners are fresh VMs, so the SQLite DB is EMPTY
+    there - fall back to the articles this worker recorded in
+    state.json (they survive because state.json is committed back)."""
     conn = db_connect()
     try:
         row = conn.execute("SELECT title, url, image_url FROM posts "
                            "ORDER BY id DESC LIMIT 1").fetchone()
-        return dict(row) if row else None
+        if row:
+            return dict(row)
     finally:
         conn.close()
+    if isinstance(state, dict):
+        arts = state.get("recent_articles") or []
+        if arts:
+            return dict(arts[0])
+    return None
+
+
+def _recent_articles(state, limit=10):
+    """Recent published articles, newest first (DB first, then the
+    state.json record - the DB is empty on GitHub Actions runners).
+    Deduped by URL."""
+    out, seen = [], set()
+    conn = db_connect()
+    try:
+        rows = conn.execute(
+            "SELECT title, url, image_url FROM posts ORDER BY id DESC LIMIT ?",
+            (limit,)).fetchall()
+        for r in rows:
+            d = dict(r)
+            if d.get("url") and d["url"] not in seen:
+                seen.add(d["url"])
+                out.append(d)
+    finally:
+        conn.close()
+    if isinstance(state, dict):
+        for a in state.get("recent_articles") or []:
+            if isinstance(a, dict) and a.get("url") and a["url"] not in seen:
+                seen.add(a["url"])
+                out.append(dict(a))
+    return out[:limit]
+
+
+def _next_unposted_article(state, card):
+    """The newest recent article this card has NOT posted to Bluesky
+    yet. Returns an article dict or None (then the card has nothing
+    new to post - it must NOT re-post the same article all day)."""
+    name = card.get("name", "")
+    posted = set((state.get("file_card_bsky_posts", {}) or {}).get(name, []) or [])
+    for art in _recent_articles(state, limit=10):
+        if art.get("url") and art["url"] not in posted:
+            return art
+    return None
+
+
+def _mark_bsky_posted(state, name, url):
+    """Remember that this card already posted this article URL."""
+    if not url:
+        return
+    store = state.setdefault("file_card_bsky_posts", {})
+    lst = store.setdefault(name, [])
+    if url not in lst:
+        lst.append(url)
+    del lst[:-50]
 
 
 def replies_today():
@@ -2112,15 +2277,18 @@ def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
         log("info", "bluesky cycle: no accounts configured")
         return
     # Per-card account: this card posts/replies as ONE account only.
+    # NO silent fallback: if the card's account is missing, the card
+    # does nothing (it must never reply as some other account).
     if account_handle:
         use_accounts = [a for a in accounts if a["handle"] == account_handle]
         if not use_accounts:
             log("warning", f"bluesky cycle: card '{card_name}' account "
-                           f"'{account_handle}' not found - using first account")
-            use_accounts = accounts[:1]
+                           f"'{account_handle}' not found - skipping replies "
+                           "(add that account first)")
+            return
     else:
         use_accounts = accounts[:1]
-    article = article or latest_article()
+    article = article or latest_article(state)
     if not article:
         log("info", "bluesky cycle: no article to link yet")
         return
@@ -2498,16 +2666,64 @@ def card_reply_settings(card):
 
 
 def _card_bluesky_post(card, state, article, promo=False):
-    """Post one Bluesky card (post or promo). Returns True on success.
+    """Post ONE Bluesky card (post or promo). Returns True on success.
     Shared by bluesky_post and bluesky_promo cards. Only the card's
     own account posts (account_handle, or the first account).
-    The article's image is attached, cropped to the card's Bluesky
-    image ratio (16:9 / 1:1 / 4:5). The post text uses the card's tone."""
+    PHOTO-FIRST (hard rule): a verified photo is REQUIRED.
+    - Article post: the article's image is downloaded + verified
+      (content-type image/*) and cropped to the card's Bluesky image
+      ratio (16:9 / 1:1 / 4:5). No image, or a download that fails =
+      the post is SKIPPED ("no photo, skipped") - never text-only.
+    - Promo (or a post card with a link): the link's og:image, then
+      the latest article's image, then a stock photo for the card's
+      topic. No verified photo = skipped, never link-only.
+    The photo is verified BEFORE logging in or writing any text, so a
+    failed photo never wastes an AI call. The post text uses the
+    card's tone."""
     name = card.get("name", "")
     tone_text = ARTICLE_TONES[card_tone(card)]
     accs = [a for a in list_accounts()
             if not card.get("account_handle") or
             a["handle"] == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Bluesky account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    use_link = promo or bool(link)
+    if not use_link and not article:
+        log("warning", f"card '{name}': no photo, skipped - nothing to post")
+        return False
+    # --- PHOTO-FIRST gate (before login, before any AI text) ---
+    image_path = None
+    image_alt = ""
+    if use_link:
+        photo = _promo_photo(card, link, state)
+        if not photo:
+            log("warning", f"card '{name}': no photo, skipped - Bluesky post "
+                           "needs a verified photo")
+            return False
+        image_path = prepare_bsky_image(photo["local_path"],
+                                        card_bsky_image_ratio(card))
+        image_alt = photo.get("alt", "") or (article.get("title", "")
+                                             if article else "")
+    else:
+        image_url = (article or {}).get("image_url", "")
+        if not image_url:
+            log("warning", f"card '{name}': no photo, skipped - article has no image")
+            return False
+        local = download_image(image_url, article.get("title", ""))
+        if not local:
+            log("warning", f"card '{name}': no photo, skipped - article image "
+                           "could not be downloaded/verified")
+            return False
+        image_path = prepare_bsky_image(local, card_bsky_image_ratio(card))
+        image_alt = article.get("title", "")
+        log("info", f"card '{name}': Bluesky image prepared "
+                    f"({card_bsky_image_ratio(card)})")
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post "
+                       f"({accs[0]['handle']}) with photo {image_path}")
+        return True
     ok = False
     for acc in accs[:1]:
         if not account_enabled(acc["handle"]):
@@ -2515,16 +2731,10 @@ def _card_bluesky_post(card, state, article, promo=False):
         limit = account_posts_limit(acc["handle"])
         if limit > 0 and posts_today_for_account(state, acc["handle"]) >= limit:
             continue
-        if promo:
-            link = (card.get("link") or "").strip()
-            if is_dry_run():
-                log("warning", f"[DRY RUN] card '{name}': would promote "
-                               f"{link} ({acc['handle']})")
-                ok = True
-                continue
-            client = bsky_login(acc["handle"], acc["app_password"])
-            if not client:
-                continue
+        client = bsky_login(acc["handle"], acc["app_password"])
+        if not client:
+            continue
+        if use_link:
             text = card.get("text") or ai_write(
                 BSKY_PROMO_PROMPT.format(link=link, tone=tone_text), max_tokens=400)
             if not text:
@@ -2533,14 +2743,6 @@ def _card_bluesky_post(card, state, article, promo=False):
                 text = f"{text}\n{link}"
             label = f"card promo ({acc['handle']})"
         else:
-            if is_dry_run():
-                log("warning", f"[DRY RUN] card '{name}': would post "
-                               f"({acc['handle']}): {article['title']}")
-                ok = True
-                continue
-            client = bsky_login(acc["handle"], acc["app_password"])
-            if not client:
-                continue
             text = card.get("text") or ai_write(
                 BSKY_POST_PROMPT.format(headline=article["title"],
                                         link=article["url"], tone=tone_text),
@@ -2548,27 +2750,104 @@ def _card_bluesky_post(card, state, article, promo=False):
             if not text:
                 text = f"{article['title']}\n{article['url']}"
             label = f"card post ({acc['handle']})"
-        # Attach the article image (cropped to this card's ratio).
-        image_path = None
-        if not promo and article and article.get("image_url"):
-            local = download_image(article["image_url"], article.get("title", ""))
-            if local:
-                image_path = prepare_bsky_image(
-                    local, card_bsky_image_ratio(card))
-                log("info", f"card '{name}': Bluesky image prepared "
-                            f"({card_bsky_image_ratio(card)})")
         if retry_with_backoff(
                 lambda: bluesky_post(client, text, image_path=image_path,
-                                     image_alt=article["title"] if article else ""),
+                                     image_alt=image_alt or (article["title"] if article else "")),
                 attempts=3, base_delay=5, label=label):
             record_bsky_post(state, acc["handle"])
             ok = True
     return ok
 
 
+def _post_bsky_card(card, state, due_slots):
+    """The posting loop for bluesky_post / bluesky_promo cards.
+    Returns (made, last_error). Respects, in order:
+    - posts-per-run, the number of due posting slots (at most ONE post
+      per slot, so spread stays even), and the day/week/month caps
+      (a run can never push the card past its daily cap).
+    A post card with a link posts the link; without a link it posts
+    the newest article this card has not posted yet (rotation - the
+    same article is never posted all day). In dry-run/test mode nothing
+    is counted and no slot is marked used."""
+    name = card.get("name", "")
+    link = (card.get("link") or "").strip()
+    remaining = card_caps_remaining(state, name, card)
+    if remaining is not None and remaining <= 0:
+        log("info", f"card '{name}': post cap reached - skipping")
+        return 0, "post cap reached"
+    max_posts = card_posts_per_run(card)
+    if due_slots:
+        max_posts = min(max_posts, len(due_slots))
+    if remaining is not None:
+        max_posts = min(max_posts, remaining)
+    dry = is_dry_run()
+    made = 0
+    while made < max_posts:
+        if link:
+            target, use_promo = None, True
+        else:
+            target = _next_unposted_article(state, card)
+            if not target:
+                log("info", f"card '{name}': no new article to post")
+                break
+            use_promo = False
+        if _card_bluesky_post(card, state, target, promo=use_promo):
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                if target and target.get("url"):
+                    _mark_bsky_posted(state, name, target["url"])
+        else:
+            break
+    if made and not dry:
+        mark_slots_used(state, name, due_slots[:made])
+    return made, ("" if made else "post failed or skipped")
+
+
+def _update_card_stats(state, card, ok, last_error):
+    """Per-card stats: success/fail counters + last error + last run.
+    DB cards (Flask) update the cards table; file cards (data/cards.json)
+    are tracked in state.json (committed back to the repo)."""
+    name = card.get("name", "")
+    if card.get("id"):
+        conn = db_connect()
+        try:
+            if ok:
+                conn.execute(
+                    "UPDATE cards SET done_count=done_count+1, "
+                    "success_count=success_count+1, last_run=?, next_run=?, "
+                    "error='', updated_at=? WHERE id=?",
+                    (now_iso(), next_run_for_card(card), now_iso(), card["id"]))
+            else:
+                conn.execute(
+                    "UPDATE cards SET fail_count=fail_count+1, last_run=?, "
+                    "next_run=?, error=?, updated_at=? WHERE id=?",
+                    (now_iso(), next_run_for_card(card), last_error, now_iso(),
+                     card["id"]))
+            conn.commit()
+        finally:
+            conn.close()
+        record_card_run_today(state, f"db:{card['id']}")
+    else:
+        stats = state.setdefault("file_card_stats", {})
+        s = stats.setdefault(name, {"success": 0, "fail": 0, "last_ok": True,
+                                    "last_error": "", "last_run": ""})
+        if ok:
+            s["success"] = int(s.get("success", 0)) + 1
+            s["last_ok"] = True
+            s["last_error"] = ""
+        else:
+            s["fail"] = int(s.get("fail", 0)) + 1
+            s["last_ok"] = False
+            s["last_error"] = last_error
+        s["last_run"] = now_iso()
+        state.setdefault("file_card_runs", {})[name] = now_iso()
+        record_card_run_today(state, name)
+
+
 def execute_card(card, state, test_mode=False):
     """Run one card once. Returns True on success.
-    RUN MODEL (rebuild #5):
+    RUN MODEL (rebuild #5, kept):
     - The card RUNS every `interval` (run every X minutes) to check
       replies. Replies (own + others) happen on EVERY run.
     - PUBLISHING happens ONLY at a scheduled posting time: the
@@ -2580,6 +2859,12 @@ def execute_card(card, state, test_mode=False):
       is published and no reply is sent). The posting gate is bypassed
       so the test actually exercises the article path. Test runs do
       not touch the success/fail counters.
+    PAUSE is per-card: pausing one card pauses ONLY that card (the
+    caller skips paused cards). The global paused=true in config is
+    only the emergency "Pause All" switch.
+    A Bluesky card with NO usable account does NOT run at all: it is
+    logged and skipped, and it does NOT burn retries (a missing
+    account is a setup problem, not a transient failure).
     Per-card settings honoured here: topic override + source, bold,
     labels, draft mode, length + tone (Blogger), and reply toggles +
     caps + lists + account (Bluesky). Success / failure counters and
@@ -2589,6 +2874,7 @@ def execute_card(card, state, test_mode=False):
     name = card.get("name", "")
     last_error = ""
     ok = False
+    no_account = False
     # Master safety switches: a card never runs when its workflow is OFF.
     if ctype == "blogger_post" and not workflow_enabled("blogger"):
         log("info", f"card '{name}': Blogger workflow is OFF - skipping")
@@ -2631,7 +2917,14 @@ def execute_card(card, state, test_mode=False):
                           reply_skip_words=card.get("reply_skip_words") or "")
 
     try:
-        if ctype == "blogger_post":
+        # A Bluesky card with NO account cannot run at all.
+        if ctype in ("bluesky_post", "bluesky_promo", "bluesky_reply") \
+                and not list_accounts():
+            no_account = True
+            last_error = "no Bluesky account added - add one first (Bluesky tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "blogger_post":
             # Card-only: the card's own settings drive everything.
             # Blogger cards have no replies - they only publish, and
             # only at a scheduled posting time.
@@ -2640,16 +2933,27 @@ def execute_card(card, state, test_mode=False):
                             "nothing published this run (replies: n/a)")
                 ok = True
             else:
-                article = run_card_blogger(state, card)
-                ok = article is not None
-                if ok:
-                    mark_slots_used(state, name, due_slots)
+                remaining = card_caps_remaining(state, name, card)
+                if remaining is not None and remaining <= 0:
+                    log("info", f"card '{name}': post cap reached - skipping")
+                    last_error = "post cap reached"
                 else:
-                    last_error = "no article published this run"
+                    max_posts = card_posts_per_run(card)
+                    if due_slots:
+                        max_posts = min(max_posts, len(due_slots))
+                    if remaining is not None:
+                        max_posts = min(max_posts, remaining)
+                    articles = run_card_blogger(state, card, max_posts=max_posts)
+                    ok = bool(articles)
+                    if ok:
+                        mark_slots_used(state, name, due_slots[:len(articles)])
+                    else:
+                        last_error = "no article published this run"
         elif ctype == "bluesky_post":
-            article = latest_article()
+            article = latest_article(state)
             _do_replies(article)
-            if not article:
+            link = (card.get("link") or "").strip()
+            if not link and not article:
                 log("warning", f"card '{name}': no article to post")
                 last_error = "no article to post yet"
             elif not post_due:
@@ -2657,14 +2961,13 @@ def execute_card(card, state, test_mode=False):
                             "replies only, nothing posted this run")
                 ok = True
             else:
-                ok = _card_bluesky_post(card, state, article, promo=False)
-                if ok:
-                    mark_slots_used(state, name, due_slots)
-                else:
-                    last_error = "post failed or skipped"
+                made, err = _post_bsky_card(card, state, due_slots)
+                ok = made > 0
+                if not ok:
+                    last_error = err or "post failed or skipped"
         elif ctype == "bluesky_promo":
             link = (card.get("link") or "").strip()
-            _do_replies(latest_article())
+            _do_replies(latest_article(state))
             if not link:
                 log("warning", f"card '{name}': no link to promote")
                 last_error = "no link to promote"
@@ -2673,13 +2976,12 @@ def execute_card(card, state, test_mode=False):
                             "replies only, nothing promoted this run")
                 ok = True
             else:
-                ok = _card_bluesky_post(card, state, None, promo=True)
-                if ok:
-                    mark_slots_used(state, name, due_slots)
-                else:
-                    last_error = "promo failed or skipped"
+                made, err = _post_bsky_card(card, state, due_slots)
+                ok = made > 0
+                if not ok:
+                    last_error = err or "promo failed or skipped"
         elif ctype == "bluesky_reply":
-            article = latest_article()
+            article = latest_article(state)
             if not article:
                 last_error = "no article yet"
             else:
@@ -2700,54 +3002,37 @@ def execute_card(card, state, test_mode=False):
         log("info", f"TEST RUN card '{name}' finished "
                     f"({'ok' if ok else 'no-op'}) - nothing was published")
         return ok
-    # --- retry bookkeeping: a failed run may retry early (per card) ---
+    # --- retry bookkeeping: a failed run may retry early (per card).
+    # A missing account is NOT retried (setup problem, not transient).
     if ok:
         clear_card_retries(state, name)
-    else:
+    elif not no_account:
         record_card_retry(state, name, card)
-    # --- per-card stats: success/fail counters + last error + last run ---
-    if card.get("id"):
-        conn = db_connect()
-        try:
-            if ok:
-                conn.execute(
-                    "UPDATE cards SET done_count=done_count+1, "
-                    "success_count=success_count+1, last_run=?, next_run=?, "
-                    "error='', updated_at=? WHERE id=?",
-                    (now_iso(), next_run_for_card(card), now_iso(), card["id"]))
-            else:
-                conn.execute(
-                    "UPDATE cards SET fail_count=fail_count+1, last_run=?, "
-                    "next_run=?, error=?, updated_at=? WHERE id=?",
-                    (now_iso(), next_run_for_card(card), last_error, now_iso(),
-                     card["id"]))
-            conn.commit()
-        finally:
-            conn.close()
-        record_card_run_today(state, f"db:{card['id']}")
-    else:
-        # File-based card (data/cards.json): track in state.json.
-        stats = state.setdefault("file_card_stats", {})
-        s = stats.setdefault(name, {"success": 0, "fail": 0, "last_ok": True,
-                                    "last_error": "", "last_run": ""})
-        if ok:
-            s["success"] = int(s.get("success", 0)) + 1
-            s["last_ok"] = True
-            s["last_error"] = ""
-        else:
-            s["fail"] = int(s.get("fail", 0)) + 1
-            s["last_ok"] = False
-            s["last_error"] = last_error
-        s["last_run"] = now_iso()
-        state.setdefault("file_card_runs", {})[name] = now_iso()
-        record_card_run_today(state, name)
+    _update_card_stats(state, card, ok, last_error)
     log("info", f"card '{name}' ran ({'ok' if ok else 'no-op'})")
     return ok
 
 
-def run_cards_cycle(state):
+def _card_workflow(card):
+    """Which GitHub Actions workflow runs this card: 'blogger' for
+    blogger_post, 'bluesky' for bluesky_* cards, None for unknown types.
+    Blogger and Bluesky run as TWO separate workflows so each can be
+    enabled/disabled on its own (the Blogger API is restricted while
+    Bluesky still works)."""
+    t = card.get("type", "")
+    if t == "blogger_post":
+        return "blogger"
+    if t in ("bluesky_post", "bluesky_promo", "bluesky_reply"):
+        return "bluesky"
+    return None
+
+
+def run_cards_cycle(state, only=None):
     """CARD-ONLY: the worker runs ONLY the cards in data/cards.json.
-    No card due (or no cards at all) = nothing is published."""
+    No card due (or no cards at all) = nothing is published.
+    only: 'blogger' runs Blogger cards only, 'bluesky' runs Bluesky
+    cards only, None runs all (backward compatible). Pausing one card
+    pauses ONLY that card - every other card still runs."""
     # "Run now" from the dashboard: a card name in state["run_card_now"].
     # Runs that card at once (even if not due), then clears the flag.
     # "Test" from the dashboard: state["test_card_now"] runs the card
@@ -2761,6 +3046,11 @@ def run_cards_cycle(state):
         for card in file_cards:
             if card.get("name") == run_now and \
                     (card.get("status") or "active") == "active":
+                if only and _card_workflow(card) != only:
+                    log("info", f"run-now: card '{run_now}' is a "
+                                f"{_card_workflow(card)} card - this is the "
+                                f"{only} workflow, skipping")
+                    break
                 log("info", f"run-now requested for card '{run_now}'")
                 execute_card(card, state)
                 ran_any = True
@@ -2773,6 +3063,11 @@ def run_cards_cycle(state):
         for card in file_cards:
             if card.get("name") == test_now and \
                     (card.get("status") or "active") == "active":
+                if only and _card_workflow(card) != only:
+                    log("info", f"test: card '{test_now}' is a "
+                                f"{_card_workflow(card)} card - this is the "
+                                f"{only} workflow, skipping")
+                    break
                 log("info", f"test requested for card '{test_now}'")
                 execute_card(card, state, test_mode=True)
                 ran_any = True
@@ -2785,6 +3080,8 @@ def run_cards_cycle(state):
     # File-based cards (data/cards.json) - the GitHub-only control panel.
     for card in file_cards:
         if (card.get("status") or "active") != "active":
+            continue
+        if only and _card_workflow(card) != only:
             continue
         if not file_card_due(card, state):
             continue
@@ -2996,7 +3293,13 @@ def health_check(state=None):
     return health
 
 
-def run_worker():
+def run_worker(only=None):
+    """One worker run. only: 'blogger' runs Blogger cards only,
+    'bluesky' runs Bluesky cards only, None runs all cards.
+    The global paused=true in config is the emergency "Pause All"
+    switch - it stops everything. Day-to-day pausing is PER CARD
+    (each card's own Pause button); a paused card is skipped while
+    every other card runs normally."""
     global WORKER_RUNNING
     if WORKER_RUNNING:
         log("info", "worker already running - skipping")
@@ -3006,7 +3309,8 @@ def run_worker():
     state = load_state()
     state["runs"] = state.get("runs", 0) + 1
     state["last_run"] = now_iso()
-    log("info", f"worker run #{state['runs']} started")
+    log("info", f"worker run #{state['runs']} started"
+                + (f" (--only {only})" if only else ""))
     # --- startup checks: config validation + health (no quota used) ---
     validate_config()
     health_check(state)
@@ -3028,7 +3332,8 @@ def run_worker():
         log("error", f"circuit breaker OPEN ({max_fail} failed runs) - skipping cycles")
     paused = str(get_setting("paused", "false")).strip().lower() == "true"
     if paused:
-        log("info", "automation is PAUSED (paused=true in config) - skipping all cycles")
+        log("info", "automation is PAUSED (paused=true in config, emergency "
+                    "Pause All) - skipping all cycles")
     elif breaker_open:
         pass
     else:
@@ -3037,7 +3342,7 @@ def run_worker():
         # data/cards.json. There is no global Blogger or Bluesky cycle.
         if workflow_enabled("cards"):
             try:
-                run_cards_cycle(state)
+                run_cards_cycle(state, only=only)
             except Exception as e:
                 record_issue("error", "cards_cycle", f"cards cycle failed: {e}")
                 failures += 1
@@ -3301,6 +3606,8 @@ def api_card_run(cid):
         conn.close()
     if not card:
         return jsonify({"error": "card not found"}), 404
+    if (card.get("status") or "active") != "active":
+        return jsonify({"ok": False, "error": "card is paused"}), 409
     state = load_state()
     ok = execute_card(card, state)
     save_state(state)
@@ -3323,6 +3630,8 @@ def api_card_test(cid):
         conn.close()
     if not card:
         return jsonify({"error": "card not found"}), 404
+    if (card.get("status") or "active") != "active":
+        return jsonify({"ok": False, "error": "card is paused"}), 409
     state = load_state()
     ok = execute_card(card, state, test_mode=True)
     save_state(state)
@@ -3411,6 +3720,10 @@ def api_card_logs(cid):
 
 @app.route("/api/pause-all", methods=["POST"])
 def api_pause_all():
+    """Emergency "Pause All": pauses EVERY card (DB cards AND the file
+    cards in data/cards.json, which is what the worker actually runs).
+    Day-to-day pausing is PER CARD - this switch is only the emergency
+    stop, and it must NOT be the default state."""
     err = require_login()
     if err:
         return err
@@ -3420,7 +3733,39 @@ def api_pause_all():
         conn.commit()
     finally:
         conn.close()
-    log("info", "pause-all: every card paused")
+    try:
+        file_cards = load_file_cards()
+        for c in file_cards:
+            c["status"] = "paused"
+        with open(CARDS_PATH, "w", encoding="utf-8") as f:
+            json.dump(file_cards, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        log("warning", f"pause-all (file cards) failed: {e}")
+    log("info", "pause-all: every card paused (emergency switch)")
+    return jsonify({"ok": True})
+
+
+@app.route("/api/resume-all", methods=["POST"])
+def api_resume_all():
+    """Resume every card after an emergency Pause All."""
+    err = require_login()
+    if err:
+        return err
+    conn = db_connect()
+    try:
+        conn.execute("UPDATE cards SET status='active', updated_at=?", (now_iso(),))
+        conn.commit()
+    finally:
+        conn.close()
+    try:
+        file_cards = load_file_cards()
+        for c in file_cards:
+            c["status"] = "active"
+        with open(CARDS_PATH, "w", encoding="utf-8") as f:
+            json.dump(file_cards, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        log("warning", f"resume-all (file cards) failed: {e}")
+    log("info", "resume-all: every card resumed")
     return jsonify({"ok": True})
 
 
@@ -3532,7 +3877,12 @@ init_db()
 
 if __name__ == "__main__":
     if "--worker" in sys.argv:
-        run_worker()
+        only = None
+        if "--only" in sys.argv:
+            idx = sys.argv.index("--only")
+            if idx + 1 < len(sys.argv) and sys.argv[idx + 1] in ("blogger", "bluesky"):
+                only = sys.argv[idx + 1]
+        run_worker(only=only)
     else:
         port = int(os.environ.get("PORT", "5000"))
         print(f"Automation Website running on http://0.0.0.0:{port}", flush=True)
