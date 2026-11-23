@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T21:39:13.806698+00:00",
-  "last_run": "2026-11-23T21:37:39.869870+00:00",
-  "runs": 23,
+  "generated_at": "2026-11-23T22:26:10.501650+00:00",
+  "last_run": "2026-11-23T22:25:50.418821+00:00",
+  "runs": 24,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 9,
       "posts_today": 2,
       "next_runs": [
-        "2026-11-24T03:54:13.564980+06:00",
-        "2026-11-24T04:09:13.564980+06:00",
-        "2026-11-24T04:24:13.564980+06:00",
         "2026-11-24T04:39:13.564980+06:00",
-        "2026-11-24T04:54:13.564980+06:00"
+        "2026-11-24T04:54:13.564980+06:00",
+        "2026-11-24T05:09:13.564980+06:00",
+        "2026-11-24T05:24:13.564980+06:00",
+        "2026-11-24T05:39:13.564980+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T03:55:00+06:00",
         "2026-11-24T04:50:00+06:00",
         "2026-11-24T06:05:00+06:00",
         "2026-11-24T07:00:00+06:00",
-        "2026-11-24T07:58:00+06:00"
+        "2026-11-24T07:58:00+06:00",
+        "2026-11-24T08:53:00+06:00"
       ],
       "success": 8,
       "fail": 1,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 4
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T21:37:39.871543+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T22:25:50.421908+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Nvidia rehires Huang",
-    "Alice Huang espionage allegations",
-    "SEC probes Nvidia accounting",
-    "Washington girls' sports sex exam law",
-    "AI sell-off overshadows Anthropic IPO",
-    "Grand Theft Auto VI release",
+    "BAAJA permitting bill Senate vote",
+    "Israel's military campaign in Gaza",
     "Google plans personalized AI TV channel",
+    "SEC probes Nvidia accounting",
+    "Grand Theft Auto VI release",
     "Weather forecasts include lead plume",
-    "Thanksgiving dinner preparations",
-    "Pope Leo praises cycling"
+    "Alice Huang espionage allegations",
+    "Ocarina of Time remake",
+    "King tides threaten Bay Area flooding",
+    "NFL Week 11 games"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T22:26:10.361136+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T22:26:10.357625+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T22:26:10.001667+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T22:25:50.423648+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T22:25:50.421918+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #24 started (--only blogger)",
+      "created_at": "2026-11-23T22:25:50.418848+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T21:39:13.808467+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
+      "created_at": "2026-11-23T21:39:13.803460+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
       "created_at": "2026-11-23T21:37:55.610217+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T21:37:55.609215+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
-      "created_at": "2026-11-23T21:37:55.607927+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T21:37:55.605299+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
-      "created_at": "2026-11-23T21:37:55.010996+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T21:37:54.736640+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "bluesky cycle: no article to link yet",
-      "created_at": "2026-11-23T21:37:54.735479+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T21:37:54.733129+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T21:37:54.731351+00:00",
       "card": ""
     }
   ]
