@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T12:04:40.351273+00:00",
-  "last_run": "2026-11-23T12:04:26.326401+00:00",
-  "runs": 4,
+  "generated_at": "2026-11-23T12:33:26.737770+00:00",
+  "last_run": "2026-11-23T12:33:23.433711+00:00",
+  "runs": 5,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,11 +59,11 @@
       "runs_today": 2,
       "posts_today": 2,
       "next_runs": [
-        "2026-11-23T18:05:41.129395+06:00",
         "2026-11-23T18:35:41.129395+06:00",
         "2026-11-23T19:05:41.129395+06:00",
         "2026-11-23T19:35:41.129395+06:00",
-        "2026-11-23T20:05:41.129395+06:00"
+        "2026-11-23T20:05:41.129395+06:00",
+        "2026-11-23T20:35:41.129395+06:00"
       ],
       "next_post_times": [
         "2026-11-23T19:10:00+06:00",
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primotodaynews.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primotodaynews.bsky.social",
-      "enabled": true,
-      "posts_limit": 24,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T12:04:26.328148+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T12:33:23.438817+00:00"
     }
   ],
   "dry_run": false,
@@ -165,16 +156,64 @@
     "Doctor Who Day anniversary",
     "Theresa May urges accepting Brexit",
     "Army plans Iowa lead detonation",
-    "Boreen daily trivia game",
-    "Steps to a drunkard's grave meme",
-    "Bird photography",
+    "AI sell-off overshadows Anthropic IPO",
+    "Alice Huang espionage allegations",
+    "Trump urges Nvidia to rehire Huang",
     "Amodei's video games for jobless idea",
+    "Change one letter, ruin a movie",
     "Thanksgiving dinner preparations",
-    "Google adds AI across products",
-    "AI sell-off overshadows Anthropic IPO"
+    "Favorite first Magic set card"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T12:33:26.525160+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T12:33:26.523385+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-23T12:33:26.168848+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T12:33:23.439790+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T12:33:23.438827+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #5 started (--only blogger)",
+      "created_at": "2026-11-23T12:33:23.433734+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T12:04:40.352896+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Doctor Who Day anniversary', 'Theresa May urges accepting Brexit', 'Army plans Iowa lead detonation', 'Boreen daily trivia game', \"Steps to a drunkard's grave meme\"]",
+      "created_at": "2026-11-23T12:04:40.348106+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -426,54 +465,6 @@
       "message": "google-images: 0 candidate(s) for 'Gold rises from 14-month low as markets await U.S. inflation'",
       "created_at": "2026-11-23T10:31:17.544776+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Gold rises from 14-month low as markets await U.S. inflation'",
-      "created_at": "2026-11-23T10:31:17.393856+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Gold rises from 14-month low as markets await U.S. inflation'",
-      "created_at": "2026-11-23T10:31:17.094346+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T10:31:16.265728+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T10:31:16.264457+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Gold rises from 14-month low as markets await U.S. inflation' - rejected (no og:image)",
-      "created_at": "2026-11-23T10:31:16.263196+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2JoZHpCc3VicTV4YkFsUE1XMjFGY1VPMlpQRU1rblNRbTRnM0xFRHUwVWtDRGFsWGh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T10:31:16.260393+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Russian warship explodes in Libya', 'Theresa May urges accepting Brexit', \"Amodei's video games for jobless idea\", 'AI sell-off overshadows Anthropic IPO', \"GTA VI's Jason and Lucia\"]",
-      "created_at": "2026-11-23T10:31:15.516842+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=2 interval=30m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T10:31:15.448331+00:00",
-      "card": "BlueSky Trend"
     }
   ]
 }
