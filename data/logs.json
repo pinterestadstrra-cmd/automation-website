@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T18:24:41.062923+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Grand Theft Auto VI release', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', 'Doctor Who Day anniversary']",
+    "created_at": "2026-11-23T18:24:41.057370+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-23T18:24:40.968139+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T18:24:40.966556+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-23T18:24:40.663150+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T18:24:11.993014+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-23T18:24:11.992489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #16 started (--only blogger)",
+    "created_at": "2026-11-23T18:24:11.991627+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T17:48:49.693457+00:00",
     "card": ""
   },
@@ -1150,53 +1198,5 @@
     "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
     "created_at": "2026-11-23T17:45:05.098811+00:00",
     "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "bluesky cycle: no article to link yet",
-    "created_at": "2026-11-23T17:45:05.097810+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T17:45:05.096020+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T17:45:05.093997+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.8-flash)",
-    "created_at": "2026-11-23T17:45:04.783180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T17:44:18.877053+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-23T17:44:18.875455+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #15 started (--only bluesky)",
-    "created_at": "2026-11-23T17:44:18.873516+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T17:07:03.535165+00:00",
-    "card": ""
   }
 ]

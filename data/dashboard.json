@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T17:48:49.692002+00:00",
-  "last_run": "2026-11-23T17:44:18.873484+00:00",
-  "runs": 15,
+  "generated_at": "2026-11-23T18:24:41.061804+00:00",
+  "last_run": "2026-11-23T18:24:11.991613+00:00",
+  "runs": 16,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -57,20 +57,20 @@
       "schedule_times": [],
       "last_run": "2026-11-23T17:48:49.393162+00:00",
       "runs_today": 5,
-      "posts_today": 4,
+      "posts_today": 0,
       "next_runs": [
-        "2026-11-24T00:03:49.393162+06:00",
-        "2026-11-24T00:18:49.393162+06:00",
         "2026-11-24T00:33:49.393162+06:00",
         "2026-11-24T00:48:49.393162+06:00",
-        "2026-11-24T01:03:49.393162+06:00"
+        "2026-11-24T01:03:49.393162+06:00",
+        "2026-11-24T01:18:49.393162+06:00",
+        "2026-11-24T01:33:49.393162+06:00"
       ],
       "next_post_times": [
-        "2026-11-23T23:56:00+06:00",
         "2026-11-24T00:51:00+06:00",
         "2026-11-24T02:06:00+06:00",
         "2026-11-24T03:01:00+06:00",
-        "2026-11-24T03:55:00+06:00"
+        "2026-11-24T03:55:00+06:00",
+        "2026-11-24T04:50:00+06:00"
       ],
       "success": 5,
       "fail": 0,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T17:44:18.875444+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T18:24:11.992484+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Cyclops in Avengers: Doomsday footage",
-    "Medicare for All and universal healthcare",
-    "Trump says he protected Musk",
-    "Women's World Cup host vote",
-    "SEC probes Nvidia accounting",
-    "Alice Huang espionage allegations",
-    "Weather forecasts include lead plume",
-    "Avengers: Doomsday runtime confirmed",
     "Grand Theft Auto VI release",
-    "Pope Leo praises cycling"
+    "Nvidia rehires Huang",
+    "Alice Huang espionage allegations",
+    "SEC probes Nvidia accounting",
+    "Doctor Who Day anniversary",
+    "Smithsonian plan spotted on Metro",
+    "Weather forecasts include lead plume",
+    "Cyclops in Avengers: Doomsday footage",
+    "Pope Leo praises cycling",
+    "AI sell-off overshadows Anthropic IPO"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T18:24:40.968139+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T18:24:40.966556+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T18:24:40.663150+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T18:24:11.993014+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T18:24:11.992489+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #16 started (--only blogger)",
+      "created_at": "2026-11-23T18:24:11.991627+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T17:48:49.693457+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Cyclops in Avengers: Doomsday footage', 'Medicare for All and universal healthcare', 'Trump says he protected Musk', \"Women's World Cup host vote\", 'SEC probes Nvidia accounting']",
+      "created_at": "2026-11-23T17:48:49.689141+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "photo candidate: 'The unlikely winner from war in the Gulf - The Economist' - rejected (no og:image)",
       "created_at": "2026-11-23T17:46:44.614609+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxNT2JPYU5QMXVfYndSdjBfRkpMVDBrSG9nZkJIM1duZkVlc0p1T3NhR1diZ1hWVkx4RE4) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T17:46:44.612326+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'President Trump is 'stuck', has not learned much from the Ir' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-23T17:46:44.457303+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'President Trump is 'stuck', has not learned much from the Iran war: Analyst - CNBC' (0 download(s) tried)",
-      "created_at": "2026-11-23T17:46:44.456190+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://mobileimages.lowes.com/productimages/2497b246-1c2f-4e3f-9205-9804abab1afb/106341876.jpeg?siz (page: IUEST 8.6 in LED Grow Light Strips Full Spectrum 3500 K 4 Head Timer 1 ... - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T17:46:44.455193+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'President Trump stuck has not'",
-      "created_at": "2026-11-23T17:46:44.452727+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'President Trump stuck has not'",
-      "created_at": "2026-11-23T17:46:44.336737+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'President Trump stuck has not'",
-      "created_at": "2026-11-23T17:46:44.179196+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: search HTTP 504 for 'President Trump stuck has not'",
-      "created_at": "2026-11-23T17:46:43.592179+00:00",
       "card": ""
     }
   ]
