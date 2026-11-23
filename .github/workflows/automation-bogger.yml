@@ -1,6 +1,9 @@
-# Automation Website - GitHub Actions runner
-# Runs the worker every 30 minutes (and on manual dispatch).
-# Public repos get unlimited free Actions minutes.
+# Automation Website - Blogger workflow (runs Blogger cards ONLY)
+# Separate from the Bluesky workflow so each can be enabled/disabled
+# on its own. Blogger API is currently RESTRICTED by Google (appeal
+# pending) - keep this workflow DISABLED until the appeal succeeds.
+# Runs at :05 and :35 (every 30 min, offset from the Bluesky workflow
+# so the two never commit state.json at the same moment).
 # Secrets needed (Settings -> Secrets and variables -> Actions):
 #   GEMINI_API_KEYS       comma-separated Gemini API keys (separate Google projects)
 #   GROQ_API_KEYS         comma-separated Groq API keys (separate Groq accounts)
@@ -8,15 +11,14 @@
 #   BLOGGER_CLIENT_SECRET Google OAuth client secret
 #   BLOGGER_REFRESH_TOKEN Blogger OAuth refresh token (offline access)
 #   BLOG_ID               Blogger blog id
-#   BLUESKY_ACCOUNTS      JSON list: [{"handle":"...","app_password":"..."}]
 #   PEXELS_API_KEY        (optional) Pexels free key for photos
 #   PIXABAY_API_KEY       (optional) Pixabay free key for photos
 #   ADMIN_PASSWORD        dashboard password (also used by the web UI)
-name: Automation
+name: Automation Blogger
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "5,35 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -34,8 +36,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run worker (one cycle)
-        run: python app.py --worker
+      - name: Run worker (Blogger cards only)
+        run: python app.py --worker --only blogger
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
@@ -43,7 +45,6 @@ jobs:
           BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
           BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
           BLOG_ID: ${{ secrets.BLOG_ID }}
-          BLUESKY_ACCOUNTS: ${{ secrets.BLUESKY_ACCOUNTS }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
@@ -53,5 +54,5 @@ jobs:
           git config user.name "automation-bot"
           git config user.email "automation-bot@users.noreply.github.com"
           git add data/state.json data/logs.json data/dashboard.json || true
-          git diff --cached --quiet || git commit -m "automation state update"
+          git diff --cached --quiet || git commit -m "automation state update (blogger)"
           git push || true
