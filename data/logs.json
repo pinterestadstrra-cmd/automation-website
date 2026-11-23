@@ -2,6 +2,750 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T23:36:36.923901+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Hegseth's former aide urges resignation\", 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Google plans personalized AI TV channel', 'Alice Huang espionage allegations']",
+    "created_at": "2026-11-23T23:36:36.919345+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+    "created_at": "2026-11-23T23:36:36.711939+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T23:36:36.710394+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': promo posted - event 'estonia hostile jazeera open russia threaten war' on 24h cooldown (topic + link+event recorded)",
+    "created_at": "2026-11-23T23:36:36.708557+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1920x2356 (ratio 0.81) - unchanged",
+    "created_at": "2026-11-23T23:32:18.246461+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 1920x2356 (ratio 0.81) - kept, no crop",
+    "created_at": "2026-11-23T23:32:18.245267+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-23T23:32:18.243584+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-23T23:32:18.242371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze': https://images.pexels.com/photos/5851303/pexels-photo-5851303.jpeg?auto=compress&cs=tinysrgb&w=1920 (from bing-images, query 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jazeera', page: https://nationnewsja.wordpress.com/2026/11/21/russia-sees-us-postwar-security-proposal-as-opening-fo - matches 2 key entities (open, russia))",
+    "created_at": "2026-11-23T23:32:18.241123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: unavailable - keyword check decides ('Russia threatens ‘hostile’ Estonia with ‘open war’': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+    "created_at": "2026-11-23T23:32:18.239331+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia threatens ‘hostile’ Estonia with ‘open war’'): https://www.oreanda-news.com/aimg/101x16000/1605480/head_0.jpg (page: https://canvasvoyage.com/destinations/russia | The Kremlin told about the Russia—USA—China summit an - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-23T23:32:04.283229+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia threatens ‘hostile’ Estonia with ‘open war’'): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg (page: https://www.oreanda-news.com/en/gosudarstvo/the-kremlin-told-about-the-russia-usa-china-summit-and-p - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-23T23:32:04.281713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
+    "created_at": "2026-11-23T23:32:04.279062+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
+    "created_at": "2026-11-23T23:32:04.168257+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
+    "created_at": "2026-11-23T23:32:04.032430+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
+    "created_at": "2026-11-23T23:32:03.565023+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:57.457927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:57.456792+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze' - rejected (no og:image)",
+    "created_at": "2026-11-23T23:31:57.455535+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikgFBVV95cUxOT2tuUzB4em5zWEgwZUpEZ0szQ0R2ajRaWmgtN0JoX0RhOVFtcFUtWm13b2k5a083bjd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T23:31:57.453096+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T23:31:57.217527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Moscow accuses Estonia of hostile actions on 'verge of triggering open war' - Reuters' (0 download(s) tried)",
+    "created_at": "2026-11-23T23:31:57.216055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:57.214927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:57.213589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:57.212209+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:57.210990+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia hostile actions'",
+    "created_at": "2026-11-23T23:31:57.208508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia hostile actions'",
+    "created_at": "2026-11-23T23:31:57.065973+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia hostile actions'",
+    "created_at": "2026-11-23T23:31:56.911860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Moscow accuses Estonia hostile actions'",
+    "created_at": "2026-11-23T23:31:56.466777+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:48.510686+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:48.509439+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:48.508326+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:48.506920+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:48.505529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:48.504423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:48.501857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:48.376952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:48.234465+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:47.905595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:41.979473+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:41.978217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:41.977095+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:41.975754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:41.974555+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:41.973337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:41.970555+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:41.845245+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:41.697138+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
+    "created_at": "2026-11-23T23:31:41.375867+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:31.375500+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:31.374254+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no og:image)",
+    "created_at": "2026-11-23T23:31:31.372966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3hoekpkTmwxcjE1NnNid3RFSXVsVGtob3A3dFNKVjRNZzVnaXMxRnV6N3pIellLeVd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T23:31:31.370536+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T23:31:31.131534+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis Indicates - The New York Times' (0 download(s) tried)",
+    "created_at": "2026-11-23T23:31:31.130249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://media.idownloadblog.com/wp-content/uploads/2025/02/Mark-WhatsApp-message-as-read-on-iPhone.j (page: How to mark one or all WhatsApp messages as read or unread - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:31.129056+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/%D9%83%D8%B1%D9%8A%D8%AF_%D8%AC%D8%B2%D9%8A (page: https://commons.wikimedia.org/wiki/File:%D9%83%D8%B1%D9%8A%D8%AF_%D8%AC%D8%B2%D9%8A%D8%B1%D9%87_%D8% - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:31.127243+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Over 700 000 Russian Soldiers'",
+    "created_at": "2026-11-23T23:31:31.124780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Over 700 000 Russian Soldiers'",
+    "created_at": "2026-11-23T23:31:31.029060+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: rejected candidate (mime=image/tiff): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Trouw_aan_de_F%C3%BChrer%2C_Bestanddeelnr_2",
+    "created_at": "2026-11-23T23:31:30.900962+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 2 result(s) for 'Over 700 000 Russian Soldiers'",
+    "created_at": "2026-11-23T23:31:30.899249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Over 700 000 Russian Soldiers'",
+    "created_at": "2026-11-23T23:31:30.499407+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:18.189332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:18.188202+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://st4.depositphotos.com/1000137/40095/i/1600/depositphotos_400957372-stock-photo-pretty-happy- (page: Pretty Happy Child Girl Having Fun Making Yoga Exercises Home Stock ... - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:18.186863+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:18.184703+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:18.087431+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:17.913605+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:17.610231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:11.246603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:11.245398+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://proper.com.hr/wp-content/uploads/2025/12/conference_production.jpg__965x643_q85_crop_subsamp (page: Proper – Events & Research - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:11.244131+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:11.241780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:11.128397+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:10.957881+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+    "created_at": "2026-11-23T23:31:10.604947+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:02.298735+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:31:02.297624+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis' - rejected (no og:image)",
+    "created_at": "2026-11-23T23:31:02.296387+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihAFBVV95cUxPbGtaSVAtSnh5RTRGUmp6ZW5BbUhiZFlPTnloTlB0MHpsaFRsWmJkQTB4czRDWUl6OEd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T23:31:02.293887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T23:31:02.074830+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
+    "created_at": "2026-11-23T23:31:02.073191+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://wallpapercave.com/wp/wp4600617.jpg (page: Beautiful Landscape 4k Wallpapers - Wallpaper Cave - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.071823+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/0c/Secretary_of_State_Hillary_Rodham_Clinton_at_the (page: https://commons.wikimedia.org/wiki/File:Secretary_of_State_Hillary_Rodham_Clinton_at_the_100th_Anniv - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.070586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/PIIGS_Mk_4_map.png/1280px-PIIGS_Mk_4_map.pn (page: https://commons.wikimedia.org/wiki/File:PIIGS_Mk_4_map.png | File:PIIGS Mk 4 map.png - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.069124+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/11/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.067751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/00/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.066388+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/10/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:31:02.064897+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-23T23:31:02.062349+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-23T23:31:01.898174+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-23T23:31:01.739254+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-23T23:31:01.332612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:53.782165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:53.780970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://media1.popsugar-assets.com/files/thumbor/o65NVMF4PxgSNHfOZ25hGsH3u8Q=/fit-in/792x792/filters (page: https://www.justjared.com/photo-gallery/3944601/amber-rose-looks-unrecognizable-with-long-hair-02/ | - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:30:53.779822+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://cdn01.justjared.com/wp-content/uploads/2018/05/rose-long/amber-rose-shows-off-her-long-blond (page: https://www.popsugar.com/beauty/amber-rose-long-hair-september-2016-42471430 | Amber Rose Shows Off  - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:30:53.778626+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://people.com/thmb/obPNupToGCJAlVGky4sJRFb5cuA=/900x0/filters:no_upscale():max_bytes(150000):st (page: https://www.justjared.com/photo-gallery/4075071/amber-rose-shows-off-her-long-blonde-hair-and-curves - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:30:53.776983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://media1.popsugar-assets.com/files/thumbor/3w6AFPeWsqPLQACcyWWLH7rt8dQ/fit-in/1024x1024/filter (page: https://people.com/style/amber-rose-dancing-with-the-stars-long-hair/ | Amber Rose With Long Hair at - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:30:53.775646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:53.772857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:53.673225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:53.509628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:53.297179+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:46.892270+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:46.891218+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://geekflare.com/wp-content/uploads/2025/04/Bing-visual-search.png (page: How to Do Reverse Video Search? - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-23T23:30:46.889756+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:46.887217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:46.774937+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:46.625352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-23T23:30:46.248085+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:39.336346+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T23:30:39.335246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
+    "created_at": "2026-11-23T23:30:39.333820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T23:30:39.331531+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Israel's military campaign in Gaza\", 'Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-23T23:30:38.539672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T23:30:38.471594+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-23T23:30:38.470412+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T23:30:38.468211+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T23:30:38.466575+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-23T23:30:38.159963+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T23:30:08.857921+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-23T23:30:08.856874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #27 started (--only bluesky)",
+    "created_at": "2026-11-23T23:30:08.855114+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T23:27:14.600557+00:00",
     "card": ""
   },
@@ -453,750 +1197,6 @@
     "level": "info",
     "message": "bing-images: 1 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
     "created_at": "2026-11-23T21:38:10.199065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:09.977475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:09.850515+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:09.386135+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T21:38:04.204967+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T21:38:04.203456+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.ytimg.com/vi/Nz69XeJ4VHM/maxresdefault.jpg (page: https://vacuumdecision.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOO - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T21:38:04.202359+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.electronicshub.org/wp-content/uploads/2022/01/Types-Of-Vacuums.jpg (page: https://cray-fish.de/17-different-types-of-vacuum-cleaners/ | Vacuum Cleaner Types: Find Your Perfec - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T21:38:04.201161+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://cleanthefloor.com/wp-content/uploads/2018/01/infographic_types-of-vacuum-cleaners.png (page: https://www.electronicshub.org/types-of-vacuums/ | Different Types of Vacuum Cleaners [Infographic] - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T21:38:04.199993+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://allareaappliancellc.com/wp-content/uploads/2017/01/vacuum-cleaner-types.jpg (page: https://cleanthefloor.com/types-of-vacuum-cleaners/ | 17 Different Types Of Vacuum Cleaners – DTDOOI - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T21:38:04.198728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:04.194580+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:04.056954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:03.905526+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:03.451728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T21:37:55.610217+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T21:37:55.609215+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
-    "created_at": "2026-11-23T21:37:55.607927+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T21:37:55.605299+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', \"Washington girls' sports sex exam law\", 'AI sell-off overshadows Anthropic IPO']",
-    "created_at": "2026-11-23T21:37:55.010996+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T21:37:54.736640+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "bluesky cycle: no article to link yet",
-    "created_at": "2026-11-23T21:37:54.735479+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T21:37:54.733129+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T21:37:54.731351+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T21:37:54.478541+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T21:37:39.872561+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-23T21:37:39.871552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #23 started (--only bluesky)",
-    "created_at": "2026-11-23T21:37:39.869893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T21:24:29.081871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): [\"Washington girls' sports sex exam law\", 'Google plans personalized AI TV channel', 'Trump says he protected Musk', 'Grand Theft Auto VI release', 'Claude AI coding tools']",
-    "created_at": "2026-11-23T21:24:29.079151+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-23T21:24:28.880247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T21:24:28.879274+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T21:24:28.525057+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T21:24:17.228144+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-23T21:24:17.227621+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #22 started (--only blogger)",
-    "created_at": "2026-11-23T21:24:17.226708+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T20:50:12.631770+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
-    "created_at": "2026-11-23T20:50:12.627575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-    "created_at": "2026-11-23T20:50:12.458319+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T20:50:12.457291+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': promo posted - event '2026 breakup celebrity news' on 24h cooldown (topic + link+event recorded)",
-    "created_at": "2026-11-23T20:50:12.455813+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1500x1500 (ratio 1.00) - unchanged",
-    "created_at": "2026-11-23T20:49:17.864667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1500x1500 (ratio 1.00) - kept, no crop",
-    "created_at": "2026-11-23T20:49:17.863795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-23T20:49:17.862349+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA celebrity news",
-    "created_at": "2026-11-23T20:49:17.861373+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for '2026 Celebrity Breakups - E! News': https://store.fifa.com/cdn/shop/files/image_217bb8c0-803c-4772-9c18-18f1e677f831.jpg?v=1774372210 (from bing-images, query '2026 Celebrity Breakups - E! News', page: https://www.nbcmiami.com/news/sports/2026-world-cup-logo-officially-revealed-by-fifa/3036738/ | Offi - matches 2 key entities (2026, news))",
-    "created_at": "2026-11-23T20:49:17.860310+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('2026 Celebrity Breakups - E! News': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-23T20:49:17.858533+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T20:49:04.695676+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T20:49:04.351984+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T20:49:04.189910+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T20:49:03.912798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:49.750702+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:49.749252+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
-    "created_at": "2026-11-23T20:48:49.748248+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5BcDgzSGtkM0lGR0tSdXdLdkczbkNIa1EwRDhMekRrZ0VfejNvdzNmd3Z3bFlUdnFORnR) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T20:48:49.746018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T20:48:49.516798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette' (0 download(s) tried)",
-    "created_at": "2026-11-23T20:48:49.515879+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.cheapest-concert-tickets.com/images/artists/50-cent.jpg (page: https://allhiphop.com/news/50-cent-roasts-tony-yayo-for-stealing-his-clothes/ | 50 Cent Tour Tickets - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.514804+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.bravado.de/cdn/shop/files/50-Cent_Best-Of-50-Cent_2LP_s142079_o208424_a354365_v6825368.e (page: https://www.cheapest-concert-tickets.com/tickets/50-cent.html | 50 Cent auf Vinyl erleben | Bravado  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.513850+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://assets.foxdcg.com/dpp-uploaded/images/50-ways-to-catch-a-killer-with-50-cent-nation/seriesLi (page: https://thathollywoodshow.com/latest-news/50-cent-action-channel-ready-to-brawl-on-pluto-tv/ | Watch - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.512896+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://hips.hearstapps.com/hmg-prod/images/hlh090123cvrsept-digitalcvrs-50-resized-64c4269317d23.jp (page: https://nation.foxnews.com/50-ways-to-catch-a-killer-with-50-cent-nation/ | 50 Cent Reveals How He B - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.511956+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._37,_No._50 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.511025+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.509998+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.508750+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.507672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:49.506627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for '50 US news websites Four'",
-    "created_at": "2026-11-23T20:48:49.504189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '50 US news websites Four'",
-    "created_at": "2026-11-23T20:48:49.146496+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for '50 US news websites Four'",
-    "created_at": "2026-11-23T20:48:48.983631+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '50 US news websites Four'",
-    "created_at": "2026-11-23T20:48:48.647441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:36.917052+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:36.916124+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:36.915273+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:36.914270+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:36.913336+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:36.912222+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:36.895933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:36.614885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:36.473898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 500 for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:36.138864+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:28.804047+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:28.802990+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:28.801828+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:28.799588+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:28.798501+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-23T20:48:28.794840+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:28.792426+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:28.570932+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:28.404616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-    "created_at": "2026-11-23T20:48:28.217376+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:19.907673+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T20:48:19.906778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
-    "created_at": "2026-11-23T20:48:19.905669+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T20:48:19.903395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
-    "created_at": "2026-11-23T20:48:19.695083+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
-    "created_at": "2026-11-23T20:48:19.363151+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T20:48:19.127911+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "bluesky cycle: no article to link yet",
-    "created_at": "2026-11-23T20:48:19.126872+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T20:48:19.125148+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': retry 1/2 after failure - due now",
-    "created_at": "2026-11-23T20:48:19.123999+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T20:48:19.122447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T20:48:18.712248+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T20:48:14.412484+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-23T20:48:14.411557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #21 started (--only bluesky)",
-    "created_at": "2026-11-23T20:48:14.410225+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T20:27:12.144719+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Google plans personalized AI TV channel', 'Grand Theft Auto VI release', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting']",
-    "created_at": "2026-11-23T20:27:12.140447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-23T20:27:12.080483+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T20:27:12.078731+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T20:27:11.729772+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T20:27:07.121812+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-23T20:27:07.120826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #20 started (--only blogger)",
-    "created_at": "2026-11-23T20:27:07.119286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T19:53:15.083045+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Trump says he protected Musk', 'Alice Huang espionage allegations']",
-    "created_at": "2026-11-23T19:53:15.078207+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
-    "created_at": "2026-11-23T19:53:15.020699+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': run failed (1/2 retries) - next retry at 02:23 Dhaka",
-    "created_at": "2026-11-23T19:53:15.019668+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "warning",
-    "message": "card 'BlueSky Trend': no photo, skipped - Bluesky post needs a verified real news photo",
-    "created_at": "2026-11-23T19:53:15.018647+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-23T19:53:15.017527+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: photo search done - 25 candidate(s) tried, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-23T19:53:15.016610+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Google Play Opens a Private Lane for Personal AI-Built Apps ' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:15.015391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMidkFVX3lxTE82Y01TM0RuTnVLR1p4dmkzcVFkdnJPdUlJeDVWbEtUa053czJCRFp4aWt2V0VOTE9wWHB) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:15.012949+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Google plans to give Private AI Compute a memory that follow' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:14.791880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikgFBVV95cUxNeWFPUW9LX1o5Z1BEM0lPTGlwTGZSd3RxdWdBa3I2ZlRzR091WFNZMWFnSG00c0pycnF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:14.789572+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Put Gemini to work for you - blog.google' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:53:14.439415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWF2N1A4NTZkR3ZDemlDLUIyYlUwNVY2bmRKeEdCaEluLVg5MUJXWU1BY2VZNjhZdWR) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:53:14.437184+00:00",
     "card": ""
   }
 ]

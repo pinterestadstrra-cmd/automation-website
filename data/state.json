@@ -1,12 +1,12 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 26,
-  "last_run": "2026-11-23T23:26:07.932095+00:00",
+  "runs": 27,
+  "last_run": "2026-11-23T23:30:08.855083+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
-      "primonewstoday.bsky.social": 5
+      "primonewstoday.bsky.social": 6
     }
   },
   "posted_promo_topics": {
@@ -16,7 +16,8 @@
     "2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253791+00:00",
     "2026 breakup celebrity news": "2026-11-23T20:50:12.455777+00:00",
     "cuba democrat exclusive free prisoner rise tension today top urge usa": "2026-11-23T21:39:13.560696+00:00",
-    "analysis bank business daily financial investor latest news stock": "2026-11-23T22:35:22.085800+00:00"
+    "analysis bank business daily financial investor latest news stock": "2026-11-23T22:35:22.085800+00:00",
+    "estonia hostile jazeera open russia threaten war": "2026-11-23T23:36:36.708505+00:00"
   },
   "posted_promo_link_topics": {
     "https://shorturl.at/eZnco||2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446628+00:00",
@@ -25,7 +26,8 @@
     "https://shorturl.at/eZnco||2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253817+00:00",
     "https://shorturl.at/eZnco||2026 breakup celebrity news": "2026-11-23T20:50:12.455801+00:00",
     "https://shorturl.at/eZnco||cuba democrat exclusive free prisoner rise tension today top urge usa": "2026-11-23T21:39:13.560731+00:00",
-    "https://shorturl.at/eZnco||analysis bank business daily financial investor latest news stock": "2026-11-23T22:35:22.085832+00:00"
+    "https://shorturl.at/eZnco||analysis bank business daily financial investor latest news stock": "2026-11-23T22:35:22.085832+00:00",
+    "https://shorturl.at/eZnco||estonia hostile jazeera open russia threaten war": "2026-11-23T23:36:36.708537+00:00"
   },
   "posted_promo_captions": {
     "684f88fdb22717cf5c1bc4127ba32f8fb6899693": "2026-11-23T10:31:15.448152+00:00",
@@ -34,20 +36,21 @@
     "0f533230fe5974fc500874142a015d99aa2d1b98": "2026-11-23T17:48:49.255598+00:00",
     "9ad72485962bcf8b20442192ab12ff2a56b798df": "2026-11-23T20:50:12.457123+00:00",
     "2fe95d93eebcd9fc67e2d5396e07696d205d8c08": "2026-11-23T21:39:13.562210+00:00",
-    "11b5eb8ce7f7472b9a37e2127d7d374fd479f662": "2026-11-23T22:35:22.087267+00:00"
+    "11b5eb8ce7f7472b9a37e2127d7d374fd479f662": "2026-11-23T22:35:22.087267+00:00",
+    "598e0ae24cfa8432b7c282c66ad7fe2cbebf4497": "2026-11-23T23:36:36.710175+00:00"
   },
   "file_card_post_counts": {
     "BlueSky Trend": {
       "day": "2026-11-24",
-      "day_n": 3,
+      "day_n": 4,
       "week": "2026-W48",
-      "week_n": 7,
+      "week_n": 8,
       "month": "2026-11",
-      "month_n": 7
+      "month_n": 8
     }
   },
   "last_bsky_post_at": {
-    "BlueSky Trend": "2026-11-23T22:35:22.087316+00:00"
+    "BlueSky Trend": "2026-11-23T23:36:36.710223+00:00"
   },
   "file_card_post_slots": {
     "BlueSky Trend": {
@@ -60,35 +63,36 @@
       "2026-11-24": [
         1,
         2,
-        3
+        3,
+        4
       ]
     }
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 9,
+      "success": 10,
       "fail": 1,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-23T22:35:22.089048+00:00"
+      "last_run": "2026-11-23T23:36:36.711913+00:00"
     }
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T22:35:22.089052+00:00"
+    "BlueSky Trend": "2026-11-23T23:36:36.711918+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
       "date": "2026-11-23",
-      "count": 10
+      "count": 11
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T23:26:07.933708+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T23:30:08.856865+00:00"
     }
   ],
   "posted_urls": [],
