@@ -299,7 +299,7 @@
       <div class="stats" style="grid-template-columns:repeat(3,minmax(0,1fr))">
         <div class="stat"><b id="statFailures">0</b><span>Failed runs in a row</span></div>
         <div class="stat"><b id="statIssues">0</b><span>Open problems</span></div>
-        <div class="stat"><b id="statWindow">—</b><span>Posting window</span></div>
+        <div class="stat"><b id="statActiveCards">0</b><span>Active cards</span></div>
       </div>
 
       <div class="panel panel-teal">
@@ -308,7 +308,7 @@
       </div>
 
       <div class="trending">
-        <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first - tap one to write about it next)</span></h2>
+        <h2>Trending on Bluesky <span style="font-weight:400;font-size:13px;color:#475569">(news is written from these topics first - tap one to start a Blogger card about it)</span></h2>
         <div id="trendingChips"><span class="empty">—</span></div>
       </div>
 
@@ -350,41 +350,6 @@
         </div>
       </div>
 
-      <div class="panel">
-        <h2>How many posts</h2>
-        <div class="form-grid">
-          <div><label for="setBlogger">Blogger posts per day (0 = unlimited)</label>
-            <input id="setBlogger" type="number" min="0" value="0"></div>
-          <div><label for="setBloggerRun">Articles per worker run</label>
-            <input id="setBloggerRun" type="number" min="1" value="1"></div>
-          <div><label for="setInterval">Minutes between posts in one run</label>
-            <input id="setInterval" type="number" min="0" value="30"></div>
-          <div><label for="setWindowStart">Posting window start (Dhaka, HH:MM)</label>
-            <input id="setWindowStart" placeholder="07:00 (empty = no window)"></div>
-          <div><label for="setWindowEnd">Posting window end (Dhaka, HH:MM)</label>
-            <input id="setWindowEnd" placeholder="23:00 (empty = no window)"></div>
-        </div>
-        <div class="row-btns">
-          <button class="btn-teal" id="saveBloggerBtn">Save Blogger settings</button>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2>Topics</h2>
-        <label for="forceTopicInput">Write about this topic next (forced topic)</label>
-        <input id="forceTopicInput" placeholder="e.g. Bangladesh wins the World Cup">
-        <div class="row-btns">
-          <button class="btn-teal" id="saveForceTopicBtn">Set topic</button>
-          <button class="btn-ghost" id="clearForceTopicBtn">Clear topic</button>
-          <span class="pill" id="forceTopicState">No forced topic</span>
-        </div>
-        <label for="blacklistInput">Never write about (comma-separated topics)</label>
-        <input id="blacklistInput" placeholder="e.g. cricket, politics">
-        <div class="row-btns">
-          <button class="btn-teal" id="saveBlacklistBtn">Save blacklist</button>
-        </div>
-      </div>
-
       <!-- Blogger cards: only blogger_post cards live here. -->
       <div class="panel panel-teal">
         <h2>Blogger cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
@@ -393,6 +358,9 @@
           schedule. Pick a suggested time below, or set your own hours
           and minutes. A card with a custom topic writes about that
           topic; otherwise it writes from Bluesky trending topics.
+          Every card only posts inside its own posting window - and
+          only when it finds a photo that really loads. No photo,
+          no post.
         </div>
         <div class="toolbar">
           <input type="text" id="bloggerCardSearch" placeholder="Search cards…">
@@ -447,25 +415,6 @@
           <div><div class="lbl">Bluesky replies</div>
             <div class="desc">Reply to comments on your posts and on hot posts.</div></div>
           <input type="checkbox" class="wf-toggle" data-config="replies_enabled" checked>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2>Posts and replies</h2>
-        <div class="form-grid">
-          <div><label for="setPostsRun">Bluesky posts per run</label>
-            <input id="setPostsRun" type="number" min="0" value="1"></div>
-          <div><label for="setReplyRun">Replies to OTHERS' posts per run (0 = unlimited)</label>
-            <input id="setReplyRun" type="number" min="0" value="0"></div>
-          <div><label for="setReplyOwn">Replies to OWN posts per run (0 = unlimited)</label>
-            <input id="setReplyOwn" type="number" min="0" value="0"></div>
-          <div><label for="setReplyDay">All replies per day (0 = unlimited)</label>
-            <input id="setReplyDay" type="number" min="0" value="0"></div>
-          <div><label for="setGap">Gap between replies (seconds, 0 = none)</label>
-            <input id="setGap" type="number" min="0" value="0"></div>
-        </div>
-        <div class="row-btns">
-          <button class="btn-teal" id="saveBlueskyBtn">Save Bluesky settings</button>
         </div>
       </div>
 
@@ -622,9 +571,10 @@
           <button class="btn-teal" id="saveSchedulingBtn">Save scheduling</button>
         </div>
         <div class="note" style="margin-top:10px">
-          The worker itself runs every 30 minutes (GitHub Actions). Each run
-          publishes up to the "posts per run" on the Blogger page, spaced by
-          the minutes there. The window stops posting outside those Dhaka hours.
+          The worker itself runs every 30 minutes (GitHub Actions). It only
+          runs your cards - each card publishes on its own schedule, with its
+          own posts-per-day, posts-per-run and posting window. No card due
+          means nothing is published.
         </div>
       </div>
 
@@ -892,11 +842,6 @@ async function loadStatus() {
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
   $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
-  const ft = settings.force_topic || "";
-  $("forceTopicState").textContent = ft ? ("Forced: " + ft) : "No forced topic";
-  if (document.activeElement !== $("forceTopicInput")) {
-    $("forceTopicInput").value = ft;
-  }
   const dry = String(settings.dry_run || data.dry_run || "false").toLowerCase() === "true";
   $("dryBanner").classList.toggle("hidden", !dry);
   const cb = data.circuit_breaker || {};
@@ -904,9 +849,9 @@ async function loadStatus() {
   $("breakerBanner").classList.toggle("hidden", !cb.open);
   $("statFailures").textContent = failures;
   $("statIssues").textContent = (data.issues || []).length;
-  const pw = data.post_window || {};
-  $("statWindow").textContent = (pw.start && pw.end)
-    ? (pw.start + "–" + pw.end + (pw.in_window ? " (now)" : " (off)")) : "always";
+  const activeCards = (data.file_cards || [])
+    .filter((c) => (c.status || "active") === "active").length;
+  $("statActiveCards").textContent = activeCards;
 
   renderIssues(data.issues || []);
   renderHealth(data.health || null);
@@ -1002,7 +947,7 @@ function renderTrending(topics) {
     chip.type = "button";
     chip.textContent = topic;
     chip.title = "Write about this topic next";
-    chip.addEventListener("click", () => setForceTopic(topic));
+    chip.addEventListener("click", () => openCardForTopic(topic));
     chips.appendChild(chip);
   });
 }
@@ -1040,12 +985,21 @@ function renderPosts(recent) {
       .map((d) => d + ": " + byDay[d]).join("  ·  ");
 }
 
+/* ---------- trending topic -> new Blogger card (card-only) ---------- */
+function openCardForTopic(topic) {
+  // Tapping a trending topic opens a new Blogger card with that
+  // topic as its custom topic. There is no global forced topic.
+  openCardForm("blogger", -1, { source: "custom", topic_override: topic });
+  showTab("blogger");
+  showMsg("New Blogger card started for: " + topic, true);
+}
+
 /* ---------- per-page live logs (filtered by area) ----------
    Honest note: GitHub Pages is static, so there is no server push
    (no real SSE). These panels auto-refresh with the dashboard. */
 const LOG_FILTERS = {
   overview: null, // all, latest 8
-  blogger: ["blogger", "publish", "article", "photo", "topic", "forced", "no photo"],
+  blogger: ["blogger", "publish", "article", "photo", "topic", "no_photo", "card"],
   bluesky: ["bluesky", "bsky", "reply", "replied", "login"],
   settings: ["settings", "config", "toggle", "saved", "paused", "resume"],
 };
@@ -1121,13 +1075,12 @@ updateCountdown();
 let configSha = "";
 let config = {};
 let configLoaded = false;
+// Card-only: no global posting limits exist any more. Every limit
+// lives inside a card (posts per day, posts per run, window).
 const CONFIG_DEFAULTS = {
-  blogger_daily_limit: 0, blogger_posts_per_run: 1, bsky_posts_per_run: 1,
-  bsky_reply_daily_cap: 0, bsky_reply_per_run: 0, reply_own_per_run: 0,
-  reply_gap_seconds: 0, post_interval_minutes: 30, post_window_start: "",
-  post_window_end: "", dry_run: false, max_consecutive_failures: 5,
-  paused: false, force_topic: "", blogger_enabled: true, bsky_enabled: true,
-  replies_enabled: true, cards_enabled: true, topic_blacklist: "",
+  dry_run: false, max_consecutive_failures: 5,
+  paused: false, blogger_enabled: true, bsky_enabled: true,
+  replies_enabled: true, cards_enabled: true,
   blogger_bold_format: true, card_default_interval_hours: 0,
   card_default_interval_minutes: 30, card_default_posts_per_day: 0,
   card_default_reply_own: true, card_default_reply_others: true,
@@ -1148,20 +1101,9 @@ function cfgBool(key, def) {
   return String(config[key]).toLowerCase() !== "false";
 }
 function fillConfigInputs() {
-  $("setBlogger").value = config.blogger_daily_limit ?? 0;
-  $("setBloggerRun").value = config.blogger_posts_per_run ?? 1;
-  $("setPostsRun").value = config.bsky_posts_per_run ?? 1;
-  $("setReplyRun").value = config.bsky_reply_per_run ?? 0;
-  $("setReplyOwn").value = config.reply_own_per_run ?? 0;
-  $("setReplyDay").value = config.bsky_reply_daily_cap ?? 0;
-  $("setGap").value = config.reply_gap_seconds ?? 0;
-  $("setWindowStart").value = config.post_window_start || "";
-  $("setWindowEnd").value = config.post_window_end || "";
-  $("setInterval").value = config.post_interval_minutes ?? 30;
   $("setMaxFail").value = config.max_consecutive_failures ?? 5;
   $("setDryRun").checked =
     String(config.dry_run || "false").toLowerCase() === "true";
-  $("blacklistInput").value = config.topic_blacklist || "";
   $("setBoldFormat").checked = cfgBool("blogger_bold_format", true);
   $("setDefHours").value = config.card_default_interval_hours ?? 0;
   $("setDefMinutes").value = config.card_default_interval_minutes ?? 30;
@@ -1174,26 +1116,10 @@ function fillConfigInputs() {
   $("pauseBtn").textContent = paused ? "Resume all" : "Pause all";
   $("dryBanner").classList.toggle("hidden",
     String(config.dry_run || "false").toLowerCase() !== "true");
-  const ft = config.force_topic || "";
-  $("forceTopicState").textContent = ft ? ("Forced: " + ft) : "No forced topic";
-  if (document.activeElement !== $("forceTopicInput")) {
-    $("forceTopicInput").value = ft;
-  }
 }
 function readConfigInputs() {
-  config.blogger_daily_limit = Number($("setBlogger").value) || 0;
-  config.blogger_posts_per_run = Number($("setBloggerRun").value) || 1;
-  config.bsky_posts_per_run = Number($("setPostsRun").value) || 1;
-  config.bsky_reply_per_run = Number($("setReplyRun").value) || 0;
-  config.reply_own_per_run = Number($("setReplyOwn").value) || 0;
-  config.bsky_reply_daily_cap = Number($("setReplyDay").value) || 0;
-  config.reply_gap_seconds = Number($("setGap").value) || 0;
-  config.post_window_start = $("setWindowStart").value.trim();
-  config.post_window_end = $("setWindowEnd").value.trim();
-  config.post_interval_minutes = Number($("setInterval").value) || 30;
   config.max_consecutive_failures = Number($("setMaxFail").value) || 5;
   config.dry_run = $("setDryRun").checked;
-  config.topic_blacklist = $("blacklistInput").value.trim();
   config.blogger_bold_format = $("setBoldFormat").checked;
   config.card_default_interval_hours = Number($("setDefHours").value) || 0;
   config.card_default_interval_minutes = Number($("setDefMinutes").value) || 0;
@@ -1226,9 +1152,6 @@ async function saveAllSettings(msg) {
   }
 }
 $("saveSchedulingBtn").addEventListener("click", () => saveAllSettings("Update scheduling from dashboard"));
-$("saveBloggerBtn").addEventListener("click", () => saveAllSettings("Update Blogger settings from dashboard"));
-$("saveBlueskyBtn").addEventListener("click", () => saveAllSettings("Update Bluesky settings from dashboard"));
-$("saveBlacklistBtn").addEventListener("click", () => saveAllSettings("Update topic blacklist from dashboard"));
 $("saveDefaultsBtn").addEventListener("click", () => saveAllSettings("Update card defaults from dashboard"));
 $("setBoldFormat").addEventListener("change", async () => {
   if (needToken()) { fillConfigInputs(); return; }
@@ -1236,21 +1159,6 @@ $("setBoldFormat").addEventListener("change", async () => {
   if (await saveConfig("Toggle bold formatting from dashboard")) {
     showMsg("Bold formatting is now " + (config.blogger_bold_format ? "ON" : "OFF") + ".", true);
   } else { fillConfigInputs(); }
-});
-async function setForceTopic(topic) {
-  if (needToken()) return;
-  await loadConfig();
-  config.force_topic = topic;
-  if (await saveConfig("Set forced topic from dashboard")) {
-    showMsg(topic ? ("Forced topic set: " + topic) : "Forced topic cleared.", true);
-    await loadStatus();
-  }
-}
-$("saveForceTopicBtn").addEventListener("click", () => {
-  setForceTopic($("forceTopicInput").value.trim());
-});
-$("clearForceTopicBtn").addEventListener("click", () => {
-  setForceTopic("");
 });
 $("pauseBtn").addEventListener("click", async () => {
   if (needToken()) return;
@@ -1554,6 +1462,8 @@ function renderCardList(tab) {
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
       " · " + esc(intervalLabel(c)) +
       (perDay > 0 ? " · " + perDay + "/day (today: " + e.runsToday + ")" : " · unlimited/day") +
+      ((Number(c.count) || 1) > 1 ? " · " + (Number(c.count) || 1) + "/run" : "") +
+      (c.window_start && c.window_end ? " · window " + esc(c.window_start) + "–" + esc(c.window_end) : "") +
       (c.schedule_times && c.schedule_times.length
         ? " · " + esc((Array.isArray(c.schedule_times) ? c.schedule_times : [c.schedule_times]).join(", ")) : "") +
       " · last: " + esc(e.lastRun ? fmtDhaka(e.lastRun) : "never") +
@@ -1814,7 +1724,7 @@ const INTERVAL_PRESETS = [
 ];
 const PERDAY_PRESETS = [1, 2, 3, 5, 10];
 
-function openCardForm(tab, index) {
+function openCardForm(tab, index, preset) {
   // Only one form open at a time (the other tab's slot is cleared).
   $("bloggerCardFormSlot").innerHTML = "";
   $("blueskyCardFormSlot").innerHTML = "";
@@ -1833,7 +1743,9 @@ function openCardForm(tab, index) {
     reply_own: cfgBool("card_default_reply_own", true),
     reply_others: cfgBool("card_default_reply_others", true),
     replies_per_run: 0, bold_format: true, notes: "", color: "",
+    window_start: "", window_end: "",
   };
+  if (!existing && preset) Object.assign(c, preset);
   const typeOptions = types.map((t) =>
     '<option value="' + t + '"' + (c.type === t ? " selected" : "") + ">" +
     esc(TYPE_LABELS[t]) + "</option>").join("");
@@ -1859,8 +1771,8 @@ function openCardForm(tab, index) {
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
     '<div><label for="cfAccount">Bluesky account (optional)</label>' +
     '<select id="cfAccount">' + accOptions + "</select></div>" +
-    '<div><label for="cfCount">Count (how many per run)</label>' +
-    '<input id="cfCount" type="number" min="0" value="' + esc(c.count ?? 1) + '"></div>' +
+    '<div><label for="cfCount">Posts per run (how many articles each run publishes)</label>' +
+    '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
 
     "<h3>Schedule - when this card runs</h3>" +
@@ -1885,6 +1797,12 @@ function openCardForm(tab, index) {
     '<input id="cfTimes" placeholder="07:00, 19:00" value="' +
     esc((Array.isArray(c.schedule_times) ? c.schedule_times : []).join(", ")) + '"></div>' +
     "</div>" +
+    '<div id="cfWindowSection"><div class="form-grid">' +
+    '<div><label for="cfWindowStart">Posting window start (Dhaka, HH:MM, empty = no window)</label>' +
+    '<input id="cfWindowStart" placeholder="07:00" value="' + esc(c.window_start || "") + '"></div>' +
+    '<div><label for="cfWindowEnd">Posting window end (Dhaka, HH:MM, empty = no window)</label>' +
+    '<input id="cfWindowEnd" placeholder="23:00" value="' + esc(c.window_end || "") + '"></div>' +
+    "</div></div>" +
     '<div class="sched-preview" id="cfPreview"></div>' +
 
     '<div id="cfSourceSection">' +
@@ -1906,7 +1824,7 @@ function openCardForm(tab, index) {
     '<div class="toggle-row"><div><div class="lbl">Reply to OTHERS\' comments / posts</div>' +
     '<div class="desc">Reply to fresh comments on high-engagement posts by others.</div></div>' +
     '<input type="checkbox" id="cfReplyOthers"' + (c.reply_others !== false ? " checked" : "") + "></div>" +
-    '<div class="form-grid"><div><label for="cfRepliesPerRun">Replies per run (0 = global setting)</label>' +
+    '<div class="form-grid"><div><label for="cfRepliesPerRun">Replies per run (0 = unlimited)</label>' +
     '<input id="cfRepliesPerRun" type="number" min="0" value="' + esc(c.replies_per_run ?? 0) + '"></div></div>' +
     "</div>" +
 
@@ -1947,6 +1865,7 @@ function wireCardForm(tab, card) {
     $("cfSourceSection").classList.toggle("hidden", !isBlog);
     $("cfReplySection").classList.toggle("hidden", isBlog);
     $("cfBoldSection").classList.toggle("hidden", !isBlog);
+    $("cfWindowSection").classList.toggle("hidden", !isBlog);
   };
   let source = card.source || "trending";
   const syncSourceSeg = () => {
@@ -1964,14 +1883,17 @@ function wireCardForm(tab, card) {
     const m = Number($("cfMinutes").value) || 0;
     const times = $("cfTimes").value.split(",").map((s) => s.trim()).filter(Boolean);
     const perDay = Number($("cfPerDay").value) || 0;
+    const wStart = $("cfWindowStart").value.trim();
+    const wEnd = $("cfWindowEnd").value.trim();
     const lastRun = card && card.name ? (fileCardRuns[card.name] || "") : "";
     const preview = nextRunsForCard(
       { interval_hours: h, interval_minutes: m, schedule_times: times }, 5, lastRun);
     $("cfPreview").innerHTML = "<b>Next 5 runs (Dhaka):</b><br>" +
       preview.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>") +
-      (perDay > 0 ? "<br><b>" + perDay + " per day max</b>" : "<br>Unlimited per day");
+      (perDay > 0 ? "<br><b>" + perDay + " per day max</b>" : "<br>Unlimited per day") +
+      (wStart && wEnd ? "<br>Window: " + esc(wStart) + "–" + esc(wEnd) + " Dhaka" : "");
   };
-  ["cfHours", "cfMinutes", "cfTimes", "cfPerDay"].forEach((id) => {
+  ["cfHours", "cfMinutes", "cfTimes", "cfPerDay", "cfWindowStart", "cfWindowEnd"].forEach((id) => {
     $(id).addEventListener("input", updatePreview);
   });
   document.querySelectorAll("#cfIntervalPresets .preset").forEach((b) => {
@@ -2065,6 +1987,8 @@ function readCardForm(tab) {
     reply_others: isBlog ? false : $("cfReplyOthers").checked,
     replies_per_run: isBlog ? 0 : (Number($("cfRepliesPerRun").value) || 0),
     bold_format: isBlog ? $("cfBold").checked : true,
+    window_start: isBlog ? $("cfWindowStart").value.trim() : "",
+    window_end: isBlog ? $("cfWindowEnd").value.trim() : "",
     notes: $("cfNotes").value.trim(),
     color: $("cfColor").value || "",
   };
@@ -2089,6 +2013,8 @@ function fillCardForm(c) {
   $("cfReplyOthers").checked = c.reply_others !== false;
   $("cfRepliesPerRun").value = c.replies_per_run ?? 0;
   $("cfBold").checked = c.bold_format !== false;
+  $("cfWindowStart").value = c.window_start || "";
+  $("cfWindowEnd").value = c.window_end || "";
   $("cfNotes").value = c.notes || "";
   $("cfColor").value = c.color || "";
   const src = c.source || "trending";
