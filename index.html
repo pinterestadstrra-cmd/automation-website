@@ -341,8 +341,8 @@
         <h2>How this works (simple)</h2>
         <div style="font-size:14px;line-height:1.7">
           1) <b>Make a card below.</b> One card = one job (for example: morning news).<br>
-          2) <b>Set the big numbers on the card:</b> how many posts per day, and every how many hours.<br>
-          3) <b>The worker runs your cards every 30 minutes.</b> A card only posts when it finds a photo that really loads - no photo, no post.<br>
+          2) <b>Set the big numbers on the card:</b> how many posts per day, and the posting window. The card spreads the posts itself across the day - you do not set an interval for posting.<br>
+          3) <b>The worker runs your cards every 30 minutes.</b> A card only posts at one of its spread-out posting times - and only when it finds a photo that really loads. No photo, no post. Draft-only cards save a draft instead of publishing.<br>
           4) <b>Nothing posts without a card.</b> No card, no post. That is the rule.
         </div>
       </div>
@@ -421,10 +421,10 @@
       <div class="panel" style="background:#f0f9ff">
         <h2>How this works (simple)</h2>
         <div style="font-size:14px;line-height:1.7">
-          1) <b>Add your Bluesky account below</b> (handle + app password).<br>
-          2) <b>Make a card:</b> post the latest article, promote a link, or reply to comments.<br>
-          3) <b>A reply card answers comments on YOUR posts</b> - it checks old posts too, from the last few days you set on the card - and fresh comments on hot posts by others.<br>
-          4) <b>Every reply is different,</b> and every reply is written in that card's own log (tap "Logs" on the card).
+          1) <b>Add your Bluesky account below</b> (handle + app password). Each card picks which account it posts and replies as.<br>
+          2) <b>Make a card:</b> post the latest article, promote a link, or reply to comments. Set "run every X minutes" - the card checks replies on every run, and only posts at its spread-out posting times.<br>
+          3) <b>A reply card answers EVERY comment on YOUR posts</b> - it checks old posts too, from the last few days you set on the card - and fresh comments on hot posts by others (limited per run). Every reply is different, and every reply is written in that card's own log (tap "Logs" on the card).<br>
+          4) <b>Test a card first:</b> tap "Test" on a card - it writes the article and checks the photo, but publishes nothing.
         </div>
       </div>
       <div class="panel">
@@ -618,6 +618,37 @@
             <input type="checkbox" id="setDefReplyOthers" checked> Default: reply to OTHERS</label></div>
           <div><label for="setDefLookback">Default: check comments from the last __ days (1-30)</label>
             <input id="setDefLookback" type="number" min="1" max="30" value="7"></div>
+          <div><label for="setDefSpread">Default: how posts spread across the day</label>
+            <select id="setDefSpread">
+              <option value="even">Evenly spread</option>
+              <option value="best">Best times (morning / midday / evening)</option>
+            </select></div>
+          <div><label for="setDefLength">Default: article length</label>
+            <select id="setDefLength">
+              <option value="auto">Auto (AI decides from the news)</option>
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select></div>
+          <div><label for="setDefTone">Default: tone / style</label>
+            <select id="setDefTone">
+              <option value="dramatic">Dramatic</option>
+              <option value="serious">Serious</option>
+              <option value="funny">Funny</option>
+              <option value="simple">Simple</option>
+            </select></div>
+          <div><label for="setDefJitter">Default: random jitter, minutes (0-30)</label>
+            <input id="setDefJitter" type="number" min="0" max="30" value="10"></div>
+          <div><label for="setDefRatio">Default: Bluesky image ratio</label>
+            <select id="setDefRatio">
+              <option value="16:9">16:9 (wide)</option>
+              <option value="1:1">1:1 (square)</option>
+              <option value="4:5">4:5 (tall)</option>
+            </select></div>
+          <div><label for="setDefRetryAfter">Default: retry after __ minutes if a run fails</label>
+            <input id="setDefRetryAfter" type="number" min="1" value="30"></div>
+          <div><label for="setDefRetryMax">Default: max retries after a failure</label>
+            <input id="setDefRetryMax" type="number" min="0" value="2"></div>
         </div>
         <div class="row-btns">
           <button class="btn-teal" id="saveDefaultsBtn">Save card defaults</button>
@@ -1111,6 +1142,10 @@ const CONFIG_DEFAULTS = {
   card_default_interval_minutes: 30, card_default_posts_per_day: 0,
   card_default_reply_own: true, card_default_reply_others: true,
   card_default_lookback_days: 7,
+  card_default_spread_mode: "even", card_default_length_mode: "auto",
+  card_default_tone: "dramatic", card_default_jitter_minutes: 10,
+  card_default_bsky_image_ratio: "16:9",
+  card_default_retry_after_minutes: 30, card_default_retry_max: 2,
 };
 async function loadConfig() {
   if (!getToken()) return;
@@ -1138,6 +1173,13 @@ function fillConfigInputs() {
   $("setDefReplyOwn").checked = cfgBool("card_default_reply_own", true);
   $("setDefReplyOthers").checked = cfgBool("card_default_reply_others", true);
   $("setDefLookback").value = config.card_default_lookback_days ?? 7;
+  $("setDefSpread").value = config.card_default_spread_mode || "even";
+  $("setDefLength").value = config.card_default_length_mode || "auto";
+  $("setDefTone").value = config.card_default_tone || "dramatic";
+  $("setDefJitter").value = config.card_default_jitter_minutes ?? 10;
+  $("setDefRatio").value = config.card_default_bsky_image_ratio || "16:9";
+  $("setDefRetryAfter").value = config.card_default_retry_after_minutes ?? 30;
+  $("setDefRetryMax").value = config.card_default_retry_max ?? 2;
   const paused = String(config.paused || false).toLowerCase() === "true";
   $("pausedBanner").classList.toggle("hidden", !paused);
   $("pauseState").textContent = paused ? "Paused" : "Running";
@@ -1156,6 +1198,16 @@ function readConfigInputs() {
   config.card_default_reply_others = $("setDefReplyOthers").checked;
   config.card_default_lookback_days = Math.max(1, Math.min(30,
     Number($("setDefLookback").value) || 7));
+  config.card_default_spread_mode = $("setDefSpread").value || "even";
+  config.card_default_length_mode = $("setDefLength").value || "auto";
+  config.card_default_tone = $("setDefTone").value || "dramatic";
+  config.card_default_jitter_minutes = Math.max(0, Math.min(30,
+    Number($("setDefJitter").value) || 0));
+  config.card_default_bsky_image_ratio = $("setDefRatio").value || "16:9";
+  config.card_default_retry_after_minutes = Math.max(1,
+    Number($("setDefRetryAfter").value) || 30);
+  config.card_default_retry_max = Math.max(0,
+    Number($("setDefRetryMax").value) || 0);
 }
 async function saveConfig(msg) {
   if (needToken()) return false;
@@ -1377,6 +1429,91 @@ function nextRunsForCard(c, count, lastRunIso) {
   for (let i = 0; i < count; i++) { out.push(new Date(nxt)); nxt += interval; }
   return out;
 }
+/* ---------- auto-spread posting times (same math as the worker) ----------
+   The worker spreads a card's posts-per-day evenly across its posting
+   window (or at peak hours in "best times" mode) and adds a small
+   deterministic jitter, so the dashboard shows the same posting times
+   the worker will use. */
+function fnv1a(str) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h;
+}
+const PEAK_WINDOWS = [[420, 540], [720, 780], [1080, 1260]]; // 07-09, 12-13, 18-21 Dhaka
+function windowMinutes(c) {
+  const ws = String(c.window_start || "").trim();
+  const we = String(c.window_end || "").trim();
+  if (ws && we) {
+    const sp = ws.split(":").map(Number), ep = we.split(":").map(Number);
+    if (!isNaN(sp[0]) && !isNaN(ep[0])) {
+      let start = sp[0] * 60 + (sp[1] || 0), end = ep[0] * 60 + (ep[1] || 0);
+      if (end <= start) end += 1440;
+      return [start, end];
+    }
+  }
+  return [0, 1440];
+}
+function autoSpreadSlots(c, dayStartMs) {
+  // Posting slots for ONE Dhaka day (dayStartMs = Dhaka midnight as a
+  // UTC instant). Fixed times win; otherwise even or best-times spread.
+  const perDay = Number(c.posts_per_day || 0);
+  if (perDay <= 0) return [];
+  const fixed = parseScheduleTimes(c);
+  if (fixed.length) {
+    return fixed.map(([hh, mm], i) =>
+      ({ i: i, at: dayStartMs + (hh * 60 + mm) * 60000 }));
+  }
+  const w = windowMinutes(c), wstart = w[0], wend = w[1];
+  const total = wend - wstart;
+  let minutes = [];
+  if ((c.spread_mode || "even") === "best") {
+    const peak = [];
+    PEAK_WINDOWS.forEach(([a, b]) => { for (let m = a; m < b; m++) peak.push(m); });
+    const clipped = [];
+    peak.forEach((m) => {
+      let mm = m;
+      if (mm < wstart) mm += 1440;
+      if (mm >= wstart && mm < wend) clipped.push(mm);
+    });
+    if (clipped.length) {
+      const n = clipped.length;
+      for (let i = 0; i < perDay; i++) {
+        minutes.push(clipped[Math.min(Math.round(i * n / perDay), n - 1)]);
+      }
+    } else {
+      for (let i = 0; i < perDay; i++) minutes.push(Math.floor(wstart + i * total / perDay));
+    }
+  } else {
+    for (let i = 0; i < perDay; i++) minutes.push(Math.floor(wstart + i * total / perDay));
+  }
+  const jit = Math.max(0, Math.min(30, Number(c.jitter_minutes ?? 10) || 0));
+  const name = c.name || "";
+  const dateStr = new Date(dayStartMs + DHAKA_MS).toISOString().slice(0, 10);
+  const out = minutes.map((mins, i) => {
+    let j = 0;
+    if (jit > 0) j = (fnv1a(name + "|" + dateStr + "|" + i) % (2 * jit + 1)) - jit;
+    return { i: i, at: dayStartMs + (mins + j) * 60000 };
+  });
+  out.sort((a, b) => a.at - b.at);
+  return out;
+}
+function nextPostTimesForCard(c, count) {
+  count = count || 5;
+  const now = Date.now();
+  const perDay = Number(c.posts_per_day || 0);
+  if (perDay <= 0 && !parseScheduleTimes(c).length) return [];
+  const out = [];
+  const dayStart = Math.floor((now + DHAKA_MS) / 86400000) * 86400000 - DHAKA_MS;
+  for (let d = 0; d < 3 && out.length < count; d++) {
+    autoSpreadSlots(c, dayStart + d * 86400000).forEach((s) => {
+      if (s.at > now) out.push(new Date(s.at));
+    });
+  }
+  return out.slice(0, count);
+}
 function intervalLabel(c) {
   const h = Number(c.interval_hours || 0) || 0;
   const m = Number(c.interval_minutes || 0) || 0;
@@ -1408,6 +1545,9 @@ function enrichCard(c) {
   const nextRuns = (e.next_runs && e.next_runs.length)
     ? e.next_runs
     : nextRunsForCard(c, 5, lastRun).map((d) => d.toISOString());
+  const nextPostTimes = (e.next_post_times && e.next_post_times.length)
+    ? e.next_post_times
+    : nextPostTimesForCard(c, 5).map((d) => d.toISOString());
   const status = (c.status || "active");
   const computed = status !== "active" ? "paused"
     : (e.computed_status || (e.fail > 0 && e.last_error ? "error" : "active"));
@@ -1415,11 +1555,14 @@ function enrichCard(c) {
     lastRun: lastRun,
     nextRuns: nextRuns,
     nextRun: nextRuns[0] || "",
+    nextPostTimes: nextPostTimes,
+    nextPost: nextPostTimes[0] || "",
     computed: computed,
     success: e.success ?? 0,
     fail: e.fail ?? 0,
     lastError: e.last_error || "",
     runsToday: e.runs_today ?? 0,
+    postsToday: e.posts_today ?? 0,
   };
 }
 function statusBadge(computed) {
@@ -1491,18 +1634,25 @@ function renderCardList(tab) {
       (c.link ? " · " + esc(c.link) : "") +
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
       " · " + esc(intervalLabel(c)) +
-      (perDay > 0 ? " · " + perDay + "/day (today: " + e.runsToday + ")" : " · unlimited/day") +
+      (perDay > 0 ? " · " + perDay + "/day (today: " + e.postsToday + ")" : " · unlimited/day") +
       ((Number(c.count) || 1) > 1 ? " · " + (Number(c.count) || 1) + "/run" : "") +
       (c.window_start && c.window_end ? " · window " + esc(c.window_start) + "–" + esc(c.window_end) : "") +
       (c.schedule_times && c.schedule_times.length
         ? " · " + esc((Array.isArray(c.schedule_times) ? c.schedule_times : [c.schedule_times]).join(", ")) : "") +
+      (perDay > 0 ? " · posts spread " + esc(c.spread_mode === "best" ? "at best times" : "evenly") : "") +
+      (e.nextPost ? ' · next post: <span data-next="' + esc(e.nextPost) + '">' + esc(countdownText(e.nextPost)) + "</span>" : "") +
       " · last: " + esc(e.lastRun ? fmtDhaka(e.lastRun) : "never") +
-      ' · next: <span data-next="' + esc(e.nextRun) + '">' + esc(countdownText(e.nextRun)) + "</span>" +
+      ' · next run: <span data-next="' + esc(e.nextRun) + '">' + esc(countdownText(e.nextRun)) + "</span>" +
       " · ✓" + e.success + " ✗" + e.fail +
       (c.source === "custom" && c.topic_override ? " · topic: " + esc(c.topic_override) : "") +
+      (c.type === "blogger_post"
+        ? " · " + esc(c.length_mode || "auto") + " length · " + esc(c.tone || "dramatic") + " tone" +
+          (c.draft_only ? " · DRAFT only" : "") +
+          (c.labels ? " · labels: " + esc(Array.isArray(c.labels) ? c.labels.join(", ") : c.labels) : "") : "") +
+      (c.type !== "blogger_post" && c.bsky_image_ratio ? " · image " + esc(c.bsky_image_ratio) : "") +
       (c.type !== "blogger_post" && (c.reply_own || c.reply_others)
-        ? " · replies: " + (c.reply_own ? "own " : "") + (c.reply_others ? "others " : "") +
-          (Number(c.replies_per_run || 0) > 0 ? "· " + c.replies_per_run + "/run " : "· unlimited/run ") +
+        ? " · replies: " + (c.reply_own ? "ALL own " : "") + (c.reply_others ? "others " : "") +
+          (Number(c.replies_per_run || 0) > 0 ? "· " + c.replies_per_run + "/run (others) " : "· unlimited/run (others) ") +
           "· last " + (Number(c.lookback_days ?? 7) || 7) + " days" : "") +
       (c.type === "blogger_post" && c.bold_format === false ? " · no bold" : "") +
       "</div>" +
@@ -1511,6 +1661,7 @@ function renderCardList(tab) {
       "</span></label>" +
       '<div class="actions">' +
       '<button class="btn-teal btn-small" data-act="run" data-i="' + i + '">Run now</button>' +
+      '<button class="btn-blue btn-small" data-act="test" data-i="' + i + '">Test</button>' +
       '<button class="btn-ghost btn-small" data-act="edit" data-i="' + i + '">Edit</button>' +
       '<button class="btn-ghost btn-small" data-act="dup" data-i="' + i + '">Duplicate</button>' +
       '<button class="btn-ghost btn-small" data-act="toggle" data-i="' + i + '">' +
@@ -1619,6 +1770,38 @@ async function requestCardRun(name) {
     showMsg("Could not start the worker: " + e.message, false);
   }
 }
+async function requestCardTest(name) {
+  if (needToken()) return;
+  // 1) Ask the worker to TEST this card (state.json flag).
+  // A test writes the article and verifies the photo, but publishes
+  // nothing and sends no reply.
+  try {
+    let sha = "";
+    let state = {};
+    try {
+      const file = await gh("/contents/data/state.json");
+      sha = file.sha || "";
+      state = JSON.parse(b64ToUtf8(file.content || "")) || {};
+    } catch (e) { /* no state file yet - create it */ }
+    state.test_card_now = name;
+    const body = {
+      message: "Test card: " + name,
+      content: utf8ToB64(JSON.stringify(state, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (sha) body.sha = sha;
+    await gh("/contents/data/state.json", "PUT", body);
+  } catch (e) {
+    showMsg("Could not set test (" + e.message + ") - dispatching the worker anyway.", false);
+  }
+  // 2) Start the worker.
+  try {
+    await gh("/actions/workflows/automation.yml/dispatches", "POST", { ref: BRANCH });
+    showMsg("Worker started - card '" + name + "' will TEST (nothing published). Check the card log.", true);
+  } catch (e) {
+    showMsg("Could not start the worker: " + e.message, false);
+  }
+}
 function cardLogLines(name) {
   const logs = (lastData && lastData.logs) || [];
   const list = logs.filter((l) => String(l.message || "").toLowerCase().includes(String(name || "").toLowerCase()));
@@ -1629,6 +1812,7 @@ async function cardAction(act, i, tab) {
   const c = cards[i];
   if (!c) return;
   if (act === "run") { requestCardRun(c.name || ""); return; }
+  if (act === "test") { requestCardTest(c.name || ""); return; }
   if (act === "del") {
     if (!confirm("Delete card '" + (c.name || "") + "'?")) return;
     cards.splice(i, 1);
@@ -1777,6 +1961,18 @@ function openCardForm(tab, index, preset) {
     replies_per_run: 0, lookback_days: Number(config.card_default_lookback_days ?? 7) || 7,
     bold_format: true, notes: "", color: "",
     window_start: "", window_end: "",
+    spread_mode: config.card_default_spread_mode || "even",
+    length_mode: config.card_default_length_mode || "auto",
+    tone: config.card_default_tone || "dramatic",
+    draft_only: false,
+    days_of_week: [0, 1, 2, 3, 4, 5, 6],
+    jitter_minutes: Number(config.card_default_jitter_minutes ?? 10) || 0,
+    labels: "", max_posts_per_week: 0, max_posts_per_month: 0,
+    retry_after_minutes: Number(config.card_default_retry_after_minutes ?? 30) || 30,
+    retry_max: Number(config.card_default_retry_max ?? 2) || 0,
+    replies_per_day: 0, reply_never: "", reply_only: "",
+    reply_skip_words: "",
+    bsky_image_ratio: config.card_default_bsky_image_ratio || "16:9",
   };
   if (!existing && preset) Object.assign(c, preset);
   const typeOptions = types.map((t) =>
@@ -1802,8 +1998,9 @@ function openCardForm(tab, index, preset) {
     '<div><label for="cfType">Type</label><select id="cfType">' + typeOptions + "</select></div>" +
     '<div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>' +
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
-    '<div><label for="cfAccount">Bluesky account (optional)</label>' +
-    '<select id="cfAccount">' + accOptions + "</select></div>" +
+    '<div><label for="cfAccount">Bluesky account - which account this card posts and replies as</label>' +
+    '<select id="cfAccount">' + accOptions + "</select>" +
+    '<div class="field-help">Empty = the first account. The card always uses this one account.</div></div>' +
     '<div><label for="cfCount">Posts per run - how many posts each time the card runs</label>' +
     '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
@@ -1841,6 +2038,36 @@ function openCardForm(tab, index, preset) {
     "</div></div>" +
     '<div class="sched-preview" id="cfPreview"></div>' +
 
+    "<h3>Posting times - how the posts spread across the day</h3>" +
+    '<div class="field-help">You set posts per day above. The worker spreads them itself - you do not set an interval for posting. Example: 12 posts in 07:00–23:00 = one post every 80 minutes.</div>' +
+    '<div class="seg" id="cfSpreadSeg">' +
+    '<button type="button" data-spread="even">Evenly spread</button>' +
+    '<button type="button" data-spread="best">Best times (morning / midday / evening)</button>' +
+    "</div>" +
+    '<div class="form-grid">' +
+    '<div class="big-field"><label for="cfJitter">Random jitter, minutes (0-30)</label>' +
+    '<input id="cfJitter" type="number" min="0" max="30" value="' + esc(c.jitter_minutes ?? 10) + '">' +
+    '<div class="field-help">Each posting time moves a little by chance (up to this many minutes earlier or later), so posts never go out at the exact same minute.</div></div>' +
+    "</div>" +
+    '<div><label>Days of the week this card runs</label><div id="cfDays" style="display:flex;gap:6px;flex-wrap:wrap">' +
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((d, i) =>
+      '<label style="display:flex;align-items:center;gap:4px;font-weight:600"><input type="checkbox" class="cfDay" value="' + i + '"' +
+      ((Array.isArray(c.days_of_week) ? c.days_of_week : [0, 1, 2, 3, 4, 5, 6]).includes(i) ? " checked" : "") +
+      "> " + d + "</label>").join("") + "</div>" +
+    '<div class="field-help">Untick a day and the card does nothing that day.</div></div>' +
+    '<div class="form-grid">' +
+    '<div><label for="cfWeekCap">Max posts per week (0 = no limit)</label>' +
+    '<input id="cfWeekCap" type="number" min="0" value="' + esc(c.max_posts_per_week ?? 0) + '"></div>' +
+    '<div><label for="cfMonthCap">Max posts per month (0 = no limit)</label>' +
+    '<input id="cfMonthCap" type="number" min="0" value="' + esc(c.max_posts_per_month ?? 0) + '"></div>' +
+    "</div>" +
+    '<div class="form-grid">' +
+    '<div><label for="cfRetryAfter">If a run fails, retry after __ minutes</label>' +
+    '<input id="cfRetryAfter" type="number" min="1" value="' + esc(c.retry_after_minutes ?? 30) + '"></div>' +
+    '<div><label for="cfRetryMax">Max retries after a failure</label>' +
+    '<input id="cfRetryMax" type="number" min="0" value="' + esc(c.retry_max ?? 2) + '"></div>' +
+    "</div>" +
+
     '<div id="cfSourceSection">' +
     "<h3>Source - what to write about</h3>" +
     '<div class="seg" id="cfSourceSeg">' +
@@ -1852,6 +2079,28 @@ function openCardForm(tab, index, preset) {
     '<input id="cfTopic" placeholder="e.g. Bangladesh cricket" value="' + esc(c.topic_override || "") + '"></div>' +
     "</div>" +
 
+    '<div id="cfStyleSection">' +
+    "<h3>Article style - how the article reads</h3>" +
+    '<div class="form-grid">' +
+    '<div><label for="cfLength">Article length</label><select id="cfLength">' +
+    [["auto", "Auto - the AI decides from the news (big story longer, small story shorter)"],
+     ["short", "Short"], ["medium", "Medium"], ["long", "Long"]].map(([v, l]) =>
+      '<option value="' + v + '"' + ((c.length_mode || "auto") === v ? " selected" : "") + ">" + l + "</option>").join("") +
+    "</select></div>" +
+    '<div><label for="cfTone">Tone / style (article + Bluesky hook)</label><select id="cfTone">' +
+    [["dramatic", "Dramatic"], ["serious", "Serious"], ["funny", "Funny"], ["simple", "Simple"]].map(([v, l]) =>
+      '<option value="' + v + '"' + ((c.tone || "dramatic") === v ? " selected" : "") + ">" + l + "</option>").join("") +
+    "</select></div>" +
+    "</div>" +
+    '<div><label for="cfLabels">Blogger labels / categories (comma-separated)</label>' +
+    '<input id="cfLabels" placeholder="e.g. Politics, Sports" value="' +
+    esc(Array.isArray(c.labels) ? c.labels.join(", ") : (c.labels || "")) + '">' +
+    '<div class="field-help">Every post from this card gets these labels. Empty = "News".</div></div>' +
+    '<div class="toggle-row"><div><div class="lbl">Draft only - do NOT publish</div>' +
+    '<div class="desc">Save the article as a Blogger DRAFT instead of publishing it. You review and publish it yourself from Blogger.</div></div>' +
+    '<input type="checkbox" id="cfDraft"' + (c.draft_only ? " checked" : "") + "></div>" +
+    "</div>" +
+
     '<div id="cfReplySection">' +
     "<h3>Replies - what this card replies to</h3>" +
     '<div class="toggle-row"><div><div class="lbl">Reply to comments on MY posts</div>' +
@@ -1860,12 +2109,26 @@ function openCardForm(tab, index, preset) {
     '<div class="toggle-row"><div><div class="lbl">Reply to OTHERS\' comments / posts</div>' +
     '<div class="desc">Reply to fresh comments on high-engagement posts by others.</div></div>' +
     '<input type="checkbox" id="cfReplyOthers"' + (c.reply_others !== false ? " checked" : "") + "></div>" +
-    '<div class="form-grid"><div class="big-field"><label for="cfRepliesPerRun">Replies per run - how many replies to give each time the card runs (0 = no limit)</label>' +
+    '<div class="form-grid"><div class="big-field"><label for="cfRepliesPerRun">Replies per run - how many replies to OTHERS each time the card runs (0 = no limit)</label>' +
     '<input id="cfRepliesPerRun" type="number" min="0" value="' + esc(c.replies_per_run ?? 0) + '">' +
-    '<div class="field-help">Example: 3 means at most 3 replies every time this card runs.</div></div>' +
+    '<div class="field-help">Example: 3 means at most 3 replies to others every time this card runs. Comments on YOUR OWN posts are always answered - ALL of them, no limit per run.</div></div>' +
     '<div><label for="cfLookback">Check comments from the last __ days</label>' +
     '<input id="cfLookback" type="number" min="1" max="30" value="' + esc(c.lookback_days ?? 7) + '">' +
     '<div class="field-help">The card looks back this many days on YOUR posts and answers comments it has not answered yet. 7 = the last 7 days. Old posts are checked too.</div></div></div>' +
+    '<div class="form-grid"><div><label for="cfRepliesPerDay">Max replies per day (0 = no limit)</label>' +
+    '<input id="cfRepliesPerDay" type="number" min="0" value="' + esc(c.replies_per_day ?? 0) + '">' +
+    '<div class="field-help">Safety cap: the card never sends more replies than this in one day.</div></div>' +
+    '<div><label for="cfRatio">Bluesky image ratio</label><select id="cfRatio">' +
+    [["16:9", "16:9 (wide)"], ["1:1", "1:1 (square)"], ["4:5", "4:5 (tall)"]].map(([v, l]) =>
+      '<option value="' + v + '"' + ((c.bsky_image_ratio || "16:9") === v ? " selected" : "") + ">" + l + "</option>").join("") +
+    "</select>" +
+    '<div class="field-help">The photo is cropped to this shape for Bluesky posts.</div></div></div>' +
+    '<div><label for="cfReplyNever">Never reply to these accounts (comma-separated handles)</label>' +
+    '<input id="cfReplyNever" placeholder="e.g. spam1, spam2" value="' + esc(c.reply_never || "") + '"></div>' +
+    '<div><label for="cfReplyOnly">Only reply to these accounts (empty = reply to anyone)</label>' +
+    '<input id="cfReplyOnly" placeholder="e.g. friend1, friend2" value="' + esc(c.reply_only || "") + '"></div>' +
+    '<div><label for="cfSkipWords">Do not reply to a comment containing any of these words (comma-separated)</label>' +
+    '<input id="cfSkipWords" placeholder="e.g. spam, crypto" value="' + esc(c.reply_skip_words || "") + '"></div>' +
     "</div>" +
 
     '<div id="cfBoldSection">' +
@@ -1906,8 +2169,18 @@ function wireCardForm(tab, card) {
     $("cfReplySection").classList.toggle("hidden", isBlog);
     $("cfBoldSection").classList.toggle("hidden", !isBlog);
     $("cfWindowSection").classList.toggle("hidden", !isBlog);
+    $("cfStyleSection").classList.toggle("hidden", !isBlog);
   };
   let source = card.source || "trending";
+  let spread = card.spread_mode || "even";
+  const syncSpreadSeg = () => {
+    document.querySelectorAll("#cfSpreadSeg button").forEach((b) => {
+      b.classList.toggle("on", b.dataset.spread === spread);
+    });
+  };
+  document.querySelectorAll("#cfSpreadSeg button").forEach((b) => {
+    b.addEventListener("click", () => { spread = b.dataset.spread; syncSpreadSeg(); updatePreview(); });
+  });
   const syncSourceSeg = () => {
     document.querySelectorAll("#cfSourceSeg button").forEach((b) => {
       b.classList.toggle("on", b.dataset.src === source);
@@ -1928,12 +2201,22 @@ function wireCardForm(tab, card) {
     const lastRun = card && card.name ? (fileCardRuns[card.name] || "") : "";
     const preview = nextRunsForCard(
       { interval_hours: h, interval_minutes: m, schedule_times: times }, 5, lastRun);
+    const jitter = Math.max(0, Math.min(30, Number($("cfJitter").value) || 0));
+    const postTimes = nextPostTimesForCard(
+      { name: card.name || $("cfName").value, posts_per_day: perDay,
+        schedule_times: times, window_start: wStart, window_end: wEnd,
+        spread_mode: spread, jitter_minutes: jitter }, 5);
     $("cfPreview").innerHTML = "<b>Next 5 runs (Dhaka):</b><br>" +
       preview.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>") +
       (perDay > 0 ? "<br><b>" + perDay + " per day max</b>" : "<br>Unlimited per day") +
-      (wStart && wEnd ? "<br>Window: " + esc(wStart) + "–" + esc(wEnd) + " Dhaka" : "");
+      (wStart && wEnd ? "<br>Window: " + esc(wStart) + "–" + esc(wEnd) + " Dhaka" : "") +
+      (postTimes.length
+        ? "<br><b>Next posting times (" + esc(spread === "best" ? "best times" : "evenly spread") +
+          ", jitter ±" + jitter + "m):</b><br>" +
+          postTimes.map((d) => esc(fmtDhaka(d.toISOString()))).join("<br>")
+        : (perDay > 0 ? "" : "<br>Posts at any run (unlimited per day)"));
   };
-  ["cfHours", "cfMinutes", "cfTimes", "cfPerDay", "cfWindowStart", "cfWindowEnd"].forEach((id) => {
+  ["cfHours", "cfMinutes", "cfTimes", "cfPerDay", "cfWindowStart", "cfWindowEnd", "cfJitter"].forEach((id) => {
     $(id).addEventListener("input", updatePreview);
   });
   document.querySelectorAll("#cfIntervalPresets .preset").forEach((b) => {
@@ -2006,6 +2289,7 @@ function wireCardForm(tab, card) {
   });
   showSource();
   syncSourceSeg();
+  syncSpreadSeg();
   updatePreview();
 }
 function readCardForm(tab) {
@@ -2031,6 +2315,24 @@ function readCardForm(tab) {
     bold_format: isBlog ? $("cfBold").checked : true,
     window_start: isBlog ? $("cfWindowStart").value.trim() : "",
     window_end: isBlog ? $("cfWindowEnd").value.trim() : "",
+    spread_mode: $("cfSpreadSeg").querySelector("button.on")
+      ? $("cfSpreadSeg").querySelector("button.on").dataset.spread : "even",
+    length_mode: isBlog ? $("cfLength").value : "auto",
+    tone: $("cfTone").value || "dramatic",
+    draft_only: isBlog ? $("cfDraft").checked : false,
+    days_of_week: Array.from(document.querySelectorAll(".cfDay:checked"))
+      .map((x) => Number(x.value)).sort((a, b) => a - b),
+    jitter_minutes: Math.max(0, Math.min(30, Number($("cfJitter").value) || 0)),
+    labels: isBlog ? $("cfLabels").value.trim() : "",
+    max_posts_per_week: Number($("cfWeekCap").value) || 0,
+    max_posts_per_month: Number($("cfMonthCap").value) || 0,
+    retry_after_minutes: Math.max(1, Number($("cfRetryAfter").value) || 30),
+    retry_max: Math.max(0, Number($("cfRetryMax").value) || 0),
+    replies_per_day: isBlog ? 0 : (Number($("cfRepliesPerDay").value) || 0),
+    reply_never: isBlog ? "" : $("cfReplyNever").value.trim(),
+    reply_only: isBlog ? "" : $("cfReplyOnly").value.trim(),
+    reply_skip_words: isBlog ? "" : $("cfSkipWords").value.trim(),
+    bsky_image_ratio: isBlog ? "16:9" : ($("cfRatio").value || "16:9"),
     notes: $("cfNotes").value.trim(),
     color: $("cfColor").value || "",
   };
@@ -2058,8 +2360,30 @@ function fillCardForm(c) {
   $("cfBold").checked = c.bold_format !== false;
   $("cfWindowStart").value = c.window_start || "";
   $("cfWindowEnd").value = c.window_end || "";
-  $("cfNotes").value = c.notes || "";
+  $("cfLength").value = c.length_mode || "auto";
+  $("cfTone").value = c.tone || "dramatic";
+  $("cfDraft").checked = !!c.draft_only;
+  $("cfLabels").value = Array.isArray(c.labels) ? c.labels.join(", ") : (c.labels || "");
+  $("cfJitter").value = c.jitter_minutes ?? 10;
+  $("cfWeekCap").value = c.max_posts_per_week ?? 0;
+  $("cfMonthCap").value = c.max_posts_per_month ?? 0;
+  $("cfRetryAfter").value = c.retry_after_minutes ?? 30;
+  $("cfRetryMax").value = c.retry_max ?? 2;
+  $("cfRepliesPerDay").value = c.replies_per_day ?? 0;
+  $("cfReplyNever").value = c.reply_never || "";
+  $("cfReplyOnly").value = c.reply_only || "";
+  $("cfSkipWords").value = c.reply_skip_words || "";
+  $("cfRatio").value = c.bsky_image_ratio || "16:9";
+  const days = Array.isArray(c.days_of_week) ? c.days_of_week : [0, 1, 2, 3, 4, 5, 6];
+  document.querySelectorAll(".cfDay").forEach((x) => {
+    x.checked = days.includes(Number(x.value));
+  });
+  const spread = c.spread_mode || "even";
+  document.querySelectorAll("#cfSpreadSeg button").forEach((b) => {
+    b.classList.toggle("on", b.dataset.spread === spread);
+  });
   $("cfColor").value = c.color || "";
+  $("cfNotes").value = c.notes || "";
   const src = c.source || "trending";
   document.querySelectorAll("#cfSourceSeg button").forEach((b) => {
     b.classList.toggle("on", b.dataset.src === src);
