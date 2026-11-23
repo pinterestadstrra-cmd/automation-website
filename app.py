@@ -12,10 +12,13 @@ WHAT IT DOES
 3. Writes articles with a hook + SEO (Gemini), images with NO logo/text.
 4. STRICT RULE: NO photo = NO post. A topic with no suitable photo is
    dropped entirely (never text-only, never a placeholder).
-5. Publishes to Blogger (daily cap is a manual card setting; too many
-   posts risks a Blogger suspension, so posts are spaced out).
-6. Posts to Bluesky every 30 minutes (GitHub Actions cron). The SAME post
-   never goes to all Bluesky accounts - each account gets a different /
+5. CARD-ONLY: the worker publishes to Blogger ONLY through the cards
+   in data/cards.json - each card has its own schedule, posts-per-day,
+   posts-per-run, posting window, topic and bold toggle. There is NO
+   global cycle any more (it once auto-published unwanted posts).
+   Too many posts risks a Blogger suspension, so posts are spaced out.
+6. Posts to Bluesky only through Bluesky cards. The SAME post never
+   goes to all Bluesky accounts - each account gets a different /
    rotated post. Dedup via data/state.json (same news never reposted).
 7. Replies to comments on the account's OWN posts (all of them), and -
    with strict safety limits - to fresh comments on high-engagement posts.
@@ -54,7 +57,6 @@ import json
 import time
 import random
 import re
-import hashlib
 import sqlite3
 import threading
 import html as html_lib
@@ -63,7 +65,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote_plus, urlparse
 
 import requests
-from flask import Flask, request, jsonify, session, send_from_directory, g
+from flask import Flask, request, jsonify, session, send_from_directory
 
 # ---------------------------------------------------------------- optional deps
 try:
@@ -90,6 +92,7 @@ DB_PATH = os.path.join(DATA_DIR, "app.db")
 STATE_PATH = os.path.join(DATA_DIR, "state.json")
 LOGS_PATH = os.path.join(DATA_DIR, "logs.json")
 CONFIG_PATH = os.path.join(DATA_DIR, "config.json")
+CONFIG_PATH_ALT = os.path.join(DATA_DIR, "Config.json")  # capital-C fallback
 DASHBOARD_PATH = os.path.join(DATA_DIR, "dashboard.json")
 os.makedirs(IMAGES_DIR, exist_ok=True)
 
@@ -129,28 +132,20 @@ GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash"
 # Groq models to try, in order (free tier, confirmed model ids).
 GROQ_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
-# Limits: 0 = UNLIMITED (no cap). The user chose unlimited.
+# CARD-ONLY operation: every posting limit lives inside a card
+# (data/cards.json). There is no global posts-per-day, per-run,
+# interval, window, forced topic or blacklist any more - the global
+# cycle that used them was removed after it auto-published unwanted
+# posts. Limits: 0 = UNLIMITED (no cap). The user chose unlimited.
 # WARNING: unlimited posting risks a Blogger suspension and Bluesky
 # spam flags / account bans. The 429 auto-pause is still active.
-DEFAULT_BLOGGER_DAILY_LIMIT = 0        # 0 = unlimited posts per day
-DEFAULT_BSKY_REPLY_PER_RUN = 0        # 0 = unlimited replies per run
-DEFAULT_BSKY_REPLY_DAILY_CAP = 0      # 0 = unlimited replies per day
-DEFAULT_REPLY_GAP_SECONDS = 0         # 0 = no gap between replies
-DEFAULT_BSKY_POSTS_PER_RUN = 1        # max 1 Bluesky post per run
-# --- robust backend settings (all changeable from the dashboard) ---
-DEFAULT_BLOGGER_POSTS_PER_RUN = 1     # articles published per worker run
-DEFAULT_REPLY_OWN_PER_RUN = 0         # 0 = unlimited replies to OWN posts
-DEFAULT_POST_INTERVAL_MINUTES = 30    # minutes between posts in a run
-DEFAULT_POST_WINDOW_START = ""        # e.g. "07:00" Dhaka (empty = no window)
-DEFAULT_POST_WINDOW_END = ""          # e.g. "23:00" Dhaka (empty = no window)
 DEFAULT_DRY_RUN = "false"             # "true" = test mode, nothing is posted
 DEFAULT_MAX_CONSECUTIVE_FAILURES = 5  # circuit breaker: pause after N failed runs
-# --- per-workflow On/Off toggles (each cycle can be switched off) ---
-DEFAULT_BLOGGER_ENABLED = "true"      # Blogger article cycle on/off
-DEFAULT_BSKY_ENABLED = "true"         # Bluesky posting cycle on/off
-DEFAULT_REPLIES_ENABLED = "true"      # Bluesky replies cycle on/off
-DEFAULT_CARDS_ENABLED = "true"        # manual cards cycle on/off
-DEFAULT_TOPIC_BLACKLIST = ""          # comma-separated topics to never write about
+# --- per-workflow On/Off toggles (safety switches only) ---
+DEFAULT_BLOGGER_ENABLED = "true"      # Blogger cards on/off
+DEFAULT_BSKY_ENABLED = "true"         # Bluesky cards on/off
+DEFAULT_REPLIES_ENABLED = "true"      # Bluesky replies on/off
+DEFAULT_CARDS_ENABLED = "true"        # cards cycle on/off
 # --- Blogger article formatting ---
 DEFAULT_BLOGGER_BOLD_FORMAT = "true"  # bold headings + bold lead sentence
 # --- per-card defaults (a new card starts with these) ---
@@ -181,20 +176,6 @@ app.secret_key = SECRET_KEY
 app.config["JSON_SORT_KEYS"] = False
 
 # ---------------------------------------------------------------- database
-def get_db():
-    if "db" not in g:
-        g.db = sqlite3.connect(DB_PATH)
-        g.db.row_factory = sqlite3.Row
-    return g.db
-
-
-@app.teardown_appcontext
-def close_db(_exc=None):
-    db = g.pop("db", None)
-    if db is not None:
-        db.close()
-
-
 def db_connect():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
@@ -224,6 +205,8 @@ def init_db():
         interval_hours INTEGER DEFAULT 0,
         posts_per_day INTEGER DEFAULT 0,
         schedule_times TEXT DEFAULT '[]',
+        window_start TEXT DEFAULT '',
+        window_end TEXT DEFAULT '',
         text TEXT DEFAULT '',
         status TEXT DEFAULT 'active',
         done_count INTEGER DEFAULT 0,
@@ -288,6 +271,8 @@ def init_db():
         "bold_format": "INTEGER DEFAULT 1",
         "notes": "TEXT DEFAULT ''",
         "color": "TEXT DEFAULT ''",
+        "window_start": "TEXT DEFAULT ''",
+        "window_end": "TEXT DEFAULT ''",
     }
     try:
         existing = {r[1] for r in cur.execute("PRAGMA table_info(cards)").fetchall()}
@@ -297,23 +282,12 @@ def init_db():
     except Exception:
         pass
     defaults = {
-        "blogger_daily_limit": str(DEFAULT_BLOGGER_DAILY_LIMIT),
-        "bsky_reply_per_run": str(DEFAULT_BSKY_REPLY_PER_RUN),
-        "bsky_reply_daily_cap": str(DEFAULT_BSKY_REPLY_DAILY_CAP),
-        "reply_gap_seconds": str(DEFAULT_REPLY_GAP_SECONDS),
-        "bsky_posts_per_run": str(DEFAULT_BSKY_POSTS_PER_RUN),
-        "blogger_posts_per_run": str(DEFAULT_BLOGGER_POSTS_PER_RUN),
-        "reply_own_per_run": str(DEFAULT_REPLY_OWN_PER_RUN),
-        "post_interval_minutes": str(DEFAULT_POST_INTERVAL_MINUTES),
-        "post_window_start": str(DEFAULT_POST_WINDOW_START),
-        "post_window_end": str(DEFAULT_POST_WINDOW_END),
         "dry_run": str(DEFAULT_DRY_RUN),
         "max_consecutive_failures": str(DEFAULT_MAX_CONSECUTIVE_FAILURES),
         "blogger_enabled": str(DEFAULT_BLOGGER_ENABLED),
         "bsky_enabled": str(DEFAULT_BSKY_ENABLED),
         "replies_enabled": str(DEFAULT_REPLIES_ENABLED),
         "cards_enabled": str(DEFAULT_CARDS_ENABLED),
-        "topic_blacklist": str(DEFAULT_TOPIC_BLACKLIST),
         "blogger_bold_format": str(DEFAULT_BLOGGER_BOLD_FORMAT),
         "card_default_interval_hours": str(DEFAULT_CARD_INTERVAL_HOURS),
         "card_default_interval_minutes": str(DEFAULT_CARD_INTERVAL_MINUTES),
@@ -333,13 +307,20 @@ _FILE_CONFIG = None
 def file_config():
     """Settings from data/config.json (the GitHub-only control panel).
     Edit this file in the repo to change limits - no server needed.
-    Returns {} when the file is missing."""
+    Returns {} when the file is missing. Falls back to data/Config.json
+    (capital C) so a case difference can never silently break settings
+    again - that exact bug once made the worker ignore Pause."""
     global _FILE_CONFIG
     if _FILE_CONFIG is None:
         _FILE_CONFIG = {}
-        if os.path.exists(CONFIG_PATH):
+        path = CONFIG_PATH
+        if not os.path.exists(path) and os.path.exists(CONFIG_PATH_ALT):
+            print("config.json missing - using Config.json (case fallback)",
+                  flush=True)
+            path = CONFIG_PATH_ALT
+        if os.path.exists(path):
             try:
-                with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+                with open(path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                 if isinstance(data, dict):
                     _FILE_CONFIG = data
@@ -517,6 +498,9 @@ def write_dashboard_json(state):
                 "source": c.get("source", "trending"),
                 "topic_override": c.get("topic_override", ""),
                 "bold_format": c.get("bold_format", True),
+                "window_start": c.get("window_start", ""),
+                "window_end": c.get("window_end", ""),
+                "posts_per_run": card_posts_per_run(c),
             })
         data = {
             "generated_at": now_iso(),
@@ -530,15 +514,10 @@ def write_dashboard_json(state):
                 "accounts": len(list_accounts()),
             },
             "settings": {k: get_setting(k, "") for k in
-                         ("blogger_daily_limit", "bsky_reply_per_run",
-                          "bsky_reply_daily_cap", "reply_gap_seconds",
-                          "bsky_posts_per_run", "paused", "force_topic",
-                          "blogger_posts_per_run", "reply_own_per_run",
-                          "post_interval_minutes", "post_window_start",
-                          "post_window_end", "dry_run",
+                         ("paused", "dry_run",
                           "max_consecutive_failures", "blogger_enabled",
                           "bsky_enabled", "replies_enabled", "cards_enabled",
-                          "topic_blacklist", "blogger_bold_format",
+                          "blogger_bold_format",
                           "card_default_interval_hours",
                           "card_default_interval_minutes",
                           "card_default_posts_per_day",
@@ -552,11 +531,6 @@ def write_dashboard_json(state):
             "health": health_check(state),
             "issues": get_issues(state),
             "dry_run": is_dry_run(),
-            "post_window": {
-                "start": str(get_setting("post_window_start", "") or ""),
-                "end": str(get_setting("post_window_end", "") or ""),
-                "in_window": in_post_window(),
-            },
             "circuit_breaker": {
                 "consecutive_failures": int(state.get("consecutive_failures", 0) or 0),
                 "open": int(state.get("consecutive_failures", 0) or 0) >= 5,
@@ -740,12 +714,17 @@ def _pollinations_photo(topic):
         url = (f"https://image.pollinations.ai/prompt/{prompt}"
                f"?width=1280&height=720&nologo=true&model=flux")
         r = requests.get(url, timeout=90)
-        if r.status_code == 200 and len(r.content) > 20000:
+        ctype = (r.headers.get("Content-Type") or "").lower()
+        if r.status_code == 200 and len(r.content) > 20000 \
+                and ctype.startswith("image/"):
             fname = f"pollinations-{slugify(topic)}-{int(time.time())}.jpg"
             path = os.path.join(IMAGES_DIR, fname)
             with open(path, "wb") as f:
                 f.write(r.content)
-            return {"url": f"/images/{fname}", "source": "pollinations",
+            # The REMOTE URL is what Blogger must load - a local
+            # /images/... path 404s on the blog, which is how earlier
+            # posts ended up with broken thumbnails.
+            return {"url": url, "source": "pollinations",
                     "alt": topic, "local_path": path}
     except Exception as e:
         log("warning", f"pollinations error: {e}")
@@ -758,6 +737,8 @@ def download_image(url, topic):
                          headers={"User-Agent": "Mozilla/5.0"})
         if r.status_code != 200 or len(r.content) < 10000:
             return None
+        if not (r.headers.get("Content-Type") or "").lower().startswith("image/"):
+            return None
         ext = ".jpg"
         if "png" in (r.headers.get("Content-Type") or ""):
             ext = ".png"
@@ -769,6 +750,45 @@ def download_image(url, topic):
     except Exception as e:
         log("warning", f"download_image error: {e}")
         return None
+
+
+def verify_photo_url(url):
+    """True only if the photo URL really loads as an image
+    (HTTP 200 + content-type image/*). HEAD first, ranged-GET fallback
+    for hosts that refuse HEAD."""
+    if not url or not str(url).startswith("http"):
+        return False
+    try:
+        r = requests.head(url, timeout=15, allow_redirects=True,
+                          headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code == 200:
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            if ctype.startswith("image/"):
+                return True
+        r = requests.get(url, timeout=20, stream=True,
+                         headers={"User-Agent": "Mozilla/5.0",
+                                  "Range": "bytes=0-1023"})
+        if r.status_code in (200, 206):
+            ctype = (r.headers.get("Content-Type") or "").lower()
+            return ctype.startswith("image/")
+    except Exception as e:
+        log("warning", f"verify_photo_url error: {e}")
+    return False
+
+
+def fetch_verified_photo(topic):
+    """PHOTO-FIRST gate: fetch a photo AND verify its URL really loads
+    as an image. Returns the photo dict or None. The article is only
+    written after this succeeds - never waste an AI call on a topic
+    with no usable photo."""
+    photo = fetch_photo(topic)
+    if not photo:
+        return None
+    url = photo.get("url", "")
+    if verify_photo_url(url):
+        return photo
+    log("warning", f"photo URL failed verification for '{topic}': {url}")
+    return None
 
 
 def fetch_photo(topic):
@@ -889,6 +909,7 @@ def blogger_publish(title, html_body, labels=None, bold=True):
     bold=True (default) post-processes the HTML so headings are bold
     and the lead sentence is bold - the article looks organised and
     eye-catching on the blog, not plain text."""
+    title = clean_title(title)  # safety net: no '**' ever reaches Blogger
     if bold:
         html_body = bold_format_html(html_body)
     if not (BLOG_ID and BLOGGER_REFRESH_TOKEN and BLOGGER_CLIENT_ID
@@ -1196,11 +1217,24 @@ def build_article_html(article_text, image_url, source_names):
     return img + "\n".join(html_parts)
 
 
+def clean_title(title):
+    """Strip Markdown bold markers and prompt leakage from a headline.
+    A published title must never contain '**', a stray '*', or a
+    leading 'HEADLINE:'."""
+    t = (title or "").strip()
+    t = re.sub(r"^\s*HEADLINE\s*:\s*", "", t, flags=re.IGNORECASE)
+    t = t.replace("**", "").replace("*", "")
+    t = t.strip().strip('"').strip("'").strip()
+    t = re.sub(r"\s+", " ", t)
+    return t[:200] if t else "Breaking News"
+
+
 def extract_headline(article_text):
     for line in (article_text or "").splitlines():
         if line.strip().startswith("HEADLINE:"):
-            return line.strip()[9:].strip()
-    return (article_text or "").splitlines()[0][:120] if article_text else "Breaking News"
+            return clean_title(line.strip()[9:].strip())
+    first = (article_text or "").splitlines()[0][:120] if article_text else "Breaking News"
+    return clean_title(first)
 
 
 def bold_format_html(html_body):
@@ -1271,14 +1305,16 @@ WORKER_RUNNING = False
 def candidate_topics(state, limit=5, force_topic=None):
     """Trending topics from Bluesky FIRST (verified, not already posted).
     Falls back to RSS top stories if Bluesky trending is unavailable.
-    force_topic: a per-card custom topic - it goes FIRST, ahead of the
-    dashboard's forced topic and trending."""
+    force_topic: a per-card custom topic - it goes FIRST, ahead of
+    trending."""
     cands = []
     posted = [t.lower() for t in state.get("posted_topics", [])]
     # Per-card custom topic (a card with source=custom) goes FIRST.
+    # There is no global forced topic or blacklist any more: every
+    # topic choice lives inside a card.
     if force_topic is not None:
         forced = str(force_topic or "").strip()
-        if forced and forced.lower() not in posted and not topic_blacklisted(forced):
+        if forced and forced.lower() not in posted:
             verified, sources, items = verify_news(forced)
             if verified:
                 facts = "\n".join(f"- {i['title']} ({i['source']})" for i in items[:5])
@@ -1286,21 +1322,8 @@ def candidate_topics(state, limit=5, force_topic=None):
                 log("info", f"card topic queued: {forced}")
             else:
                 log("info", f"card topic not verified (needs 2 sources): {forced}")
-    # Forced topic (set from the dashboard) goes FIRST, if not already posted.
-    forced = str(get_setting("force_topic", "") or "").strip()
-    if forced and forced.lower() not in posted and not topic_blacklisted(forced):
-        verified, sources, items = verify_news(forced)
-        if verified:
-            facts = "\n".join(f"- {i['title']} ({i['source']})" for i in items[:5])
-            cands.append((forced, sources, facts))
-            log("info", f"forced topic queued: {forced}")
-        else:
-            log("info", f"forced topic not verified (needs 2 sources): {forced}")
     for topic in get_bluesky_trending(limit=10):
         if topic.lower() in posted:
-            continue
-        if topic_blacklisted(topic):
-            log("info", f"topic skipped (blacklisted): {topic}")
             continue
         verified, sources, items = verify_news(topic)
         if verified:
@@ -1346,60 +1369,85 @@ def record_post(title, url, topic, source, image_url):
         conn.close()
 
 
-def run_blogger_cycle(state, bold=None, force_topic=None):
-    """Write + publish up to N articles (blogger_posts_per_run) from
-    Bluesky-trending topics. Returns the LAST published article or None.
-    Respects: daily cap, posting window, dry-run, retry on publish.
-    bold: None = global blogger_bold_format setting; True/False = a
-    per-card override. force_topic: a per-card custom topic."""
-    if bold is None:
-        bold = str(get_setting("blogger_bold_format",
-                               str(DEFAULT_BLOGGER_BOLD_FORMAT))).strip().lower() != "false"
-    cap = int(get_setting("blogger_daily_limit", str(DEFAULT_BLOGGER_DAILY_LIMIT)) or 0)
-    if cap > 0 and blogger_posts_today() >= cap:
-        log("info", f"blogger daily cap reached ({cap}/day) - skipping publish")
-        return None
-    if not in_post_window():
-        log("info", "outside posting window - skipping publish this run")
-        return None
+def card_in_window(card):
+    """True if now (Dhaka) is inside this card's posting window.
+    Empty window_start/end = no window (always allowed)."""
+    start = str(card.get("window_start") or "").strip()
+    end = str(card.get("window_end") or "").strip()
+    if not start or not end:
+        return True
     try:
-        per_run = int(get_setting("blogger_posts_per_run",
-                                  str(DEFAULT_BLOGGER_POSTS_PER_RUN)) or 1)
+        sh, sm = [int(x) for x in start.split(":")]
+        eh, em = [int(x) for x in end.split(":")]
     except Exception:
-        per_run = 1
-    per_run = max(1, per_run)
+        return True
+    now_local = now_utc().astimezone(USER_TZ)
+    cur = now_local.hour * 60 + now_local.minute
+    s = sh * 60 + sm
+    e = eh * 60 + em
+    if s <= e:
+        return s <= cur <= e
+    return cur >= s or cur <= e
+
+
+def card_posts_per_run(card):
+    """How many articles this card publishes per run (card 'count')."""
     try:
-        interval = int(get_setting("post_interval_minutes",
-                                   str(DEFAULT_POST_INTERVAL_MINUTES)) or 30)
+        return max(1, int(card.get("count") or 1))
     except Exception:
-        interval = 30
+        return 1
+
+
+def run_card_blogger(state, card):
+    """Write + publish articles for ONE Blogger card - the ONLY way
+    the worker publishes to Blogger (card-only operation).
+    Respects the card's own posts-per-day cap, posting window,
+    posts-per-run, topic/source and bold toggle.
+    PHOTO-FIRST order (hard rule): for each topic, fetch + verify a
+    photo BEFORE the AI writes anything. No verified photo = the
+    topic is dropped entirely, never text-only. Returns the LAST
+    published article or None."""
+    name = card.get("name", "")
+    bold = card_bold_enabled(card)
+    # Per-card daily cap (0 = unlimited).
+    cap = card_posts_per_day(card)
+    if cap > 0 and card_runs_today(state, name) >= cap:
+        log("info", f"card '{name}': daily cap reached ({cap}/day) - skipping")
+        return None
+    if not card_in_window(card):
+        log("info", f"card '{name}': outside its posting window - skipping")
+        return None
+    per_run = card_posts_per_run(card)
     dry = is_dry_run()
+    force = None
+    if (card.get("source") or "trending") == "custom":
+        force = (card.get("topic_override") or "").strip() or None
     published = []
     for topic, sources, facts in candidate_topics(state, limit=5,
-                                                  force_topic=force_topic)[:3]:
+                                                  force_topic=force)[:3]:
         if len(published) >= per_run:
             break
-        if published and interval > 0:
-            log("info", f"waiting {interval} min before next post")
-            time.sleep(interval * 60)
+        if published:
+            time.sleep(5)
+        # PHOTO FIRST: fetch + verify the photo BEFORE writing.
+        photo = fetch_verified_photo(topic)
+        if not photo:
+            state.setdefault("posted_topics", []).append(topic.lower())
+            record_issue("warning", "no_photo",
+                         f"card '{name}': topic dropped (no verified photo): {topic}")
+            continue
         article_text = ai_write(ARTICLE_PROMPT.format(topic=topic, facts=facts),
                                 max_tokens=2000)
         if not article_text:
             record_issue("warning", "ai_write",
-                         f"article writing failed for '{topic}'")
+                         f"card '{name}': article writing failed for '{topic}'")
             continue
         headline = extract_headline(article_text)
-        # STRICT RULE: no photo = no post. Drop this topic, try the next.
-        photo = fetch_photo(topic)
-        if not photo:
-            state.setdefault("posted_topics", []).append(topic.lower())
-            record_issue("warning", "no_photo", f"topic dropped (no photo): {topic}")
-            continue
         html_body = build_article_html(article_text,
                                        photo.get("url", ""),
                                        ", ".join(sources))
         if dry:
-            log("warning", f"[DRY RUN] would publish: {headline}")
+            log("warning", f"[DRY RUN] card '{name}' would publish: {headline}")
             published.append({"title": headline, "url": "",
                               "image_path": photo.get("local_path", ""),
                               "image_url": photo.get("url", ""),
@@ -1410,17 +1458,17 @@ def run_blogger_cycle(state, bold=None, force_topic=None):
             attempts=3, base_delay=10, label=f"blogger publish '{headline}'")
         if not url:
             record_issue("error", "blogger_publish",
-                         f"blogger publish failed for '{headline}'")
+                         f"card '{name}': blogger publish failed for '{headline}'")
             continue
         record_post(headline, url, topic, ", ".join(sources), photo.get("url", ""))
         state.setdefault("posted_urls", []).append(url)
         state.setdefault("posted_topics", []).append(topic.lower())
-        log("info", f"published: {headline} -> {url}")
+        log("info", f"card '{name}' published: {headline} -> {url}")
         published.append({"title": headline, "url": url,
                           "image_path": photo.get("local_path", ""),
                           "image_url": photo.get("url", ""), "topic": topic})
     if not published:
-        log("info", "blogger cycle: no publishable topic this run")
+        log("info", f"card '{name}': no publishable topic this run (photo-first)")
         return None
     return published[-1]
 
@@ -1458,14 +1506,13 @@ def record_reply(post_uri, comment_uri, reply_text, account_handle):
         conn.close()
 
 
-def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True,
-                      reply_own=None, reply_others=None, replies_per_run=None):
-    """Post to Bluesky accounts (unique post per account) + replies.
-    Respects: per-account enable/disable + posts-per-day, separate reply
-    limits for OWN posts vs OTHERS' posts, daily reply cap, dry-run,
-    and the do_posts / do_replies workflow switches.
-    reply_own / reply_others: per-card overrides (None = both on).
-    replies_per_run: per-card override for replies to others (None = global)."""
+def run_bluesky_cycle(state, article=None, reply_own=True, reply_others=True,
+                      replies_per_run=0):
+    """Reply to comments for ONE Bluesky card (card-only operation).
+    Posting itself is done by each card via _card_bluesky_post - this
+    function only replies. replies_per_run caps ALL replies in this
+    run (own + others, 0 = unlimited). reply_own / reply_others are
+    the card's toggles."""
     accounts = list_accounts()
     if not accounts:
         log("info", "bluesky cycle: no accounts configured")
@@ -1475,72 +1522,28 @@ def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True,
         log("info", "bluesky cycle: no article to link yet")
         return
     dry = is_dry_run()
-    per_run = int(get_setting("bsky_posts_per_run", str(DEFAULT_BSKY_POSTS_PER_RUN)) or 1)
-    state.setdefault("bsky_posted", [])
-    # --- 1) One UNIQUE post per account (same post never goes to all accounts).
-    if do_posts:
-        for acc in accounts:
-            handle = acc["handle"]
-            if not account_enabled(handle):
-                log("info", f"bluesky: account {handle} is disabled - skipping")
-                continue
-            limit = account_posts_limit(handle)
-            if limit > 0 and posts_today_for_account(state, handle) >= limit:
-                log("info", f"bluesky: account {handle} hit its daily post limit ({limit})")
-                continue
-            key = f"{handle}|{article['url']}"
-            if key in state["bsky_posted"]:
-                continue
-            if dry:
-                log("warning", f"[DRY RUN] would post to Bluesky ({handle}): {article['title']}")
-                continue
-            client = bsky_login(handle, acc["app_password"])
-            if not client:
-                record_issue("warning", "bsky_login", f"Bluesky login failed: {handle}")
-                continue
-            text = ai_write(BSKY_POST_PROMPT.format(headline=article["title"],
-                                                    link=article["url"]),
-                            max_tokens=400)
-            if not text:
-                text = f"{article['title']}\n{article['url']}"
-            img = article.get("image_path") or ""
-            posted = retry_with_backoff(
-                lambda: bluesky_post(client, text,
-                                     image_path=img if img and os.path.exists(img) else None,
-                                     image_alt=article["title"][:100]),
-                attempts=3, base_delay=5, label=f"bluesky post ({handle})")
-            if posted:
-                state["bsky_posted"].append(key)
-                record_bsky_post(state, handle)
-                log("info", f"bluesky posted ({handle}): {posted[1]}")
-            time.sleep(5)
-    if not do_replies:
-        return
-    # --- 2) Replies to fresh comments on high-engagement posts (OTHERS).
-    # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
-    # Per-card override: reply_others=False skips this whole section.
-    daily_cap = int(get_setting("bsky_reply_daily_cap", str(DEFAULT_BSKY_REPLY_DAILY_CAP)) or 0)
-    if replies_per_run is not None:
+    try:
         per_run_replies = int(replies_per_run or 0)
-    else:
-        per_run_replies = int(get_setting("bsky_reply_per_run", str(DEFAULT_BSKY_REPLY_PER_RUN)) or 0)
-    gap = int(get_setting("reply_gap_seconds", str(DEFAULT_REPLY_GAP_SECONDS)) or 0)
+    except Exception:
+        per_run_replies = 0
     state.setdefault("replied_comments", [])
     done_replies = 0
-    def under_daily_cap():
-        return daily_cap <= 0 or replies_today() < daily_cap
-    def under_run_cap():
+
+    def under_cap():
         return per_run_replies <= 0 or done_replies < per_run_replies
+
+    # --- 1) Replies to fresh comments on high-engagement posts (OTHERS).
+    # 0 = UNLIMITED (user's choice). 429 auto-pause still protects the accounts.
     if reply_others is False:
         log("info", "bluesky replies to others are OFF for this card - skipping")
-    elif under_daily_cap():
+    else:
         hot = get_high_engagement_posts(limit=5)
         acc_idx = 0
         for post in hot:
-            if not under_run_cap() or not under_daily_cap():
+            if not under_cap():
                 break
             for comment in get_fresh_comments(post["uri"], minutes=5):
-                if not under_run_cap() or not under_daily_cap():
+                if not under_cap():
                     break
                 if comment["uri"] in state["replied_comments"]:
                     continue
@@ -1568,26 +1571,16 @@ def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True,
                     record_reply(post["uri"], comment["uri"], reply_text, acc["handle"])
                     done_replies += 1
                     log("info", f"replied ({acc['handle']}) to {comment['author']}")
-                    if gap > 0:
-                        time.sleep(gap)
-    # --- 3) Reply to ALL comments on our OWN posts (separate limit).
-    # Per-card override: reply_own=False skips this whole section.
+                    time.sleep(2)
+    # --- 2) Reply to comments on our OWN posts.
     if reply_own is False:
         log("info", "bluesky replies to own posts are OFF for this card - skipping")
         return
-    try:
-        own_per_run = int(get_setting("reply_own_per_run",
-                                      str(DEFAULT_REPLY_OWN_PER_RUN)) or 0)
-    except Exception:
-        own_per_run = 0
-    done_own = 0
     for acc in accounts:
-        if own_per_run > 0 and done_own >= own_per_run:
+        if not under_cap():
             break
         if not account_enabled(acc["handle"]):
             continue
-        if daily_cap > 0 and replies_today() >= daily_cap:
-            break
         if dry:
             log("warning", f"[DRY RUN] would check own-post comments ({acc['handle']})")
             continue
@@ -1596,7 +1589,7 @@ def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True,
             continue
         for own in bluesky_own_posts_with_replies(client, acc["handle"], limit=3):
             for comment in own["replies"]:
-                if own_per_run > 0 and done_own >= own_per_run:
+                if not under_cap():
                     break
                 if comment["uri"] in state["replied_comments"]:
                     continue
@@ -1613,9 +1606,9 @@ def run_bluesky_cycle(state, article=None, do_posts=True, do_replies=True,
                 if uri:
                     state["replied_comments"].append(comment["uri"])
                     record_reply(own["uri"], comment["uri"], reply_text, acc["handle"])
-                    done_own += 1
                     done_replies += 1
                     log("info", f"replied to own-post comment ({acc['handle']})")
+                    time.sleep(2)
 
 
 def card_interval_minutes(card):
@@ -1861,14 +1854,20 @@ def execute_card(card, state):
     name = card.get("name", "")
     last_error = ""
     ok = False
+    # Master safety switches: a card never runs when its workflow is OFF.
+    if ctype == "blogger_post" and not workflow_enabled("blogger"):
+        log("info", f"card '{name}': Blogger workflow is OFF - skipping")
+        return False
+    if ctype in ("bluesky_post", "bluesky_promo") and not workflow_enabled("bsky"):
+        log("info", f"card '{name}': Bluesky workflow is OFF - skipping")
+        return False
+    if ctype == "bluesky_reply" and not workflow_enabled("replies"):
+        log("info", f"card '{name}': Bluesky replies are OFF - skipping")
+        return False
     try:
         if ctype == "blogger_post":
-            # Per-card source: a custom topic (topic_override) or trending.
-            force = None
-            if (card.get("source") or "trending") == "custom":
-                force = (card.get("topic_override") or "").strip() or None
-            article = run_blogger_cycle(state, bold=card_bold_enabled(card),
-                                        force_topic=force)
+            # Card-only: the card's own settings drive everything.
+            article = run_card_blogger(state, card)
             ok = article is not None
             if not ok:
                 last_error = "no article published this run"
@@ -1883,9 +1882,9 @@ def execute_card(card, state):
                     last_error = "post failed or skipped"
                 # Per-card replies after posting (if the card enables them).
                 reply_own, reply_others, rpr = card_reply_settings(card)
-                if reply_own or reply_others:
-                    run_bluesky_cycle(state, article=article, do_posts=False,
-                                      do_replies=True, reply_own=reply_own,
+                if (reply_own or reply_others) and workflow_enabled("replies"):
+                    run_bluesky_cycle(state, article=article,
+                                      reply_own=reply_own,
                                       reply_others=reply_others,
                                       replies_per_run=rpr)
         elif ctype == "bluesky_promo":
@@ -1898,9 +1897,8 @@ def execute_card(card, state):
                 if not ok:
                     last_error = "promo failed or skipped"
                 reply_own, reply_others, rpr = card_reply_settings(card)
-                if reply_own or reply_others:
+                if (reply_own or reply_others) and workflow_enabled("replies"):
                     run_bluesky_cycle(state, article=latest_article(),
-                                      do_posts=False, do_replies=True,
                                       reply_own=reply_own,
                                       reply_others=reply_others,
                                       replies_per_run=rpr)
@@ -1910,8 +1908,8 @@ def execute_card(card, state):
                 last_error = "no article yet"
             else:
                 reply_own, reply_others, rpr = card_reply_settings(card)
-                run_bluesky_cycle(state, article=article, do_posts=False,
-                                  do_replies=True, reply_own=reply_own,
+                run_bluesky_cycle(state, article=article,
+                                  reply_own=reply_own,
                                   reply_others=reply_others,
                                   replies_per_run=rpr)
                 ok = True
@@ -1963,42 +1961,37 @@ def execute_card(card, state):
 
 
 def run_cards_cycle(state):
+    """CARD-ONLY: the worker runs ONLY the cards in data/cards.json.
+    No card due (or no cards at all) = nothing is published."""
     # "Run now" from the dashboard: a card name in state["run_card_now"].
     # Runs that card at once (even if not due), then clears the flag.
+    file_cards = load_file_cards()
+    ran_any = False
     run_now = state.get("run_card_now") or ""
     if run_now:
         state["run_card_now"] = ""
-        for card in load_file_cards():
+        for card in file_cards:
             if card.get("name") == run_now and \
                     (card.get("status") or "active") == "active":
                 log("info", f"run-now requested for card '{run_now}'")
                 execute_card(card, state)
+                ran_any = True
                 break
         else:
             log("warning", f"run-now: card '{run_now}' not found or paused")
-    conn = db_connect()
-    try:
-        rows = conn.execute(
-            "SELECT * FROM cards WHERE status='active'").fetchall()
-        cards = [dict(r) for r in rows]
-    finally:
-        conn.close()
-    for card in cards:
-        nxt = card.get("next_run") or ""
-        if nxt and nxt > now_iso():
-            continue
-        # Per-card posts-per-day cap (0 = unlimited).
-        if card_posts_per_day(card) > 0 and \
-                card_runs_today(state, f"db:{card.get('id')}") >= card_posts_per_day(card):
-            continue
-        execute_card(card, state)
+    if not file_cards:
+        log("info", "no cards configured (data/cards.json is empty) - nothing to do")
+        return
     # File-based cards (data/cards.json) - the GitHub-only control panel.
-    for card in load_file_cards():
+    for card in file_cards:
         if (card.get("status") or "active") != "active":
             continue
         if not file_card_due(card, state):
             continue
         execute_card(card, state)
+        ran_any = True
+    if not ran_any:
+        log("info", "no card due - nothing published this run")
 
 
 # ---------------------------------------------------------------- robustness systems
@@ -2078,36 +2071,6 @@ def workflow_enabled(name):
     return str(get_setting(key, default)).strip().lower() != "false"
 
 
-def topic_blacklisted(topic):
-    """True if the topic matches the blacklist (comma-separated, substring)."""
-    raw = str(get_setting("topic_blacklist", "") or "")
-    words = [w.strip().lower() for w in raw.split(",") if w.strip()]
-    if not words:
-        return False
-    low = (topic or "").lower()
-    return any(w in low for w in words)
-
-
-def in_post_window():
-    """True if now (Dhaka) is inside the posting window, or no window set."""
-    start = str(get_setting("post_window_start", "") or "").strip()
-    end = str(get_setting("post_window_end", "") or "").strip()
-    if not start or not end:
-        return True
-    try:
-        sh, sm = [int(x) for x in start.split(":")]
-        eh, em = [int(x) for x in end.split(":")]
-    except Exception:
-        return True
-    now_local = now_utc().astimezone(USER_TZ)
-    cur = now_local.hour * 60 + now_local.minute
-    s = sh * 60 + sm
-    e = eh * 60 + em
-    if s <= e:
-        return s <= cur <= e
-    return cur >= s or cur <= e
-
-
 ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "accounts.json")
 
 
@@ -2174,22 +2137,9 @@ def validate_config():
         except Exception:
             warnings.append(f"{key} is not a number - using {default}")
             return default
-    for key in ("blogger_daily_limit", "bsky_reply_per_run",
-                "bsky_reply_daily_cap", "reply_gap_seconds",
-                "bsky_posts_per_run", "blogger_posts_per_run",
-                "reply_own_per_run", "post_interval_minutes",
-                "max_consecutive_failures", "card_default_interval_hours",
+    for key in ("max_consecutive_failures", "card_default_interval_hours",
                 "card_default_interval_minutes", "card_default_posts_per_day"):
         _int(key, 0)
-    for key in ("post_window_start", "post_window_end"):
-        val = str(get_setting(key, "") or "").strip()
-        if val:
-            try:
-                hh, mm = [int(x) for x in val.split(":")]
-                if not (0 <= hh <= 23 and 0 <= mm <= 59):
-                    raise ValueError
-            except Exception:
-                warnings.append(f"{key} '{val}' is not HH:MM - window ignored")
     for w in warnings:
         record_issue("warning", "config", w)
     return warnings
@@ -2273,27 +2223,8 @@ def run_worker():
         pass
     else:
         failures = 0
-        # --- per-workflow On/Off: each cycle can be switched off in Settings.
-        if workflow_enabled("blogger"):
-            try:
-                article = run_blogger_cycle(state)
-            except Exception as e:
-                record_issue("error", "blogger_cycle", f"blogger cycle failed: {e}")
-                failures += 1
-                article = None
-        else:
-            log("info", "blogger workflow is OFF - skipping")
-            article = None
-        if workflow_enabled("bsky") or workflow_enabled("replies"):
-            try:
-                run_bluesky_cycle(state, article=article,
-                                  do_posts=workflow_enabled("bsky"),
-                                  do_replies=workflow_enabled("replies"))
-            except Exception as e:
-                record_issue("error", "bluesky_cycle", f"bluesky cycle failed: {e}")
-                failures += 1
-        else:
-            log("info", "bluesky workflows are OFF - skipping")
+        # CARD-ONLY: the worker runs nothing but the cards in
+        # data/cards.json. There is no global Blogger or Bluesky cycle.
         if workflow_enabled("cards"):
             try:
                 run_cards_cycle(state)
@@ -2379,9 +2310,7 @@ def api_status():
         conn.close()
     state = load_state()
     settings = {k: get_setting(k, "") for k in
-                ("blogger_daily_limit", "bsky_reply_per_run",
-                 "bsky_reply_daily_cap", "reply_gap_seconds", "bsky_posts_per_run",
-                 "blogger_bold_format", "card_default_interval_hours",
+                ("blogger_bold_format", "card_default_interval_hours",
                  "card_default_interval_minutes", "card_default_posts_per_day")}
     return jsonify({
         "stats": {"blogger_today": blogger_posts_today(),
@@ -2433,8 +2362,9 @@ def api_cards():
             "INSERT INTO cards(name, type, link, account_handle, count, "
             "interval_minutes, interval_hours, posts_per_day, schedule_times, "
             "text, status, source, topic_override, reply_own, reply_others, "
-            "replies_per_run, bold_format, notes, color, created_at, updated_at) "
-            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "replies_per_run, bold_format, notes, color, window_start, "
+            "window_end, created_at, updated_at) "
+            "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             (name, ctype, data.get("link", ""), data.get("account_handle", ""),
              int(data.get("count") or 1), int(data.get("interval_minutes") or 30),
              int(data.get("interval_hours") or 0),
@@ -2445,7 +2375,9 @@ def api_cards():
              _b(data.get("reply_others"), ctype == "bluesky_reply"),
              int(data.get("replies_per_run") or 0),
              _b(data.get("bold_format"), True),
-             data.get("notes", ""), data.get("color", ""), now_iso(), now_iso()))
+             data.get("notes", ""), data.get("color", ""),
+             data.get("window_start", ""), data.get("window_end", ""),
+             now_iso(), now_iso()))
         conn.commit()
         return jsonify({"ok": True, "id": cur.lastrowid})
     finally:
@@ -2466,7 +2398,8 @@ def api_card_one(cid):
         data = request.get_json(silent=True) or {}
         fields = {}
         for key in ("name", "type", "link", "account_handle", "text", "status",
-                    "source", "topic_override", "notes", "color"):
+                    "source", "topic_override", "notes", "color",
+                    "window_start", "window_end"):
             if key in data:
                 fields[key] = data[key]
         for key in ("count", "interval_minutes", "interval_hours",
@@ -2657,8 +2590,14 @@ def api_settings():
     err = require_login()
     if err:
         return err
-    keys = ("blogger_daily_limit", "bsky_reply_per_run",
-            "bsky_reply_daily_cap", "reply_gap_seconds", "bsky_posts_per_run")
+    # Card-only: the only remaining global settings are the safety
+    # switches, dry-run, circuit breaker and card defaults.
+    keys = ("dry_run", "max_consecutive_failures",
+            "blogger_enabled", "bsky_enabled", "replies_enabled",
+            "cards_enabled", "blogger_bold_format",
+            "card_default_interval_hours", "card_default_interval_minutes",
+            "card_default_posts_per_day", "card_default_reply_own",
+            "card_default_reply_others")
     if request.method == "GET":
         return jsonify({k: get_setting(k, "") for k in keys})
     data = request.get_json(silent=True) or {}
@@ -2693,10 +2632,12 @@ def api_export():
     finally:
         conn.close()
     settings = {k: get_setting(k, "") for k in
-                ("blogger_daily_limit", "bsky_reply_per_run",
-                 "bsky_reply_daily_cap", "reply_gap_seconds", "bsky_posts_per_run",
-                 "blogger_bold_format", "card_default_interval_hours",
-                 "card_default_interval_minutes", "card_default_posts_per_day")}
+                ("dry_run", "max_consecutive_failures",
+                 "blogger_enabled", "bsky_enabled", "replies_enabled",
+                 "cards_enabled", "blogger_bold_format",
+                 "card_default_interval_hours", "card_default_interval_minutes",
+                 "card_default_posts_per_day", "card_default_reply_own",
+                 "card_default_reply_others")}
     return jsonify({"cards": cards, "accounts": accounts, "settings": settings,
                     "exported_at": now_iso()})
 
