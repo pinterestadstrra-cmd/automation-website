@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-23T19:35:21.161003+00:00",
+    "created_at": "2026-11-23T19:53:15.083045+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Leak reveals Russian war dead', 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Cyclops in Avengers: Doomsday footage', 'Grand Theft Auto VI release']",
-    "created_at": "2026-11-23T19:35:21.157131+00:00",
+    "message": "trending (bluesky): ['Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Trump says he protected Musk', 'Alice Huang espionage allegations']",
+    "created_at": "2026-11-23T19:53:15.078207+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-23T19:35:20.839385+00:00",
-    "card": ""
+    "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
+    "created_at": "2026-11-23T19:53:15.020699+00:00",
+    "card": "BlueSky Trend"
   },
   {
     "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T19:35:20.796589+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T19:35:20.570835+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T19:35:14.557123+00:00",
-    "card": ""
+    "message": "card 'BlueSky Trend': run failed (1/2 retries) - next retry at 02:23 Dhaka",
+    "created_at": "2026-11-23T19:53:15.019668+00:00",
+    "card": "BlueSky Trend"
   },
   {
     "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-23T19:35:14.555931+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #18 started (--only blogger)",
-    "created_at": "2026-11-23T19:35:14.554542+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T18:41:22.734003+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations', 'AI sell-off overshadows Anthropic IPO', 'Grand Theft Auto VI release']",
-    "created_at": "2026-11-23T18:41:22.729238+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (skipped: not a posting time)",
-    "created_at": "2026-11-23T18:41:22.665688+00:00",
+    "message": "card 'BlueSky Trend': no photo, skipped - Bluesky post needs a verified real news photo",
+    "created_at": "2026-11-23T19:53:15.018647+00:00",
     "card": "BlueSky Trend"
   },
   {
     "level": "info",
-    "message": "card 'BlueSky Trend': not a posting time - replies only, nothing posted this run",
-    "created_at": "2026-11-23T18:41:22.664613+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "bluesky cycle: no article to link yet",
-    "created_at": "2026-11-23T18:41:22.663566+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T18:41:22.661264+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T18:41:22.658966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-23T18:41:22.376600+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T18:40:54.088367+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-23T18:40:54.087418+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #17 started (--only bluesky)",
-    "created_at": "2026-11-23T18:40:54.085911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T18:24:41.062923+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Grand Theft Auto VI release', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'SEC probes Nvidia accounting', 'Doctor Who Day anniversary']",
-    "created_at": "2026-11-23T18:24:41.057370+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-23T18:24:40.968139+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-23T18:24:40.966556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-23T18:24:40.663150+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-23T18:24:11.993014+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-23T18:24:11.992489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #16 started (--only blogger)",
-    "created_at": "2026-11-23T18:24:11.991627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-23T17:48:49.693457+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Cyclops in Avengers: Doomsday footage', 'Medicare for All and universal healthcare', 'Trump says he protected Musk', \"Women's World Cup host vote\", 'SEC probes Nvidia accounting']",
-    "created_at": "2026-11-23T17:48:49.689141+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-    "created_at": "2026-11-23T17:48:49.393195+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-23T17:48:49.255764+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': promo posted - event '2026 broadway carroll celebrity death lance larry poindexter' on 24h cooldown (topic + link+event recorded)",
-    "created_at": "2026-11-23T17:48:49.253833+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1800x1012 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-23T17:47:29.859777+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1800x1012 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-23T17:47:29.858646+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-23T17:47:29.857342+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA celebrity news",
-    "created_at": "2026-11-23T17:47:29.856343+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr': https://cruisefever.net/wp-content/uploads/2025/05/celebrityxcelship.jpg (from bing-images, query 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larry Poindexter and More - Us Weekly', page: https://www.usatoday.com/story/travel/cruises/2023/06/27/celebrity-cruises-caribbean-cococay-weekend - matches 2 key entities (2026, celebrity))",
-    "created_at": "2026-11-23T17:47:29.855262+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('Celebrity Deaths of 2026: E.J. Carroll, Lance Broa': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-23T17:47:29.853622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://mycelebritybio.com/wp-content/uploads/2025/05/image-10.png",
-    "created_at": "2026-11-23T17:47:16.651285+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
-    "created_at": "2026-11-23T17:47:15.928339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
-    "created_at": "2026-11-23T17:47:15.691985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
-    "created_at": "2026-11-23T17:47:15.560419+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr'",
-    "created_at": "2026-11-23T17:47:15.077019+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:47:09.313848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:47:09.307849+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:47:09.306593+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZjlCdHlXVERmNXlKZ3FNbndsOEc3WHNPZURITWdjN05kZHZzaTFFN2tyTlRwQmgxWll) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:47:09.142435+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The unlikely winner from war in the Gulf - The Economist' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T17:47:08.640275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'The unlikely winner from war in the Gulf - The Economist' (0 download(s) tried)",
-    "created_at": "2026-11-23T17:47:08.639289+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://static.foxnews.com/foxnews.com/content/uploads/2025/02/trump-gavel-judge-rules-against-feder (page: Judges v Trump: Early wave of court injunctions blocks top White House ... - only 0 of 5 key entities in the source page)",
-    "created_at": "2026-11-23T17:47:08.638283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'unlikely winner war'",
-    "created_at": "2026-11-23T17:47:08.635993+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'unlikely winner war'",
-    "created_at": "2026-11-23T17:47:08.478987+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'unlikely winner war'",
-    "created_at": "2026-11-23T17:47:08.329893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'unlikely winner war'",
-    "created_at": "2026-11-23T17:47:07.890612+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:56.836831+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:56.835843+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://cakevows.com/wp-content/uploads/2024/09/tort_xyz_A_traditional_three-tier_wedding_cake_with_ (page: Classy 3-Tier Wedding Cake Designs in 2024 - cakevows.com - only 0 of 5 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:56.830079+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'The unlikely winner from war in the Gulf'",
-    "created_at": "2026-11-23T17:46:56.811848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'The unlikely winner from war in the Gulf'",
-    "created_at": "2026-11-23T17:46:56.693696+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'The unlikely winner from war in the Gulf'",
-    "created_at": "2026-11-23T17:46:56.491686+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'The unlikely winner from war in the Gulf'",
-    "created_at": "2026-11-23T17:46:55.826344+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:50.683944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:50.675202+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The unlikely winner from war in the Gulf - The Eco'): https://mybritishshorthair.com/wp-content/uploads/2023/07/Lilac-Point-Siamese-Cat-Breed.jpg (page: Lilac Point Siamese - Everything You Need To Know About Lilac Point ... - only 0 of 5 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:50.673980+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'The unlikely winner from war in the Gulf - The Economist'",
-    "created_at": "2026-11-23T17:46:50.671416+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'The unlikely winner from war in the Gulf - The Economist'",
-    "created_at": "2026-11-23T17:46:50.548719+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'The unlikely winner from war in the Gulf - The Economist'",
-    "created_at": "2026-11-23T17:46:50.396354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'The unlikely winner from war in the Gulf - The Economist'",
-    "created_at": "2026-11-23T17:46:49.963493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:44.616808+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:44.615759+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The unlikely winner from war in the Gulf - The Economist' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:46:44.614609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxNT2JPYU5QMXVfYndSdjBfRkpMVDBrSG9nZkJIM1duZkVlc0p1T3NhR1diZ1hWVkx4RE4) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:46:44.612326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'President Trump is 'stuck', has not learned much from the Ir' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T17:46:44.457303+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'President Trump is 'stuck', has not learned much from the Iran war: Analyst - CNBC' (0 download(s) tried)",
-    "created_at": "2026-11-23T17:46:44.456190+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://mobileimages.lowes.com/productimages/2497b246-1c2f-4e3f-9205-9804abab1afb/106341876.jpeg?siz (page: IUEST 8.6 in LED Grow Light Strips Full Spectrum 3500 K 4 Head Timer 1 ... - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:44.455193+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'President Trump stuck has not'",
-    "created_at": "2026-11-23T17:46:44.452727+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'President Trump stuck has not'",
-    "created_at": "2026-11-23T17:46:44.336737+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'President Trump stuck has not'",
-    "created_at": "2026-11-23T17:46:44.179196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'President Trump stuck has not'",
-    "created_at": "2026-11-23T17:46:43.592179+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:28.738593+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:28.737469+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://npr.brightspotcdn.com/dims4/default/95d4248/2147483647/strip/true/crop/864x864+0+0/resize/88 (page: First harvest for company angling to be a major player in Michigan's ... - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:28.726312+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:28.626439+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:28.510042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:28.376985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:27.908065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:22.186692+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:22.185586+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://buyturfonline.com.au/wp-content/uploads/2021/04/Summergrass-Weed.png (page: https://solvepestproblems.oregonstate.edu/lawn-problems/grassy-weeds | The Ultimate Guide for Weeds  - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:22.184176+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://images.squarespace-cdn.com/content/v1/50a39d4ce4b0f822f291399c/1644852507467-RC3Q2GV7WARA1BP (page: https://buyturfonline.com.au/weeds-in-buffalo-grass/ | Blue Grass Enterprises-PDF Archive | Elite So - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:22.182925+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://solvepestproblems.oregonstate.edu/sites/default/files/styles/cropped_450x450/public/identify (page: https://lawnphix.com/lawn-care/creeping-bentgrass/ | Grassy Weeds in Lawns | solvepest - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:22.181815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'President Trump is 'stuck', has not learned much f'): https://hort.extension.wisc.edu/files/2025/08/zoysiastolons-1024x768.jpg (page: https://solvepestproblems.oregonstate.edu/lawn-problems/grassy-weeds | Perennial Grass Weeds in Lawn - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:22.180538+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:22.178251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:21.998875+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:21.813096+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'President Trump is 'stuck', has not learned much from the Ir'",
-    "created_at": "2026-11-23T17:46:21.313765+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:15.209253+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:46:15.203529+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'President Trump is 'stuck', has not learned much from the Ir' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:46:15.202277+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipwFBVV95cUxQZHdkSTFYRFVteDZPVDBfY0dNVFU0bFdiZDhFakYtS1g3SWhjeDdpQ29OUWJ1YlVMRnd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:46:15.136296+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What We Don’t Know About the Iran War - The Atlantic' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T17:46:14.951557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'What We Don’t Know About the Iran War - The Atlantic' (0 download(s) tried)",
-    "created_at": "2026-11-23T17:46:14.950525+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/736x/72/43/02/724302a923112e425d4e6c49fa17d651.jpg (page: https://www.vecteezy.com/vector-art/14457385-english-pronouns-we-and-our-girl-and-boy-with-signs-for - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.949297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://ecdn.teacherspayteachers.com/thumbitem/Teach-Pronouns-WE-Adapted-Book-Fall-Autumn-Theme-Clip (page: https://www.baamboozle.com/game/2807348 | Teach Pronouns-'WE' Adapted Book - Fall/Autumn Theme - Cli - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.948266+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/56/d9/1b/56d91be7c2df204e390fb7e3d42baa38.jpg (page: https://www.baamboozle.com/game/180708 | Personal Pronouns | Pronoun cards, Pronouns flashcards, Pro - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.947157+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/38/31/ce/3831ce9020d9f752f6e916d2edc57b01.png (page: https://www.pinterest.com/pin/1006273110487423897/ | pronoun, we | Clip art, Pronoun, English langua - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.946018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Stories_from_Don_Quixote_%281908%29_%281478 (page: https://commons.wikimedia.org/wiki/File:Stories_from_Don_Quixote_(1908)_(14781624265).jpg | File:Sto - only 1 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.944894+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Stories_from_Don_Quixote_%281908%29_%281459 (page: https://commons.wikimedia.org/wiki/File:Stories_from_Don_Quixote_(1908)_(14594983478).jpg | File:Sto - only 1 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.943605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Stories_from_Don_Quixote_%281908%29_%281459 (page: https://commons.wikimedia.org/wiki/File:Stories_from_Don_Quixote_(1908)_(14594896350).jpg | File:Sto - only 1 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.942471+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Social_Dynamite-_The_Wickedness_of_Modern_S (page: https://commons.wikimedia.org/wiki/File:Social_Dynamite-_The_Wickedness_of_Modern_Society_from_the_D - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.941362+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/More_about_good_roses_%2815770163263%29.jpg (page: https://commons.wikimedia.org/wiki/File:More_about_good_roses_(15770163263).jpg | File:More about go - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:46:14.940051+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'We Don t Know About'",
-    "created_at": "2026-11-23T17:46:14.867891+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'We Don t Know About'",
-    "created_at": "2026-11-23T17:46:14.728390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'We Don t Know About'",
-    "created_at": "2026-11-23T17:46:14.440963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'We Don t Know About'",
-    "created_at": "2026-11-23T17:46:13.886664+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:59.657497+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:59.656463+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/736x/72/43/02/724302a923112e425d4e6c49fa17d651.jpg (page: https://www.vecteezy.com/vector-art/14457385-english-pronouns-we-and-our-girl-and-boy-with-signs-for - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.655215+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://ecdn.teacherspayteachers.com/thumbitem/Teach-Pronouns-WE-Adapted-Book-Fall-Autumn-Theme-Clip (page: https://www.baamboozle.com/game/2807348 | Teach Pronouns-'WE' Adapted Book - Fall/Autumn Theme - Cli - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.654255+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/56/d9/1b/56d91be7c2df204e390fb7e3d42baa38.jpg (page: https://www.baamboozle.com/game/180708 | Personal Pronouns | Pronoun cards, Pronouns flashcards, Pro - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.653255+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/38/31/ce/3831ce9020d9f752f6e916d2edc57b01.png (page: https://www.pinterest.com/pin/1006273110487423897/ | pronoun, we | Clip art, Pronoun, English langua - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.652216+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Standing_up_Against_Racism_and_for_the_NHS. (page: https://commons.wikimedia.org/wiki/File:Standing_up_Against_Racism_and_for_the_NHS._(29573926578).jp - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.651204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Resting_During_the_Anti-Trump_Rally._%28425 (page: https://commons.wikimedia.org/wiki/File:Resting_During_the_Anti-Trump_Rally._(42541364055).jpg | Fil - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.650169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Protesting_Against_the_Far_Right._%28434447 (page: https://commons.wikimedia.org/wiki/File:Protesting_Against_the_Far_Right._(43444753961).jpg | File:P - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.649156+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Jerusalem_is_the_Capital_of_Palestine_%2841 (page: https://commons.wikimedia.org/wiki/File:Jerusalem_is_the_Capital_of_Palestine_(41638003430).jpg | Fi - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.648073+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Danger_-_Trump_and_the_Far_Right._%28416386 (page: https://commons.wikimedia.org/wiki/File:Danger_-_Trump_and_the_Far_Right._(41638602240).jpg | File:D - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:59.646986+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'What We Don’t Know About the Iran War'",
-    "created_at": "2026-11-23T17:45:59.644666+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'What We Don’t Know About the Iran War'",
-    "created_at": "2026-11-23T17:45:59.421260+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'What We Don’t Know About the Iran War'",
-    "created_at": "2026-11-23T17:45:59.309749+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'What We Don’t Know About the Iran War'",
-    "created_at": "2026-11-23T17:45:58.636258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:52.556651+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:52.555601+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/736x/72/43/02/724302a923112e425d4e6c49fa17d651.jpg (page: https://www.vecteezy.com/vector-art/14457385-english-pronouns-we-and-our-girl-and-boy-with-signs-for - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:52.554295+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://ecdn.teacherspayteachers.com/thumbitem/Teach-Pronouns-WE-Adapted-Book-Fall-Autumn-Theme-Clip (page: https://www.baamboozle.com/game/2807348 | Teach Pronouns-'WE' Adapted Book - Fall/Autumn Theme - Cli - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:52.553153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/56/d9/1b/56d91be7c2df204e390fb7e3d42baa38.jpg (page: https://www.baamboozle.com/game/180708 | Personal Pronouns | Pronoun cards, Pronouns flashcards, Pro - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:52.552004+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What We Don’t Know About the Iran War - The Atlant'): https://i.pinimg.com/originals/38/31/ce/3831ce9020d9f752f6e916d2edc57b01.png (page: https://www.pinterest.com/pin/1006273110487423897/ | pronoun, we | Clip art, Pronoun, English langua - only 0 of 6 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:52.550952+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'What We Don’t Know About the Iran War - The Atlantic'",
-    "created_at": "2026-11-23T17:45:52.548571+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'What We Don’t Know About the Iran War - The Atlantic'",
-    "created_at": "2026-11-23T17:45:52.386312+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'What We Don’t Know About the Iran War - The Atlantic'",
-    "created_at": "2026-11-23T17:45:52.251606+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'What We Don’t Know About the Iran War - The Atlantic'",
-    "created_at": "2026-11-23T17:45:51.822458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:48.407809+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:48.406876+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What We Don’t Know About the Iran War - The Atlantic' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:45:48.405675+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxQa0RCaVNESHIyME5LaU1tX3F0NjNKdDhKX2xmNVhXRWxWOF80U3J0Wm1YNmNSdmFlNEh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:45:48.375444+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T17:45:48.166995+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
-    "created_at": "2026-11-23T17:45:48.165700+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.alfaforni.com/wp-content/uploads/2020/05/live.jpg (page: https://storage.googleapis.com/dapasojavfczee/kick-streaming-png.html | LIVE - Streaming and video o - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.079351+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thesmallbusinessblog.com/wp-content/uploads/2022/02/Live-streaming-437.jpg (page: https://www.alfaforni.com/es/live/ | Live Streaming Statistics 2026: Market Size, Indsutry Growth &  - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.076075+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.newstorymedia.com/wp-content/uploads/2020/06/Live-Stream-header.jpg (page: https://daarzy.com/demo/ | Erf Web Tv Live Stream , TV Garden: Stream Live Global TV Channels for .. - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.056312+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://cdn.prod.website-files.com/68d6cf38c4361fb91adfacf7/69c2ab4f9cd8d89c43730182_cef99717cfcf87c (page: https://surigaodelsur.gov.ph/governors/pimentel | Watch - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.055090+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/0c/Secretary_of_State_Hillary_Rodham_Clinton_at_the (page: https://commons.wikimedia.org/wiki/File:Secretary_of_State_Hillary_Rodham_Clinton_at_the_100th_Anniv - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.053999+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/PIIGS_Mk_4_map.png/1280px-PIIGS_Mk_4_map.pn (page: https://commons.wikimedia.org/wiki/File:PIIGS_Mk_4_map.png | File:PIIGS Mk 4 map.png - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.052739+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/11/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.051551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/00/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.050427+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/10/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:48.049276+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Live Updates Iran says will'",
-    "created_at": "2026-11-23T17:45:47.996324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Live Updates Iran says will'",
-    "created_at": "2026-11-23T17:45:47.821664+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Live Updates Iran says will'",
-    "created_at": "2026-11-23T17:45:47.704043+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'Live Updates Iran says will'",
-    "created_at": "2026-11-23T17:45:47.126247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:38.889624+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:38.888647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.alfaforni.com/wp-content/uploads/2020/05/live.jpg (page: https://storage.googleapis.com/dapasojavfczee/kick-streaming-png.html | LIVE - Streaming and video o - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:38.887721+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thesmallbusinessblog.com/wp-content/uploads/2022/02/Live-streaming-437.jpg (page: https://www.alfaforni.com/es/live/ | Live Streaming Statistics 2026: Market Size, Indsutry Growth &  - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:38.886682+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.newstorymedia.com/wp-content/uploads/2020/06/Live-Stream-header.jpg (page: https://daarzy.com/demo/ | Erf Web Tv Live Stream , TV Garden: Stream Live Global TV Channels for .. - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:38.885561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://cdn.prod.website-files.com/68d6cf38c4361fb91adfacf7/69c2ab4f9cd8d89c43730182_cef99717cfcf87c (page: https://surigaodelsur.gov.ph/governors/pimentel | Watch - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:38.884268+00:00",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-23T19:53:15.017527+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:38.881886+00:00",
+    "message": "promo: photo search done - 25 candidate(s) tried, 6 real-photo search(es), no usable photo",
+    "created_at": "2026-11-23T19:53:15.016610+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:38.731172+00:00",
+    "message": "photo candidate: 'Google Play Opens a Private Lane for Personal AI-Built Apps ' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:15.015391+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:37.679163+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMidkFVX3lxTE82Y01TM0RuTnVLR1p4dmkzcVFkdnJPdUlJeDVWbEtUa053czJCRFp4aWt2V0VOTE9wWHB) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:15.012949+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:37.152966+00:00",
+    "message": "photo candidate: 'Google plans to give Private AI Compute a memory that follow' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:14.791880+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:33.817241+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikgFBVV95cUxNeWFPUW9LX1o5Z1BEM0lPTGlwTGZSd3RxdWdBa3I2ZlRzR091WFNZMWFnSG00c0pycnF) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:14.789572+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:33.816159+00:00",
+    "message": "photo candidate: 'Put Gemini to work for you - blog.google' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:14.439415+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.alfaforni.com/wp-content/uploads/2020/05/live.jpg (page: https://storage.googleapis.com/dapasojavfczee/kick-streaming-png.html | LIVE - Streaming and video o - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:33.815064+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWF2N1A4NTZkR3ZDemlDLUIyYlUwNVY2bmRKeEdCaEluLVg5MUJXWU1BY2VZNjhZdWR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:14.437184+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thesmallbusinessblog.com/wp-content/uploads/2022/02/Live-streaming-437.jpg (page: https://www.alfaforni.com/es/live/ | Live Streaming Statistics 2026: Market Size, Indsutry Growth &  - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:33.813813+00:00",
+    "message": "photo candidate: 'Google adds Drive and Wallet to AI search personalization — ' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:14.067556+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.newstorymedia.com/wp-content/uploads/2020/06/Live-Stream-header.jpg (page: https://daarzy.com/demo/ | Erf Web Tv Live Stream , TV Garden: Stream Live Global TV Channels for .. - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:33.812313+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipwFBVV95cUxNOTJ2ekRXMlhWLVdpaEcybUtMa1JIMWJxblI2azkybUFmUVI4NDczUzYyTjNHU1QwcVJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:14.065170+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://cdn.prod.website-files.com/68d6cf38c4361fb91adfacf7/69c2ab4f9cd8d89c43730182_cef99717cfcf87c (page: https://surigaodelsur.gov.ph/governors/pimentel | Watch - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:33.811199+00:00",
+    "message": "photo candidate: 'Google Wants To Make a 24/7 AI TV Channel. You’ll Be the Mai' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:13.823293+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:33.808832+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxPWGp4T1lOaDJaX2RIUlFhOWRaUEMzbUJ1eU5TNW5fMlNYTDEtNXl0SnVBSkxDdE9HeGN) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:13.820605+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:33.678201+00:00",
+    "message": "promo: no category yielded a fresh story with a real photo - falling back to custom/trending/breaking news",
+    "created_at": "2026-11-23T19:53:12.985736+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:33.564585+00:00",
+    "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:12.984283+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-23T17:45:33.081353+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3hoekpkTmwxcjE1NnNid3RFSXVsVGtob3A3dFNKVjRNZzVnaXMxRnV6N3pIellLeVd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:12.981832+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:25.378642+00:00",
+    "message": "photo candidate: 'More than 700,000 Russian Soldiers Killed in Ukraine War, Ne' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:12.738863+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:25.376631+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxOanVmQXA3NXR4MWsyOEFZM0hWWDRGZVU0TVVDQkZmSWhFUFNqTHlObGJyUGI1QmdWNmN) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:12.736478+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
-    "created_at": "2026-11-23T17:45:25.375472+00:00",
+    "created_at": "2026-11-23T19:53:12.329988+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T17:45:25.373029+00:00",
+    "created_at": "2026-11-23T19:53:12.327453+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Escalation threat as Hormuz Strait stalemate stokes Iran-US ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T17:45:25.175314+00:00",
+    "message": "photo candidate: 'Iran war updates: Navy says tankers ablaze near Hormuz after' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:11.985616+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US war fears - Al Jazeera' (0 download(s) tried)",
-    "created_at": "2026-11-23T17:45:25.174327+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxONUdmdEJGUnZfMzVyUjZSNGF6VjBWNkd3d1NWM1d2SEZUNTV6aVRjLVR4X1pKbmtMRHp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:11.982962+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.slideteam.net/media/catalog/product/cache/1280x720/s/u/support_escalation_management_pro (page: https://storage.googleapis.com/dwxrthcmrdxcle/supplier-escalation-process.html | Top 10 Escalation P - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:25.173069+00:00",
+    "message": "photo candidate: 'Iran war live: Tehran says US drone downed near Hormuz - Al ' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:11.754852+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.goodconsciouslife.com/wp-content/uploads/2024/07/conflict-escalation-model.png (page: https://www.croydonsafeguarding.org/guidance-policy/escalation-and-resolution | The Conflict Escalat - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:25.169849+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:11.752483+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://helpsquad.com/wp-content/uploads/2023/11/Escalation-1024x1024.jpg (page: https://www.goodconsciouslife.com/conflict-escalation-model | How to Handle Escalations Effectively: - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:25.168821+00:00",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:10.946071+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.questionpro.com/blog/wp-content/uploads/2023/08/escalation_management_process.jpg (page: https://helpsquad.com/blog/escalation-management/ | Escalation Bedeutung _ ESCALATION – DTQFP - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:25.167744+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:10.943825+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Escalation threat Hormuz Strait stalemate'",
-    "created_at": "2026-11-23T17:45:25.165403+00:00",
+    "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - skipped (same event used within 24h, event key 'altcoin bitcoin crypto ether insight invest network news tod')",
+    "created_at": "2026-11-23T19:53:10.599115+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Escalation threat Hormuz Strait stalemate'",
-    "created_at": "2026-11-23T17:45:24.978400+00:00",
+    "message": "photo candidate: 'Where Will USA Rare Earth Stock Be in 5 Years? This Mine Hol' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:10.597725+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Escalation threat Hormuz Strait stalemate'",
-    "created_at": "2026-11-23T17:45:24.838556+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiwFBVV95cUxQczEtQkFqaTV2TDdzNkRDUlVqa0FqQmRjYjY0OEIxWUtXeFc2TU5EOERxVEt4Ukw4Z3J) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:10.595174+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Escalation threat Hormuz Strait stalemate'",
-    "created_at": "2026-11-23T17:45:24.138186+00:00",
+    "message": "photo candidate: 'US tech stocks plunge into bear market in worst week since C' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:10.352364+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihAFBVV95cUxPcXlaSEs0VF84U3VRbVowdTMxMm5kRktENGl6bGtweEtZWVJfVzZQUWY3eUkyamtzMFB) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:10.349960+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Correction or deeper reckoning? Investors seek signs US stoc' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:10.099383+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnY) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:10.096684+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:09.475450+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:09.472950+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:53:09.128442+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxPMmd4NTlaRXRMSE1zbmdzVTdhaVA1QWxURkQ2aFlmU0REdDZfQ1h5RmczU01EcGZNaHh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:53:09.126291+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:53:08.885164+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Americans’ Trust in Information From News Organizations Has Risen in the Past Year - Pew Research Center' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:53:08.884172+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/736x/d5/14/03/d514034bf634a0f488e092793d92306b.jpg (page: https://www.independent.co.uk/life-style/fashion/red-dress-awards-season-2024-oscars-b2508095.html | - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.882923+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/8f/8a/14/8f8a14d2b5f4d2addd4d9e8c97726d18.jpg (page: https://www.pinterest.com/pin/17170042301660238/ | Nicole Kidman | Best oscar dresses of all time, O - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.881948+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/88/8d/68/888d684ad6b47480ed703085b6606e2d.jpg (page: https://www.pinterest.com/pin/436919601321401663/ | All the Best Celebrity Red-Carpet Looks From the - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.880857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/19/5b/cc/195bcc3b737490317f1d2d275681a4af.jpg (page: https://in.pinterest.com/pin/945333778024797939/ | Cara Delevingne takes the 2023 Oscars Red Carpet  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.879865+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.878892+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.877800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Russia_1771_Sestroretsk_Rouble.jpg/1280px-R (page: https://commons.wikimedia.org/wiki/File:Russia_1771_Sestroretsk_Rouble.jpg | File:Russia 1771 Sestro - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.876612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ROM-71-Emergency_WWI-50_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-71-Emergency_WWI-50_Bani_(1917).jpg | File:ROM-71-Emerge - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.875377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ROM-69-Emergency_WWI-10_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-69-Emergency_WWI-10_Bani_(1917).jpg | File:ROM-69-Emerge - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:53:08.874202+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Americans Trust Information News Organizations'",
+    "created_at": "2026-11-23T19:53:08.871734+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Americans Trust Information News Organizations'",
+    "created_at": "2026-11-23T19:53:08.701595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Americans Trust Information News Organizations'",
+    "created_at": "2026-11-23T19:53:08.530408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 504 for 'Americans Trust Information News Organizations'",
+    "created_at": "2026-11-23T19:53:08.050174+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:18.408323+00:00",
+    "created_at": "2026-11-23T19:52:59.678395+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T17:45:18.406929+00:00",
+    "created_at": "2026-11-23T19:52:59.677244+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.slideteam.net/media/catalog/product/cache/1280x720/s/u/support_escalation_management_pro (page: https://storage.googleapis.com/dwxrthcmrdxcle/supplier-escalation-process.html | Top 10 Escalation P - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:18.405771+00:00",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://images.pexels.com/photos/16465430/pexels-photo-16465430.jpeg?cs=srgb&dl=pexels-george-chambe (page:  - no source page to verify relevance)",
+    "created_at": "2026-11-23T19:52:59.676167+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.goodconsciouslife.com/wp-content/uploads/2024/07/conflict-escalation-model.png (page: https://www.croydonsafeguarding.org/guidance-policy/escalation-and-resolution | The Conflict Escalat - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:18.404404+00:00",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://images.pexels.com/photos/16465430/pexels-photo-16465430.jpeg?cs=srgb&dl=pexels-george-chambe (page: Older Latina Woman Photos, Download The BEST Free Older Latina Woman Stock Photos & HD Images - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:59.674971+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://helpsquad.com/wp-content/uploads/2023/11/Escalation-1024x1024.jpg (page: https://www.goodconsciouslife.com/conflict-escalation-model | How to Handle Escalations Effectively: - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:18.403373+00:00",
+    "message": "bing-images: 2 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:59.672700+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Escalation threat as Hormuz Strait stalemate stoke'): https://www.questionpro.com/blog/wp-content/uploads/2023/08/escalation_management_process.jpg (page: https://helpsquad.com/blog/escalation-management/ | Escalation Bedeutung _ ESCALATION – DTQFP - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-23T17:45:18.402331+00:00",
+    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:59.492901+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Escalation threat as Hormuz Strait stalemate stokes Iran-US '",
-    "created_at": "2026-11-23T17:45:18.396131+00:00",
+    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:59.368250+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:59.016423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:49.815161+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:49.814228+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/9e97971ada656c60ed13268190771036l-m899522643rd-w960_h720.jpg (page: https://www.redfin.com/city/25016/WA/Ravensdale | Ravensdale, WA Homes for Sale & Real Estate | Real - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:49.813287+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/9e97971ada656c60ed13268190771036l-m2011726038rd-w960_h720.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | Ravensdale, WA Homes for Sale & Re - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:49.812257+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ap.rdcpix.com/7f4e8572abac2432cbc23f411c220073l-m4156798674od-w480_h360_x2.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | Ravensdale, WA Real Estate - Raven - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:49.810977+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://photos.zillowstatic.com/fp/1ba1c1efac3c4cf8e9f8c3580633879a-cc_ft_1536.jpg (page: https://www.realtor.com/realestateandhomes-search/Ravensdale_WA | 27230 SE 271st St, Ravensdale, WA  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:49.809415+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:49.806720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:49.629498+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:49.489550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+    "created_at": "2026-11-23T19:52:48.903825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:40.849554+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:40.848204+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:52:40.846866+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPZENfX1RlWTAwQWZEUnF2OTMyU2Mtb0N2Mi12R3ZzYUlmY1k2aGhka3JOZE82QWZUSUN) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:52:40.844121+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:52:40.449262+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:52:40.448324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Red_for_the_Palestinian_and_Global_Intifada (page: https://commons.wikimedia.org/wiki/File:Red_for_the_Palestinian_and_Global_Intifada._A_Socialist_Int - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:40.447446+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Mikhaila_Peterson_Fuller_and_Jordan_Peterso (page: https://commons.wikimedia.org/wiki/File:Mikhaila_Peterson_Fuller_and_Jordan_Peterson_on_Ron_Johnson_ - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:40.446464+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/La_coalition_des_Rois%2C_ou_des_brigands_co (page: https://commons.wikimedia.org/wiki/File:La_coalition_des_Rois,_ou_des_brigands_couronn%C3%A9s,_contr - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:40.445419+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/e/ea/Jordan_Peterson_in_2024.jpg?utm_source=commons.w (page: https://commons.wikimedia.org/wiki/File:Jordan_Peterson_in_2024.jpg | File:Jordan Peterson in 2024.j - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:40.444338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Coalition_The_fox_and_badger_both_in_a_hole (page: https://commons.wikimedia.org/wiki/File:Coalition_The_fox_and_badger_both_in_a_hole_(BM_1868,0808.49 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:40.443123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 0 candidate(s) for 'US political coalition calls US'",
+    "created_at": "2026-11-23T19:52:40.440622+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US political coalition calls US'",
+    "created_at": "2026-11-23T19:52:40.310833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'US political coalition calls US'",
+    "created_at": "2026-11-23T19:52:40.174602+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 504 for 'US political coalition calls US'",
+    "created_at": "2026-11-23T19:52:39.697731+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:30.961044+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:30.959726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:30.957385+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:30.683258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:30.555334+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:30.176629+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:23.401966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:23.400993+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://www.worksheetsplanet.com/wp-content/uploads/2022/09/Area-of-a-Triangle-scaled.jpg (page: Area of a Triangle (Formula + Example) - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:23.399751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:23.397452+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:23.239326+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:23.092791+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+    "created_at": "2026-11-23T19:52:22.673808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:14.899570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:14.898667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:52:14.897382+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxOS0Q3OWtMMEhzenZnb2tPZlAyTWZuRGdsRmlySGZkOGZUNS1lMTNBSXVGZ2FoOVZRaFJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:52:14.894955+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:52:14.510774+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Donald Trump News: Breaking Headlines and Video on President Trump - NBC News' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:52:14.509744+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.husseyseating.com/wp-content/uploads/2024/10/15-Footprint-Center-Arena-Fixed-Quattro-Cla (page: Mortgage Matchup Center Seating by Hussey Seating Company - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:14.508422+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T19:52:14.505945+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T19:52:14.366003+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T19:52:14.182646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News Breaking Headlines'",
+    "created_at": "2026-11-23T19:52:13.649246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:05.690952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:52:05.689727+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://images.ctfassets.net/lzny33ho1g45/6nFnk8mblzFKb5Aq4AqnUV/f340229fc98693141f6d718a504d0ff9/im (page: The 6 best photo editing apps for iPhone and Android in 2025 - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:52:05.688403+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:52:05.685625+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:52:05.479583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:52:05.349058+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:52:04.937487+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:56.180067+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:56.179237+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://dreamchaserhub.com/wp-content/uploads/2024/05/20.png (page: https://dreamchaserhub.com/good-morning-monday-fall-images-and-quotes/ | 39+ Good Morning Happy Mond - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:56.178156+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/736x/cf/f6/96/cff6961081f881e429bfadd7e311a388.jpg (page: https://dreamchaserhub.com/good-morning-monday-fall-images-and-quotes/ | Happy Monday Quotes to Star - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:56.177185+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/736x/95/27/72/9527723ac4cd0a5c929003439320f107.jpg (page: https://www.pinterest.com/pin/happy-monday-quotes-to-start-your-week--70437485545851/ | Happy Autumn - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:56.176172+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/originals/da/d6/db/dad6db8979cd3f399119d5a7d0d6b59e.jpg?nii=t (page: https://www.pinterest.com/pin/happy-autumn-monday--20195898323671829/ | Happy Monday Fall - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:56.175065+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:51:56.172712+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:51:55.884168+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:51:55.770348+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
+    "created_at": "2026-11-23T19:51:55.442488+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:46.257952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:46.256658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:51:46.255657+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:51:46.253062+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Celebrity Splits of 2026: Zosia Mamet and Evan Jonigkeit, Mo' - skipped (same event used within 24h, event key '2026 broke celebrity evan jonigkeit mamet split star weekly ')",
+    "created_at": "2026-11-23T19:51:45.484418+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'British Celebrity Loses Legal Bid to Prevent Publication of ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:51:45.483298+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'British Celebrity Loses Legal Bid to Prevent Publication of Identity and Sexual Misconduct Allegations - The Hollywood Reporter' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:51:45.482123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:45.480479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:45.479294+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:45.477776+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:45.476447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid'",
+    "created_at": "2026-11-23T19:51:45.473583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid'",
+    "created_at": "2026-11-23T19:51:45.267989+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid'",
+    "created_at": "2026-11-23T19:51:45.121510+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 503 for 'British Celebrity Loses Legal Bid'",
+    "created_at": "2026-11-23T19:51:44.638936+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:39.266014+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:39.264931+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:39.264118+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:39.263125+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:39.262006+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:39.260713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:39.258018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:39.028000+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:38.899212+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:38.532918+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:32.446324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:32.445139+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:32.444104+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:32.442886+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:32.441964+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:32.440778+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:32.438368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:32.296864+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:32.158167+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
+    "created_at": "2026-11-23T19:51:31.736586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:23.196779+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:23.195813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'British Celebrity Loses Legal Bid to Prevent Publication of ' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:51:23.194710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxOZVlfbGtSVG1qR2N0WlJSNFhlbU9CUXQyTHBiQnlXY1U3TjlCY0RZcWN0NXJiQldEQTh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:51:23.192174+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:51:22.846094+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for '2026 Celebrity Breakups - E! News' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:51:22.845058+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://readthecloud.co/wp-content/uploads/2026/06/ผลบอลโลกล่าสุด-2026-1024x536.jpg (page: https://www.cnet.com/culture/entertainment/can-i-buy-tickets-for-the-2026-fifa-world-cup-right-now/  - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:22.844040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://media.gettyimages.com/id/2250015631/es/foto/washington-dc-a-general-view-of-fifa-world-cup-2 (page: https://readthecloud.co/worldcup/ | 679.612 fotos e imágenes de alta resolución de Fifa World Cup 20 - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:22.842828+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://1000logos.net/wp-content/uploads/2023/05/World-Cup-2026-Emblem-1536x864.png (page: https://utpaqp.edu.pe/search/world-cup-2026-official-logo/ | World Cup 2026 Logo and symbol, meaning - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:22.841620+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://pbs.twimg.com/media/FwaOHS9WcAA1dqu.jpg (page: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/algeria-team-profile- - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:22.840338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups'",
+    "created_at": "2026-11-23T19:51:22.837695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups'",
+    "created_at": "2026-11-23T19:51:22.675313+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups'",
+    "created_at": "2026-11-23T19:51:22.388109+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups'",
+    "created_at": "2026-11-23T19:51:21.973971+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:15.987226+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:15.986307+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://readthecloud.co/wp-content/uploads/2026/06/ผลบอลโลกล่าสุด-2026-1024x536.jpg (page: https://www.cnet.com/culture/entertainment/can-i-buy-tickets-for-the-2026-fifa-world-cup-right-now/  - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:15.985404+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://media.gettyimages.com/id/2250015631/es/foto/washington-dc-a-general-view-of-fifa-world-cup-2 (page: https://readthecloud.co/worldcup/ | 679.612 fotos e imágenes de alta resolución de Fifa World Cup 20 - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:15.984341+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://1000logos.net/wp-content/uploads/2023/05/World-Cup-2026-Emblem-1536x864.png (page: https://utpaqp.edu.pe/search/world-cup-2026-official-logo/ | World Cup 2026 Logo and symbol, meaning - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:15.983348+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://pbs.twimg.com/media/FwaOHS9WcAA1dqu.jpg (page: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/algeria-team-profile- - only 1 of 4 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:15.982220+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T19:51:15.979968+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T19:51:15.709939+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T19:51:15.544959+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T19:51:15.105539+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:09.558963+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T19:51:09.557904+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
+    "created_at": "2026-11-23T19:51:09.556714+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5BcDgzSGtkM0lGR0tSdXdLdkczbkNIa1EwRDhMekRrZ0VfejNvdzNmd3Z3bFlUdnFORnR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T19:51:09.554240+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T19:51:09.213205+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette' (0 download(s) tried)",
+    "created_at": "2026-11-23T19:51:09.212127+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._37,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:09.210978+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:09.209854+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:09.208231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:09.206924+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T19:51:09.205540+00:00",
     "card": ""
   }
 ]
