@@ -2,8 +2,10 @@
 # Separate from the Blogger workflow so each can be enabled/disabled
 # on its own. Bluesky posting via atproto still works while the
 # Blogger API is restricted - this is the workflow to keep enabled.
-# Runs at :20 and :50 (every 30 min, offset from the Blogger workflow
-# so the two never commit state.json at the same moment).
+# Runs every 10 minutes (rebuild #7): a due posting slot is picked up
+# within ~10 minutes, and a card also runs on its own interval for
+# reply checks. Public repos get unlimited free Actions minutes, so
+# the 10-minute cadence costs nothing.
 # Secrets needed (Settings -> Secrets and variables -> Actions):
 #   GEMINI_API_KEYS       comma-separated Gemini API keys (separate Google projects)
 #   GROQ_API_KEYS         comma-separated Groq API keys (separate Groq accounts)
@@ -16,7 +18,7 @@ name: Automation Bluesky
 
 on:
   schedule:
-    - cron: "20,50 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 jobs:
