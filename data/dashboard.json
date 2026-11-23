@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T20:50:12.630304+00:00",
-  "last_run": "2026-11-23T20:48:14.410202+00:00",
-  "runs": 21,
+  "generated_at": "2026-11-23T21:24:29.080880+00:00",
+  "last_run": "2026-11-23T21:24:17.226688+00:00",
+  "runs": 22,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 8,
       "posts_today": 1,
       "next_runs": [
-        "2026-11-24T03:05:12.458303+06:00",
-        "2026-11-24T03:20:12.458303+06:00",
         "2026-11-24T03:35:12.458303+06:00",
         "2026-11-24T03:50:12.458303+06:00",
-        "2026-11-24T04:05:12.458303+06:00"
+        "2026-11-24T04:05:12.458303+06:00",
+        "2026-11-24T04:20:12.458303+06:00",
+        "2026-11-24T04:35:12.458303+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T03:01:00+06:00",
         "2026-11-24T03:55:00+06:00",
         "2026-11-24T04:50:00+06:00",
         "2026-11-24T06:05:00+06:00",
-        "2026-11-24T07:00:00+06:00"
+        "2026-11-24T07:00:00+06:00",
+        "2026-11-24T07:58:00+06:00"
       ],
       "success": 7,
       "fail": 1,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 3
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T20:48:14.411548+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T21:24:17.227615+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Google plans personalized AI TV channel",
-    "Hegseth's former aide urges resignation",
     "Washington girls' sports sex exam law",
-    "SEC probes Nvidia accounting",
-    "Alice Huang espionage allegations",
-    "Cyclops in Avengers: Doomsday footage",
-    "Weather forecasts include lead plume",
+    "Google plans personalized AI TV channel",
+    "Trump says he protected Musk",
     "Grand Theft Auto VI release",
-    "Tarik Skubal signs with Mets",
-    "Marcus Olang's essay on AI writing"
+    "Claude AI coding tools",
+    "Alice Huang espionage allegations",
+    "SEC probes Nvidia accounting",
+    "AI sell-off overshadows Anthropic IPO",
+    "Cyclops in Avengers: Doomsday footage",
+    "Ocarina of Time remake"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T21:24:28.880247+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T21:24:28.879274+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T21:24:28.525057+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T21:24:17.228144+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T21:24:17.227621+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #22 started (--only blogger)",
+      "created_at": "2026-11-23T21:24:17.226708+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T20:50:12.631770+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
+      "created_at": "2026-11-23T20:50:12.627575+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "openverse: search HTTP 500 for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
       "created_at": "2026-11-23T20:48:36.138864+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:28.804047+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T20:48:28.802990+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:28.801828+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:28.799588+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:28.798501+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T20:48:28.794840+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:28.792426+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
-      "created_at": "2026-11-23T20:48:28.570932+00:00",
       "card": ""
     }
   ]
