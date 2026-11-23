@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T19:53:15.081362+00:00",
-  "last_run": "2026-11-23T19:50:27.642574+00:00",
-  "runs": 19,
+  "generated_at": "2026-11-23T20:27:12.143081+00:00",
+  "last_run": "2026-11-23T20:27:07.119261+00:00",
+  "runs": 20,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 7,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-24T02:08:15.020671+06:00",
-        "2026-11-24T02:23:15.020671+06:00",
         "2026-11-24T02:38:15.020671+06:00",
         "2026-11-24T02:53:15.020671+06:00",
-        "2026-11-24T03:08:15.020671+06:00"
+        "2026-11-24T03:08:15.020671+06:00",
+        "2026-11-24T03:23:15.020671+06:00",
+        "2026-11-24T03:38:15.020671+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T02:06:00+06:00",
         "2026-11-24T03:01:00+06:00",
         "2026-11-24T03:55:00+06:00",
         "2026-11-24T04:50:00+06:00",
-        "2026-11-24T06:05:00+06:00"
+        "2026-11-24T06:05:00+06:00",
+        "2026-11-24T07:00:00+06:00"
       ],
       "success": 6,
       "fail": 1,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T19:50:27.644148+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T20:27:07.120815+00:00"
     }
   ],
   "dry_run": false,
@@ -163,18 +154,66 @@
   },
   "trending": [
     "Google plans personalized AI TV channel",
-    "Nvidia rehires Huang",
-    "SEC probes Nvidia accounting",
-    "Trump says he protected Musk",
-    "Alice Huang espionage allegations",
     "Grand Theft Auto VI release",
-    "Pope Leo praises cycling",
-    "Weather forecasts include lead plume",
+    "Nvidia rehires Huang",
+    "Alice Huang espionage allegations",
+    "SEC probes Nvidia accounting",
+    "Trump calls Putin his friend",
     "Cyclops in Avengers: Doomsday footage",
-    "Thanksgiving dinner preparations"
+    "Weather forecasts include lead plume",
+    "Thanksgiving dinner preparations",
+    "NFL Week 11 games"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T20:27:12.080483+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T20:27:12.078731+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T20:27:11.729772+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T20:27:07.121812+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T20:27:07.120826+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #20 started (--only blogger)",
+      "created_at": "2026-11-23T20:27:07.119286+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T19:53:15.083045+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Trump says he protected Musk', 'Alice Huang espionage allegations']",
+      "created_at": "2026-11-23T19:53:15.078207+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/736x/d5/14/03/d514034bf634a0f488e092793d92306b.jpg (page: https://www.independent.co.uk/life-style/fashion/red-dress-awards-season-2024-oscars-b2508095.html | - only 0 of 11 key entities in the source page)",
       "created_at": "2026-11-23T19:53:08.882923+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/8f/8a/14/8f8a14d2b5f4d2addd4d9e8c97726d18.jpg (page: https://www.pinterest.com/pin/17170042301660238/ | Nicole Kidman | Best oscar dresses of all time, O - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.881948+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/88/8d/68/888d684ad6b47480ed703085b6606e2d.jpg (page: https://www.pinterest.com/pin/436919601321401663/ | All the Best Celebrity Red-Carpet Looks From the - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.880857+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/originals/19/5b/cc/195bcc3b737490317f1d2d275681a4af.jpg (page: https://in.pinterest.com/pin/945333778024797939/ | Cara Delevingne takes the 2023 Oscars Red Carpet  - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.879865+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.878892+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.877800+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Russia_1771_Sestroretsk_Rouble.jpg/1280px-R (page: https://commons.wikimedia.org/wiki/File:Russia_1771_Sestroretsk_Rouble.jpg | File:Russia 1771 Sestro - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.876612+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ROM-71-Emergency_WWI-50_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-71-Emergency_WWI-50_Bani_(1917).jpg | File:ROM-71-Emerge - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.875377+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ROM-69-Emergency_WWI-10_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-69-Emergency_WWI-10_Bani_(1917).jpg | File:ROM-69-Emerge - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.874202+00:00",
       "card": ""
     }
   ]
