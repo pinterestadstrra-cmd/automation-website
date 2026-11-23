@@ -72,7 +72,7 @@ import threading
 import html as html_lib
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
-from urllib.parse import quote_plus, urlparse
+from urllib.parse import quote_plus, urlparse, urljoin
 
 import requests
 from flask import Flask, request, jsonify, session, send_from_directory
@@ -109,8 +109,21 @@ os.makedirs(IMAGES_DIR, exist_ok=True)
 SECRET_KEY = os.environ.get("SECRET_KEY", "change-this-secret-key")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "changeme123")
 
-GEMINI_KEYS = [k.strip() for k in os.environ.get("GEMINI_API_KEYS", "").split(",") if k.strip()]
-GROQ_KEYS = [k.strip() for k in os.environ.get("GROQ_API_KEYS", "").split(",") if k.strip()]
+def _parse_api_keys(raw):
+    """Parse a comma- or newline-separated API-key secret: split,
+    strip whitespace and surrounding quotes, skip empties. (Rebuild
+    #7.2: a key pasted with quotes or on separate lines must still
+    load - a format slip must never look like 'no keys'.)"""
+    keys = []
+    for part in re.split(r"[,\n]+", raw or ""):
+        k = part.strip().strip('"').strip("'").strip()
+        if k:
+            keys.append(k)
+    return keys
+
+
+GEMINI_KEYS = _parse_api_keys(os.environ.get("GEMINI_API_KEYS", ""))
+GROQ_KEYS = _parse_api_keys(os.environ.get("GROQ_API_KEYS", ""))
 
 BLOGGER_CLIENT_ID = os.environ.get("BLOGGER_CLIENT_ID", "")
 BLOGGER_CLIENT_SECRET = os.environ.get("BLOGGER_CLIENT_SECRET", "")
@@ -397,9 +410,31 @@ def set_setting(key, value):
         conn.close()
 
 
+# In-memory log for THIS worker run (rebuild #7.2). The SQLite DB does
+# not survive GitHub Actions runners, so the dashboard-visible log is
+# data/logs.json, mirrored from this list at the end of the run.
+_RUN_LOGS = []
+_RUN_LOGS_FLUSHED = 0
+LOGS_JSON_MAX = 200
+
+
+def _log_card_from_message(message):
+    """Card name from a "card 'Name': ..." log prefix, or ''."""
+    m = re.match(r"card '([^']+)'", str(message or ""))
+    return m.group(1) if m else ""
+
+
 def log(level, message):
     """Write a log row (dashboard activity log) and print it."""
     msg = str(message)[:1000]
+    try:
+        _RUN_LOGS.append({"level": level, "message": msg,
+                          "created_at": now_iso(),
+                          "card": _log_card_from_message(msg)})
+        if len(_RUN_LOGS) > 500:
+            del _RUN_LOGS[:-500]
+    except Exception:
+        pass
     try:
         conn = db_connect()
         try:
@@ -460,18 +495,32 @@ def save_state(state):
 
 
 def append_logs_json():
-    """Mirror the latest logs into data/logs.json for the repo commit."""
+    """Mirror this run's logs into data/logs.json (newest first, last
+    ~200 entries) for the repo commit, so the static dashboard can show
+    what the worker did. Merges with the file's previous entries (the
+    SQLite DB does not survive GitHub Actions runners, so the DB alone
+    cannot supply history). Only entries not yet flushed are added, so
+    calling it twice in one run never duplicates. Never raises - a
+    failed write only prints a warning, the run is unaffected.
+    Rebuild #7.2."""
+    global _RUN_LOGS_FLUSHED
     try:
-        conn = db_connect()
-        try:
-            rows = conn.execute("SELECT level, message, created_at FROM logs "
-                                "ORDER BY id DESC LIMIT 100").fetchall()
-        finally:
-            conn.close()
+        prev = []
+        if os.path.exists(LOGS_PATH):
+            try:
+                with open(LOGS_PATH, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, list):
+                    prev = [e for e in data if isinstance(e, dict)]
+            except Exception:
+                prev = []
+        new = _RUN_LOGS[_RUN_LOGS_FLUSHED:]
+        _RUN_LOGS_FLUSHED = len(_RUN_LOGS)
+        merged = (list(reversed(new)) + prev)[:LOGS_JSON_MAX]
         with open(LOGS_PATH, "w", encoding="utf-8") as f:
-            json.dump([dict(r) for r in rows], f, ensure_ascii=False, indent=2)
-    except Exception:
-        pass
+            json.dump(merged, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"logs.json write failed: {e}", flush=True)
 
 
 def write_dashboard_json(state):
@@ -489,9 +538,23 @@ def write_dashboard_json(state):
                 # GitHub Actions runners have an empty DB - show the
                 # articles recorded in state.json instead.
                 posts = [dict(a) for a in (state.get("recent_articles") or [])[:10]]
-            logs = [dict(r) for r in conn.execute(
-                "SELECT level, message, created_at FROM logs ORDER BY id DESC LIMIT 50"
-                ).fetchall()]
+            # Rebuild #7.2: the dashboard-visible log is data/logs.json
+            # (merged across runs, newest first) - the SQLite DB only
+            # holds this run. Fall back to the DB if the file is missing.
+            logs = []
+            try:
+                if os.path.exists(LOGS_PATH):
+                    with open(LOGS_PATH, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    if isinstance(data, list):
+                        logs = [e for e in data
+                                if isinstance(e, dict)][:50]
+            except Exception:
+                logs = []
+            if not logs:
+                logs = [dict(r) for r in conn.execute(
+                    "SELECT level, message, created_at FROM logs "
+                    "ORDER BY id DESC LIMIT 50").fetchall()]
             total_posts = conn.execute("SELECT COUNT(*) c FROM posts").fetchone()["c"]
             total_replies = conn.execute("SELECT COUNT(*) c FROM replies").fetchone()["c"]
         finally:
@@ -634,86 +697,142 @@ def slugify(text):
 # is per Groq account - so keys MUST come from different projects/accounts
 # for the quota to multiply.
 
+def _api_error_detail(r):
+    """Short error reason from an API error response (never the key):
+    e.g. 'API key not valid', 'model not found', 'quota exceeded'.
+    Truncated to ~150 chars so the log stays readable."""
+    try:
+        err = (r.json() or {}).get("error") or {}
+        msg = (err.get("message") or "").strip()
+        if msg:
+            return msg[:150]
+    except Exception:
+        pass
+    try:
+        return (r.text or "").strip()[:150] or f"HTTP {r.status_code}"
+    except Exception:
+        return f"HTTP {r.status_code}"
+
+
 def _gemini_call(key, model, prompt, max_tokens):
+    """One Gemini call. Returns (text, http_code, error_detail).
+    error_detail is '' on success. Network errors return code 0."""
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/{model}"
            f":generateContent?key={key}")
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"maxOutputTokens": max_tokens,
                                  "temperature": 0.7}}
-    r = requests.post(url, json=body, timeout=60)
+    try:
+        r = requests.post(url, json=body, timeout=60)
+    except Exception as e:
+        return None, 0, f"network: {type(e).__name__}: {e}"[:150]
     if r.status_code != 200:
-        return None, r.status_code
+        return None, r.status_code, _api_error_detail(r)
     try:
         text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-        return (text or "").strip(), 200
+        return (text or "").strip(), 200, ""
     except Exception:
-        return None, 200
+        return None, 200, "bad response shape (no candidates/parts)"
 
 
 def gemini_text(prompt, max_tokens=1500):
-    """Write with Gemini. Returns text or '' (never raises)."""
+    """Write with Gemini. Returns text or '' (never raises).
+    Rebuild #7.2: on total failure, log the SPECIFIC reason (how many
+    keys were found, which models were tried, the exact error per
+    status) instead of failing silently - the workflow log must show
+    WHY the AI is down. Key VALUES are never logged, only counts."""
     if not GEMINI_KEYS:
-        log("warning", "gemini_text: no GEMINI_API_KEYS configured")
+        log("warning", "gemini_text: no GEMINI_API_KEYS configured (0 keys)")
         return ""
     keys = GEMINI_KEYS[:]
     random.shuffle(keys)
+    seen = {}  # (code, detail) -> attempts
     for model in GEMINI_MODELS:
         for key in keys:
             try:
-                text, code = _gemini_call(key, model, prompt, max_tokens)
+                text, code, detail = _gemini_call(key, model, prompt, max_tokens)
                 if text:
                     return text
                 if code == 429:
                     time.sleep(2)
+                sig = (code, detail or "no text returned")
+                seen[sig] = seen.get(sig, 0) + 1
             except Exception as e:
-                log("warning", f"gemini {model} error: {e}")
-    log("warning", "gemini_text: all keys/models failed")
+                sig = (0, f"network: {type(e).__name__}")
+                seen[sig] = seen.get(sig, 0) + 1
+    summary = "; ".join(
+        f"HTTP {c} x{n}: {d}" for (c, d), n in list(seen.items())[:3])
+    log("warning", f"gemini_text: all {len(keys)} key(s) x "
+                   f"{len(GEMINI_MODELS)} model(s) failed - {summary}")
     return ""
 
 
 def _groq_call(key, model, prompt, max_tokens):
+    """One Groq call. Returns (text, http_code, error_detail).
+    error_detail is '' on success. Network errors return code 0."""
     url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
     body = {"model": model,
             "messages": [{"role": "user", "content": prompt}],
             "max_tokens": max_tokens, "temperature": 0.7}
-    r = requests.post(url, json=body, headers=headers, timeout=60)
+    try:
+        r = requests.post(url, json=body, headers=headers, timeout=60)
+    except Exception as e:
+        return None, 0, f"network: {type(e).__name__}: {e}"[:150]
     if r.status_code != 200:
-        return None, r.status_code
+        return None, r.status_code, _api_error_detail(r)
     try:
         text = r.json()["choices"][0]["message"]["content"]
-        return (text or "").strip(), 200
+        return (text or "").strip(), 200, ""
     except Exception:
-        return None, 200
+        return None, 200, "bad response shape (no choices/message)"
 
 
 def groq_text(prompt, max_tokens=800):
-    """Fast replies / small jobs with Groq. Returns text or ''."""
+    """Fast replies / small jobs with Groq. Returns text or ''.
+    Rebuild #7.2: on total failure, log the SPECIFIC reason (key
+    count, models tried, exact error) - never the key values."""
     if not GROQ_KEYS:
-        log("warning", "groq_text: no GROQ_API_KEYS configured")
+        log("warning", "groq_text: no GROQ_API_KEYS configured (0 keys)")
         return ""
     keys = GROQ_KEYS[:]
     random.shuffle(keys)
+    seen = {}  # (code, detail) -> attempts
     for model in GROQ_MODELS:
         for key in keys:
             try:
-                text, code = _groq_call(key, model, prompt, max_tokens)
+                text, code, detail = _groq_call(key, model, prompt, max_tokens)
                 if text:
                     return text
                 if code == 429:
                     time.sleep(2)
+                sig = (code, detail or "no text returned")
+                seen[sig] = seen.get(sig, 0) + 1
             except Exception as e:
-                log("warning", f"groq {model} error: {e}")
-    log("warning", "groq_text: all keys/models failed")
+                sig = (0, f"network: {type(e).__name__}")
+                seen[sig] = seen.get(sig, 0) + 1
+    summary = "; ".join(
+        f"HTTP {c} x{n}: {d}" for (c, d), n in list(seen.items())[:3])
+    log("warning", f"groq_text: all {len(keys)} key(s) x "
+                   f"{len(GROQ_MODELS)} model(s) failed - {summary}")
     return ""
 
 
 def ai_write(prompt, max_tokens=1500):
-    """Primary writer: Gemini, Groq as fallback."""
+    """Primary writer: Gemini, Groq as fallback. Rebuild #7.2: when
+    BOTH fail, log one summary line (key counts only, never values)
+    so the workflow log shows the AI is down and why - captions then
+    fall back to the news headline, never to a generic hook."""
     text = gemini_text(prompt, max_tokens=max_tokens)
     if text:
         return text
-    return groq_text(prompt, max_tokens=max_tokens)
+    text = groq_text(prompt, max_tokens=max_tokens)
+    if text:
+        return text
+    log("warning", f"ai_write: Gemini ({len(GEMINI_KEYS)} key(s)) and Groq "
+                   f"({len(GROQ_KEYS)} key(s)) both failed - captions will "
+                   f"fall back to the news headline")
+    return ""
 
 
 # ---------------------------------------------------------------- photos
@@ -810,13 +929,47 @@ def _pollinations_photo(topic):
     return None
 
 
+def _is_real_photo_bytes(data):
+    """True only if the bytes are a valid JPEG/PNG photograph at least
+    400px wide. Rebuild #7.2 (strict order): a logo, icon, tiny
+    graphic, or corrupt download is never a 'real photo'. Without
+    Pillow, falls back to a magic-byte check (JPEG SOI / PNG
+    signature) with no width check."""
+    if not data or len(data) < 100:
+        return False
+    try:
+        from PIL import Image
+        import io
+        im = Image.open(io.BytesIO(data))
+        if im.format not in ("JPEG", "PNG"):
+            return False
+        if im.width < 400:
+            return False
+        try:
+            im.verify()
+        except Exception:
+            return False
+        return True
+    except ImportError:
+        return data[:3] == b"\xff\xd8\xff" or data[:8] == b"\x89PNG\r\n\x1a\n"
+    except Exception:
+        return False
+
+
 def download_image(url, topic):
     try:
         r = requests.get(url, timeout=30,
                          headers={"User-Agent": "Mozilla/5.0"})
-        if r.status_code != 200 or len(r.content) < 10000:
+        if r.status_code != 200 or len(r.content) < 1000:
             return None
         if not (r.headers.get("Content-Type") or "").lower().startswith("image/"):
+            return None
+        # Rebuild #7.2: the bytes must be a VALID photograph (JPEG/PNG,
+        # >= 400px wide) - a logo, icon, or corrupt download is never
+        # a 'real photo', no matter what the content-type claims.
+        if not _is_real_photo_bytes(r.content):
+            log("info", f"download_image: rejected (not a valid photo "
+                        f">=400px): {url[:120]}")
             return None
         ext = ".jpg"
         if "png" in (r.headers.get("Content-Type") or ""):
@@ -870,10 +1023,14 @@ def fetch_verified_photo(topic):
     return None
 
 
-def fetch_og_image(url):
+def fetch_og_image(url, _depth=0):
     """The og:image (or twitter:image) of a link, verified as a real
     image. Used so a link-promo post still has a photo (no photo =
-    no post). Returns the image URL or None."""
+    no post). Returns the image URL or None.
+    Rebuild #7.2: a Google News link is followed to the PUBLISHER's
+    page first (its og:image is the Google News logo otherwise), and
+    any og:image that is a logo / icon / generic graphic is rejected
+    - a logo is never a 'real photo'."""
     if not url or not str(url).startswith("http"):
         return None
     try:
@@ -882,6 +1039,16 @@ def fetch_og_image(url):
         if r.status_code != 200:
             return None
         html = r.text
+        # Still on a Google News page? The redirect to the publisher
+        # was not followed (meta-refresh) - resolve it and retry once.
+        final_host = (urlparse(r.url).netloc or "").lower()
+        if "news.google.com" in final_host and _depth == 0:
+            target = _extract_redirect_url(html, r.url)
+            if target and "news.google.com" not in \
+                    (urlparse(target).netloc or "").lower():
+                log("info", f"og:image: following Google News link to "
+                           f"publisher {urlparse(target).netloc}")
+                return fetch_og_image(target, _depth=1)
         m = (re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
                        html, re.IGNORECASE)
              or re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
@@ -894,8 +1061,11 @@ def fetch_og_image(url):
         if img.startswith("//"):
             img = "https:" + img
         elif img.startswith("/"):
-            p = urlparse(url)
+            p = urlparse(r.url)
             img = f"{p.scheme}://{p.netloc}{img}"
+        if _is_logo_image_url(img):
+            log("info", f"og:image rejected (logo/icon, not a real photo): {img[:120]}")
+            return None
         if verify_photo_url(img):
             return img
     except Exception as e:
@@ -910,6 +1080,57 @@ def _is_pollinations_url(url):
         return "pollinations" in (urlparse(str(url or "")).netloc or "").lower()
     except Exception:
         return False
+
+
+LOGO_HOST_PARTS = ("google", "gstatic", "gnews")
+LOGO_PATH_WORDS = ("logo", "gnews", "google-news", "favicon", "sprite",
+                   "placeholder", "no-image", "default-image", "blank")
+LOGO_PATH_TOKENS = ("logo", "logos", "icon", "icons", "favicon")
+
+
+def _is_logo_image_url(url):
+    """True if an image URL is a logo / icon / generic graphic, not a
+    real news photograph. Rebuild #7.2 (strict order): the Google News
+    logo must never be posted as a 'news photo'. Checks the host
+    (google / gstatic / gnews) and the path/filename (logo, icon,
+    favicon, ...). A real publisher photo URL never matches these.
+    The 'icon' check is token-based, so 'iconic' is NOT rejected."""
+    try:
+        u = str(url or "").strip().lower()
+        if not u.startswith("http"):
+            return True
+        netloc = urlparse(u).netloc
+        if any(part in netloc for part in LOGO_HOST_PARTS):
+            return True
+        parsed = urlparse(u)
+        path = parsed.path + "?" + parsed.query
+        if any(w in path for w in LOGO_PATH_WORDS):
+            return True
+        tokens = [t for t in re.split(r"[^a-z0-9]+", path) if t]
+        return any(t in LOGO_PATH_TOKENS for t in tokens)
+    except Exception:
+        return False
+
+
+def _extract_redirect_url(html, base_url):
+    """Publisher URL from a Google News redirect/interstitial page:
+    the <link rel="canonical"> or a meta refresh. Returns the URL or
+    None. Google News article links often redirect via meta-refresh,
+    which requests cannot follow - without this, the og:image fetched
+    is the Google News logo itself (rebuild #7.2)."""
+    if not html:
+        return None
+    m = (re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']',
+                   html, re.IGNORECASE)
+         or re.search(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']',
+                      html, re.IGNORECASE))
+    if m:
+        return urljoin(base_url or "", m.group(1).strip())
+    m = re.search(r'<meta[^>]+http-equiv=["\']refresh["\'][^>]+content=["\'][^"\']*?url=([^"\';]+)',
+                  html, re.IGNORECASE)
+    if m:
+        return urljoin(base_url or "", m.group(1).strip())
+    return None
 
 
 def _news_photo(topic, state=None):
@@ -934,7 +1155,7 @@ def _news_photo(topic, state=None):
             continue
         seen.add(link)
         img = fetch_og_image(link)
-        if not img or _is_pollinations_url(img):
+        if not img or _is_pollinations_url(img) or _is_logo_image_url(img):
             continue
         local = download_image(img, topic)
         if local:
@@ -957,7 +1178,7 @@ def _promo_photo(card, link, state=None):
     text-only."""
     if link:
         og = fetch_og_image(link)
-        if og and not _is_pollinations_url(og):
+        if og and not _is_pollinations_url(og) and not _is_logo_image_url(og):
             local = download_image(og, "promo")
             if local:
                 return {"url": og, "source": "og:image", "alt": "promo",
@@ -1001,6 +1222,11 @@ def _promo_photo(card, link, state=None):
 #   than the card's count, even if several slots are due).
 PROMO_TOPIC_COOLDOWN_HOURS = 24
 BSKY_MAX_CHARS = 300
+
+# Minimum gap between two Bluesky posts of the SAME card (rebuild #7.2).
+# Concurrent workflow runs (or a Run-now right after a scheduled run)
+# must never produce a burst of posts at once.
+BSKY_MIN_POST_GAP_MINUTES = 5
 
 # Why the last _card_bluesky_post skipped a post: "cooldown" (no fresh
 # news topic/caption left within 24h), "no_photo" (fresh news exists
@@ -1145,6 +1371,28 @@ def _record_promo_caption_posted(state, text):
                   _caption_hash(text))
 
 
+def _bsky_gap_left(state, card_name):
+    """Time left on the 5-minute no-burst gap for a card, or None when
+    the card may post again. (Rebuild #7.2.)"""
+    last = (state.get("last_bsky_post_at") or {}).get(card_name or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=BSKY_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_bsky_post_at(state, card_name):
+    """Remember that this card posted a Bluesky post now (state.json,
+    so the gap survives across worker runs)."""
+    state.setdefault("last_bsky_post_at", {})[card_name or ""] = now_iso()
+
+
 def _pick_fresh_promo_news(card, state):
     """Pick a FRESH news story for a promo post: (topic, headline, photo).
     Candidates: the card's custom-text words first (a custom caption's
@@ -1201,7 +1449,7 @@ def _pick_fresh_promo_news(card, state):
             if _promo_topic_cooldown_left(state, headline) is not None:
                 continue
             img = fetch_og_image(link)
-            if not img or _is_pollinations_url(img):
+            if not img or _is_pollinations_url(img) or _is_logo_image_url(img):
                 fresh_no_photo = True
                 continue
             local = download_image(img, topic)
@@ -3094,15 +3342,16 @@ def _card_bluesky_post(card, state, article, promo=False):
         if not image_url:
             log("warning", f"card '{name}': no photo, skipped - article has no image")
             return False
-        if _is_pollinations_url(image_url):
-            # Rebuild #7: an AI-generated article image must never go
-            # to Bluesky - swap it for a real news image, or skip.
+        if _is_pollinations_url(image_url) or _is_logo_image_url(image_url):
+            # Rebuild #7/#7.2: an AI-generated or LOGO article image
+            # must never go to Bluesky - swap it for a real news image,
+            # or skip.
             news = _news_photo((article or {}).get("title", "") or "breaking news",
                                state)
             if not news:
                 log("warning", f"card '{name}': no photo, skipped - article "
-                               "image is AI-generated and no real news "
-                               "image was found")
+                               "image is AI-generated or a logo and no real "
+                               "news image was found")
                 return False
             image_url = news["url"]
         local = download_image(image_url, article.get("title", ""))
@@ -3140,15 +3389,21 @@ def _card_bluesky_post(card, state, article, promo=False):
                         link=link, tone=tone_text),
                     max_tokens=400) or "").strip()
             if not text or text == link:
-                # The AI failed (keys down / rate limit): use a
-                # built-in hook - NEVER the bare link on its own.
-                hook = _promo_fallback_hook(card, link, state)
-                if hook is None:
-                    log("info", f"card '{name}': no fresh caption "
-                                "available within 24h - cooldown, skipping")
-                    LAST_BSKY_SKIP = "cooldown"
-                    return False
-                text = hook
+                # The AI failed (keys down / rate limit): use the
+                # picked news HEADLINE itself - the caption must always
+                # mention the actual news (rebuild #7.2, strict order).
+                # A generic built-in hook is only used when there is
+                # genuinely no headline at all - NEVER the bare link.
+                if news_headline:
+                    text = news_headline
+                else:
+                    hook = _promo_fallback_hook(card, link, state)
+                    if hook is None:
+                        log("info", f"card '{name}': no fresh caption "
+                                    "available within 24h - cooldown, skipping")
+                        LAST_BSKY_SKIP = "cooldown"
+                        return False
+                    text = hook
             text = _fit_bsky_text(text, link)
             # Per-caption cooldown (rebuild #7.1): the same caption
             # is never posted twice within 24h.
@@ -3206,6 +3461,15 @@ def _post_bsky_card(card, state, due_slots):
     made = 0
     cooldown_hit = False
     cap_hit = False
+    # Rebuild #7.2: no bursts - a card that posted less than 5 minutes
+    # ago (a concurrent run, or a Run-now right after a scheduled run)
+    # does not post again this run. Checked once per RUN, not between
+    # posts inside the run, so posts_per_run still works. Dry runs
+    # neither check nor record the gap.
+    if not dry and _bsky_gap_left(state, name) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{BSKY_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
     while True:
         # Strict UI obedience (user order 2026-11-23): re-read the
         # card fresh from data/cards.json BEFORE EACH POST and log
@@ -3239,6 +3503,7 @@ def _post_bsky_card(card, state, due_slots):
             made += 1
             if not dry:
                 record_card_post(state, name)
+                _record_bsky_post_at(state, name)
                 if target and target.get("url"):
                     _mark_bsky_posted(state, name, target["url"])
         else:
@@ -3433,8 +3698,8 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
-                # A 24h-cooldown skip is a clean no-op, not a failure.
-                ok = made > 0 or err == "cooldown"
+                # A cooldown / too-soon skip is a clean no-op, not a failure.
+                ok = made > 0 or err in ("cooldown", "too soon")
                 if not ok:
                     last_error = err or "post failed or skipped"
         elif ctype == "bluesky_promo":
@@ -3449,8 +3714,8 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 ok = True
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
-                # A 24h-cooldown skip is a clean no-op, not a failure.
-                ok = made > 0 or err == "cooldown"
+                # A cooldown / too-soon skip is a clean no-op, not a failure.
+                ok = made > 0 or err in ("cooldown", "too soon")
                 if not ok:
                     last_error = err or "promo failed or skipped"
         elif ctype == "bluesky_reply":
@@ -3751,10 +4016,8 @@ def health_check(state=None):
     """Fast config-level health report (no quota used). Real failures are
     also surfaced by the issues tracker during the actual cycles."""
     health = {}
-    gemini_keys = [k for k in (os.environ.get("GEMINI_API_KEYS") or "").split(",")
-                   if k.strip()]
-    groq_keys = [k for k in (os.environ.get("GROQ_API_KEYS") or "").split(",")
-                 if k.strip()]
+    gemini_keys = _parse_api_keys(os.environ.get("GEMINI_API_KEYS") or "")
+    groq_keys = _parse_api_keys(os.environ.get("GROQ_API_KEYS") or "")
     health["gemini"] = {
         "ok": bool(gemini_keys),
         "detail": f"{len(gemini_keys)} key(s) configured" if gemini_keys
@@ -3855,6 +4118,7 @@ def run_worker(only=None):
     write_dashboard_json(state)
     WORKER_RUNNING = False
     log("info", "worker run finished")
+    append_logs_json()  # flush the final line too (only new entries)
 
 
 # ---------------------------------------------------------------- web routes
