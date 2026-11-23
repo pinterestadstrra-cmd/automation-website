@@ -1,44 +1,47 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 20,
-  "last_run": "2026-11-23T20:27:07.119261+00:00",
+  "runs": 21,
+  "last_run": "2026-11-23T20:48:14.410202+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
-      "primonewstoday.bsky.social": 2
+      "primonewstoday.bsky.social": 3
     }
   },
   "posted_promo_topics": {
     "2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446599+00:00",
     "await cnbc data gold inflation low market month rise": "2026-11-23T10:35:41.125879+00:00",
     "altcoin bitcoin crypto ether insight invest network news today": "2026-11-23T16:50:20.985750+00:00",
-    "2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253791+00:00"
+    "2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253791+00:00",
+    "2026 breakup celebrity news": "2026-11-23T20:50:12.455777+00:00"
   },
   "posted_promo_link_topics": {
     "https://shorturl.at/eZnco||2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446628+00:00",
     "https://shorturl.at/eZnco||await cnbc data gold inflation low market month rise": "2026-11-23T10:35:41.125912+00:00",
     "https://shorturl.at/eZnco||altcoin bitcoin crypto ether insight invest network news today": "2026-11-23T16:50:20.985778+00:00",
-    "https://shorturl.at/eZnco||2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253817+00:00"
+    "https://shorturl.at/eZnco||2026 broadway carroll celebrity death lance larry poindexter weekly": "2026-11-23T17:48:49.253817+00:00",
+    "https://shorturl.at/eZnco||2026 breakup celebrity news": "2026-11-23T20:50:12.455801+00:00"
   },
   "posted_promo_captions": {
     "684f88fdb22717cf5c1bc4127ba32f8fb6899693": "2026-11-23T10:31:15.448152+00:00",
     "4303eb247cfb8a1b6c45809b3b9d90a4951ba5b7": "2026-11-23T10:35:41.127689+00:00",
     "2d3e16526fb3cbc058a03f823c8e9da55e3c5fc4": "2026-11-23T16:50:20.987021+00:00",
-    "0f533230fe5974fc500874142a015d99aa2d1b98": "2026-11-23T17:48:49.255598+00:00"
+    "0f533230fe5974fc500874142a015d99aa2d1b98": "2026-11-23T17:48:49.255598+00:00",
+    "9ad72485962bcf8b20442192ab12ff2a56b798df": "2026-11-23T20:50:12.457123+00:00"
   },
   "file_card_post_counts": {
     "BlueSky Trend": {
-      "day": "2026-11-23",
-      "day_n": 4,
+      "day": "2026-11-24",
+      "day_n": 1,
       "week": "2026-W48",
-      "week_n": 4,
+      "week_n": 5,
       "month": "2026-11",
-      "month_n": 4
+      "month_n": 5
     }
   },
   "last_bsky_post_at": {
-    "BlueSky Trend": "2026-11-23T17:48:49.255639+00:00"
+    "BlueSky Trend": "2026-11-23T20:50:12.457162+00:00"
   },
   "file_card_post_slots": {
     "BlueSky Trend": {
@@ -47,43 +50,41 @@
         2,
         3,
         4
+      ],
+      "2026-11-24": [
+        1
       ]
     }
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 6,
+      "success": 7,
       "fail": 1,
-      "last_ok": false,
-      "last_error": "no photo, skipped",
-      "last_run": "2026-11-23T19:53:15.020667+00:00"
+      "last_ok": true,
+      "last_error": "",
+      "last_run": "2026-11-23T20:50:12.458300+00:00"
     }
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T19:53:15.020671+00:00"
+    "BlueSky Trend": "2026-11-23T20:50:12.458303+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
       "date": "2026-11-23",
-      "count": 7
+      "count": 8
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T20:27:07.120815+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T20:48:14.411548+00:00"
     }
   ],
   "posted_urls": [],
   "posted_topics": [],
   "replied_comments": [],
-  "file_card_retries": {
-    "BlueSky Trend": {
-      "fails": 1,
-      "next_retry": "2026-11-23T20:23:15.019624+00:00"
-    }
-  }
+  "file_card_retries": {}
 }

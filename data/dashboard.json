@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T20:27:12.143081+00:00",
-  "last_run": "2026-11-23T20:27:07.119261+00:00",
-  "runs": 20,
+  "generated_at": "2026-11-23T20:50:12.630304+00:00",
+  "last_run": "2026-11-23T20:48:14.410202+00:00",
+  "runs": 21,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -33,15 +33,15 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T19:53:15.020671+00:00"
+    "BlueSky Trend": "2026-11-23T20:50:12.458303+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 6,
+      "success": 7,
       "fail": 1,
-      "last_ok": false,
-      "last_error": "no photo, skipped",
-      "last_run": "2026-11-23T19:53:15.020667+00:00"
+      "last_ok": true,
+      "last_error": "",
+      "last_run": "2026-11-23T20:50:12.458300+00:00"
     }
   },
   "file_cards": [
@@ -49,21 +49,21 @@
       "name": "BlueSky Trend",
       "type": "bluesky_post",
       "status": "active",
-      "computed_status": "error",
+      "computed_status": "active",
       "link": "https://shorturl.at/eZnco",
       "account_handle": "primonewstoday.bsky.social",
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-23T19:53:15.020671+00:00",
-      "runs_today": 7,
-      "posts_today": 0,
+      "last_run": "2026-11-23T20:50:12.458303+00:00",
+      "runs_today": 8,
+      "posts_today": 1,
       "next_runs": [
-        "2026-11-24T02:38:15.020671+06:00",
-        "2026-11-24T02:53:15.020671+06:00",
-        "2026-11-24T03:08:15.020671+06:00",
-        "2026-11-24T03:23:15.020671+06:00",
-        "2026-11-24T03:38:15.020671+06:00"
+        "2026-11-24T03:05:12.458303+06:00",
+        "2026-11-24T03:20:12.458303+06:00",
+        "2026-11-24T03:35:12.458303+06:00",
+        "2026-11-24T03:50:12.458303+06:00",
+        "2026-11-24T04:05:12.458303+06:00"
       ],
       "next_post_times": [
         "2026-11-24T03:01:00+06:00",
@@ -72,9 +72,9 @@
         "2026-11-24T06:05:00+06:00",
         "2026-11-24T07:00:00+06:00"
       ],
-      "success": 6,
+      "success": 7,
       "fail": 1,
-      "last_error": "no photo, skipped",
+      "last_error": "",
       "color": "",
       "notes": "",
       "source": "trending",
@@ -115,8 +115,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -127,12 +136,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -141,10 +150,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-23T20:27:07.120815+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-23T20:48:14.411548+00:00"
     }
   ],
   "dry_run": false,
@@ -154,316 +163,316 @@
   },
   "trending": [
     "Google plans personalized AI TV channel",
-    "Grand Theft Auto VI release",
-    "Nvidia rehires Huang",
-    "Alice Huang espionage allegations",
+    "Hegseth's former aide urges resignation",
+    "Washington girls' sports sex exam law",
     "SEC probes Nvidia accounting",
-    "Trump calls Putin his friend",
+    "Alice Huang espionage allegations",
     "Cyclops in Avengers: Doomsday footage",
     "Weather forecasts include lead plume",
-    "Thanksgiving dinner preparations",
-    "NFL Week 11 games"
+    "Grand Theft Auto VI release",
+    "Tarik Skubal signs with Mets",
+    "Marcus Olang's essay on AI writing"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T20:27:12.080483+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T20:27:12.078731+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T20:27:11.729772+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T20:27:07.121812+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T20:27:07.120826+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #20 started (--only blogger)",
-      "created_at": "2026-11-23T20:27:07.119286+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T19:53:15.083045+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Google plans personalized AI TV channel', 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Trump says he protected Musk', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-23T19:53:15.078207+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
-      "created_at": "2026-11-23T19:53:15.020699+00:00",
+      "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+      "created_at": "2026-11-23T20:50:12.458319+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "card 'BlueSky Trend': run failed (1/2 retries) - next retry at 02:23 Dhaka",
-      "created_at": "2026-11-23T19:53:15.019668+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "warning",
-      "message": "card 'BlueSky Trend': no photo, skipped - Bluesky post needs a verified real news photo",
-      "created_at": "2026-11-23T19:53:15.018647+00:00",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-23T20:50:12.457291+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-23T19:53:15.017527+00:00",
+      "message": "card 'BlueSky Trend': promo posted - event '2026 breakup celebrity news' on 24h cooldown (topic + link+event recorded)",
+      "created_at": "2026-11-23T20:50:12.455813+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1500x1500 (ratio 1.00) - unchanged",
+      "created_at": "2026-11-23T20:49:17.864667+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 25 candidate(s) tried, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-23T19:53:15.016610+00:00",
+      "message": "prepare_bsky_image: original 1500x1500 (ratio 1.00) - kept, no crop",
+      "created_at": "2026-11-23T20:49:17.863795+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Google Play Opens a Private Lane for Personal AI-Built Apps ' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:15.015391+00:00",
+      "message": "photo candidate: '2026 Celebrity Breakups - E! News' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-23T20:49:17.862349+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMidkFVX3lxTE82Y01TM0RuTnVLR1p4dmkzcVFkdnJPdUlJeDVWbEtUa053czJCRFp4aWt2V0VOTE9wWHB) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:15.012949+00:00",
+      "message": "promo category: USA celebrity news",
+      "created_at": "2026-11-23T20:49:17.861373+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Google plans to give Private AI Compute a memory that follow' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:14.791880+00:00",
+      "message": "photo: ACCEPTED relevant photo for '2026 Celebrity Breakups - E! News': https://store.fifa.com/cdn/shop/files/image_217bb8c0-803c-4772-9c18-18f1e677f831.jpg?v=1774372210 (from bing-images, query '2026 Celebrity Breakups - E! News', page: https://www.nbcmiami.com/news/sports/2026-world-cup-logo-officially-revealed-by-fifa/3036738/ | Offi - matches 2 key entities (2026, news))",
+      "created_at": "2026-11-23T20:49:17.860310+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikgFBVV95cUxNeWFPUW9LX1o5Z1BEM0lPTGlwTGZSd3RxdWdBa3I2ZlRzR091WFNZMWFnSG00c0pycnF) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:14.789572+00:00",
+      "message": "vision: unavailable - keyword check decides ('2026 Celebrity Breakups - E! News': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-23T20:49:17.858533+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Put Gemini to work for you - blog.google' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:14.439415+00:00",
+      "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
+      "created_at": "2026-11-23T20:49:04.695676+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWF2N1A4NTZkR3ZDemlDLUIyYlUwNVY2bmRKeEdCaEluLVg5MUJXWU1BY2VZNjhZdWR) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:14.437184+00:00",
+      "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
+      "created_at": "2026-11-23T20:49:04.351984+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Google adds Drive and Wallet to AI search personalization — ' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:14.067556+00:00",
+      "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+      "created_at": "2026-11-23T20:49:04.189910+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipwFBVV95cUxNOTJ2ekRXMlhWLVdpaEcybUtMa1JIMWJxblI2azkybUFmUVI4NDczUzYyTjNHU1QwcVJ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:14.065170+00:00",
+      "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+      "created_at": "2026-11-23T20:49:03.912798+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Google Wants To Make a 24/7 AI TV Channel. You’ll Be the Mai' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:13.823293+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:49.750702+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxPWGp4T1lOaDJaX2RIUlFhOWRaUEMzbUJ1eU5TNW5fMlNYTDEtNXl0SnVBSkxDdE9HeGN) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:13.820605+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:49.749252+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: no category yielded a fresh story with a real photo - falling back to custom/trending/breaking news",
-      "created_at": "2026-11-23T19:53:12.985736+00:00",
+      "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
+      "created_at": "2026-11-23T20:48:49.748248+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:12.984283+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5BcDgzSGtkM0lGR0tSdXdLdkczbkNIa1EwRDhMekRrZ0VfejNvdzNmd3Z3bFlUdnFORnR) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T20:48:49.746018+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3hoekpkTmwxcjE1NnNid3RFSXVsVGtob3A3dFNKVjRNZzVnaXMxRnV6N3pIellLeVd) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:12.981832+00:00",
+      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-23T20:48:49.516798+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'More than 700,000 Russian Soldiers Killed in Ukraine War, Ne' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:12.738863+00:00",
+      "message": "photo: no real photo found for 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette' (0 download(s) tried)",
+      "created_at": "2026-11-23T20:48:49.515879+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxOanVmQXA3NXR4MWsyOEFZM0hWWDRGZVU0TVVDQkZmSWhFUFNqTHlObGJyUGI1QmdWNmN) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:12.736478+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.cheapest-concert-tickets.com/images/artists/50-cent.jpg (page: https://allhiphop.com/news/50-cent-roasts-tony-yayo-for-stealing-his-clothes/ | 50 Cent Tour Tickets - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.514804+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:12.329988+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.bravado.de/cdn/shop/files/50-Cent_Best-Of-50-Cent_2LP_s142079_o208424_a354365_v6825368.e (page: https://www.cheapest-concert-tickets.com/tickets/50-cent.html | 50 Cent auf Vinyl erleben | Bravado  - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.513850+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:12.327453+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://assets.foxdcg.com/dpp-uploaded/images/50-ways-to-catch-a-killer-with-50-cent-nation/seriesLi (page: https://thathollywoodshow.com/latest-news/50-cent-action-channel-ready-to-brawl-on-pluto-tv/ | Watch - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.512896+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war updates: Navy says tankers ablaze near Hormuz after' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:11.985616+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://hips.hearstapps.com/hmg-prod/images/hlh090123cvrsept-digitalcvrs-50-resized-64c4269317d23.jp (page: https://nation.foxnews.com/50-ways-to-catch-a-killer-with-50-cent-nation/ | 50 Cent Reveals How He B - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.511956+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxONUdmdEJGUnZfMzVyUjZSNGF6VjBWNkd3d1NWM1d2SEZUNTV6aVRjLVR4X1pKbmtMRHp) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:11.982962+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._37,_No._50 - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.511025+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Tehran says US drone downed near Hormuz - Al ' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:11.754852+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.509998+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:11.752483+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.508750+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:10.946071+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.507672+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:10.943825+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:49.506627+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - skipped (same event used within 24h, event key 'altcoin bitcoin crypto ether insight invest network news tod')",
-      "created_at": "2026-11-23T19:53:10.599115+00:00",
+      "message": "bing-images: 4 candidate(s) for '50 US news websites Four'",
+      "created_at": "2026-11-23T20:48:49.504189+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Where Will USA Rare Earth Stock Be in 5 Years? This Mine Hol' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:10.597725+00:00",
+      "message": "google-images: 0 candidate(s) for '50 US news websites Four'",
+      "created_at": "2026-11-23T20:48:49.146496+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiwFBVV95cUxQczEtQkFqaTV2TDdzNkRDUlVqa0FqQmRjYjY0OEIxWUtXeFc2TU5EOERxVEt4Ukw4Z3J) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:10.595174+00:00",
+      "message": "wikimedia: 5 result(s) for '50 US news websites Four'",
+      "created_at": "2026-11-23T20:48:48.983631+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'US tech stocks plunge into bear market in worst week since C' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:10.352364+00:00",
+      "message": "openverse: 0 result(s) for '50 US news websites Four'",
+      "created_at": "2026-11-23T20:48:48.647441+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihAFBVV95cUxPcXlaSEs0VF84U3VRbVowdTMxMm5kRktENGl6bGtweEtZWVJfVzZQUWY3eUkyamtzMFB) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:10.349960+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:36.917052+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Correction or deeper reckoning? Investors seek signs US stoc' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:10.099383+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:36.916124+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnY) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:10.096684+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:36.915273+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:09.475450+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:36.914270+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:09.472950+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:36.913336+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
-      "created_at": "2026-11-23T19:53:09.128442+00:00",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:36.912222+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxPMmd4NTlaRXRMSE1zbmdzVTdhaVA1QWxURkQ2aFlmU0REdDZfQ1h5RmczU01EcGZNaHh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T19:53:09.126291+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:36.895933+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-23T19:53:08.885164+00:00",
+      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:36.614885+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Americans’ Trust in Information From News Organizations Has Risen in the Past Year - Pew Research Center' (0 download(s) tried)",
-      "created_at": "2026-11-23T19:53:08.884172+00:00",
+      "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:36.473898+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.pinimg.com/736x/d5/14/03/d514034bf634a0f488e092793d92306b.jpg (page: https://www.independent.co.uk/life-style/fashion/red-dress-awards-season-2024-oscars-b2508095.html | - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-23T19:53:08.882923+00:00",
+      "message": "openverse: search HTTP 500 for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:36.138864+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:28.804047+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T20:48:28.802990+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:28.801828+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:28.799588+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:28.798501+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-23T20:48:28.794840+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:28.792426+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-23T20:48:28.570932+00:00",
       "card": ""
     }
   ]

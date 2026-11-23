@@ -2,6 +2,420 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-23T20:50:12.631770+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
+    "created_at": "2026-11-23T20:50:12.627575+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+    "created_at": "2026-11-23T20:50:12.458319+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T20:50:12.457291+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': promo posted - event '2026 breakup celebrity news' on 24h cooldown (topic + link+event recorded)",
+    "created_at": "2026-11-23T20:50:12.455813+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1500x1500 (ratio 1.00) - unchanged",
+    "created_at": "2026-11-23T20:49:17.864667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 1500x1500 (ratio 1.00) - kept, no crop",
+    "created_at": "2026-11-23T20:49:17.863795+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-23T20:49:17.862349+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA celebrity news",
+    "created_at": "2026-11-23T20:49:17.861373+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for '2026 Celebrity Breakups - E! News': https://store.fifa.com/cdn/shop/files/image_217bb8c0-803c-4772-9c18-18f1e677f831.jpg?v=1774372210 (from bing-images, query '2026 Celebrity Breakups - E! News', page: https://www.nbcmiami.com/news/sports/2026-world-cup-logo-officially-revealed-by-fifa/3036738/ | Offi - matches 2 key entities (2026, news))",
+    "created_at": "2026-11-23T20:49:17.860310+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: unavailable - keyword check decides ('2026 Celebrity Breakups - E! News': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+    "created_at": "2026-11-23T20:49:17.858533+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T20:49:04.695676+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T20:49:04.351984+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T20:49:04.189910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
+    "created_at": "2026-11-23T20:49:03.912798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:49.750702+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:49.749252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
+    "created_at": "2026-11-23T20:48:49.748248+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5BcDgzSGtkM0lGR0tSdXdLdkczbkNIa1EwRDhMekRrZ0VfejNvdzNmd3Z3bFlUdnFORnR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T20:48:49.746018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-23T20:48:49.516798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette' (0 download(s) tried)",
+    "created_at": "2026-11-23T20:48:49.515879+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.cheapest-concert-tickets.com/images/artists/50-cent.jpg (page: https://allhiphop.com/news/50-cent-roasts-tony-yayo-for-stealing-his-clothes/ | 50 Cent Tour Tickets - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.514804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.bravado.de/cdn/shop/files/50-Cent_Best-Of-50-Cent_2LP_s142079_o208424_a354365_v6825368.e (page: https://www.cheapest-concert-tickets.com/tickets/50-cent.html | 50 Cent auf Vinyl erleben | Bravado  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.513850+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://assets.foxdcg.com/dpp-uploaded/images/50-ways-to-catch-a-killer-with-50-cent-nation/seriesLi (page: https://thathollywoodshow.com/latest-news/50-cent-action-channel-ready-to-brawl-on-pluto-tv/ | Watch - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.512896+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://hips.hearstapps.com/hmg-prod/images/hlh090123cvrsept-digitalcvrs-50-resized-64c4269317d23.jp (page: https://nation.foxnews.com/50-ways-to-catch-a-killer-with-50-cent-nation/ | 50 Cent Reveals How He B - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.511956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._37,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.511025+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.509998+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.508750+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.507672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Galveston_Daily_News._%28Galveston%2C_T (page: https://commons.wikimedia.org/wiki/File:The_Galveston_Daily_News._(Galveston,_Tex.),_Vol._34,_No._50 - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:49.506627+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '50 US news websites Four'",
+    "created_at": "2026-11-23T20:48:49.504189+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '50 US news websites Four'",
+    "created_at": "2026-11-23T20:48:49.146496+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for '50 US news websites Four'",
+    "created_at": "2026-11-23T20:48:48.983631+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '50 US news websites Four'",
+    "created_at": "2026-11-23T20:48:48.647441+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:36.917052+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:36.916124+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:36.915273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:36.914270+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:36.913336+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:36.912222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:36.895933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:36.614885+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:36.473898+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 500 for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:36.138864+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:28.804047+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:28.802990+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://www.theoneapparel.com/cdn/shop/products/Womens-Long-Sleeve-Crop-Top-with-V-Neckline-Theone-A (page: https://stylesatlife.com/articles/crop-tops/ | Women's Crop Tops - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:28.801828+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://i5.walmartimages.com/seo/Women-s-Basic-Scoop-Neck-Long-Sleeve-Fitted-Crop-Top-Tee-Shirt_ba49 (page: https://www.theoneapparel.com/collections/womens-crop-tops | A2Y Women's Basic Solid Stretchable Sco - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:28.799588+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/141f317e-79f1-4f45-a9b5-225f6fb2e502.jpeg?h=365&w=240&dpr=2 (page: https://www.walmart.com/ip/A2Y-Women-s-Basic-Solid-Stretchable-Scoop-Neck-Long-Sleeve-Crop-Top-Heath - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:28.798501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Top 50 US news websites: Four in five see traffic '): https://n.nordstrommedia.com/it/d14361ab-f9a4-4554-a51b-e758f43ae434.jpeg?h=368&w=240&dpr=2 (page: https://www.nordstromrack.com/shop/women/clothing/tops/crop-top?filterBySleeveLength=long-sleeve | L - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-23T20:48:28.794840+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:28.792426+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:28.570932+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:28.404616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-23T20:48:28.217376+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:19.907673+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-23T20:48:19.906778+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+    "created_at": "2026-11-23T20:48:19.905669+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+    "created_at": "2026-11-23T20:48:19.903395+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
+    "created_at": "2026-11-23T20:48:19.695083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Google plans personalized AI TV channel', \"Hegseth's former aide urges resignation\", \"Washington girls' sports sex exam law\", 'SEC probes Nvidia accounting', 'Alice Huang espionage allegations']",
+    "created_at": "2026-11-23T20:48:19.363151+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T20:48:19.127911+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-23T20:48:19.126872+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-23T20:48:19.125148+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': retry 1/2 after failure - due now",
+    "created_at": "2026-11-23T20:48:19.123999+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-23T20:48:19.122447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-23T20:48:18.712248+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-23T20:48:14.412484+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-23T20:48:14.411557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #21 started (--only bluesky)",
+    "created_at": "2026-11-23T20:48:14.410225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T20:27:12.144719+00:00",
     "card": ""
   },
@@ -783,420 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://dreamchaserhub.com/wp-content/uploads/2024/05/20.png (page: https://dreamchaserhub.com/good-morning-monday-fall-images-and-quotes/ | 39+ Good Morning Happy Mond - only 0 of 8 key entities in the source page)",
     "created_at": "2026-11-23T19:51:56.178156+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/736x/cf/f6/96/cff6961081f881e429bfadd7e311a388.jpg (page: https://dreamchaserhub.com/good-morning-monday-fall-images-and-quotes/ | Happy Monday Quotes to Star - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:56.177185+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/736x/95/27/72/9527723ac4cd0a5c929003439320f107.jpg (page: https://www.pinterest.com/pin/happy-monday-quotes-to-start-your-week--70437485545851/ | Happy Autumn - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:56.176172+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://i.pinimg.com/originals/da/d6/db/dad6db8979cd3f399119d5a7d0d6b59e.jpg?nii=t (page: https://www.pinterest.com/pin/happy-autumn-monday--20195898323671829/ | Happy Monday Fall - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:56.175065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T19:51:56.172712+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T19:51:55.884168+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T19:51:55.770348+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T19:51:55.442488+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:46.257952+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:46.256658+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Donald Trump News: Breaking Headlines and Video on President' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:51:46.255657+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aSmtma1NveGJ6Q2xJUmwxempzNzE2WmxGTUxjMklLVkZheWJrcFNPSGNKX2NRNmRnSnZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:51:46.253062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Celebrity Splits of 2026: Zosia Mamet and Evan Jonigkeit, Mo' - skipped (same event used within 24h, event key '2026 broke celebrity evan jonigkeit mamet split star weekly ')",
-    "created_at": "2026-11-23T19:51:45.484418+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'British Celebrity Loses Legal Bid to Prevent Publication of ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T19:51:45.483298+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'British Celebrity Loses Legal Bid to Prevent Publication of Identity and Sexual Misconduct Allegations - The Hollywood Reporter' (0 download(s) tried)",
-    "created_at": "2026-11-23T19:51:45.482123+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:45.480479+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:45.479294+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:45.477776+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:45.476447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid'",
-    "created_at": "2026-11-23T19:51:45.473583+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid'",
-    "created_at": "2026-11-23T19:51:45.267989+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid'",
-    "created_at": "2026-11-23T19:51:45.121510+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 503 for 'British Celebrity Loses Legal Bid'",
-    "created_at": "2026-11-23T19:51:44.638936+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:39.266014+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:39.264931+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:39.264118+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:39.263125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:39.262006+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:39.260713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:39.258018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:39.028000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:38.899212+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:38.532918+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:32.446324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:32.445139+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://bnp.org.uk/wp-content/uploads/2016/11/culture.jpg (page: https://www.indy100.com/article/the-14-most-annoying-things-you-can-say-to-a-british-person--WyhbaWg - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:32.444104+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://www.insightdiy.co.uk/live/news/5070aA.jpg (page: https://bnp.org.uk/policies/british-culture/ | Is it time to start buying British? - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:32.442886+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: https://www.insightdiy.co.uk/news/is-it-time-to-start-buying-british/5070.htm | British flag Wallpap - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:32.441964+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'British Celebrity Loses Legal Bid to Prevent Publi'): http://cdn.wallpapersafari.com/17/23/pDl3Ej.jpg (page: https://4kwallpapers.com/world/british-flag-union-9445.html | British Flag Wallpaper - WallpaperSafa - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:32.440778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:32.438368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:32.296864+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:32.158167+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'British Celebrity Loses Legal Bid to Prevent Publication of '",
-    "created_at": "2026-11-23T19:51:31.736586+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:23.196779+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:23.195813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'British Celebrity Loses Legal Bid to Prevent Publication of ' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:51:23.194710+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxOZVlfbGtSVG1qR2N0WlJSNFhlbU9CUXQyTHBiQnlXY1U3TjlCY0RZcWN0NXJiQldEQTh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-23T19:51:23.192174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-23T19:51:22.846094+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for '2026 Celebrity Breakups - E! News' (0 download(s) tried)",
-    "created_at": "2026-11-23T19:51:22.845058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://readthecloud.co/wp-content/uploads/2026/06/ผลบอลโลกล่าสุด-2026-1024x536.jpg (page: https://www.cnet.com/culture/entertainment/can-i-buy-tickets-for-the-2026-fifa-world-cup-right-now/  - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:22.844040+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://media.gettyimages.com/id/2250015631/es/foto/washington-dc-a-general-view-of-fifa-world-cup-2 (page: https://readthecloud.co/worldcup/ | 679.612 fotos e imágenes de alta resolución de Fifa World Cup 20 - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:22.842828+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://1000logos.net/wp-content/uploads/2023/05/World-Cup-2026-Emblem-1536x864.png (page: https://utpaqp.edu.pe/search/world-cup-2026-official-logo/ | World Cup 2026 Logo and symbol, meaning - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:22.841620+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://pbs.twimg.com/media/FwaOHS9WcAA1dqu.jpg (page: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/algeria-team-profile- - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:22.840338+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups'",
-    "created_at": "2026-11-23T19:51:22.837695+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups'",
-    "created_at": "2026-11-23T19:51:22.675313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups'",
-    "created_at": "2026-11-23T19:51:22.388109+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups'",
-    "created_at": "2026-11-23T19:51:21.973971+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:15.987226+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:15.986307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://readthecloud.co/wp-content/uploads/2026/06/ผลบอลโลกล่าสุด-2026-1024x536.jpg (page: https://www.cnet.com/culture/entertainment/can-i-buy-tickets-for-the-2026-fifa-world-cup-right-now/  - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:15.985404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://media.gettyimages.com/id/2250015631/es/foto/washington-dc-a-general-view-of-fifa-world-cup-2 (page: https://readthecloud.co/worldcup/ | 679.612 fotos e imágenes de alta resolución de Fifa World Cup 20 - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:15.984341+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://1000logos.net/wp-content/uploads/2023/05/World-Cup-2026-Emblem-1536x864.png (page: https://utpaqp.edu.pe/search/world-cup-2026-official-logo/ | World Cup 2026 Logo and symbol, meaning - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:15.983348+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '2026 Celebrity Breakups - E! News'): https://pbs.twimg.com/media/FwaOHS9WcAA1dqu.jpg (page: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/algeria-team-profile- - only 1 of 4 key entities in the source page)",
-    "created_at": "2026-11-23T19:51:15.982220+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T19:51:15.979968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T19:51:15.709939+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T19:51:15.544959+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '2026 Celebrity Breakups - E! News'",
-    "created_at": "2026-11-23T19:51:15.105539+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:09.558963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T19:51:09.557904+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '2026 Celebrity Breakups - E! News' - rejected (no og:image)",
-    "created_at": "2026-11-23T19:51:09.556714+00:00",
     "card": ""
   }
 ]
