@@ -1055,7 +1055,12 @@ def _pexels_photo(topic):
             url = src.get("large2x") or src.get("large") or src.get("original")
             meta = {"alt": p.get("alt") or "", "title": ""}
             if url and _photo_ok(meta):
-                return {"url": url, "source": "pexels", "alt": meta["alt"]}
+                # Rebuild #7.6: the photo page URL + the photo's own
+                # description are the relevance evidence (Pexels has
+                # no keyword slug in its page URL).
+                return {"url": url, "source": "pexels", "alt": meta["alt"],
+                        "page_url": p.get("url") or "",
+                        "page_title": p.get("alt") or ""}
             if url:
                 log("info", f"pexels: rejected candidate (bad title): {url[:100]}")
     except Exception as e:
@@ -1084,7 +1089,12 @@ def _pixabay_photo(topic):
             url = h.get("largeImageURL") or h.get("webformatURL")
             meta = {"alt": h.get("tags") or "", "title": ""}
             if url and _photo_ok(meta):
-                return {"url": url, "source": "pixabay", "alt": meta["alt"]}
+                # Rebuild #7.6: the Pixabay photo page URL carries a
+                # descriptive slug (relevance evidence) and the tags
+                # describe the photo.
+                return {"url": url, "source": "pixabay", "alt": meta["alt"],
+                        "page_url": h.get("pageURL") or "",
+                        "page_title": h.get("tags") or ""}
             if url:
                 log("info", f"pixabay: rejected candidate (bad title): {url[:100]}")
     except Exception as e:
@@ -1114,8 +1124,13 @@ def _openverse_photos(topic, limit=5):
             url = item.get("url") or item.get("foreign_landing_url")
             meta = {"alt": item.get("title") or "", "title": item.get("title") or ""}
             if url and _photo_ok(meta):
+                # Rebuild #7.6: the foreign landing page (the page
+                # hosting the image) + the item title are the
+                # relevance evidence.
                 out.append({"url": url, "source": "openverse",
-                            "alt": meta["alt"]})
+                            "alt": meta["alt"],
+                            "page_url": item.get("foreign_landing_url") or "",
+                            "page_title": item.get("title") or ""})
             elif url:
                 log("info", f"openverse: rejected candidate (bad title): {url[:100]}")
         return out
@@ -1174,8 +1189,13 @@ def _wikimedia_photos(topic, limit=5):
                 continue
             meta = {"alt": page.get("title") or "", "title": page.get("title") or ""}
             if _photo_ok(meta):
+                # Rebuild #7.6: the Commons file page (descriptionurl)
+                # + the file title are the relevance evidence - the
+                # file title usually names the subject.
                 out.append({"url": url, "source": "wikimedia",
-                            "alt": meta["alt"]})
+                            "alt": meta["alt"],
+                            "page_url": info.get("descriptionurl") or "",
+                            "page_title": page.get("title") or ""})
             else:
                 log("info", f"wikimedia: rejected candidate (bad title): {url[:100]}")
         return out[:limit]
@@ -1184,7 +1204,8 @@ def _wikimedia_photos(topic, limit=5):
         return []
 
 
-def _add_image_url(found, seen, url, source, topic):
+def _add_image_url(found, seen, url, source, topic, page_url=None,
+                   page_title=None):
     """Append one scraped image URL to `found` (deduped, logo/icon
     and AI URLs rejected, webp skipped - the download gate only
     accepts JPEG/PNG). Rebuild #7.4 (live finding): Bing's results
@@ -1194,7 +1215,10 @@ def _add_image_url(found, seen, url, source, topic):
     URL is therefore HTML-unescaped, cut at the first quote /
     whitespace, and must end with a real image extension. Search
     engines' own UI images (bing.com, google.com, gstatic) are
-    never real photos."""
+    never real photos. Rebuild #7.6: page_url / page_title are the
+    SOURCE PAGE of the image (Bing's purl/t, Google's ru/pt) so the
+    caller can check the photo is RELEVANT to the story; a candidate
+    with no source page cannot be verified relevant."""
     try:
         u = html_lib.unescape(str(url or "")).strip()
         for stop in ('"', "'", " ", "\t", "\n", "<"):
@@ -1213,7 +1237,9 @@ def _add_image_url(found, seen, url, source, topic):
             return
         if _is_logo_image_url(u) or _is_pollinations_url(u):
             return
-        found.append({"url": u, "source": source, "alt": topic})
+        found.append({"url": u, "source": source, "alt": topic,
+                      "page_url": page_url or "",
+                      "page_title": page_title or ""})
     except Exception:
         return
 
@@ -1223,15 +1249,35 @@ def _extract_image_search_urls(html, source, topic, limit=5):
     Images embeds the original URL as "ou":"https://..."; Bing
     Images as "murl":"https://...". Falls back to any direct image
     file URL in the page. Google/gstatic hosts and logo/icon URLs
-    are skipped. Returns a list of {url, source, alt} dicts."""
+    are skipped. Returns a list of {url, source, alt} dicts.
+    Rebuild #7.6: each entry also carries its SOURCE PAGE - Bing's
+    "purl" (page URL) + "t" (page title), Google's "ru" + "pt" - so
+    the caller can check the photo is RELEVANT to the story (the
+    source page must be about the story, _photo_relevant). The page
+    info is taken from the same result entry as the image URL (the
+    text between this entry's image URL and the next entry's), never
+    from a neighbouring entry."""
     # Bing double-encodes its JSON (quotes become &quot;): unescape
     # the page FIRST, or one regex match swallows a page URL + the
     # next entry's image URL as a single junk string.
     html = html_lib.unescape(html or "")
     found, seen = [], set()
-    for m in re.finditer(r'"(?:ou|murl)"\s*:\s*"(https?://[^"\\]+)"',
-                         html or ""):
-        _add_image_url(found, seen, m.group(1), source, topic)
+    matches = list(re.finditer(
+        r'"(?:ou|murl)"\s*:\s*"(https?://[^"\\]+)"', html or ""))
+    for i, m in enumerate(matches):
+        end = (matches[i + 1].start() if i + 1 < len(matches)
+               else m.end() + 1000)
+        window = (html or "")[m.start():end]
+        page_url = None
+        pm = re.search(r'"(?:purl|ru)"\s*:\s*"(https?://[^"\\]+)"', window)
+        if pm:
+            page_url = pm.group(1)
+        page_title = None
+        tm = re.search(r'"(?:t|pt)"\s*:\s*"([^"\\]{1,200})"', window)
+        if tm:
+            page_title = tm.group(1)
+        _add_image_url(found, seen, m.group(1), source, topic,
+                       page_url, page_title)
         if len(found) >= limit:
             break
     if len(found) < limit:
@@ -1408,14 +1454,19 @@ def fetch_verified_photo(topic):
     return None
 
 
-def fetch_og_image(url, _depth=0):
+def fetch_og_image(url, _depth=0, topic=None):
     """The og:image (or twitter:image) of a link, verified as a real
     image. Used so a link-promo post still has a photo (no photo =
     no post). Returns the image URL or None.
     Rebuild #7.2: a Google News link is followed to the PUBLISHER's
     page first (its og:image is the Google News logo otherwise), and
     any og:image that is a logo / icon / generic graphic is rejected
-    - a logo is never a 'real photo'."""
+    - a logo is never a 'real photo'. Rebuild #7.6: when the caller
+    knows the story (topic), the page itself must be about that
+    story - its <title>/og:title must contain the story's key
+    entities (_photo_relevant) - or the og:image is not the
+    article's image and is rejected. The og:image of a wrong page
+    is by definition unrelated to the story."""
     if not url or not str(url).startswith("http"):
         return None
     try:
@@ -1433,7 +1484,7 @@ def fetch_og_image(url, _depth=0):
                     (urlparse(target).netloc or "").lower():
                 log("info", f"og:image: following Google News link to "
                            f"publisher {urlparse(target).netloc}")
-                return fetch_og_image(target, _depth=1)
+                return fetch_og_image(target, _depth=1, topic=topic)
         if "news.google.com" in final_host:
             # Rebuild #7.4: the page did NOT redirect to a publisher
             # (no HTTP 302, no meta-refresh, canonical points to
@@ -1446,6 +1497,27 @@ def fetch_og_image(url, _depth=0):
                         f"page, final URL {r.url[:120]}) - skipping, "
                         "og:image would be the logo")
             return None
+        # Rebuild #7.6: when the caller knows the story (topic), the
+        # page itself must be about that story - its <title> /
+        # og:title must contain the story's key entities - or the
+        # og:image is not the article's image and is rejected. The
+        # og:image of a wrong page is by definition unrelated to
+        # the story. (A Google News page never reaches here - it
+        # returned None above, so this gate only runs on the
+        # publisher's page or a direct publisher link.)
+        if topic:
+            title = ""
+            tm = (re.search(r'<title[^>]*>([^<]{1,200})</title>', html, re.IGNORECASE)
+                  or re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']',
+                               html, re.IGNORECASE))
+            if tm:
+                title = tm.group(1).strip()
+            rel, rel_reason = _photo_relevant(r.url, title, topic)
+            if not rel:
+                log("info", f"og:image rejected (page not about "
+                            f"'{topic[:50]}'): {r.url[:120]} "
+                            f"(page title: {title[:100]} - {rel_reason})")
+                return None
         m = (re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
                        html, re.IGNORECASE)
              or re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
@@ -1511,15 +1583,26 @@ def _is_logo_image_url(url):
 
 def _extract_redirect_url(html, base_url):
     """Publisher URL from a Google News redirect/interstitial page:
-    a meta refresh or the <link rel="canonical">. Returns the URL or
-    None. Rebuild #7.4: the meta-refresh is tried FIRST - Google News
+    a meta refresh, the <link rel="canonical">, or an outbound
+    anchor to the publisher's article page. Returns the URL or None.
+    Rebuild #7.4: the meta-refresh is tried FIRST - Google News
     interstitial pages redirect via meta-refresh to the publisher,
     while their canonical often points to the Google News page
     ITSELF; a candidate still on news.google.com is never returned
     (fetch_og_image would only ever read the Google News logo from
     it). The HTTP 302 redirect is separate: requests follows it
     automatically, so fetch_og_image usually never reaches this
-    function - this is for pages that do NOT 302."""
+    function - this is for pages that do NOT 302. Rebuild #7.6:
+    (3) an outbound anchor, for pages with neither a refresh nor an
+    outside canonical - the link text should read like an article
+    headline (10-200 chars). LIVE FINDING (2026-11-23): a real
+    Google News article page's HTML contains ZERO outbound links
+    to non-Google domains (59 hrefs, all google.com /
+    news.google.com), so (3) is best-effort - the CBMi token decodes
+    to an obfuscated blob, not a URL, and plain requests gets NO
+    HTTP 302 - so a Google News link that yields nothing here still
+    has the real-photo search fallback. Google's own pages,
+    javascript links, fragments and logo URLs are never followed."""
     if not html:
         return None
     candidates = []
@@ -1533,6 +1616,20 @@ def _extract_redirect_url(html, base_url):
                       html, re.IGNORECASE))
     if m:
         candidates.append(m.group(1).strip())
+    # (3) Rebuild #7.6: an outbound anchor to the publisher's
+    # article page, for Google News pages with neither a refresh nor
+    # an outside canonical. Google's own pages and logo URLs are
+    # never followed.
+    for m in re.finditer(r'<a[^>]*href=["\'](https?://[^"\']+)["\'][^>]*>'
+                         r'([^<]{10,200})</a>',
+                         html, re.IGNORECASE):
+        target = m.group(1).strip()
+        host = (urlparse(target).netloc or "").lower()
+        if "google.com" in host or "gstatic" in host:
+            continue
+        if _is_logo_image_url(target):
+            continue
+        candidates.append(target)
     for c in candidates:
         u = urljoin(base_url or "", c)
         if "news.google.com" not in (urlparse(u).netloc or "").lower():
@@ -1674,6 +1771,39 @@ def _photo_search_queries(topic):
     return out[:3]
 
 
+def _photo_relevant(page_url, page_title, headline):
+    """Is a candidate photo RELEVANT to the news story? Rebuild #7.6
+    (live failure, run #17, 2026-11-23): Bing attached REAL photos
+    that had nothing to do with the story - a UV nail lamp for a
+    Theresa May / Brexit post, a white lace wedding dress for a
+    Theresa May / Burnham post. The old check (valid JPEG/PNG
+    >=400px, not a logo/AI) never asked whether the image matches
+    the story, and an alt text that mentions a name is NOT proof
+    (the wedding dress's alt text said 'Theresa May'). The rule:
+    the SOURCE PAGE (the page hosting the image) must be about the
+    story - its title and/or URL must contain the story's key
+    entities (the event words of the headline, see _event_words).
+    A candidate with no source page at all cannot be verified and
+    is rejected. Returns (relevant, reason)."""
+    words = _event_words(headline)
+    if not words:
+        return False, "no key entities in the headline"
+    page_title = (page_title or "").strip()
+    page_url = (page_url or "").strip()
+    if not page_title and not page_url:
+        return False, "no source page to verify relevance"
+    hay = (page_title + " " + page_url).lower()
+    hay_words = {_stem_word(w) for w in re.findall(r"[a-z0-9]+", hay)}
+    hits = [w for w in words if w in hay_words]
+    need = 2 if len(words) >= 3 else 1
+    if len(hits) >= need:
+        return True, (f"matches {len(hits)} key entit"
+                      f"{'y' if len(hits) == 1 else 'ies'} "
+                      f"({', '.join(hits[:4])})")
+    return False, (f"only {len(hits)} of {len(words)} key entities "
+                   "in the source page")
+
+
 def _real_photo_for_topic(topic):
     """A REAL photo for a topic from real-photo sources only
     (Pexels / Pixabay / Openverse / Wikimedia Commons / Google Images
@@ -1686,7 +1816,12 @@ def _real_photo_for_topic(topic):
     search is logged per source (status / result count / rejection
     reason) and has two more keyless sources (Wikimedia Commons,
     Google Images, Bing Images) so a photo is actually found - a
-    download budget bounds the run. Returns a photo dict with
+    download budget bounds the run. Rebuild #7.6: every candidate
+    must also be RELEVANT to the story - its source page (title/URL)
+    must contain the story's key entities (_photo_relevant); a real
+    photo from an unrelated page (a product photo, a wedding dress)
+    is rejected before downloading, and an alt text that mentions a
+    name is never enough on its own. Returns a photo dict with
     local_path, or None (with a summary log of what was tried)."""
     tried_downloads = 0
     for q in _photo_search_queries(topic):
@@ -1721,6 +1856,23 @@ def _real_photo_for_topic(topic):
             if _is_logo_image_url(url):
                 log("info", f"photo: rejected (logo/icon URL): {url[:100]}")
                 continue
+            # Rebuild #7.6: RELEVANCE - the candidate's source page
+            # must be about this story (its title/URL must contain
+            # the story's key entities). A real photo from an
+            # unrelated page is rejected BEFORE downloading, so it
+            # never consumes the download budget. The page (not the
+            # alt text) is the evidence - an alt text that mentions a
+            # name proves nothing (run #17: a wedding dress whose alt
+            # text said 'Theresa May').
+            page = ((cand.get("page_url") or "") + " | " +
+                    (cand.get("page_title") or "")).strip(" |")
+            rel, rel_reason = _photo_relevant(
+                cand.get("page_url"), cand.get("page_title"), topic)
+            if not rel:
+                log("info", f"photo: rejected (irrelevant to "
+                            f"'{topic[:50]}'): {url[:100]} "
+                            f"(page: {page[:100]} - {rel_reason})")
+                continue
             if tried_downloads >= MAX_REAL_PHOTO_DOWNLOADS:
                 log("info", "photo: download budget reached "
                             f"({MAX_REAL_PHOTO_DOWNLOADS}) - stopping")
@@ -1728,11 +1880,15 @@ def _real_photo_for_topic(topic):
             tried_downloads += 1
             local = download_image(url, topic)
             if local:
-                log("info", f"photo: real photo for '{topic}' "
+                log("info", f"photo: ACCEPTED relevant photo for "
+                            f"'{topic[:60]}': {url[:100]} "
                             f"(from {cand.get('source') or 'stock'}, "
-                            f"query '{q}')")
+                            f"query '{q}', page: {page[:100]} - "
+                            f"{rel_reason})")
                 return {"url": url, "source": cand.get("source") or "stock",
-                        "alt": cand.get("alt") or topic, "local_path": local}
+                        "alt": cand.get("alt") or topic, "local_path": local,
+                        "page_url": cand.get("page_url") or "",
+                        "page_title": cand.get("page_title") or ""}
             log("info", f"photo: candidate rejected (download/verify failed): {url[:100]}")
     log("info", f"photo: no real photo found for '{topic}' "
                 f"({tried_downloads} download(s) tried)")
@@ -1776,6 +1932,28 @@ PICK_MAX_ITEMS = 25            # max news items examined per promo pick
 PICK_MAX_FALLBACK_SEARCHES = 6  # max real-photo searches per promo pick
 PICK_MAX_PHOTO_CANDIDATES = 5  # max real-photo candidates tried per search
 MAX_REAL_PHOTO_DOWNLOADS = 12  # max image downloads per real-photo search (bounds the run)
+
+# Rebuild #7.6: the user's four promo news categories (user order
+# 2026-11-23). Promo posts must be news in these categories -
+# USA Celebrity News, USA Political News, Finance USA, War News -
+# tried FIRST (rotating) before Bluesky trending / breaking news.
+PROMO_NEWS_CATEGORIES = ["USA celebrity news", "USA political news",
+                         "USA finance news", "war news"]
+
+
+def _rotated_promo_categories(state):
+    """The four user-ordered promo news categories, rotated so
+    consecutive posts cover different categories. The starting
+    category is derived from the number of promo posts already
+    recorded in state (len of posted_promo_topics % 4) - deterministic
+    and survives restarts, and it advances after every post because
+    the post is recorded in state before the next pick."""
+    cats = list(PROMO_NEWS_CATEGORIES)
+    if not cats:
+        return cats
+    n = len((state or {}).get("posted_promo_topics") or {})
+    start = n % len(cats)
+    return cats[start:] + cats[:start]
 
 # Rebuild #7.3: startup AI health check (one tiny test call per
 # provider, first model only - NOT the full key/model failover).
@@ -2064,8 +2242,11 @@ def _record_bsky_post_at(state, card_name):
 
 def _pick_fresh_promo_news(card, state):
     """Pick a FRESH news story for a promo post: (topic, headline, photo).
-    Candidates: the card's custom-text words first (a custom caption's
-    own words are the image search topic), then the card's topic, then
+    Candidates: the user's four news categories FIRST (Rebuild #7.6,
+    user order 2026-11-23 - USA celebrity news, USA political news,
+    USA finance news, war news, rotating the starting category per
+    post), then the card's custom-text words (a custom caption's own
+    words are the image search topic), then the card's topic, then
     Bluesky trending topics, then a Google News top story ("breaking
     news"). A story is fresh only if its headline was NOT used for a
     promo post in the last 24h (per-topic cooldown). The photo is the
@@ -2080,18 +2261,30 @@ def _pick_fresh_promo_news(card, state):
     finds the photo. When the article's own image is unavailable, a
     REAL photo is searched for that story from real-photo sources
     (Openverse / Pexels / Pixabay / Wikimedia / Google Images /
-    Bing Images); a real stock / editorial photo is acceptable.
-    Every candidate tried is logged (story + image URL +
-    accept/reject) so the log shows the search, and the search is
-    bounded (max items + max fallback searches) so a run can never
-    grind through dozens of doomed fetches. Returns (None, None, None)
-    when no fresh story with a real image exists; LAST_BSKY_SKIP says
-    why ("cooldown" = every story used within 24h, "no_photo" = fresh
-    stories exist but no real image could be fetched, "no_news" =
-    no trending/top news at all)."""
+    Bing Images); a real stock / editorial photo is acceptable - but
+    Rebuild #7.6: it must be RELEVANT to the story (its source page
+    must be about the story, _photo_relevant); a real photo from an
+    unrelated page is rejected, and an alt text that mentions a name
+    is never enough. Every candidate tried is logged (story + image
+    URL + accept/reject) so the log shows the search, and the search
+    is bounded (max items + max fallback searches) so a run can never
+    grind through dozens of doomed fetches. The chosen category is
+    logged on every post ('promo category: ...'). Returns (None,
+    None, None) when no fresh story with a real image exists;
+    LAST_BSKY_SKIP says why ("cooldown" = every story used within
+    24h, "no_photo" = fresh stories exist but no real image could be
+    fetched, "no_news" = no trending/top news at all)."""
     global LAST_BSKY_SKIP
     LAST_BSKY_SKIP = None
-    topics = []
+    # Rebuild #7.6: the user's four news categories FIRST (rotating
+    # the starting category per post), then the card's custom text /
+    # topic override, then Bluesky trending, then "breaking news".
+    # If no category yields a fresh story with a real relevant photo,
+    # the fallback order still runs - a post never goes out without
+    # a real photo, and a fresh story elsewhere is never wasted.
+    cat_topics = _rotated_promo_categories(state)
+    category_of = {_norm_news_key(c): c for c in cat_topics}
+    topics = list(cat_topics)
     if isinstance(card, dict):
         custom = (card.get("text") or "").strip()
         if custom:
@@ -2119,7 +2312,15 @@ def _pick_fresh_promo_news(card, state):
     seen_imgs = set()    # image URLs already rejected this pick - the
     # same logo must never be fetched/downloaded twice in one run
     tried_fallback = set()  # normalised headlines already fallback-searched
+    fallback_logged = False  # Rebuild #7.6: log once when the picker
+    # gives up on the categories and falls back to custom/trending/
+    # breaking news
     for topic in topics:
+        if _norm_news_key(topic) not in category_of and not fallback_logged:
+            fallback_logged = True
+            log("info", "promo: no category yielded a fresh story with "
+                        "a real photo - falling back to custom/trending/"
+                        "breaking news")
         try:
             _verified, _sources, items = verify_news(topic)
         except Exception:
@@ -2159,7 +2360,7 @@ def _pick_fresh_promo_news(card, state):
             # rejected below and the real-photo fallback runs.
             photo = None
             skip_fallback = False
-            img = fetch_og_image(link)
+            img = fetch_og_image(link, topic=headline)
             if img and img in seen_imgs:
                 log("info", f"photo candidate: '{headline[:60]}' - "
                             "rejected (same image already tried)")
@@ -2181,6 +2382,9 @@ def _pick_fresh_promo_news(card, state):
             else:
                 local = download_image(img, topic)
                 if local:
+                    cat = category_of.get(_norm_news_key(topic))
+                    if cat:
+                        log("info", f"promo category: {cat}")
                     log("info", f"photo candidate: '{headline[:60]}' - "
                                 f"ACCEPTED og:image (from {src})")
                     return topic, headline, {
@@ -2202,6 +2406,9 @@ def _pick_fresh_promo_news(card, state):
                 fallback_tries += 1
                 photo = _real_photo_for_topic(headline)
                 if photo and photo.get("local_path"):
+                    cat = category_of.get(_norm_news_key(topic))
+                    if cat:
+                        log("info", f"promo category: {cat}")
                     log("info", f"photo candidate: '{headline[:60]}' - "
                                 f"ACCEPTED real photo (from "
                                 f"{photo.get('source') or 'stock'})")
