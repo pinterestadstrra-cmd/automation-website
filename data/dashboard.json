@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-23T16:43:02.196714+00:00",
-  "last_run": "2026-11-23T16:42:57.404638+00:00",
-  "runs": 12,
+  "generated_at": "2026-11-23T16:50:21.014203+00:00",
+  "last_run": "2026-11-23T16:48:18.007870+00:00",
+  "runs": 13,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
@@ -33,37 +33,37 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T10:35:41.129395+00:00"
+    "BlueSky Trend": "2026-11-23T16:50:20.987891+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 2,
+      "success": 4,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-23T10:35:41.135809+00:00"
+      "last_run": "2026-11-23T16:50:20.991029+00:00"
     }
   },
   "file_cards": [
     {
       "name": "BlueSky Trend",
       "type": "bluesky_post",
-      "status": "paused",
-      "computed_status": "paused",
+      "status": "active",
+      "computed_status": "active",
       "link": "https://shorturl.at/eZnco",
-      "account_handle": "primotodaynews.bsky.social",
-      "interval_minutes": 30,
+      "account_handle": "primonewstoday.bsky.social",
+      "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-23T10:35:41.129395+00:00",
-      "runs_today": 2,
-      "posts_today": 2,
+      "last_run": "2026-11-23T16:50:20.987891+00:00",
+      "runs_today": 4,
+      "posts_today": 3,
       "next_runs": [
-        "2026-11-23T23:05:41.129395+06:00",
-        "2026-11-23T23:35:41.129395+06:00",
-        "2026-11-24T00:05:41.129395+06:00",
-        "2026-11-24T00:35:41.129395+06:00",
-        "2026-11-24T01:05:41.129395+06:00"
+        "2026-11-23T23:05:20.987891+06:00",
+        "2026-11-23T23:20:20.987891+06:00",
+        "2026-11-23T23:35:20.987891+06:00",
+        "2026-11-23T23:50:20.987891+06:00",
+        "2026-11-24T00:05:20.987891+06:00"
       ],
       "next_post_times": [
         "2026-11-23T23:04:00+06:00",
@@ -72,7 +72,7 @@
         "2026-11-24T02:06:00+06:00",
         "2026-11-24T03:01:00+06:00"
       ],
-      "success": 2,
+      "success": 4,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -82,7 +82,7 @@
       "bold_format": true,
       "window_start": "",
       "window_end": "",
-      "posts_per_run": 2,
+      "posts_per_run": 1,
       "reply_own": true,
       "reply_others": true,
       "replies_per_run": 10,
@@ -116,14 +116,14 @@
     }
   ],
   "account_handles": [
-    "primotodaynews.bsky.social"
+    "primonewstoday.bsky.social"
   ],
   "accounts_detail": [
     {
-      "handle": "primotodaynews.bsky.social",
+      "handle": "primonewstoday.bsky.social",
       "enabled": true,
-      "posts_limit": 24,
-      "posts_today": 2
+      "posts_limit": 0,
+      "posts_today": 1
     }
   ],
   "health": {
@@ -153,7 +153,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T16:42:57.405814+00:00"
+      "time": "2026-11-23T16:48:18.008911+00:00"
     }
   ],
   "dry_run": false,
@@ -177,302 +177,302 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T16:43:01.841744+00:00",
+      "message": "card 'BlueSky Trend' ran (no-op)",
+      "created_at": "2026-11-23T16:50:20.991047+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': posted less than 5 minutes ago - too soon, skipping",
+      "created_at": "2026-11-23T16:50:20.990465+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': post-only run (a posting slot is due; replies stay on the interval rhythm)",
+      "created_at": "2026-11-23T16:50:20.989399+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-23T16:50:20.988808+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+      "created_at": "2026-11-23T16:50:20.987909+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-23T16:50:20.987209+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': promo posted - event 'altcoin bitcoin crypto ether insight invest network news tod' on 24h cooldown (topic + link+event recorded)",
+      "created_at": "2026-11-23T16:50:20.985790+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1200x630 (ratio 1.90) - unchanged",
+      "created_at": "2026-11-23T16:49:40.125190+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T16:43:01.840241+00:00",
+      "message": "prepare_bsky_image: original 1200x630 (ratio 1.90) - kept, no crop",
+      "created_at": "2026-11-23T16:49:40.124407+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T16:43:01.490906+00:00",
+      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-23T16:49:40.123389+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T16:42:57.406671+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-23T16:42:57.405820+00:00",
+      "message": "promo category: USA finance news",
+      "created_at": "2026-11-23T16:49:40.122679+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #12 started (--only bluesky)",
-      "created_at": "2026-11-23T16:42:57.404659+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I': https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/mp (from bing-images, query 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - Investing News Network', page: https://nbcuniversalnewsgroup.com/nbcnews/2026/11/16/coming-up-on-nbc-news-today-november-16-novembe - matches 2 key entities (news, today))",
+      "created_at": "2026-11-23T16:49:40.121888+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T16:05:03.438802+00:00",
+      "message": "vision: unavailable - keyword check decides ('Today's Crypto News: Bitcoin, Ether and Altcoin In': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-23T16:49:40.120392+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['SEC probes Nvidia accounting', 'Grand Theft Auto VI release', 'Smithsonian plan spotted on Metro', 'Nvidia rehires Huang', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-23T16:05:03.433549+00:00",
+      "message": "photo: rejected (irrelevant to 'Today's Crypto News: Bitcoin, Ether and Altcoin In'): https://thumbs.dreamstime.com/z/what-today-23666894.jpg (page: https://www.today.com/video/full-episode-today-show-nov-9-273138245947 | Victoria Gifford Kennedy To - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:27.172433+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T16:05:03.190278+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
+      "created_at": "2026-11-23T16:49:27.170373+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T16:05:03.188411+00:00",
+      "message": "google-images: 0 candidate(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
+      "created_at": "2026-11-23T16:49:26.899242+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T16:05:02.801659+00:00",
+      "message": "wikimedia: 0 result(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
+      "created_at": "2026-11-23T16:49:26.794985+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T16:04:56.379799+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T16:04:56.378718+00:00",
+      "message": "openverse: 0 result(s) for 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I'",
+      "created_at": "2026-11-23T16:49:26.416641+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #11 started (--only blogger)",
-      "created_at": "2026-11-23T16:04:56.377058+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:19.002461+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T15:46:48.118196+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:19.001786+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['SEC probes Nvidia accounting', 'Army plans Iowa lead detonation', 'Nvidia rehires Huang', 'Avengers: Doomsday runtime confirmed', 'Trump calls Putin his friend']",
-      "created_at": "2026-11-23T15:46:48.113795+00:00",
+      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - rejected (no og:image)",
+      "created_at": "2026-11-23T16:49:19.000993+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T15:46:46.483897+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFV) - skipping, og:image would be the logo",
+      "created_at": "2026-11-23T16:49:18.998723+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T15:46:46.466565+00:00",
+      "message": "photo candidate: 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-23T16:49:18.834909+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T15:46:46.178767+00:00",
+      "message": "photo: no real photo found for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance' (0 download(s) tried)",
+      "created_at": "2026-11-23T16:49:18.834332+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T15:46:35.446668+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-23T15:46:35.445720+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://images.vexels.com/media/users/3/147483/raw/d21eb38a9df19c4817652a638b2b61ff-usa-map-with-sta (page: https://www.worldmap1.com/usa-globe-map | USA Map With States Vector Download - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:18.833725+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #10 started (--only bluesky)",
-      "created_at": "2026-11-23T15:46:35.444372+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://ichef.bbci.co.uk/news/1024/branded_news/9A5B/production/_130151593_bbcm_usa_country_profile_ (page: https://www.vexels.com/vectors/preview/147483/usa-map-with-states | United States country profile -  - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:18.833068+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T15:02:26.803354+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg (page: https://www.bbc.co.uk/news/world-us-canada-16761057 | State police | United States agencies | Britan - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:18.832192+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['SEC probes Nvidia accounting', 'Avengers: Doomsday runtime confirmed', 'Nvidia rehires Huang', 'Company board reinstates Huang', 'Army plans Iowa lead detonation']",
-      "created_at": "2026-11-23T15:02:26.799360+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://static.vecteezy.com/system/resources/previews/020/583/552/original/map-of-united-states-free (page: https://www.britannica.com/topic/state-police | Map of United States Free Vector 20583552 Vector Art - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:18.831397+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T15:02:26.577122+00:00",
+      "message": "bing-images: 4 candidate(s) for 'USA Rare Earth Stock Rising'",
+      "created_at": "2026-11-23T16:49:18.829108+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T15:02:26.575417+00:00",
+      "message": "google-images: 0 candidate(s) for 'USA Rare Earth Stock Rising'",
+      "created_at": "2026-11-23T16:49:18.625008+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T15:02:26.231709+00:00",
+      "message": "wikimedia: 0 result(s) for 'USA Rare Earth Stock Rising'",
+      "created_at": "2026-11-23T16:49:18.412070+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T15:00:48.565725+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T15:00:48.564618+00:00",
+      "message": "openverse: 0 result(s) for 'USA Rare Earth Stock Rising'",
+      "created_at": "2026-11-23T16:49:18.001817+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #9 started (--only blogger)",
-      "created_at": "2026-11-23T15:00:48.563125+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:15.202513+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T14:40:07.154949+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:15.201892+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Avengers: Doomsday runtime confirmed', 'Alice Huang espionage allegations', 'Trump blames Democrats for selloff']",
-      "created_at": "2026-11-23T14:40:07.150693+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn-icons-png.flaticon.com/512/8776/8776768.png (page: https://www.alamy.com/why-question-word-speech-bubble-lettering-why-question-text-hand-drawn-quote-d - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:15.201175+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T14:40:07.063449+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://clipground.com/images/why-png-3.png (page: https://www.flaticon.com/free-icon/why_8776768 | About Why: Why 使い方 ビジネス – How To Write A Personal ‘ - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:15.200534+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T14:40:07.061766+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): http://3.bp.blogspot.com/_AsW-lOVBuzE/TAPSsrNPeQI/AAAAAAAADAo/o4-CXqVCr2A/s1600/Why2.PNG (page: https://perform.hon-area.org/about-why-why-使い方-ヒシネス-how-to-write-a-personal-why-statement-with-50-ex - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:15.199890+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T14:40:06.783312+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://digitalbloggers.com/assets/media/images/3bev_bigthumb_Why.jpg (page: http://juicyfreeware.weebly.com/blog/category/all/3 | Why you should start with why - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:15.199089+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T14:39:50.918526+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-23T14:39:50.917551+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today'",
+      "created_at": "2026-11-23T16:49:15.197177+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #8 started (--only bluesky)",
-      "created_at": "2026-11-23T14:39:50.915966+00:00",
+      "message": "google-images: 0 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today'",
+      "created_at": "2026-11-23T16:49:14.996387+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T14:00:11.341107+00:00",
+      "message": "wikimedia: 0 result(s) for 'Why USA Rare Earth Stock Is Rising Today'",
+      "created_at": "2026-11-23T16:49:14.874146+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Army plans Iowa lead detonation', 'Smithsonian plan spotted on Metro', 'AI sell-off overshadows Anthropic IPO', 'Trump urges Nvidia to rehire Huang', \"Steps to a drunkard's grave meme\"]",
-      "created_at": "2026-11-23T14:00:11.337724+00:00",
+      "message": "openverse: 0 result(s) for 'Why USA Rare Earth Stock Is Rising Today'",
+      "created_at": "2026-11-23T16:49:14.290850+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T14:00:11.238873+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:08.863160+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T14:00:11.237694+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-23T16:49:08.862605+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-23T14:00:11.049351+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn-icons-png.flaticon.com/512/8776/8776768.png (page: https://www.alamy.com/why-question-word-speech-bubble-lettering-why-question-text-hand-drawn-quote-d - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:08.861987+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-23T13:58:02.209882+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-23T13:58:02.209340+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://clipground.com/images/why-png-3.png (page: https://www.flaticon.com/free-icon/why_8776768 | About Why: Why 使い方 ビジネス – How To Write A Personal ‘ - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:08.861108+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #7 started (--only blogger)",
-      "created_at": "2026-11-23T13:58:02.208363+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): http://3.bp.blogspot.com/_AsW-lOVBuzE/TAPSsrNPeQI/AAAAAAAADAo/o4-CXqVCr2A/s1600/Why2.PNG (page: https://perform.hon-area.org/about-why-why-使い方-ヒシネス-how-to-write-a-personal-why-statement-with-50-ex - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:08.860446+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T13:25:44.897946+00:00",
+      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://digitalbloggers.com/assets/media/images/3bev_bigthumb_Why.jpg (page: http://juicyfreeware.weebly.com/blog/category/all/3 | Why you should start with why - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-23T16:49:08.859643+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Army plans Iowa lead detonation', 'Ukraine claims Libya warship sinking', \"Amodei's video games for jobless idea\", 'Doctor Who Day anniversary', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-23T13:25:44.894290+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance'",
+      "created_at": "2026-11-23T16:49:08.857406+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-23T13:25:44.780225+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-23T13:25:44.778907+00:00",
+      "message": "google-images: 0 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance'",
+      "created_at": "2026-11-23T16:49:08.658687+00:00",
       "card": ""
     }
   ]
