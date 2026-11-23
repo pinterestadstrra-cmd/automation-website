@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T16:50:21.014203+00:00",
-  "last_run": "2026-11-23T16:48:18.007870+00:00",
-  "runs": 13,
+  "generated_at": "2026-11-23T17:07:03.533511+00:00",
+  "last_run": "2026-11-23T17:06:57.801743+00:00",
+  "runs": 14,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -59,18 +59,18 @@
       "runs_today": 4,
       "posts_today": 3,
       "next_runs": [
-        "2026-11-23T23:05:20.987891+06:00",
         "2026-11-23T23:20:20.987891+06:00",
         "2026-11-23T23:35:20.987891+06:00",
         "2026-11-23T23:50:20.987891+06:00",
-        "2026-11-24T00:05:20.987891+06:00"
+        "2026-11-24T00:05:20.987891+06:00",
+        "2026-11-24T00:20:20.987891+06:00"
       ],
       "next_post_times": [
-        "2026-11-23T23:04:00+06:00",
         "2026-11-23T23:56:00+06:00",
         "2026-11-24T00:51:00+06:00",
         "2026-11-24T02:06:00+06:00",
-        "2026-11-24T03:01:00+06:00"
+        "2026-11-24T03:01:00+06:00",
+        "2026-11-24T03:55:00+06:00"
       ],
       "success": 4,
       "fail": 0,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T16:48:18.008911+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-23T17:06:57.803293+00:00"
     }
   ],
   "dry_run": false,
@@ -163,18 +154,66 @@
   },
   "trending": [
     "Pope Leo praises cycling",
+    "Israel's military campaign in Gaza",
+    "Alice Huang espionage allegations",
+    "Trump says he protected Musk",
+    "SEC probes Nvidia accounting",
+    "Avengers: Doomsday runtime confirmed",
     "Grand Theft Auto VI release",
     "Cyclops in Avengers: Doomsday footage",
-    "Israel's military campaign in Gaza",
-    "Women's World Cup host vote",
-    "Nvidia rehires Huang",
-    "SEC probes Nvidia accounting",
-    "Alice Huang espionage allegations",
-    "Avengers: Doomsday runtime confirmed",
-    "Thanksgiving dinner preparations"
+    "Weather forecasts include lead plume",
+    "Women's World Cup host vote"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-23T17:07:03.252870+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-23T17:07:03.251111+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-23T17:07:02.855275+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-23T17:06:57.804334+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-23T17:06:57.803303+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #14 started (--only blogger)",
+      "created_at": "2026-11-23T17:06:57.801767+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T16:50:21.015316+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Pope Leo praises cycling', 'Grand Theft Auto VI release', 'Cyclops in Avengers: Doomsday footage', \"Israel's military campaign in Gaza\", \"Women's World Cup host vote\"]",
+      "created_at": "2026-11-23T16:50:21.012059+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (no-op)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "openverse: 0 result(s) for 'Why USA Rare Earth Stock Is Rising Today'",
       "created_at": "2026-11-23T16:49:14.290850+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:08.863160+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T16:49:08.862605+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://cdn-icons-png.flaticon.com/512/8776/8776768.png (page: https://www.alamy.com/why-question-word-speech-bubble-lettering-why-question-text-hand-drawn-quote-d - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:08.861987+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://clipground.com/images/why-png-3.png (page: https://www.flaticon.com/free-icon/why_8776768 | About Why: Why 使い方 ビジネス – How To Write A Personal ‘ - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:08.861108+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): http://3.bp.blogspot.com/_AsW-lOVBuzE/TAPSsrNPeQI/AAAAAAAADAo/o4-CXqVCr2A/s1600/Why2.PNG (page: https://perform.hon-area.org/about-why-why-使い方-ヒシネス-how-to-write-a-personal-why-statement-with-50-ex - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:08.860446+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why USA Rare Earth Stock Is Rising Today - Yahoo F'): https://digitalbloggers.com/assets/media/images/3bev_bigthumb_Why.jpg (page: http://juicyfreeware.weebly.com/blog/category/all/3 | Why you should start with why - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-23T16:49:08.859643+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance'",
-      "created_at": "2026-11-23T16:49:08.857406+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Why USA Rare Earth Stock Is Rising Today - Yahoo Finance'",
-      "created_at": "2026-11-23T16:49:08.658687+00:00",
       "card": ""
     }
   ]
