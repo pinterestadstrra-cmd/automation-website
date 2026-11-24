@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T19:55:34.026556+00:00",
-  "last_run": "2026-11-24T19:43:12.771523+00:00",
-  "runs": 63,
+  "generated_at": "2026-11-24T20:30:25.507632+00:00",
+  "last_run": "2026-11-24T20:27:20.871491+00:00",
+  "runs": 64,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 20,
       "posts_today": 1,
       "next_runs": [
-        "2026-11-25T02:10:33.961370+06:00",
-        "2026-11-25T02:25:33.961370+06:00",
         "2026-11-25T02:40:33.961370+06:00",
         "2026-11-25T02:55:33.961370+06:00",
-        "2026-11-25T03:10:33.961370+06:00"
+        "2026-11-25T03:10:33.961370+06:00",
+        "2026-11-25T03:25:33.961370+06:00",
+        "2026-11-25T03:40:33.961370+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T02:10:00+06:00",
         "2026-11-25T02:54:00+06:00",
         "2026-11-25T04:00:00+06:00",
         "2026-11-25T05:05:00+06:00",
-        "2026-11-25T05:50:00+06:00"
+        "2026-11-25T05:50:00+06:00",
+        "2026-11-25T06:55:00+06:00"
       ],
       "success": 18,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 13
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T19:43:12.772451+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T20:27:20.872901+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "US prepares new tariffs on China",
-    "Van Hollen challenges Schumer",
-    "Thanksgiving dinner preparations",
+    "Evacuations urged before Iowa detonation",
+    "King tides threaten Bay Area flooding",
     "Nvidia hiring first compliance officer",
     "Jensen Huang's \"tortured story\" remark",
     "Jensen Huang's daily therapy remark",
+    "Grand Theft Auto VI release",
+    "Personal boycotts",
+    "Tidal bans AI-generated music",
     "Most memorable TV theme songs",
-    "Jensen Huang's Nvidia company meeting",
-    "\"I Know Your Age\" quiz",
-    "Grand Theft Auto VI release"
+    "Hegseth memo restricts Canada defense ties"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T20:30:25.344792+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T20:30:25.343274+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T20:30:24.977967+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T20:27:20.873831+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T20:27:20.872926+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #64 started (--only blogger)",
+      "created_at": "2026-11-24T20:27:20.871512+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T19:55:34.027574+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['US prepares new tariffs on China', 'Van Hollen challenges Schumer', 'Thanksgiving dinner preparations', 'Nvidia hiring first compliance officer', 'Jensen Huang\\'s \"tortured story\" remark']",
+      "created_at": "2026-11-24T19:55:34.024922+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "pexels: API key not configured - skipping",
       "created_at": "2026-11-24T19:49:40.615916+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://freekidsbooks.org/wp-content/uploads/2019/12/Classic-Stories-Big_Book-CKF-Cover.jpg (page: https://www.pinterest.ph/pin/1063694005711602469/ | The Frog Prince – Classic Fairytale Picture Book - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:40.615325+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://www.worksheetsplanet.com/wp-content/uploads/2022/01/What-is-a-short-Story.jpg (page: https://freekidsbooks.org/frog-prince-classic-fairytale-picture-book/ | Story Board Template Google  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:40.614507+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://www.sharingourexperiences.com/wp-content/uploads/2021/05/Famous-Moral-Stories-For-Kids-The-F (page: https://prntbl.concejomunicipaldechinu.gov.co/story-board-template-google-slides/ | Famous Stories W - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:40.613868+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://i.ytimg.com/vi/lgApIr-Tjoo/maxresdefault.jpg (page: https://storage.googleapis.com/dgxxpyrfvcojqe/famous-stories-with-moral.html | Moral Kids Stories -  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:40.613095+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Story of US 2026 midterm elections in maps and charts'",
-      "created_at": "2026-11-24T19:49:40.611267+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Story of US 2026 midterm elections in maps and charts'",
-      "created_at": "2026-11-24T19:49:40.461175+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Story of US 2026 midterm elections in maps and charts'",
-      "created_at": "2026-11-24T19:49:40.328983+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Story of US 2026 midterm elections in maps and charts'",
-      "created_at": "2026-11-24T19:49:39.981481+00:00",
       "card": ""
     }
   ]

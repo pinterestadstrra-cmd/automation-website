@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T20:30:25.509051+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', 'King tides threaten Bay Area flooding', 'Nvidia hiring first compliance officer', 'Jensen Huang\\'s \"tortured story\" remark', \"Jensen Huang's daily therapy remark\"]",
+    "created_at": "2026-11-24T20:30:25.504990+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T20:30:25.344792+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T20:30:25.343274+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T20:30:24.977967+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T20:27:20.873831+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T20:27:20.872926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #64 started (--only blogger)",
+    "created_at": "2026-11-24T20:27:20.871512+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T19:55:34.027574+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://sdcms-prod.s3.ap-southeast-2.amazonaws.com/images/Pm1-logo.width-800.jpg (page: https://x.com/purminerals | Is this Newly Listed Micro-Cap About to Put Manganese in the Spotlight? - only 0 of 8 key entities in the source page)",
     "created_at": "2026-11-24T17:35:07.271951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/PUR_Beauty-Pure-and-Simple_Cool_Grey_11_96554cfc-6d82-41 (page: https://www.nextinvestors.com/articles/newly-listed-micro-cap-about-to-put-manganese-in-spotlight/ | - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-24T17:35:07.270704+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/PUR_Logo_Cool_Grey_11_0990821e-e09d-4248-a1ca-03f5d76679 (page: https://crueltyfree.peta.org/company/pur-minerals-pur-complexion-authority/ | 4-in-1 Pressed Mineral - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-24T17:35:07.269385+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/20135ed6689f02c92ea8ff034258a6f21ed3bb83.png?v=174945920 (page: https://www.purcosmetics.com/products/4-in-1-pressed-mineral-makeup-foundation-with-skincare-ingredi - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-24T17:35:07.268315+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
-    "created_at": "2026-11-24T17:35:07.265919+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
-    "created_at": "2026-11-24T17:35:07.067826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
-    "created_at": "2026-11-24T17:35:06.947696+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
-    "created_at": "2026-11-24T17:35:06.648696+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T17:35:04.568672+00:00",
     "card": ""
   }
 ]
