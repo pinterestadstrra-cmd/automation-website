@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T15:28:15.535434+00:00",
-  "last_run": "2026-11-24T15:26:57.148916+00:00",
-  "runs": 55,
+  "generated_at": "2026-11-24T16:07:14.949606+00:00",
+  "last_run": "2026-11-24T16:07:11.607697+00:00",
+  "runs": 56,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 16,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-24T21:43:15.390149+06:00",
-        "2026-11-24T21:58:15.390149+06:00",
         "2026-11-24T22:13:15.390149+06:00",
         "2026-11-24T22:28:15.390149+06:00",
-        "2026-11-24T22:43:15.390149+06:00"
+        "2026-11-24T22:43:15.390149+06:00",
+        "2026-11-24T22:58:15.390149+06:00",
+        "2026-11-24T23:13:15.390149+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T22:03:00+06:00",
         "2026-11-24T22:58:00+06:00",
         "2026-11-24T23:55:00+06:00",
         "2026-11-25T01:00:00+06:00",
-        "2026-11-25T02:10:00+06:00"
+        "2026-11-25T02:10:00+06:00",
+        "2026-11-25T02:54:00+06:00"
       ],
       "success": 14,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 11
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T15:26:57.150787+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T16:07:11.609223+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Close races in 2026 midterms",
+    "Iowa Army detonation court case",
+    "Tidal bans AI-generated music",
     "Pope Francis diary: devil encounters",
-    "Bird photography",
+    "US prepares new tariffs on China",
+    "Most memorable TV theme songs",
     "Personal boycotts",
     "Jensen Huang discloses more affairs",
-    "Iowa Army detonation court case",
-    "SEC probes Nvidia accounting",
-    "Anthropic falls below IPO price",
+    "Michigan drops Trev Alberts hire",
     "Grand Theft Auto VI release",
-    "November full supermoon"
+    "SEC probes Nvidia accounting"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T16:07:14.764517+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T16:07:14.762874+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T16:07:14.392751+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T16:07:11.610370+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T16:07:11.609233+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #56 started (--only blogger)",
+      "created_at": "2026-11-24T16:07:11.607718+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T15:28:15.536923+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Close races in 2026 midterms', 'Pope Francis diary: devil encounters', 'Bird photography', 'Personal boycotts', 'Jensen Huang discloses more affairs']",
+      "created_at": "2026-11-24T15:28:15.532578+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "prepare_bsky_image: original 1024x768 (ratio 1.33) - kept, no crop",
       "created_at": "2026-11-24T14:19:26.678510+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'How Ukraine drone attacks on Russian ships unfolded - BBC' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T14:19:26.675675+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-24T14:19:26.673483+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'How Ukraine drone attacks on Russian ships unfolded - BBC': https://media.istockphoto.com/id/1428668967/vector/map-of-ukraine.jpg?s=1024x1024&w=is&k=20&c=iX1Wib (from bing-images, query 'How Ukraine drone attacks on Russian ships unfolded - BBC', page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - matches 2 key entities (russian, ukraine))",
-      "created_at": "2026-11-24T14:19:26.671631+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('How Ukraine drone attacks on Russian ships unfolde': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T14:19:26.669091+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
-      "created_at": "2026-11-24T14:19:12.964176+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
-      "created_at": "2026-11-24T14:19:12.612941+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
-      "created_at": "2026-11-24T14:19:12.440115+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
-      "created_at": "2026-11-24T14:19:11.953208+00:00",
       "card": ""
     }
   ]

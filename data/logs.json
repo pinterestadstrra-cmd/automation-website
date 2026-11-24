@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T16:07:14.951229+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Iowa Army detonation court case', 'Tidal bans AI-generated music', 'Pope Francis diary: devil encounters', 'US prepares new tariffs on China', 'Most memorable TV theme songs']",
+    "created_at": "2026-11-24T16:07:14.946709+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T16:07:14.764517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T16:07:14.762874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T16:07:14.392751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T16:07:11.610370+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T16:07:11.609233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #56 started (--only blogger)",
+    "created_at": "2026-11-24T16:07:11.607718+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T15:28:15.536923+00:00",
     "card": ""
   },
@@ -1150,53 +1198,5 @@
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-24T14:18:52.578156+00:00",
     "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
-    "created_at": "2026-11-24T14:18:52.576200+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T14:18:52.573181+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T14:18:51.429622+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 3 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-24T14:18:51.427705+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T14:18:51.425246+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to kritogems.bsky.social (hot post by jonathanslater.bsky.social, comment: 'Naranjoso tan lindoooos') as primonewstoday.bsky.social: 'Thanks! That orange vibe really makes everything pop. 🌅\n\nhttps://shorturl.at/eZn'",
-    "created_at": "2026-11-24T14:18:46.356299+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to mistersalty.bsky.social (hot post by michaelwarburton.bsky.social, comment: 'I'm fortunate enough to have seen him sing.') as primonewstoday.bsky.social: 'What a gift—to have felt his voice live. His music still moves us.  \n\nhttps://sh'",
-    "created_at": "2026-11-24T14:18:43.201060+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to jhsabella.bsky.social (hot post by raeradford.bsky.social, comment: 'May want to back off on the gummies') as primonewstoday.bsky.social: 'Haha, maybe just a little too much sugar rush! 😂\n\nhttps://shorturl.at/eZnco'",
-    "created_at": "2026-11-24T14:18:39.848170+00:00",
-    "card": "Adsterra Blogger"
   }
 ]
