@@ -564,6 +564,34 @@ def merge_worker_state(remote, local):
         m.update(local.get(k) or {})
         if m:
             merged[k] = m
+    # Rebuild #7.11: the ready queue is owned by the worker (the
+    # dashboard never touches it) - merge it per card, newest
+    # prepared_at wins per headline, stale items dropped, capped at
+    # READY_QUEUE_SIZE. Without this the queue would be LOST on every
+    # commit-back (the remote state has no queue key) and a prepared
+    # post would never survive to the next run.
+    rq_remote = remote.get("ready_queue") or {}
+    rq_local = local.get("ready_queue") or {}
+    merged_rq = {}
+    for _name in set(rq_remote) | set(rq_local):
+        by_head = {}
+        for _it in (rq_remote.get(_name) or []) + (rq_local.get(_name) or []):
+            if not isinstance(_it, dict):
+                continue
+            if not _ready_item_fresh(_it):
+                continue
+            _key = _norm_news_key(_it.get("headline") or "")
+            if not _key:
+                continue
+            _prev = by_head.get(_key)
+            if _prev is None or str(_it.get("prepared_at") or "") >= str(_prev.get("prepared_at") or ""):
+                by_head[_key] = _it
+        _items = sorted(by_head.values(),
+                        key=lambda it: str(it.get("prepared_at") or ""))
+        if _items:
+            merged_rq[_name] = _items[-READY_QUEUE_SIZE:]
+    if merged_rq:
+        merged["ready_queue"] = merged_rq
     for k in ("run_card_now", "test_card_now"):
         if remote.get(k):
             merged[k] = remote[k]
@@ -2216,85 +2244,40 @@ def _real_photo_for_topic(topic, vision=None):
     check says NO to is rejected and the next candidate is tried;
     when vision cannot run, the keyword check above (already passed)
     decides instead, so a vision failure never blocks the post.
+    Rebuild #7.11: when the topical search finds NOTHING, an
+    ENTITY-based fallback runs - the named PERSON (or the leading
+    entity) in the headline is searched instead. A portrait of the
+    person IS the right photo for a story about them; relevance is
+    relaxed to "the source page names the entity" and the vision
+    gate still checks the photo shows that person / matches the
+    story. The download budget covers both phases, so one story can
+    never grind through dozens of downloads.
     Returns a photo dict with local_path, or None (with a summary log
     of what was tried)."""
     tried_downloads = 0
+    # Phase 1: topical queries (full headline -> short keywords).
     for q in _photo_search_queries(topic):
-        cands = []
-        for fn in (_pexels_photo, _pixabay_photo):
-            try:
-                found = fn(q)
-            except Exception:
-                found = None
-            if found:
-                cands.append(found)
-        try:
-            cands.extend(_openverse_photos(q, limit=PICK_MAX_PHOTO_CANDIDATES))
-        except Exception:
-            pass
-        try:
-            cands.extend(_wikimedia_photos(q, limit=PICK_MAX_PHOTO_CANDIDATES))
-        except Exception:
-            pass
-        try:
-            cands.extend(_google_images_photos(q, limit=4))
-        except Exception:
-            pass
-        try:
-            cands.extend(_bing_images_photos(q, limit=4))
-        except Exception:
-            pass
-        for cand in cands:
-            url = (cand or {}).get("url", "")
-            if not url or _is_pollinations_url(url):
-                continue
-            if _is_logo_image_url(url):
-                log("info", f"photo: rejected (logo/icon URL): {url[:100]}")
-                continue
-            # Rebuild #7.6: RELEVANCE - the candidate's source page
-            # must be about this story (its title/URL must contain
-            # the story's key entities). A real photo from an
-            # unrelated page is rejected BEFORE downloading, so it
-            # never consumes the download budget. The page (not the
-            # alt text) is the evidence - an alt text that mentions a
-            # name proves nothing (run #17: a wedding dress whose alt
-            # text said 'Theresa May').
-            page = ((cand.get("page_url") or "") + " | " +
-                    (cand.get("page_title") or "")).strip(" |")
-            rel, rel_reason = _photo_relevant(
-                cand.get("page_url"), cand.get("page_title"), topic)
-            if not rel:
-                log("info", f"photo: rejected (irrelevant to "
-                            f"'{topic[:50]}'): {url[:100]} "
-                            f"(page: {page[:100]} - {rel_reason})")
-                continue
+        if tried_downloads >= MAX_REAL_PHOTO_DOWNLOADS:
+            break
+        photo, tried_downloads = _try_photo_query(
+            q, topic, vision, tried_downloads,
+            lambda pu, pt: _photo_relevant(pu, pt, topic))
+        if photo:
+            return photo
+    # Phase 2 (rebuild #7.11): entity-based fallback - the named
+    # person, or the leading entity, in the headline.
+    if tried_downloads < MAX_REAL_PHOTO_DOWNLOADS:
+        for entity in _photo_fallback_entities(topic):
             if tried_downloads >= MAX_REAL_PHOTO_DOWNLOADS:
-                log("info", "photo: download budget reached "
-                            f"({MAX_REAL_PHOTO_DOWNLOADS}) - stopping")
-                return None
-            tried_downloads += 1
-            local = download_image(url, topic)
-            if local:
-                # Rebuild #7.7: Gemini vision is the FINAL gate -
-                # the photo must MATCH the story, judged by an AI
-                # that can actually see the image. A vision NO
-                # rejects this candidate (the next candidate is
-                # tried); a vision failure falls back to the keyword
-                # check above, which already passed - it never
-                # blocks the post by itself.
-                if _vision_gate(local, topic, vision) is False:
-                    log("info", f"photo: rejected (vision NO): {url[:100]}")
-                    continue
-                log("info", f"photo: ACCEPTED relevant photo for "
-                            f"'{topic[:60]}': {url[:100]} "
-                            f"(from {cand.get('source') or 'stock'}, "
-                            f"query '{q}', page: {page[:100]} - "
-                            f"{rel_reason})")
-                return {"url": url, "source": cand.get("source") or "stock",
-                        "alt": cand.get("alt") or topic, "local_path": local,
-                        "page_url": cand.get("page_url") or "",
-                        "page_title": cand.get("page_title") or ""}
-            log("info", f"photo: candidate rejected (download/verify failed): {url[:100]}")
+                break
+            log("info", f"photo: topical search found nothing for "
+                        f"'{topic[:50]}' - trying entity search "
+                        f"'{entity}'")
+            photo, tried_downloads = _try_photo_query(
+                entity, topic, vision, tried_downloads,
+                lambda pu, pt, e=entity: _page_names_entity(pu, pt, e))
+            if photo:
+                return photo
     log("info", f"photo: no real photo found for '{topic}' "
                 f"({tried_downloads} download(s) tried)")
     return None
@@ -2343,7 +2326,25 @@ MAX_REAL_PHOTO_DOWNLOADS = 12  # max image downloads per real-photo search (boun
 # - a story with no photo never ends the run on its own. Only when
 # ALL tried stories lack a photo does the run skip cleanly.
 PICK_MAX_STORIES = 6           # max fresh stories tried per promo pick
-PICK_MAX_ITEMS_PER_TOPIC = 8   # news items examined per category
+# Rebuild #7.11: a wider story pool (8 -> 12 items per category) so
+# the try-next-story loop has more visual stories to try - the old
+# pool was exhausted by non-visual survey/analysis pieces. verify_news
+# now returns up to 12 items per topic to match.
+PICK_MAX_ITEMS_PER_TOPIC = 12   # news items examined per category
+
+# Rebuild #7.11: the READY QUEUE (user order 2026-11-24 - a post must
+# happen ON TIME, the photo WILL be collected). The worker prepares
+# the next post(s) AHEAD of time - news + verified photo + caption -
+# and stores them in state (ready_queue, per card). When a post slot
+# is due, the ready post goes out at once instead of starting a fresh
+# news/photo search that can fail and skip the slot. A ready post is
+# fresh for READY_MAX_AGE_HOURS; older items are discarded and
+# re-prepared. The photo's remote URL is stored (NOT the local file -
+# each workflow run is a fresh runner, so the file is gone; the URL
+# is re-downloaded at post time, which is fast and re-verified).
+READY_QUEUE_SIZE = 2            # ready posts kept per card
+READY_MAX_AGE_HOURS = 3         # a ready post older than this is stale
+READY_PREPARE_WINDOW_MINUTES = 15  # prepare when a post slot is due within this
 
 # Rebuild #7.8: ONLY the user's two promo news categories (user order
 # 2026-11-24). USA celebrity news and USA finance news are REMOVED
@@ -2961,6 +2962,447 @@ def _resolve_article_url(link):
     return link
 
 
+# ---------------------------------------------------------------- rebuild #7.11
+# NON-VISUAL STORIES: survey / poll / analysis / opinion headlines
+# almost NEVER carry a real news photo (a Pew survey, a trust-in-media
+# poll, an "anyone's guess" analysis). The live 2026-11-24 failure
+# burned the whole 6-story budget on exactly these. They are skipped
+# EARLY - before the item/story budget - so the budget is spent on
+# stories that can actually have photos. Cheap headline-keyword
+# detection: whole words for the survey words ("poll" matches,
+# "polling" does NOT - an election-day polling station IS visual),
+# phrases for the survey patterns ("Majority of Americans Say...").
+_NON_VISUAL_HEADLINE_WORDS = frozenset(
+    "survey surveys poll analysis opinion editorial explainer explained "
+    "column".split())
+_NON_VISUAL_HEADLINE_PHRASES = (
+    "americans say", "americans think", "majority of americans",
+    "most americans", "trust in", "approval rating", "favorability",
+    "polls show", "new poll", "study finds", "study shows",
+    "report finds", "what it means", "what to know", "what we know",
+    "what happens next", "anyone's guess", "the political map",
+)
+
+
+def _is_non_visual_headline(headline):
+    """True when a headline is a survey / poll / analysis / opinion
+    piece that almost never carries a real news photo. A heuristic
+    (cheap keyword match) - a missed one only costs a photo attempt,
+    a wrongly skipped one is never posted from this pick (the next
+    pick can still use it). Never raises."""
+    h = (headline or "").lower()
+    if not h:
+        return False
+    if any(p in h for p in _NON_VISUAL_HEADLINE_PHRASES):
+        return True
+    words = set(re.findall(r"[a-z0-9]+", h))
+    return bool(words & _NON_VISUAL_HEADLINE_WORDS)
+
+
+# ---------------------------------------------------------------- rebuild #7.11
+# READY QUEUE (user order 2026-11-24 - a post must happen ON TIME):
+# the worker prepares the next post(s) AHEAD of time (news + verified
+# photo + caption) and stores them in state["ready_queue"] (per card).
+# A ready item is {topic, headline, photo_url, photo_source, photo_alt,
+# article_url, hook, prepared_at}. The photo's remote URL is stored,
+# NOT the local file - each workflow run is a fresh runner, so the
+# file is gone; the URL is re-downloaded (and re-verified) at post
+# time. A ready item is fresh for READY_MAX_AGE_HOURS; older items
+# are discarded and re-prepared. The queue is the reservation: the
+# picker never steals a story that is already prepared and waiting.
+def _ready_queue(state):
+    """The ready queue store: {card_name: [ready_item, ...]}."""
+    q = (state or {}).get("ready_queue")
+    if not isinstance(q, dict):
+        q = {}
+        if isinstance(state, dict):
+            state["ready_queue"] = q
+    return q
+
+
+def _ready_item_fresh(item):
+    """True when a ready item was prepared within READY_MAX_AGE_HOURS.
+    An item with no (or unparseable) prepared_at is never fresh."""
+    try:
+        dt = datetime.fromisoformat(str((item or {}).get("prepared_at") or ""))
+    except Exception:
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=UTC)
+    return (now_utc() - dt) <= timedelta(hours=READY_MAX_AGE_HOURS)
+
+
+def _prune_ready_queue(state, name=None):
+    """Drop stale ready items (and cap each card at READY_QUEUE_SIZE).
+    Returns the pruned store."""
+    q = _ready_queue(state)
+    names = [name] if name else list(q.keys())
+    for n in names:
+        items = [it for it in (q.get(n) or []) if isinstance(it, dict)
+                 and _ready_item_fresh(it)]
+        if len(items) > READY_QUEUE_SIZE:
+            items = items[-READY_QUEUE_SIZE:]
+        if items:
+            q[n] = items
+        elif n in q:
+            del q[n]
+    return q
+
+
+def _ready_queue_headline_keys(state):
+    """Event keys of every FRESH ready item (all cards) - the picker
+    must not steal a story that is already prepared and waiting to
+    post. Never raises."""
+    keys = set()
+    try:
+        for items in _ready_queue(state).values():
+            for it in (items or []):
+                if isinstance(it, dict) and _ready_item_fresh(it):
+                    k = _norm_news_key(it.get("headline") or "")
+                    if k:
+                        keys.add(k)
+    except Exception:
+        pass
+    return keys
+
+
+def _headline_in_ready_queue(state, headline):
+    """True when this headline's event is already prepared in the
+    ready queue (any card) - the picker must not steal it for another
+    post. Fuzzy event match, like the 24h cooldown (rebuild #7.5)."""
+    words = _norm_news_key(headline).split()
+    if not words:
+        return False
+    for key in _ready_queue_headline_keys(state):
+        if _event_keys_match(words, key.split()):
+            return True
+    return False
+
+
+def _discard_ready_item(card, state, headline):
+    """Remove a ready item by headline (fuzzy event match)."""
+    name = card.get("name", "")
+    q = _ready_queue(state)
+    items = q.get(name) or []
+    words = _norm_news_key(headline).split()
+    kept = [it for it in items
+            if not (isinstance(it, dict) and words and
+                    _event_keys_match(words, _norm_news_key(
+                        it.get("headline") or "").split()))]
+    if kept:
+        q[name] = kept
+    elif name in q:
+        del q[name]
+
+
+def _consume_ready_item(card, state, headline):
+    """Remove a ready item after it was successfully posted."""
+    _discard_ready_item(card, state, headline)
+
+
+def _prepare_ready_item(card, state):
+    """Prepare ONE ready post for a card: pick a fresh story + verified
+    photo (the expensive part) and write its caption, then store it in
+    the ready queue. Returns True when an item was queued. The picker
+    already skips stories in the queue (reservation), so a second
+    prepare in the same run picks a DIFFERENT story. A failed prepare
+    (no photo) returns False - the caller must not retry at once (the
+    news pool has not changed). Never raises."""
+    name = card.get("name", "")
+    try:
+        topic, headline, photo = _pick_fresh_promo_news(card, state)
+    except Exception as e:
+        log("warning", f"ready queue: prepare failed for card '{name}': {e}")
+        return False
+    if not photo:
+        return False
+    link = (card.get("link") or "").strip()
+    effective_link = link or (photo.get("article_url") or "")
+    hook = ""
+    try:
+        hook = (ai_write(BSKY_PROMO_NEWS_PROMPT.format(
+            headline=(headline or topic)[:150],
+            link=effective_link,
+            tone=ARTICLE_TONES[card_tone(card)]),
+            max_tokens=400) or "").strip()
+    except Exception:
+        hook = ""
+    if not hook or hook == effective_link:
+        # The AI failed: the headline itself is the caption (same
+        # fallback as post time, rebuild #7.2) - never the bare link.
+        hook = headline or ""
+    q = _ready_queue(state)
+    items = [it for it in (q.get(name) or []) if _ready_item_fresh(it)]
+    items.append({
+        "topic": topic,
+        "headline": headline,
+        "photo_url": photo.get("url", ""),
+        "photo_source": photo.get("source") or "news",
+        "photo_alt": photo.get("alt") or headline,
+        "article_url": photo.get("article_url") or "",
+        "hook": hook,
+        "prepared_at": now_iso(),
+    })
+    q[name] = items[-READY_QUEUE_SIZE:]
+    log("info", f"prepared ready post: '{headline[:60]}' for card "
+                f"'{name}' (queue now {len(q[name])})")
+    return True
+
+
+def _ensure_ready_queue(card, state):
+    """Top up a card's ready queue when a post slot is due within
+    READY_PREPARE_WINDOW_MINUTES (or already due): prepare ahead so
+    the post goes out ON TIME with a verified story + photo + caption
+    already in hand. Nothing is prepared when no slot is near (the
+    item would go stale). At most one failed prepare per run - a
+    failure means the news pool has no photo right now, and retrying
+    at once would just repeat the same search. Never raises."""
+    name = card.get("name", "")
+    try:
+        _prune_ready_queue(state, name)
+        q = _ready_queue(state)
+        if len(q.get(name) or []) >= READY_QUEUE_SIZE:
+            return
+        due_soon = False
+        if card_posts_per_day(card) <= 0 and not _parse_schedule_times(card):
+            # Unlimited card: every run may post - keep the queue
+            # topped up.
+            due_soon = True
+        else:
+            try:
+                due, _slots = card_post_due(card, state)
+            except Exception:
+                due = False
+            if due:
+                due_soon = True
+            else:
+                nxt = next_post_times_for_card(card, count=1)
+                if nxt:
+                    mins = (nxt[0] - now_utc().astimezone(USER_TZ)
+                            ).total_seconds() / 60.0
+                    if 0 <= mins <= READY_PREPARE_WINDOW_MINUTES:
+                        due_soon = True
+        if not due_soon:
+            return
+        while len(q.get(name) or []) < READY_QUEUE_SIZE:
+            if not _prepare_ready_item(card, state):
+                break
+    except Exception as e:
+        log("warning", f"ready queue: ensure failed for card '{name}': {e}")
+
+
+def _take_ready_item(card, state):
+    """Take the OLDEST fresh ready item for a card, ready to post NOW.
+    Validates it again at post time (the story may have been posted by
+    another path since it was prepared): freshness, topic cooldown,
+    link+topic cooldown, caption cooldown, and the photo re-downloads
+    (the file from prepare time is gone - each workflow run is a fresh
+    runner, so the photo URL is stored and re-downloaded here, fast
+    and re-verified). A failed validation DISCARDS the item and returns
+    None (the caller falls back to preparing on the spot). Returns a
+    dict with the ready item + local_path, or None. Does NOT remove
+    the item - the caller removes it only after a successful post
+    (_consume_ready_item), so a transient post failure keeps it for
+    the next run. Never raises."""
+    name = card.get("name", "")
+    try:
+        _prune_ready_queue(state, name)
+        items = _ready_queue(state).get(name) or []
+        if not items:
+            return None
+        item = items[0]
+        headline = (item.get("headline") or "").strip()
+        link = (card.get("link") or "").strip()
+        effective_link = link or (item.get("article_url") or "")
+
+        def _drop(reason):
+            log("info", f"ready queue: discarding '{headline[:60]}' for "
+                        f"card '{name}' - {reason}")
+            _discard_ready_item(card, state, headline)
+
+        if not headline:
+            _drop("no headline stored")
+            return None
+        if _promo_topic_cooldown_left(state, headline) is not None:
+            _drop("story posted since it was prepared (topic cooldown)")
+            return None
+        if _promo_link_topic_cooldown_left(state, effective_link,
+                                           headline) is not None:
+            _drop("story posted since it was prepared (link+topic cooldown)")
+            return None
+        hook = (item.get("hook") or "").strip()
+        if hook:
+            caption_id = _fit_bsky_text(hook, effective_link, cta="")
+            if caption_id is None:
+                _drop("stored caption's link is too long for Bluesky")
+                return None
+            if _promo_caption_cooldown_left(state, caption_id) is not None:
+                _drop("caption posted since it was prepared (caption cooldown)")
+                return None
+        photo_url = (item.get("photo_url") or "").strip()
+        if not photo_url:
+            _drop("no photo URL stored")
+            return None
+        local = download_image(photo_url, headline)
+        if not local:
+            _drop("stored photo URL no longer downloads/verifies")
+            return None
+        out = dict(item)
+        out["local_path"] = local
+        return out
+    except Exception as e:
+        log("warning", f"ready queue: take failed for card '{name}': {e}")
+        return None
+
+
+# ---------------------------------------------------------------- rebuild #7.11
+# ENTITY-BASED PHOTO FALLBACK: when no page about the exact event has
+# a photo, search for the NAMED PERSON (or the leading entity) in the
+# headline. A portrait of the person IS the right photo for a story
+# about them, even when no page about the exact event carries one.
+def _page_names_entity(page_url, page_title, entity):
+    """Is the ENTITY (a person or place) the subject of the source
+    page? The page's title/URL must contain the entity's words
+    (stemmed). Returns (relevant, reason)."""
+    words = {_stem_word(w) for w in re.findall(r"[a-z0-9]+",
+                                               (entity or "").lower())}
+    if not words:
+        return False, "no entity to match"
+    hay = ((page_title or "") + " " + (page_url or "")).lower()
+    hay_words = {_stem_word(w) for w in re.findall(r"[a-z0-9]+", hay)}
+    if words <= hay_words:
+        return True, f"page names the entity ({entity})"
+    return False, f"page does not name the entity ({entity})"
+
+
+# Words that are never a photo entity: quote/adverb/filler words that
+# commonly START a headline ("'Hopefully things get done'...") but
+# name nothing a photo could show. Verbs are covered separately
+# (_HEADLINE_VERB_STEMS, below) - a verb is never an entity either.
+_ENTITY_JUNK_WORDS = frozenset(
+    "hopefully wait breaking just watch live update updates updated "
+    "exclusive finally actually really here there stunning shocking "
+    "incredible amazing huge major big new top first latest urgent "
+    "things thing done way ways time times day days week weeks year "
+    "years month months today yesterday tomorrow now still back "
+    "majority minority most many few several some all every each both".split())
+_HEADLINE_VERB_STEMS = frozenset(
+    _stem_word(v) for v in _HEADLINE_VERBS)
+
+
+def _is_headline_verb(word):
+    """True when a headline word is a verb - base form ("get", "say",
+    "take") or 3rd-person form ("gets", "says", "takes"). A verb is
+    never a photo entity."""
+    low = (word or "").lower()
+    if not low:
+        return False
+    if low in _HEADLINE_VERBS:
+        return True
+    if _stem_word(low) in _HEADLINE_VERB_STEMS:
+        return True
+    return low + "s" in _HEADLINE_VERBS or low + "es" in _HEADLINE_VERBS
+
+
+def _photo_fallback_entities(topic):
+    """Entities to search for a photo when the topical search fails:
+    the named PERSON(s) in the headline first (a portrait of the
+    person IS the right photo for a story about them), else the
+    leading key entity (the first headline keyword that is not a
+    junk word or a verb - usually a country, capital, institution
+    or leader's surname). Returns up to 2 entity strings."""
+    names = _headline_person_names(topic)
+    if names:
+        return names[:2]
+    for w in re.split(r"[^A-Za-z0-9]+", topic or ""):
+        if len(w) < 3:
+            continue
+        low = w.lower()
+        if low in _PHOTO_QUERY_STOPWORDS:
+            continue
+        if low in _ENTITY_JUNK_WORDS:
+            continue
+        if _is_headline_verb(w):
+            continue
+        return [w]
+    return []
+
+
+def _try_photo_query(query, topic, vision, tried_downloads, relevance):
+    """One photo-search query across all real-photo sources
+    (Pexels / Pixabay / Openverse / Wikimedia / Google Images / Bing
+    Images). relevance(page_url, page_title) -> (bool, reason) decides
+    whether a candidate's source page is about the story. Every
+    candidate still passes the real-photo check (valid JPEG/PNG,
+    >=400px wide, not a bare logo) in download_image, and the Gemini
+    vision gate. Returns (photo_dict_or_None, tried_downloads). Never
+    raises."""
+    cands = []
+    for fn in (_pexels_photo, _pixabay_photo):
+        try:
+            found = fn(query)
+        except Exception:
+            found = None
+        if found:
+            cands.append(found)
+    try:
+        cands.extend(_openverse_photos(query, limit=PICK_MAX_PHOTO_CANDIDATES))
+    except Exception:
+        pass
+    try:
+        cands.extend(_wikimedia_photos(query, limit=PICK_MAX_PHOTO_CANDIDATES))
+    except Exception:
+        pass
+    try:
+        cands.extend(_google_images_photos(query, limit=4))
+    except Exception:
+        pass
+    try:
+        cands.extend(_bing_images_photos(query, limit=4))
+    except Exception:
+        pass
+    for cand in cands:
+        url = (cand or {}).get("url", "")
+        if not url or _is_pollinations_url(url):
+            continue
+        if _is_logo_image_url(url):
+            log("info", f"photo: rejected (logo/icon URL): {url[:100]}")
+            continue
+        page = ((cand.get("page_url") or "") + " | " +
+                (cand.get("page_title") or "")).strip(" |")
+        try:
+            rel, rel_reason = relevance(cand.get("page_url"),
+                                        cand.get("page_title"))
+        except Exception:
+            rel, rel_reason = False, "relevance check failed"
+        if not rel:
+            log("info", f"photo: rejected (irrelevant to "
+                        f"'{topic[:50]}'): {url[:100]} "
+                        f"(page: {page[:100]} - {rel_reason})")
+            continue
+        if tried_downloads >= MAX_REAL_PHOTO_DOWNLOADS:
+            log("info", "photo: download budget reached "
+                        f"({MAX_REAL_PHOTO_DOWNLOADS}) - stopping")
+            return None, tried_downloads
+        tried_downloads += 1
+        local = download_image(url, topic)
+        if local:
+            if _vision_gate(local, topic, vision) is False:
+                log("info", f"photo: rejected (vision NO): {url[:100]}")
+                continue
+            log("info", f"photo: ACCEPTED relevant photo for "
+                        f"'{topic[:60]}': {url[:100]} "
+                        f"(from {cand.get('source') or 'stock'}, "
+                        f"query '{query}', page: {page[:100]} - "
+                        f"{rel_reason})")
+            return {"url": url, "source": cand.get("source") or "stock",
+                    "alt": cand.get("alt") or topic, "local_path": local,
+                    "page_url": cand.get("page_url") or "",
+                    "page_title": cand.get("page_title") or ""}, tried_downloads
+        log("info", f"photo: candidate rejected (download/verify failed): {url[:100]}")
+    return None, tried_downloads
+
+
 def _pick_fresh_promo_news(card, state):
     """Pick a FRESH news story for a promo post: (topic, headline, photo).
     Candidates: ONLY the user's two news categories (Rebuild #7.8,
@@ -2997,7 +3439,15 @@ def _pick_fresh_promo_news(card, state):
     unrelated page is rejected, and an alt text that mentions a name
     is never enough. Rebuild #7.8: when the headline names a PERSON,
     the source page must name that person too, and the Gemini vision
-    gate must verify the photo shows that person. Every candidate
+    gate must verify the photo shows that person. Rebuild #7.11:
+    NON-VISUAL stories (survey/poll/analysis/opinion) are skipped
+    EARLY, before the item/story budget - they almost never carry a
+    photo, and the live 2026-11-24 failure burned the whole 6-story
+    budget on Pew survey pieces; the pool is wider now (12 items per
+    topic); a story already prepared in the ready queue is RESERVED
+    and never stolen for another post; and the real-photo search falls
+    back to the named PERSON / leading entity when the topical search
+    finds nothing. Every candidate
     tried is logged (story + image URL + accept/reject) so the log
     shows the search, and the search is bounded (max items + max
     fallback searches) so a run can never grind through dozens of
@@ -3072,8 +3522,19 @@ def _pick_fresh_promo_news(card, state):
             if not link or link in seen:
                 continue
             seen.add(link)
-            tried += 1
             headline = (item.get("title") or "").strip() or topic
+            # Rebuild #7.11: a NON-VISUAL story (survey / poll /
+            # analysis / opinion) almost never carries a real news
+            # photo - skip it EARLY, before the item budget, so the
+            # budget is spent on stories that can actually have
+            # photos (the live 2026-11-24 failure burned the whole
+            # 6-story budget on Pew survey pieces).
+            if _is_non_visual_headline(headline):
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "skipped (non-visual story: survey/poll/"
+                            "analysis/opinion - no photo expected)")
+                continue
+            tried += 1
             if _promo_topic_cooldown_left(state, headline) is not None:
                 log("info", f"photo candidate: '{headline[:60]}' - "
                             "skipped (same event used within 24h, event "
@@ -3084,6 +3545,13 @@ def _pick_fresh_promo_news(card, state):
                 log("info", f"photo candidate: '{headline[:60]}' - "
                             "skipped (same link + same event within 24h, "
                             f"event key '{_norm_news_key(headline)[:60]}')")
+                continue
+            # Rebuild #7.11: a story already prepared in the ready
+            # queue is RESERVED - the picker must not steal it for
+            # another post (it is waiting for its own slot).
+            if _headline_in_ready_queue(state, headline):
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "skipped (already prepared in the ready queue)")
                 continue
             # Rebuild #7.10: the try-next-story loop. A FRESH story
             # (past both cooldowns) gets a full photo attempt and
@@ -3377,7 +3845,10 @@ def verify_news(topic):
                 items.append({"title": title, "link": link, "source": src})
                 if src:
                     sources.add(src.lower())
-            if len(items) >= 8:
+            # Rebuild #7.11: 12 items, not 8 - the wider story pool
+            # (PICK_MAX_ITEMS_PER_TOPIC) needs the feed to actually
+            # carry 12 stories per category.
+            if len(items) >= 12:
                 break
         verified = len(sources) >= 2
         return verified, sorted(sources), items
@@ -5062,6 +5533,12 @@ def _card_bluesky_post(card, state, article, promo=False):
       news story / caption is never reused within 24h. The LINK itself
       has no cooldown - it may post many times a day with different
       captions. A cooldown skip is a clean no-op (LAST_BSKY_SKIP).
+    - Rebuild #7.11: a READY post (prepared ahead in the ready queue
+    - story + verified photo + caption) is used FIRST, so the post
+    goes out ON TIME; only when the queue is empty is the post
+    prepared on the spot (the behaviour above). A ready post is
+    consumed only after it is successfully posted, so a transient
+    failure keeps it for the next run.
     The photo is verified BEFORE logging in or writing any text, so a
     failed photo never wastes an AI call. The post text uses the
     card's tone."""
@@ -5094,16 +5571,39 @@ def _card_bluesky_post(card, state, article, promo=False):
     image_alt = ""
     news_topic = ""
     news_headline = ""
+    # Rebuild #7.11: the ready queue (prepared ahead: story + verified
+    # photo + caption). from_queue = this post uses a ready item.
+    from_queue = False
+    hook_ready = ""
     if use_link:
-        news_topic, news_headline, photo = _pick_fresh_promo_news(card, state)
-        if not photo:
-            # _pick_fresh_promo_news already logged why (LAST_BSKY_SKIP).
-            log("warning", f"card '{name}': no photo, skipped - Bluesky post "
-                           "needs a verified real news photo")
-            return False
+        # Rebuild #7.11: a ready post (prepared ahead, story + verified
+        # photo + caption) is used FIRST - the post goes out ON TIME.
+        # If the queue is empty, prepare on the spot (current behavior).
+        ready = _take_ready_item(card, state)
+        if ready is not None:
+            news_topic = ready.get("topic") or ""
+            news_headline = ready.get("headline") or ""
+            photo = {"url": ready.get("photo_url", ""),
+                     "source": ready.get("photo_source") or "news",
+                     "alt": ready.get("photo_alt") or news_headline,
+                     "local_path": ready["local_path"],
+                     "article_url": ready.get("article_url") or ""}
+            hook_ready = (ready.get("hook") or "").strip()
+            from_queue = True
+            log("info", f"card '{name}': posted from ready queue - "
+                        f"'{news_headline[:60]}'")
+        else:
+            news_topic, news_headline, photo = _pick_fresh_promo_news(card, state)
+            if not photo:
+                # _pick_fresh_promo_news already logged why (LAST_BSKY_SKIP).
+                log("warning", f"card '{name}': no photo, skipped - Bluesky post "
+                               "needs a verified real news photo")
+                return False
         if _is_pollinations_url(photo.get("url", "")):
             log("warning", f"card '{name}': no photo, skipped - promo photo "
                            "is AI-generated, not a real news image")
+            if from_queue:
+                _discard_ready_item(card, state, news_headline)
             LAST_BSKY_SKIP = "no_photo"
             return False
         # Rebuild #7.8: a link-less card posts the story with the
@@ -5116,12 +5616,16 @@ def _card_bluesky_post(card, state, article, promo=False):
             log("info", f"card '{name}': news story already used within "
                         f"24h - cooldown, skipping (event key "
                         f"'{_norm_news_key(news_headline)[:60]}')")
+            if from_queue:
+                _discard_ready_item(card, state, news_headline)
             LAST_BSKY_SKIP = "cooldown"
             return False
         if _promo_link_topic_cooldown_left(state, effective_link, news_headline) is not None:
             log("info", f"card '{name}': same link + same event within "
                         f"24h - cooldown, skipping (event key "
                         f"'{_norm_news_key(news_headline)[:60]}')")
+            if from_queue:
+                _discard_ready_item(card, state, news_headline)
             LAST_BSKY_SKIP = "cooldown"
             return False
         image_path = prepare_bsky_image(photo["local_path"],
@@ -5192,6 +5696,11 @@ def _card_bluesky_post(card, state, article, promo=False):
             # news story (news_headline from the fresh pick above),
             # so every post about the same link reads differently.
             text = (card.get("text") or "").strip()
+            if not text and from_queue and hook_ready:
+                # Rebuild #7.11: the caption was written when the post
+                # was prepared (ready queue) - use it, no AI call at
+                # post time. A card's own custom text still wins.
+                text = hook_ready
             if not text:
                 text = (ai_write(
                     BSKY_PROMO_NEWS_PROMPT.format(
@@ -5223,6 +5732,8 @@ def _card_bluesky_post(card, state, article, promo=False):
                 # link (Bluesky rejects it with 400).
                 log("info", f"card '{name}': story link too long for "
                             "Bluesky - skipping")
+                if from_queue:
+                    _discard_ready_item(card, state, news_headline)
                 LAST_BSKY_SKIP = "link_too_long"
                 return False
             # Per-caption cooldown (rebuild #7.1): the same caption
@@ -5235,6 +5746,8 @@ def _card_bluesky_post(card, state, article, promo=False):
             if _promo_caption_cooldown_left(state, caption_id) is not None:
                 log("info", f"card '{name}': caption already used "
                             "within 24h - cooldown, skipping")
+                if from_queue:
+                    _discard_ready_item(card, state, news_headline)
                 LAST_BSKY_SKIP = "cooldown"
                 return False
             label = f"card promo ({acc['handle']})"
@@ -5280,6 +5793,10 @@ def _card_bluesky_post(card, state, article, promo=False):
                                 "24h cooldown (topic + link+event recorded, "
                                 f"account {acc['handle']})")
                 _record_promo_caption_posted(state, caption_id)
+                if from_queue:
+                    # Rebuild #7.11: the ready post went out - remove
+                    # it from the queue so it is never posted twice.
+                    _consume_ready_item(card, state, news_headline)
             ok = True
     return ok
 
@@ -5807,6 +6324,16 @@ def run_cards_cycle(state, only=None):
             continue
         if only and _card_workflow(card) != only:
             continue
+        # Rebuild #7.11: READY QUEUE - prepare the next post AHEAD of
+        # time (news + verified photo + caption) when a post slot is
+        # due within ~15 min, so the post goes out ON TIME. This runs
+        # even when the card's interval is not due yet (the slot may
+        # be due before the next interval run). _ensure_ready_queue
+        # itself does nothing when no slot is near, and never prepares
+        # for a card whose workflow is OFF.
+        if card.get("type") in ("bluesky_post", "bluesky_promo") and \
+                workflow_enabled("bsky"):
+            _ensure_ready_queue(card, state)
         interval_due = file_card_due(card, state)
         post_only = False
         if not interval_due and card.get("type") in (
