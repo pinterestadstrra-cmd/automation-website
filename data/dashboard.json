@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T17:38:11.425286+00:00",
-  "last_run": "2026-11-24T17:34:29.625603+00:00",
-  "runs": 59,
+  "generated_at": "2026-11-24T18:23:25.138179+00:00",
+  "last_run": "2026-11-24T18:22:13.588500+00:00",
+  "runs": 60,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -65,20 +65,20 @@
       "schedule_times": [],
       "last_run": "2026-11-24T17:38:11.350178+00:00",
       "runs_today": 18,
-      "posts_today": 12,
+      "posts_today": 0,
       "next_runs": [
-        "2026-11-24T23:53:11.350178+06:00",
-        "2026-11-25T00:08:11.350178+06:00",
-        "2026-11-25T00:23:11.350178+06:00",
         "2026-11-25T00:38:11.350178+06:00",
-        "2026-11-25T00:53:11.350178+06:00"
+        "2026-11-25T00:53:11.350178+06:00",
+        "2026-11-25T01:08:11.350178+06:00",
+        "2026-11-25T01:23:11.350178+06:00",
+        "2026-11-25T01:38:11.350178+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T23:55:00+06:00",
         "2026-11-25T01:00:00+06:00",
         "2026-11-25T02:10:00+06:00",
         "2026-11-25T02:54:00+06:00",
-        "2026-11-25T04:00:00+06:00"
+        "2026-11-25T04:00:00+06:00",
+        "2026-11-25T05:05:00+06:00"
       ],
       "success": 16,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 12
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T17:34:29.627250+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T18:22:13.590347+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Tidal bans AI-generated music",
-    "Most memorable TV theme songs",
+    "Iowa Army detonation court case",
     "Wrong Lord of the Rings quotes",
-    "Medicare for All and universal healthcare",
-    "Trump gives Giuliani Medal of Freedom",
-    "Jensen Huang discloses more affairs",
-    "Personal boycotts",
-    "Grand Theft Auto VI release",
     "SEC probes Nvidia accounting",
-    "Pope Francis diary: devil encounters"
+    "Grand Theft Auto VI release",
+    "Personal boycotts",
+    "Todd Blanche questioned on Jensen Huang",
+    "\"I Know Your Age\" quiz",
+    "Huang denies government role in return",
+    "Pope Francis diary: devil encounters",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T18:23:24.925339+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T18:23:24.923607+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T18:23:24.633536+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T18:22:13.591321+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T18:22:13.590356+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #60 started (--only blogger)",
+      "created_at": "2026-11-24T18:22:13.588519+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T17:38:11.427054+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Tidal bans AI-generated music', 'Most memorable TV theme songs', 'Wrong Lord of the Rings quotes', 'Medicare for All and universal healthcare', 'Trump gives Giuliani Medal of Freedom']",
+      "created_at": "2026-11-24T17:38:11.422171+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo candidate: 'Why is there a Cold War missile in a field in Llangollen? - ' - rejected (no og:image)",
       "created_at": "2026-11-24T17:35:04.564262+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1QWUNpZHdnU0RvSzVhTDJlSUZra01hRzVfd1dKSkZwYnZCOEFYX0Utc2FhNUpnSWFRT0x) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T17:35:04.561725+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: story 2/6 tried: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - no usable photo, trying the next story",
-      "created_at": "2026-11-24T17:35:03.881985+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T17:35:03.880796+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Moscow accuses Estonia of hostile actions on 'verge of triggering open war' - Reuters' (0 download(s) tried)",
-      "created_at": "2026-11-24T17:35:03.879639+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://cdn.britannica.com/26/116526-050-76C37BBC/Cathedral-of-St-Basil-the-Blessed-Moscow.jpg (page: https://www.britannica.com/summary/Moscow | Red Square | Moscow Landmark, History & Architecture | B - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:03.878553+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.56thparallel.com/wp-content/uploads/2017/12/Moscow-city-break-tour-3-days-e1512974884239 (page: https://www.britannica.com/topic/Red-Square | 15 Amazing Reasons to Visit Moscow - Russia Travel Gui - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:03.877014+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | 50 Things to Do in Moscow, Russia - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:03.875767+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://www.tripsavvy.com/things-to-do-in-moscow-1501845 | Red Square At Night Moscow Russia UHD 4K  - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:03.874512+00:00",
       "card": ""
     }
   ]

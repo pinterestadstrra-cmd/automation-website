@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T18:23:25.139867+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Iowa Army detonation court case', 'Wrong Lord of the Rings quotes', 'SEC probes Nvidia accounting', 'Grand Theft Auto VI release', 'Personal boycotts']",
+    "created_at": "2026-11-24T18:23:25.135538+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T18:23:24.925339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T18:23:24.923607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T18:23:24.633536+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T18:22:13.591321+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T18:22:13.590356+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #60 started (--only blogger)",
+    "created_at": "2026-11-24T18:22:13.588519+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T17:38:11.427054+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Majority Americans Say Social Media'",
     "created_at": "2026-11-24T16:42:12.900293+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Majority Americans Say Social Media'",
-    "created_at": "2026-11-24T16:42:12.721404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'Majority Americans Say Social Media'",
-    "created_at": "2026-11-24T16:42:12.170502+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T16:41:57.465090+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T16:41:57.464107+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://topdogfilmfestival.com.au/wp-content/uploads/Screenshot-2026-02-19-at-1.34.27-pm.png (page: https://stansberryconferences.com/speaker/mike-ritland/ | Mike Ritland: A Navy SEAL'S Mission To Sav - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-24T16:41:57.463038+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://m.media-amazon.com/images/I/51puYCaO9LL._SL500_.jpg (page: https://topdogfilmfestival.com.au/mike-ritland-warrior-dogs/ | Rd. 2 | Surviving the Largest Naval S - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-24T16:41:57.462071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://i.ytimg.com/vi/TignGfQzsXw/maxresdefault.jpg (page: https://www.audible.com/podcast/Rd-2-Surviving-the-Largest-Naval-Special-Warfare-Combat-Operation-Mi - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-24T16:41:57.460900+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://cdn.shopify.com/s/files/1/0125/4172/2682/files/navy-seal-with-dog_2048x.jpg?v=1577043322 (page: https://www.youtube.com/watch?v=TignGfQzsXw | Mike Ritland's Online Store – Trikos Shop - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-24T16:41:57.459796+00:00",
     "card": ""
   }
 ]
