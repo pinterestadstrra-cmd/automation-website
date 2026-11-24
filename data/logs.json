@@ -2,6 +2,84 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T01:49:58.068884+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Trump blames Democrats for selloff', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'Grand Theft Auto VI release', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-24T01:49:58.065014+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: no article to post yet)",
+    "created_at": "2026-11-24T01:49:57.879866+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': run failed (3/5 retries) - next retry at 08:19 Dhaka",
+    "created_at": "2026-11-24T01:49:57.878949+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "card 'Adsterra Blogger': no article to post",
+    "created_at": "2026-11-24T01:49:57.878034+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-24T01:49:57.877238+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=48 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/5 replies/day=0",
+    "created_at": "2026-11-24T01:49:57.875510+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retry 2/5 after failure - due now",
+    "created_at": "2026-11-24T01:49:57.874606+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T01:49:57.873494+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.8-flash)",
+    "created_at": "2026-11-24T01:49:57.487789+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T01:49:22.118841+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-24T01:49:22.117998+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #31 started (--only bluesky)",
+    "created_at": "2026-11-24T01:49:22.116690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T01:08:50.421708+00:00",
     "card": ""
   },
@@ -1120,83 +1198,5 @@
     "message": "TEST RUN card 'BlueSky Trend': dry-run forced - the article will be written and the photo verified, but NOTHING will be published and NO reply will be sent",
     "created_at": "2026-11-24T01:06:35.758473+00:00",
     "card": ""
-  },
-  {
-    "level": "info",
-    "message": "test requested for card 'BlueSky Trend'",
-    "created_at": "2026-11-24T01:06:35.757231+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-    "created_at": "2026-11-24T01:06:35.755821+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T01:06:35.754245+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': promo posted - event 'drop five four gazette news october press see top traffic we' on 24h cooldown (topic + link+event recorded)",
-    "created_at": "2026-11-24T01:06:35.752685+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T01:05:37.696772+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
-    "created_at": "2026-11-24T01:05:37.690683+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-    "created_at": "2026-11-24T01:05:37.447244+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T01:05:37.445167+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': promo posted - event 'drop five four gazette news october press see top traffic we' on 24h cooldown (topic + link+event recorded)",
-    "created_at": "2026-11-24T01:05:37.442362+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T01:05:02.556936+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
-    "created_at": "2026-11-24T01:05:02.552100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: no article to post yet)",
-    "created_at": "2026-11-24T01:05:02.340007+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': run failed (2/5 retries) - next retry at 07:35 Dhaka",
-    "created_at": "2026-11-24T01:05:02.338667+00:00",
-    "card": "Adsterra Blogger"
   }
 ]
