@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T19:35:20.143426+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['US prepares new tariffs on China', 'Jensen Huang\\'s \"tortured story\" remark', 'SEC probes Nvidia accounting', \"Jensen Huang's daily therapy remark\", 'Grand Theft Auto VI release']",
+    "created_at": "2026-11-24T19:35:20.139352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T19:35:19.771408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T19:35:19.769894+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T19:35:19.528629+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T19:34:14.955667+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T19:34:14.954710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #62 started (--only blogger)",
+    "created_at": "2026-11-24T19:34:14.953350+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T18:32:06.567223+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
     "created_at": "2026-11-24T16:42:14.130589+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-24T16:42:14.129242+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-    "created_at": "2026-11-24T16:42:14.126779+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-    "created_at": "2026-11-24T16:42:13.898912+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-    "created_at": "2026-11-24T16:42:13.723740+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-    "created_at": "2026-11-24T16:42:13.492345+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T16:42:13.394784+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T16:42:13.393847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
-    "created_at": "2026-11-24T16:42:13.392787+00:00",
     "card": ""
   }
 ]

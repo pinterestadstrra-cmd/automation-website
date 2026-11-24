@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T18:32:06.565404+00:00",
-  "last_run": "2026-11-24T18:31:33.418026+00:00",
-  "runs": 61,
+  "generated_at": "2026-11-24T19:35:20.142031+00:00",
+  "last_run": "2026-11-24T19:34:14.953329+00:00",
+  "runs": 62,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-25T00:47:06.475675+06:00",
-        "2026-11-25T01:02:06.475675+06:00",
-        "2026-11-25T01:17:06.475675+06:00",
-        "2026-11-25T01:32:06.475675+06:00",
-        "2026-11-25T01:47:06.475675+06:00"
+        "2026-11-25T01:47:06.475675+06:00",
+        "2026-11-25T02:02:06.475675+06:00",
+        "2026-11-25T02:17:06.475675+06:00",
+        "2026-11-25T02:32:06.475675+06:00",
+        "2026-11-25T02:47:06.475675+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T01:00:00+06:00",
         "2026-11-25T02:10:00+06:00",
         "2026-11-25T02:54:00+06:00",
         "2026-11-25T04:00:00+06:00",
-        "2026-11-25T05:05:00+06:00"
+        "2026-11-25T05:05:00+06:00",
+        "2026-11-25T05:50:00+06:00"
       ],
       "success": 17,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 12
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T18:31:33.419724+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T19:34:14.954702+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
+    "US prepares new tariffs on China",
     "Jensen Huang's \"tortured story\" remark",
-    "Iowa Army detonation court case",
-    "Wrong Lord of the Rings quotes",
-    "Pope Francis diary: devil encounters",
-    "King tides threaten Bay Area flooding",
-    "Most memorable TV theme songs",
     "SEC probes Nvidia accounting",
-    "Huang denies government role in return",
+    "Jensen Huang's daily therapy remark",
+    "Grand Theft Auto VI release",
+    "Jensen Huang's Nvidia company meeting",
+    "Van Hollen challenges Schumer",
     "Tidal bans AI-generated music",
-    "Grand Theft Auto VI release"
+    "Most memorable TV theme songs",
+    "\"I Know Your Age\" quiz"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T19:35:19.771408+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T19:35:19.769894+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T19:35:19.528629+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T19:34:14.955667+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T19:34:14.954710+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #62 started (--only blogger)",
+      "created_at": "2026-11-24T19:34:14.953350+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T18:32:06.567223+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang\\'s \"tortured story\" remark', 'Iowa Army detonation court case', 'Wrong Lord of the Rings quotes', 'Pope Francis diary: devil encounters', 'King tides threaten Bay Area flooding']",
+      "created_at": "2026-11-24T18:32:06.562207+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - 1 reply sent)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "pexels: API key not configured - skipping",
       "created_at": "2026-11-24T17:35:11.716574+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://cdn0.animalwised.com/en/posts/8/7/3/5_hairless_cat_breeds_2378_orig.jpg (page: https://www.pinterest.com/pin/5-things-to-know-about-somali-cats-petful--338966309451722057/ | 5 Hai - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:11.715312+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://aplaceforanimals.com/wp-content/uploads/2024/03/unique_breed_of_cat.jpg (page: https://www.animalwised.com/5-hairless-cat-breeds-2378.html | The Perfect Orange and White Cat Breed - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:11.713956+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.animalbliss.com/wp-content/uploads/2019/10/G-Jackie-Johnston-infographic.jpg (page: https://aplaceforanimals.com/pets/cats/orange-and-white-cat-breed-name-2/ | List of Popular Cat Bree - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:11.712615+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://hips.hearstapps.com/hmg-prod/images/international-cat-day-cat-map-of-the-uk-2018-iams-uk-153 (page: https://animalbliss.com/list-of-popular-cat-breeds/ | 10 Most Popular Cat Breeds UK – Most Common Ca - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-24T17:35:11.711327+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
-      "created_at": "2026-11-24T17:35:11.708544+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
-      "created_at": "2026-11-24T17:35:11.553487+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
-      "created_at": "2026-11-24T17:35:11.427582+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
-      "created_at": "2026-11-24T17:35:11.061726+00:00",
       "card": ""
     }
   ]
