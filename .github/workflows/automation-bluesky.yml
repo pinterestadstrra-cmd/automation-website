@@ -16,6 +16,18 @@
 #   ADMIN_PASSWORD        dashboard password (also used by the web UI)
 name: Automation Bluesky
 
+# Rebuild #7.8: SERIALIZE runs. A run takes ~13 min but the cron
+# fires every 10 min, so runs overlapped ROUTINELY - two concurrent
+# runs read the same state.json, picked the same fresh story and
+# posted it twice (the "same post twice" and "same post on two
+# accounts" bugs). With cancel-in-progress: false, a new run WAITS
+# for the current one to finish (and reads its updated state)
+# instead of racing it. This is the cross-run race fix; the in-run
+# guards (cooldown, gap, account record) are the in-run fix.
+concurrency:
+  group: automation-bluesky
+  cancel-in-progress: false
+
 on:
   schedule:
     - cron: "*/10 * * * *"
