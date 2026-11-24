@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T04:00:45.070095+00:00",
-  "last_run": "2026-11-24T03:58:22.466622+00:00",
-  "runs": 37,
+  "generated_at": "2026-11-24T04:58:29.430374+00:00",
+  "last_run": "2026-11-24T04:52:01.519118+00:00",
+  "runs": 38,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T03:42:42.918313+00:00"
+    "Adsterra Blogger": "2026-11-24T04:58:29.133570+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 3,
+      "success": 4,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T03:43:28.552754+00:00"
+      "last_run": "2026-11-24T04:58:29.133565+00:00"
     }
   },
   "file_cards": [
@@ -63,24 +63,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T03:42:42.918313+00:00",
-      "runs_today": 5,
-      "posts_today": 2,
+      "last_run": "2026-11-24T04:58:29.133570+00:00",
+      "runs_today": 6,
+      "posts_today": 3,
       "next_runs": [
-        "2026-11-24T10:12:42.918313+06:00",
-        "2026-11-24T10:27:42.918313+06:00",
-        "2026-11-24T10:42:42.918313+06:00",
-        "2026-11-24T10:57:42.918313+06:00",
-        "2026-11-24T11:12:42.918313+06:00"
+        "2026-11-24T11:13:29.133570+06:00",
+        "2026-11-24T11:28:29.133570+06:00",
+        "2026-11-24T11:43:29.133570+06:00",
+        "2026-11-24T11:58:29.133570+06:00",
+        "2026-11-24T12:13:29.133570+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T10:01:00+06:00",
         "2026-11-24T11:06:00+06:00",
         "2026-11-24T11:51:00+06:00",
         "2026-11-24T12:56:00+06:00",
-        "2026-11-24T14:00:00+06:00"
+        "2026-11-24T14:00:00+06:00",
+        "2026-11-24T15:05:00+06:00"
       ],
-      "success": 3,
+      "success": 4,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T03:58:22.468188+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T04:52:01.520736+00:00"
     }
   ],
   "dry_run": false,
@@ -161,317 +170,317 @@
     "open": false
   },
   "trending": [
-    "Iowa Army detonation court case",
     "Personal boycotts",
-    "Grand Theft Auto VI release",
-    "Alice Huang espionage allegations",
-    "Trump blames Democrats for selloff",
     "SEC probes Nvidia accounting",
+    "Grand Theft Auto VI release",
+    "Iowa Army detonation court case",
+    "ICE arrests at Seattle airport",
     "Google plans personalized AI TV channel",
-    "Apple TV renews Ted Lasso",
-    "Thanksgiving dinner preparations",
-    "Riemann hypothesis proof claimed"
+    "Favorite first Magic set card",
+    "NFL Week 11 games",
+    "States sue SpaceX over Grok",
+    "Thanksgiving dinner preparations"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T04:00:44.986271+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T04:00:44.984282+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T04:00:44.808718+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T03:58:22.469112+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T03:58:22.468198+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #37 started (--only blogger)",
-      "created_at": "2026-11-24T03:58:22.466659+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T03:43:28.746720+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Alice Huang espionage allegations', 'Iowa Army detonation court case', 'SEC probes Nvidia accounting', 'Trump blames Democrats for selloff', 'Grand Theft Auto VI release']",
-      "created_at": "2026-11-24T03:43:28.743154+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (skipped: too soon)",
-      "created_at": "2026-11-24T03:43:28.552790+00:00",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T04:58:29.133591+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted less than 5 minutes ago - too soon, skipping",
-      "created_at": "2026-11-24T03:43:28.551870+00:00",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T04:58:29.132456+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-      "created_at": "2026-11-24T03:43:28.550448+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event 'democrat era house pbs resound senate sweep usher' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T04:58:29.130723+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T03:43:28.549462+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T03:43:28.547738+00:00",
+      "message": "prepare_bsky_image: published 2560x1440 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-24T04:53:30.455560+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T03:43:28.142337+00:00",
+      "message": "prepare_bsky_image: original 2560x1440 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-24T04:53:30.454496+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T03:43:25.120832+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T03:43:25.119948+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #36 started (--only bluesky)",
-      "created_at": "2026-11-24T03:43:25.118657+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T03:42:43.136154+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Alice Huang espionage allegations', 'Iowa Army detonation court case', 'SEC probes Nvidia accounting', 'Trump blames Democrats for selloff', 'Grand Theft Auto VI release']",
-      "created_at": "2026-11-24T03:42:43.132691+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 2)",
-      "created_at": "2026-11-24T03:42:42.918331+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T03:42:42.917435+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'contract investigation news oil panel priz report senate tie' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T03:42:42.915763+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1110x740 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-24T03:38:26.575300+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: original 1110x740 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-24T03:38:26.574587+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T03:38:26.573481+00:00",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T04:53:30.452622+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: USA political news",
-      "created_at": "2026-11-24T03:38:26.572792+00:00",
+      "created_at": "2026-11-24T04:53:30.451481+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve': https://media.cnn.com/api/v1/images/stellar/prod/211023235207-05-braves-dodgers-nlcs-102321.jpg?q=w_ (from bing-images, query 'JD Vance s Ties Prized', page: https://www.gettyimages.com/detail/news-photo/the-atlanta-braves-celebrate-winning-game-6-of-the-wor - matches 2 key entities (news, world))",
-      "created_at": "2026-11-24T03:38:26.571991+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Democrats usher in a new era with their resounding sweep of ': https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (from bing-images, query 'Democrats usher in a new era with their resounding sweep of the House and the Senate - PBS', page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - matches 2 key entities (democrat, house))",
+      "created_at": "2026-11-24T04:53:30.450180+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('JD Vance's Ties to Prized Venezuelan Oil Contract ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T03:38:26.570482+00:00",
+      "message": "vision: unavailable - keyword check decides ('Democrats usher in a new era with their resounding': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T04:53:30.448206+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'JD Vance s Ties Prized'",
-      "created_at": "2026-11-24T03:38:13.299765+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-24T04:53:17.480485+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'JD Vance s Ties Prized'",
-      "created_at": "2026-11-24T03:38:13.068572+00:00",
+      "message": "google-images: 0 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-24T04:53:17.345385+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'JD Vance s Ties Prized'",
-      "created_at": "2026-11-24T03:38:12.908948+00:00",
+      "message": "wikimedia: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-24T04:53:17.227029+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'JD Vance s Ties Prized'",
-      "created_at": "2026-11-24T03:38:12.837779+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:12.607491+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:12.606773+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://i.ytimg.com/vi/NgMkM9rEXyY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgw (page: https://www.youtube.com/watch?v=7AYe6zk6R98 | Danny and the Dinosaur Holloween Pumpkin Pie Party - Y - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.606027+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://i.ytimg.com/vi/4DuYa64Rh4g/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL (page: https://makeagif.com/gif/danny-go-pumpkin-pie-055ShF | Danny go video playlist - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.605100+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://vhx.imgix.net/woohoo/assets/c0cb0166-f20b-40cf-b775-a6bdc0dbece0-82f9d304.png?auto=format%2C (page: https://music.youtube.com/playlist?list=PLxNGoWbamL025qP7uhvkt1KRpf69Ia55I | Danny Go! - Yippee - Fa - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.604283+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://i.ytimg.com/vi/4DuYa64Rh4g/maxresdefault.jpg (page: https://watch.yippee.tv/dannygo - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.603409+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:12.601047+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:12.458701+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:12.310814+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:12.235803+00:00",
+      "message": "openverse: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-24T04:53:16.819956+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:12.045926+00:00",
+      "created_at": "2026-11-24T04:53:10.482430+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:12.045245+00:00",
+      "created_at": "2026-11-24T04:53:10.481119+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://www.ayzun.com/wp-content/uploads/2026/11/pastel-flowers-wallpaper-mural-salmon-pink-chinoise (page: https://www.ayzun.com/tropical-forest-wallpaper-mural-misty-lotus-protea-flowers/ | Pastel Flowers W - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.044530+00:00",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - rejected (no og:image)",
+      "created_at": "2026-11-24T04:53:10.479846+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://img.magnific.com/premium-photo/wallpaper-with-flowers-leaves-flowers_859523-2402.jpg?w=1480 (page: https://unsplash.com/s/photos/flowers-4k-wallpaper-for-laptop | A wallpaper with flowers and leaves  - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.043735+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxPblFTeDZOTlFNZ0hzLTJnczQ0dWk0TlVTTUhUY2dHbExHRXY3RkQtNGtkdTFrM000Nkh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T04:53:10.476813+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://co23.nevseoboi.com.ua/flowers/366/36639/1696482722-15-20231004-1158737.jpg (page: https://www.magnific.com/premium-photo/wallpaper-with-flowers-leaves-flowers_172982613.htm | Floral  - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.042918+00:00",
+      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T04:53:10.329365+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'JD Vance's Ties to Prized Venezuelan Oil Contract '): https://wallpapercave.com/wp/wp4535656.jpg (page: https://nevseoboi.com.ua/en/flowers/36639-floral-wallpaper-904-30-wallpapers.html | 44+ 4K 16 9 Wall - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-24T03:38:12.042042+00:00",
+      "message": "photo: no real photo found for 'Americans’ Trust in Information From News Organizations Has Risen in the Past Year - Pew Research Center' (0 download(s) tried)",
+      "created_at": "2026-11-24T04:53:10.327915+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:12.039849+00:00",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/10-little-caldwells-island-andr (page: Little Caldwells Island #10 Digital Art by Andrew Wyeth - Fine Art America - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.326326+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:11.867949+00:00",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.324476+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.323223+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Russia_1771_Sestroretsk_Rouble.jpg/1280px-R (page: https://commons.wikimedia.org/wiki/File:Russia_1771_Sestroretsk_Rouble.jpg | File:Russia 1771 Sestro - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.322032+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ROM-71-Emergency_WWI-50_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-71-Emergency_WWI-50_Bani_(1917).jpg | File:ROM-71-Emerge - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.320704+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ROM-69-Emergency_WWI-10_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-69-Emergency_WWI-10_Bani_(1917).jpg | File:ROM-69-Emerge - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:10.319413+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Americans Trust Information News Organizations'",
+      "created_at": "2026-11-24T04:53:10.316859+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Americans Trust Information News Organizations'",
+      "created_at": "2026-11-24T04:53:10.212837+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Americans Trust Information News Organizations'",
+      "created_at": "2026-11-24T04:53:10.103796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: search HTTP 504 for 'Americans Trust Information News Organizations'",
+      "created_at": "2026-11-24T04:53:09.657146+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T04:53:01.187459+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T04:53:01.186210+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://img.freepik.com/premium-photo/traditional-chinese-herbal-medicine-ingredients-with-real-hier (page: Premium Photo | Traditional chinese herbal medicine ingredients with ... - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:53:01.185093+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:53:01.182055+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:53:01.062672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:53:00.925749+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:53:00.712668+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T04:52:49.164220+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T04:52:49.162999+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://image.airport-data.com/aircraft/001816658.jpg (page: https://www.baaa-acro.com/aircraft/douglas-dc-3?page=11 | Aircraft N711Y (2018 Diamond DA 40 NG C/N  - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:52:49.161811+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://media.abpic.co.uk/pictures/full_size_0237/1357351-large.jpg (page: https://airport-data.com/aircraft/photo/001816658.html | Aviation photographs of Operator: Private : - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:52:49.160506+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i.ytimg.com/vi/lJh8_BOvnBY/maxresdefault.jpg (page: https://abpic.co.uk/pictures/operator/Private/154500/ | 1999 Aviat Husky A-1B N711HY - YouTube - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:52:49.159193+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://live.staticflickr.com/65535/55006855524_96c6856c77_h.jpg (page: https://www.youtube.com/watch?v=lJh8_BOvnBY | Open Hangar Fly-In 2025 Dennis Maroulas Photos - 83 ai - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T04:52:49.158009+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:52:49.155512+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:52:49.035084+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:52:48.917018+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
+      "created_at": "2026-11-24T04:52:48.728164+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T04:52:43.986445+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T04:52:43.985207+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no og:image)",
+      "created_at": "2026-11-24T04:52:43.983956+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPZENfX1RlWTAwQWZEUnF2OTMyU2Mtb0N2Mi12R3ZzYUlmY1k2aGhka3JOZE82QWZUSUN) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T04:52:43.981571+00:00",
       "card": ""
     }
   ]
