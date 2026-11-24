@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T10:12:21.286517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Burnham rebuffs former prime ministers', 'Personal boycotts', 'Bird photography', 'AI sell-off overshadows Anthropic IPO']",
+    "created_at": "2026-11-24T10:12:21.281875+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T10:12:20.999271+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T10:12:20.997660+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T10:12:20.521116+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T10:08:36.900688+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T10:08:36.899586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #45 started (--only blogger)",
+    "created_at": "2026-11-24T10:08:36.897675+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T09:53:37.555451+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-24T07:11:26.506953+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
-    "created_at": "2026-11-24T07:11:26.505034+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxPMmd4NTlaRXRMSE1zbmdzVTdhaVA1QWxURkQ2aFlmU0REdDZfQ1h5RmczU01EcGZNaHh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T07:11:26.501909+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-    "created_at": "2026-11-24T07:11:26.283856+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T07:11:26.282307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Americans’ Trust in Information From News Organizations Has Risen in the Past Year - Pew Research Center' (0 download(s) tried)",
-    "created_at": "2026-11-24T07:11:26.280515+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://media.printables.com/media/prints/556014/images/4461140_5b54ace4-6d91-4a28-b98b-b4ce5a730d63 (page: Viking Compass Symbol by Peter Ennist | Download free STL model ... - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:26.279085+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:26.277547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:26.275988+00:00",
     "card": ""
   }
 ]

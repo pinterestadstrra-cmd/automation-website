@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T09:53:37.553837+00:00",
-  "last_run": "2026-11-24T09:48:33.238169+00:00",
-  "runs": 44,
+  "generated_at": "2026-11-24T10:12:21.284814+00:00",
+  "last_run": "2026-11-24T10:08:36.897641+00:00",
+  "runs": 45,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,11 +67,11 @@
       "runs_today": 10,
       "posts_today": 7,
       "next_runs": [
-        "2026-11-24T16:08:37.351245+06:00",
         "2026-11-24T16:23:37.351245+06:00",
         "2026-11-24T16:38:37.351245+06:00",
         "2026-11-24T16:53:37.351245+06:00",
-        "2026-11-24T17:08:37.351245+06:00"
+        "2026-11-24T17:08:37.351245+06:00",
+        "2026-11-24T17:23:37.351245+06:00"
       ],
       "next_post_times": [
         "2026-11-24T16:55:00+06:00",
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 7
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T09:48:33.240152+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T10:08:36.899572+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Bird photography",
     "Jensen Huang discloses more affairs",
     "Burnham rebuffs former prime ministers",
     "Personal boycotts",
+    "Bird photography",
+    "AI sell-off overshadows Anthropic IPO",
     "Grand Theft Auto VI release",
     "Ukraine claims Libya warship sinking",
-    "Google plans personalized AI TV channel",
-    "Riemann hypothesis proof claimed",
-    "Google adds AI across products",
-    "SEC probes Nvidia accounting"
+    "November full supermoon",
+    "Ocarina of Time remake",
+    "GTA VI's Jason and Lucia"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T10:12:20.999271+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T10:12:20.997660+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T10:12:20.521116+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T10:08:36.900688+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T10:08:36.899586+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #45 started (--only blogger)",
+      "created_at": "2026-11-24T10:08:36.897675+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T09:53:37.555451+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Bird photography', 'Jensen Huang discloses more affairs', 'Burnham rebuffs former prime ministers', 'Personal boycotts', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-24T09:53:37.549321+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -434,54 +473,6 @@
       "message": "bing-images: 4 candidate(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
       "created_at": "2026-11-24T08:39:31.730782+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-      "created_at": "2026-11-24T08:39:31.538812+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-      "created_at": "2026-11-24T08:39:31.369110+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-      "created_at": "2026-11-24T08:39:30.838693+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T08:39:29.825391+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T08:39:29.824185+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran war live: Tehran demands 7 conditions be met before any' - rejected (no og:image)",
-      "created_at": "2026-11-24T08:39:29.822795+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T08:39:29.820077+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T08:39:28.767069+00:00",
-      "card": "Adsterra Blogger"
     }
   ]
 }
