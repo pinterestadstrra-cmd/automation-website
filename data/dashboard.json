@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T07:15:06.047579+00:00",
-  "last_run": "2026-11-24T07:10:55.659958+00:00",
-  "runs": 41,
+  "generated_at": "2026-11-24T07:20:29.659450+00:00",
+  "last_run": "2026-11-24T07:20:24.332956+00:00",
+  "runs": 42,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 5
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T07:10:55.661901+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T07:20:24.334511+00:00"
     }
   ],
   "dry_run": false,
@@ -172,17 +163,65 @@
   "trending": [
     "Jensen Huang discloses more affairs",
     "Personal boycotts",
+    "SEC probes Nvidia accounting",
     "Grand Theft Auto VI release",
     "Iowa Army detonation court case",
-    "EU rejects COP31 climate deal",
-    "November full supermoon",
-    "Apple TV renews Ted Lasso",
-    "Thanksgiving dinner preparations",
-    "Women's World Cup host vote",
-    "BepiColombo enters Mercury orbit"
+    "Ukraine claims Libya warship sinking",
+    "Riemann hypothesis proof claimed",
+    "Sunrise on the Reaping's $225M debut",
+    "Cyclops in Avengers: Doomsday footage",
+    "Favorite first Magic set card"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T07:20:29.477593+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T07:20:29.475792+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T07:20:29.069903+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T07:20:24.335670+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T07:20:24.334521+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #42 started (--only blogger)",
+      "created_at": "2026-11-24T07:20:24.332978+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T07:15:06.049330+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Grand Theft Auto VI release', 'Iowa Army detonation court case', 'EU rejects COP31 climate deal']",
+      "created_at": "2026-11-24T07:15:06.043759+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://oncenoticias.hn/wp-content/uploads/2024/09/dafne-keen-8.jpg (page: https://abc7.com/post/classified-documents-leaked-pentagon-how-us-spies-on-allies-foes/13108715/ | D - only 1 of 11 key entities in the source page)",
       "created_at": "2026-11-24T07:11:34.915125+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://images.news9live.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-25-at-12.33.15_4a8913 (page: https://www.oncenoticias.hn/tendencias/dafne-keen-leaked-video-esta-grabacion-de-actriz-espanola-cau - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T07:11:34.913280+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://i.ytimg.com/vi/rkDYFGrawq0/maxresdefault.jpg (page: https://www.news9live.com/entertainment/celebrity/palash-muchhal-cheating-smriti-mandhana-leaked-cha - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T07:11:34.911522+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://f4.bcbits.com/img/a2775098281_10.jpg (page: https://moonagedaydream.film/celebrity/celebrity-i-cloud-leaks | Drake Viral Video Leaked Unfiltered - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T07:11:34.909665+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-      "created_at": "2026-11-24T07:11:34.906301+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-      "created_at": "2026-11-24T07:11:34.746775+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Leaked data shows more than 1,000 Russian military suicides '",
-      "created_at": "2026-11-24T07:11:34.582092+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-      "created_at": "2026-11-24T07:11:34.518604+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T07:11:33.782324+00:00",
       "card": ""
     }
   ]
