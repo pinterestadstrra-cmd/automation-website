@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T21:43:27.979698+00:00",
-  "last_run": "2026-11-24T21:37:21.079803+00:00",
-  "runs": 67,
+  "generated_at": "2026-11-24T22:29:33.246578+00:00",
+  "last_run": "2026-11-24T22:29:30.130803+00:00",
+  "runs": 68,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 22,
       "posts_today": 3,
       "next_runs": [
-        "2026-11-25T03:58:27.956182+06:00",
-        "2026-11-25T04:13:27.956182+06:00",
-        "2026-11-25T04:28:27.956182+06:00",
         "2026-11-25T04:43:27.956182+06:00",
-        "2026-11-25T04:58:27.956182+06:00"
+        "2026-11-25T04:58:27.956182+06:00",
+        "2026-11-25T05:13:27.956182+06:00",
+        "2026-11-25T05:28:27.956182+06:00",
+        "2026-11-25T05:43:27.956182+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T04:00:00+06:00",
         "2026-11-25T05:05:00+06:00",
         "2026-11-25T05:50:00+06:00",
         "2026-11-25T06:55:00+06:00",
-        "2026-11-25T08:01:00+06:00"
+        "2026-11-25T08:01:00+06:00",
+        "2026-11-25T09:06:00+06:00"
       ],
       "success": 20,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 15
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T21:37:21.081423+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T22:29:30.132046+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Trump gives Giuliani Medal of Freedom",
-    "Kelsey Grammer's Beast first look",
     "Evacuations urged before Iowa detonation",
+    "November full supermoon",
+    "Delta system glitch delays flights",
+    "Trump pardons Thanksgiving turkeys",
+    "Thanksgiving dinner preparations",
+    "Kelsey Grammer's Beast first look",
     "Nvidia hiring first compliance officer",
     "Jensen Huang's \"tortured story\" remark",
-    "Tidal bans AI-generated music",
-    "Most memorable TV theme songs",
     "Personal boycotts",
-    "Grand Theft Auto VI release",
-    "Jensen Huang's daily therapy remark"
+    "Grand Theft Auto VI release"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T22:29:33.147697+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T22:29:33.146095+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T22:29:32.798505+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T22:29:30.133008+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T22:29:30.132052+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #68 started (--only blogger)",
+      "created_at": "2026-11-24T22:29:30.130828+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T21:43:27.981514+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Trump gives Giuliani Medal of Freedom', \"Kelsey Grammer's Beast first look\", 'Evacuations urged before Iowa detonation', 'Nvidia hiring first compliance officer', 'Jensen Huang\\'s \"tortured story\" remark']",
+      "created_at": "2026-11-24T21:43:27.976710+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -434,54 +473,6 @@
       "message": "worker run #66 started (--only blogger)",
       "created_at": "2026-11-24T21:28:45.986228+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T20:44:23.326765+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', '\"I Know Your Age\" quiz', 'Nvidia hiring first compliance officer', 'Grand Theft Auto VI release', 'Jensen Huang\\'s \"tortured story\" remark']",
-      "created_at": "2026-11-24T20:44:23.322213+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T20:44:23.167142+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T20:44:23.166129+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event '2026 bbc chart election maps midterm story' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T20:44:23.164712+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-24T20:44:21.441655+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-24T20:44:21.440694+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Story of US 2026 midterm elections in maps and charts - BBC'",
-      "created_at": "2026-11-24T20:44:21.438883+00:00",
-      "card": "Adsterra Blogger"
     }
   ]
 }
