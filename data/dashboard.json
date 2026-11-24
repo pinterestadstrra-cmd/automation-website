@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T22:47:14.851797+00:00",
-  "last_run": "2026-11-24T22:39:04.525645+00:00",
-  "runs": 69,
+  "generated_at": "2026-11-24T23:24:46.144476+00:00",
+  "last_run": "2026-11-24T23:24:42.064910+00:00",
+  "runs": 70,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 23,
       "posts_today": 4,
       "next_runs": [
-        "2026-11-25T05:02:14.663938+06:00",
-        "2026-11-25T05:17:14.663938+06:00",
         "2026-11-25T05:32:14.663938+06:00",
         "2026-11-25T05:47:14.663938+06:00",
-        "2026-11-25T06:02:14.663938+06:00"
+        "2026-11-25T06:02:14.663938+06:00",
+        "2026-11-25T06:17:14.663938+06:00",
+        "2026-11-25T06:32:14.663938+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T05:05:00+06:00",
         "2026-11-25T05:50:00+06:00",
         "2026-11-25T06:55:00+06:00",
         "2026-11-25T08:01:00+06:00",
-        "2026-11-25T09:06:00+06:00"
+        "2026-11-25T09:06:00+06:00",
+        "2026-11-25T10:08:00+06:00"
       ],
       "success": 21,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 16
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T22:39:04.527185+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T23:24:42.066962+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Romney questions China AI chips",
-    "Wrong Lord of the Rings quotes",
-    "Kelsey Grammer's Beast first look",
-    "Delta system glitch delays flights",
     "Evacuations urged before Iowa detonation",
+    "November full supermoon",
     "Nvidia hiring first compliance officer",
-    "Jensen Huang's \"tortured story\" remark",
+    "Cybersecurity breach reported at CIA",
+    "Tidal bans AI-generated music",
     "\"I Know Your Age\" quiz",
+    "Grand Theft Auto VI release",
+    "Wrong Lord of the Rings quotes",
     "King tides threaten Bay Area flooding",
-    "Tidal bans AI-generated music"
+    "Pope Francis diary: devil encounters"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T23:24:45.868678+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T23:24:45.866339+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T23:24:45.552693+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T23:24:42.068549+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T23:24:42.066972+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #70 started (--only blogger)",
+      "created_at": "2026-11-24T23:24:42.064936+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T22:47:14.853519+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Romney questions China AI chips', 'Wrong Lord of the Rings quotes', \"Kelsey Grammer's Beast first look\", 'Delta system glitch delays flights', 'Evacuations urged before Iowa detonation']",
+      "created_at": "2026-11-24T22:47:14.849326+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
       "created_at": "2026-11-24T21:43:26.516221+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-24T21:43:26.515052+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa'",
-      "created_at": "2026-11-24T21:43:26.512699+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T21:43:26.360845+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-24T21:43:26.359540+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T21:43:26.357747+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T21:43:21.515781+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'Record-High 89% in U.S. Say Government Corruption Widespread' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-24T21:43:21.513520+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T21:38:46.809827+00:00",
       "card": ""
     }
   ]

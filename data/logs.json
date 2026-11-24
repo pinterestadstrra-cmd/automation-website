@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T23:24:46.145797+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', 'November full supermoon', 'Nvidia hiring first compliance officer', 'Cybersecurity breach reported at CIA', 'Tidal bans AI-generated music']",
+    "created_at": "2026-11-24T23:24:46.141055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T23:24:45.868678+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T23:24:45.866339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T23:24:45.552693+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T23:24:42.068549+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T23:24:42.066972+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #70 started (--only blogger)",
+    "created_at": "2026-11-24T23:24:42.064936+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T22:47:14.853519+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - ACCEPTED real photo (from wikimedia)",
     "created_at": "2026-11-24T19:43:53.596133+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-24T19:43:53.595443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'US voters rebuke Trump as Democrats win control of Congress ': https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Natl._League_of_Women_Voters%2C_9-17-24_LOC (from wikimedia, query 'voters', page: https://commons.wikimedia.org/wiki/File:Natl._League_of_Women_Voters,_9-17-24_LOC_npcc.12394.jpg | F - page names the entity (voters))",
-    "created_at": "2026-11-24T19:43:53.594686+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('US voters rebuke Trump as Democrats win control of': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-24T19:43:53.591814+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/3/3d/Missouri_League_of_Women_Voters_at_the_Statler_H",
-    "created_at": "2026-11-24T19:43:40.249858+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/a/a6/League_of_Women_Voters_rally_in_St._Louis_Missou",
-    "created_at": "2026-11-24T19:43:40.174396+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/f/f5/League_of_Women_Voters_poster%2C_1923.jpg?utm_so",
-    "created_at": "2026-11-24T19:43:40.103141+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8040/8025019059_fe8d1cc51c_b.jpg",
-    "created_at": "2026-11-24T19:43:40.027361+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6098/6235829161_d50c21339f_b.jpg",
-    "created_at": "2026-11-24T19:43:39.922980+00:00",
     "card": ""
   }
 ]
