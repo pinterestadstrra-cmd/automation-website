@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T13:36:05.784596+00:00",
-  "last_run": "2026-11-24T13:34:54.757997+00:00",
-  "runs": 51,
+  "generated_at": "2026-11-24T13:52:49.354082+00:00",
+  "last_run": "2026-11-24T13:52:44.391359+00:00",
+  "runs": 52,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 14,
       "posts_today": 9,
       "next_runs": [
-        "2026-11-24T19:51:05.518637+06:00",
         "2026-11-24T20:06:05.518637+06:00",
         "2026-11-24T20:21:05.518637+06:00",
         "2026-11-24T20:36:05.518637+06:00",
-        "2026-11-24T20:51:05.518637+06:00"
+        "2026-11-24T20:51:05.518637+06:00",
+        "2026-11-24T21:06:05.518637+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T19:52:00+06:00",
         "2026-11-24T21:08:00+06:00",
         "2026-11-24T22:03:00+06:00",
         "2026-11-24T22:58:00+06:00",
-        "2026-11-24T23:55:00+06:00"
+        "2026-11-24T23:55:00+06:00",
+        "2026-11-25T01:00:00+06:00"
       ],
       "success": 12,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 9
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T13:34:54.759444+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T13:52:44.392649+00:00"
     }
   ],
   "dry_run": false,
@@ -172,17 +163,65 @@
   "trending": [
     "Jensen Huang discloses more affairs",
     "Personal boycotts",
-    "SEC probes Nvidia accounting",
     "Iowa Army detonation court case",
+    "SEC probes Nvidia accounting",
     "Trump calls Putin his friend",
-    "November full supermoon",
     "Grand Theft Auto VI release",
-    "Thanksgiving dinner preparations",
-    "Google adds AI across products",
-    "Women's World Cup host vote"
+    "November full supermoon",
+    "Bird photography",
+    "Women's World Cup host vote",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T13:52:49.119614+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T13:52:49.118079+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T13:52:48.845089+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T13:52:44.393514+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T13:52:44.392656+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #52 started (--only blogger)",
+      "created_at": "2026-11-24T13:52:44.391379+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T13:36:05.786427+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'SEC probes Nvidia accounting', 'Iowa Army detonation court case', 'Trump calls Putin his friend']",
+      "created_at": "2026-11-24T13:36:05.781264+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
       "created_at": "2026-11-24T12:51:09.463673+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Russia_1771_Sestroretsk_Rouble.jpg/1280px-R (page: https://commons.wikimedia.org/wiki/File:Russia_1771_Sestroretsk_Rouble.jpg | File:Russia 1771 Sestro - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.463029+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ROM-71-Emergency_WWI-50_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-71-Emergency_WWI-50_Bani_(1917).jpg | File:ROM-71-Emerge - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.462370+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ROM-69-Emergency_WWI-10_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-69-Emergency_WWI-10_Bani_(1917).jpg | File:ROM-69-Emerge - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.461691+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://live.staticflickr.com/65535/52306546535_7a5cbf188d_m.jpg (page: https://www.flickr.com/photos/28435100@N00/52306546535 | Heather Cox Richardson - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.460933+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 0 candidate(s) for 'Americans Trust Information News Organizations'",
-      "created_at": "2026-11-24T12:51:09.459215+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Americans Trust Information News Organizations'",
-      "created_at": "2026-11-24T12:51:09.335613+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Americans Trust Information News Organizations'",
-      "created_at": "2026-11-24T12:51:09.208813+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 1 result(s) for 'Americans Trust Information News Organizations'",
-      "created_at": "2026-11-24T12:51:08.541710+00:00",
       "card": ""
     }
   ]
