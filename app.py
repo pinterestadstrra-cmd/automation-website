@@ -1498,8 +1498,10 @@ def fetch_og_image(url, _depth=0, topic=None):
     no post). Returns the image URL or None.
     Rebuild #7.2: a Google News link is followed to the PUBLISHER's
     page first (its og:image is the Google News logo otherwise), and
-    any og:image that is a logo / icon / generic graphic is rejected
-    - a logo is never a 'real photo'. Rebuild #7.6: when the caller
+    any og:image that is a BARE logo / icon / generic graphic is
+    rejected - a bare logo is never a 'real photo' (rebuild #7.10: a
+    real photograph that carries a logo/text/watermark overlay is
+    FINE and is accepted). Rebuild #7.6: when the caller
     knows the story (topic), the page itself must be about that
     story - its <title>/og:title must contain the story's key
     entities (_photo_relevant) - or the og:image is not the
@@ -1590,18 +1592,36 @@ def _is_pollinations_url(url):
 
 
 LOGO_HOST_PARTS = ("google", "gstatic", "gnews")
-LOGO_PATH_WORDS = ("logo", "gnews", "google-news", "favicon", "sprite",
-                   "placeholder", "no-image", "default-image", "blank")
-LOGO_PATH_TOKENS = ("logo", "logos", "icon", "icons", "favicon")
+# Path words that are NEVER a real news photograph (a generic graphic
+# / missing-image placeholder, not a photo at all). "logo" and "icon"
+# are deliberately NOT in this list (rebuild #7.10, user order): a
+# real news photo whose URL passes through a directory named "logo"
+# or "icon" is still a photo, and a photo that carries a logo / text
+# / watermark overlay is FINE.
+LOGO_PATH_WORDS = ("favicon", "sprite", "placeholder", "no-image",
+                   "default-image", "blank")
+# Filename stems of a BARE logo/icon file (the file itself IS a logo,
+# not a photograph). Checked against the file's base name only - a
+# photo file is named after its subject, never "logo".
+LOGO_FILE_STEMS = ("logo", "logos", "icon", "icons", "favicon",
+                   "sprite", "placeholder", "no-image", "default-image",
+                   "blank")
 
 
 def _is_logo_image_url(url):
-    """True if an image URL is a logo / icon / generic graphic, not a
-    real news photograph. Rebuild #7.2 (strict order): the Google News
-    logo must never be posted as a 'news photo'. Checks the host
-    (google / gstatic / gnews) and the path/filename (logo, icon,
-    favicon, ...). A real publisher photo URL never matches these.
-    The 'icon' check is token-based, so 'iconic' is NOT rejected."""
+    """True if an image URL is a BARE logo / icon / generic graphic,
+    not a real news photograph. Rebuild #7.10 (user order, strict):
+    a REAL news photograph that carries a logo, text or watermark
+    OVERLAY is FINE and must NOT be rejected - only an image that
+    IS a logo (a bare logo file, not a photo at all) is rejected.
+    So the check is filename-based: the FILE itself must be a
+    logo/icon (its name is logo/favicon/sprite/...), or the host
+    must be Google's (the Google News logo). A photo whose URL
+    merely passes through a directory named "logo" or "icon" is a
+    photo and passes, and a file named "iconic-..." is a photo too
+    (the old token check rejected it). The vision gate is the
+    backstop for a bare logo on a neutral URL (it does not show the
+    story/person)."""
     try:
         u = str(url or "").strip().lower()
         if not u.startswith("http"):
@@ -1613,8 +1633,20 @@ def _is_logo_image_url(url):
         path = parsed.path + "?" + parsed.query
         if any(w in path for w in LOGO_PATH_WORDS):
             return True
-        tokens = [t for t in re.split(r"[^a-z0-9]+", path) if t]
-        return any(t in LOGO_PATH_TOKENS for t in tokens)
+        # The FILE name only (not a directory): a bare logo/icon
+        # file. "iconic-moment.jpg" is a photo - "icon" must match
+        # exactly, or as a hyphen/underscore prefix, never a prefix
+        # of a longer word.
+        base = parsed.path.rsplit("/", 1)[-1]
+        stem = base.rsplit(".", 1)[0] if "." in base else base
+        stem = stem.strip().lower()
+        if stem in LOGO_FILE_STEMS:
+            return True
+        if stem.startswith(("logo-", "logo_", "favicon", "sprite",
+                            "icon-", "icon_")) or \
+                stem.endswith(("-logo", "_logo")):
+            return True
+        return False
     except Exception:
         return False
 
@@ -1967,18 +1999,27 @@ def _vision_prompt(headline, person_names):
     headline's subject in general. The answer must start with YES
     or NO, then one short reason."""
     headline = (headline or "").strip()[:200]
+    # Rebuild #7.10 (user order, strict): a logo, text, caption or
+    # watermark OVERLAID on the photo is FINE - judge the photo
+    # itself, not the overlay. Only a photo that does not show the
+    # story/person is a NO.
+    overlay_ok = ("A logo, text, caption or watermark overlaid on "
+                  "the photo is fine - judge the photo itself, not "
+                  "the overlay. ")
     if person_names:
         names = " and ".join(person_names[:2])
         return (f"News headline: \"{headline}\"\n"
                 f"Does this photo clearly show {names}? "
                 "Answer YES only if the named person is clearly visible "
-                "in the photo. Answer NO if the photo shows someone else, "
+                "in the photo. " + overlay_ok +
+                "Answer NO if the photo shows someone else, "
                 "a product, a cartoon, a chart, a poster, or anything "
                 "unrelated. Reply with YES or NO first, then one short reason.")
     return (f"News headline: \"{headline}\"\n"
             "Does this photo show the people, place or event in this "
             "headline? Answer YES only if the photo clearly matches the "
-            "headline. Answer NO if it shows a product, a cartoon, a "
+            "headline. " + overlay_ok +
+            "Answer NO if it shows a product, a cartoon, a "
             "chart, a poster, a different person, or anything unrelated. "
             "Reply with YES or NO first, then one short reason.")
 
@@ -2155,8 +2196,9 @@ def _photo_relevant(page_url, page_title, headline):
 def _real_photo_for_topic(topic, vision=None):
     """A REAL photo for a topic from real-photo sources only
     (Pexels / Pixabay / Openverse / Wikimedia Commons / Google Images
-    / Bing Images). Never AI-generated, never a logo, never a generic
-    icon. Tries progressively shorter search queries and several
+    / Bing Images). Never AI-generated, never a BARE logo, never a
+    generic icon (rebuild #7.10: a real photo that carries a logo /
+    text / watermark overlay is FINE). Tries progressively shorter search queries and several
     candidates per query, because a single file may 429 or fail
     verification - the caller must not give up on the first failure.
     Every candidate still passes the real-photo check (valid JPEG/PNG,
@@ -2295,6 +2337,13 @@ PICK_MAX_ITEMS = 25            # max news items examined per promo pick
 PICK_MAX_FALLBACK_SEARCHES = 6  # max real-photo searches per promo pick
 PICK_MAX_PHOTO_CANDIDATES = 5  # max real-photo candidates tried per search
 MAX_REAL_PHOTO_DOWNLOADS = 12  # max image downloads per real-photo search (bounds the run)
+# Rebuild #7.10: the try-next-story loop. A post attempt tries up to
+# this many FRESH stories (each gets a full photo attempt: the
+# article's own og:image, then a real-photo search) before it skips
+# - a story with no photo never ends the run on its own. Only when
+# ALL tried stories lack a photo does the run skip cleanly.
+PICK_MAX_STORIES = 6           # max fresh stories tried per promo pick
+PICK_MAX_ITEMS_PER_TOPIC = 8   # news items examined per category
 
 # Rebuild #7.8: ONLY the user's two promo news categories (user order
 # 2026-11-24). USA celebrity news and USA finance news are REMOVED
@@ -2830,16 +2879,105 @@ def _record_bsky_post_at(state, card_name):
     state.setdefault("last_bsky_post_at", {})[card_name or ""] = now_iso()
 
 
+# Rebuild #7.10 (user order): collect news AND photos from BIG
+# news outlets. A story counts as "big outlet" when its Google News
+# RSS <source> name or its link host matches one of these. Big-outlet
+# stories are tried FIRST in the picker, and the outlet's own article
+# page is fetched for its og:image before any image search runs.
+# (name fragment in the RSS source, host fragment in the link)
+BIG_OUTLETS = (
+    ("reuters", "reuters.com"),
+    ("associated press", "apnews.com"),
+    ("ap news", "apnews.com"),
+    ("bbc", "bbc.com"),
+    ("cnn", "cnn.com"),
+    ("al jazeera", "aljazeera.com"),
+    ("new york times", "nytimes.com"),
+    ("washington post", "washingtonpost.com"),
+    ("guardian", "theguardian.com"),
+    ("fox news", "foxnews.com"),
+    ("nbc news", "nbcnews.com"),
+    ("nbc", "nbcnews.com"),
+    ("cbs news", "cbsnews.com"),
+    ("abc news", "abcnews.go.com"),
+    ("npr", "npr.org"),
+    ("bloomberg", "bloomberg.com"),
+    ("the hill", "thehill.com"),
+    ("politico", "politico.com"),
+    ("wall street journal", "wsj.com"),
+    ("usa today", "usatoday.com"),
+    ("axios", "axios.com"),
+    ("sky news", "news.sky.com"),
+    ("france 24", "france24.com"),
+    ("euronews", "euronews.com"),
+    ("deutsche welle", "dw.com"),
+)
+
+
+def _big_outlet_rank(source, link):
+    """Sort key for a news item: 0 = a major news outlet (tried
+    first), 1 = any other source. Matches the RSS <source> name or
+    the link host against BIG_OUTLETS. Never raises."""
+    s = (source or "").strip().lower()
+    try:
+        host = (urlparse(link or "").netloc or "").lower()
+    except Exception:
+        host = ""
+    for name, h in BIG_OUTLETS:
+        if name and name in s:
+            return 0
+        if h and h in host:
+            return 0
+    return 1
+
+
+def _resolve_article_url(link):
+    """Resolve a Google News link to the publisher's article URL, so
+    a big outlet's OWN article page can be fetched for its og:image.
+    Returns the publisher URL, or the original link when it cannot
+    be resolved (a non-Google-News link is returned unchanged).
+    Follows the HTTP redirect when there is one, else the
+    meta-refresh / canonical / outbound anchor on the Google News
+    page (_extract_redirect_url). Never raises."""
+    if not link:
+        return link
+    try:
+        if "news.google.com" not in (urlparse(link).netloc or "").lower():
+            return link
+    except Exception:
+        return link
+    try:
+        r = requests.get(link, timeout=20, allow_redirects=True,
+                         headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code == 200:
+            final_host = (urlparse(r.url).netloc or "").lower()
+            if "news.google.com" not in final_host:
+                return r.url
+            target = _extract_redirect_url(r.text, r.url)
+            if target:
+                return target
+    except Exception:
+        pass
+    return link
+
+
 def _pick_fresh_promo_news(card, state):
     """Pick a FRESH news story for a promo post: (topic, headline, photo).
     Candidates: ONLY the user's two news categories (Rebuild #7.8,
     user order 2026-11-24 - USA political news and war news, rotating
     the starting category per post). The card's topic_override is the
     ONLY other allowed topic (an explicit user instruction). There is
-    NO fallback to custom text, Bluesky trending or "breaking news":
-    if neither category yields a fresh story with a verified people's
-    photo, the run SKIPS posting (a clean skip, logged) - a
-    wrong-category post is worse than no post. A story is fresh only
+    NO fallback to custom text, Bluesky trending or "breaking news".
+    Rebuild #7.10 (user order): when a story has no usable photo,
+    the picker tries the NEXT fresh story at once - up to 6 fresh
+    stories per post attempt (PICK_MAX_STORIES), each with a full
+    photo attempt (the article's own og:image, then a real-photo
+    search). Only when ALL tried stories lack a photo does the run
+    SKIP posting (a clean skip, logged) - a wrong-category post is
+    worse than no post. Big-outlet stories are tried first, and a
+    big outlet's own article page is fetched for its og:image. A
+    real photo that carries a logo/text/watermark overlay is FINE.
+    A story is fresh only
     if its headline was NOT used for a promo post in the last 24h
     (per-topic cooldown, GLOBAL across accounts). The photo is the
     story's REAL online image (the news article's og:image, downloaded
@@ -2904,6 +3042,13 @@ def _pick_fresh_promo_news(card, state):
     seen_imgs = set()    # image URLs already rejected this pick - the
     # same logo must never be fetched/downloaded twice in one run
     tried_fallback = set()  # normalised headlines already fallback-searched
+    stories_tried = 0    # Rebuild #7.10: FRESH stories given a full
+    # photo attempt this pick (og:image + optional fallback search).
+    # The pick stops at PICK_MAX_STORIES - a story with no photo
+    # never ends the run, only the budget does.
+    tried_story_keys = set()  # canonical event keys already tried
+    # this pick (the same story can appear in both categories' feeds
+    # under different links) - never re-try one.
     for topic in topics:
         try:
             _verified, _sources, items = verify_news(topic)
@@ -2912,7 +3057,13 @@ def _pick_fresh_promo_news(card, state):
         if items:
             had_items = True
         seen = set()
-        for item in (items or [])[:5]:
+        # Rebuild #7.10: big-outlet stories first (stable sort, so
+        # RSS order is kept inside each group), and more items per
+        # topic so the try-next-story loop has enough fresh stories.
+        items = sorted(items or [],
+                       key=lambda it: _big_outlet_rank(it.get("source"),
+                                                       it.get("link")))
+        for item in items[:PICK_MAX_ITEMS_PER_TOPIC]:
             if tried >= PICK_MAX_ITEMS:
                 log("info", "promo: candidate budget reached "
                             f"({PICK_MAX_ITEMS} items) - stopping the search")
@@ -2934,6 +3085,17 @@ def _pick_fresh_promo_news(card, state):
                             "skipped (same link + same event within 24h, "
                             f"event key '{_norm_news_key(headline)[:60]}')")
                 continue
+            # Rebuild #7.10: the try-next-story loop. A FRESH story
+            # (past both cooldowns) gets a full photo attempt and
+            # counts against the story budget; the same event is
+            # never tried twice in one pick.
+            story_key = _norm_news_key(headline)
+            if story_key in tried_story_keys:
+                log("info", f"photo candidate: '{headline[:60]}' - "
+                            "skipped (same story already tried this pick)")
+                continue
+            tried_story_keys.add(story_key)
+            stories_tried += 1
             src = item.get("source") or "news"
             # 1) The article's own og:image. Rebuild #7.4: a Google
             # News link IS fetched - IF it redirects (HTTP 302) to
@@ -2944,7 +3106,20 @@ def _pick_fresh_promo_news(card, state):
             # rejected below and the real-photo fallback runs.
             photo = None
             skip_fallback = False
-            img = fetch_og_image(link, topic=headline)
+            # Rebuild #7.10: a BIG-OUTLET story's own article page is
+            # fetched for its og:image FIRST - resolve the Google
+            # News link to the publisher's article, then read the
+            # og:image from that page. Other stories use the link as
+            # before (fetch_og_image resolves when it can).
+            if _big_outlet_rank(src, link) == 0:
+                article_url = _resolve_article_url(link)
+                if article_url != link:
+                    log("info", f"photo candidate: '{headline[:60]}' - "
+                                f"big outlet ({src}), resolved to "
+                                f"{urlparse(article_url).netloc}")
+                img = fetch_og_image(article_url, topic=headline)
+            else:
+                img = fetch_og_image(link, topic=headline)
             if img and img in seen_imgs:
                 log("info", f"photo candidate: '{headline[:60]}' - "
                             "rejected (same image already tried)")
@@ -3019,11 +3194,26 @@ def _pick_fresh_promo_news(card, state):
                     return topic, headline, photo
                 log("info", f"photo candidate: '{headline[:60]}' - "
                             "rejected (no real photo found for this story)")
+            # Rebuild #7.10: this fresh story had no usable photo -
+            # log it and move on to the NEXT story (the loop keeps
+            # going until the story budget is used up - a no-photo
+            # story never skips the run on its own).
+            log("info", f"promo: story {stories_tried}/"
+                        f"{PICK_MAX_STORIES} tried: '{headline[:60]}' - "
+                        "no usable photo, trying the next story")
             fresh_no_photo = True
-        if tried >= PICK_MAX_ITEMS:
+            if stories_tried >= PICK_MAX_STORIES:
+                log("info", "promo: story budget reached "
+                            f"({PICK_MAX_STORIES} fresh stories) - "
+                            "stopping the search")
+                break
+        if tried >= PICK_MAX_ITEMS or stories_tried >= PICK_MAX_STORIES:
             break
     log("info", f"promo: photo search done - {tried} candidate(s) tried, "
-                f"{fallback_tries} real-photo search(es), no usable photo")
+                f"{stories_tried} fresh stor"
+                f"{'y' if stories_tried == 1 else 'ies'} with a photo "
+                f"attempt, {fallback_tries} real-photo search(es), "
+                "no usable photo")
     if not had_items:
         LAST_BSKY_SKIP = "no_news"
         log("info", "promo: no news available in Political / War - "
