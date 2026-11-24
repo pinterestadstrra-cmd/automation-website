@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T14:21:03.589428+00:00",
-  "last_run": "2026-11-24T14:18:32.193891+00:00",
-  "runs": 53,
+  "generated_at": "2026-11-24T14:58:41.653058+00:00",
+  "last_run": "2026-11-24T14:58:33.665414+00:00",
+  "runs": 54,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 3,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 3,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,11 +67,11 @@
       "runs_today": 15,
       "posts_today": 10,
       "next_runs": [
-        "2026-11-24T20:36:03.342588+06:00",
-        "2026-11-24T20:51:03.342588+06:00",
         "2026-11-24T21:06:03.342588+06:00",
         "2026-11-24T21:21:03.342588+06:00",
-        "2026-11-24T21:36:03.342588+06:00"
+        "2026-11-24T21:36:03.342588+06:00",
+        "2026-11-24T21:51:03.342588+06:00",
+        "2026-11-24T22:06:03.342588+06:00"
       ],
       "next_post_times": [
         "2026-11-24T21:08:00+06:00",
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 10
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T14:18:32.195942+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T14:58:33.667507+00:00"
     }
   ],
   "dry_run": false,
@@ -173,16 +164,64 @@
     "Jensen Huang discloses more affairs",
     "Personal boycotts",
     "Pope Francis diary: devil encounters",
-    "SEC probes Nvidia accounting",
     "Grand Theft Auto VI release",
-    "ICE arrests at Seattle airport",
     "Iowa Army detonation court case",
-    "November full supermoon",
-    "Bird photography",
-    "Google plans personalized AI TV channel"
+    "Trump blames Democrats for selloff",
+    "SEC probes Nvidia accounting",
+    "Thanksgiving dinner preparations",
+    "Google adds AI across products",
+    "Anthropic falls below IPO price"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T14:58:41.377583+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T14:58:41.374887+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T14:58:40.951074+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T14:58:33.669273+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T14:58:33.667515+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #54 started (--only blogger)",
+      "created_at": "2026-11-24T14:58:33.665442+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T14:21:03.591089+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Pope Francis diary: devil encounters', 'SEC probes Nvidia accounting', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-24T14:21:03.585724+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://cdn.wallpapersafari.com/3/45/ewgc8W.jpg (page: https://www.worldtravelguide.net/features/city-highlight/city-highlight-beijing/ | 🔥 [100+] China Fl - only 1 of 11 key entities in the source page)",
       "created_at": "2026-11-24T14:19:08.706228+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://1.bp.blogspot.com/-UzuUsSjP9bQ/Ta5ERQOoOAI/AAAAAAAAAAQ/_653LZlNx0k/s1600/Flag_of_China.png (page: https://wallpapersafari.com/china-flag-wallpapers/ | china: Flag of China - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T14:19:08.704379+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://theflagman.co.uk/wp-content/uploads/2017/03/flag-of-china.jpg (page: http://anastasiya-china.blogspot.com/2011/04/flag-of-china.html | NATIONAL FLAG OF CHINA | The Flagm - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T14:19:08.702576+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://image.cnbcfm.com/api/v1/image/106246652-1573788271264gettyimages-1051651510.jpeg?v=157378857 (page: http://www.theflagman.co.uk/product/national-flag-of-china/ | 9 Ancient Chinese Buildings • AIMIR CG - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T14:19:08.700721+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
-      "created_at": "2026-11-24T14:19:08.691762+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
-      "created_at": "2026-11-24T14:19:08.470585+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
-      "created_at": "2026-11-24T14:19:08.261971+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
-      "created_at": "2026-11-24T14:19:07.829996+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T14:19:07.326525+00:00",
       "card": ""
     }
   ]
