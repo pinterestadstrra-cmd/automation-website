@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T01:51:36.896355+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Trump blames Democrats for selloff', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'Grand Theft Auto VI release', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-24T01:51:36.892320+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T01:51:36.667570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T01:51:36.666178+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T01:51:36.456988+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T01:51:27.161894+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T01:51:27.160837+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #32 started (--only blogger)",
+    "created_at": "2026-11-24T01:51:27.159271+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T01:49:58.068884+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-24T01:06:36.457848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no og:image)",
-    "created_at": "2026-11-24T01:06:36.456729+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxOS0Q3OWtMMEhzenZnb2tPZlAyTWZuRGdsRmlySGZkOGZUNS1lMTNBSXVGZ2FoOVZRaFJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T01:06:36.454372+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-    "created_at": "2026-11-24T01:06:36.263127+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
-    "created_at": "2026-11-24T01:06:35.939728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T01:06:35.763347+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "info",
-    "message": "bluesky cycle: no article to link yet",
-    "created_at": "2026-11-24T01:06:35.762034+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T01:06:35.759651+00:00",
-    "card": "BlueSky Trend"
-  },
-  {
-    "level": "warning",
-    "message": "TEST RUN card 'BlueSky Trend': dry-run forced - the article will be written and the photo verified, but NOTHING will be published and NO reply will be sent",
-    "created_at": "2026-11-24T01:06:35.758473+00:00",
     "card": ""
   }
 ]

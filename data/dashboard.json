@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T01:49:58.067880+00:00",
-  "last_run": "2026-11-24T01:49:22.116671+00:00",
-  "runs": 31,
+  "generated_at": "2026-11-24T01:51:36.894733+00:00",
+  "last_run": "2026-11-24T01:51:27.159251+00:00",
+  "runs": 32,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -74,11 +74,11 @@
         "2026-11-24T09:04:57.879847+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T07:50:00+06:00",
         "2026-11-24T08:25:00+06:00",
         "2026-11-24T09:03:00+06:00",
         "2026-11-24T09:38:00+06:00",
-        "2026-11-24T09:52:00+06:00"
+        "2026-11-24T09:52:00+06:00",
+        "2026-11-24T10:38:00+06:00"
       ],
       "success": 0,
       "fail": 3,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T01:49:22.117992+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T01:51:27.160828+00:00"
     }
   ],
   "dry_run": false,
@@ -183,6 +174,54 @@
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T01:51:36.667570+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T01:51:36.666178+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T01:51:36.456988+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T01:51:27.161894+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T01:51:27.160837+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #32 started (--only blogger)",
+      "created_at": "2026-11-24T01:51:27.159271+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T01:49:58.068884+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Trump blames Democrats for selloff', 'Nvidia rehires Huang', 'Alice Huang espionage allegations', 'Grand Theft Auto VI release', 'SEC probes Nvidia accounting']",
+      "created_at": "2026-11-24T01:49:58.065014+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: no article to post yet)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Criel_Mound.jpg/250px-Criel_Mound.jpg (page: https://en.wikipedia.org/wiki/Zaleski_Mound_Group | Adena culture - Wikipedia - only 0 of 10 key entities in the source page)",
       "created_at": "2026-11-24T01:08:29.696048+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T01:08:29.694854+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T01:08:29.693607+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T01:08:29.692444+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T01:08:29.691268+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-24T01:08:29.689692+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Hopefully things get done Americans'",
-      "created_at": "2026-11-24T01:08:29.687129+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Hopefully things get done Americans'",
-      "created_at": "2026-11-24T01:08:29.409282+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Hopefully things get done Americans'",
-      "created_at": "2026-11-24T01:08:29.250601+00:00",
       "card": ""
     }
   ]
