@@ -1,15 +1,15 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 66,
-  "last_run": "2026-11-24T21:28:45.986207+00:00",
+  "runs": 67,
+  "last_run": "2026-11-24T21:37:21.079803+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
       "primonewstoday.bsky.social": 6
     },
     "2026-11-24": {
-      "primonewstoday.bsky.social": 14
+      "primonewstoday.bsky.social": 15
     }
   },
   "posted_promo_topics": {
@@ -36,7 +36,8 @@
     "affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387111+00:00",
     "bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347177+00:00",
     "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959232+00:00",
-    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164638+00:00"
+    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164638+00:00",
+    "attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953111+00:00"
   },
   "posted_promo_link_topics": {
     "https://shorturl.at/eZnco||2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446628+00:00",
@@ -62,7 +63,8 @@
     "https://shorturl.at/eZnco||affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387149+00:00",
     "https://shorturl.at/eZnco||bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347213+00:00",
     "https://shorturl.at/eZnco||2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959264+00:00",
-    "https://shorturl.at/eZnco||2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164670+00:00"
+    "https://shorturl.at/eZnco||2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164670+00:00",
+    "https://shorturl.at/eZnco||attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953153+00:00"
   },
   "posted_promo_captions": {
     "684f88fdb22717cf5c1bc4127ba32f8fb6899693": "2026-11-23T10:31:15.448152+00:00",
@@ -89,7 +91,8 @@
     "b0616293692aaf408932402b82e4078b944119bf": "2026-11-24T15:28:15.388807+00:00",
     "29b8d1679fa9fb9cfced5741b6b92a0560a3ae4c": "2026-11-24T17:38:11.348750+00:00",
     "7944519249522c5950f5308849f1adfd3fa687bb": "2026-11-24T19:55:33.960420+00:00",
-    "03a75cc54716b885e14ac7d269a6e717af64f7e8": "2026-11-24T20:44:23.165894+00:00"
+    "03a75cc54716b885e14ac7d269a6e717af64f7e8": "2026-11-24T20:44:23.165894+00:00",
+    "2d003a94465d7f4e1b0423776db8bef234553059": "2026-11-24T21:43:27.954771+00:00"
   },
   "file_card_post_counts": {
     "BlueSky Trend": {
@@ -102,16 +105,16 @@
     },
     "Adsterra Blogger": {
       "day": "2026-11-25",
-      "day_n": 2,
+      "day_n": 3,
       "week": "2026-W48",
-      "week_n": 14,
+      "week_n": 15,
       "month": "2026-11",
-      "month_n": 14
+      "month_n": 15
     }
   },
   "last_bsky_post_at": {
     "BlueSky Trend": "2026-11-24T01:06:35.754072+00:00",
-    "primonewstoday.bsky.social": "2026-11-24T20:44:23.165995+00:00"
+    "primonewstoday.bsky.social": "2026-11-24T21:43:27.954901+00:00"
   },
   "file_card_post_slots": {
     "BlueSky Trend": {
@@ -145,7 +148,8 @@
       ],
       "2026-11-25": [
         1,
-        2
+        2,
+        3
       ]
     }
   },
@@ -158,16 +162,16 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 19,
+      "success": 20,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T20:44:23.167121+00:00"
+      "last_run": "2026-11-24T21:43:27.956178+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T20:44:23.167125+00:00"
+    "Adsterra Blogger": "2026-11-24T21:43:27.956182+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -176,16 +180,16 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-24",
-      "count": 21
+      "count": 22
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T21:28:45.987205+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T21:37:21.081423+00:00"
     }
   ],
   "posted_urls": [],
@@ -227,7 +231,8 @@
     "affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387171+00:00|primonewstoday.bsky.social",
     "bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347237+00:00|primonewstoday.bsky.social",
     "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959286+00:00|primonewstoday.bsky.social",
-    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164690+00:00|primonewstoday.bsky.social"
+    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164690+00:00|primonewstoday.bsky.social",
+    "attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953183+00:00|primonewstoday.bsky.social"
   },
   "file_card_reply_counts": {
     "Adsterra Blogger": {
@@ -238,14 +243,14 @@
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "war news",
-        "headline": "Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera",
-        "photo_url": "https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg",
+        "topic": "USA political news",
+        "headline": "Record-High 89% in U.S. Say Government Corruption Widespread - Gallup News",
+        "photo_url": "https://www.schwartzreport.net/wp-content/uploads/2026/09/Screenshot-2026-09-03-at-7.57.43-PM.png",
         "photo_source": "bing-images",
-        "photo_alt": "Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera",
-        "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWhRQzQ3QWltSFBNdzhEUEZGb1hPZkJYUndJM2RwZXJjYW5YSjJkQS1pejR3UHUwUzNIbFJwc0E3Yy1BNV9LQlE2Q2tVakpmRkhWYmdMdWJGY00wcTctbGZtdmhiRGNJeVV5Y19YMDh2QVR3WHQ1b0QzOGxRWlNXMnhHMEFkX2lUbnFuRmswdFRlQdIBxwFBVV95cUxNVUZPQXI4U2hVN2N4TVJiSkNtTUJiWGxCVjFpUHJQSXcyV0gzdWpTWjR2dDhJSVpBNWFOODNZMWdGb2U5QTJxMlN3WDFyd19TYzN1VERuc0FOOTgzLXVRY0x3UFpTM1o1SEY5dDFQaXhiS0RXcEhwSUg0U2tWeEFQaVU4YkVTbXd0c2xaZ0ZvRUl5ZHJHU3p3RFBadXg1U1JCVVBEbGluMHlLaFdIMUR5c09yc1RZc3hmcm13Y3JSUzBockgyTVRN?oc=5",
-        "hook": "11 injured after a Houthi strike hits a Riyadh tower. This is escalating FAST.",
-        "prepared_at": "2026-11-24T20:44:16.652347+00:00"
+        "photo_alt": "Record-High 89% in U.S. Say Government Corruption Widespread - Gallup News",
+        "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQm53OU5rbENWSGtGNkxDRFdrTWRTb05ZVXpXSlhMX2ZlY0g4Ti1JZmlfRThpWVp4X2NBeXZ6VllHMy1iUk1JOHZfVVJ6RFFCWlN6ME5UYnpDbE9sU2hBODhieGUzNGtxQVFDN2dSM2xGUGsycTRnekhLQVFQUmxNUC1ZRkppYTVVVGxLVkp4R0E3ZWM?oc=5",
+        "hook": "89%?! 🤯 A brand new Gallup poll just hit, and a record-shattering number of Americans agree on one grim reality about government corruption. You will not believe the numbers.",
+        "prepared_at": "2026-11-24T21:43:21.513506+00:00"
       }
     ]
   }
