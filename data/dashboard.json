@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T16:42:16.493572+00:00",
-  "last_run": "2026-11-24T16:40:06.174648+00:00",
-  "runs": 57,
+  "generated_at": "2026-11-24T17:27:19.051563+00:00",
+  "last_run": "2026-11-24T17:27:11.148431+00:00",
+  "runs": 58,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 17,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-24T22:57:16.088367+06:00",
-        "2026-11-24T23:12:16.088367+06:00",
-        "2026-11-24T23:27:16.088367+06:00",
         "2026-11-24T23:42:16.088367+06:00",
-        "2026-11-24T23:57:16.088367+06:00"
+        "2026-11-24T23:57:16.088367+06:00",
+        "2026-11-25T00:12:16.088367+06:00",
+        "2026-11-25T00:27:16.088367+06:00",
+        "2026-11-25T00:42:16.088367+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T22:58:00+06:00",
         "2026-11-24T23:55:00+06:00",
         "2026-11-25T01:00:00+06:00",
         "2026-11-25T02:10:00+06:00",
-        "2026-11-25T02:54:00+06:00"
+        "2026-11-25T02:54:00+06:00",
+        "2026-11-25T04:00:00+06:00"
       ],
       "success": 15,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 11
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T16:40:06.176215+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T17:27:11.149947+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Trump gives Giuliani Medal of Freedom",
     "Most memorable TV theme songs",
-    "US war with Iran",
-    "King tides threaten Bay Area flooding",
     "Wrong Lord of the Rings quotes",
+    "Todd Blanche questioned on Jensen Huang",
     "Pope Francis diary: devil encounters",
+    "Burnham's Downing Street influencer invite",
     "Jensen Huang discloses more affairs",
     "SEC probes Nvidia accounting",
     "Personal boycotts",
+    "Grand Theft Auto VI release",
     "Tidal bans AI-generated music"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T17:27:18.829410+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T17:27:18.827515+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T17:27:18.467503+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T17:27:11.150932+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T17:27:11.149959+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #58 started (--only blogger)",
+      "created_at": "2026-11-24T17:27:11.148458+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T16:42:16.495443+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Trump gives Giuliani Medal of Freedom', 'Most memorable TV theme songs', 'US war with Iran', 'King tides threaten Bay Area flooding', 'Wrong Lord of the Rings quotes']",
+      "created_at": "2026-11-24T16:42:16.490358+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - 1 reply sent)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "pexels: API key not configured - skipping",
       "created_at": "2026-11-24T16:42:13.393847+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
-      "created_at": "2026-11-24T16:42:13.392787+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxPMmd4NTlaRXRMSE1zbmdzVTdhaVA1QWxURkQ2aFlmU0REdDZfQ1h5RmczU01EcGZNaHh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T16:42:13.390221+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: story 2/6 tried: 'Majority of Americans Say Social Media Companies, News Outle' - no usable photo, trying the next story",
-      "created_at": "2026-11-24T16:42:13.118923+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T16:42:13.117988+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Majority of Americans Say Social Media Companies, News Outlets Have Too Much Power in Politics - Pew Research Center' (0 download(s) tried)",
-      "created_at": "2026-11-24T16:42:13.117036+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://shraddha.mountmadonna.org/images/free-printable-sonic-coloring-pages/high-quality-printable- (page: 30 Free Printable Sonic Coloring Pages for Kids | Shraddha Christmas Hub - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:13.116047+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Thomas_Butler_Gunn_Diaries-_Volume_16%2C_pa (page: https://commons.wikimedia.org/wiki/File:Thomas_Butler_Gunn_Diaries-_Volume_16,_page_86_(with_newspap - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:13.115058+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Social_Dynamite-_The_Wickedness_of_Modern_S (page: https://commons.wikimedia.org/wiki/File:Social_Dynamite-_The_Wickedness_of_Modern_Society_from_the_D - only 1 of 14 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:13.114025+00:00",
       "card": ""
     }
   ]

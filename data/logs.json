@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T17:27:19.053260+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Most memorable TV theme songs', 'Wrong Lord of the Rings quotes', 'Todd Blanche questioned on Jensen Huang', 'Pope Francis diary: devil encounters', \"Burnham's Downing Street influencer invite\"]",
+    "created_at": "2026-11-24T17:27:19.048479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T17:27:18.829410+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T17:27:18.827515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T17:27:18.467503+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T17:27:11.150932+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T17:27:11.149959+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #58 started (--only blogger)",
+    "created_at": "2026-11-24T17:27:11.148458+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T16:42:16.495443+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
     "created_at": "2026-11-24T14:19:12.440115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
-    "created_at": "2026-11-24T14:19:11.953208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T14:19:11.611426+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T14:19:11.609795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How Ukraine drone attacks on Russian ships unfolded - BBC' - rejected (no og:image)",
-    "created_at": "2026-11-24T14:19:11.607880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tSU1HN19rSUJoSi1qV0FsMnlmVC0wX0p2cklMYTJDZlFFRV8tSm1xejRlMWFpYXRQdU9) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T14:19:11.604313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - skipped (same event used within 24h, event key 'bbc libya russian ship spread strike ukraine war what')",
-    "created_at": "2026-11-24T14:19:11.124055+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'China walks ‘thin line’ in push to prevent another Horn of A' - no usable photo, trying the next story",
-    "created_at": "2026-11-24T14:19:11.122214+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'China walks ‘thin line’ in push to prevent another Horn of A' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T14:19:11.120600+00:00",
     "card": ""
   }
 ]
