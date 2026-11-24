@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T02:56:13.248789+00:00",
-  "last_run": "2026-11-24T02:54:05.425917+00:00",
-  "runs": 34,
+  "generated_at": "2026-11-24T03:03:20.293644+00:00",
+  "last_run": "2026-11-24T02:49:58.535619+00:00",
+  "runs": 33,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T02:49:32.271889+00:00"
+    "Adsterra Blogger": "2026-11-24T03:03:20.034440+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -49,7 +49,7 @@
       "fail": 4,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-24T02:49:32.271883+00:00"
+      "last_run": "2026-11-24T03:03:20.034435+00:00"
     }
   },
   "file_cards": [
@@ -58,27 +58,27 @@
       "type": "bluesky_post",
       "status": "active",
       "computed_status": "error",
-      "link": "https://shorturl.at/eZnco",
+      "link": "",
       "account_handle": "primonewstoday.bsky.social",
       "interval_minutes": 15,
-      "posts_per_day": 24,
+      "posts_per_day": 48,
       "schedule_times": [],
-      "last_run": "2026-11-24T02:49:32.271889+00:00",
-      "runs_today": 3,
+      "last_run": "2026-11-24T03:03:20.034440+00:00",
+      "runs_today": 4,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-24T09:04:32.271889+06:00",
-        "2026-11-24T09:19:32.271889+06:00",
-        "2026-11-24T09:34:32.271889+06:00",
-        "2026-11-24T09:49:32.271889+06:00",
-        "2026-11-24T10:04:32.271889+06:00"
+        "2026-11-24T09:18:20.034440+06:00",
+        "2026-11-24T09:33:20.034440+06:00",
+        "2026-11-24T09:48:20.034440+06:00",
+        "2026-11-24T10:03:20.034440+06:00",
+        "2026-11-24T10:18:20.034440+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T09:02:00+06:00",
-        "2026-11-24T10:01:00+06:00",
-        "2026-11-24T11:06:00+06:00",
-        "2026-11-24T11:51:00+06:00",
-        "2026-11-24T12:56:00+06:00"
+        "2026-11-24T09:38:00+06:00",
+        "2026-11-24T09:52:00+06:00",
+        "2026-11-24T10:38:00+06:00",
+        "2026-11-24T11:03:00+06:00",
+        "2026-11-24T11:28:00+06:00"
       ],
       "success": 0,
       "fail": 4,
@@ -90,7 +90,7 @@
       "bold_format": true,
       "window_start": "",
       "window_end": "",
-      "posts_per_run": 2,
+      "posts_per_run": 1,
       "reply_own": true,
       "reply_others": true,
       "replies_per_run": 10,
@@ -115,7 +115,7 @@
       "max_posts_per_week": 0,
       "max_posts_per_month": 0,
       "retry_after_minutes": 30,
-      "retry_max": 2,
+      "retry_max": 5,
       "replies_per_day": 0,
       "reply_never": "",
       "reply_only": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T02:54:05.427703+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T02:49:58.537121+00:00"
     }
   ],
   "dry_run": false,
@@ -161,317 +170,317 @@
     "open": false
   },
   "trending": [
-    "Nvidia rehires Huang",
     "Iowa Army detonation court case",
+    "Nvidia rehires Huang",
+    "Alice Huang espionage allegations",
+    "Grand Theft Auto VI release",
+    "November full supermoon",
     "Google plans personalized AI TV channel",
     "SEC probes Nvidia accounting",
-    "November full supermoon",
-    "Grand Theft Auto VI release",
-    "GTA VI's Jason and Lucia",
-    "Cyclops in Avengers: Doomsday footage",
-    "King tides threaten Bay Area flooding",
-    "Pope Leo praises cycling"
+    "Favorite first Magic set card",
+    "LSU's future in the SEC",
+    "Wave Race: Blue Storm comes to Switch 2"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T02:56:13.157259+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "run-now: card 'Adsterra Blogger' is a bluesky card - this is the blogger workflow, skipping",
-      "created_at": "2026-11-24T02:56:13.156100+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T02:56:13.154333+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T02:56:12.720246+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T02:54:05.428803+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T02:54:05.427713+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #34 started (--only blogger)",
-      "created_at": "2026-11-24T02:54:05.425977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T02:49:32.352702+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Iowa Army detonation court case', 'Google plans personalized AI TV channel', 'SEC probes Nvidia accounting', 'November full supermoon']",
-      "created_at": "2026-11-24T02:49:32.348379+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-24T02:49:32.271913+00:00",
+      "created_at": "2026-11-24T03:03:20.034465+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': run failed (4/5 retries) - next retry at 09:19 Dhaka",
-      "created_at": "2026-11-24T02:49:32.270140+00:00",
+      "message": "card 'Adsterra Blogger': run failed (4/5 retries) - next retry at 09:33 Dhaka",
+      "created_at": "2026-11-24T03:03:20.032791+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "warning",
-      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 570) at $.record.text",
-      "created_at": "2026-11-24T02:49:12.268117+00:00",
+      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 578) at $.record.text",
+      "created_at": "2026-11-24T03:03:00.030893+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "card promo (primonewstoday.bsky.social): empty result, retry 2/3 in 10s",
-      "created_at": "2026-11-24T02:49:01.817968+00:00",
+      "created_at": "2026-11-24T03:02:49.308319+00:00",
       "card": ""
     },
     {
       "level": "warning",
-      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 570) at $.record.text",
-      "created_at": "2026-11-24T02:49:01.816075+00:00",
+      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 578) at $.record.text",
+      "created_at": "2026-11-24T03:02:49.306665+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "card promo (primonewstoday.bsky.social): empty result, retry 1/3 in 5s",
-      "created_at": "2026-11-24T02:48:56.377451+00:00",
+      "created_at": "2026-11-24T03:02:43.588282+00:00",
       "card": ""
     },
     {
       "level": "warning",
-      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 570) at $.record.text",
-      "created_at": "2026-11-24T02:48:56.375585+00:00",
+      "message": "bluesky post failed: 400 InvalidRequest: Invalid app.bsky.feed.post record: grapheme too big (maximum 300, got 578) at $.record.text",
+      "created_at": "2026-11-24T03:02:43.586788+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-24T02:45:28.350605+00:00",
+      "message": "prepare_bsky_image: published 920x613 (ratio 1.50) - unchanged",
+      "created_at": "2026-11-24T02:51:29.707611+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-24T02:45:28.349531+00:00",
+      "message": "prepare_bsky_image: original 920x613 (ratio 1.50) - kept, no crop",
+      "created_at": "2026-11-24T02:51:29.706581+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war updates: Tehran lauds US election loss; urges Trump' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T02:45:28.347865+00:00",
+      "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T02:51:29.704943+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-24T02:45:28.346697+00:00",
+      "created_at": "2026-11-24T02:51:29.703583+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Iran war updates: Tehran lauds US election loss; urges Trump': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war updates: Tehran lauds US election loss; urges Trump to end assault - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Reject - matches 2 key entities (iran, war))",
-      "created_at": "2026-11-24T02:45:28.344535+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Iran says three ships catch fire after hittin': https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2026/11/AA-20261109-43017682-43017666 (from bing-images, query 'Iran war live: Iran says three ships catch fire after hitting Hormuz mines - Al Jazeera', page: https://www.worthynews.com/119223-armed-insurgencies-surge-across-irans-borderlands-as-tehran-faces- - matches 2 key entities (iran, war))",
+      "created_at": "2026-11-24T02:51:29.702339+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Iran war updates: Tehran lauds US election loss; u': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T02:45:28.342614+00:00",
+      "message": "vision: unavailable - keyword check decides ('Iran war live: Iran says three ships catch fire af': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T02:51:29.700173+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Iran war updates: Tehran lauds US election loss; urges Trump'",
-      "created_at": "2026-11-24T02:45:14.975127+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
+      "created_at": "2026-11-24T02:51:16.518330+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran war updates: Tehran lauds US election loss; urges Trump'",
-      "created_at": "2026-11-24T02:45:14.808317+00:00",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
+      "created_at": "2026-11-24T02:51:16.278989+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Iran war updates: Tehran lauds US election loss; urges Trump'",
-      "created_at": "2026-11-24T02:45:14.687129+00:00",
+      "message": "wikimedia: 0 result(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
+      "created_at": "2026-11-24T02:51:15.965427+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran war updates: Tehran lauds US election loss; urges Trump'",
-      "created_at": "2026-11-24T02:45:14.318462+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T02:45:09.474352+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T02:45:09.473014+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran war updates: Tehran lauds US election loss; urges Trump' - rejected (no og:image)",
-      "created_at": "2026-11-24T02:45:09.471736+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxPWWFRMjRmQ0tYMms0NUtabGFWZWJWT2Q5OWtWUk9XU3lEcktHbzZSczhkM1ZhTWttb2l) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T02:45:09.469673+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T02:45:09.202432+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'What strike on Russian ship in Libya says about spread of Ukraine war - BBC' (0 download(s) tried)",
-      "created_at": "2026-11-24T02:45:09.201236+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://i.pinimg.com/originals/27/8c/b6/278cb6afd359e8c2c6bb60909f1a357a.jpg (page: 10 IG FILTERS ideas to save today | best filters for instagram, instagram story filters ... - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:45:09.200015+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'strike Russian ship Libya says'",
-      "created_at": "2026-11-24T02:45:09.197965+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'strike Russian ship Libya says'",
-      "created_at": "2026-11-24T02:45:08.982404+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'strike Russian ship Libya says'",
-      "created_at": "2026-11-24T02:45:08.850937+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'strike Russian ship Libya says'",
-      "created_at": "2026-11-24T02:45:08.422711+00:00",
+      "message": "openverse: 0 result(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
+      "created_at": "2026-11-24T02:51:15.514936+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T02:45:04.288022+00:00",
+      "created_at": "2026-11-24T02:51:03.615665+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T02:45:04.286890+00:00",
+      "created_at": "2026-11-24T02:51:03.614451+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://i.pinimg.com/originals/02/be/da/02beda4bdec545a1f85dd4542ff20540.png (page: https://catcomfortshop.com/what-breed-is-this-cat/ | breeds of cat😺 | Adorabili gattini, Simpatici a - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:45:04.285829+00:00",
+      "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - rejected (no og:image)",
+      "created_at": "2026-11-24T02:51:03.613191+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://i.etsystatic.com/43152122/r/il/440741/5426779794/il_fullxfull.5426779794_3oa1.jpg (page: https://kr.pinterest.com/pin/19281104652288790/ | 25 Popular Cat Breeds as Kittens, Kittens Breeds P - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:45:04.284748+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T02:51:03.610844+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://preview.redd.it/a-cool-guide-to-cat-breeds-v0-f4uu6lin6i2c1.png?auto=webp&s=72f66ee703adc3d0 (page: https://www.etsy.com/listing/1579446918/25-popular-cat-breeds-as-kittens-kittens | Different Types O - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:45:04.283131+00:00",
+      "message": "photo candidate: 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T02:51:03.342375+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://i.etsystatic.com/17927448/r/il/0d86b2/5712778798/il_1140xN.5712778798_jnzw.jpg (page: https://storage.googleapis.com/dynntmsuuawmye/different-types-of-cat-vehicles.html | Cat Breeds Post - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:45:04.281773+00:00",
+      "message": "photo: no real photo found for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis Indicates - The New York Times' (0 download(s) tried)",
+      "created_at": "2026-11-24T02:51:03.341202+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:45:04.279010+00:00",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://thumbs.dreamstime.com/b/preposition-movement-raccoon-jumps-over-box-raccoon-jumps-over-box-p (page: https://www.istockphoto.com/photos/game-over-screen-photos | Over Preposition Stock Illustrations –  - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:51:03.340056+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:45:04.134927+00:00",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishpage.com/image/prepositions/over-2.jpg (page: https://www.dreamstime.com/illustration/over-preposition.html | Over The Moon Coloring Book - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:51:03.338752+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:45:04.011866+00:00",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.liveworksheets.com/sites/default/files/styles/worksheet/public/def_files/2022/2/7/202070 (page: https://storage.googleapis.com/orbyvqotiqvgtvkblog/over-the-moon-coloring-book.html | 1852006 | Over - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:51:03.337556+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:45:03.806736+00:00",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishlessonviaskype.com/wp-content/uploads/2023/06/Above-over-below-under-600x600.png (page: https://www.liveworksheets.com/w/en/math/1852006 | Master English Prepositions • Improve Speaking Sk - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:51:03.336260+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/%D9%83%D8%B1%D9%8A%D8%AF_%D8%AC%D8%B2%D9%8A (page: https://commons.wikimedia.org/wiki/File:%D9%83%D8%B1%D9%8A%D8%AF_%D8%AC%D8%B2%D9%8A%D8%B1%D9%87_%D8% - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:51:03.334962+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Over 700 000 Russian Soldiers'",
+      "created_at": "2026-11-24T02:51:03.332802+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Over 700 000 Russian Soldiers'",
+      "created_at": "2026-11-24T02:51:03.177762+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: rejected candidate (mime=image/tiff): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Trouw_aan_de_F%C3%BChrer%2C_Bestanddeelnr_2",
+      "created_at": "2026-11-24T02:51:02.971934+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 2 result(s) for 'Over 700 000 Russian Soldiers'",
+      "created_at": "2026-11-24T02:51:02.969835+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Over 700 000 Russian Soldiers'",
+      "created_at": "2026-11-24T02:51:02.439877+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T02:44:56.585205+00:00",
+      "created_at": "2026-11-24T02:50:54.444865+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T02:44:56.584091+00:00",
+      "created_at": "2026-11-24T02:50:54.443658+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://www.totalprosports.com/wp-content/uploads/2026/11/daniel-jones-2048x1126.jpg (page: Daniel Jones Gave The Colts No Choice - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-24T02:44:56.582795+00:00",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://thumbs.dreamstime.com/b/preposition-movement-raccoon-jumps-over-box-raccoon-jumps-over-box-p (page: https://www.istockphoto.com/photos/game-over-screen-photos | Over Preposition Stock Illustrations –  - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:54.442459+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishpage.com/image/prepositions/over-2.jpg (page: https://www.dreamstime.com/illustration/over-preposition.html | Over The Moon Coloring Book - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:54.441255+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.liveworksheets.com/sites/default/files/styles/worksheet/public/def_files/2022/2/7/202070 (page: https://storage.googleapis.com/orbyvqotiqvgtvkblog/over-the-moon-coloring-book.html | 1852006 | Over - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:54.440001+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishlessonviaskype.com/wp-content/uploads/2023/06/Above-over-below-under-600x600.png (page: https://www.liveworksheets.com/w/en/math/1852006 | Master English Prepositions • Improve Speaking Sk - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:54.438778+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+      "created_at": "2026-11-24T02:50:54.436672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+      "created_at": "2026-11-24T02:50:54.299666+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+      "created_at": "2026-11-24T02:50:54.162956+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+      "created_at": "2026-11-24T02:50:53.621096+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T02:50:46.219972+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T02:50:46.218711+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://thumbs.dreamstime.com/b/preposition-movement-raccoon-jumps-over-box-raccoon-jumps-over-box-p (page: https://www.istockphoto.com/photos/game-over-screen-photos | Over Preposition Stock Illustrations –  - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:46.217647+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishpage.com/image/prepositions/over-2.jpg (page: https://www.dreamstime.com/illustration/over-preposition.html | Over The Moon Coloring Book - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:46.216339+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.liveworksheets.com/sites/default/files/styles/worksheet/public/def_files/2022/2/7/202070 (page: https://storage.googleapis.com/orbyvqotiqvgtvkblog/over-the-moon-coloring-book.html | 1852006 | Over - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:46.215074+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Over 700,000 Russian Soldiers Have Died in Ukraine'): https://www.englishlessonviaskype.com/wp-content/uploads/2023/06/Above-over-below-under-600x600.png (page: https://www.liveworksheets.com/w/en/math/1852006 | Master English Prepositions • Improve Speaking Sk - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T02:50:46.213226+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis'",
+      "created_at": "2026-11-24T02:50:46.210927+00:00",
       "card": ""
     }
   ]
