@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T12:33:41.172146+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Iowa Army detonation court case', 'Grand Theft Auto VI release', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-24T12:33:41.167386+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T12:33:41.087374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T12:33:41.085105+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T12:33:40.770283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T12:32:23.613737+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T12:32:23.612220+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #49 started (--only blogger)",
+    "created_at": "2026-11-24T12:32:23.610102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T11:44:38.542598+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-24T10:42:40.718003+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T10:42:40.716709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://i.pinimg.com/originals/75/5a/c6/755ac6ef3b864a31ee7cc18dd8e46490.png (page: https://www.reddit.com/r/facebook/comments/6226n4/3d_printing_of_facebook_messenger_stickers/ | Swee - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T10:42:40.715445+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.wikihow.com/images/9/99/Use-Stickers-on-Facebook-Messenger-Step-12.jpg (page: https://storage.googleapis.com/doghwguwueecme/sweet-stickers-messenger.html | Messenger Image To Sti - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T10:42:40.713984+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.adweek.com/wp-content/uploads/2021/08/Messenger-Sticker-Tray-Messenger-is-10-Stickers.pn (page: https://storage.googleapis.com/gcpfjzxcznwdr/messenger-image-to-sticker.html | Messenger From Facebo - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T10:42:40.711860+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://i.pinimg.com/736x/d1/c4/39/d1c4395ef4bef08fbc7affc4fcecbc7e.jpg (page: https://www.adweek.com/media/messenger-from-facebook-how-to-use-the-messenger-is-10-sticker-pack/ |  - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T10:42:40.707227+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:40.704465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:40.567568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:40.421977+00:00",
     "card": ""
   }
 ]

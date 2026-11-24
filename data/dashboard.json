@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T11:44:38.541030+00:00",
-  "last_run": "2026-11-24T11:42:59.276637+00:00",
-  "runs": 48,
+  "generated_at": "2026-11-24T12:33:41.170583+00:00",
+  "last_run": "2026-11-24T12:32:23.610075+00:00",
+  "runs": 49,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,18 +67,18 @@
       "runs_today": 12,
       "posts_today": 8,
       "next_runs": [
-        "2026-11-24T17:59:38.364062+06:00",
-        "2026-11-24T18:14:38.364062+06:00",
-        "2026-11-24T18:29:38.364062+06:00",
         "2026-11-24T18:44:38.364062+06:00",
-        "2026-11-24T18:59:38.364062+06:00"
+        "2026-11-24T18:59:38.364062+06:00",
+        "2026-11-24T19:14:38.364062+06:00",
+        "2026-11-24T19:29:38.364062+06:00",
+        "2026-11-24T19:44:38.364062+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T18:03:00+06:00",
         "2026-11-24T19:08:00+06:00",
         "2026-11-24T19:52:00+06:00",
         "2026-11-24T21:08:00+06:00",
-        "2026-11-24T22:03:00+06:00"
+        "2026-11-24T22:03:00+06:00",
+        "2026-11-24T22:58:00+06:00"
       ],
       "success": 10,
       "fail": 4,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 8
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T11:42:59.278168+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T12:32:23.612210+00:00"
     }
   ],
   "dry_run": false,
@@ -171,18 +162,66 @@
   },
   "trending": [
     "Jensen Huang discloses more affairs",
-    "Iowa Army detonation court case",
     "Personal boycotts",
-    "November full supermoon",
+    "Iowa Army detonation court case",
     "Grand Theft Auto VI release",
     "SEC probes Nvidia accounting",
-    "Ukraine claims Libya warship sinking",
-    "Google plans personalized AI TV channel",
-    "Cyclops in Avengers: Doomsday footage",
-    "Google adds AI across products"
+    "November full supermoon",
+    "Leak reveals Russian war dead",
+    "Thanksgiving dinner preparations",
+    "Unusually warm late November weather",
+    "Riemann hypothesis proof claimed"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T12:33:41.087374+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T12:33:41.085105+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T12:33:40.770283+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T12:32:23.613737+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T12:32:23.612220+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #49 started (--only blogger)",
+      "created_at": "2026-11-24T12:32:23.610102+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T11:44:38.542598+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Iowa Army detonation court case', 'Personal boycotts', 'November full supermoon', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-24T11:44:38.538110+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: no photo, skipped)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5346/7004980858_dab8dbce1d_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980858 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
       "created_at": "2026-11-24T11:44:34.327736+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7138/7004982872_8b27337f4f_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004982872 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
-      "created_at": "2026-11-24T11:44:34.326655+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7220/7151068139_6b17570bb5_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7151068139 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
-      "created_at": "2026-11-24T11:44:34.325605+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5195/7004980268_32831e3316_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980268 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
-      "created_at": "2026-11-24T11:44:34.324351+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'War Room newsletter'",
-      "created_at": "2026-11-24T11:44:34.247860+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'War Room newsletter'",
-      "created_at": "2026-11-24T11:44:34.108399+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'War Room newsletter'",
-      "created_at": "2026-11-24T11:44:33.884938+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 4 result(s) for 'War Room newsletter'",
-      "created_at": "2026-11-24T11:44:33.449900+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T11:44:33.148211+00:00",
       "card": ""
     }
   ]
