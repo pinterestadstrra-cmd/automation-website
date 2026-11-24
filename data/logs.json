@@ -2,6 +2,918 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T11:44:38.542598+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Iowa Army detonation court case', 'Personal boycotts', 'November full supermoon', 'Grand Theft Auto VI release']",
+    "created_at": "2026-11-24T11:44:38.538110+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: no photo, skipped)",
+    "created_at": "2026-11-24T11:44:38.364103+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "card 'Adsterra Blogger': no photo, skipped - Bluesky post needs a verified real news photo",
+    "created_at": "2026-11-24T11:44:38.362938+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-24T11:44:38.361938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: photo search done - 5 candidate(s) tried, 4 real-photo search(es), no usable photo",
+    "created_at": "2026-11-24T11:44:38.360946+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - skipped (same event used within 24h, event key 'bbc libya russian ship spread strike ukraine war what')",
+    "created_at": "2026-11-24T11:44:38.359659+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Latvian president sees possible 'tipping point' in Ukraine w' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-24T11:44:38.358409+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Latvian president sees possible 'tipping point' in Ukraine war next year - Reuters' (0 download(s) tried)",
+    "created_at": "2026-11-24T11:44:38.357299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://thegrio.com/wp-content/uploads/2021/02/1-4-1024x576.jpg (page: Texas Ed Board's African American studies course to be expanded - TheGrio - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:38.347658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible tipping'",
+    "created_at": "2026-11-24T11:44:38.345472+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Latvian president sees possible tipping'",
+    "created_at": "2026-11-24T11:44:38.228454+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Latvian president sees possible tipping'",
+    "created_at": "2026-11-24T11:44:38.059078+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Latvian president sees possible tipping'",
+    "created_at": "2026-11-24T11:44:37.994066+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:37.714716+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:37.713418+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://www.missioninfobank.org/mib/images/projects2004/pray_1040.prj04.jpg (page: The 10/40 Window : MissionInfobank, Research resources from and for ... - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:37.712299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:37.709934+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:37.529117+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:37.318757+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:36.903706+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:36.676466+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:36.674525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://i.imgflip.com/80i0nm.jpg (page: Brain comparison Blank Template - Imgflip - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:36.673079+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:36.670350+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:36.104211+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:35.869054+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+    "created_at": "2026-11-24T11:44:35.101340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:34.678768+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:34.677680+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Latvian president sees possible 'tipping point' in Ukraine w' - rejected (no og:image)",
+    "created_at": "2026-11-24T11:44:34.676293+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxNd1owVzQ0WnFIOWhrNkJsRnYxRWVMUV9iQWxvM3lZYXRfYm5fajBMZ0lZMDcwNHhrR2p) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T11:44:34.547343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The War Room newsletter: Is it a drone or a missile? - The E' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-24T11:44:34.339846+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'The War Room newsletter: Is it a drone or a missile? - The Economist' (0 download(s) tried)",
+    "created_at": "2026-11-24T11:44:34.338752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://mlpp.pressbooks.pub/app/uploads/sites/607/2019/07/Childsoldier_In_Okinawa-350x471.jpg (page: https://www.reddit.com/r/Warthunder/comments/ae7v0c/possible_new_war_thunder_historical_map/ | World - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.337654+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://closeencountersinwar.org/wp-content/uploads/2019/12/vietnam-soldier-with-child.jpg (page: https://mlpp.pressbooks.pub/modernworldhistory/chapter/world-war-ii/boulton_paul_defiant/ | Close En - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.336632+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://images.artnet.com/aoa_lot_images/97143/jean-claude-sauer-van-tuong-vietnam-war-january-photo (page: https://closeencountersinwar.org/ | Van-Tuong, Vietnam War, January by Jean-Claude Sauer on artnet A - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.335597+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://s-media-cache-ak0.pinimg.com/736x/2a/45/9c/2a459c93a6a3415eed93595f6ea60b22--olive-branches- (page: https://www.artnet.com/auctions/artists/jean-claude-sauer/van-tuong-vietnam-war-january | 70 best im - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.334568+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Fra_Angelico%2C_Fra_Filippo_Lippi%2C_The_Ad (page: https://commons.wikimedia.org/wiki/File:Fra_Angelico,_Fra_Filippo_Lippi,_The_Adoration_of_the_Magi.j - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.333467+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.332396+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.331064+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.329974+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Armco_Bulletin%2C_July_1919_-_DPLA_-_becce3 (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_July_1919_-_DPLA_-_becce3289d8870eb642e21ab4 - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.328874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5346/7004980858_dab8dbce1d_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980858 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.327736+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7138/7004982872_8b27337f4f_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004982872 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.326655+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7220/7151068139_6b17570bb5_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7151068139 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.325605+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5195/7004980268_32831e3316_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980268 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:34.324351+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'War Room newsletter'",
+    "created_at": "2026-11-24T11:44:34.247860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'War Room newsletter'",
+    "created_at": "2026-11-24T11:44:34.108399+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'War Room newsletter'",
+    "created_at": "2026-11-24T11:44:33.884938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 4 result(s) for 'War Room newsletter'",
+    "created_at": "2026-11-24T11:44:33.449900+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:33.148211+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:33.147175+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://mlpp.pressbooks.pub/app/uploads/sites/607/2019/07/Childsoldier_In_Okinawa-350x471.jpg (page: https://www.reddit.com/r/Warthunder/comments/ae7v0c/possible_new_war_thunder_historical_map/ | World - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:33.145815+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://closeencountersinwar.org/wp-content/uploads/2019/12/vietnam-soldier-with-child.jpg (page: https://mlpp.pressbooks.pub/modernworldhistory/chapter/world-war-ii/boulton_paul_defiant/ | Close En - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:33.144455+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://images.artnet.com/aoa_lot_images/97143/jean-claude-sauer-van-tuong-vietnam-war-january-photo (page: https://closeencountersinwar.org/ | Van-Tuong, Vietnam War, January by Jean-Claude Sauer on artnet A - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:32.768199+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://s-media-cache-ak0.pinimg.com/736x/2a/45/9c/2a459c93a6a3415eed93595f6ea60b22--olive-branches- (page: https://www.artnet.com/auctions/artists/jean-claude-sauer/van-tuong-vietnam-war-january | 70 best im - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:32.766245+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'The War Room newsletter: Is it a drone or a missile?'",
+    "created_at": "2026-11-24T11:44:32.506936+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'The War Room newsletter: Is it a drone or a missile?'",
+    "created_at": "2026-11-24T11:44:32.336213+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'The War Room newsletter: Is it a drone or a missile?'",
+    "created_at": "2026-11-24T11:44:32.128406+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'The War Room newsletter: Is it a drone or a missile?'",
+    "created_at": "2026-11-24T11:44:31.838903+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:31.546704+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:31.545187+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://mlpp.pressbooks.pub/app/uploads/sites/607/2019/07/Childsoldier_In_Okinawa-350x471.jpg (page: https://www.reddit.com/r/Warthunder/comments/ae7v0c/possible_new_war_thunder_historical_map/ | World - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:31.544092+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://closeencountersinwar.org/wp-content/uploads/2019/12/vietnam-soldier-with-child.jpg (page: https://mlpp.pressbooks.pub/modernworldhistory/chapter/world-war-ii/boulton_paul_defiant/ | Close En - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:31.542836+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://images.artnet.com/aoa_lot_images/97143/jean-claude-sauer-van-tuong-vietnam-war-january-photo (page: https://closeencountersinwar.org/ | Van-Tuong, Vietnam War, January by Jean-Claude Sauer on artnet A - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:31.541666+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://s-media-cache-ak0.pinimg.com/736x/2a/45/9c/2a459c93a6a3415eed93595f6ea60b22--olive-branches- (page: https://www.artnet.com/auctions/artists/jean-claude-sauer/van-tuong-vietnam-war-january | 70 best im - only 1 of 6 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:31.540453+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'The War Room newsletter: Is it a drone or a missile? - The E'",
+    "created_at": "2026-11-24T11:44:31.537715+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'The War Room newsletter: Is it a drone or a missile? - The E'",
+    "created_at": "2026-11-24T11:44:31.220751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'The War Room newsletter: Is it a drone or a missile? - The E'",
+    "created_at": "2026-11-24T11:44:30.966945+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'The War Room newsletter: Is it a drone or a missile? - The E'",
+    "created_at": "2026-11-24T11:44:30.432253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:30.098748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:30.097558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The War Room newsletter: Is it a drone or a missile? - The E' - rejected (no og:image)",
+    "created_at": "2026-11-24T11:44:30.095538+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiowFBVV95cUxOTktBMXhPUUt3ZEg5TWNoQUpVTUZIRDRVZDhjTDlYU0RFXzkzNlFQTm9yZE1OZXFVcWV) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T11:44:30.049754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-24T11:44:29.842343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
+    "created_at": "2026-11-24T11:44:29.841214+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://soyacincau.com/wp-content/uploads/2023/10/231025-tng-ewallet-alipay-china-scan-QR-code-1140x (page: How To Say Qr Code In Chinese at Kiara Vaux blog - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.840134+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/0c/Secretary_of_State_Hillary_Rodham_Clinton_at_the (page: https://commons.wikimedia.org/wiki/File:Secretary_of_State_Hillary_Rodham_Clinton_at_the_100th_Anniv - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.838976+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/PIIGS_Mk_4_map.png/1280px-PIIGS_Mk_4_map.pn (page: https://commons.wikimedia.org/wiki/File:PIIGS_Mk_4_map.png | File:PIIGS Mk 4 map.png - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.837724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/11/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.836556+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/00/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.835306+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/10/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.834083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/e/e6/Gaza_genocide_recognition.svg (page: https://commons.wikimedia.org/w/index.php?curid=149981932 | Gaza genocide recognition - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:29.832738+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-24T11:44:29.829932+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-24T11:44:29.684216+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-24T11:44:29.460021+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 1 result(s) for 'Live Updates Iran says will'",
+    "created_at": "2026-11-24T11:44:29.236371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:28.698098+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:28.697079+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://cdni.fancaps.net/file/fancaps-movieimages/9587554.jpg (page: Cruel Intentions (1999) Screencap | Fancaps - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:28.695563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:28.692969+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.990338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.751908+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.499618+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:27.453539+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:27.452582+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://m.media-amazon.com/images/I/81obYgbDSrL._AC_UF894,1000_QL80_.jpg (page: https://www.ohiotropics.com/2023/07/17/best-soil-for-fiddle-leaf-fig/ | premium fiddle leaf fig tree - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:27.451474+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://b3261022.smushcdn.com/3261022/wp-content/uploads/2024/08/FLF-Potting-Soil-Mix-4.jpg?lossy=1& (page: https://matsuoutdoorsmanshow.com/?s=premium-fiddle-leaf-fig-tree-potting-soil-t-KNRElKhTVu1 | Premiu - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:27.450340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://africanvioletresourcecenter.com/wp-content/uploads/2024/08/FLF-Potting-Soil-Mix-1.jpg (page: https://africanvioletresourcecenter.com/product/premium-fiddle-leaf-fig-potting-soil/ | Premium Fidd - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:27.449289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://africanvioletresourcecenter.com/wp-content/uploads/2024/08/FLF-Potting-Soil-Mix-6.jpg (page: https://africanvioletresourcecenter.com/product/premium-fiddle-leaf-fig-potting-soil/ | Premium Fidd - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:27.447486+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.445150+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.290812+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:27.132598+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
+    "created_at": "2026-11-24T11:44:26.918707+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:26.868724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:26.867581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
+    "created_at": "2026-11-24T11:44:26.866450+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T11:44:26.863832+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Land blockade of Iran ‘virtually impossible’, says Araghchi;' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-24T11:44:26.608960+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Land blockade of Iran ‘virtually impossible’, says Araghchi; 2 tankers hit - Al Jazeera' (0 download(s) tried)",
+    "created_at": "2026-11-24T11:44:26.608012+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://cdn.pixabay.com/photo/2020/12/16/14/56/farm-5836815_1280.jpg (page: https://www.dreamstime.com/stock-photo-beautiful-farmland-landscape-image3895790 | 3,000+ Free Vast  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:26.606440+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://assets.isu.pub/document-structure/221215134021-200811f5d5af3005e52a3ff1a610a808/v1/d0ac20648 (page: https://pixabay.com/images/search/vast farmlands/ | Why Farming Matters by linking-environment-and-f - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:26.604932+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/sky-green-grassland-natural-landscape-nature-field-plain-horizon-natura (page: https://www.wbcsd.org/actions/one-planet-business-for-biodiversity-op2b/ | Free Images : sky, green, - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:26.603577+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/landscape-nature-grass-marsh-field-farm-lawn-meadow-prairie-countryside (page: https://pxhere.com/en/photo/1549347 | Land And Farm Delaware at Nancy Sheridan blog - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:26.602587+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Land blockade Iran virtually impossible'",
+    "created_at": "2026-11-24T11:44:26.600340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Land blockade Iran virtually impossible'",
+    "created_at": "2026-11-24T11:44:26.410362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Land blockade Iran virtually impossible'",
+    "created_at": "2026-11-24T11:44:26.241903+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Land blockade Iran virtually impossible'",
+    "created_at": "2026-11-24T11:44:25.873205+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:25.602342+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:25.601208+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://cdn.pixabay.com/photo/2020/12/16/14/56/farm-5836815_1280.jpg (page: https://www.dreamstime.com/stock-photo-beautiful-farmland-landscape-image3895790 | 3,000+ Free Vast  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:25.600274+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://assets.isu.pub/document-structure/221215134021-200811f5d5af3005e52a3ff1a610a808/v1/d0ac20648 (page: https://pixabay.com/images/search/vast farmlands/ | Why Farming Matters by linking-environment-and-f - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:25.598870+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/sky-green-grassland-natural-landscape-nature-field-plain-horizon-natura (page: https://www.wbcsd.org/actions/one-planet-business-for-biodiversity-op2b/ | Free Images : sky, green, - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:25.597813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/landscape-nature-grass-marsh-field-farm-lawn-meadow-prairie-countryside (page: https://pxhere.com/en/photo/1549347 | Land And Farm Delaware at Nancy Sheridan blog - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:25.596729+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:25.593975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:25.424727+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:25.241359+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:24.878190+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:24.552501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:24.551328+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://cdn.pixabay.com/photo/2020/12/16/14/56/farm-5836815_1280.jpg (page: https://www.dreamstime.com/stock-photo-beautiful-farmland-landscape-image3895790 | 3,000+ Free Vast  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:24.550369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://assets.isu.pub/document-structure/221215134021-200811f5d5af3005e52a3ff1a610a808/v1/d0ac20648 (page: https://pixabay.com/images/search/vast farmlands/ | Why Farming Matters by linking-environment-and-f - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:24.549315+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/sky-green-grassland-natural-landscape-nature-field-plain-horizon-natura (page: https://www.wbcsd.org/actions/one-planet-business-for-biodiversity-op2b/ | Free Images : sky, green, - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:24.548162+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Land blockade of Iran ‘virtually impossible’, says'): https://get.pxhere.com/photo/landscape-nature-grass-marsh-field-farm-lawn-meadow-prairie-countryside (page: https://pxhere.com/en/photo/1549347 | Land And Farm Delaware at Nancy Sheridan blog - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-24T11:44:24.546766+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:24.533640+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:24.294229+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:24.106247+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Land blockade of Iran ‘virtually impossible’, says Araghchi;'",
+    "created_at": "2026-11-24T11:44:23.827202+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:23.087353+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T11:44:23.086246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Land blockade of Iran ‘virtually impossible’, says Araghchi;' - rejected (no og:image)",
+    "created_at": "2026-11-24T11:44:23.084718+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T11:44:23.082201+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T11:44:21.772453+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-24T11:44:21.771159+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 24 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-24T11:44:21.769402+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T11:44:17.222105+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T11:44:17.220309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T11:44:16.930724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T11:42:59.279263+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-24T11:42:59.278177+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #48 started (--only bluesky)",
+    "created_at": "2026-11-24T11:42:59.276661+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T11:26:39.864556+00:00",
     "card": ""
   },
@@ -285,918 +1197,6 @@
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
     "created_at": "2026-11-24T10:42:40.421977+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:40.156672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T10:42:40.096556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T10:42:40.095029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.kidsartncraft.com/wp-content/uploads/2023/05/how-to-make-cute-paper-fish-craft-tutorial- (page: How To Make Cute Paper Fish Craft Tutorial - Kids Art & Craft - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T10:42:40.093775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:40.091108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:39.941055+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:39.803416+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-    "created_at": "2026-11-24T10:42:39.535770+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T10:42:37.718409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T10:42:37.717047+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
-    "created_at": "2026-11-24T10:42:37.714939+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T10:42:37.712018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T10:42:37.073922+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-24T10:42:37.072365+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 23 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T10:42:37.070466+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T10:42:34.192909+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-24T10:42:34.191091+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-24T10:42:33.854264+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-24T10:42:27.798311+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-24T10:42:27.797064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #46 started (--only bluesky)",
-    "created_at": "2026-11-24T10:42:27.795296+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T10:12:21.286517+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Burnham rebuffs former prime ministers', 'Personal boycotts', 'Bird photography', 'AI sell-off overshadows Anthropic IPO']",
-    "created_at": "2026-11-24T10:12:21.281875+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-24T10:12:20.999271+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-24T10:12:20.997660+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-24T10:12:20.521116+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-24T10:08:36.900688+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-24T10:08:36.899586+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #45 started (--only blogger)",
-    "created_at": "2026-11-24T10:08:36.897675+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T09:53:37.555451+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Bird photography', 'Jensen Huang discloses more affairs', 'Burnham rebuffs former prime ministers', 'Personal boycotts', 'Grand Theft Auto VI release']",
-    "created_at": "2026-11-24T09:53:37.549321+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-24T09:53:37.351268+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T09:53:37.349429+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'call china christian coalition freedom news political premie' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T09:53:37.346892+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-24T09:50:42.359877+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-24T09:50:42.358313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-24T09:50:42.356230+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-24T09:50:42.354383+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'US political coalition calls for US-China trade to be tied t': https://static.foxnews.com/foxnews.com/content/uploads/2025/03/trump-china-flag-split.jpg (from bing-images, query 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News', page: https://www.usatoday.com/story/news/2025/04/10/donald-trump-china-trade-war-florida-products-list-im - matches 3 key entities (china, news, trade))",
-    "created_at": "2026-11-24T09:50:42.352007+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('US political coalition calls for US-China trade to': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-24T09:50:42.349123+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/05/1200/675/trump-xi-1.p (page: https://www.foxnews.com/category/world/world-regions/china?page=17 | Trump sparks backlash after pro - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T09:50:29.203202+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T09:50:29.197424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T09:50:28.747487+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T09:50:28.565065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T09:50:28.312048+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T09:50:20.936717+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T09:50:20.935013+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no og:image)",
-    "created_at": "2026-11-24T09:50:20.932943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxOS0Q3OWtMMEhzenZnb2tPZlAyTWZuRGdsRmlySGZkOGZUNS1lMTNBSXVGZ2FoOVZRaFJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T09:50:20.929538+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T09:50:19.973187+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-24T09:50:19.971225+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 22 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T09:50:19.968915+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to micksaludrepublica.bsky.social (hot post by eldiario.es, comment: 'Magnífico. Una lección en elegancia y coherencia. ¡Cómo ha d') as primonewstoday.bsky.social: 'Wow, that's a bold stance—defending press freedom is always worth the fight.  \n\n'",
-    "created_at": "2026-11-24T09:50:15.646523+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to bengrabenstein.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'And maybe Marlon Brando\nWill be there by the fire\nWe'll sit ') as primonewstoday.bsky.social: 'What a vivid picture—imagining Brando swapping Oscars for campfire stories. 🎬🔥\n\n'",
-    "created_at": "2026-11-24T09:50:11.931114+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T09:50:10.388904+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-24T09:50:10.384106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-24T09:50:09.966751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-24T09:48:33.241535+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-24T09:48:33.240163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #44 started (--only bluesky)",
-    "created_at": "2026-11-24T09:48:33.238193+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T08:44:10.347340+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Theresa May urges accepting Brexit', 'SEC probes Nvidia accounting', 'Ukraine claims Libya warship sinking', 'Personal boycotts']",
-    "created_at": "2026-11-24T08:44:10.342562+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-24T08:44:10.142760+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T08:44:10.141516+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'any condition demand iran jazeera live met talk tehran war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T08:44:10.139787+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 800x621 (ratio 1.29) - unchanged",
-    "created_at": "2026-11-24T08:39:45.868254+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 800x621 (ratio 1.29) - kept, no crop",
-    "created_at": "2026-11-24T08:39:45.867101+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Tehran demands 7 conditions be met before any' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-24T08:39:45.865306+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-24T08:39:45.864128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran war live: Tehran demands 7 conditions be met before any': https://russiaspivottoasia.com/wp-content/uploads/2026/11/Iran-Map.jpg (from bing-images, query 'Iran war live: Tehran demands 7 conditions be met before any talks with US - Al Jazeera', page: https://warhistory.org/maps/iran/2026-11-09/qatars-prime-minister-meets-trump-and-vance-in-washingto - matches 2 key entities (iran, war))",
-    "created_at": "2026-11-24T08:39:45.861833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('Iran war live: Tehran demands 7 conditions be met ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-24T08:39:45.859630+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran war live: Tehran demands 7 conditions be met '): https://thenewamerican.com/assets/sites/2/img/449971/tehran-1080x720.jpg (page: https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/ | Report: Attac - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-24T08:39:31.733674+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-    "created_at": "2026-11-24T08:39:31.730782+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-    "created_at": "2026-11-24T08:39:31.538812+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-    "created_at": "2026-11-24T08:39:31.369110+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran war live: Tehran demands 7 conditions be met before any'",
-    "created_at": "2026-11-24T08:39:30.838693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T08:39:29.825391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T08:39:29.824185+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Tehran demands 7 conditions be met before any' - rejected (no og:image)",
-    "created_at": "2026-11-24T08:39:29.822795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T08:39:29.820077+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T08:39:28.767069+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-24T08:39:28.765266+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 19 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T08:39:28.763230+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to spadas65.bsky.social (hot post by eldiario.es, comment: 'Para que decir la verdad si me lo puedo inventar.') as primonewstoday.bsky.social: 'Truth matters more than convenience—especially when people’s lives are on the li'",
-    "created_at": "2026-11-24T08:39:23.519070+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to pacos3.bsky.social (hot post by eldiario.es, comment: 'No es letrado porque no quiere') as primonewstoday.bsky.social: 'Sounds like a classic case of “I’ll do it when I feel like it.”  \n\nhttps://short'",
-    "created_at": "2026-11-24T08:39:20.613457+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T08:39:18.364418+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-24T08:39:18.362376+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-24T08:39:17.969412+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-24T08:39:16.229685+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-24T08:39:16.228424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #43 started (--only bluesky)",
-    "created_at": "2026-11-24T08:39:16.226691+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T07:20:29.661074+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'SEC probes Nvidia accounting', 'Grand Theft Auto VI release', 'Iowa Army detonation court case']",
-    "created_at": "2026-11-24T07:20:29.656680+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-24T07:20:29.477593+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-24T07:20:29.475792+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-24T07:20:29.069903+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-24T07:20:24.335670+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-24T07:20:24.334521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #42 started (--only blogger)",
-    "created_at": "2026-11-24T07:20:24.332978+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-24T07:15:06.049330+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Grand Theft Auto VI release', 'Iowa Army detonation court case', 'EU rejects COP31 climate deal']",
-    "created_at": "2026-11-24T07:15:06.043759+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-24T07:15:05.760441+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-24T07:15:05.758542+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'bbc libya russian ship spread strike ukraine war what' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T07:15:05.756173+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 2132x1599 (ratio 1.33) - unchanged",
-    "created_at": "2026-11-24T07:11:52.714400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 2132x1599 (ratio 1.33) - kept, no crop",
-    "created_at": "2026-11-24T07:11:52.712745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-24T07:11:52.710338+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-24T07:11:52.708354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'What strike on Russian ship in Libya says about spread of Uk': https://media.wired.com/photos/645426f23d9e6b1cb17a86fa/4:3/w_2132,h_1599,c_limit/WGA-Strike-The-Mon (from bing-images, query 'What strike on Russian ship in Libya says about spread of Ukraine war - BBC', page: https://www.freepik.com/photos/labor-strike | AI, the WGA Strike, and What Luddites Got Right - 'Wir - matches 2 key entities (strike, what))",
-    "created_at": "2026-11-24T07:11:52.706401+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('What strike on Russian ship in Libya says about sp': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-24T07:11:52.703812+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-    "created_at": "2026-11-24T07:11:39.009604+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-    "created_at": "2026-11-24T07:11:38.876793+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'What strike on Russian ship in Libya says about spread of Uk'",
-    "created_at": "2026-11-24T07:11:38.682101+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-    "created_at": "2026-11-24T07:11:38.605874+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:37.875709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:37.874089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - rejected (no og:image)",
-    "created_at": "2026-11-24T07:11:37.872269+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4Nkh0dF9ndTRBVjktYnQtQWh4clVUZVlwcmtIdjFLa0dfeW5Wb3NFVlhuYXJ4d0Y0c2Z) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T07:11:37.869074+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Leaked data shows more than 1,000 Russian military suicides ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T07:11:37.652169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Leaked data shows more than 1,000 Russian military suicides during Ukraine war - The Guardian' (0 download(s) tried)",
-    "created_at": "2026-11-24T07:11:37.650564+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://oncenoticias.hn/wp-content/uploads/2024/09/dafne-keen-8.jpg (page: https://abc7.com/post/classified-documents-leaked-pentagon-how-us-spies-on-allies-foes/13108715/ | D - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.648931+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://images.news9live.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-25-at-12.33.15_4a8913 (page: https://www.oncenoticias.hn/tendencias/dafne-keen-leaked-video-esta-grabacion-de-actriz-espanola-cau - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.647303+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://i.ytimg.com/vi/rkDYFGrawq0/maxresdefault.jpg (page: https://www.news9live.com/entertainment/celebrity/palash-muchhal-cheating-smriti-mandhana-leaked-cha - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.645708+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://f4.bcbits.com/img/a2775098281_10.jpg (page: https://moonagedaydream.film/celebrity/celebrity-i-cloud-leaks | Drake Viral Video Leaked Unfiltered - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.643931+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://upload.wikimedia.org/wikipedia/commons/9/9a/Mauritius_oil_spill_%2850214699566%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=97233969 | File:Mauritius oil spill (50214699566).jp - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.642021+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://live.staticflickr.com/65535/50214699566_e835bb898e_b.jpg (page: https://www.flickr.com/photos/37472264@N04/50214699566 | Mauritius oil spill - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:37.640175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Leaked data shows more than'",
-    "created_at": "2026-11-24T07:11:37.636908+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Leaked data shows more than'",
-    "created_at": "2026-11-24T07:11:37.423475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Leaked data shows more than'",
-    "created_at": "2026-11-24T07:11:37.212276+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 2 result(s) for 'Leaked data shows more than'",
-    "created_at": "2026-11-24T07:11:37.148054+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:36.310907+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:36.309007+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://oncenoticias.hn/wp-content/uploads/2024/09/dafne-keen-8.jpg (page: https://abc7.com/post/classified-documents-leaked-pentagon-how-us-spies-on-allies-foes/13108715/ | D - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:36.307493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://images.news9live.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-25-at-12.33.15_4a8913 (page: https://www.oncenoticias.hn/tendencias/dafne-keen-leaked-video-esta-grabacion-de-actriz-espanola-cau - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:36.305678+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://i.ytimg.com/vi/rkDYFGrawq0/maxresdefault.jpg (page: https://www.news9live.com/entertainment/celebrity/palash-muchhal-cheating-smriti-mandhana-leaked-cha - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:36.303844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://f4.bcbits.com/img/a2775098281_10.jpg (page: https://moonagedaydream.film/celebrity/celebrity-i-cloud-leaks | Drake Viral Video Leaked Unfiltered - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:36.302059+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:36.298540+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:36.132022+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:35.936557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:35.870373+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:34.918422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:34.916865+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://oncenoticias.hn/wp-content/uploads/2024/09/dafne-keen-8.jpg (page: https://abc7.com/post/classified-documents-leaked-pentagon-how-us-spies-on-allies-foes/13108715/ | D - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:34.915125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://images.news9live.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-25-at-12.33.15_4a8913 (page: https://www.oncenoticias.hn/tendencias/dafne-keen-leaked-video-esta-grabacion-de-actriz-espanola-cau - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:34.913280+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://i.ytimg.com/vi/rkDYFGrawq0/maxresdefault.jpg (page: https://www.news9live.com/entertainment/celebrity/palash-muchhal-cheating-smriti-mandhana-leaked-cha - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:34.911522+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Leaked data shows more than 1,000 Russian military'): https://f4.bcbits.com/img/a2775098281_10.jpg (page: https://moonagedaydream.film/celebrity/celebrity-i-cloud-leaks | Drake Viral Video Leaked Unfiltered - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:34.909665+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:34.906301+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:34.746775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:34.582092+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Leaked data shows more than 1,000 Russian military suicides '",
-    "created_at": "2026-11-24T07:11:34.518604+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:33.782324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T07:11:33.780880+00:00",
     "card": ""
   }
 ]

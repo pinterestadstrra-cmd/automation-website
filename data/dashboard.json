@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T11:26:39.863559+00:00",
-  "last_run": "2026-11-24T11:26:33.849060+00:00",
-  "runs": 47,
+  "generated_at": "2026-11-24T11:44:38.541030+00:00",
+  "last_run": "2026-11-24T11:42:59.276637+00:00",
+  "runs": 48,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T10:50:58.856337+00:00"
+    "Adsterra Blogger": "2026-11-24T11:44:38.364062+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 9,
+      "success": 10,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T10:50:58.856332+00:00"
+      "last_run": "2026-11-24T11:44:38.364059+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T10:50:58.856337+00:00",
-      "runs_today": 11,
+      "last_run": "2026-11-24T11:44:38.364062+00:00",
+      "runs_today": 12,
       "posts_today": 8,
       "next_runs": [
-        "2026-11-24T17:35:58.856337+06:00",
-        "2026-11-24T17:50:58.856337+06:00",
-        "2026-11-24T18:05:58.856337+06:00",
-        "2026-11-24T18:20:58.856337+06:00",
-        "2026-11-24T18:35:58.856337+06:00"
+        "2026-11-24T17:59:38.364062+06:00",
+        "2026-11-24T18:14:38.364062+06:00",
+        "2026-11-24T18:29:38.364062+06:00",
+        "2026-11-24T18:44:38.364062+06:00",
+        "2026-11-24T18:59:38.364062+06:00"
       ],
       "next_post_times": [
         "2026-11-24T18:03:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-24T21:08:00+06:00",
         "2026-11-24T22:03:00+06:00"
       ],
-      "success": 9,
+      "success": 10,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 8
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T11:26:33.850356+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T11:42:59.278168+00:00"
     }
   ],
   "dry_run": false,
@@ -162,316 +171,316 @@
   },
   "trending": [
     "Jensen Huang discloses more affairs",
+    "Iowa Army detonation court case",
+    "Personal boycotts",
     "November full supermoon",
     "Grand Theft Auto VI release",
-    "Personal boycotts",
     "SEC probes Nvidia accounting",
-    "Iowa Army detonation court case",
-    "EU rejects COP31 climate deal",
-    "Bird photography",
+    "Ukraine claims Libya warship sinking",
     "Google plans personalized AI TV channel",
-    "BepiColombo enters Mercury orbit"
+    "Cyclops in Avengers: Doomsday footage",
+    "Google adds AI across products"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T11:26:39.614082+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T11:26:39.612409+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T11:26:39.291069+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T11:26:33.851216+00:00",
-      "card": ""
+      "message": "card 'Adsterra Blogger' ran (skipped: no photo, skipped)",
+      "created_at": "2026-11-24T11:44:38.364103+00:00",
+      "card": "Adsterra Blogger"
     },
     {
       "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T11:26:33.850363+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #47 started (--only blogger)",
-      "created_at": "2026-11-24T11:26:33.849089+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T10:50:58.966356+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'SEC probes Nvidia accounting', 'Personal boycotts', 'Burnham rebuffs former prime ministers', 'Grand Theft Auto VI release']",
-      "created_at": "2026-11-24T10:50:58.961243+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T10:50:58.856361+00:00",
+      "message": "card 'Adsterra Blogger': no photo, skipped - Bluesky post needs a verified real news photo",
+      "created_at": "2026-11-24T11:44:38.362938+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T10:50:58.855069+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event '2026 institute iran november study update war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T10:50:58.853181+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-24T10:42:57.774384+00:00",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-24T11:44:38.361938+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-24T10:42:57.773091+00:00",
+      "message": "promo: photo search done - 5 candidate(s) tried, 4 real-photo search(es), no usable photo",
+      "created_at": "2026-11-24T11:44:38.360946+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran Update, November 23, 2026 - Institute for the Study of ' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T10:42:57.771313+00:00",
+      "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - skipped (same event used within 24h, event key 'bbc libya russian ship spread strike ukraine war what')",
+      "created_at": "2026-11-24T11:44:38.359659+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-24T10:42:57.770081+00:00",
+      "message": "photo candidate: 'Latvian president sees possible 'tipping point' in Ukraine w' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T11:44:38.358409+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Iran Update, November 23, 2026 - Institute for the Study of ': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran Update, November 23, 2026 - Institute for the Study of War', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Reject - matches 2 key entities (iran, war))",
-      "created_at": "2026-11-24T10:42:57.768746+00:00",
+      "message": "photo: no real photo found for 'Latvian president sees possible 'tipping point' in Ukraine war next year - Reuters' (0 download(s) tried)",
+      "created_at": "2026-11-24T11:44:38.357299+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Iran Update, November 23, 2026 - Institute for the': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T10:42:57.766369+00:00",
+      "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://thegrio.com/wp-content/uploads/2021/02/1-4-1024x576.jpg (page: Texas Ed Board's African American studies course to be expanded - TheGrio - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:38.347658+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Iran Update, November 23, 2026 - Institute for the Study of '",
-      "created_at": "2026-11-24T10:42:44.181039+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible tipping'",
+      "created_at": "2026-11-24T11:44:38.345472+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran Update, November 23, 2026 - Institute for the Study of '",
-      "created_at": "2026-11-24T10:42:44.072213+00:00",
+      "message": "google-images: 0 candidate(s) for 'Latvian president sees possible tipping'",
+      "created_at": "2026-11-24T11:44:38.228454+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Iran Update, November 23, 2026 - Institute for the Study of '",
-      "created_at": "2026-11-24T10:42:43.936429+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Latvian president sees possible tipping'",
+      "created_at": "2026-11-24T11:44:38.059078+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran Update, November 23, 2026 - Institute for the Study of '",
-      "created_at": "2026-11-24T10:42:43.612065+00:00",
+      "message": "openverse: 0 result(s) for 'Latvian president sees possible tipping'",
+      "created_at": "2026-11-24T11:44:37.994066+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:41.568139+00:00",
+      "created_at": "2026-11-24T11:44:37.714716+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:41.566833+00:00",
+      "created_at": "2026-11-24T11:44:37.713418+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran Update, November 23, 2026 - Institute for the Study of ' - rejected (no og:image)",
-      "created_at": "2026-11-24T10:42:41.565516+00:00",
+      "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://www.missioninfobank.org/mib/images/projects2004/pray_1040.prj04.jpg (page: The 10/40 Window : MissionInfobank, Research resources from and for ... - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:37.712299+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihgFBVV95cUxQd0VKNG41X05zSV9uTTEwNWJKVkJOMHU1WXpCa2kyN3lNcnBMVjVOREdKM1ZRMFZlYjE) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T10:42:41.563167+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:37.709934+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T10:42:41.334531+00:00",
+      "message": "google-images: 0 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:37.529117+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
-      "created_at": "2026-11-24T10:42:41.333227+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:37.318757+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://as1.ftcdn.net/v2/jpg/07/97/88/96/1000_F_797889658_MxpTTWDuYRoOVMWxxQIFitz2xaS0WRRq.jpg (page: When the ST segment is depressed, the amplitude of depression at point ... - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.332064+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/0c/Secretary_of_State_Hillary_Rodham_Clinton_at_the (page: https://commons.wikimedia.org/wiki/File:Secretary_of_State_Hillary_Rodham_Clinton_at_the_100th_Anniv - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.330857+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/PIIGS_Mk_4_map.png/1280px-PIIGS_Mk_4_map.pn (page: https://commons.wikimedia.org/wiki/File:PIIGS_Mk_4_map.png | File:PIIGS Mk 4 map.png - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.329539+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/11/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.328316+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/0/00/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.326917+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/1/10/Hillary_Rodham_Clinton_Secretary_of_State_with_C (page: https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Secretary_of_State_with_Canadian_Fore - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:41.325443+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Live Updates Iran says will'",
-      "created_at": "2026-11-24T10:42:41.323005+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Live Updates Iran says will'",
-      "created_at": "2026-11-24T10:42:41.199426+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Live Updates Iran says will'",
-      "created_at": "2026-11-24T10:42:41.066220+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Live Updates Iran says will'",
-      "created_at": "2026-11-24T10:42:40.764393+00:00",
+      "message": "openverse: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:36.903706+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:40.718003+00:00",
+      "created_at": "2026-11-24T11:44:36.676466+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:40.716709+00:00",
+      "created_at": "2026-11-24T11:44:36.674525+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://i.pinimg.com/originals/75/5a/c6/755ac6ef3b864a31ee7cc18dd8e46490.png (page: https://www.reddit.com/r/facebook/comments/6226n4/3d_printing_of_facebook_messenger_stickers/ | Swee - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:40.715445+00:00",
+      "message": "photo: rejected (irrelevant to 'Latvian president sees possible 'tipping point' in'): https://i.imgflip.com/80i0nm.jpg (page: Brain comparison Blank Template - Imgflip - only 0 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:36.673079+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.wikihow.com/images/9/99/Use-Stickers-on-Facebook-Messenger-Step-12.jpg (page: https://storage.googleapis.com/doghwguwueecme/sweet-stickers-messenger.html | Messenger Image To Sti - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:40.713984+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:36.670350+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.adweek.com/wp-content/uploads/2021/08/Messenger-Sticker-Tray-Messenger-is-10-Stickers.pn (page: https://storage.googleapis.com/gcpfjzxcznwdr/messenger-image-to-sticker.html | Messenger From Facebo - only 1 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:40.711860+00:00",
+      "message": "google-images: 0 candidate(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:36.104211+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://i.pinimg.com/736x/d1/c4/39/d1c4395ef4bef08fbc7affc4fcecbc7e.jpg (page: https://www.adweek.com/media/messenger-from-facebook-how-to-use-the-messenger-is-10-sticker-pack/ |  - only 1 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:40.707227+00:00",
+      "message": "wikimedia: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:35.869054+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-      "created_at": "2026-11-24T10:42:40.704465+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-      "created_at": "2026-11-24T10:42:40.567568+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-      "created_at": "2026-11-24T10:42:40.421977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Live Updates: Iran says it will use all means to end U.S. bl'",
-      "created_at": "2026-11-24T10:42:40.156672+00:00",
+      "message": "openverse: 0 result(s) for 'Latvian president sees possible 'tipping point' in Ukraine w'",
+      "created_at": "2026-11-24T11:44:35.101340+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:40.096556+00:00",
+      "created_at": "2026-11-24T11:44:34.678768+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T10:42:40.095029+00:00",
+      "created_at": "2026-11-24T11:44:34.677680+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.kidsartncraft.com/wp-content/uploads/2023/05/how-to-make-cute-paper-fish-craft-tutorial- (page: How To Make Cute Paper Fish Craft Tutorial - Kids Art & Craft - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-24T10:42:40.093775+00:00",
+      "message": "photo candidate: 'Latvian president sees possible 'tipping point' in Ukraine w' - rejected (no og:image)",
+      "created_at": "2026-11-24T11:44:34.676293+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxNd1owVzQ0WnFIOWhrNkJsRnYxRWVMUV9iQWxvM3lZYXRfYm5fajBMZ0lZMDcwNHhrR2p) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T11:44:34.547343+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'The War Room newsletter: Is it a drone or a missile? - The E' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T11:44:34.339846+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'The War Room newsletter: Is it a drone or a missile? - The Economist' (0 download(s) tried)",
+      "created_at": "2026-11-24T11:44:34.338752+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://mlpp.pressbooks.pub/app/uploads/sites/607/2019/07/Childsoldier_In_Okinawa-350x471.jpg (page: https://www.reddit.com/r/Warthunder/comments/ae7v0c/possible_new_war_thunder_historical_map/ | World - only 1 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.337654+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://closeencountersinwar.org/wp-content/uploads/2019/12/vietnam-soldier-with-child.jpg (page: https://mlpp.pressbooks.pub/modernworldhistory/chapter/world-war-ii/boulton_paul_defiant/ | Close En - only 1 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.336632+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://images.artnet.com/aoa_lot_images/97143/jean-claude-sauer-van-tuong-vietnam-war-january-photo (page: https://closeencountersinwar.org/ | Van-Tuong, Vietnam War, January by Jean-Claude Sauer on artnet A - only 1 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.335597+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://s-media-cache-ak0.pinimg.com/736x/2a/45/9c/2a459c93a6a3415eed93595f6ea60b22--olive-branches- (page: https://www.artnet.com/auctions/artists/jean-claude-sauer/van-tuong-vietnam-war-january | 70 best im - only 1 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.334568+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Fra_Angelico%2C_Fra_Filippo_Lippi%2C_The_Ad (page: https://commons.wikimedia.org/wiki/File:Fra_Angelico,_Fra_Filippo_Lippi,_The_Adoration_of_the_Magi.j - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.333467+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.332396+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.331064+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Armco_Bulletin%2C_March_1919_-_DPLA_-_e950d (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_March_1919_-_DPLA_-_e950d494522ad4bff294b3e0 - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.329974+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Armco_Bulletin%2C_July_1919_-_DPLA_-_becce3 (page: https://commons.wikimedia.org/wiki/File:Armco_Bulletin,_July_1919_-_DPLA_-_becce3289d8870eb642e21ab4 - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.328874+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5346/7004980858_dab8dbce1d_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980858 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.327736+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7138/7004982872_8b27337f4f_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004982872 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.326655+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/7220/7151068139_6b17570bb5_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7151068139 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.325605+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The War Room newsletter: Is it a drone or a missil'): https://live.staticflickr.com/5195/7004980268_32831e3316_b.jpg (page: https://www.flickr.com/photos/61713553@N00/7004980268 | Mosman Home Gardeners’ Society archives - only 0 of 6 key entities in the source page)",
+      "created_at": "2026-11-24T11:44:34.324351+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'War Room newsletter'",
+      "created_at": "2026-11-24T11:44:34.247860+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'War Room newsletter'",
+      "created_at": "2026-11-24T11:44:34.108399+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'War Room newsletter'",
+      "created_at": "2026-11-24T11:44:33.884938+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 4 result(s) for 'War Room newsletter'",
+      "created_at": "2026-11-24T11:44:33.449900+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T11:44:33.148211+00:00",
       "card": ""
     }
   ]
