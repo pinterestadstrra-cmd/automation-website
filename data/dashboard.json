@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T16:07:14.949606+00:00",
-  "last_run": "2026-11-24T16:07:11.607697+00:00",
-  "runs": 56,
+  "generated_at": "2026-11-24T16:42:16.493572+00:00",
+  "last_run": "2026-11-24T16:40:06.174648+00:00",
+  "runs": 57,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T15:28:15.390149+00:00"
+    "Adsterra Blogger": "2026-11-24T16:42:16.088367+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 14,
+      "success": 15,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T15:28:15.390145+00:00"
+      "last_run": "2026-11-24T16:42:16.088363+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T15:28:15.390149+00:00",
-      "runs_today": 16,
+      "last_run": "2026-11-24T16:42:16.088367+00:00",
+      "runs_today": 17,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-24T22:13:15.390149+06:00",
-        "2026-11-24T22:28:15.390149+06:00",
-        "2026-11-24T22:43:15.390149+06:00",
-        "2026-11-24T22:58:15.390149+06:00",
-        "2026-11-24T23:13:15.390149+06:00"
+        "2026-11-24T22:57:16.088367+06:00",
+        "2026-11-24T23:12:16.088367+06:00",
+        "2026-11-24T23:27:16.088367+06:00",
+        "2026-11-24T23:42:16.088367+06:00",
+        "2026-11-24T23:57:16.088367+06:00"
       ],
       "next_post_times": [
         "2026-11-24T22:58:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-25T02:10:00+06:00",
         "2026-11-25T02:54:00+06:00"
       ],
-      "success": 14,
+      "success": 15,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 11
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T16:07:11.609223+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T16:40:06.176215+00:00"
     }
   ],
   "dry_run": false,
@@ -161,317 +170,317 @@
     "open": false
   },
   "trending": [
-    "Iowa Army detonation court case",
-    "Tidal bans AI-generated music",
-    "Pope Francis diary: devil encounters",
-    "US prepares new tariffs on China",
+    "Trump gives Giuliani Medal of Freedom",
     "Most memorable TV theme songs",
-    "Personal boycotts",
+    "US war with Iran",
+    "King tides threaten Bay Area flooding",
+    "Wrong Lord of the Rings quotes",
+    "Pope Francis diary: devil encounters",
     "Jensen Huang discloses more affairs",
-    "Michigan drops Trev Alberts hire",
-    "Grand Theft Auto VI release",
-    "SEC probes Nvidia accounting"
+    "SEC probes Nvidia accounting",
+    "Personal boycotts",
+    "Tidal bans AI-generated music"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T16:07:14.764517+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T16:07:14.762874+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T16:07:14.392751+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T16:07:11.610370+00:00",
-      "card": ""
+      "message": "card 'Adsterra Blogger' ran (ok - 1 reply sent)",
+      "created_at": "2026-11-24T16:42:16.088417+00:00",
+      "card": "Adsterra Blogger"
     },
     {
       "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T16:07:11.609233+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #56 started (--only blogger)",
-      "created_at": "2026-11-24T16:07:11.607718+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T15:28:15.536923+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Close races in 2026 midterms', 'Pope Francis diary: devil encounters', 'Bird photography', 'Personal boycotts', 'Jensen Huang discloses more affairs']",
-      "created_at": "2026-11-24T15:28:15.532578+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T15:28:15.390165+00:00",
+      "message": "card 'Adsterra Blogger': no photo, skipped - Bluesky post needs a verified real news photo",
+      "created_at": "2026-11-24T16:42:16.087320+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T15:28:15.389020+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'affair agency alice china contact huang nvidia spy time trac' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T15:28:15.387195+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1024x683 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-24T15:27:27.434464+00:00",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-24T16:42:16.086390+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1024x683 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-24T15:27:27.408836+00:00",
+      "message": "promo: photo search done - 8 candidate(s) tried, 3 fresh stories with a photo attempt, 3 real-photo search(es), no usable photo",
+      "created_at": "2026-11-24T16:42:16.085444+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T15:27:27.402363+00:00",
+      "message": "promo: story 3/6 tried: 'The U.S. political map? Anyone's guess after Democratic wave' - no usable photo, trying the next story",
+      "created_at": "2026-11-24T16:42:16.084315+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-24T15:27:27.191798+00:00",
+      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T16:42:16.083320+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du': https://static01.nyt.com/images/2026/11/22/multimedia/22dc-spy-chip-fpvj/22dc-spy-chip-fpvj-jumbo.jp (from bing-images, query 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency During Nvidia Affair - The New York Times', page: https://www.nytimes.com/2026/11/22/us/politics/alice-huang-china-spy-agency-nvidia.html | U.S. Track - matches 11 key entities (affair, agency, alice, china))",
-      "created_at": "2026-11-24T15:27:27.160023+00:00",
+      "message": "photo: no real photo found for 'The U.S. political map? Anyone's guess after Democratic wave - PBS' (0 download(s) tried)",
+      "created_at": "2026-11-24T16:42:16.082351+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('U.S. Tracked Alice Huang’s Contacts With China Spy': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T15:27:27.084647+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.081406+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du'",
-      "created_at": "2026-11-24T15:27:13.629811+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.080484+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du'",
-      "created_at": "2026-11-24T15:27:13.221957+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.079470+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du'",
-      "created_at": "2026-11-24T15:27:13.049227+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.078479+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du'",
-      "created_at": "2026-11-24T15:27:12.624930+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://upload.wikimedia.org/wikipedia/commons/f/ff/WorldMapLongLat-eq-circles-tropics-non-sanstext. (page: https://commons.wikimedia.org/wiki/File:WorldMapLongLat-eq-circles-tropics-non-sanstext.png | File:W - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.077457+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Southern_Africa_1890s_Political.jpg/1280px- (page: https://commons.wikimedia.org/wiki/File:Southern_Africa_1890s_Political.jpg | File:Southern Africa 1 - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.076346+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Paris%2C_Notre_Dame_--_2014_--_1458-65.jpg/ (page: https://commons.wikimedia.org/wiki/File:Paris,_Notre_Dame_--_2014_--_1458-65.jpg | File:Paris, Notre - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.075320+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/A_new_%26_exact_map_of_Spain_%26_Portugal_- (page: https://commons.wikimedia.org/wiki/File:A_new_%26_exact_map_of_Spain_%26_Portugal_-_corrected_accord - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.074275+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/1851_Tallis_and_Rapkin_Map_of_Independent_T (page: https://commons.wikimedia.org/wiki/File:1851_Tallis_and_Rapkin_Map_of_Independent_Tartary_(Central_A - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:16.073096+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'U S political map Anyone'",
+      "created_at": "2026-11-24T16:42:16.070632+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'U S political map Anyone'",
+      "created_at": "2026-11-24T16:42:15.859736+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'U S political map Anyone'",
+      "created_at": "2026-11-24T16:42:15.706161+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'U S political map Anyone'",
+      "created_at": "2026-11-24T16:42:15.340521+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T15:27:05.692486+00:00",
+      "created_at": "2026-11-24T16:42:15.244843+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T15:27:05.690904+00:00",
+      "created_at": "2026-11-24T16:42:15.243754+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du' - rejected (no og:image)",
-      "created_at": "2026-11-24T15:27:05.624131+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:15.242576+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPVzVyaXo0aXJLT2VuWXdDRlJIWEw1RDBlTWtxcG9RN2ZydEN0T2U5dnlCRnJXWFVKeVZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T15:27:05.620914+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:15.241428+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-      "created_at": "2026-11-24T15:27:05.090923+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:15.240485+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T15:27:04.319834+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-24T15:27:04.313585+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T15:27:04.310738+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T15:27:01.834264+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T15:27:01.642005+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:15.239397+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T15:27:01.247513+00:00",
+      "message": "bing-images: 4 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:15.237057+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T15:26:57.508379+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T15:26:57.150797+00:00",
+      "message": "google-images: 0 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:15.011067+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #55 started (--only bluesky)",
-      "created_at": "2026-11-24T15:26:57.148961+00:00",
+      "message": "wikimedia: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:14.843551+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T14:58:41.654045+00:00",
+      "message": "openverse: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:14.221354+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Pope Francis diary: devil encounters', 'Grand Theft Auto VI release', 'Iowa Army detonation court case']",
-      "created_at": "2026-11-24T14:58:41.647837+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T16:42:14.134573+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T14:58:41.377583+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T16:42:14.133567+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T14:58:41.374887+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:14.132647+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T14:58:40.951074+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:14.131629+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T14:58:33.669273+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T14:58:33.667515+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:14.130589+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #54 started (--only blogger)",
-      "created_at": "2026-11-24T14:58:33.665442+00:00",
+      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:14.129242+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T14:21:03.591089+00:00",
+      "message": "bing-images: 4 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:14.126779+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Pope Francis diary: devil encounters', 'SEC probes Nvidia accounting', 'Grand Theft Auto VI release']",
-      "created_at": "2026-11-24T14:21:03.585724+00:00",
+      "message": "google-images: 0 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:13.898912+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T14:21:03.342614+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T14:21:03.340852+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'attack bbc drone how russian ship ukraine unfold' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T14:21:03.338298+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1024x768 (ratio 1.33) - unchanged",
-      "created_at": "2026-11-24T14:19:26.680472+00:00",
+      "message": "wikimedia: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:13.723740+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1024x768 (ratio 1.33) - kept, no crop",
-      "created_at": "2026-11-24T14:19:26.678510+00:00",
+      "message": "openverse: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
+      "created_at": "2026-11-24T16:42:13.492345+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T16:42:13.394784+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T16:42:13.393847+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no og:image)",
+      "created_at": "2026-11-24T16:42:13.392787+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxPMmd4NTlaRXRMSE1zbmdzVTdhaVA1QWxURkQ2aFlmU0REdDZfQ1h5RmczU01EcGZNaHh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T16:42:13.390221+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 2/6 tried: 'Majority of Americans Say Social Media Companies, News Outle' - no usable photo, trying the next story",
+      "created_at": "2026-11-24T16:42:13.118923+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T16:42:13.117988+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'Majority of Americans Say Social Media Companies, News Outlets Have Too Much Power in Politics - Pew Research Center' (0 download(s) tried)",
+      "created_at": "2026-11-24T16:42:13.117036+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://shraddha.mountmadonna.org/images/free-printable-sonic-coloring-pages/high-quality-printable- (page: 30 Free Printable Sonic Coloring Pages for Kids | Shraddha Christmas Hub - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:13.116047+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Thomas_Butler_Gunn_Diaries-_Volume_16%2C_pa (page: https://commons.wikimedia.org/wiki/File:Thomas_Butler_Gunn_Diaries-_Volume_16,_page_86_(with_newspap - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:13.115058+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Majority of Americans Say Social Media Companies, '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Social_Dynamite-_The_Wickedness_of_Modern_S (page: https://commons.wikimedia.org/wiki/File:Social_Dynamite-_The_Wickedness_of_Modern_Society_from_the_D - only 1 of 14 key entities in the source page)",
+      "created_at": "2026-11-24T16:42:13.114025+00:00",
       "card": ""
     }
   ]
