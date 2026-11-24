@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T11:26:39.864556+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'November full supermoon', 'Grand Theft Auto VI release', 'Personal boycotts', 'SEC probes Nvidia accounting']",
+    "created_at": "2026-11-24T11:26:39.860639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T11:26:39.614082+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T11:26:39.612409+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T11:26:39.291069+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T11:26:33.851216+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T11:26:33.850363+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #47 started (--only blogger)",
+    "created_at": "2026-11-24T11:26:33.849089+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T10:50:58.966356+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-24T07:11:33.780880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Leaked data shows more than 1,000 Russian military suicides ' - rejected (no og:image)",
-    "created_at": "2026-11-24T07:11:33.778663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxPclIybFN1cjJ1XzJuTEdkdjhqZzU2U2RWSlpocVp2VzVOaG9SVDE1Uk9PS2FSNU1Uakl) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T07:11:33.775331+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - skipped (same event used within 24h, event key 'catch fire hitt hormuz iran jazeera live mine ship three war')",
-    "created_at": "2026-11-24T07:11:33.527043+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T07:11:33.525307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
-    "created_at": "2026-11-24T07:11:33.523852+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://www.gannett-cdn.com/-mm-/91a379e4a405c045cf9ced371a3a39717a934a94/c=0-13-3619-2058/local/-/m (page: Ebola Outbreak Map at Carmina Cox blog - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:33.522371+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://upload.wikimedia.org/wikipedia/commons/e/e6/Gaza_genocide_recognition.svg (page: https://commons.wikimedia.org/w/index.php?curid=149981932 | Gaza genocide recognition - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T07:11:33.520545+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Live Updates Iran says will'",
-    "created_at": "2026-11-24T07:11:33.517184+00:00",
     "card": ""
   }
 ]
