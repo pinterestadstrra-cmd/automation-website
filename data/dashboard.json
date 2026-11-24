@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T13:52:49.354082+00:00",
-  "last_run": "2026-11-24T13:52:44.391359+00:00",
-  "runs": 52,
+  "generated_at": "2026-11-24T14:21:03.589428+00:00",
+  "last_run": "2026-11-24T14:18:32.193891+00:00",
+  "runs": 53,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 3,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 3,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T13:36:05.518637+00:00"
+    "Adsterra Blogger": "2026-11-24T14:21:03.342588+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 12,
+      "success": 13,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T13:36:05.518631+00:00"
+      "last_run": "2026-11-24T14:21:03.342583+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T13:36:05.518637+00:00",
-      "runs_today": 14,
-      "posts_today": 9,
+      "last_run": "2026-11-24T14:21:03.342588+00:00",
+      "runs_today": 15,
+      "posts_today": 10,
       "next_runs": [
-        "2026-11-24T20:06:05.518637+06:00",
-        "2026-11-24T20:21:05.518637+06:00",
-        "2026-11-24T20:36:05.518637+06:00",
-        "2026-11-24T20:51:05.518637+06:00",
-        "2026-11-24T21:06:05.518637+06:00"
+        "2026-11-24T20:36:03.342588+06:00",
+        "2026-11-24T20:51:03.342588+06:00",
+        "2026-11-24T21:06:03.342588+06:00",
+        "2026-11-24T21:21:03.342588+06:00",
+        "2026-11-24T21:36:03.342588+06:00"
       ],
       "next_post_times": [
         "2026-11-24T21:08:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-24T23:55:00+06:00",
         "2026-11-25T01:00:00+06:00"
       ],
-      "success": 12,
+      "success": 13,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 10
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T13:52:44.392649+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T14:18:32.195942+00:00"
     }
   ],
   "dry_run": false,
@@ -163,315 +172,315 @@
   "trending": [
     "Jensen Huang discloses more affairs",
     "Personal boycotts",
-    "Iowa Army detonation court case",
+    "Pope Francis diary: devil encounters",
     "SEC probes Nvidia accounting",
-    "Trump calls Putin his friend",
     "Grand Theft Auto VI release",
+    "ICE arrests at Seattle airport",
+    "Iowa Army detonation court case",
     "November full supermoon",
     "Bird photography",
-    "Women's World Cup host vote",
-    "King tides threaten Bay Area flooding"
+    "Google plans personalized AI TV channel"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T13:52:49.119614+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T13:52:49.118079+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T13:52:48.845089+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T13:52:44.393514+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T13:52:44.392656+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #52 started (--only blogger)",
-      "created_at": "2026-11-24T13:52:44.391379+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T13:36:05.786427+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'SEC probes Nvidia accounting', 'Iowa Army detonation court case', 'Trump calls Putin his friend']",
-      "created_at": "2026-11-24T13:36:05.781264+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T13:36:05.518658+00:00",
+      "created_at": "2026-11-24T14:21:03.342614+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T13:36:05.517263+00:00",
+      "created_at": "2026-11-24T14:21:03.340852+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'american bbc done get historic hopefully political react shi' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T13:36:05.515577+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event 'attack bbc drone how russian ship ukraine unfold' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T14:21:03.338298+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 976x549 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-24T13:35:23.825754+00:00",
+      "message": "prepare_bsky_image: published 1024x768 (ratio 1.33) - unchanged",
+      "created_at": "2026-11-24T14:19:26.680472+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 976x549 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-24T13:35:23.824589+00:00",
+      "message": "prepare_bsky_image: original 1024x768 (ratio 1.33) - kept, no crop",
+      "created_at": "2026-11-24T14:19:26.678510+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T13:35:23.822697+00:00",
+      "message": "photo candidate: 'How Ukraine drone attacks on Russian ships unfolded - BBC' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T14:19:26.675675+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-24T13:35:23.821146+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-24T14:19:26.673483+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for ''Hopefully things get done': Americans react to historic pol': https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/FB22/production/_116509246_voters.jpg (from bing-images, query ''Hopefully things get done': Americans react to historic political shift - BBC', page: https://www.bbc.co.uk/news/politics | Americans react to historic second Trump impeachment - BBC New - matches 4 key entities (american, bbc, historic, react))",
-      "created_at": "2026-11-24T13:35:23.819805+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'How Ukraine drone attacks on Russian ships unfolded - BBC': https://media.istockphoto.com/id/1428668967/vector/map-of-ukraine.jpg?s=1024x1024&w=is&k=20&c=iX1Wib (from bing-images, query 'How Ukraine drone attacks on Russian ships unfolded - BBC', page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - matches 2 key entities (russian, ukraine))",
+      "created_at": "2026-11-24T14:19:26.671631+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides (''Hopefully things get done': Americans react to hi': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T13:35:23.816218+00:00",
+      "message": "vision: unavailable - keyword check decides ('How Ukraine drone attacks on Russian ships unfolde': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T14:19:26.669091+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-24T13:35:10.221751+00:00",
+      "message": "bing-images: 4 candidate(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
+      "created_at": "2026-11-24T14:19:12.964176+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-24T13:35:09.744472+00:00",
+      "message": "google-images: 0 candidate(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
+      "created_at": "2026-11-24T14:19:12.612941+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-24T13:35:09.598106+00:00",
+      "message": "wikimedia: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
+      "created_at": "2026-11-24T14:19:12.440115+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-24T13:35:09.045408+00:00",
+      "message": "openverse: 0 result(s) for 'How Ukraine drone attacks on Russian ships unfolded - BBC'",
+      "created_at": "2026-11-24T14:19:11.953208+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T13:35:08.489581+00:00",
+      "created_at": "2026-11-24T14:19:11.611426+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T13:35:08.488195+00:00",
+      "created_at": "2026-11-24T14:19:11.609795+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
-      "created_at": "2026-11-24T13:35:08.486395+00:00",
+      "message": "photo candidate: 'How Ukraine drone attacks on Russian ships unfolded - BBC' - rejected (no og:image)",
+      "created_at": "2026-11-24T14:19:11.607880+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T13:35:08.483781+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tSU1HN19rSUJoSi1qV0FsMnlmVC0wX0p2cklMYTJDZlFFRV8tSm1xejRlMWFpYXRQdU9) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T14:19:11.604313+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-      "created_at": "2026-11-24T13:35:08.176629+00:00",
+      "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - skipped (same event used within 24h, event key 'bbc libya russian ship spread strike ukraine war what')",
+      "created_at": "2026-11-24T14:19:11.124055+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T13:35:07.826498+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-24T13:35:07.824275+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T13:35:07.822527+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to xorgeo5.bsky.social (hot post by raeradford.bsky.social, comment: 'If you want the fence modified so that it does not block you') as primonewstoday.bsky.social: 'Haha, sometimes the simplest solution is just a friendly chat before bringing in'",
-      "created_at": "2026-11-24T13:35:02.192300+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T13:35:00.061965+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "run-now requested for card 'Adsterra Blogger'",
-      "created_at": "2026-11-24T13:35:00.060646+00:00",
+      "message": "promo: story 4/6 tried: 'China walks ‘thin line’ in push to prevent another Horn of A' - no usable photo, trying the next story",
+      "created_at": "2026-11-24T14:19:11.122214+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T13:35:00.059088+00:00",
+      "message": "photo candidate: 'China walks ‘thin line’ in push to prevent another Horn of A' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T14:19:11.120600+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T13:34:59.760739+00:00",
+      "message": "photo: no real photo found for 'China walks ‘thin line’ in push to prevent another Horn of Africa war - Al Jazeera' (0 download(s) tried)",
+      "created_at": "2026-11-24T14:19:11.118971+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T13:34:54.760648+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T13:34:54.759453+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://cdn.wallpapersafari.com/3/45/ewgc8W.jpg (page: https://www.worldtravelguide.net/features/city-highlight/city-highlight-beijing/ | 🔥 [100+] China Fl - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:11.117287+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #51 started (--only bluesky)",
-      "created_at": "2026-11-24T13:34:54.758017+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://1.bp.blogspot.com/-UzuUsSjP9bQ/Ta5ERQOoOAI/AAAAAAAAAAQ/_653LZlNx0k/s1600/Flag_of_China.png (page: https://wallpapersafari.com/china-flag-wallpapers/ | china: Flag of China - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:11.096043+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T12:51:09.912712+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://theflagman.co.uk/wp-content/uploads/2017/03/flag-of-china.jpg (page: http://anastasiya-china.blogspot.com/2011/04/flag-of-china.html | NATIONAL FLAG OF CHINA | The Flagm - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:11.090969+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Iowa Army detonation court case', 'Grand Theft Auto VI release', 'Ukraine claims Libya warship sinking']",
-      "created_at": "2026-11-24T12:51:09.909380+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://image.cnbcfm.com/api/v1/image/106246652-1573788271264gettyimages-1051651510.jpeg?v=157378857 (page: http://www.theflagman.co.uk/product/national-flag-of-china/ | 9 Ancient Chinese Buildings • AIMIR CG - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:11.089057+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger' ran (skipped: no photo, skipped)",
-      "created_at": "2026-11-24T12:51:09.804381+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "card 'Adsterra Blogger': no photo, skipped - Bluesky post needs a verified real news photo",
-      "created_at": "2026-11-24T12:51:09.803662+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-24T12:51:09.802947+00:00",
+      "message": "bing-images: 4 candidate(s) for 'China walks thin line push'",
+      "created_at": "2026-11-24T14:19:11.085948+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 5 candidate(s) tried, 1 real-photo search(es), no usable photo",
-      "created_at": "2026-11-24T12:51:09.801746+00:00",
+      "message": "google-images: 0 candidate(s) for 'China walks thin line push'",
+      "created_at": "2026-11-24T14:19:10.855538+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
-      "created_at": "2026-11-24T12:51:09.467624+00:00",
+      "message": "wikimedia: 0 result(s) for 'China walks thin line push'",
+      "created_at": "2026-11-24T14:19:10.701592+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-      "created_at": "2026-11-24T12:51:09.466760+00:00",
+      "message": "openverse: 0 result(s) for 'China walks thin line push'",
+      "created_at": "2026-11-24T14:19:10.314087+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve' - skipped (same event used within 24h, event key 'contract investigation news oil panel priz report senate tie')",
-      "created_at": "2026-11-24T12:51:09.466124+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T14:19:10.035131+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T12:51:09.465450+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T14:19:10.033524+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Americans’ Trust in Information From News Organizations Has Risen in the Past Year - Pew Research Center' (0 download(s) tried)",
-      "created_at": "2026-11-24T12:51:09.464925+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://cdn.wallpapersafari.com/3/45/ewgc8W.jpg (page: https://www.worldtravelguide.net/features/city-highlight/city-highlight-beijing/ | 🔥 [100+] China Fl - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:10.031751+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.464346+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://1.bp.blogspot.com/-UzuUsSjP9bQ/Ta5ERQOoOAI/AAAAAAAAAAQ/_653LZlNx0k/s1600/Flag_of_China.png (page: https://wallpapersafari.com/china-flag-wallpapers/ | china: Flag of China - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:10.030034+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:09.463673+00:00",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://theflagman.co.uk/wp-content/uploads/2017/03/flag-of-china.jpg (page: http://anastasiya-china.blogspot.com/2011/04/flag-of-china.html | NATIONAL FLAG OF CHINA | The Flagm - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:10.027817+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://image.cnbcfm.com/api/v1/image/106246652-1573788271264gettyimages-1051651510.jpeg?v=157378857 (page: http://www.theflagman.co.uk/product/national-flag-of-china/ | 9 Ancient Chinese Buildings • AIMIR CG - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:10.025970+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:10.022299+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:09.716451+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:09.487440+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:09.115998+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T14:19:08.709672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T14:19:08.707930+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://cdn.wallpapersafari.com/3/45/ewgc8W.jpg (page: https://www.worldtravelguide.net/features/city-highlight/city-highlight-beijing/ | 🔥 [100+] China Fl - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:08.706228+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://1.bp.blogspot.com/-UzuUsSjP9bQ/Ta5ERQOoOAI/AAAAAAAAAAQ/_653LZlNx0k/s1600/Flag_of_China.png (page: https://wallpapersafari.com/china-flag-wallpapers/ | china: Flag of China - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:08.704379+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): http://theflagman.co.uk/wp-content/uploads/2017/03/flag-of-china.jpg (page: http://anastasiya-china.blogspot.com/2011/04/flag-of-china.html | NATIONAL FLAG OF CHINA | The Flagm - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:08.702576+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'China walks ‘thin line’ in push to prevent another'): https://image.cnbcfm.com/api/v1/image/106246652-1573788271264gettyimages-1051651510.jpeg?v=157378857 (page: http://www.theflagman.co.uk/product/national-flag-of-china/ | 9 Ancient Chinese Buildings • AIMIR CG - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T14:19:08.700721+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:08.691762+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:08.470585+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:08.261971+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'China walks ‘thin line’ in push to prevent another Horn of A'",
+      "created_at": "2026-11-24T14:19:07.829996+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T14:19:07.326525+00:00",
       "card": ""
     }
   ]
