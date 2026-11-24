@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T01:05:02.555219+00:00",
-  "last_run": "2026-11-24T01:04:36.970449+00:00",
+  "generated_at": "2026-11-24T01:05:37.695001+00:00",
+  "last_run": "2026-11-24T01:02:04.852449+00:00",
   "runs": 30,
   "stats": {
     "blogger_today": 0,
@@ -33,56 +33,48 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-24T00:27:11.860321+00:00",
-    "Adsterra Blogger": "2026-11-24T01:05:02.330832+00:00"
+    "BlueSky Trend": "2026-11-24T01:05:37.447218+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
-      "success": 10,
+      "success": 11,
       "fail": 2,
-      "last_ok": false,
-      "last_error": "no photo, skipped",
-      "last_run": "2026-11-24T00:27:11.860318+00:00"
-    },
-    "Adsterra Blogger": {
-      "success": 0,
-      "fail": 2,
-      "last_ok": false,
-      "last_error": "no article to post yet",
-      "last_run": "2026-11-24T01:05:02.339983+00:00"
+      "last_ok": true,
+      "last_error": "",
+      "last_run": "2026-11-24T01:05:37.447214+00:00"
     }
   },
   "file_cards": [
     {
-      "name": "Adsterra Blogger",
+      "name": "BlueSky Trend",
       "type": "bluesky_post",
       "status": "active",
-      "computed_status": "error",
-      "link": "",
+      "computed_status": "active",
+      "link": "https://shorturl.at/eZnco",
       "account_handle": "primonewstoday.bsky.social",
       "interval_minutes": 15,
-      "posts_per_day": 48,
+      "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T01:05:02.330832+00:00",
+      "last_run": "2026-11-24T01:05:37.447218+00:00",
       "runs_today": 2,
-      "posts_today": 0,
+      "posts_today": 5,
       "next_runs": [
-        "2026-11-24T07:20:02.330832+06:00",
-        "2026-11-24T07:35:02.330832+06:00",
-        "2026-11-24T07:50:02.330832+06:00",
-        "2026-11-24T08:05:02.330832+06:00",
-        "2026-11-24T08:20:02.330832+06:00"
+        "2026-11-24T07:20:37.447218+06:00",
+        "2026-11-24T07:35:37.447218+06:00",
+        "2026-11-24T07:50:37.447218+06:00",
+        "2026-11-24T08:05:37.447218+06:00",
+        "2026-11-24T08:20:37.447218+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T07:35:00+06:00",
-        "2026-11-24T07:50:00+06:00",
-        "2026-11-24T08:25:00+06:00",
-        "2026-11-24T09:03:00+06:00",
-        "2026-11-24T09:38:00+06:00"
+        "2026-11-24T07:58:00+06:00",
+        "2026-11-24T08:53:00+06:00",
+        "2026-11-24T09:50:00+06:00",
+        "2026-11-24T10:55:00+06:00",
+        "2026-11-24T12:00:00+06:00"
       ],
-      "success": 0,
+      "success": 11,
       "fail": 2,
-      "last_error": "no article to post yet",
+      "last_error": "",
       "color": "",
       "notes": "",
       "source": "trending",
@@ -90,7 +82,7 @@
       "bold_format": true,
       "window_start": "",
       "window_end": "",
-      "posts_per_run": 2,
+      "posts_per_run": 1,
       "reply_own": true,
       "reply_others": true,
       "replies_per_run": 10,
@@ -115,7 +107,7 @@
       "max_posts_per_week": 0,
       "max_posts_per_month": 0,
       "retry_after_minutes": 30,
-      "retry_max": 5,
+      "retry_max": 2,
       "replies_per_day": 0,
       "reply_never": "",
       "reply_only": "",
@@ -131,7 +123,7 @@
       "handle": "primonewstoday.bsky.social",
       "enabled": true,
       "posts_limit": 0,
-      "posts_today": 0
+      "posts_today": 1
     }
   ],
   "health": {
@@ -161,7 +153,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T01:04:36.972268+00:00"
+      "time": "2026-11-24T01:02:04.854640+00:00"
     }
   ],
   "dry_run": false,
@@ -185,302 +177,302 @@
   "logs": [
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger' ran (skipped: no article to post yet)",
-      "created_at": "2026-11-24T01:05:02.340007+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': run failed (2/5 retries) - next retry at 07:35 Dhaka",
-      "created_at": "2026-11-24T01:05:02.338667+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "card 'Adsterra Blogger': no article to post",
-      "created_at": "2026-11-24T01:05:02.337490+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-      "created_at": "2026-11-24T01:05:02.335045+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=48 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/5 replies/day=0",
-      "created_at": "2026-11-24T01:05:02.334014+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "test: card 'BlueSky Trend' not found or paused",
-      "created_at": "2026-11-24T01:05:02.332073+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (skipped: no article to post yet)",
-      "created_at": "2026-11-24T01:05:02.330867+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': run failed (1/5 retries) - next retry at 07:35 Dhaka",
-      "created_at": "2026-11-24T01:05:02.329484+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "card 'Adsterra Blogger': no article to post",
-      "created_at": "2026-11-24T01:05:02.327942+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "bluesky cycle: no article to link yet",
-      "created_at": "2026-11-24T01:05:02.322639+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=48 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/5 replies/day=0",
-      "created_at": "2026-11-24T01:05:02.319680+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "run-now requested for card 'Adsterra Blogger'",
-      "created_at": "2026-11-24T01:05:02.318308+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T01:05:02.315673+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T01:05:01.964588+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T01:04:36.973397+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T01:04:36.972277+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #30 started (--only bluesky)",
-      "created_at": "2026-11-24T01:04:36.970472+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T00:27:12.013011+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Grand Theft Auto VI release', 'November full supermoon', 'Nvidia rehires Huang', 'Weather forecasts include lead plume', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-24T00:27:12.008977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
-      "created_at": "2026-11-24T00:27:11.860361+00:00",
+      "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+      "created_at": "2026-11-24T01:05:37.447244+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "card 'BlueSky Trend': run failed (1/2 retries) - next retry at 06:57 Dhaka",
-      "created_at": "2026-11-24T00:27:11.859045+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "warning",
-      "message": "card 'BlueSky Trend': no photo, skipped - Bluesky post needs a verified real news photo",
-      "created_at": "2026-11-24T00:27:11.857695+00:00",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:05:37.445167+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-24T00:27:11.856488+00:00",
+      "message": "card 'BlueSky Trend': promo posted - event 'drop five four gazette news october press see top traffic we' on 24h cooldown (topic + link+event recorded)",
+      "created_at": "2026-11-24T01:05:37.442362+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 728x971 (ratio 0.75) - unchanged",
+      "created_at": "2026-11-24T01:02:55.324488+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 25 candidate(s) tried, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-24T00:27:11.855083+00:00",
+      "message": "prepare_bsky_image: original 728x971 (ratio 0.75) - kept, no crop",
+      "created_at": "2026-11-24T01:02:55.323056+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'How Grand Theft Auto VI's launch surpassed expectations - Re' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:11.853706+00:00",
+      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T01:02:55.320813+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipgFBVV95cUxPWC12bUo0X3M1alRPRHNvSVRBSnRMbUdzVmltRHdRUW9qdGl5NHNpdXhvU0dmUnkxQkR) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:11.851320+00:00",
+      "message": "promo category: USA celebrity news",
+      "created_at": "2026-11-24T01:02:55.319317+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Grand Theft Auto VI Shatters Entertainment Box Office Record' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:11.579140+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Top 50 US news websites: Four in five see traffic drop in Oc': https://image.slidesharecdn.com/top50websitesbytraffic-120713231417-phpapp01/95/top-50-websites-by-t (from bing-images, query 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette', page: https://mrcfreespeechamerica.org/blogs/free-speech/luis-cornelio/2026/06/04/special-report-92-16-big - matches 4 key entities (four, news, top, website))",
+      "created_at": "2026-11-24T01:02:55.317033+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxOMFVKWGxPZEhCVC1ZRl9YUUxEaW5mWmRFVEJrSjhxeHhDZGRTeXRQUHR3VEpOV1lMVUY) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:11.576609+00:00",
+      "message": "vision: unavailable - keyword check decides ('Top 50 US news websites: Four in five see traffic ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T01:02:55.314656+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Game over? How playing Grand Theft Auto VI is affecting elit' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:11.319836+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:41.439402+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMixwFBVV95cUxNRllCME5FVXRwd3lVd2R5WGxzanZtMlRBOXFtM1Z4NkpNU0dyMWthYm9wYXBHeUV0amJ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:11.315615+00:00",
+      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:40.920357+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'GTA 6 Leaker Releases All Files for Alleged Xbox Build of Ga' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:11.074051+00:00",
+      "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:40.740691+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikwFBVV95cUxOczZaRFpBMk1SbHEzZTgxUlpjN3UxREc4TzBvWGdPQWJfQlJLSnF5Zm14R0tYV0hvVHg) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:11.071664+00:00",
+      "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:40.637419+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Thank you for making Grand Theft Auto VI the biggest launch ' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:10.823807+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T01:02:40.549504+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVVBWLThKR2w4Vm9HUkxoSG91ZERKODFVOWRHcDhvRjdEZGhnLW80S25VVy04V1VIVmx) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:10.821209+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: no category yielded a fresh story with a real photo - falling back to custom/trending/breaking news",
-      "created_at": "2026-11-24T00:27:09.916838+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:09.915497+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihAFBVV95cUxPbGtaSVAtSnh5RTRGUmp6ZW5BbUhiZFlPTnloTlB0MHpsaFRsWmJkQTB4czRDWUl6OEd) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:09.912985+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:09.658615+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:09.656600+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:09.453369+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:09.451105+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'What’s behind Iran’s escalation of attacks in the Gulf? - Al' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:09.203501+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxOM1owT2pOYVc3bXd5Z0RTeGlaemVoVXVReXNLeHcza0U3aVo2RW5FWDJjUTFGdGtrNm9) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:09.201229+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:08.937511+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:08.935031+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T01:02:40.547771+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:08.137512+00:00",
+      "created_at": "2026-11-24T01:02:40.545698+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:08.135212+00:00",
+      "created_at": "2026-11-24T01:02:40.542094+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - skipped (same event used within 24h, event key 'altcoin bitcoin crypto ether insight invest network news tod')",
-      "created_at": "2026-11-24T00:27:07.897071+00:00",
+      "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
+      "created_at": "2026-11-24T01:02:40.323390+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'LG Electronics USA Introduces ‘LG Shield’ B2B Security Frame' - rejected (no og:image)",
-      "created_at": "2026-11-24T00:27:07.895575+00:00",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
+      "created_at": "2026-11-24T01:02:40.214091+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimAFBVV95cUxOZjJFWGdjZmNsQl9GZkRrY1VTeloyVDE3RGNXSWlvbjZpRUxqM2p1R3RpM1VZUVpPNXh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T00:27:07.893246+00:00",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:02:40.137822+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "bluesky cycle: no article to link yet",
+      "created_at": "2026-11-24T01:02:40.135565+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:02:40.132180+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': retry 1/2 after failure - due now",
+      "created_at": "2026-11-24T01:02:40.130686+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "TEST RUN card 'BlueSky Trend' finished (ok) - nothing was published",
+      "created_at": "2026-11-24T01:02:40.128955+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:02:40.126554+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "warning",
+      "message": "[DRY RUN] card 'BlueSky Trend': would post (primonewstoday.bsky.social) with photo /home/runner/work/automation-website/automation-website/data/images/top-50-us-news-websites-four-in-five-see-traffic-drop-in-october-press-gazette-1795482146.jpg",
+      "created_at": "2026-11-24T01:02:40.124228+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 728x971 (ratio 0.75) - unchanged",
+      "created_at": "2026-11-24T01:02:40.122690+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 728x971 (ratio 0.75) - kept, no crop",
+      "created_at": "2026-11-24T01:02:40.120712+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T01:02:40.117927+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: USA celebrity news",
+      "created_at": "2026-11-24T01:02:40.115911+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Top 50 US news websites: Four in five see traffic drop in Oc': https://image.slidesharecdn.com/top50websitesbytraffic-120713231417-phpapp01/95/top-50-websites-by-t (from bing-images, query 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette', page: https://mrcfreespeechamerica.org/blogs/free-speech/luis-cornelio/2026/06/04/special-report-92-16-big - matches 4 key entities (four, news, top, website))",
+      "created_at": "2026-11-24T01:02:40.113762+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: unavailable - keyword check decides ('Top 50 US news websites: Four in five see traffic ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T01:02:40.083034+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:26.242071+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:25.745136+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:25.540423+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+      "created_at": "2026-11-24T01:02:25.090717+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T01:02:24.922327+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T01:02:24.920789+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+      "created_at": "2026-11-24T01:02:24.918931+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T01:02:24.915477+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
+      "created_at": "2026-11-24T01:02:24.680210+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
+      "created_at": "2026-11-24T01:02:24.240878+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:02:24.001636+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "info",
+      "message": "bluesky cycle: no article to link yet",
+      "created_at": "2026-11-24T01:02:24.000038+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T01:02:23.997557+00:00",
+      "card": "BlueSky Trend"
+    },
+    {
+      "level": "warning",
+      "message": "TEST RUN card 'BlueSky Trend': dry-run forced - the article will be written and the photo verified, but NOTHING will be published and NO reply will be sent",
+      "created_at": "2026-11-24T01:02:23.995843+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "test requested for card 'BlueSky Trend'",
+      "created_at": "2026-11-24T01:02:23.994072+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T01:02:23.991275+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.8-flash)",
+      "created_at": "2026-11-24T01:02:23.610656+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T01:02:04.855988+00:00",
       "card": ""
     }
   ]

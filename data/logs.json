@@ -2,6 +2,36 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T01:05:37.696772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
+    "created_at": "2026-11-24T01:05:37.690683+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend' ran (ok - posted 1)",
+    "created_at": "2026-11-24T01:05:37.447244+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:05:37.445167+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': promo posted - event 'drop five four gazette news october press see top traffic we' on 24h cooldown (topic + link+event recorded)",
+    "created_at": "2026-11-24T01:05:37.442362+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T01:05:02.556936+00:00",
     "card": ""
   },
@@ -111,6 +141,300 @@
     "level": "info",
     "message": "worker run #30 started (--only bluesky)",
     "created_at": "2026-11-24T01:04:36.970472+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 728x971 (ratio 0.75) - unchanged",
+    "created_at": "2026-11-24T01:02:55.324488+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 728x971 (ratio 0.75) - kept, no crop",
+    "created_at": "2026-11-24T01:02:55.323056+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-24T01:02:55.320813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA celebrity news",
+    "created_at": "2026-11-24T01:02:55.319317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Top 50 US news websites: Four in five see traffic drop in Oc': https://image.slidesharecdn.com/top50websitesbytraffic-120713231417-phpapp01/95/top-50-websites-by-t (from bing-images, query 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette', page: https://mrcfreespeechamerica.org/blogs/free-speech/luis-cornelio/2026/06/04/special-report-92-16-big - matches 4 key entities (four, news, top, website))",
+    "created_at": "2026-11-24T01:02:55.317033+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: unavailable - keyword check decides ('Top 50 US news websites: Four in five see traffic ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+    "created_at": "2026-11-24T01:02:55.314656+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:41.439402+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:40.920357+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:40.740691+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:40.637419+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T01:02:40.549504+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T01:02:40.547771+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+    "created_at": "2026-11-24T01:02:40.545698+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T01:02:40.542094+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
+    "created_at": "2026-11-24T01:02:40.323390+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
+    "created_at": "2026-11-24T01:02:40.214091+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:02:40.137822+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-24T01:02:40.135565+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:02:40.132180+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': retry 1/2 after failure - due now",
+    "created_at": "2026-11-24T01:02:40.130686+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "TEST RUN card 'BlueSky Trend' finished (ok) - nothing was published",
+    "created_at": "2026-11-24T01:02:40.128955+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:02:40.126554+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "warning",
+    "message": "[DRY RUN] card 'BlueSky Trend': would post (primonewstoday.bsky.social) with photo /home/runner/work/automation-website/automation-website/data/images/top-50-us-news-websites-four-in-five-see-traffic-drop-in-october-press-gazette-1795482146.jpg",
+    "created_at": "2026-11-24T01:02:40.124228+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 728x971 (ratio 0.75) - unchanged",
+    "created_at": "2026-11-24T01:02:40.122690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 728x971 (ratio 0.75) - kept, no crop",
+    "created_at": "2026-11-24T01:02:40.120712+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-24T01:02:40.117927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA celebrity news",
+    "created_at": "2026-11-24T01:02:40.115911+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Top 50 US news websites: Four in five see traffic drop in Oc': https://image.slidesharecdn.com/top50websitesbytraffic-120713231417-phpapp01/95/top-50-websites-by-t (from bing-images, query 'Top 50 US news websites: Four in five see traffic drop in October - Press Gazette', page: https://mrcfreespeechamerica.org/blogs/free-speech/luis-cornelio/2026/06/04/special-report-92-16-big - matches 4 key entities (four, news, top, website))",
+    "created_at": "2026-11-24T01:02:40.113762+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: unavailable - keyword check decides ('Top 50 US news websites: Four in five see traffic ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+    "created_at": "2026-11-24T01:02:40.083034+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:26.242071+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:25.745136+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:25.540423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Top 50 US news websites: Four in five see traffic drop in Oc'",
+    "created_at": "2026-11-24T01:02:25.090717+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-24T01:02:24.922327+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-24T01:02:24.920789+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+    "created_at": "2026-11-24T01:02:24.918931+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+    "created_at": "2026-11-24T01:02:24.915477+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Celebrity Deaths of 2026: E.J. Carroll, Lance Broadway, Larr' - skipped (same event used within 24h, event key '2026 broadway carroll celebrity death lance larry poindexter')",
+    "created_at": "2026-11-24T01:02:24.680210+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'SEC probes Nvidia accounting', \"LSU's future in the SEC\", 'Weather forecasts include lead plume', 'ICE arrests at Seattle airport']",
+    "created_at": "2026-11-24T01:02:24.240878+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:02:24.001636+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "info",
+    "message": "bluesky cycle: no article to link yet",
+    "created_at": "2026-11-24T01:02:24.000038+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T01:02:23.997557+00:00",
+    "card": "BlueSky Trend"
+  },
+  {
+    "level": "warning",
+    "message": "TEST RUN card 'BlueSky Trend': dry-run forced - the article will be written and the photo verified, but NOTHING will be published and NO reply will be sent",
+    "created_at": "2026-11-24T01:02:23.995843+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "test requested for card 'BlueSky Trend'",
+    "created_at": "2026-11-24T01:02:23.994072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T01:02:23.991275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.8-flash)",
+    "created_at": "2026-11-24T01:02:23.610656+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T01:02:04.855988+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-24T01:02:04.854649+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #30 started (--only bluesky)",
+    "created_at": "2026-11-24T01:02:04.852476+00:00",
     "card": ""
   },
   {
@@ -873,330 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://ssb.wiki.gallery/images/b/ba/Rabbids.png (page: https://www.png.ai/s/rabbit-png | Rabbid - SmashWiki, the Super Smash Bros. wiki - only 0 of 11 key entities in the source page)",
     "created_at": "2026-11-24T00:26:19.104042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://cdn.png.ai/catalog-private/832ee7f9-95f9-47e1-b56e-9d56a5a0cdb9.png?imageMogr2/thumbnail/500 (page: https://www.ssbwiki.com/Rabbid | Rabbit PNG Photos with No Background | High Resolution - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:19.102844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://cdn.png.ai/catalog-private/63fd4ebe-5e36-4518-b718-a4af181d0c91.png?imageMogr2/thumbnail/500 (page: https://www.png.ai/s/rabbit-png | Rabbit PNG Photos with No Background | High Resolution - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:19.101549+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://cdn.png.ai/catalog-private/64f63c82-1ab0-41b7-9fcb-f559269e2a1c.png?imageMogr2/thumbnail/500 (page: https://www.png.ai/s/rabbit-png | Rabbit PNG Photos with No Background | High Resolution - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:19.100164+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:19.097717+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:18.948243+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:18.764183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:18.597901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T00:26:13.811141+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T00:26:13.809965+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://www.curvesinformation.com/wp-content/uploads/2022/08/Home-Depot-near-me-image.jpg (page: https://wallpapers.com/home-depot-pictures | Home Depot Near Me | Find Locations Near You - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:13.808616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): http://a.mktgcdn.com/p/nDKrvB1f3OMDojfHpKQ9uhGjKQ2g5MygVQAsx1YffJo/3264x2448.jpg (page: https://www.curvesinformation.com/home-depot-near-me/ | Home Depot Near Fort Washington Md at Loren  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:13.807238+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://a.mktgcdn.com/p/DFlITpmAU71cFyVRqYnJwDofvDcuj4QTBT2JpXlKT2A/4997x2228.jpg (page: https://storage.googleapis.com/deigolzdsjfgte/home-depot-near-fort-washington-md.html | American Hom - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:13.805677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://media.istockphoto.com/id/2171760440/photo/home-depot.jpg?s=612x612&w=0&k=20&c=3UWKC9R9kmGd4c (page: https://homemade.ftempo.com/american-home-shield-corporate-office-contact/ | 240+ Home Depot Store S - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:13.804197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:13.801844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:13.611024+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:13.444012+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-    "created_at": "2026-11-24T00:26:13.219967+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T00:26:05.312130+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T00:26:05.308213+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no og:image)",
-    "created_at": "2026-11-24T00:26:05.306996+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPZENfX1RlWTAwQWZEUnF2OTMyU2Mtb0N2Mi12R3ZzYUlmY1k2aGhka3JOZE82QWZUSUN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T00:26:05.304512+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T00:26:05.002035+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News' (0 download(s) tried)",
-    "created_at": "2026-11-24T00:26:05.000844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/1/16/US_map_-_geographic.png (page: https://www.worldatlas.com/maps/united-states.html | File:US map - geographic.png - Wikimedia Common - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.999437+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://printable-us-map.com/wp-content/uploads/2025/09/map-of-the-united-states-nations-online-proj (page: https://commons.wikimedia.org/wiki/File:US_map_-_geographic.png | Labeled Geographical Map Of USA -  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.998240+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Map Of The Us With States Labeled - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.997010+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://www.worldmap1.com/us-political-map-with-capital-washington,-most-important-cities-rivers-and - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.995700+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Red_for_the_Palestinian_and_Global_Intifada (page: https://commons.wikimedia.org/wiki/File:Red_for_the_Palestinian_and_Global_Intifada._A_Socialist_Int - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.994669+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/La_coalition_des_Rois%2C_ou_des_brigands_co (page: https://commons.wikimedia.org/wiki/File:La_coalition_des_Rois,_ou_des_brigands_couronn%C3%A9s,_contr - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.993208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/e/ea/Jordan_Peterson_in_2024.jpg?utm_source=commons.w (page: https://commons.wikimedia.org/wiki/File:Jordan_Peterson_in_2024.jpg | File:Jordan Peterson in 2024.j - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.991900+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Coalition_The_fox_and_badger_both_in_a_hole (page: https://commons.wikimedia.org/wiki/File:Coalition_The_fox_and_badger_both_in_a_hole_(BM_1868,0808.49 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.990535+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/4/49/Casey_Means_on_Ron_Johnson_Roundtable_Discussion (page: https://commons.wikimedia.org/wiki/File:Casey_Means_on_Ron_Johnson_Roundtable_Discussion.jpg | File: - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:26:04.989242+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-24T00:26:04.986943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-24T00:26:04.777006+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'US political coalition calls US'",
-    "created_at": "2026-11-24T00:26:04.584029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'US political coalition calls US'",
-    "created_at": "2026-11-24T00:26:04.219607+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T00:25:55.761283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T00:25:55.760064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/1/16/US_map_-_geographic.png (page: https://www.worldatlas.com/maps/united-states.html | File:US map - geographic.png - Wikimedia Common - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:55.758575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://printable-us-map.com/wp-content/uploads/2025/09/map-of-the-united-states-nations-online-proj (page: https://commons.wikimedia.org/wiki/File:US_map_-_geographic.png | Labeled Geographical Map Of USA -  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:55.757409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Map Of The Us With States Labeled - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:55.756125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://www.worldmap1.com/us-political-map-with-capital-washington,-most-important-cities-rivers-and - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:55.754769+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:55.752560+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:55.541632+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:55.319064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 503 for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:55.155551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T00:25:49.909309+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T00:25:49.908318+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://upload.wikimedia.org/wikipedia/commons/1/16/US_map_-_geographic.png (page: https://www.worldatlas.com/maps/united-states.html | File:US map - geographic.png - Wikimedia Common - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:49.907241+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://printable-us-map.com/wp-content/uploads/2025/09/map-of-the-united-states-nations-online-proj (page: https://commons.wikimedia.org/wiki/File:US_map_-_geographic.png | Labeled Geographical Map Of USA -  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:49.906044+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Map Of The Us With States Labeled - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:49.904799+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://www.worldmap1.com/us-political-map-with-capital-washington,-most-important-cities-rivers-and - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T00:25:49.903474+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:49.901532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
-    "created_at": "2026-11-24T00:25:49.723229+00:00",
     "card": ""
   }
 ]
