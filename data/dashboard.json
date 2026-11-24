@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T00:22:54.900051+00:00",
-  "last_run": "2026-11-24T00:22:49.143271+00:00",
-  "runs": 28,
+  "generated_at": "2026-11-24T00:27:12.011663+00:00",
+  "last_run": "2026-11-24T00:24:46.867537+00:00",
+  "runs": 29,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -33,15 +33,15 @@
     "card_default_retry_max": "2"
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T23:36:36.711918+00:00"
+    "BlueSky Trend": "2026-11-24T00:27:11.860321+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
       "success": 10,
-      "fail": 1,
-      "last_ok": true,
-      "last_error": "",
-      "last_run": "2026-11-23T23:36:36.711913+00:00"
+      "fail": 2,
+      "last_ok": false,
+      "last_error": "no photo, skipped",
+      "last_run": "2026-11-24T00:27:11.860318+00:00"
     }
   },
   "file_cards": [
@@ -49,21 +49,21 @@
       "name": "BlueSky Trend",
       "type": "bluesky_post",
       "status": "active",
-      "computed_status": "active",
+      "computed_status": "error",
       "link": "https://shorturl.at/eZnco",
       "account_handle": "primonewstoday.bsky.social",
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-23T23:36:36.711918+00:00",
-      "runs_today": 0,
+      "last_run": "2026-11-24T00:27:11.860321+00:00",
+      "runs_today": 1,
       "posts_today": 4,
       "next_runs": [
-        "2026-11-24T06:36:36.711918+06:00",
-        "2026-11-24T06:51:36.711918+06:00",
-        "2026-11-24T07:06:36.711918+06:00",
-        "2026-11-24T07:21:36.711918+06:00",
-        "2026-11-24T07:36:36.711918+06:00"
+        "2026-11-24T06:42:11.860321+06:00",
+        "2026-11-24T06:57:11.860321+06:00",
+        "2026-11-24T07:12:11.860321+06:00",
+        "2026-11-24T07:27:11.860321+06:00",
+        "2026-11-24T07:42:11.860321+06:00"
       ],
       "next_post_times": [
         "2026-11-24T07:00:00+06:00",
@@ -73,8 +73,8 @@
         "2026-11-24T10:55:00+06:00"
       ],
       "success": 10,
-      "fail": 1,
-      "last_error": "",
+      "fail": 2,
+      "last_error": "no photo, skipped",
       "color": "",
       "notes": "",
       "source": "trending",
@@ -115,8 +115,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -127,12 +136,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -141,10 +150,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T00:22:49.144629+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T00:24:46.870103+00:00"
     }
   ],
   "dry_run": false,
@@ -168,302 +177,302 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T00:22:54.392301+00:00",
-      "card": ""
+      "message": "card 'BlueSky Trend' ran (skipped: no photo, skipped)",
+      "created_at": "2026-11-24T00:27:11.860361+00:00",
+      "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T00:22:54.390864+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T00:22:54.049745+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T00:22:49.145486+00:00",
-      "card": ""
+      "message": "card 'BlueSky Trend': run failed (1/2 retries) - next retry at 06:57 Dhaka",
+      "created_at": "2026-11-24T00:27:11.859045+00:00",
+      "card": "BlueSky Trend"
     },
     {
       "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T00:22:49.144638+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #28 started (--only blogger)",
-      "created_at": "2026-11-24T00:22:49.143295+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-23T23:36:36.923901+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Hegseth's former aide urges resignation\", 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Google plans personalized AI TV channel', 'Alice Huang espionage allegations']",
-      "created_at": "2026-11-23T23:36:36.919345+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend' ran (ok - posted 1)",
-      "created_at": "2026-11-23T23:36:36.711939+00:00",
+      "message": "card 'BlueSky Trend': no photo, skipped - Bluesky post needs a verified real news photo",
+      "created_at": "2026-11-24T00:27:11.857695+00:00",
       "card": "BlueSky Trend"
     },
     {
       "level": "info",
-      "message": "card 'BlueSky Trend': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-23T23:36:36.710394+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "card 'BlueSky Trend': promo posted - event 'estonia hostile jazeera open russia threaten war' on 24h cooldown (topic + link+event recorded)",
-      "created_at": "2026-11-23T23:36:36.708557+00:00",
-      "card": "BlueSky Trend"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1920x2356 (ratio 0.81) - unchanged",
-      "created_at": "2026-11-23T23:32:18.246461+00:00",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-24T00:27:11.856488+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1920x2356 (ratio 0.81) - kept, no crop",
-      "created_at": "2026-11-23T23:32:18.245267+00:00",
+      "message": "promo: photo search done - 25 candidate(s) tried, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-24T00:27:11.855083+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-23T23:32:18.243584+00:00",
+      "message": "photo candidate: 'How Grand Theft Auto VI's launch surpassed expectations - Re' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:11.853706+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-23T23:32:18.242371+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipgFBVV95cUxPWC12bUo0X3M1alRPRHNvSVRBSnRMbUdzVmltRHdRUW9qdGl5NHNpdXhvU0dmUnkxQkR) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:11.851320+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze': https://images.pexels.com/photos/5851303/pexels-photo-5851303.jpeg?auto=compress&cs=tinysrgb&w=1920 (from bing-images, query 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jazeera', page: https://nationnewsja.wordpress.com/2026/11/21/russia-sees-us-postwar-security-proposal-as-opening-fo - matches 2 key entities (open, russia))",
-      "created_at": "2026-11-23T23:32:18.241123+00:00",
+      "message": "photo candidate: 'Grand Theft Auto VI Shatters Entertainment Box Office Record' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:11.579140+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Russia threatens ‘hostile’ Estonia with ‘open war’': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-23T23:32:18.239331+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimwFBVV95cUxOMFVKWGxPZEhCVC1ZRl9YUUxEaW5mWmRFVEJrSjhxeHhDZGRTeXRQUHR3VEpOV1lMVUY) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:11.576609+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Russia threatens ‘hostile’ Estonia with ‘open war’'): https://www.oreanda-news.com/aimg/101x16000/1605480/head_0.jpg (page: https://canvasvoyage.com/destinations/russia | The Kremlin told about the Russia—USA—China summit an - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-23T23:32:04.283229+00:00",
+      "message": "photo candidate: 'Game over? How playing Grand Theft Auto VI is affecting elit' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:11.319836+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Russia threatens ‘hostile’ Estonia with ‘open war’'): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg (page: https://www.oreanda-news.com/en/gosudarstvo/the-kremlin-told-about-the-russia-usa-china-summit-and-p - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-23T23:32:04.281713+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMixwFBVV95cUxNRllCME5FVXRwd3lVd2R5WGxzanZtMlRBOXFtM1Z4NkpNU0dyMWthYm9wYXBHeUV0amJ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:11.315615+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
-      "created_at": "2026-11-23T23:32:04.279062+00:00",
+      "message": "photo candidate: 'GTA 6 Leaker Releases All Files for Alleged Xbox Build of Ga' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:11.074051+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
-      "created_at": "2026-11-23T23:32:04.168257+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikwFBVV95cUxOczZaRFpBMk1SbHEzZTgxUlpjN3UxREc4TzBvWGdPQWJfQlJLSnF5Zm14R0tYV0hvVHg) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:11.071664+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
-      "created_at": "2026-11-23T23:32:04.032430+00:00",
+      "message": "photo candidate: 'Thank you for making Grand Theft Auto VI the biggest launch ' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:10.823807+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze'",
-      "created_at": "2026-11-23T23:32:03.565023+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVVBWLThKR2w4Vm9HUkxoSG91ZERKODFVOWRHcDhvRjdEZGhnLW80S25VVy04V1VIVmx) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:10.821209+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:57.457927+00:00",
+      "message": "promo: no category yielded a fresh story with a real photo - falling back to custom/trending/breaking news",
+      "created_at": "2026-11-24T00:27:09.916838+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:57.456792+00:00",
+      "message": "photo candidate: 'Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:09.915497+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Russia threatens ‘hostile’ Estonia with ‘open war’ - Al Jaze' - rejected (no og:image)",
-      "created_at": "2026-11-23T23:31:57.455535+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMihAFBVV95cUxPbGtaSVAtSnh5RTRGUmp6ZW5BbUhiZFlPTnloTlB0MHpsaFRsWmJkQTB4czRDWUl6OEd) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:09.912985+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikgFBVV95cUxOT2tuUzB4em5zWEgwZUpEZ0szQ0R2ajRaWmgtN0JoX0RhOVFtcFUtWm13b2k5a083bjd) - skipping, og:image would be the logo",
-      "created_at": "2026-11-23T23:31:57.453096+00:00",
+      "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:09.658615+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-23T23:31:57.217527+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:09.656600+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Moscow accuses Estonia of hostile actions on 'verge of triggering open war' - Reuters' (0 download(s) tried)",
-      "created_at": "2026-11-23T23:31:57.216055+00:00",
+      "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:09.453369+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:57.214927+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:09.451105+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:57.213589+00:00",
+      "message": "photo candidate: 'What’s behind Iran’s escalation of attacks in the Gulf? - Al' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:09.203501+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:57.212209+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxOM1owT2pOYVc3bXd5Z0RTeGlaemVoVXVReXNLeHcza0U3aVo2RW5FWDJjUTFGdGtrNm9) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:09.201229+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:57.210990+00:00",
+      "message": "photo candidate: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:08.937511+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia hostile actions'",
-      "created_at": "2026-11-23T23:31:57.208508+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:08.935031+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia hostile actions'",
-      "created_at": "2026-11-23T23:31:57.065973+00:00",
+      "message": "photo candidate: 'Top 50 US news websites: Four in five see traffic drop in Oc' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:08.137512+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia hostile actions'",
-      "created_at": "2026-11-23T23:31:56.911860+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitAFBVV95cUxQc3hXVlpHbGtDSldYbHdENUZQM1FOLWQ2U3FDUmItODZpNlpuYUowMy04Q3dralEtQUY) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:08.135212+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Moscow accuses Estonia hostile actions'",
-      "created_at": "2026-11-23T23:31:56.466777+00:00",
+      "message": "photo candidate: 'Today's Crypto News: Bitcoin, Ether and Altcoin Insights - I' - skipped (same event used within 24h, event key 'altcoin bitcoin crypto ether insight invest network news tod')",
+      "created_at": "2026-11-24T00:27:07.897071+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:48.510686+00:00",
+      "message": "photo candidate: 'LG Electronics USA Introduces ‘LG Shield’ B2B Security Frame' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:07.895575+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:48.509439+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimAFBVV95cUxOZjJFWGdjZmNsQl9GZkRrY1VTeloyVDE3RGNXSWlvbjZpRUxqM2p1R3RpM1VZUVpPNXh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:07.893246+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:48.508326+00:00",
+      "message": "photo candidate: 'Afreximbank calls for greater investment in factoring to unl' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:07.654609+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:48.506920+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizwFBVV95cUxPUjFFeG1SckNETkpmZTVpN0hCVkdHbDNwY0FZN3FoTDRLczBMQlhLeVloMnFTVEN0S0h) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:07.652329+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:48.505529+00:00",
+      "message": "photo candidate: 'Correction or deeper reckoning? Investors seek signs US stoc' - rejected (no og:image)",
+      "created_at": "2026-11-24T00:27:07.379057+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:48.504423+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnY) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T00:27:07.376653+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:48.501857+00:00",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T00:27:06.764293+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:48.376952+00:00",
+      "message": "photo: no real photo found for ''Hopefully things get done': Americans react to historic political shift - BBC' (0 download(s) tried)",
+      "created_at": "2026-11-24T00:27:06.762932+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:48.234465+00:00",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://img-assets.drafthouse.com/images/shows/dr-seuss-how-the-grinch-stole-christmas-2000-25th-ann (page: https://entertainment.ie/movies/where-to-watch/how-the-grinch-stole-christmas-43441/ | Movies & show - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.759985+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:47.905595+00:00",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://wallpapers.com/images/hd/the-grinch-smirking-vumbulb0c0rrf8di.jpg (page: https://drafthouse.com/yonkers | [300+] El Grinch Fondos de pantalla | Wallpapers.com - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.758640+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:41.979473+00:00",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): http://oyster.ignimgs.com/wordpress/stg.ign.com/2016/04/Benedict_Cumberbatch_as_The_Grinch.jpg (page: https://es.wallpapers.com/el-grinch | Benedict Cumberbatch to Voice the Grinch in New Animated Movie - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.757268+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:41.978217+00:00",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://is3-ssl.mzstatic.com/image/thumb/HI0sHX7NvBnzVm5c8phu6w/1200x675mf.jpg (page: http://www.ign.com/articles/2016/04/14/benedict-cumberbatch-to-voice-the-grinch-in-new-animated-movi - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.755650+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:41.977095+00:00",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.753943+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.752490+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.751052+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.749446+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T00:27:06.739727+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Hopefully things get done Americans'",
+      "created_at": "2026-11-24T00:27:06.737260+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Hopefully things get done Americans'",
+      "created_at": "2026-11-24T00:27:06.567852+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Hopefully things get done Americans'",
+      "created_at": "2026-11-24T00:27:06.413649+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Hopefully things get done Americans'",
+      "created_at": "2026-11-24T00:27:05.923331+00:00",
       "card": ""
     }
   ]

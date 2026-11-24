@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 28,
-  "last_run": "2026-11-24T00:22:49.143271+00:00",
+  "runs": 29,
+  "last_run": "2026-11-24T00:24:46.867537+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
@@ -71,32 +71,37 @@
   "file_card_stats": {
     "BlueSky Trend": {
       "success": 10,
-      "fail": 1,
-      "last_ok": true,
-      "last_error": "",
-      "last_run": "2026-11-23T23:36:36.711913+00:00"
+      "fail": 2,
+      "last_ok": false,
+      "last_error": "no photo, skipped",
+      "last_run": "2026-11-24T00:27:11.860318+00:00"
     }
   },
   "file_card_runs": {
-    "BlueSky Trend": "2026-11-23T23:36:36.711918+00:00"
+    "BlueSky Trend": "2026-11-24T00:27:11.860321+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
-      "date": "2026-11-23",
-      "count": 11
+      "date": "2026-11-24",
+      "count": 1
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T00:22:49.144629+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T00:24:46.870103+00:00"
     }
   ],
   "posted_urls": [],
   "posted_topics": [],
   "replied_comments": [],
-  "file_card_retries": {}
+  "file_card_retries": {
+    "BlueSky Trend": {
+      "fails": 1,
+      "next_retry": "2026-11-24T00:57:11.858989+00:00"
+    }
+  }
 }
