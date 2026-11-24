@@ -2,6 +2,72 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T03:43:28.746720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Alice Huang espionage allegations', 'Iowa Army detonation court case', 'SEC probes Nvidia accounting', 'Trump blames Democrats for selloff', 'Grand Theft Auto VI release']",
+    "created_at": "2026-11-24T03:43:28.743154+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: too soon)",
+    "created_at": "2026-11-24T03:43:28.552790+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted less than 5 minutes ago - too soon, skipping",
+    "created_at": "2026-11-24T03:43:28.551870+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': post-only run (a posting slot is due; replies stay on the interval rhythm)",
+    "created_at": "2026-11-24T03:43:28.550448+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-24T03:43:28.549462+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T03:43:28.547738+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T03:43:28.142337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T03:43:25.120832+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-24T03:43:25.119948+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #36 started (--only bluesky)",
+    "created_at": "2026-11-24T03:43:25.118657+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T03:42:43.136154+00:00",
     "card": ""
   },
@@ -1131,72 +1197,6 @@
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
     "created_at": "2026-11-24T03:28:00.669450+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
-    "created_at": "2026-11-24T03:28:00.533269+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
-    "created_at": "2026-11-24T03:28:00.371196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
-    "created_at": "2026-11-24T03:28:00.015550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-24T03:27:53.847612+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T03:27:53.846901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - rejected (no og:image)",
-    "created_at": "2026-11-24T03:27:53.846117+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-24T03:27:53.844037+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - skipped (same event used within 24h, event key 'down drone hormuz iran jazeera near tehran update war')",
-    "created_at": "2026-11-24T03:27:53.656953+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran says it will use all means to end U.S. bl' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-24T03:27:53.656230+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Live Updates: Iran says it will use all means to end U.S. blockade as Trump plays down escalating attacks - CBS News' (0 download(s) tried)",
-    "created_at": "2026-11-24T03:27:53.655641+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Live Updates: Iran says it will use all means to e'): https://i.ytimg.com/vi/tnFT7OXij14/maxresdefault.jpg (page: https://www.facebook.com/photo/?fbid=122131295156898154 | Reacting to WDTX 1402's trains 2 - YouTube - only 0 of 15 key entities in the source page)",
-    "created_at": "2026-11-24T03:27:53.655019+00:00",
     "card": ""
   }
 ]
