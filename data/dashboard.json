@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T22:29:33.246578+00:00",
-  "last_run": "2026-11-24T22:29:30.130803+00:00",
-  "runs": 68,
+  "generated_at": "2026-11-24T22:47:14.851797+00:00",
+  "last_run": "2026-11-24T22:39:04.525645+00:00",
+  "runs": 69,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T21:43:27.956182+00:00"
+    "Adsterra Blogger": "2026-11-24T22:47:14.663938+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 20,
+      "success": 21,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T21:43:27.956178+00:00"
+      "last_run": "2026-11-24T22:47:14.663933+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T21:43:27.956182+00:00",
-      "runs_today": 22,
-      "posts_today": 3,
+      "last_run": "2026-11-24T22:47:14.663938+00:00",
+      "runs_today": 23,
+      "posts_today": 4,
       "next_runs": [
-        "2026-11-25T04:43:27.956182+06:00",
-        "2026-11-25T04:58:27.956182+06:00",
-        "2026-11-25T05:13:27.956182+06:00",
-        "2026-11-25T05:28:27.956182+06:00",
-        "2026-11-25T05:43:27.956182+06:00"
+        "2026-11-25T05:02:14.663938+06:00",
+        "2026-11-25T05:17:14.663938+06:00",
+        "2026-11-25T05:32:14.663938+06:00",
+        "2026-11-25T05:47:14.663938+06:00",
+        "2026-11-25T06:02:14.663938+06:00"
       ],
       "next_post_times": [
         "2026-11-25T05:05:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-25T08:01:00+06:00",
         "2026-11-25T09:06:00+06:00"
       ],
-      "success": 20,
+      "success": 21,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 16
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T22:29:30.132046+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T22:39:04.527185+00:00"
     }
   ],
   "dry_run": false,
@@ -161,19 +170,199 @@
     "open": false
   },
   "trending": [
-    "Evacuations urged before Iowa detonation",
-    "November full supermoon",
-    "Delta system glitch delays flights",
-    "Trump pardons Thanksgiving turkeys",
-    "Thanksgiving dinner preparations",
+    "Romney questions China AI chips",
+    "Wrong Lord of the Rings quotes",
     "Kelsey Grammer's Beast first look",
+    "Delta system glitch delays flights",
+    "Evacuations urged before Iowa detonation",
     "Nvidia hiring first compliance officer",
     "Jensen Huang's \"tortured story\" remark",
-    "Personal boycotts",
-    "Grand Theft Auto VI release"
+    "\"I Know Your Age\" quiz",
+    "King tides threaten Bay Area flooding",
+    "Tidal bans AI-generated music"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T22:47:14.663960+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T22:47:14.662499+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'corruption gallup government high news record widespread' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T22:47:14.660519+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 783x750 (ratio 1.04) - unchanged",
+      "created_at": "2026-11-24T22:47:13.222797+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 783x750 (ratio 1.04) - kept, no crop",
+      "created_at": "2026-11-24T22:47:13.221594+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Record-High 89% in U.S. Say Government Corruption Widespread'",
+      "created_at": "2026-11-24T22:47:13.216364+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T22:47:13.017981+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-24T22:47:13.016522+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T22:47:13.014433+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T22:47:08.600608+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Iran war live: Saudi-led coalition orders evacuation of Hode' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-24T22:47:08.598683+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Saudi-led coalition orders evacuation of Hode' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T22:41:34.208123+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-24T22:41:34.206974+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Saudi-led coalition orders evacuation of Hode': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Saudi-led coalition orders evacuation of Hodeidah Port - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Reject - matches 2 key entities (iran, war))",
+      "created_at": "2026-11-24T22:41:34.205816+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: unavailable - keyword check decides ('Iran war live: Saudi-led coalition orders evacuati': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T22:41:34.203888+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: Saudi-led coalition orders evacuation of Hode'",
+      "created_at": "2026-11-24T22:41:20.381854+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: Saudi-led coalition orders evacuation of Hode'",
+      "created_at": "2026-11-24T22:41:20.170127+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Iran war live: Saudi-led coalition orders evacuation of Hode'",
+      "created_at": "2026-11-24T22:41:19.968099+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Iran war live: Saudi-led coalition orders evacuation of Hode'",
+      "created_at": "2026-11-24T22:41:19.494507+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T22:41:18.971152+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T22:41:18.970090+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Saudi-led coalition orders evacuation of Hode' - rejected (no og:image)",
+      "created_at": "2026-11-24T22:41:18.968796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T22:41:18.966466+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T22:41:17.904880+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T22:41:17.421822+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T22:39:04.528208+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-24T22:39:04.527194+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #69 started (--only bluesky)",
+      "created_at": "2026-11-24T22:39:04.525663+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T22:29:33.247551+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', 'November full supermoon', 'Delta system glitch delays flights', 'Trump pardons Thanksgiving turkeys', 'Thanksgiving dinner preparations']",
+      "created_at": "2026-11-24T22:29:33.244091+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -292,186 +481,6 @@
       "level": "info",
       "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - ACCEPTED real photo (from bing-images)",
       "created_at": "2026-11-24T21:38:46.809827+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-24T21:38:46.808501+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Record-High 89% in U.S. Say Government Corruption Widespread': https://www.schwartzreport.net/wp-content/uploads/2026/09/Screenshot-2026-09-03-at-7.57.43-PM.png (from bing-images, query 'Record-High 89% in U.S. Say Government Corruption Widespread - Gallup News', page: https://news.gallup.com/poll/713933/record-high-say-government-corruption-widespread.aspx | Record-H - matches 7 key entities (corruption, gallup, government, high))",
-      "created_at": "2026-11-24T21:38:46.807224+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Record-High 89% in U.S. Say Government Corruption ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T21:38:46.805372+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Record-High 89% in U.S. Say Government Corruption Widespread'",
-      "created_at": "2026-11-24T21:38:33.889821+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Record-High 89% in U.S. Say Government Corruption Widespread'",
-      "created_at": "2026-11-24T21:38:33.515420+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Record-High 89% in U.S. Say Government Corruption Widespread'",
-      "created_at": "2026-11-24T21:38:33.388063+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Record-High 89% in U.S. Say Government Corruption Widespread'",
-      "created_at": "2026-11-24T21:38:32.900505+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T21:38:29.209763+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T21:38:29.208630+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - rejected (no og:image)",
-      "created_at": "2026-11-24T21:38:29.207290+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikwFBVV95cUxOQm53OU5rbENWSGtGNkxDRFdrTWRTb05ZVXpXSlhMX2ZlY0g4Ti1JZmlfRThpWVp4X2N) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T21:38:29.204595+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-      "created_at": "2026-11-24T21:38:29.072965+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-24T21:38:29.071387+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-24T21:38:29.070223+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-      "created_at": "2026-11-24T21:38:29.068748+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'U.S. Tracked Alice Huang’s Contacts With China Spy Agency Du' - skipped (same event used within 24h, event key 'affair agency alice china contact huang nvidia spy time trac')",
-      "created_at": "2026-11-24T21:38:29.067079+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-      "created_at": "2026-11-24T21:38:29.065089+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T21:38:28.667938+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T21:38:28.349134+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T21:37:21.082707+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T21:37:21.081433+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #67 started (--only bluesky)",
-      "created_at": "2026-11-24T21:37:21.079826+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T21:28:52.345419+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', 'Cybersecurity breach reported at CIA', 'Nvidia hiring first compliance officer', \"Jensen Huang's daily therapy remark\", 'Grand Theft Auto VI release']",
-      "created_at": "2026-11-24T21:28:52.341787+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T21:28:52.227027+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T21:28:52.225678+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T21:28:51.898764+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T21:28:45.987787+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T21:28:45.987214+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #66 started (--only blogger)",
-      "created_at": "2026-11-24T21:28:45.986228+00:00",
       "card": ""
     }
   ]
