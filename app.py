@@ -2371,8 +2371,12 @@ def _promo_fallback_hook(card, link, state=None):
     for hook in cands:
         if state is None:
             return hook
-        if _promo_caption_cooldown_left(
-                state, _fit_bsky_text(hook, link, cta="")) is None:
+        # Rebuild #7.9: a link too long for Bluesky makes the fitted
+        # caption None - this hook can never post, try the next one.
+        caption_id = _fit_bsky_text(hook, link, cta="")
+        if caption_id is None:
+            continue
+        if _promo_caption_cooldown_left(state, caption_id) is None:
             return hook
     return None
 
@@ -2400,15 +2404,139 @@ def _next_bsky_cta(state):
     return BSKY_CTA_VARIANTS[n % len(BSKY_CTA_VARIANTS)]
 
 
+# ---------------------------------------------------------------- rebuild #7.9
+# GRAPHEME-AWARE LENGTH (Bluesky counts GRAPHEMES, not code points).
+# Root cause of run #33 (2026-11-24 02:44 UTC): a Google News story
+# URL can be 570+ chars (the CBM token grows with the publisher URL;
+# the live feed shows 570/578-char story URLs), and the old
+# _fit_bsky_text returned such a link WHOLE ("return link" when the
+# tail did not fit) - a 570-grapheme "caption" that Bluesky rejects
+# with 400 InvalidRequest "grapheme too big (maximum 300, got 570)".
+# The old cap also counted Python len() (code points); an emoji /
+# ZWJ / flag cluster is several code points but ONE grapheme, so
+# len() and Bluesky disagreed. Everything below counts graphemes.
+try:
+    import grapheme as _grapheme_lib
+except Exception:  # package not installed - use the fallback segmenter
+    _grapheme_lib = None
+import unicodedata as _unicodedata
+
+
+def _grapheme_clusters(text):
+    """Split text into extended grapheme clusters (UAX #29).
+    Uses the `grapheme` package when installed (reference
+    implementation, also in requirements.txt); otherwise a
+    conservative built-in segmenter that merges a base character
+    with following combining marks, variation selectors, skin-tone
+    modifiers, ZWJ-joined parts, regional-indicator pairs (flags)
+    and keycap sequences - the cases that occur in a caption. The
+    fallback never splits a cluster it merges, and code-point
+    length is the safe upper bound, so the cap below is always on
+    the safe side."""
+    text = text or ""
+    if _grapheme_lib is not None:
+        return list(_grapheme_lib.graphemes(text))
+    clusters = []
+    cur = ""
+    prev_ri = False   # previous char was a lone regional indicator
+    prev_zwj = False  # previous char was ZWJ (next char joins it)
+    for ch in text:
+        o = ord(ch)
+        joins = (
+            _unicodedata.combining(ch) != 0
+            or o in (0xFE0E, 0xFE0F)          # variation selectors
+            or 0x1F3FB <= o <= 0x1F3FF        # skin-tone modifiers
+            or o == 0x200D                    # ZWJ joins both sides
+            or o == 0x20E3                    # combining enclosing keycap
+            or prev_zwj
+            or (0x1F1E6 <= o <= 0x1F1FF and prev_ri)  # flag pair
+        )
+        if cur and joins:
+            cur += ch
+            prev_ri = False
+            prev_zwj = o == 0x200D
+        else:
+            if cur:
+                clusters.append(cur)
+            cur = ch
+            prev_ri = 0x1F1E6 <= o <= 0x1F1FF
+            prev_zwj = o == 0x200D
+    if cur:
+        clusters.append(cur)
+    return clusters
+
+
+def _bsky_grapheme_len(text):
+    """Bluesky grapheme count of text (what the 300 limit counts)."""
+    return len(_grapheme_clusters(text))
+
+
+def _bsky_grapheme_slice(text, max_graphemes):
+    """The first at most max_graphemes grapheme clusters of text -
+    never splits a cluster, so an emoji/flag/ZWJ sequence stays whole."""
+    if max_graphemes <= 0:
+        return ""
+    return "".join(_grapheme_clusters(text)[:max_graphemes])
+
+
+def _cap_bsky_text(text):
+    """HARD cap at the single send point (rebuild #7.9): no Bluesky
+    post or reply may exceed 300 graphemes, whatever path built it.
+    Trims the text to 300 graphemes, keeping a trailing CTA + link
+    intact when the text ends with them (caption format is hook +
+    CTA + link, one per line) - the hook is trimmed, the link never
+    is. Logs when it had to trim, so a bypass of _fit_bsky_text is
+    visible in the run log. Returns the (possibly trimmed) text."""
+    text = text or ""
+    total = _bsky_grapheme_len(text)
+    if total <= BSKY_MAX_CHARS:
+        return text
+    lines = text.split("\n")
+    tail_lines = []
+    if lines and lines[-1].strip().startswith("http"):
+        tail_lines.append(lines.pop())
+        if lines and lines[-1].strip():
+            tail_lines.insert(0, lines.pop())
+    tail = "\n".join(tail_lines)
+    tail_len = _bsky_grapheme_len(tail)
+    if tail_len >= BSKY_MAX_CHARS:
+        # Even the link alone does not fit: hard-truncate (last resort).
+        capped = _bsky_grapheme_slice(text, BSKY_MAX_CHARS)
+        log("warning", "caption truncated to "
+                       f"{BSKY_MAX_CHARS} graphemes (was {total}) - "
+                       "link may be cut")
+        return capped
+    room = BSKY_MAX_CHARS - tail_len - 1
+    head = "\n".join(lines)
+    if _bsky_grapheme_len(head) > room:
+        if room <= 1:
+            head = _bsky_grapheme_slice(head, room)
+        else:
+            head = _bsky_grapheme_slice(head, room - 1).rstrip() + "\u2026"
+    capped = f"{head}\n{tail}" if head and tail else (head or tail)
+    log("warning", f"caption truncated to {_bsky_grapheme_len(capped)} "
+                   f"graphemes (was {total})")
+    return capped
+
+
 def _fit_bsky_text(hook, link, cta=None):
     """Combine a hook, a call-to-action and a link into ONE Bluesky
-    post (max 300 chars). Rebuild #7.7: the caption ALWAYS ends
+    post (max 300 graphemes). Rebuild #7.7: the caption ALWAYS ends
     with CTA + link - the CTA and the link are NEVER truncated, the
     hook is trimmed to fit, so the final text always ends with the
     CTA and then the link, and the link appears exactly once.
     cta defaults to the first variant; the caller passes the
-    rotated variant via _next_bsky_cta(state). Never returns just
-    the bare link unless the link alone already fills the post."""
+    rotated variant via _next_bsky_cta(state).
+    Rebuild #7.9: counts GRAPHEMES (what Bluesky counts), not
+    len() (code points) - an emoji/ZWJ/flag cluster is several code
+    points but one grapheme. And a link that cannot fit in a post
+    at all (a Google News story URL can be 570+ chars) now returns
+    None instead of the old behaviour of returning the bare link
+    untrimmed - that bare 570-char link is exactly what Bluesky
+    rejected in run #33 ("grapheme too big, got 570"). The caller
+    must skip the post when this returns None. Never returns just
+    the bare link unless the link alone already fills the post AND
+    fits in 300 graphemes."""
     hook = (hook or "").strip()
     link = (link or "").strip()
     if cta is None:
@@ -2417,21 +2545,31 @@ def _fit_bsky_text(hook, link, cta=None):
     # Drop a link the AI already appended, so it is not doubled.
     if link and link in hook:
         hook = hook.replace(link, "").strip()
+    # Rebuild #7.9: a link longer than the whole post cannot fit at
+    # all - check FIRST, before spending a fallback hook on it.
+    if link and _bsky_grapheme_len(link) > BSKY_MAX_CHARS:
+        log("warning", f"caption: link too long for Bluesky "
+                       f"({_bsky_grapheme_len(link)} graphemes) - "
+                       "story cannot be posted with this link")
+        return None
     if not hook:
         hook = _promo_fallback_hook(None, link)
     if not link:
-        return hook[:BSKY_MAX_CHARS]
+        return _bsky_grapheme_slice(hook, BSKY_MAX_CHARS)
     # CTA + link always fit (both are short); only the hook is trimmed.
     # cta="" means NO call-to-action (used for the caption-dedup
     # identity - see _card_bluesky_post): the tail is then just the link.
     tail = f"{cta}\n{link}" if cta else link
-    if len(tail) >= BSKY_MAX_CHARS:
+    tail_len = _bsky_grapheme_len(tail)
+    if tail_len >= BSKY_MAX_CHARS:
+        # CTA + link fill the post: the link itself fits (checked
+        # above), so the bare link is a valid caption.
         return link
-    room = BSKY_MAX_CHARS - len(tail) - 1
+    room = BSKY_MAX_CHARS - tail_len - 1
     if room < 10:
         return tail
-    if len(hook) > room:
-        hook = hook[:room - 1].rstrip() + "\u2026"
+    if _bsky_grapheme_len(hook) > room:
+        hook = _bsky_grapheme_slice(hook, room - 1).rstrip() + "\u2026"
     return f"{hook}\n{tail}"
 
 
@@ -3141,7 +3279,11 @@ def bsky_login(handle, app_password):
 
 def bluesky_post(client, text, image_path=None, image_alt=""):
     """Post to Bluesky (URL in the text becomes a clickable link).
-    Returns (uri, url) or None."""
+    Returns (uri, url) or None. Rebuild #7.9: the text is hard-capped
+    to 300 graphemes HERE, at the single send point, so no path can
+    ever send an over-long post (run #33 died on a 570-grapheme
+    caption that bypassed the fitter)."""
+    text = _cap_bsky_text(text)
     try:
         if image_path and os.path.exists(image_path):
             with open(image_path, "rb") as f:
@@ -3164,7 +3306,11 @@ def bluesky_post(client, text, image_path=None, image_alt=""):
 
 
 def bluesky_reply(client, text, parent_uri, parent_cid, root_uri=None, root_cid=None):
-    """Reply to a Bluesky post. Returns the reply uri or None."""
+    """Reply to a Bluesky post. Returns the reply uri or None.
+    Rebuild #7.9: same hard 300-grapheme cap as bluesky_post - a
+    reply is a post too, and an uncapped AI reply (up to 400 tokens)
+    would hit the same 400."""
+    text = _cap_bsky_text(text)
     try:
         from atproto import models
         root_uri = root_uri or parent_uri
@@ -4880,6 +5026,15 @@ def _card_bluesky_post(card, state, article, promo=False):
                     text = hook
             hook_text = text
             text = _fit_bsky_text(text, effective_link, _next_bsky_cta(state))
+            if text is None:
+                # Rebuild #7.9: the story link itself is too long for
+                # a Bluesky post (a Google News URL can be 570+
+                # chars) - skip cleanly, never send the bare long
+                # link (Bluesky rejects it with 400).
+                log("info", f"card '{name}': story link too long for "
+                            "Bluesky - skipping")
+                LAST_BSKY_SKIP = "link_too_long"
+                return False
             # Per-caption cooldown (rebuild #7.1): the same caption
             # is never posted twice within 24h. The identity is the
             # caption WITHOUT the rotating CTA (#7.7) - the CTA is
@@ -4903,6 +5058,13 @@ def _card_bluesky_post(card, state, article, promo=False):
             if not text:
                 text = article["title"]
             text = _fit_bsky_text(text, article["url"], _next_bsky_cta(state))
+            if text is None:
+                # Rebuild #7.9: the article link itself is too long
+                # for a Bluesky post - skip cleanly, never send it.
+                log("info", f"card '{name}': article link too long for "
+                            "Bluesky - skipping")
+                LAST_BSKY_SKIP = "link_too_long"
+                return False
             label = f"card post ({acc['handle']})"
         if retry_with_backoff(
                 lambda: bluesky_post(client, text, image_path=image_path,
@@ -5051,6 +5213,11 @@ def _post_bsky_card(card, state, due_slots):
         # Rebuild #7.8: no fresh Political/War news with a verified
         # people's photo - a clean skip, NOT a failure, no retry.
         return 0, "no fresh news"
+    if made == 0 and LAST_BSKY_SKIP == "link_too_long":
+        # Rebuild #7.9: the story's URL alone exceeds Bluesky's
+        # 300-grapheme post limit - a clean skip, NOT a failure
+        # (retrying the same long link would fail identically).
+        return 0, "link too long, skipped"
     return made, ("" if made else "post failed or skipped")
 
 
@@ -5258,9 +5425,12 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 # for transient failures (network/API), not for
                 # "nothing fresh to post". last_error still carries
                 # the skip reason, so the run log reads "skipped: ...".
+                # Rebuild #7.9: "link too long, skipped" is a clean
+                # skip too (the story URL cannot fit in a post).
                 ok = made > 0 or err in (
                     "cooldown", "too soon", "no photo, skipped",
-                    "post cap reached", "no fresh news")
+                    "post cap reached", "no fresh news",
+                    "link too long, skipped")
                 if ok:
                     last_error = err or ""
                 else:
@@ -5285,9 +5455,12 @@ def execute_card(card, state, test_mode=False, post_only=False):
             else:
                 made, err = _post_bsky_card(card, state, due_slots)
                 # Clean skip = successful run (rebuild #7.8, see above).
+                # Rebuild #7.9: "link too long, skipped" is a clean
+                # skip too (the story URL cannot fit in a post).
                 ok = made > 0 or err in (
                     "cooldown", "too soon", "no photo, skipped",
-                    "post cap reached", "no fresh news")
+                    "post cap reached", "no fresh news",
+                    "link too long, skipped")
                 if ok:
                     last_error = err or ""
                 else:
