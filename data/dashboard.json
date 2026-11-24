@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T12:51:09.911673+00:00",
-  "last_run": "2026-11-24T12:50:54.206575+00:00",
-  "runs": 50,
+  "generated_at": "2026-11-24T13:36:05.784596+00:00",
+  "last_run": "2026-11-24T13:34:54.757997+00:00",
+  "runs": 51,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
+    "total_replies": 1,
     "accounts": 1
   },
   "settings": {
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T12:51:09.804346+00:00"
+    "Adsterra Blogger": "2026-11-24T13:36:05.518637+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 11,
+      "success": 12,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T12:51:09.804343+00:00"
+      "last_run": "2026-11-24T13:36:05.518631+00:00"
     }
   },
   "file_cards": [
@@ -63,24 +63,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T12:51:09.804346+00:00",
-      "runs_today": 13,
-      "posts_today": 8,
+      "last_run": "2026-11-24T13:36:05.518637+00:00",
+      "runs_today": 14,
+      "posts_today": 9,
       "next_runs": [
-        "2026-11-24T19:06:09.804346+06:00",
-        "2026-11-24T19:21:09.804346+06:00",
-        "2026-11-24T19:36:09.804346+06:00",
-        "2026-11-24T19:51:09.804346+06:00",
-        "2026-11-24T20:06:09.804346+06:00"
+        "2026-11-24T19:51:05.518637+06:00",
+        "2026-11-24T20:06:05.518637+06:00",
+        "2026-11-24T20:21:05.518637+06:00",
+        "2026-11-24T20:36:05.518637+06:00",
+        "2026-11-24T20:51:05.518637+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T19:08:00+06:00",
         "2026-11-24T19:52:00+06:00",
         "2026-11-24T21:08:00+06:00",
         "2026-11-24T22:03:00+06:00",
-        "2026-11-24T22:58:00+06:00"
+        "2026-11-24T22:58:00+06:00",
+        "2026-11-24T23:55:00+06:00"
       ],
-      "success": 11,
+      "success": 12,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -131,7 +131,7 @@
       "handle": "primonewstoday.bsky.social",
       "enabled": true,
       "posts_limit": 0,
-      "posts_today": 8
+      "posts_today": 9
     }
   ],
   "health": {
@@ -161,7 +161,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T12:50:54.207503+00:00"
+      "time": "2026-11-24T13:34:54.759444+00:00"
     }
   ],
   "dry_run": false,
@@ -172,17 +172,203 @@
   "trending": [
     "Jensen Huang discloses more affairs",
     "Personal boycotts",
+    "SEC probes Nvidia accounting",
     "Iowa Army detonation court case",
-    "Grand Theft Auto VI release",
-    "Ukraine claims Libya warship sinking",
+    "Trump calls Putin his friend",
     "November full supermoon",
-    "Wave Race: Blue Storm comes to Switch 2",
-    "Women's World Cup host vote",
-    "NFL Week 11 games",
-    "SEC probes Nvidia accounting"
+    "Grand Theft Auto VI release",
+    "Thanksgiving dinner preparations",
+    "Google adds AI across products",
+    "Women's World Cup host vote"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T13:36:05.518658+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T13:36:05.517263+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'american bbc done get historic hopefully political react shi' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T13:36:05.515577+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 976x549 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-24T13:35:23.825754+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 976x549 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-24T13:35:23.824589+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T13:35:23.822697+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-24T13:35:23.821146+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for ''Hopefully things get done': Americans react to historic pol': https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/FB22/production/_116509246_voters.jpg (from bing-images, query ''Hopefully things get done': Americans react to historic political shift - BBC', page: https://www.bbc.co.uk/news/politics | Americans react to historic second Trump impeachment - BBC New - matches 4 key entities (american, bbc, historic, react))",
+      "created_at": "2026-11-24T13:35:23.819805+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: unavailable - keyword check decides (''Hopefully things get done': Americans react to hi': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T13:35:23.816218+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+      "created_at": "2026-11-24T13:35:10.221751+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+      "created_at": "2026-11-24T13:35:09.744472+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
+      "created_at": "2026-11-24T13:35:09.598106+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
+      "created_at": "2026-11-24T13:35:09.045408+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T13:35:08.489581+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T13:35:08.488195+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
+      "created_at": "2026-11-24T13:35:08.486395+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T13:35:08.483781+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
+      "created_at": "2026-11-24T13:35:08.176629+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T13:35:07.826498+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-24T13:35:07.824275+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T13:35:07.822527+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to xorgeo5.bsky.social (hot post by raeradford.bsky.social, comment: 'If you want the fence modified so that it does not block you') as primonewstoday.bsky.social: 'Haha, sometimes the simplest solution is just a friendly chat before bringing in'",
+      "created_at": "2026-11-24T13:35:02.192300+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T13:35:00.061965+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "run-now requested for card 'Adsterra Blogger'",
+      "created_at": "2026-11-24T13:35:00.060646+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T13:35:00.059088+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T13:34:59.760739+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T13:34:54.760648+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-24T13:34:54.759453+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #51 started (--only bluesky)",
+      "created_at": "2026-11-24T13:34:54.758017+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T12:51:09.912712+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Iowa Army detonation court case', 'Grand Theft Auto VI release', 'Ukraine claims Libya warship sinking']",
+      "created_at": "2026-11-24T12:51:09.909380+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: no photo, skipped)",
@@ -295,192 +481,6 @@
       "level": "info",
       "message": "openverse: 1 result(s) for 'Americans Trust Information News Organizations'",
       "created_at": "2026-11-24T12:51:08.541710+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:08.117382+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:08.116798+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://i5.walmartimages.com/seo/Colored-Mascara-Waterproof-Long-Lasting-Lash-Mascara-Lengthening-Cu (page: Colored Mascara, Waterproof Long Lasting Lash Mascara For Lengthening ... - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:08.115839+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:08.113573+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.999213+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.891448+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.661075+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:07.625367+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:07.624722+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://www.xtrafondos.com/wallpapers/resoluciones/24/gta-6-grand-theft-auto-vi_1920x1080_12159.jpg (page: Gta 6 Wallpaper 4k For Xbox - Images | Picstank.com - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-24T12:51:07.624024+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.621632+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.503311+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.384736+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Americans’ Trust in Information From News Organizations Has '",
-      "created_at": "2026-11-24T12:51:07.208110+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:07.149730+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T12:51:07.149160+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - rejected (no og:image)",
-      "created_at": "2026-11-24T12:51:07.148326+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPZENfX1RlWTAwQWZEUnF2OTMyU2Mtb0N2Mi12R3ZzYUlmY1k2aGhka3JOZE82QWZUSUN) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T12:51:07.146574+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - skipped (same event used within 24h, event key 'call china christian coalition freedom news political premie')",
-      "created_at": "2026-11-24T12:51:07.009292+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T12:51:06.373132+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-24T12:51:06.372316+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 24 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T12:51:06.370769+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T12:51:01.990622+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T12:51:01.989277+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T12:51:01.782943+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T12:50:54.208062+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T12:50:54.207509+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #50 started (--only bluesky)",
-      "created_at": "2026-11-24T12:50:54.206598+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T12:33:41.172146+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Iowa Army detonation court case', 'Grand Theft Auto VI release', 'SEC probes Nvidia accounting']",
-      "created_at": "2026-11-24T12:33:41.167386+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T12:33:41.087374+00:00",
       "card": ""
     }
   ]
