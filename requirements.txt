@@ -8,3 +8,4 @@ google-auth
 google-auth-oauthlib
 gunicorn
 Pillow
+grapheme  # rebuild #7.9: reference grapheme counting for the 300-grapheme Bluesky cap (code falls back to a built-in segmenter if missing)
