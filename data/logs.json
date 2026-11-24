@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T00:22:54.901499+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Grand Theft Auto VI release', 'November full supermoon', 'Nvidia rehires Huang', 'Weather forecasts include lead plume', 'Alice Huang espionage allegations']",
+    "created_at": "2026-11-24T00:22:54.634675+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T00:22:54.392301+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T00:22:54.390864+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-24T00:22:54.049745+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T00:22:49.145486+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T00:22:49.144638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #28 started (--only blogger)",
+    "created_at": "2026-11-24T00:22:49.143295+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-23T23:36:36.923901+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): https://www.restaurantware.com/cdn/shop/files/RWP1207W-E2-LR.jpg?v=1709379050 (page:  - no source page to verify relevance)",
     "created_at": "2026-11-23T21:38:17.368135+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T21:38:17.365649+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T21:38:17.227758+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T21:38:17.101260+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Donald Trump News Breaking Headlines'",
-    "created_at": "2026-11-23T21:38:16.303106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-23T21:38:10.204144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-23T21:38:10.203069+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Donald Trump News: Breaking Headlines and Video on'): http://upload.wikimedia.org/wikipedia/commons/5/53/Tallest_Structures_in_China.png (page: List of tallest structures in China - Wikiwand - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-23T21:38:10.201521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Donald Trump News: Breaking Headlines and Video on President'",
-    "created_at": "2026-11-23T21:38:10.199065+00:00",
     "card": ""
   }
 ]

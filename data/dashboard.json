@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T23:36:36.922162+00:00",
-  "last_run": "2026-11-23T23:30:08.855083+00:00",
-  "runs": 27,
+  "generated_at": "2026-11-24T00:22:54.900051+00:00",
+  "last_run": "2026-11-24T00:22:49.143271+00:00",
+  "runs": 28,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -56,21 +56,21 @@
       "posts_per_day": 24,
       "schedule_times": [],
       "last_run": "2026-11-23T23:36:36.711918+00:00",
-      "runs_today": 11,
+      "runs_today": 0,
       "posts_today": 4,
       "next_runs": [
-        "2026-11-24T05:51:36.711918+06:00",
-        "2026-11-24T06:06:36.711918+06:00",
-        "2026-11-24T06:21:36.711918+06:00",
         "2026-11-24T06:36:36.711918+06:00",
-        "2026-11-24T06:51:36.711918+06:00"
+        "2026-11-24T06:51:36.711918+06:00",
+        "2026-11-24T07:06:36.711918+06:00",
+        "2026-11-24T07:21:36.711918+06:00",
+        "2026-11-24T07:36:36.711918+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T06:05:00+06:00",
         "2026-11-24T07:00:00+06:00",
         "2026-11-24T07:58:00+06:00",
         "2026-11-24T08:53:00+06:00",
-        "2026-11-24T09:50:00+06:00"
+        "2026-11-24T09:50:00+06:00",
+        "2026-11-24T10:55:00+06:00"
       ],
       "success": 10,
       "fail": 1,
@@ -115,17 +115,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -136,12 +127,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -150,10 +141,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-23T23:30:08.856865+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T00:22:49.144629+00:00"
     }
   ],
   "dry_run": false,
@@ -162,19 +153,67 @@
     "open": false
   },
   "trending": [
-    "Hegseth's former aide urges resignation",
-    "Nvidia rehires Huang",
-    "SEC probes Nvidia accounting",
-    "Google plans personalized AI TV channel",
-    "Alice Huang espionage allegations",
     "Grand Theft Auto VI release",
+    "November full supermoon",
+    "Nvidia rehires Huang",
     "Weather forecasts include lead plume",
+    "Alice Huang espionage allegations",
+    "Push to remove Trump from office",
+    "SEC probes Nvidia accounting",
     "Thanksgiving dinner preparations",
-    "AI sell-off overshadows Anthropic IPO",
-    "Liverpool vs. Manchester United"
+    "Tarik Skubal signs with Mets",
+    "NFL Week 11 games"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T00:22:54.392301+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T00:22:54.390864+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T00:22:54.049745+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T00:22:49.145486+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T00:22:49.144638+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #28 started (--only blogger)",
+      "created_at": "2026-11-24T00:22:49.143295+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-23T23:36:36.923901+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): [\"Hegseth's former aide urges resignation\", 'Nvidia rehires Huang', 'SEC probes Nvidia accounting', 'Google plans personalized AI TV channel', 'Alice Huang espionage allegations']",
+      "created_at": "2026-11-23T23:36:36.919345+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'BlueSky Trend' ran (ok - posted 1)",
@@ -425,54 +464,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.travelure.in/wp-content/uploads/2018/10/SB-7.jpg (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | St Basil's Cathedral, Red Square, Moscow, Ru - only 1 of 10 key entities in the source page)",
       "created_at": "2026-11-23T23:31:41.977095+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://wallpapercave.com/wp/wp1826167.jpg (page: https://www.travelure.in/st-basils-cathedral-red-square-moscow-russia/ | Moscow Wallpapers - Wallpap - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:41.975754+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://wallpapercave.com/moscow-wallpapers | Red Square At Night Moscow Russia UHD 4K Wallpaper | P - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:41.974555+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://pixelz.cc/images/red-square-at-night-moscow-russia-uhd-4k-wallpaper/ | 50 Things to Do in Mo - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-23T23:31:41.973337+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:41.970555+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:41.845245+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:41.697138+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Moscow accuses Estonia of hostile actions on 'verge of trigg'",
-      "created_at": "2026-11-23T23:31:41.375867+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-23T23:31:31.375500+00:00",
       "card": ""
     }
   ]
