@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-24T08:44:10.345548+00:00",
-  "last_run": "2026-11-24T08:39:16.226667+00:00",
-  "runs": 43,
+  "generated_at": "2026-11-24T09:53:37.553837+00:00",
+  "last_run": "2026-11-24T09:48:33.238169+00:00",
+  "runs": 44,
   "stats": {
     "blogger_today": 0,
     "replies_today": 2,
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T08:44:10.142737+00:00"
+    "Adsterra Blogger": "2026-11-24T09:53:37.351245+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 7,
+      "success": 8,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T08:44:10.142732+00:00"
+      "last_run": "2026-11-24T09:53:37.351241+00:00"
     }
   },
   "file_cards": [
@@ -63,24 +63,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T08:44:10.142737+00:00",
-      "runs_today": 9,
-      "posts_today": 6,
+      "last_run": "2026-11-24T09:53:37.351245+00:00",
+      "runs_today": 10,
+      "posts_today": 7,
       "next_runs": [
-        "2026-11-24T14:59:10.142737+06:00",
-        "2026-11-24T15:14:10.142737+06:00",
-        "2026-11-24T15:29:10.142737+06:00",
-        "2026-11-24T15:44:10.142737+06:00",
-        "2026-11-24T15:59:10.142737+06:00"
+        "2026-11-24T16:08:37.351245+06:00",
+        "2026-11-24T16:23:37.351245+06:00",
+        "2026-11-24T16:38:37.351245+06:00",
+        "2026-11-24T16:53:37.351245+06:00",
+        "2026-11-24T17:08:37.351245+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T15:05:00+06:00",
-        "2026-11-24T15:50:00+06:00",
         "2026-11-24T16:55:00+06:00",
         "2026-11-24T18:03:00+06:00",
-        "2026-11-24T19:08:00+06:00"
+        "2026-11-24T19:08:00+06:00",
+        "2026-11-24T19:52:00+06:00",
+        "2026-11-24T21:08:00+06:00"
       ],
-      "success": 7,
+      "success": 8,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -131,7 +131,7 @@
       "handle": "primonewstoday.bsky.social",
       "enabled": true,
       "posts_limit": 0,
-      "posts_today": 6
+      "posts_today": 7
     }
   ],
   "health": {
@@ -161,7 +161,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T08:39:16.228414+00:00"
+      "time": "2026-11-24T09:48:33.240152+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +170,205 @@
     "open": false
   },
   "trending": [
+    "Bird photography",
     "Jensen Huang discloses more affairs",
-    "Theresa May urges accepting Brexit",
-    "SEC probes Nvidia accounting",
-    "Ukraine claims Libya warship sinking",
+    "Burnham rebuffs former prime ministers",
     "Personal boycotts",
-    "November full supermoon",
     "Grand Theft Auto VI release",
-    "Ocarina of Time remake",
-    "Sunrise on the Reaping's $225M debut",
-    "Riemann hypothesis proof claimed"
+    "Ukraine claims Libya warship sinking",
+    "Google plans personalized AI TV channel",
+    "Riemann hypothesis proof claimed",
+    "Google adds AI across products",
+    "SEC probes Nvidia accounting"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T09:53:37.351268+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T09:53:37.349429+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'call china christian coalition freedom news political premie' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T09:53:37.346892+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-24T09:50:42.359877+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-24T09:50:42.358313+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T09:50:42.356230+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-24T09:50:42.354383+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'US political coalition calls for US-China trade to be tied t': https://static.foxnews.com/foxnews.com/content/uploads/2025/03/trump-china-flag-split.jpg (from bing-images, query 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News', page: https://www.usatoday.com/story/news/2025/04/10/donald-trump-china-trade-war-florida-products-list-im - matches 3 key entities (china, news, trade))",
+      "created_at": "2026-11-24T09:50:42.352007+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: unavailable - keyword check decides ('US political coalition calls for US-China trade to': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T09:50:42.349123+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'US political coalition calls for US-China trade to'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/05/1200/675/trump-xi-1.p (page: https://www.foxnews.com/category/world/world-regions/china?page=17 | Trump sparks backlash after pro - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-24T09:50:29.203202+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+      "created_at": "2026-11-24T09:50:29.197424+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'US political coalition calls for US-China trade to be tied t'",
+      "created_at": "2026-11-24T09:50:28.747487+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+      "created_at": "2026-11-24T09:50:28.565065+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'US political coalition calls for US-China trade to be tied t'",
+      "created_at": "2026-11-24T09:50:28.312048+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T09:50:20.936717+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T09:50:20.935013+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no og:image)",
+      "created_at": "2026-11-24T09:50:20.932943+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMinwFBVV95cUxOS0Q3OWtMMEhzenZnb2tPZlAyTWZuRGdsRmlySGZkOGZUNS1lMTNBSXVGZ2FoOVZRaFJ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T09:50:20.929538+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T09:50:19.973187+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-24T09:50:19.971225+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 22 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T09:50:19.968915+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to micksaludrepublica.bsky.social (hot post by eldiario.es, comment: 'Magnífico. Una lección en elegancia y coherencia. ¡Cómo ha d') as primonewstoday.bsky.social: 'Wow, that's a bold stance—defending press freedom is always worth the fight.  \n\n'",
+      "created_at": "2026-11-24T09:50:15.646523+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to bengrabenstein.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'And maybe Marlon Brando\nWill be there by the fire\nWe'll sit ') as primonewstoday.bsky.social: 'What a vivid picture—imagining Brando swapping Oscars for campfire stories. 🎬🔥\n\n'",
+      "created_at": "2026-11-24T09:50:11.931114+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T09:50:10.388904+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T09:50:10.384106+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-24T09:50:09.966751+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T09:48:33.241535+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-24T09:48:33.240163+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #44 started (--only bluesky)",
+      "created_at": "2026-11-24T09:48:33.238193+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T08:44:10.347340+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Theresa May urges accepting Brexit', 'SEC probes Nvidia accounting', 'Ukraine claims Libya warship sinking', 'Personal boycotts']",
+      "created_at": "2026-11-24T08:44:10.342562+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -296,192 +482,6 @@
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
       "created_at": "2026-11-24T08:39:28.767069+00:00",
       "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-24T08:39:28.765266+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 19 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T08:39:28.763230+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to spadas65.bsky.social (hot post by eldiario.es, comment: 'Para que decir la verdad si me lo puedo inventar.') as primonewstoday.bsky.social: 'Truth matters more than convenience—especially when people’s lives are on the li'",
-      "created_at": "2026-11-24T08:39:23.519070+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to pacos3.bsky.social (hot post by eldiario.es, comment: 'No es letrado porque no quiere') as primonewstoday.bsky.social: 'Sounds like a classic case of “I’ll do it when I feel like it.”  \n\nhttps://short'",
-      "created_at": "2026-11-24T08:39:20.613457+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T08:39:18.364418+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T08:39:18.362376+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T08:39:17.969412+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T08:39:16.229685+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-24T08:39:16.228424+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #43 started (--only bluesky)",
-      "created_at": "2026-11-24T08:39:16.226691+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T07:20:29.661074+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'SEC probes Nvidia accounting', 'Grand Theft Auto VI release', 'Iowa Army detonation court case']",
-      "created_at": "2026-11-24T07:20:29.656680+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T07:20:29.477593+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T07:20:29.475792+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-24T07:20:29.069903+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T07:20:24.335670+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T07:20:24.334521+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #42 started (--only blogger)",
-      "created_at": "2026-11-24T07:20:24.332978+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T07:15:06.049330+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Jensen Huang discloses more affairs', 'Personal boycotts', 'Grand Theft Auto VI release', 'Iowa Army detonation court case', 'EU rejects COP31 climate deal']",
-      "created_at": "2026-11-24T07:15:06.043759+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-24T07:15:05.760441+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T07:15:05.758542+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'bbc libya russian ship spread strike ukraine war what' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-24T07:15:05.756173+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 2132x1599 (ratio 1.33) - unchanged",
-      "created_at": "2026-11-24T07:11:52.714400+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: original 2132x1599 (ratio 1.33) - kept, no crop",
-      "created_at": "2026-11-24T07:11:52.712745+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-24T07:11:52.710338+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-24T07:11:52.708354+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'What strike on Russian ship in Libya says about spread of Uk': https://media.wired.com/photos/645426f23d9e6b1cb17a86fa/4:3/w_2132,h_1599,c_limit/WGA-Strike-The-Mon (from bing-images, query 'What strike on Russian ship in Libya says about spread of Ukraine war - BBC', page: https://www.freepik.com/photos/labor-strike | AI, the WGA Strike, and What Luddites Got Right - 'Wir - matches 2 key entities (strike, what))",
-      "created_at": "2026-11-24T07:11:52.706401+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('What strike on Russian ship in Libya says about sp': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T07:11:52.703812+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T07:11:39.009604+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T07:11:38.876793+00:00",
-      "card": ""
     }
   ]
 }
