@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T02:56:13.250322+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Nvidia rehires Huang', 'Iowa Army detonation court case', 'Google plans personalized AI TV channel', 'SEC probes Nvidia accounting', 'November full supermoon']",
+    "created_at": "2026-11-24T02:56:13.245864+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T02:56:13.157259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "run-now: card 'Adsterra Blogger' is a bluesky card - this is the blogger workflow, skipping",
+    "created_at": "2026-11-24T02:56:13.156100+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T02:56:13.154333+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T02:56:12.720246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T02:54:05.428803+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T02:54:05.427713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #34 started (--only blogger)",
+    "created_at": "2026-11-24T02:54:05.425977+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T02:49:32.352702+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://image.slidesharecdn.com/copilotpromptingtoolkitallresources-231128053315-b98d8045/85/Copilot (page: https://www.perlego.com/book/5504577/microsoft-copilot-the-complete-guide-to-microsoft-copilot-the-s - only 0 of 11 key entities in the source page)",
     "created_at": "2026-11-24T01:07:37.669307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Russian-American_Co_-_1_Ruble_%287559%29.jp (page: https://commons.wikimedia.org/wiki/File:Russian-American_Co_-_1_Ruble_(7559).jpg | File:Russian-Amer - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T01:07:37.668027+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Russia_1836_1%C2%BD_Ruble.jpg/1280px-Russia (page: https://commons.wikimedia.org/wiki/File:Russia_1836_1%C2%BD_Ruble.jpg | File:Russia 1836 1½ Ruble.jp - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T01:07:37.666563+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Russia_1771_Sestroretsk_Rouble.jpg/1280px-R (page: https://commons.wikimedia.org/wiki/File:Russia_1771_Sestroretsk_Rouble.jpg | File:Russia 1771 Sestro - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T01:07:37.665272+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ROM-71-Emergency_WWI-50_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-71-Emergency_WWI-50_Bani_(1917).jpg | File:ROM-71-Emerge - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T01:07:37.663922+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Americans’ Trust in Information From News Organiza'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ROM-69-Emergency_WWI-10_Bani_%281917%29.jpg (page: https://commons.wikimedia.org/wiki/File:ROM-69-Emergency_WWI-10_Bani_(1917).jpg | File:ROM-69-Emerge - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-24T01:07:37.661998+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Americans Trust Information News Organizations'",
-    "created_at": "2026-11-24T01:07:37.659783+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans Trust Information News Organizations'",
-    "created_at": "2026-11-24T01:07:37.428744+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Americans Trust Information News Organizations'",
-    "created_at": "2026-11-24T01:07:37.279169+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "openverse error: HTTPSConnectionPool(host='api.openverse.org', port=443): Read timed out. (read timeout=20)",
-    "created_at": "2026-11-24T01:07:36.941502+00:00",
     "card": ""
   }
 ]

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T02:49:32.351035+00:00",
-  "last_run": "2026-11-24T02:44:41.978243+00:00",
-  "runs": 33,
+  "generated_at": "2026-11-24T02:56:13.248789+00:00",
+  "last_run": "2026-11-24T02:54:05.425917+00:00",
+  "runs": 34,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -58,13 +58,13 @@
       "type": "bluesky_post",
       "status": "active",
       "computed_status": "error",
-      "link": "",
+      "link": "https://shorturl.at/eZnco",
       "account_handle": "primonewstoday.bsky.social",
       "interval_minutes": 15,
-      "posts_per_day": 48,
+      "posts_per_day": 24,
       "schedule_times": [],
       "last_run": "2026-11-24T02:49:32.271889+00:00",
-      "runs_today": 4,
+      "runs_today": 3,
       "posts_today": 0,
       "next_runs": [
         "2026-11-24T09:04:32.271889+06:00",
@@ -74,11 +74,11 @@
         "2026-11-24T10:04:32.271889+06:00"
       ],
       "next_post_times": [
-        "2026-11-24T09:03:00+06:00",
-        "2026-11-24T09:38:00+06:00",
-        "2026-11-24T09:52:00+06:00",
-        "2026-11-24T10:38:00+06:00",
-        "2026-11-24T11:03:00+06:00"
+        "2026-11-24T09:02:00+06:00",
+        "2026-11-24T10:01:00+06:00",
+        "2026-11-24T11:06:00+06:00",
+        "2026-11-24T11:51:00+06:00",
+        "2026-11-24T12:56:00+06:00"
       ],
       "success": 0,
       "fail": 4,
@@ -90,7 +90,7 @@
       "bold_format": true,
       "window_start": "",
       "window_end": "",
-      "posts_per_run": 1,
+      "posts_per_run": 2,
       "reply_own": true,
       "reply_others": true,
       "replies_per_run": 10,
@@ -115,7 +115,7 @@
       "max_posts_per_week": 0,
       "max_posts_per_month": 0,
       "retry_after_minutes": 30,
-      "retry_max": 5,
+      "retry_max": 2,
       "replies_per_day": 0,
       "reply_never": "",
       "reply_only": "",
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T02:44:41.979822+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T02:54:05.427703+00:00"
     }
   ],
   "dry_run": false,
@@ -183,6 +174,60 @@
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T02:56:13.157259+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "run-now: card 'Adsterra Blogger' is a bluesky card - this is the blogger workflow, skipping",
+      "created_at": "2026-11-24T02:56:13.156100+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T02:56:13.154333+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T02:56:12.720246+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T02:54:05.428803+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T02:54:05.427713+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #34 started (--only blogger)",
+      "created_at": "2026-11-24T02:54:05.425977+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T02:49:32.352702+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Nvidia rehires Huang', 'Iowa Army detonation court case', 'Google plans personalized AI TV channel', 'SEC probes Nvidia accounting', 'November full supermoon']",
+      "created_at": "2026-11-24T02:49:32.348379+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
@@ -428,60 +473,6 @@
       "message": "photo: rejected (irrelevant to 'What strike on Russian ship in Libya says about sp'): https://www.totalprosports.com/wp-content/uploads/2026/11/daniel-jones-2048x1126.jpg (page: Daniel Jones Gave The Colts No Choice - only 0 of 9 key entities in the source page)",
       "created_at": "2026-11-24T02:44:56.582795+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:44:56.580097+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:44:56.437361+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:44:56.319056+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'What strike on Russian ship in Libya says about spread of Uk'",
-      "created_at": "2026-11-24T02:44:55.902508+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T02:44:51.204677+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T02:44:51.203566+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'What strike on Russian ship in Libya says about spread of Uk' - rejected (no og:image)",
-      "created_at": "2026-11-24T02:44:51.202198+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4Nkh0dF9ndTRBVjktYnQtQWh4clVUZVlwcmtIdjFLa0dfeW5Wb3NFVlhuYXJ4d0Y0c2Z) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T02:44:51.199479+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': no new article - falling back to fresh news",
-      "created_at": "2026-11-24T02:44:50.208328+00:00",
-      "card": "Adsterra Blogger"
     }
   ]
 }
