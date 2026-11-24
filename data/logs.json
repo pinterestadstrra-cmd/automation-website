@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-24T04:00:45.071527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Iowa Army detonation court case', 'Personal boycotts', 'Grand Theft Auto VI release', 'Alice Huang espionage allegations', 'Trump blames Democrats for selloff']",
+    "created_at": "2026-11-24T04:00:45.067346+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-24T04:00:44.986271+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-24T04:00:44.984282+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-24T04:00:44.808718+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-24T03:58:22.469112+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-24T03:58:22.468198+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #37 started (--only blogger)",
+    "created_at": "2026-11-24T03:58:22.466659+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-24T03:43:28.746720+00:00",
     "card": ""
   },
@@ -1150,53 +1198,5 @@
     "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=2 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
     "created_at": "2026-11-24T03:36:33.870834+00:00",
     "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'catch fire hitt hormuz iran jazeera live mine ship three war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-24T03:36:33.869605+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-24T03:28:14.668390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-24T03:28:14.667696+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Iran says three ships catch fire after hittin' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-24T03:28:14.666417+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-24T03:28:14.665757+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran war live: Iran says three ships catch fire after hittin': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Iran says three ships catch fire after hitting Hormuz mines - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Reject - matches 2 key entities (iran, war))",
-    "created_at": "2026-11-24T03:28:14.665029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: unavailable - keyword check decides ('Iran war live: Iran says three ships catch fire af': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-    "created_at": "2026-11-24T03:28:14.663459+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran war live: Iran says three ships catch fire after hittin'",
-    "created_at": "2026-11-24T03:28:00.669450+00:00",
-    "card": ""
   }
 ]

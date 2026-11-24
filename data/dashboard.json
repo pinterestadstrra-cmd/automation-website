@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T03:43:28.745759+00:00",
-  "last_run": "2026-11-24T03:43:25.118625+00:00",
-  "runs": 36,
+  "generated_at": "2026-11-24T04:00:45.070095+00:00",
+  "last_run": "2026-11-24T03:58:22.466622+00:00",
+  "runs": 37,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -67,11 +67,11 @@
       "runs_today": 5,
       "posts_today": 2,
       "next_runs": [
-        "2026-11-24T09:57:42.918313+06:00",
         "2026-11-24T10:12:42.918313+06:00",
         "2026-11-24T10:27:42.918313+06:00",
         "2026-11-24T10:42:42.918313+06:00",
-        "2026-11-24T10:57:42.918313+06:00"
+        "2026-11-24T10:57:42.918313+06:00",
+        "2026-11-24T11:12:42.918313+06:00"
       ],
       "next_post_times": [
         "2026-11-24T10:01:00+06:00",
@@ -90,7 +90,7 @@
       "bold_format": true,
       "window_start": "",
       "window_end": "",
-      "posts_per_run": 2,
+      "posts_per_run": 1,
       "reply_own": true,
       "reply_others": true,
       "replies_per_run": 10,
@@ -123,17 +123,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "health": {
     "gemini": {
       "ok": true,
@@ -144,12 +135,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "pexels": {
       "ok": false,
@@ -158,10 +149,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-24T03:43:25.119942+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-24T03:58:22.468188+00:00"
     }
   ],
   "dry_run": false,
@@ -170,19 +161,67 @@
     "open": false
   },
   "trending": [
-    "Alice Huang espionage allegations",
     "Iowa Army detonation court case",
-    "SEC probes Nvidia accounting",
-    "Trump blames Democrats for selloff",
+    "Personal boycotts",
     "Grand Theft Auto VI release",
-    "Thanksgiving dinner preparations",
-    "Riemann hypothesis proof claimed",
-    "November full supermoon",
+    "Alice Huang espionage allegations",
+    "Trump blames Democrats for selloff",
+    "SEC probes Nvidia accounting",
+    "Google plans personalized AI TV channel",
     "Apple TV renews Ted Lasso",
-    "GTA VI's Jason and Lucia"
+    "Thanksgiving dinner preparations",
+    "Riemann hypothesis proof claimed"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-24T04:00:44.986271+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T04:00:44.984282+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T04:00:44.808718+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T03:58:22.469112+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-24T03:58:22.468198+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #37 started (--only blogger)",
+      "created_at": "2026-11-24T03:58:22.466659+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T03:43:28.746720+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Alice Huang espionage allegations', 'Iowa Army detonation court case', 'SEC probes Nvidia accounting', 'Trump blames Democrats for selloff', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-24T03:43:28.743154+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: too soon)",
@@ -433,54 +472,6 @@
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
       "created_at": "2026-11-24T03:38:11.867949+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:11.707392+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve'",
-      "created_at": "2026-11-24T03:38:11.631720+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:00.443389+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T03:38:00.442650+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'JD Vance's Ties to Prized Venezuelan Oil Contract Under Inve' - rejected (no og:image)",
-      "created_at": "2026-11-24T03:38:00.441776+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdHN2cjZaT0l3YmZ0SHlNUGtxOFlJb1FpbjU4WDFkejR1cUstTWlXLU13dDZvLUFjSXk) - skipping, og:image would be the logo",
-      "created_at": "2026-11-24T03:38:00.438648+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'US political coalition calls for US-China trade to be tied t' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T03:38:00.269563+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'US political coalition calls for US-China trade to be tied to religious freedom - Premier Christian News' (0 download(s) tried)",
-      "created_at": "2026-11-24T03:38:00.268839+00:00",
       "card": ""
     }
   ]
