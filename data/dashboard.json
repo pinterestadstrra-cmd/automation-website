@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T20:30:25.507632+00:00",
-  "last_run": "2026-11-24T20:27:20.871491+00:00",
-  "runs": 64,
+  "generated_at": "2026-11-24T20:44:23.324807+00:00",
+  "last_run": "2026-11-24T20:37:58.009229+00:00",
+  "runs": 65,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T19:55:33.961370+00:00"
+    "Adsterra Blogger": "2026-11-24T20:44:23.167125+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 18,
+      "success": 19,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T19:55:33.961368+00:00"
+      "last_run": "2026-11-24T20:44:23.167121+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T19:55:33.961370+00:00",
-      "runs_today": 20,
-      "posts_today": 1,
+      "last_run": "2026-11-24T20:44:23.167125+00:00",
+      "runs_today": 21,
+      "posts_today": 2,
       "next_runs": [
-        "2026-11-25T02:40:33.961370+06:00",
-        "2026-11-25T02:55:33.961370+06:00",
-        "2026-11-25T03:10:33.961370+06:00",
-        "2026-11-25T03:25:33.961370+06:00",
-        "2026-11-25T03:40:33.961370+06:00"
+        "2026-11-25T02:59:23.167125+06:00",
+        "2026-11-25T03:14:23.167125+06:00",
+        "2026-11-25T03:29:23.167125+06:00",
+        "2026-11-25T03:44:23.167125+06:00",
+        "2026-11-25T03:59:23.167125+06:00"
       ],
       "next_post_times": [
         "2026-11-25T02:54:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-25T05:50:00+06:00",
         "2026-11-25T06:55:00+06:00"
       ],
-      "success": 18,
+      "success": 19,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 14
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T20:27:20.872901+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T20:37:58.010657+00:00"
     }
   ],
   "dry_run": false,
@@ -162,18 +171,198 @@
   },
   "trending": [
     "Evacuations urged before Iowa detonation",
-    "King tides threaten Bay Area flooding",
+    "\"I Know Your Age\" quiz",
     "Nvidia hiring first compliance officer",
+    "Grand Theft Auto VI release",
     "Jensen Huang's \"tortured story\" remark",
     "Jensen Huang's daily therapy remark",
-    "Grand Theft Auto VI release",
     "Personal boycotts",
-    "Tidal bans AI-generated music",
-    "Most memorable TV theme songs",
-    "Hegseth memo restricts Canada defense ties"
+    "Kelsey Grammer's Beast first look",
+    "Trump calls Putin his friend",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T20:44:23.167142+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T20:44:23.166129+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event '2026 bbc chart election maps midterm story' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T20:44:23.164712+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-24T20:44:21.441655+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-24T20:44:21.440694+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Story of US 2026 midterm elections in maps and charts - BBC'",
+      "created_at": "2026-11-24T20:44:21.438883+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T20:44:21.242718+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-24T20:44:21.241447+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T20:44:21.239807+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T20:44:16.653804+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-24T20:44:16.652363+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-24T20:39:28.512570+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-24T20:39:28.511554+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Reject - matches 2 key entities (iran, war))",
+      "created_at": "2026-11-24T20:39:28.510537+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: unavailable - keyword check decides ('Iran war live: Houthi attack on Riyadh tower injur': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T20:39:28.508845+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa'",
+      "created_at": "2026-11-24T20:39:14.974646+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa'",
+      "created_at": "2026-11-24T20:39:14.817769+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa'",
+      "created_at": "2026-11-24T20:39:14.628550+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa'",
+      "created_at": "2026-11-24T20:39:14.340719+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T20:39:08.296775+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T20:39:08.295796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Houthi attack on Riyadh tower injures 11 – Sa' - rejected (no og:image)",
+      "created_at": "2026-11-24T20:39:08.294594+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T20:39:08.292144+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-24T20:39:07.148133+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-24T20:39:06.769954+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-24T20:37:58.011616+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-24T20:37:58.010665+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #65 started (--only bluesky)",
+      "created_at": "2026-11-24T20:37:58.009252+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-24T20:30:25.509051+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Evacuations urged before Iowa detonation', 'King tides threaten Bay Area flooding', 'Nvidia hiring first compliance officer', 'Jensen Huang\\'s \"tortured story\" remark', \"Jensen Huang's daily therapy remark\"]",
+      "created_at": "2026-11-24T20:30:25.504990+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -292,186 +481,6 @@
       "level": "info",
       "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - ACCEPTED real photo (from bing-images)",
       "created_at": "2026-11-24T19:49:56.984587+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-24T19:49:56.983904+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Story of US 2026 midterm elections in maps and charts - BBC': https://i.ytimg.com/vi/lgApIr-Tjoo/maxresdefault.jpg (from bing-images, query 'Story', page: https://storage.googleapis.com/dgxxpyrfvcojqe/famous-stories-with-moral.html | Moral Kids Stories -  - page names the entity (Story))",
-      "created_at": "2026-11-24T19:49:56.983086+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Story of US 2026 midterm elections in maps and cha': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T19:49:56.981718+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Reus_Contios_vertelt_langs_de_waterkant_op_ (page: https://commons.wikimedia.org/wiki/File:Reus_Contios_vertelt_langs_de_waterkant_op_initiatief_van_Na - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.867559+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/M%C3%BCnster%2C_LVM_--_2017_--_9343-7.jpg/1 (page: https://commons.wikimedia.org/wiki/File:M%C3%BCnster,_LVM_--_2017_--_9343-7.jpg | File:Münster, LVM  - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.866883+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/M%C3%BCnster%2C_LVM-Versicherung_--_2017_-- (page: https://commons.wikimedia.org/wiki/File:M%C3%BCnster,_LVM-Versicherung_--_2017_--_6848.jpg | File:Mü - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.866155+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/M%C3%BCnster%2C_LVM%2C_Skulptur_-Zwei_Pferd (page: https://commons.wikimedia.org/wiki/File:M%C3%BCnster,_LVM,_Skulptur_-Zwei_Pferde-_--_2016_--_5969-75 - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.865383+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Bonn%2C_Post-Tower_--_2017_--_2128_%28bw%29 (page: https://commons.wikimedia.org/wiki/File:Bonn,_Post-Tower_--_2017_--_2128_(bw).jpg | File:Bonn, Post- - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.864643+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://live.staticflickr.com/8260/8633357227_e0d35c3dd9_b.jpg (page: https://www.flickr.com/photos/94688030@N04/8633357227 | Moving Stories - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.863924+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://live.staticflickr.com/8388/8634463462_1c6af998c0_b.jpg (page: https://www.flickr.com/photos/94688030@N04/8634463462 | Moving Stories - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.863184+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://live.staticflickr.com/8257/8634462364_6eb5e5e7b6_b.jpg (page: https://www.flickr.com/photos/94688030@N04/8634462364 | Moving Stories - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.862236+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://live.staticflickr.com/8530/8634462328_887b297c4a_b.jpg (page: https://www.flickr.com/photos/94688030@N04/8634462328 | Moving Stories - page does not name the entity (Story))",
-      "created_at": "2026-11-24T19:49:43.861564+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7/7178225_fd10bbb6b2.jpg",
-      "created_at": "2026-11-24T19:49:43.860499+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Story'",
-      "created_at": "2026-11-24T19:49:43.756906+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Story'",
-      "created_at": "2026-11-24T19:49:43.540759+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Story'",
-      "created_at": "2026-11-24T19:49:43.331356+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Story'",
-      "created_at": "2026-11-24T19:49:42.563788+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T19:49:41.836654+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T19:49:41.836036+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Story of US 2026 midterm elections in maps and cha' - trying entity search 'Story'",
-      "created_at": "2026-11-24T19:49:41.835420+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://freekidsbooks.org/wp-content/uploads/2019/12/Classic-Stories-Big_Book-CKF-Cover.jpg (page: https://www.pinterest.ph/pin/1063694005711602469/ | The Frog Prince – Classic Fairytale Picture Book - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:41.834752+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://www.worksheetsplanet.com/wp-content/uploads/2022/01/What-is-a-short-Story.jpg (page: https://freekidsbooks.org/frog-prince-classic-fairytale-picture-book/ | Story Board Template Google  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:41.834039+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://www.sharingourexperiences.com/wp-content/uploads/2021/05/Famous-Moral-Stories-For-Kids-The-F (page: https://prntbl.concejomunicipaldechinu.gov.co/story-board-template-google-slides/ | Famous Stories W - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:41.833336+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Story of US 2026 midterm elections in maps and cha'): https://i.ytimg.com/vi/lgApIr-Tjoo/maxresdefault.jpg (page: https://storage.googleapis.com/dgxxpyrfvcojqe/famous-stories-with-moral.html | Moral Kids Stories -  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T19:49:41.832479+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Story US 2026 midterm elections'",
-      "created_at": "2026-11-24T19:49:41.830599+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Story US 2026 midterm elections'",
-      "created_at": "2026-11-24T19:49:41.681936+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Story US 2026 midterm elections'",
-      "created_at": "2026-11-24T19:49:41.535047+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Story US 2026 midterm elections'",
-      "created_at": "2026-11-24T19:49:41.096341+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T19:49:40.616447+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T19:49:40.615916+00:00",
       "card": ""
     }
   ]

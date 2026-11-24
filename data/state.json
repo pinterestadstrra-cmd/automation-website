@@ -1,15 +1,15 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 64,
-  "last_run": "2026-11-24T20:27:20.871491+00:00",
+  "runs": 65,
+  "last_run": "2026-11-24T20:37:58.009229+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
       "primonewstoday.bsky.social": 6
     },
     "2026-11-24": {
-      "primonewstoday.bsky.social": 13
+      "primonewstoday.bsky.social": 14
     }
   },
   "posted_promo_topics": {
@@ -35,7 +35,8 @@
     "attack bbc drone how russian ship ukraine unfold": "2026-11-24T14:21:03.338216+00:00",
     "affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387111+00:00",
     "bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347177+00:00",
-    "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959232+00:00"
+    "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959232+00:00",
+    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164638+00:00"
   },
   "posted_promo_link_topics": {
     "https://shorturl.at/eZnco||2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446628+00:00",
@@ -60,7 +61,8 @@
     "https://shorturl.at/eZnco||attack bbc drone how russian ship ukraine unfold": "2026-11-24T14:21:03.338254+00:00",
     "https://shorturl.at/eZnco||affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387149+00:00",
     "https://shorturl.at/eZnco||bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347213+00:00",
-    "https://shorturl.at/eZnco||2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959264+00:00"
+    "https://shorturl.at/eZnco||2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959264+00:00",
+    "https://shorturl.at/eZnco||2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164670+00:00"
   },
   "posted_promo_captions": {
     "684f88fdb22717cf5c1bc4127ba32f8fb6899693": "2026-11-23T10:31:15.448152+00:00",
@@ -86,7 +88,8 @@
     "eaf332960944ff12ad16494e11d8ede3e88076b6": "2026-11-24T14:21:03.340623+00:00",
     "b0616293692aaf408932402b82e4078b944119bf": "2026-11-24T15:28:15.388807+00:00",
     "29b8d1679fa9fb9cfced5741b6b92a0560a3ae4c": "2026-11-24T17:38:11.348750+00:00",
-    "7944519249522c5950f5308849f1adfd3fa687bb": "2026-11-24T19:55:33.960420+00:00"
+    "7944519249522c5950f5308849f1adfd3fa687bb": "2026-11-24T19:55:33.960420+00:00",
+    "03a75cc54716b885e14ac7d269a6e717af64f7e8": "2026-11-24T20:44:23.165894+00:00"
   },
   "file_card_post_counts": {
     "BlueSky Trend": {
@@ -99,16 +102,16 @@
     },
     "Adsterra Blogger": {
       "day": "2026-11-25",
-      "day_n": 1,
+      "day_n": 2,
       "week": "2026-W48",
-      "week_n": 13,
+      "week_n": 14,
       "month": "2026-11",
-      "month_n": 13
+      "month_n": 14
     }
   },
   "last_bsky_post_at": {
     "BlueSky Trend": "2026-11-24T01:06:35.754072+00:00",
-    "primonewstoday.bsky.social": "2026-11-24T19:55:33.960517+00:00"
+    "primonewstoday.bsky.social": "2026-11-24T20:44:23.165995+00:00"
   },
   "file_card_post_slots": {
     "BlueSky Trend": {
@@ -141,7 +144,8 @@
         11
       ],
       "2026-11-25": [
-        1
+        1,
+        2
       ]
     }
   },
@@ -154,16 +158,16 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 18,
+      "success": 19,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T19:55:33.961368+00:00"
+      "last_run": "2026-11-24T20:44:23.167121+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T19:55:33.961370+00:00"
+    "Adsterra Blogger": "2026-11-24T20:44:23.167125+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -172,16 +176,16 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-24",
-      "count": 20
+      "count": 21
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T20:27:20.872901+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T20:37:58.010657+00:00"
     }
   ],
   "posted_urls": [],
@@ -222,7 +226,8 @@
     "attack bbc drone how russian ship ukraine unfold": "2026-11-24T14:21:03.338274+00:00|primonewstoday.bsky.social",
     "affair agency alice china contact huang nvidia spy time track york": "2026-11-24T15:28:15.387171+00:00|primonewstoday.bsky.social",
     "bbc cold field llangollen missile there war why": "2026-11-24T17:38:11.347237+00:00|primonewstoday.bsky.social",
-    "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959286+00:00|primonewstoday.bsky.social"
+    "2026 blue congress control democrat election guardian midterm rebuke trump voter wave win": "2026-11-24T19:55:33.959286+00:00|primonewstoday.bsky.social",
+    "2026 bbc chart election maps midterm story": "2026-11-24T20:44:23.164690+00:00|primonewstoday.bsky.social"
   },
   "file_card_reply_counts": {
     "Adsterra Blogger": {
@@ -233,14 +238,14 @@
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "USA political news",
-        "headline": "Story of US 2026 midterm elections in maps and charts - BBC",
-        "photo_url": "https://i.ytimg.com/vi/lgApIr-Tjoo/maxresdefault.jpg",
+        "topic": "war news",
+        "headline": "Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera",
+        "photo_url": "https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg",
         "photo_source": "bing-images",
-        "photo_alt": "Story",
-        "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE83M2VOTWh3QjVSY2RGd3NfYUxyY0FxS3J5UGduMFFkcjFWTmdEVHlPdFlDMEhWWEcwV3Nab3NSYnNXTkJmTml6b1FkQWRScHpPQmRBdmUxY3NwUVk?oc=5",
-        "hook": "The battle for 2026 starts NOW. 🇺🇸📉 See how the map is completely redrawing under your feet with these wild new BBC charts!",
-        "prepared_at": "2026-11-24T19:55:28.441807+00:00"
+        "photo_alt": "Iran war live: Houthi attack on Riyadh tower injures 11 – Saudi authorities - Al Jazeera",
+        "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ2VLZ21qM3Z5ajRWcGFjUDQzd2o2UzZSekRtckRvS21LTWlaZEUxamJjUzRkaDNhZWhRQzQ3QWltSFBNdzhEUEZGb1hPZkJYUndJM2RwZXJjYW5YSjJkQS1pejR3UHUwUzNIbFJwc0E3Yy1BNV9LQlE2Q2tVakpmRkhWYmdMdWJGY00wcTctbGZtdmhiRGNJeVV5Y19YMDh2QVR3WHQ1b0QzOGxRWlNXMnhHMEFkX2lUbnFuRmswdFRlQdIBxwFBVV95cUxNVUZPQXI4U2hVN2N4TVJiSkNtTUJiWGxCVjFpUHJQSXcyV0gzdWpTWjR2dDhJSVpBNWFOODNZMWdGb2U5QTJxMlN3WDFyd19TYzN1VERuc0FOOTgzLXVRY0x3UFpTM1o1SEY5dDFQaXhiS0RXcEhwSUg0U2tWeEFQaVU4YkVTbXd0c2xaZ0ZvRUl5ZHJHU3p3RFBadXg1U1JCVVBEbGluMHlLaFdIMUR5c09yc1RZc3hmcm13Y3JSUzBockgyTVRN?oc=5",
+        "hook": "11 injured after a Houthi strike hits a Riyadh tower. This is escalating FAST.",
+        "prepared_at": "2026-11-24T20:44:16.652347+00:00"
       }
     ]
   }
