@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T17:27:19.051563+00:00",
-  "last_run": "2026-11-24T17:27:11.148431+00:00",
-  "runs": 58,
+  "generated_at": "2026-11-24T17:38:11.425286+00:00",
+  "last_run": "2026-11-24T17:34:29.625603+00:00",
+  "runs": 59,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -34,7 +34,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-24T16:42:16.088367+00:00"
+    "Adsterra Blogger": "2026-11-24T17:38:11.350178+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -45,11 +45,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 15,
+      "success": 16,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-24T16:42:16.088363+00:00"
+      "last_run": "2026-11-24T17:38:11.350170+00:00"
     }
   },
   "file_cards": [
@@ -63,15 +63,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-24T16:42:16.088367+00:00",
-      "runs_today": 17,
-      "posts_today": 11,
+      "last_run": "2026-11-24T17:38:11.350178+00:00",
+      "runs_today": 18,
+      "posts_today": 12,
       "next_runs": [
-        "2026-11-24T23:42:16.088367+06:00",
-        "2026-11-24T23:57:16.088367+06:00",
-        "2026-11-25T00:12:16.088367+06:00",
-        "2026-11-25T00:27:16.088367+06:00",
-        "2026-11-25T00:42:16.088367+06:00"
+        "2026-11-24T23:53:11.350178+06:00",
+        "2026-11-25T00:08:11.350178+06:00",
+        "2026-11-25T00:23:11.350178+06:00",
+        "2026-11-25T00:38:11.350178+06:00",
+        "2026-11-25T00:53:11.350178+06:00"
       ],
       "next_post_times": [
         "2026-11-24T23:55:00+06:00",
@@ -80,7 +80,7 @@
         "2026-11-25T02:54:00+06:00",
         "2026-11-25T04:00:00+06:00"
       ],
-      "success": 15,
+      "success": 16,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -123,8 +123,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 12
+    }
+  ],
   "health": {
     "gemini": {
       "ok": true,
@@ -135,12 +144,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "pexels": {
       "ok": false,
@@ -149,10 +158,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-24T17:27:11.149947+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-24T17:34:29.627250+00:00"
     }
   ],
   "dry_run": false,
@@ -161,317 +170,317 @@
     "open": false
   },
   "trending": [
+    "Tidal bans AI-generated music",
     "Most memorable TV theme songs",
     "Wrong Lord of the Rings quotes",
-    "Todd Blanche questioned on Jensen Huang",
-    "Pope Francis diary: devil encounters",
-    "Burnham's Downing Street influencer invite",
+    "Medicare for All and universal healthcare",
+    "Trump gives Giuliani Medal of Freedom",
     "Jensen Huang discloses more affairs",
-    "SEC probes Nvidia accounting",
     "Personal boycotts",
     "Grand Theft Auto VI release",
-    "Tidal bans AI-generated music"
+    "SEC probes Nvidia accounting",
+    "Pope Francis diary: devil encounters"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-24T17:27:18.829410+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-24T17:27:18.827515+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-24T17:27:18.467503+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-24T17:27:11.150932+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-24T17:27:11.149959+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #58 started (--only blogger)",
-      "created_at": "2026-11-24T17:27:11.148458+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-24T16:42:16.495443+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Trump gives Giuliani Medal of Freedom', 'Most memorable TV theme songs', 'US war with Iran', 'King tides threaten Bay Area flooding', 'Wrong Lord of the Rings quotes']",
-      "created_at": "2026-11-24T16:42:16.490358+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - 1 reply sent)",
-      "created_at": "2026-11-24T16:42:16.088417+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "card 'Adsterra Blogger': no photo, skipped - Bluesky post needs a verified real news photo",
-      "created_at": "2026-11-24T16:42:16.087320+00:00",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-24T17:38:11.350202+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-24T16:42:16.086390+00:00",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-24T17:38:11.348967+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'bbc cold field llangollen missile there war why' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-24T17:38:11.347264+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1280x853 (ratio 1.50) - unchanged",
+      "created_at": "2026-11-24T17:35:34.768344+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 8 candidate(s) tried, 3 fresh stories with a photo attempt, 3 real-photo search(es), no usable photo",
-      "created_at": "2026-11-24T16:42:16.085444+00:00",
+      "message": "prepare_bsky_image: original 1280x853 (ratio 1.50) - kept, no crop",
+      "created_at": "2026-11-24T17:35:34.767240+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 3/6 tried: 'The U.S. political map? Anyone's guess after Democratic wave' - no usable photo, trying the next story",
-      "created_at": "2026-11-24T16:42:16.084315+00:00",
+      "message": "photo candidate: 'Why is there a Cold War missile in a field in Llangollen? - ' - ACCEPTED real photo (from wikimedia)",
+      "created_at": "2026-11-24T17:35:34.765104+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-24T16:42:16.083320+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-24T17:35:34.763954+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'The U.S. political map? Anyone's guess after Democratic wave - PBS' (0 download(s) tried)",
-      "created_at": "2026-11-24T16:42:16.082351+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Why is there a Cold War missile in a field in Llangollen? - ': https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Cold_War_Nights_by_Hugh_Hudson_-_2024_Photo (from wikimedia, query 'there Cold War missile field', page: https://commons.wikimedia.org/wiki/File:Cold_War_Nights_by_Hugh_Hudson_-_2024_Photo_Contest_(5421301 - matches 2 key entities (cold, war))",
+      "created_at": "2026-11-24T17:35:34.762546+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.081406+00:00",
+      "message": "vision: unavailable - keyword check decides ('Why is there a Cold War missile in a field in Llan': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
+      "created_at": "2026-11-24T17:35:34.760429+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.080484+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/c/cb/Cold_War_Museum%2C_RAF_Cosford_-_geograph.org.uk",
+      "created_at": "2026-11-24T17:35:20.888209+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.079470+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://live.staticflickr.com/5054/5571466188_de63850dd1_b.jpg (page: https://www.flickr.com/photos/54825391@N00/5571466188 | Convair F-106A Delta Dart - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:20.773922+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.078479+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://live.staticflickr.com/5759/24107472916_ef917ba8ef_b.jpg (page: https://www.flickr.com/photos/69562982@N02/24107472916 | highlands twin lights - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:20.772635+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://upload.wikimedia.org/wikipedia/commons/f/ff/WorldMapLongLat-eq-circles-tropics-non-sanstext. (page: https://commons.wikimedia.org/wiki/File:WorldMapLongLat-eq-circles-tropics-non-sanstext.png | File:W - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.077457+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://live.staticflickr.com/5225/5570876303_a36d7913c6_b.jpg (page: https://www.flickr.com/photos/54825391@N00/5570876303 | Convair F-106A Delta Dart - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:20.771265+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Southern_Africa_1890s_Political.jpg/1280px- (page: https://commons.wikimedia.org/wiki/File:Southern_Africa_1890s_Political.jpg | File:Southern Africa 1 - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.076346+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://live.staticflickr.com/8406/8673538488_5b73f3d0cb_b.jpg (page: https://www.flickr.com/photos/25554263@N04/8673538488 | Soviet Supersonic Interceptor Mikoyan-Gurevi - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:20.769948+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Paris%2C_Notre_Dame_--_2014_--_1458-65.jpg/ (page: https://commons.wikimedia.org/wiki/File:Paris,_Notre_Dame_--_2014_--_1458-65.jpg | File:Paris, Notre - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.075320+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://live.staticflickr.com/5265/5571465092_1bbee359b2_b.jpg (page: https://www.flickr.com/photos/54825391@N00/5571465092 | Convair F-106A Delta Dart - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:20.768608+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/A_new_%26_exact_map_of_Spain_%26_Portugal_- (page: https://commons.wikimedia.org/wiki/File:A_new_%26_exact_map_of_Spain_%26_Portugal_-_corrected_accord - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.074275+00:00",
+      "message": "bing-images: 4 candidate(s) for 'there Cold War missile field'",
+      "created_at": "2026-11-24T17:35:20.766250+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/1851_Tallis_and_Rapkin_Map_of_Independent_T (page: https://commons.wikimedia.org/wiki/File:1851_Tallis_and_Rapkin_Map_of_Independent_Tartary_(Central_A - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:16.073096+00:00",
+      "message": "google-images: 0 candidate(s) for 'there Cold War missile field'",
+      "created_at": "2026-11-24T17:35:20.610432+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'U S political map Anyone'",
-      "created_at": "2026-11-24T16:42:16.070632+00:00",
+      "message": "wikimedia: 5 result(s) for 'there Cold War missile field'",
+      "created_at": "2026-11-24T17:35:20.505288+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'U S political map Anyone'",
-      "created_at": "2026-11-24T16:42:15.859736+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'U S political map Anyone'",
-      "created_at": "2026-11-24T16:42:15.706161+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'U S political map Anyone'",
-      "created_at": "2026-11-24T16:42:15.340521+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:15.244843+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:15.243754+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:15.242576+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:15.241428+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:15.240485+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:15.239397+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:15.237057+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:15.011067+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:14.843551+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:14.221354+00:00",
+      "message": "openverse: 5 result(s) for 'there Cold War missile field'",
+      "created_at": "2026-11-24T17:35:20.070442+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:14.134573+00:00",
+      "created_at": "2026-11-24T17:35:11.717903+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:14.133567+00:00",
+      "created_at": "2026-11-24T17:35:11.716574+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngplay.com/wp-content/uploads/1/Letter-U-PNG-Royalty-Free-Image.png (page: https://storage.googleapis.com/tiwlcljbmfyfbapxlfblog/letter-u-clip-art.html | Letter U PNG Royalty- - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:14.132647+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://cdn0.animalwised.com/en/posts/8/7/3/5_hairless_cat_breeds_2378_orig.jpg (page: https://www.pinterest.com/pin/5-things-to-know-about-somali-cats-petful--338966309451722057/ | 5 Hai - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:11.715312+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://png.pngtree.com/png-clipart/20240416/original/pngtree-letter-u-for-kids-3d-png-image_1482722 (page: https://www.pngplay.com/image/6319 | Letter U For Kids 3d, Alphabet U In Blue Color, U Alphabet, Let - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:14.131629+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://aplaceforanimals.com/wp-content/uploads/2024/03/unique_breed_of_cat.jpg (page: https://www.animalwised.com/5-hairless-cat-breeds-2378.html | The Perfect Orange and White Cat Breed - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:11.713956+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://www.pngmart.com/files/14/U-Letter-PNG-Clipart.png (page: https://pngtree.com/freepng/letter-u-for-kids-3d_14827227.html | U Letter, Typography, Symbol, Chara - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:14.130589+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.animalbliss.com/wp-content/uploads/2019/10/G-Jackie-Johnston-infographic.jpg (page: https://aplaceforanimals.com/pets/cats/orange-and-white-cat-breed-name-2/ | List of Popular Cat Bree - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:11.712615+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The U.S. political map? Anyone's guess after Democ'): https://static.vecteezy.com/system/resources/previews/021/054/561/original/3d-gold-effect-letter-u-f (page: https://www.pngmart.com/image/210291 | 3D Gold Effect Letter U 21054561 PNG - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-24T16:42:14.129242+00:00",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://hips.hearstapps.com/hmg-prod/images/international-cat-day-cat-map-of-the-uk-2018-iams-uk-153 (page: https://animalbliss.com/list-of-popular-cat-breeds/ | 10 Most Popular Cat Breeds UK – Most Common Ca - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:11.711327+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:14.126779+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
+      "created_at": "2026-11-24T17:35:11.708544+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:13.898912+00:00",
+      "message": "google-images: 0 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
+      "created_at": "2026-11-24T17:35:11.553487+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:13.723740+00:00",
+      "message": "wikimedia: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
+      "created_at": "2026-11-24T17:35:11.427582+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'The U.S. political map? Anyone's guess after Democratic wave'",
-      "created_at": "2026-11-24T16:42:13.492345+00:00",
+      "message": "openverse: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen?'",
+      "created_at": "2026-11-24T17:35:11.061726+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:13.394784+00:00",
+      "created_at": "2026-11-24T17:35:07.274428+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-24T16:42:13.393847+00:00",
+      "created_at": "2026-11-24T17:35:07.273204+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://sdcms-prod.s3.ap-southeast-2.amazonaws.com/images/Pm1-logo.width-800.jpg (page: https://x.com/purminerals | Is this Newly Listed Micro-Cap About to Put Manganese in the Spotlight? - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:07.271951+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/PUR_Beauty-Pure-and-Simple_Cool_Grey_11_96554cfc-6d82-41 (page: https://www.nextinvestors.com/articles/newly-listed-micro-cap-about-to-put-manganese-in-spotlight/ | - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:07.270704+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/PUR_Logo_Cool_Grey_11_0990821e-e09d-4248-a1ca-03f5d76679 (page: https://crueltyfree.peta.org/company/pur-minerals-pur-complexion-authority/ | 4-in-1 Pressed Mineral - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:07.269385+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Why is there a Cold War missile in a field in Llan'): https://www.purcosmetics.com/cdn/shop/files/20135ed6689f02c92ea8ff034258a6f21ed3bb83.png?v=174945920 (page: https://www.purcosmetics.com/products/4-in-1-pressed-mineral-makeup-foundation-with-skincare-ingredi - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:07.268315+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
+      "created_at": "2026-11-24T17:35:07.265919+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
+      "created_at": "2026-11-24T17:35:07.067826+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
+      "created_at": "2026-11-24T17:35:06.947696+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Why is there a Cold War missile in a field in Llangollen? - '",
+      "created_at": "2026-11-24T17:35:06.648696+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-24T17:35:04.568672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-24T17:35:04.567381+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Why is there a Cold War missile in a field in Llangollen? - ' - rejected (no og:image)",
+      "created_at": "2026-11-24T17:35:04.564262+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTE1QWUNpZHdnU0RvSzVhTDJlSUZra01hRzVfd1dKSkZwYnZCOEFYX0Utc2FhNUpnSWFRT0x) - skipping, og:image would be the logo",
+      "created_at": "2026-11-24T17:35:04.561725+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 2/6 tried: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - no usable photo, trying the next story",
+      "created_at": "2026-11-24T17:35:03.881985+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Moscow accuses Estonia of hostile actions on 'verge of trigg' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-24T17:35:03.880796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'Moscow accuses Estonia of hostile actions on 'verge of triggering open war' - Reuters' (0 download(s) tried)",
+      "created_at": "2026-11-24T17:35:03.879639+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://cdn.britannica.com/26/116526-050-76C37BBC/Cathedral-of-St-Basil-the-Blessed-Moscow.jpg (page: https://www.britannica.com/summary/Moscow | Red Square | Moscow Landmark, History & Architecture | B - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:03.878553+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.56thparallel.com/wp-content/uploads/2017/12/Moscow-city-break-tour-3-days-e1512974884239 (page: https://www.britannica.com/topic/Red-Square | 15 Amazing Reasons to Visit Moscow - Russia Travel Gui - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:03.877014+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://www.tripsavvy.com/thmb/6R1Wm2oVwGnIC2DBc4BwS80sveY=/3863x2578/filters:no_upscale():max_bytes (page: https://www.56thparallel.com/15-reasons-visit-moscow/ | 50 Things to Do in Moscow, Russia - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:03.875767+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Moscow accuses Estonia of hostile actions on 'verg'): https://pixelz.cc/wp-content/uploads/2018/07/red-square-at-night-moscow-russia-uhd-4k-walllpaper.jpg (page: https://www.tripsavvy.com/things-to-do-in-moscow-1501845 | Red Square At Night Moscow Russia UHD 4K  - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-24T17:35:03.874512+00:00",
       "card": ""
     }
   ]
