@@ -196,7 +196,8 @@ ENV_REDDIT_ACCOUNTS = _load_env_reddit_accounts()
 # answered live - so they are REMOVED. An unproven model name must
 # never burn the attempt budget again. If a third model is ever
 # proven live, add it here (and only here).
-GEMINI_MODELS = ["gemini-4-hydrogen", "gemini-3.5-flash-lite"]
+GEMINI_MODELS = ["gemini-4-hydrogen", "gemini-3.5-flash-lite",
+                 "gemini-3.8-flash"]
 # Groq models to try, in order (free tier, confirmed model ids on
 # console.groq.com/docs/models, 2026-11-23). gpt-oss are reasoning
 # models - see _groq_call (reasoning_effort + max_completion_tokens).
