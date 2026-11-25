@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-25T17:54:16.915151+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Trump claims prices are falling', 'Montreal airport pizza slice', 'Army lead detonation in Iowa', 'Grand Theft Auto VI', 'Day to end violence against women']",
+    "created_at": "2026-11-25T17:54:16.909787+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T17:54:16.804693+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T17:54:16.803171+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T17:54:16.545417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T17:54:13.890314+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T17:54:13.889310+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T17:54:13.888197+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #100 started (--only blogger)",
+    "created_at": "2026-11-25T17:54:13.886932+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-25T17:49:06.796538+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-25T17:48:51.977766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:51.976561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no og:image)",
-    "created_at": "2026-11-25T17:48:51.975032+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxON0RjeHRWcGl1ZElENEhBX0x2blI3b2w1OC1vZ1U3SklwRTV5ajRTWVRXczVBTlBrN0J) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T17:48:51.971811+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T17:48:51.688449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T17:48:51.687064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (10 download(s) tried)",
-    "created_at": "2026-11-25T17:48:51.685550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperbat.com/img/181098-black-hd-background-wallpaper-black-wallpaper-black-desktop.jpg (page: https://wallpapercave.com/black-background-pictures-hd | Plain Black Computer Wallpapers - 4k, HD Ba - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T17:48:51.684367+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperaccess.com/full/307214.jpg (page: https://wallpaperbat.com/plain-black-computer-wallpapers | Black Desktop Wallpapers - Top Free Black - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T17:48:51.683125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperbat.com/img/26807142-black-wallpaper.jpg (page: https://wallpaperaccess.com/black-desktop | Best 34+ 4K Dark Wallpaper Desktop - Great Research - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T17:48:51.681949+00:00",
     "card": ""
   }
 ]
