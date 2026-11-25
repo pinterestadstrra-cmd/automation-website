@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T21:41:42.630256+00:00",
-  "last_run": "2026-11-25T21:39:01.036078+00:00",
-  "runs": 107,
+  "generated_at": "2026-11-25T21:56:54.580952+00:00",
+  "last_run": "2026-11-25T21:56:49.965627+00:00",
+  "runs": 108,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 18,
       "posts_today": 4,
       "next_runs": [
-        "2026-11-26T03:56:05.973680+06:00",
         "2026-11-26T04:11:05.973680+06:00",
         "2026-11-26T04:26:05.973680+06:00",
         "2026-11-26T04:41:05.973680+06:00",
-        "2026-11-26T04:56:05.973680+06:00"
+        "2026-11-26T04:56:05.973680+06:00",
+        "2026-11-26T05:11:05.973680+06:00"
       ],
       "next_post_times": [
         "2026-11-26T04:04:00+06:00",
@@ -158,11 +158,11 @@
       "runs_today": 8,
       "posts_today": 4,
       "next_runs": [
-        "2026-11-26T03:56:42.374389+06:00",
         "2026-11-26T04:11:42.374389+06:00",
         "2026-11-26T04:26:42.374389+06:00",
         "2026-11-26T04:41:42.374389+06:00",
-        "2026-11-26T04:56:42.374389+06:00"
+        "2026-11-26T04:56:42.374389+06:00",
+        "2026-11-26T05:11:42.374389+06:00"
       ],
       "next_post_times": [
         "2026-11-26T04:00:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 17
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 7
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T21:39:01.037511+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T21:56:49.966535+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-25T21:56:49.967257+00:00"
     }
   ],
   "dry_run": false,
@@ -308,17 +296,59 @@
   "trending": [
     "Macy's parade turns 100",
     "Mike McCarthy's ice cream sandwich assistant",
-    "FCC approves SpaceX Starmind satellites",
-    "Vance blames Obama for detonation",
+    "Medicare for All and universal healthcare",
     "FEMA hotline unanswered in Iowa",
+    "Aaron Rodgers benched against Broncos",
     "Aaron Rodgers reportedly out",
-    "Aaron Rodgers criticizes Mike McCarthy",
-    "Huang reinstated as Nvidia CEO",
     "Grand Theft Auto VI",
+    "FCC approves SpaceX Starmind satellites",
+    "Huang reinstated as Nvidia CEO",
     "Steven Universe actor comes out"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T21:56:54.383627+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T21:56:54.382391+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T21:56:54.079798+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T21:56:49.967887+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-25T21:56:49.967262+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T21:56:49.966541+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #108 started (--only blogger)",
+      "created_at": "2026-11-25T21:56:49.965646+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
@@ -575,48 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
       "created_at": "2026-11-25T21:41:33.081092+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.079883+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
-      "created_at": "2026-11-25T21:41:33.077507+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
-      "created_at": "2026-11-25T21:41:32.925179+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking Trump's Crackdown on Higher Education'",
-      "created_at": "2026-11-25T21:41:32.800250+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
-      "created_at": "2026-11-25T21:41:32.780620+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:32.592760+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:32.591612+00:00",
       "card": ""
     }
   ]

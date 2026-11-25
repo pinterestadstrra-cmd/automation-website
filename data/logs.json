@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-25T21:56:54.582760+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Macy's parade turns 100\", \"Mike McCarthy's ice cream sandwich assistant\", 'Medicare for All and universal healthcare', 'FEMA hotline unanswered in Iowa', 'Aaron Rodgers benched against Broncos']",
+    "created_at": "2026-11-25T21:56:54.579222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T21:56:54.383627+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T21:56:54.382391+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T21:56:54.079798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T21:56:49.967887+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T21:56:49.967262+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T21:56:49.966541+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #108 started (--only blogger)",
+    "created_at": "2026-11-25T21:56:49.965646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-25T21:41:42.374406+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - rejected (no og:image)",
     "created_at": "2026-11-25T21:41:26.463824+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi7gFBVV95cUxPdWdXZFI4TUwyOTZFZFNjVGE4VEJvV2N4V3NHMC1rYkY0OElPRV8xVWJWYWVWaV9JVDF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T21:41:26.461449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'How the War Turned Sudan Into a Country Without a Newspaper ' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T21:41:26.295904+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T21:41:26.294906+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'How the War Turned Sudan Into a Country Without a Newspaper - Time Magazine' (4 download(s) tried)",
-    "created_at": "2026-11-25T21:41:26.293869+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 - source page title names only 0 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T21:41:26.292742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T21:41:26.291376+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- - image from a clipart/vector host",
-    "created_at": "2026-11-25T21:41:26.260713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T21:41:26.253866+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T21:41:26.206163+00:00",
     "card": ""
   }
 ]
