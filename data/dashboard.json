@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T00:39:24.869450+00:00",
-  "last_run": "2026-11-25T00:30:15.295815+00:00",
-  "runs": 72,
+  "generated_at": "2026-11-25T01:55:24.068474+00:00",
+  "last_run": "2026-11-25T01:55:16.286380+00:00",
+  "runs": 73,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -69,18 +69,18 @@
       "runs_today": 1,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-25T06:54:24.819444+06:00",
-        "2026-11-25T07:09:24.819444+06:00",
-        "2026-11-25T07:24:24.819444+06:00",
-        "2026-11-25T07:39:24.819444+06:00",
-        "2026-11-25T07:54:24.819444+06:00"
+        "2026-11-25T08:09:24.819444+06:00",
+        "2026-11-25T08:24:24.819444+06:00",
+        "2026-11-25T08:39:24.819444+06:00",
+        "2026-11-25T08:54:24.819444+06:00",
+        "2026-11-25T09:09:24.819444+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T06:55:00+06:00",
         "2026-11-25T08:01:00+06:00",
         "2026-11-25T09:06:00+06:00",
         "2026-11-25T10:08:00+06:00",
-        "2026-11-25T11:03:00+06:00"
+        "2026-11-25T11:03:00+06:00",
+        "2026-11-25T11:57:00+06:00"
       ],
       "success": 23,
       "fail": 4,
@@ -125,17 +125,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -147,12 +138,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -165,10 +156,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T00:30:15.297198+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T01:55:16.287913+00:00"
     }
   ],
   "dry_run": false,
@@ -177,19 +168,67 @@
     "open": false
   },
   "trending": [
+    "Calls to release Epstein files",
     "Planned lead detonation in Iowa",
-    "November full supermoon",
     "Nvidia hiring first compliance officer",
-    "Cybersecurity breach reported at CIA",
-    "Grand Theft Auto VI release",
-    "Wrong Lord of the Rings quotes",
-    "Google plans personalized AI TV channel",
+    "November full supermoon",
+    "Kelsey Grammer's Beast first look",
+    "King tides threaten Bay Area flooding",
     "\"I Know Your Age\" quiz",
     "Pope Francis diary: devil encounters",
+    "GTA VI's Jason and Lucia",
     "Tidal bans AI-generated music"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T01:55:23.717622+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T01:55:23.707143+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T01:55:23.470287+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T01:55:16.289242+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T01:55:16.287922+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #73 started (--only blogger)",
+      "created_at": "2026-11-25T01:55:16.286400+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T00:39:24.870662+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'November full supermoon', 'Nvidia hiring first compliance officer', 'Cybersecurity breach reported at CIA', 'Grand Theft Auto VI release']",
+      "created_at": "2026-11-25T00:39:24.867511+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -441,54 +480,6 @@
       "message": "card 'Adsterra Blogger': found 0 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
       "created_at": "2026-11-24T23:39:39.429657+00:00",
       "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-24T23:39:36.337803+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'Here's a list of the individuals, including James Comey, tar' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-24T23:39:36.335949+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Here's a list of the individuals, including James Comey, tar' - ACCEPTED real photo (from wikimedia)",
-      "created_at": "2026-11-24T23:33:11.874531+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-24T23:33:11.873889+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Here's a list of the individuals, including James Comey, tar': https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/James_Comey_and_Alberto_M._Carvalho%2C_2015 (from wikimedia, query 'James Comey', page: https://commons.wikimedia.org/wiki/File:James_Comey_and_Alberto_M._Carvalho,_2015.jpg | File:James C - page names the entity (James Comey))",
-      "created_at": "2026-11-24T23:33:11.873152+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: unavailable - keyword check decides ('Here's a list of the individuals, including James ': vision failed (6 attempt(s) - HTTP 429 x6: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/)",
-      "created_at": "2026-11-24T23:33:11.870154+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/a/a5/James_Comey_US_Attorney.jpg?utm_source=commons.w",
-      "created_at": "2026-11-24T23:32:58.312624+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3728/13602772845_6bcc056c79_b.jpg",
-      "created_at": "2026-11-24T23:32:58.240101+00:00",
-      "card": ""
     }
   ]
 }
