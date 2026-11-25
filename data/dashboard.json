@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T04:02:15.721182+00:00",
-  "last_run": "2026-11-25T03:57:34.533977+00:00",
-  "runs": 76,
+  "generated_at": "2026-11-25T05:08:42.676767+00:00",
+  "last_run": "2026-11-25T05:08:29.136649+00:00",
+  "runs": 77,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -66,21 +66,21 @@
       "posts_per_day": 24,
       "schedule_times": [],
       "last_run": "2026-11-25T04:02:15.489295+00:00",
-      "runs_today": 3,
-      "posts_today": 8,
+      "runs_today": 2,
+      "posts_today": 7,
       "next_runs": [
-        "2026-11-25T10:17:15.489295+06:00",
-        "2026-11-25T10:32:15.489295+06:00",
-        "2026-11-25T10:47:15.489295+06:00",
-        "2026-11-25T11:02:15.489295+06:00",
-        "2026-11-25T11:17:15.489295+06:00"
+        "2026-11-25T11:17:15.489295+06:00",
+        "2026-11-25T11:32:15.489295+06:00",
+        "2026-11-25T11:47:15.489295+06:00",
+        "2026-11-25T12:02:15.489295+06:00",
+        "2026-11-25T12:17:15.489295+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T10:08:00+06:00",
-        "2026-11-25T11:03:00+06:00",
         "2026-11-25T11:57:00+06:00",
         "2026-11-25T12:52:00+06:00",
-        "2026-11-25T14:09:00+06:00"
+        "2026-11-25T14:09:00+06:00",
+        "2026-11-25T15:04:00+06:00",
+        "2026-11-25T15:58:00+06:00"
       ],
       "success": 26,
       "fail": 4,
@@ -125,17 +125,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 3
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -147,12 +138,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -165,10 +156,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T03:57:34.536003+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T05:08:29.138255+00:00"
     }
   ],
   "dry_run": false,
@@ -177,19 +168,67 @@
     "open": false
   },
   "trending": [
-    "Measles risk grows for adults",
     "Planned lead detonation in Iowa",
+    "Aaron Rodgers benched against Broncos",
     "Nvidia hiring first compliance officer",
-    "Dancing with the Stars scoring",
-    "November full supermoon",
-    "Cybersecurity breach reported at CIA",
-    "Wrong Lord of the Rings quotes",
+    "\"I Know Your Age\" quiz",
+    "Pentagon weighs loan to Trump Jr.-tied startup",
     "Kelsey Grammer's Beast first look",
-    "King tides threaten Bay Area flooding",
-    "Pope Francis diary: devil encounters"
+    "Google plans personalized AI TV channel",
+    "Pope Francis diary: devil encounters",
+    "Measles risk grows for adults",
+    "November full supermoon"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T05:08:42.363761+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T05:08:42.358019+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T05:08:41.987928+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T05:08:29.139502+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T05:08:29.138268+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #77 started (--only blogger)",
+      "created_at": "2026-11-25T05:08:29.136672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T04:02:15.723095+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Measles risk grows for adults', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Dancing with the Stars scoring', 'November full supermoon']",
+      "created_at": "2026-11-25T04:02:15.717237+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -278,6 +317,36 @@
       "level": "info",
       "message": "openverse: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
       "created_at": "2026-11-25T04:01:11.474665+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T04:00:57.724536+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Measles risk grows for adults', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Dancing with the Stars scoring', 'November full supermoon']",
+      "created_at": "2026-11-25T04:00:57.719485+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T04:00:57.496258+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T04:00:57.494741+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T04:00:57.234944+00:00",
       "card": ""
     },
     {
@@ -410,84 +479,6 @@
       "level": "info",
       "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/1280px-D - source page title names only 1 of 11 key entities - not a news article about the story",
       "created_at": "2026-11-25T04:00:54.835488+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T04:00:54.833084+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump'",
-      "created_at": "2026-11-25T04:00:54.695773+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump'",
-      "created_at": "2026-11-25T04:00:54.509804+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Trump'",
-      "created_at": "2026-11-25T04:00:54.252685+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: search HTTP 500 for 'Trump'",
-      "created_at": "2026-11-25T04:00:53.692389+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T04:00:47.110384+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T04:00:47.108792+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Trump’s Nvidia Push Shows Companies’ Importance in' - trying entity search 'Trump'",
-      "created_at": "2026-11-25T04:00:47.107014+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://c.ndtvimg.com/2026-11/rgai3ujs_trump-pardons-turkey-thanksgiving_625x300_25_November_26.jpeg",
-      "created_at": "2026-11-25T04:00:47.104538+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg (page: https://www.ndtv.com/world-news/trump-pardons-turkeys-freedom-and-feathers-from-fowl-thanksgiving-fa - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T04:00:47.021368+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://mcnymx.infiniteuploads.cloud/2026/11/President-Donald-J.-Trump-2026.jpeg (page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | House Democrats Put Trump Family, - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T04:00:47.019590+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg (page: https://www.tampafp.com/house-democrats-put-trump-family-officials-on-notice-ahead-of-january-takeov - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T04:00:47.017693+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump s Nvidia Push Shows'",
-      "created_at": "2026-11-25T04:00:47.014437+00:00",
       "card": ""
     }
   ]
