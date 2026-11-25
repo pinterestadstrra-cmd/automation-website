@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T23:36:21.398068+00:00",
-  "last_run": "2026-11-25T23:31:28.283142+00:00",
-  "runs": 111,
+  "generated_at": "2026-11-25T23:50:30.228237+00:00",
+  "last_run": "2026-11-25T23:50:26.793832+00:00",
+  "runs": 112,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 20,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-26T05:50:21.541300+06:00",
         "2026-11-26T06:05:21.541300+06:00",
         "2026-11-26T06:20:21.541300+06:00",
         "2026-11-26T06:35:21.541300+06:00",
-        "2026-11-26T06:50:21.541300+06:00"
+        "2026-11-26T06:50:21.541300+06:00",
+        "2026-11-26T07:05:21.541300+06:00"
       ],
       "next_post_times": [
         "2026-11-26T05:53:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 19
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 9
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T23:31:28.284384+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T23:50:26.795499+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-25T23:50:26.796680+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,72 @@
   },
   "trending": [
     "Describe a film without its name",
-    "Denny's restores Jensen Huang plaque",
-    "New Avengers: Doomsday poster",
+    "King tides threaten Bay Area flooding",
     "Aaron Rodgers reportedly out",
     "Duran Duran's Andy Taylor dies",
     "Macy's parade turns 100",
-    "Trump floats Jensen Huang pardon",
     "FEMA hotline unanswered in Iowa",
-    "FCC approves SpaceX Starmind satellites",
-    "Mike McCarthy's ice cream sandwich assistant"
+    "Huang reinstated as Nvidia CEO",
+    "Denny's restores Jensen Huang plaque",
+    "Abrego Garcia leaves for Spain",
+    "New Avengers: Doomsday poster"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T23:50:30.062329+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T23:50:30.060640+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T23:50:29.832793+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T23:50:26.797774+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-25T23:50:26.796687+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T23:50:26.795507+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #112 started (--only blogger)",
+      "created_at": "2026-11-25T23:50:26.793860+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T23:36:21.400059+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Describe a film without its name', \"Denny's restores Jensen Huang plaque\", 'New Avengers: Doomsday poster', 'Aaron Rodgers reportedly out', \"Duran Duran's Andy Taylor dies\"]",
+      "created_at": "2026-11-25T23:36:21.395084+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
       "created_at": "2026-11-25T23:36:13.199410+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-      "created_at": "2026-11-25T23:36:13.015509+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:12.974715+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:12.974012+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - rejected (no og:image)",
-      "created_at": "2026-11-25T23:36:12.973182+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxQOUw3TjdCalhKUW9naVRaY2t1bG91NjlqVG5jYnRUNHlMVG5RX1hfcFJDZVNnTHBQWHc) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T23:36:12.971197+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: story 2/6 tried: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - no usable photo, trying the next story",
-      "created_at": "2026-11-25T23:36:12.811833+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-25T23:36:12.811218+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'What Is Childhood to Gaza's Generation Raised in War? - Haaretz' (6 download(s) tried)",
-      "created_at": "2026-11-25T23:36:12.810638+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://image2.slideserve.com/5360615/figure-23-2b-the-respiratory-epithelium-of-the-nasal-cavity-an (page: http://www.earthslab.com/anatomy/nasal-cavity/ | PPT - 23 The Respiratory System PowerPoint Presenta - page does not name the entity (Childhood))",
-      "created_at": "2026-11-25T23:36:12.810019+00:00",
       "card": ""
     }
   ]

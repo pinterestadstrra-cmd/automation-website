@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T23:50:30.230196+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Describe a film without its name', 'King tides threaten Bay Area flooding', 'Aaron Rodgers reportedly out', \"Duran Duran's Andy Taylor dies\", \"Macy's parade turns 100\"]",
+    "created_at": "2026-11-25T23:50:30.225392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T23:50:30.062329+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T23:50:30.060640+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T23:50:29.832793+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T23:50:26.797774+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T23:50:26.796687+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T23:50:26.795507+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #112 started (--only blogger)",
+    "created_at": "2026-11-25T23:50:26.793860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T23:36:21.400059+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
     "created_at": "2026-11-25T23:35:08.627579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - skipped (same event used within 24h, event key 'accuse action cnbc estonia hostile member nato open russia u')",
-    "created_at": "2026-11-25T23:35:08.626506+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Five Russian military jets hit in airfield strike, says Ukra' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T23:35:08.625385+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T23:35:08.624701+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Five Russian military jets hit in airfield strike, says Ukraine - BBC' (12 download(s) tried)",
-    "created_at": "2026-11-25T23:35:08.623946+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:35:08.622974+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:35:08.621633+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://c8.alamy.com/comp/FECPME/the-number-five-as-a-polished-golden-object-FECPME.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:35:08.548359+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:35:08.547536+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:35:08.528962+00:00",
     "card": ""
   }
 ]
