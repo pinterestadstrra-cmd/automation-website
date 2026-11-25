@@ -51,6 +51,14 @@ SECRETS (never in the repo - GitHub Secrets / environment only)
                          (or single-account env vars REDDIT_CLIENT_ID /
                          REDDIT_CLIENT_SECRET / REDDIT_USERNAME /
                          REDDIT_PASSWORD)
+  TUMBLR_ACCOUNTS        JSON list [{"blog": "...", "client_id": "...",
+                         "client_secret": "...", "access_token": "...",
+                         "refresh_token": "..."}] (OAuth2, scopes basic
+                         write offline_access; free, no review -
+                         register the app at tumblr.com/oauth/apps)
+                         (or single-account env vars TUMBLR_BLOG /
+                         TUMBLR_CLIENT_ID / TUMBLR_CLIENT_SECRET /
+                         TUMBLR_ACCESS_TOKEN / TUMBLR_REFRESH_TOKEN)
   PEXELS_API_KEY         (optional) free Pexels key for photos
   PIXABAY_API_KEY        (optional) free Pixabay key for photos
   ADMIN_PASSWORD         dashboard password (admin panel)
@@ -82,6 +90,22 @@ from urllib.parse import quote_plus, urlparse, urljoin
 import requests
 from requests.auth import HTTPBasicAuth
 from flask import Flask, request, jsonify, session, send_from_directory
+
+# Nostr (platform 5 of 8): pynostr signs kind-1 text-note events
+# (BIP-340 Schnorr over secp256k1, via coincurve) and broadcasts
+# them to relays over wss. Guarded import: if the library is
+# missing, Nostr functions log a plain warning and skip instead of
+# crashing the worker (the worker installs it from requirements.txt).
+try:
+    from pynostr.event import Event as _NostrEvent
+    from pynostr.key import PrivateKey as _NostrPrivateKey
+    from pynostr.relay_manager import RelayManager as _NostrRelayManager
+    _PYNOSTR_AVAILABLE = True
+except Exception:
+    _NostrEvent = None
+    _NostrPrivateKey = None
+    _NostrRelayManager = None
+    _PYNOSTR_AVAILABLE = False
 
 # ---------------------------------------------------------------- optional deps
 try:
@@ -185,6 +209,241 @@ def _load_env_reddit_accounts():
 
 ENV_REDDIT_ACCOUNTS = _load_env_reddit_accounts()
 
+# Tumblr accounts can come from the env secret (GitHub Actions) or
+# from single-account env vars. Same sealed-box pattern as
+# BLUESKY_ACCOUNTS / REDDIT_ACCOUNTS: the dashboard encrypts the
+# list into the TUMBLR_ACCOUNTS secret. Auth is OAuth2 (scopes basic
+# write offline_access): the access token lasts 42 minutes, the
+# refresh token 42 days. The worker refreshes ONLY on a 401 (never
+# speculatively) and keeps the refreshed tokens in memory for the
+# rest of the run - a rotated refresh token is NEVER written to a
+# repo file (state.json is committed back, so it must never hold a
+# secret); see _tumblr_refresh.
+def _load_env_tumblr_accounts():
+    raw = (os.environ.get("TUMBLR_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("blog")
+                            and a.get("client_id")
+                            and a.get("client_secret")
+                            and a.get("access_token")
+                            and a.get("refresh_token")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets.
+        blog = (os.environ.get("TUMBLR_BLOG", "") or "").strip()
+        cid = (os.environ.get("TUMBLR_CLIENT_ID", "") or "").strip()
+        csec = (os.environ.get("TUMBLR_CLIENT_SECRET", "") or "").strip()
+        atok = (os.environ.get("TUMBLR_ACCESS_TOKEN", "") or "").strip()
+        rtok = (os.environ.get("TUMBLR_REFRESH_TOKEN", "") or "").strip()
+        if blog and cid and csec and atok and rtok:
+            accounts = [{"blog": blog, "client_id": cid,
+                         "client_secret": csec, "access_token": atok,
+                         "refresh_token": rtok}]
+    return accounts
+
+ENV_TUMBLR_ACCOUNTS = _load_env_tumblr_accounts()
+
+# Threads accounts can come from the env secret (GitHub Actions) or
+# from single-account env vars. Same sealed-box pattern as
+# BLUESKY_ACCOUNTS / REDDIT_ACCOUNTS / TUMBLR_ACCOUNTS: the dashboard
+# encrypts the list into the THREADS_ACCOUNTS secret. Auth is OAuth2
+# (scopes threads_basic + threads_content_publish): the short-lived
+# token lasts 1 hour, exchanged for a long-lived token (60 days).
+# The worker refreshes a long-lived token ONLY when it is at least
+# 24 hours old (and its age is known - token_obtained_at, recorded
+# by the dashboard authorize helper) or on a 401, and keeps the
+# refreshed token in memory for the rest of the run - a rotated
+# token is NEVER written to a repo file (state.json is committed
+# back, so it must never hold a secret); see _threads_refresh.
+def _load_env_threads_accounts():
+    raw = (os.environ.get("THREADS_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("user_id")
+                            and a.get("app_id")
+                            and a.get("app_secret")
+                            and a.get("access_token")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets.
+        uid = (os.environ.get("THREADS_USER_ID", "") or "").strip()
+        aid = (os.environ.get("THREADS_APP_ID", "") or "").strip()
+        asec = (os.environ.get("THREADS_APP_SECRET", "") or "").strip()
+        atok = (os.environ.get("THREADS_ACCESS_TOKEN", "") or "").strip()
+        if uid and aid and asec and atok:
+            accounts = [{"user_id": uid, "app_id": aid,
+                         "app_secret": asec, "access_token": atok}]
+    return accounts
+
+ENV_THREADS_ACCOUNTS = _load_env_threads_accounts()
+
+# Mastodon accounts can come from the env secret (GitHub Actions) or
+# from single-account env vars. Same sealed-box pattern as
+# BLUESKY_ACCOUNTS / REDDIT_ACCOUNTS / TUMBLR_ACCOUNTS /
+# THREADS_ACCOUNTS: the dashboard encrypts the list into the
+# MASTODON_ACCOUNTS secret. Auth is a plain access token from the
+# instance web UI (Preferences -> Development -> New application,
+# scopes write:statuses + write:media) - the token does NOT expire,
+# so there is no refresh flow and a rotated token is never written
+# to a repo file (state.json is committed back, so it must never
+# hold a secret). "instance" is the instance host, e.g.
+# mastodon.social (a full URL is accepted too and normalised).
+def _load_env_mastodon_accounts():
+    raw = (os.environ.get("MASTODON_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("instance")
+                            and a.get("access_token")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets.
+        inst = (os.environ.get("MASTODON_INSTANCE", "") or "").strip()
+        atok = (os.environ.get("MASTODON_ACCESS_TOKEN", "") or "").strip()
+        user = (os.environ.get("MASTODON_USERNAME", "") or "").strip()
+        if inst and atok:
+            entry = {"instance": inst, "access_token": atok}
+            if user:
+                entry["username"] = user
+            accounts = [entry]
+    return accounts
+
+ENV_MASTODON_ACCOUNTS = _load_env_mastodon_accounts()
+
+# Telegram is a single bot token, not an account list: the user
+# creates a bot with @BotFather (/newbot) and pastes the token into
+# the TELEGRAM_BOT_TOKEN secret (the dashboard encrypts it with the
+# same sealed-box pattern as the other platforms). The token never
+# expires and there is no OAuth or refresh - a 401 means the stored
+# token is wrong or revoked. The bot is added as a channel admin
+# (Post Messages permission) and each card picks its own destination
+# channel (card field "channel", e.g. @primotodaynews). Auth is just
+# the token in the request URL: POST
+# https://api.telegram.org/bot<token>/sendMessage (chat_id, text
+# 1-4096 chars) and /sendPhoto (multipart photo upload, caption
+# 0-1024 chars). Free, no review, no approval queue (verified
+# 2026-11-25 against core.telegram.org/bots/api, Bot API 10.5).
+def _load_env_telegram_bot_token():
+    return (os.environ.get("TELEGRAM_BOT_TOKEN", "") or "").strip()
+
+ENV_TELEGRAM_BOT_TOKEN = _load_env_telegram_bot_token()
+
+# Nostr accounts can come from the env secret (GitHub Actions) or
+# from single-account env vars. Same sealed-box pattern as
+# BLUESKY_ACCOUNTS / REDDIT_ACCOUNTS / TUMBLR_ACCOUNTS /
+# THREADS_ACCOUNTS / MASTODON_ACCOUNTS: the dashboard encrypts the
+# list into the NOSTR_ACCOUNTS secret. There is NO account, NO
+# registration, NO approval and NO review on Nostr: the nsec private
+# key IS the account (secp256k1 keypair, NIP-01). Whoever holds the
+# nsec controls the identity, so it is stored ONLY in the env secret
+# - never logged, never written to a repo file, never in state.json.
+# The dashboard also saves the matching npub (public key) alongside
+# each nsec so it can label the key without doing crypto in the
+# browser; the WORKER never trusts the stored npub - it derives the
+# npub from the nsec and uses the derived value as the account key.
+def _load_env_nostr_accounts():
+    raw = (os.environ.get("NOSTR_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("nsec")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets.
+        nsec = (os.environ.get("NOSTR_NSEC", "") or "").strip()
+        name = (os.environ.get("NOSTR_NAME", "") or "").strip()
+        if nsec:
+            entry = {"nsec": nsec}
+            if name:
+                entry["name"] = name
+            accounts = [entry]
+    return accounts
+
+
+ENV_NOSTR_ACCOUNTS = _load_env_nostr_accounts()
+
+# Lemmy accounts can come from the env secret (GitHub Actions) or
+# from single-account env vars. Same sealed-box pattern as
+# BLUESKY_ACCOUNTS / REDDIT_ACCOUNTS: the dashboard encrypts the
+# list into the LEMMY_ACCOUNTS secret. No app registration exists
+# on Lemmy - the user just has an account on an instance (e.g.
+# lemmy.world) and the worker logs in with username + password.
+def _load_env_lemmy_accounts():
+    raw = (os.environ.get("LEMMY_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("instance")
+                            and a.get("username") and a.get("password")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets.
+        inst = (os.environ.get("LEMMY_INSTANCE", "") or "").strip()
+        user = (os.environ.get("LEMMY_USERNAME", "") or "").strip()
+        pw = (os.environ.get("LEMMY_PASSWORD", "") or "").strip()
+        if inst and user and pw:
+            accounts = [{"instance": inst, "username": user,
+                         "password": pw}]
+    return accounts
+
+
+ENV_LEMMY_ACCOUNTS = _load_env_lemmy_accounts()
+
+# dev.to (platform 7 of 8): ONE API key, not an account list - the
+# user creates a free dev.to account and generates the key at
+# dev.to Settings > Extensions (Settings > Extensions > "DEV
+# Community API Keys" > Generate API Key). The key is stored ONLY
+# in the DEVTO_API_KEY env secret (the dashboard encrypts it with
+# the same sealed-box pattern as the other platforms) - never
+# logged, never in state.json, never in a repo file. Auth is one
+# header: "api-key: <key>" (+ Accept:
+# application/vnd.forem.api-v1+json). Free, no app registration, no
+# review, no approval queue (verified 2026-11-25 against the
+# official Forem API v1 reference at developers.forem.com/api/v1 -
+# "Publish article" - and the dev.to API guides): POST
+# https://dev.to/api/articles with {"article": {title,
+# body_markdown, published, tags, main_image, canonical_url,
+# description}} creates an article (201). Tags are a
+# comma-separated string, max 4. canonical_url is OPTIONAL and is
+# omitted when unknown (see _devto_canonical_url). main_image is
+# the cover image URL. This is ARTICLE cross-posting, not a short
+# post: the worker writes the FULL article (the same Gemini
+# Markdown it writes for Blogger - see _devto_body_markdown) with
+# the verified photo as the cover image. Audience is developers -
+# this is an SEO/canonical play, not a news-feed play. dev.to v1
+# is POST-ONLY: article comments exist on dev.to (POST
+# /api/comments) but the comment-fetch loop was not built - see
+# execute_card. Rate limit on article creation is 10 requests per
+# 30 seconds - the worker's 5-minute gap per key is far inside it.
+def _load_env_devto_api_key():
+    return (os.environ.get("DEVTO_API_KEY", "") or "").strip()
+
+
+ENV_DEVTO_API_KEY = _load_env_devto_api_key()
+
 # Gemini models to try, in order.
 # Rebuild #7.12 (quota fix, user order 2026-11-25: use only 2-3
 # Gemini models): ONLY the models PROVEN to answer live. Health
@@ -217,6 +476,13 @@ DEFAULT_MAX_CONSECUTIVE_FAILURES = 5  # circuit breaker: pause after N failed ru
 DEFAULT_BLOGGER_ENABLED = "true"      # Blogger cards on/off
 DEFAULT_BSKY_ENABLED = "true"         # Bluesky cards on/off
 DEFAULT_REDDIT_ENABLED = "true"       # Reddit cards on/off
+DEFAULT_TUMBLR_ENABLED = "true"       # Tumblr cards on/off
+DEFAULT_THREADS_ENABLED = "true"      # Threads cards on/off
+DEFAULT_MASTODON_ENABLED = "true"     # Mastodon cards on/off
+DEFAULT_TELEGRAM_ENABLED = "true"     # Telegram cards on/off
+DEFAULT_NOSTR_ENABLED = "true"        # Nostr cards on/off
+DEFAULT_LEMMY_ENABLED = "true"        # Lemmy cards on/off
+DEFAULT_DEVTO_ENABLED = "true"        # dev.to cards on/off
 DEFAULT_REPLIES_ENABLED = "true"      # Bluesky replies on/off
 DEFAULT_CARDS_ENABLED = "true"        # cards cycle on/off
 # --- Blogger article formatting ---
@@ -386,6 +652,13 @@ def init_db():
         "blogger_enabled": str(DEFAULT_BLOGGER_ENABLED),
         "bsky_enabled": str(DEFAULT_BSKY_ENABLED),
         "reddit_enabled": str(DEFAULT_REDDIT_ENABLED),
+        "tumblr_enabled": str(DEFAULT_TUMBLR_ENABLED),
+        "threads_enabled": str(DEFAULT_THREADS_ENABLED),
+        "mastodon_enabled": str(DEFAULT_MASTODON_ENABLED),
+        "telegram_enabled": str(DEFAULT_TELEGRAM_ENABLED),
+        "nostr_enabled": str(DEFAULT_NOSTR_ENABLED),
+        "lemmy_enabled": str(DEFAULT_LEMMY_ENABLED),
+        "devto_enabled": str(DEFAULT_DEVTO_ENABLED),
         "replies_enabled": str(DEFAULT_REPLIES_ENABLED),
         "cards_enabled": str(DEFAULT_CARDS_ENABLED),
         "blogger_bold_format": str(DEFAULT_BLOGGER_BOLD_FORMAT),
@@ -581,7 +854,11 @@ def merge_worker_state(remote, local):
             merged[k] = local[k]
     for k in ("posted_promo_topics", "posted_promo_captions",
               "posted_promo_link_topics", "posted_promo_accounts",
-              "last_bsky_post_at", "last_reddit_post_at"):
+              "last_bsky_post_at", "last_reddit_post_at",
+              "last_tumblr_post_at", "last_threads_post_at",
+              "last_mastodon_post_at", "last_telegram_post_at",
+              "last_nostr_post_at", "last_lemmy_post_at",
+              "last_devto_post_at"):
         m = dict(remote.get(k) or {})
         for kk, vv in (local.get(k) or {}).items():
             if kk not in m or str(vv or "") >= str(m.get(kk) or ""):
@@ -607,6 +884,134 @@ def merge_worker_state(remote, local):
             _rc[_d] = _day
     if _rc:
         merged["reddit_post_counts"] = _rc
+    # Tumblr per-blog daily post counts: same max-wins rule as Reddit.
+    _tc_remote = remote.get("tumblr_post_counts") or {}
+    _tc_local = local.get("tumblr_post_counts") or {}
+    _tc = {}
+    for _d in set(_tc_remote) | set(_tc_local):
+        _day = {}
+        for _u in set((_tc_remote.get(_d) or {})) | set((_tc_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_tc_remote.get(_d) or {}).get(_u) or 0),
+                               int((_tc_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_tc_remote.get(_d) or {}).get(_u)
+                            or (_tc_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _tc[_d] = _day
+    if _tc:
+        merged["tumblr_post_counts"] = _tc
+    # Threads per-user daily post counts: same max-wins rule as Reddit/Tumblr.
+    _th_remote = remote.get("threads_post_counts") or {}
+    _th_local = local.get("threads_post_counts") or {}
+    _th = {}
+    for _d in set(_th_remote) | set(_th_local):
+        _day = {}
+        for _u in set((_th_remote.get(_d) or {})) | set((_th_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_th_remote.get(_d) or {}).get(_u) or 0),
+                               int((_th_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_th_remote.get(_d) or {}).get(_u)
+                            or (_th_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _th[_d] = _day
+    if _th:
+        merged["threads_post_counts"] = _th
+    # Mastodon per-account daily post counts: same max-wins rule as Reddit/Tumblr/Threads.
+    _ma_remote = remote.get("mastodon_post_counts") or {}
+    _ma_local = local.get("mastodon_post_counts") or {}
+    _ma = {}
+    for _d in set(_ma_remote) | set(_ma_local):
+        _day = {}
+        for _u in set((_ma_remote.get(_d) or {})) | set((_ma_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_ma_remote.get(_d) or {}).get(_u) or 0),
+                               int((_ma_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_ma_remote.get(_d) or {}).get(_u)
+                            or (_ma_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _ma[_d] = _day
+    if _ma:
+        merged["mastodon_post_counts"] = _ma
+    # Telegram per-channel daily post counts: same max-wins rule as
+    # Reddit/Tumblr/Threads/Mastodon (the key is the channel, e.g.
+    # @primotodaynews - one bot can post to several channels).
+    _tg_remote = remote.get("telegram_post_counts") or {}
+    _tg_local = local.get("telegram_post_counts") or {}
+    _tg = {}
+    for _d in set(_tg_remote) | set(_tg_local):
+        _day = {}
+        for _u in set((_tg_remote.get(_d) or {})) | set((_tg_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_tg_remote.get(_d) or {}).get(_u) or 0),
+                               int((_tg_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_tg_remote.get(_d) or {}).get(_u)
+                            or (_tg_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _tg[_d] = _day
+    if _tg:
+        merged["telegram_post_counts"] = _tg
+    # Nostr per-key daily post counts: same max-wins rule as
+    # Reddit/Tumblr/Threads/Mastodon/Telegram (the key is the npub -
+    # the public key, never the nsec - so state.json stays secret-free).
+    _no_remote = remote.get("nostr_post_counts") or {}
+    _no_local = local.get("nostr_post_counts") or {}
+    _no = {}
+    for _d in set(_no_remote) | set(_no_local):
+        _day = {}
+        for _u in set((_no_remote.get(_d) or {})) | set((_no_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_no_remote.get(_d) or {}).get(_u) or 0),
+                               int((_no_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_no_remote.get(_d) or {}).get(_u)
+                            or (_no_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _no[_d] = _day
+    if _no:
+        merged["nostr_post_counts"] = _no
+    # Lemmy per-account daily post counts: same max-wins rule as
+    # Reddit/Tumblr/Threads/Mastodon/Telegram/Nostr (the key is
+    # "instance|username" - public, never a password or JWT).
+    _le_remote = remote.get("lemmy_post_counts") or {}
+    _le_local = local.get("lemmy_post_counts") or {}
+    _le = {}
+    for _d in set(_le_remote) | set(_le_local):
+        _day = {}
+        for _u in set((_le_remote.get(_d) or {})) | set((_le_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_le_remote.get(_d) or {}).get(_u) or 0),
+                               int((_le_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_le_remote.get(_d) or {}).get(_u)
+                            or (_le_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _le[_d] = _day
+    if _le:
+        merged["lemmy_post_counts"] = _le
+    # dev.to per-key daily post counts: same max-wins rule as
+    # Reddit/Tumblr/Threads/Mastodon/Telegram/Nostr/Lemmy (the key
+    # is "devto" - one API key, no account name, never the key
+    # itself).
+    _de_remote = remote.get("devto_post_counts") or {}
+    _de_local = local.get("devto_post_counts") or {}
+    _de = {}
+    for _d in set(_de_remote) | set(_de_local):
+        _day = {}
+        for _u in set((_de_remote.get(_d) or {})) | set((_de_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_de_remote.get(_d) or {}).get(_u) or 0),
+                               int((_de_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_de_remote.get(_d) or {}).get(_u)
+                            or (_de_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _de[_d] = _day
+    if _de:
+        merged["devto_post_counts"] = _de
     for k, cap in (("posted_urls", 500), ("posted_topics", 500),
                    ("replied_comments", 2000), ("recent_articles", 50)):
         seen = {}
@@ -743,6 +1148,77 @@ def write_dashboard_json(state):
                 "posts_limit": reddit_account_posts_limit(u),
                 "posts_today": posts_today_for_reddit_account(state, u),
             })
+        tumblr_accounts_detail = []
+        for a in list_tumblr_accounts():
+            b = a["blog"]
+            tumblr_accounts_detail.append({
+                "blog": b,
+                "enabled": tumblr_account_enabled(b),
+                "posts_limit": tumblr_account_posts_limit(b),
+                "posts_today": posts_today_for_tumblr_account(state, b),
+            })
+        threads_accounts_detail = []
+        for a in list_threads_accounts():
+            u = a["user_id"]
+            threads_accounts_detail.append({
+                "user_id": u,
+                "username": a.get("username", ""),
+                "enabled": threads_account_enabled(u),
+                "posts_limit": threads_account_posts_limit(u),
+                "posts_today": posts_today_for_threads_account(state, u),
+            })
+        mastodon_accounts_detail = []
+        for a in list_mastodon_accounts():
+            k = _mastodon_account_key(a)
+            mastodon_accounts_detail.append({
+                "key": k,
+                "instance": _mastodon_instance_base(a),
+                "username": a.get("username", ""),
+                "enabled": mastodon_account_enabled(k),
+                "posts_limit": mastodon_account_posts_limit(k),
+                "posts_today": posts_today_for_mastodon_account(state, k),
+            })
+        telegram_accounts_detail = []
+        for a in list_telegram_accounts():
+            k = _telegram_account_key(a)
+            telegram_accounts_detail.append({
+                "key": k,
+                "enabled": telegram_account_enabled(k),
+                "posts_limit": telegram_account_posts_limit(k),
+                "posts_today": posts_today_for_telegram_bot(state),
+            })
+        nostr_accounts_detail = []
+        for a in list_nostr_accounts():
+            k = _nostr_account_key(a)
+            nostr_accounts_detail.append({
+                "key": k,
+                "npub": k,
+                "name": a.get("name", ""),
+                "enabled": nostr_account_enabled(k),
+                "posts_limit": nostr_account_posts_limit(k),
+                "posts_today": posts_today_for_nostr_account(state, k),
+            })
+        lemmy_accounts_detail = []
+        for a in list_lemmy_accounts():
+            k = _lemmy_account_key(a)
+            lemmy_accounts_detail.append({
+                "key": k,
+                "instance": _lemmy_instance_base(a),
+                "username": a.get("username", ""),
+                "enabled": lemmy_account_enabled(k),
+                "posts_limit": lemmy_account_posts_limit(k),
+                "posts_today": posts_today_for_lemmy_account(state, k),
+            })
+        devto_accounts_detail = []
+        for a in list_devto_accounts():
+            k = _devto_account_key(a)
+            devto_accounts_detail.append({
+                "key": k,
+                "name": a.get("name", "dev.to"),
+                "enabled": devto_account_enabled(k),
+                "posts_limit": devto_account_posts_limit(k),
+                "posts_today": posts_today_for_devto_account(state, k),
+            })
         # Enriched file cards (data/cards.json) for the dashboard: status
         # badge, last run, next 5 runs (Dhaka), success/fail counters.
         file_stats = state.get("file_card_stats", {}) or {}
@@ -763,6 +1239,8 @@ def write_dashboard_json(state):
                 "computed_status": computed,
                 "link": c.get("link", ""),
                 "subreddit": c.get("subreddit", ""),
+                "community": c.get("community", ""),
+                "channel": c.get("channel", ""),
                 "account_handle": c.get("account_handle", ""),
                 "interval_minutes": card_interval_minutes(c),
                 "posts_per_day": card_posts_per_day(c),
@@ -822,7 +1300,11 @@ def write_dashboard_json(state):
             "settings": {k: get_setting(k, "") for k in
                          ("paused", "dry_run",
                           "max_consecutive_failures", "blogger_enabled",
-                          "bsky_enabled", "reddit_enabled", "replies_enabled",
+                          "bsky_enabled", "reddit_enabled", "tumblr_enabled",
+                          "threads_enabled", "mastodon_enabled",
+                          "telegram_enabled", "nostr_enabled",
+                          "lemmy_enabled", "devto_enabled",
+                          "replies_enabled",
                           "cards_enabled",
                           "blogger_bold_format",
                           "card_default_interval_hours",
@@ -844,6 +1326,13 @@ def write_dashboard_json(state):
             "account_handles": [a["handle"] for a in list_accounts()],
             "accounts_detail": accounts_detail,
             "reddit_accounts_detail": reddit_accounts_detail,
+            "tumblr_accounts_detail": tumblr_accounts_detail,
+            "threads_accounts_detail": threads_accounts_detail,
+            "mastodon_accounts_detail": mastodon_accounts_detail,
+            "telegram_accounts_detail": telegram_accounts_detail,
+            "nostr_accounts_detail": nostr_accounts_detail,
+            "lemmy_accounts_detail": lemmy_accounts_detail,
+            "devto_accounts_detail": devto_accounts_detail,
             "health": health_check(state),
             "issues": get_issues(state),
             "dry_run": is_dry_run(),
@@ -3963,6 +4452,23 @@ def log_card_settings(card):
     if card.get("type") == "reddit_post":
         extra = (" subreddit=r/" +
                  (card.get("subreddit") or "").strip().lstrip("r/"))
+    if card.get("type") == "tumblr_post":
+        extra = (" blog=" + (card.get("account_handle") or "").strip())
+    if card.get("type") == "threads_post":
+        extra = (" user_id=" + (card.get("account_handle") or "").strip())
+    if card.get("type") == "mastodon_post":
+        extra = (" instance=" + (card.get("account_handle") or "").strip())
+    if card.get("type") == "telegram_post":
+        extra = (" channel=" + (card.get("channel") or "").strip())
+    if card.get("type") == "nostr_post":
+        extra = (" npub=" + (card.get("account_handle") or "").strip())
+    if card.get("type") == "lemmy_post":
+        extra = (" community=c/" +
+                 (card.get("community") or "").strip().lstrip("!").lstrip("c/"))
+    if card.get("type") == "devto_post":
+        extra = (" tags=" + ",".join(_devto_tags(card, "")) +
+                 (" canonical=set" if _devto_canonical_url(card)
+                  else " canonical=not-set"))
     log("info", f"card '{name}': settings type={card.get('type', '')} "
                 f"posts/day={card_posts_per_day(card)} "
                 f"posts/run={card_posts_per_run(card)} "
@@ -5181,6 +5687,3169 @@ def _post_reddit_card(card, state, due_slots):
     return made, ("" if made else "post failed or skipped")
 
 
+# ---------------------------------------------------------------- Tumblr
+# Free, no review (verified 2026-11-25 against Tumblr's own API docs,
+# github.com/tumblr/docs api.md, plus Breakreach's Oct 2026 check of
+# the same docs): register an app at tumblr.com/oauth/apps, OAuth2
+# scopes basic write offline_access, POST /v2/blog/{blog}/posts with
+# the post in NPF (Neue Post Format) blocks. Photos upload in the
+# SAME request as multipart/form-data: a "json" part first, then one
+# file part per media identifier. A remote image URL does NOT work
+# for a new photo (the docs only document media URLs for files
+# already on Tumblr) - the worker uploads the verified photo bytes
+# it already downloaded. Access tokens last 42 minutes (2,520s);
+# each refresh returns a NEW access token AND a new refresh token
+# (42 days). Rate: 1,000 calls/hour and 5,000/day per consumer key,
+# 250 posts/day per user. The worker refreshes ONLY on a 401, never
+# speculatively, and keeps refreshed tokens in memory for the rest
+# of the run - a rotated refresh token is NEVER written to a repo
+# file (state.json is committed back, so it must never hold a
+# secret). If the stored refresh token stops working after a
+# rotation, the log + health check say plainly to re-authorize in
+# the Tumblr tab. Tumblr has NO public comment-reply API, so
+# Tumblr cards post only - there is no reply cycle (unlike Reddit).
+TUMBLR_TOKEN_URL = "https://api.tumblr.com/v2/oauth2/token"
+TUMBLR_API_BASE = "https://api.tumblr.com"
+TUMBLR_MIN_POST_GAP_MINUTES = 5
+# In-memory OAuth2 token cache: blog -> (access_token, refresh_token,
+# expires_at). Tokens live 42 minutes; the cache is per run (the
+# worker is short-lived). Blogs whose refresh token rotated during
+# this run (the new token differs from the stored one).
+_TUMBLR_TOKENS = {}
+_TUMBLR_ROTATED = set()
+
+LAST_TUMBLR_SKIP = None
+
+
+def list_tumblr_accounts():
+    """All Tumblr accounts: the TUMBLR_ACCOUNTS env secret (JSON list)
+    or the single-account env vars. (The dashboard saves accounts
+    encrypted into the secret, same sealed-box pattern as Bluesky.)"""
+    return list(ENV_TUMBLR_ACCOUNTS)
+
+
+def _tumblr_user_agent():
+    # Tumblr requires a consistent User-Agent per app (it can
+    # suspend apps whose User-Agent changes) - one fixed value.
+    return "automation-website/1.0"
+
+
+def _tumblr_blog_key(account):
+    return ((account or {}).get("blog") or "").strip()
+
+
+def _tumblr_token(account):
+    """Current access token for a Tumblr account: the cached
+    (refreshed) token while it is valid, else the stored token from
+    the secret. Returns the token string or ''. Never logs a token."""
+    blog = _tumblr_blog_key(account)
+    cached = _TUMBLR_TOKENS.get(blog)
+    if cached:
+        token, _refresh, expires_at = cached
+        if token and expires_at > now_utc() + timedelta(seconds=30):
+            return token
+    return (account or {}).get("access_token", "") or ""
+
+
+def _tumblr_refresh(account):
+    """Refresh a Tumblr account's access token (grant_type=
+    refresh_token). Returns the new access token or None. The new
+    refresh token is cached in memory for the rest of this run (so
+    later posts in the same run reuse it) and NEVER written to disk:
+    state.json is committed back to the repo, so it must never hold
+    a secret. When Tumblr issues a different refresh token than the
+    one stored, the blog is marked rotated and the log says plainly
+    that the stored refresh token may stop working - re-authorize
+    in the Tumblr tab if the next run fails to refresh. Logs only
+    success or failure - never any token or credential value."""
+    blog = _tumblr_blog_key(account)
+    cached = _TUMBLR_TOKENS.get(blog)
+    refresh_token = ""
+    if cached and cached[1]:
+        refresh_token = cached[1]
+    if not refresh_token:
+        refresh_token = (account or {}).get("refresh_token", "") or ""
+    if not refresh_token:
+        log("warning", f"tumblr: no refresh token for blog '{blog}' - "
+                       "re-authorize in the Tumblr tab")
+        return None
+    try:
+        r = requests.post(
+            TUMBLR_TOKEN_URL,
+            data={"grant_type": "refresh_token",
+                  "client_id": account.get("client_id", ""),
+                  "client_secret": account.get("client_secret", ""),
+                  "refresh_token": refresh_token},
+            headers={"User-Agent": _tumblr_user_agent()},
+            timeout=20)
+    except Exception as e:
+        log("warning", f"tumblr token refresh failed for blog '{blog}': {e}")
+        return None
+    if r.status_code != 200:
+        try:
+            err = (r.json() or {}).get("error", "")
+        except Exception:
+            err = ""
+        log("warning", f"tumblr token refresh failed for blog '{blog}': "
+                       f"HTTP {r.status_code}"
+                       + (" (invalid_grant - the stored refresh token "
+                          "no longer works, re-authorize in the Tumblr tab)"
+                          if err == "invalid_grant" else ""))
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", f"tumblr token refresh response not JSON for blog '{blog}'")
+        return None
+    token = data.get("access_token", "")
+    if not token:
+        log("warning", f"tumblr token refresh returned no token for blog '{blog}'")
+        return None
+    new_refresh = data.get("refresh_token", "") or refresh_token
+    try:
+        expires_in = int(data.get("expires_in") or 2520)
+    except Exception:
+        expires_in = 2520
+    _TUMBLR_TOKENS[blog] = (
+        token, new_refresh,
+        now_utc() + timedelta(seconds=max(60, expires_in - 60)))
+    if new_refresh != refresh_token:
+        _TUMBLR_ROTATED.add(blog)
+        log("warning", f"tumblr: Tumblr issued a new refresh token for "
+                       f"blog '{blog}' - the stored refresh token may "
+                       "stop working; if the next run fails to refresh, "
+                       "re-authorize in the Tumblr tab")
+    log("info", f"tumblr: refreshed access token for blog '{blog}'")
+    return token
+
+
+def tumblr_request(account, method, path, **kwargs):
+    """One authenticated Tumblr API call. Returns the Response or None.
+    On a 401 the token is refreshed and the call is retried once with
+    the fresh token. kwargs pass through to requests (params/data/
+    files). The User-Agent is fixed per app (Tumblr suspends apps
+    whose User-Agent changes)."""
+    blog = _tumblr_blog_key(account)
+    headers = dict(kwargs.pop("headers", {}) or {})
+    headers["User-Agent"] = _tumblr_user_agent()
+    url = TUMBLR_API_BASE + path
+    for attempt in (1, 2):
+        token = _tumblr_token(account)
+        if not token:
+            return None
+        headers["Authorization"] = f"Bearer {token}"
+        try:
+            r = requests.request(method, url, headers=headers, timeout=25,
+                                 **kwargs)
+        except Exception as e:
+            log("warning", f"tumblr {method} {path} failed: {e}")
+            return None
+        if r.status_code == 401 and attempt == 1:
+            _TUMBLR_TOKENS.pop(blog, None)
+            log("info", f"tumblr: token expired for blog '{blog}' - refreshing")
+            if not _tumblr_refresh(account):
+                return None
+            continue
+        return r
+    return None
+
+
+def _tumblr_tags(topic):
+    """NPF tags for a post, from the picker's category topic:
+    Political news -> news, politics, usa; war news -> news, war.
+    Returned as one comma-separated string, without '#'."""
+    t = (topic or "").lower()
+    if "war" in t:
+        return "news, war"
+    return "news, politics, usa"
+
+
+def _tumblr_npf_body(headline, hook, link, image_mime, topic=""):
+    """The NPF post body for POST /v2/blog/{blog}/posts: a heading
+    text block (the headline), an image block (media identifier
+    'photo1', matched by the multipart file part), the hook as a text
+    block, and a link block to the story. Pure function (no I/O) -
+    unit-tested. Caps are enforced here, at this single send point:
+    headline 300 chars, hook 400 chars (Tumblr allows 4,096 code
+    points per text block)."""
+    headline = (headline or "").strip()[:300]
+    hook = (hook or "").strip()[:400]
+    link = (link or "").strip()
+    content = []
+    if headline:
+        content.append({"type": "text", "subtype": "heading1",
+                        "text": headline})
+    content.append({"type": "image", "media": [
+        {"type": image_mime or "image/jpeg", "identifier": "photo1"}]})
+    if hook:
+        content.append({"type": "text", "text": hook})
+    if link:
+        content.append({"type": "link", "url": link, "title": headline})
+    body = {"content": content, "state": "published",
+            "tags": _tumblr_tags(topic)}
+    if link:
+        body["source_url"] = link
+    return body
+
+
+def tumblr_submit(account, blog, headline, hook, link, image_path,
+                  topic=""):
+    """Publish one Tumblr post: NPF content + the verified photo
+    bytes as multipart/form-data (json part first, then the 'photo1'
+    file part). Returns (post_id, post_url) or None. The photo must
+    already be downloaded + verified (download_image only ever
+    produces .jpg/.png, both accepted by Tumblr)."""
+    blog = (blog or "").strip()
+    if not blog:
+        return None
+    if not image_path or not os.path.exists(image_path):
+        log("warning", "tumblr submit failed: no verified photo file")
+        return None
+    mime = "image/png" if str(image_path).lower().endswith(".png") \
+        else "image/jpeg"
+    try:
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
+    except Exception as e:
+        log("warning", f"tumblr submit failed: cannot read photo: {e}")
+        return None
+    if len(img_bytes) < 1000:
+        log("warning", "tumblr submit failed: photo file too small")
+        return None
+    body = _tumblr_npf_body(headline, hook, link, mime, topic)
+    fname = os.path.basename(image_path) or "photo.jpg"
+    files = {"json": (None, json.dumps(body), "application/json"),
+             "photo1": (fname, img_bytes, mime)}
+    r = tumblr_request(account, "POST", f"/v2/blog/{blog}/posts",
+                       files=files)
+    if r is None or r.status_code != 201:
+        log("warning", "tumblr submit failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "tumblr submit response not JSON")
+        return None
+    post_id = str(((data or {}).get("response") or {}).get("id", ""))
+    if not post_id:
+        log("warning", "tumblr submit returned no post id")
+        return None
+    post_url = ""
+    if "." not in blog and not blog.startswith("t:"):
+        post_url = f"https://{blog}.tumblr.com/post/{post_id}"
+    log("info", f"tumblr: posted to {blog}: {post_url or post_id}")
+    return post_id, post_url
+
+
+TUMBLR_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "tumblr_accounts.json")
+
+
+def get_tumblr_account_settings():
+    """Per-account settings from data/tumblr_accounts.json (public, no
+    passwords): [{blog, enabled, posts_per_day}]. Missing file = all
+    enabled. Kept in its own file (not accounts.json) so saving
+    Bluesky/Reddit controls can never wipe Tumblr entries and vice
+    versa - the dashboard writes this file from the Tumblr tab."""
+    if not os.path.exists(TUMBLR_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(TUMBLR_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {a["blog"]: a for a in data
+                    if isinstance(a, dict) and a.get("blog")}
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"tumblr_accounts.json load failed: {e}")
+    return {}
+
+
+def tumblr_account_enabled(blog):
+    cfg = get_tumblr_account_settings().get(blog)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def tumblr_account_posts_limit(blog):
+    cfg = get_tumblr_account_settings().get(blog)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+TUMBLR_CAPTION_PROMPT = """Write ONE short, exciting Tumblr post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 400 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+Style: {tone}
+News: {headline}
+Link: {link}
+"""
+
+
+def _tumblr_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the Tumblr
+    blog, not the card name (same rule as Bluesky/Reddit - two cards
+    sharing one blog must not burst-post to it)."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _tumblr_gap_left(state, blog):
+    """Time left on the 5-minute no-burst gap for a Tumblr blog,
+    or None when it may post again."""
+    last = (state.get("last_tumblr_post_at") or {}).get(blog or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=TUMBLR_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_tumblr_post_at(state, blog):
+    """Remember that this Tumblr blog posted now (state.json, so
+    the gap survives across worker runs)."""
+    state.setdefault("last_tumblr_post_at", {})[blog or ""] = now_iso()
+
+
+def record_tumblr_post(state, blog):
+    """Count a Tumblr post for this blog today (per-blog limits)."""
+    counts = state.setdefault("tumblr_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[blog] = int(today.get(blog, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_tumblr_account(state, blog):
+    counts = state.get("tumblr_post_counts", {})
+    return int(counts.get(today_str(), {}).get(blog, 0))
+
+
+def _card_tumblr_post(card, state):
+    """Post ONE Tumblr card. Returns True on success.
+    The post is an NPF post to the card's blog: a heading (the fresh
+    story's headline), the story's VERIFIED real photo (uploaded as
+    multipart bytes - Tumblr does not take a remote image URL), a
+    hook caption, and a link block to the story (the card's link, or
+    the story's own URL when the card has no link). The story comes
+    from the SAME picker as Bluesky (_pick_fresh_promo_news) and the
+    SAME shared 24h per-topic / per-link cooldown stores are
+    recorded, so the same story never goes to Bluesky, Reddit and
+    Tumblr on the same day. No verified photo = skip (LAST_TUMBLR_SKIP
+    'no_photo'), never text-only. Same 5-minute no-burst gap per
+    blog. A cooldown / no-news / no-photo skip is a clean no-op."""
+    global LAST_TUMBLR_SKIP
+    LAST_TUMBLR_SKIP = None
+    name = card.get("name", "")
+    accs = [a for a in list_tumblr_accounts()
+            if not card.get("account_handle") or
+            a["blog"] == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Tumblr account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, photo = _pick_fresh_promo_news(card, state)
+    if not photo:
+        # _pick_fresh_promo_news already logged why (LAST_BSKY_SKIP).
+        log("warning", f"card '{name}': no photo, skipped - Tumblr post "
+                       "needs a verified real news photo")
+        LAST_TUMBLR_SKIP = {"no_photo": "no_photo", "no_news": "no_news"}.get(
+            LAST_BSKY_SKIP, "cooldown")
+        return False
+    headline = headline or topic
+    effective_link = link or (photo.get("article_url") or "")
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_TUMBLR_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_TUMBLR_SKIP = "cooldown"
+        return False
+    image_path = (photo or {}).get("local_path", "")
+    if not image_path or not os.path.exists(image_path):
+        log("warning", f"card '{name}': no photo, skipped - verified photo "
+                       "file is missing")
+        LAST_TUMBLR_SKIP = "no_photo"
+        return False
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    text = (card.get("text") or "").strip()
+    if not text:
+        try:
+            text = (ai_write(
+                TUMBLR_CAPTION_PROMPT.format(
+                    headline=headline[:150], link=effective_link,
+                    tone=tone_text), max_tokens=400) or "").strip()
+        except Exception:
+            text = ""
+        if not text:
+            text = headline
+    text = text[:400]
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to "
+                       f"{accs[0]['blog']} '{headline[:60]}' -> "
+                       f"{effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        blog = acc["blog"]
+        if not tumblr_account_enabled(blog):
+            continue
+        limit = tumblr_account_posts_limit(blog)
+        if limit > 0 and posts_today_for_tumblr_account(state, blog) >= limit:
+            log("info", f"card '{name}': blog {blog} daily limit "
+                        "reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: tumblr_submit(acc, blog, headline, text,
+                                  effective_link, image_path, topic),
+            attempts=2, base_delay=5, label="tumblr submit")
+        if res:
+            post_id, post_url = res
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, blog)
+            record_tumblr_post(state, blog)
+            _record_tumblr_post_at(state, blog)
+            if blog in _TUMBLR_ROTATED:
+                # Timestamp only (never a token value): the dashboard
+                # can show that this blog's refresh token rotated.
+                state.setdefault("tumblr_refresh_rotated_at", {})[blog] = now_iso()
+            log("info", f"card '{name}': posted to {blog}: "
+                        f"{post_url or post_id}")
+            ok = True
+            break
+        log("warning", f"card '{name}': tumblr submit failed")
+    return ok
+
+
+def _post_tumblr_card(card, state, due_slots):
+    """The posting loop for tumblr_post cards. Returns (made, last_error).
+    Mirrors _post_reddit_card: 5-minute gap per blog, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news, no photo) are no-ops, not failures."""
+    global LAST_TUMBLR_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _tumblr_gap_key(card)
+    if not dry and _tumblr_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{TUMBLR_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_tumblr_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_TUMBLR_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_tumblr_post_at(state, gap_key)
+        else:
+            if LAST_TUMBLR_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_TUMBLR_SKIP == "no_photo":
+        return 0, "no photo, skipped"
+    if made == 0 and LAST_TUMBLR_SKIP == "no_news":
+        return 0, "no fresh news"
+    return made, ("" if made else "post failed or skipped")
+
+
+# ---------------------------------------------------------------- Threads
+# Free, no review for your OWN account (verified 2026-11-25 against
+# Meta's own Threads API docs, developers.facebook.com/documentation/
+# threads/get-started + /posts): create a Meta app with the Threads
+# use case (use the THREADS app ID + secret, not the app's main
+# ones), permissions threads_basic + threads_content_publish. Until
+# the app passes App Review, only Threads testers on the app can
+# grant the permissions - the user adds themself as a Threads tester
+# (App Dashboard > App roles > Roles > Add People > Threads Tester)
+# and accepts the invite in Threads settings, so NO App Review is
+# needed for their own account. OAuth: authorize window at
+# threads.com/oauth/authorize -> 1h short-lived token -> exchange
+# for a 60-day long-lived token (GET /access_token with
+# grant_type=th_exchange_token). Publishing is TWO calls, same shape
+# as Instagram: (1) POST /v1.0/{user-id}/threads creates a media
+# container (media_type TEXT/IMAGE, text, image_url), (2) POST
+# /v1.0/{user-id}/threads_publish with creation_id publishes it.
+# Meta recommends waiting ~30s between the two so the container is
+# processed (the worker polls the container status and publishes as
+# soon as it is FINISHED, falling back to the full wait). Limits:
+# 500 characters per post, max 5 links, 250 posts per profile per
+# 24h. Media: Threads downloads the image from a PUBLIC URL - the
+# worker uses the photo's ORIGINAL public URL (the news article's
+# og:image / search-result URL it downloaded from), never uploads
+# the image anywhere itself. If no public URL is available the post
+# goes out TEXT-only (never a skipped run for that reason alone).
+# The worker refreshes a long-lived token ONLY when it is at least
+# 24 hours old (age from token_obtained_at, recorded by the
+# dashboard authorize helper) or on a 401, and keeps refreshed
+# tokens in memory for the rest of the run - a rotated token is
+# NEVER written to a repo file (state.json is committed back, so it
+# must never hold a secret). If the stored token stops working
+# after a rotation, the log + health check say plainly to
+# re-authorize in the Threads tab. Threads HAS reply endpoints
+# (threads_read_replies / threads_manage_replies), but they need two
+# extra permissions and a per-post reply-fetch loop - v1 is
+# POST-ONLY, like Tumblr (no reply API was built for it either).
+# Replies are a possible follow-up, not part of this build.
+THREADS_API_BASE = "https://graph.threads.net"
+THREADS_MIN_POST_GAP_MINUTES = 5
+THREADS_MAX_TEXT_CHARS = 500
+THREADS_CONTAINER_WAIT_SECONDS = 30
+THREADS_TOKEN_MIN_AGE_TO_REFRESH_HOURS = 24
+THREADS_TOKEN_LIFETIME_SECONDS = 5184000  # 60 days
+# In-memory OAuth token cache: user_id -> (access_token, expires_at,
+# obtained_at). Tokens live 60 days; the cache is per run (the
+# worker is short-lived). User IDs whose token rotated during this
+# run, and user IDs already age-checked this run (the 24h refresh
+# must fire at most once per run per account).
+_THREADS_TOKENS = {}
+_THREADS_ROTATED = set()
+_THREADS_AGE_CHECKED = set()
+
+LAST_THREADS_SKIP = None
+
+
+def list_threads_accounts():
+    """All Threads accounts: the THREADS_ACCOUNTS env secret (JSON list)
+    or the single-account env vars. (The dashboard saves accounts
+    encrypted into the secret, same sealed-box pattern as Bluesky.)"""
+    return list(ENV_THREADS_ACCOUNTS)
+
+
+def _threads_user_key(account):
+    return ((account or {}).get("user_id") or "").strip()
+
+
+def _threads_token_age_hours(account):
+    """Age in hours of the stored long-lived token, from the
+    token_obtained_at the dashboard authorize helper recorded - or
+    None when the age is unknown (token pasted by hand: refresh only
+    on a 401, never speculatively)."""
+    raw = (account or {}).get("token_obtained_at", "") or ""
+    if not raw:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(raw))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    return (now_utc() - dt).total_seconds() / 3600.0
+
+
+def _threads_token(account):
+    """Current access token for a Threads account: the cached
+    (refreshed) token while it is valid, else the stored token from
+    the secret. Returns the token string or ''. Never logs a token."""
+    uid = _threads_user_key(account)
+    cached = _THREADS_TOKENS.get(uid)
+    if cached:
+        token, expires_at, _obtained = cached
+        if token and expires_at > now_utc() + timedelta(seconds=30):
+            return token
+    return (account or {}).get("access_token", "") or ""
+
+
+def _threads_refresh(account):
+    """Refresh a Threads account's long-lived token (GET
+    /refresh_access_token with grant_type=th_refresh_token). Returns
+    the new access token or None. The new token is cached in memory
+    for the rest of this run (so later posts in the same run reuse
+    it) and NEVER written to disk: state.json is committed back to
+    the repo, so it must never hold a secret. When Threads issues a
+    different token than the one stored, the user is marked rotated
+    and the log says plainly that the stored token may stop working
+    - re-authorize in the Threads tab if the next run fails. Logs
+    only success or failure - never any token or credential value."""
+    uid = _threads_user_key(account)
+    cached = _THREADS_TOKENS.get(uid)
+    current = ""
+    if cached and cached[0]:
+        current = cached[0]
+    if not current:
+        current = (account or {}).get("access_token", "") or ""
+    if not current:
+        log("warning", f"threads: no access token for user '{uid}' - "
+                       "re-authorize in the Threads tab")
+        return None
+    try:
+        r = requests.get(
+            THREADS_API_BASE + "/refresh_access_token",
+            params={"grant_type": "th_refresh_token",
+                    "access_token": current},
+            timeout=20)
+    except Exception as e:
+        log("warning", f"threads token refresh failed for user '{uid}': {e}")
+        return None
+    if r.status_code != 200:
+        try:
+            err = (r.json() or {}).get("error", {})
+            err = err.get("message", "") if isinstance(err, dict) else str(err)
+        except Exception:
+            err = ""
+        log("warning", f"threads token refresh failed for user '{uid}': "
+                       f"HTTP {r.status_code}"
+                       + (" (the stored token no longer works, "
+                          "re-authorize in the Threads tab)"
+                          if r.status_code in (400, 401) else ""))
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", f"threads token refresh response not JSON for user '{uid}'")
+        return None
+    token = data.get("access_token", "")
+    if not token:
+        log("warning", f"threads token refresh returned no token for user '{uid}'")
+        return None
+    try:
+        expires_in = int(data.get("expires_in") or THREADS_TOKEN_LIFETIME_SECONDS)
+    except Exception:
+        expires_in = THREADS_TOKEN_LIFETIME_SECONDS
+    _THREADS_TOKENS[uid] = (
+        token, now_utc() + timedelta(seconds=max(60, expires_in - 60)),
+        now_utc())
+    if token != current:
+        _THREADS_ROTATED.add(uid)
+        log("warning", f"threads: Threads issued a new access token for "
+                       f"user '{uid}' - the stored token may stop "
+                       "working; if the next run fails to refresh, "
+                       "re-authorize in the Threads tab")
+    log("info", f"threads: refreshed access token for user '{uid}'")
+    return token
+
+
+def _threads_refresh_if_old(account):
+    """Refresh the token when it is at least 24 hours old (and its
+    age is known), at most once per run per account. Returns True
+    when a refresh was attempted. A failed refresh never blocks the
+    post - the stored token may still work until its 60 days end."""
+    uid = _threads_user_key(account)
+    if uid in _THREADS_AGE_CHECKED:
+        return False
+    _THREADS_AGE_CHECKED.add(uid)
+    age = _threads_token_age_hours(account)
+    if age is None or age < THREADS_TOKEN_MIN_AGE_TO_REFRESH_HOURS:
+        return False
+    log("info", f"threads: token for user '{uid}' is "
+                f"{int(age)}h old - refreshing")
+    _threads_refresh(account)
+    return True
+
+
+def threads_request(account, method, path, **kwargs):
+    """One authenticated Threads API call. Returns the Response or None.
+    The access token is sent exactly as Meta's docs show it - as the
+    access_token request parameter (POST data / GET query) - never as
+    a Bearer header. On a 401 the token is refreshed and the call is
+    retried once with the fresh token. kwargs pass through to
+    requests (params/data). A token at least 24h old is refreshed
+    once per run before the first call (see _threads_refresh_if_old)."""
+    uid = _threads_user_key(account)
+    _threads_refresh_if_old(account)
+    url = THREADS_API_BASE + path
+    for attempt in (1, 2):
+        token = _threads_token(account)
+        if not token:
+            return None
+        if (method or "GET").upper() == "GET":
+            params = dict(kwargs.pop("params", {}) or {})
+            params["access_token"] = token
+            kwargs["params"] = params
+        else:
+            data = dict(kwargs.pop("data", {}) or {})
+            data["access_token"] = token
+            kwargs["data"] = data
+        try:
+            r = requests.request(method, url, timeout=25, **kwargs)
+        except Exception as e:
+            log("warning", f"threads {method} {path} failed: {e}")
+            return None
+        if r.status_code == 401 and attempt == 1:
+            _THREADS_TOKENS.pop(uid, None)
+            log("info", f"threads: token expired for user '{uid}' - refreshing")
+            if not _threads_refresh(account):
+                return None
+            continue
+        return r
+    return None
+
+
+def _fit_threads_text(hook, link):
+    """The Threads post text: hook + link, hard-capped at 500
+    characters at this single send point (Threads' limit; the link
+    is never cut - the hook is trimmed to make room). Pure function
+    (no I/O) - unit-tested."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    if not link:
+        return hook[:THREADS_MAX_TEXT_CHARS]
+    text = hook + "\n" + link if hook else link
+    if len(text) <= THREADS_MAX_TEXT_CHARS:
+        return text
+    room = THREADS_MAX_TEXT_CHARS - len(link) - 1
+    if room <= 0:
+        return link[:THREADS_MAX_TEXT_CHARS]
+    return hook[:room].rstrip() + "\n" + link
+
+
+def threads_create_container(account, user_id, text, image_url=None):
+    """Create a Threads media container: POST /v1.0/{user-id}/threads.
+    IMAGE + the photo's original PUBLIC url when one is available
+    (Threads downloads it), else TEXT. Returns the container id or
+    None."""
+    user_id = (user_id or "").strip()
+    if not user_id:
+        return None
+    text = (text or "").strip()
+    if image_url:
+        data = {"media_type": "IMAGE", "text": text,
+                "image_url": (image_url or "").strip()}
+    else:
+        data = {"media_type": "TEXT", "text": text}
+    r = threads_request(account, "POST", f"/v1.0/{user_id}/threads",
+                        data=data)
+    if r is None or r.status_code != 200:
+        log("warning", "threads container create failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "threads container create response not JSON")
+        return None
+    cid = str((data or {}).get("id", ""))
+    if not cid:
+        log("warning", "threads container create returned no id")
+        return None
+    return cid
+
+
+def threads_container_status(account, container_id):
+    """The processing status of a media container (FINISHED / IN_PROGRESS
+    / ERROR / EXPIRED), or None when the status cannot be read (the
+    caller then falls back to waiting the full delay)."""
+    r = threads_request(account, "GET", f"/v1.0/{container_id}",
+                        params={"fields": "status"})
+    if r is None or r.status_code != 200:
+        return None
+    try:
+        return ((r.json() or {}).get("status") or "").strip() or None
+    except Exception:
+        return None
+
+
+def threads_publish_container(account, user_id, creation_id):
+    """Publish a finished media container: POST
+    /v1.0/{user-id}/threads_publish with creation_id. Returns the
+    published post (media) id or None."""
+    user_id = (user_id or "").strip()
+    if not user_id or not creation_id:
+        return None
+    r = threads_request(account, "POST",
+                        f"/v1.0/{user_id}/threads_publish",
+                        data={"creation_id": str(creation_id)})
+    if r is None or r.status_code != 200:
+        log("warning", "threads publish failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "threads publish response not JSON")
+        return None
+    post_id = str((data or {}).get("id", ""))
+    if not post_id:
+        log("warning", "threads publish returned no post id")
+        return None
+    return post_id
+
+
+def threads_submit(account, user_id, text, image_url=None,
+                   wait_seconds=THREADS_CONTAINER_WAIT_SECONDS):
+    """Publish one Threads post: create the media container, wait for
+    it to finish processing (poll the container status, at most
+    wait_seconds; Meta recommends ~30s), then publish it. Returns
+    the published post id or None. wait_seconds=0 publishes at once
+    (used by tests - never by the worker)."""
+    user_id = (user_id or "").strip()
+    if not user_id or not (text or "").strip():
+        return None
+    cid = threads_create_container(account, user_id, text, image_url)
+    if not cid:
+        return None
+    if wait_seconds and wait_seconds > 0:
+        waited = 0
+        while waited < wait_seconds:
+            status = threads_container_status(account, cid)
+            if status == "FINISHED":
+                break
+            if status in ("ERROR", "EXPIRED"):
+                log("warning", f"threads container {cid} status {status} - "
+                               "not publishing")
+                return None
+            step = min(5, wait_seconds - waited)
+            time.sleep(step)
+            waited += step
+    post_id = threads_publish_container(account, user_id, cid)
+    if not post_id:
+        return None
+    log("info", f"threads: posted for user {user_id}: {post_id}")
+    return post_id
+
+
+THREADS_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "threads_accounts.json")
+
+
+def get_threads_account_settings():
+    """Per-account settings from data/threads_accounts.json (public, no
+    passwords): [{user_id, enabled, posts_per_day}]. Missing file =
+    all enabled. Kept in its own file (not accounts.json) so saving
+    Bluesky/Reddit/Tumblr controls can never wipe Threads entries
+    and vice versa - the dashboard writes this file from the Threads
+    tab."""
+    if not os.path.exists(THREADS_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(THREADS_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {a["user_id"]: a for a in data
+                    if isinstance(a, dict) and a.get("user_id")}
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"threads_accounts.json load failed: {e}")
+    return {}
+
+
+def threads_account_enabled(user_id):
+    cfg = get_threads_account_settings().get(user_id)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def threads_account_posts_limit(user_id):
+    cfg = get_threads_account_settings().get(user_id)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+THREADS_CAPTION_PROMPT = """Write ONE short, exciting Threads post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 400 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+Style: {tone}
+News: {headline}
+Link: {link}
+"""
+
+
+def _threads_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the Threads
+    user ID, not the card name (same rule as Bluesky/Reddit/Tumblr -
+    two cards sharing one account must not burst-post to it)."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _threads_gap_left(state, user_id):
+    """Time left on the 5-minute no-burst gap for a Threads account,
+    or None when it may post again."""
+    last = (state.get("last_threads_post_at") or {}).get(user_id or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=THREADS_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_threads_post_at(state, user_id):
+    """Remember that this Threads account posted now (state.json, so
+    the gap survives across worker runs)."""
+    state.setdefault("last_threads_post_at", {})[user_id or ""] = now_iso()
+
+
+def record_threads_post(state, user_id):
+    """Count a Threads post for this account today (per-account limits)."""
+    counts = state.setdefault("threads_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[user_id] = int(today.get(user_id, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_threads_account(state, user_id):
+    counts = state.get("threads_post_counts", {})
+    return int(counts.get(today_str(), {}).get(user_id, 0))
+
+
+def _card_threads_post(card, state):
+    """Post ONE Threads card. Returns True on success.
+    The post is a fresh Political/War story from the SAME picker as
+    Bluesky (_pick_fresh_promo_news) with the SAME shared 24h
+    per-topic / per-link cooldown stores recorded, so the same story
+    never goes to Bluesky, Reddit, Tumblr and Threads on the same
+    day. The photo is posted with its ORIGINAL public URL (Threads
+    downloads it) - the worker never uploads an image anywhere. When
+    the story has no usable photo, the post still goes out TEXT-only
+    (a fresh story from _pick_fresh_reddit_news, which needs no
+    photo) - a missing photo never ends the run. Text = hook + link,
+    hard-capped at 500 chars by _fit_threads_text. Same 5-minute
+    no-burst gap per account. A cooldown / no-news skip is a clean
+    no-op."""
+    global LAST_THREADS_SKIP
+    LAST_THREADS_SKIP = None
+    name = card.get("name", "")
+    accs = [a for a in list_threads_accounts()
+            if not card.get("account_handle") or
+            a["user_id"] == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Threads account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, photo = _pick_fresh_promo_news(card, state)
+    image_url = (photo or {}).get("url", "") if photo else ""
+    article_url = (photo or {}).get("article_url", "") if photo else ""
+    if not photo:
+        # No verified photo for any fresh story - fall back to a
+        # fresh story that needs no photo and post TEXT-only (the
+        # picker already logged why; LAST_BSKY_SKIP says no_photo).
+        topic2, headline2, url2 = _pick_fresh_reddit_news(card, state)
+        if not headline2:
+            log("warning", f"card '{name}': no fresh news - Threads post "
+                           "skipped")
+            LAST_THREADS_SKIP = {"cooldown": "cooldown",
+                                 "no_news": "no_news"}.get(
+                LAST_REDDIT_SKIP, "no_news")
+            return False
+        log("info", f"card '{name}': no public photo URL - posting "
+                     "text-only to Threads")
+        topic, headline = topic2, headline2
+        article_url = url2 or ""
+        image_url = ""
+    headline = headline or topic
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_THREADS_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_THREADS_SKIP = "cooldown"
+        return False
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    text = (card.get("text") or "").strip()
+    if not text:
+        try:
+            text = (ai_write(
+                THREADS_CAPTION_PROMPT.format(
+                    headline=headline[:150], link=effective_link,
+                    tone=tone_text), max_tokens=400) or "").strip()
+        except Exception:
+            text = ""
+        if not text:
+            text = headline
+    post_text = _fit_threads_text(text, effective_link)
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to Threads "
+                       f"(user {accs[0]['user_id']}) '{headline[:60]}' -> "
+                       f"{effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        uid = acc["user_id"]
+        if not threads_account_enabled(uid):
+            continue
+        limit = threads_account_posts_limit(uid)
+        if limit > 0 and posts_today_for_threads_account(state, uid) >= limit:
+            log("info", f"card '{name}': Threads user {uid} daily limit "
+                        "reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: threads_submit(acc, uid, post_text,
+                                   image_url or None),
+            attempts=2, base_delay=5, label="threads submit")
+        if res:
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, uid)
+            record_threads_post(state, uid)
+            _record_threads_post_at(state, uid)
+            if uid in _THREADS_ROTATED:
+                # Timestamp only (never a token value): the dashboard
+                # can show that this user's token rotated.
+                state.setdefault("threads_refresh_rotated_at", {})[uid] = now_iso()
+            log("info", f"card '{name}': posted to Threads (user {uid}): "
+                        f"{res}")
+            ok = True
+            break
+        log("warning", f"card '{name}': threads submit failed")
+    return ok
+
+
+def _post_threads_card(card, state, due_slots):
+    """The posting loop for threads_post cards. Returns (made, last_error).
+    Mirrors _post_tumblr_card: 5-minute gap per account, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news) are no-ops, not failures. There is no
+    'no photo' skip: a story without a public photo URL posts
+    text-only instead."""
+    global LAST_THREADS_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _threads_gap_key(card)
+    if not dry and _threads_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{THREADS_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_threads_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_THREADS_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_threads_post_at(state, gap_key)
+        else:
+            if LAST_THREADS_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_THREADS_SKIP == "no_news":
+        return 0, "no fresh news"
+    return made, ("" if made else "post failed or skipped")
+
+
+# ---------------------------------------------------------------- Mastodon
+# Free, no review, no approval queue (verified 2026-11-25 against
+# Mastodon's own API docs, docs.joinmastodon.org/methods/statuses +
+# /methods/media): the API is per-instance - every request goes to
+# https://{instance_host}/api/v1/... . For the user's OWN account
+# the simple path is the instance web UI: log in, Preferences ->
+# Development -> New application -> copy the access token (scopes
+# write:statuses + write:media). The API path (POST /api/v1/apps to
+# register an app, then OAuth) is a follow-up, not required for the
+# user's own account. Auth is a Bearer <access token> header; tokens
+# do NOT expire, so there is no refresh flow - a 401 means the stored
+# token is wrong or revoked, and the log says plainly to check the
+# token in the Mastodon tab. Publishing is TWO calls: (1) POST
+# /api/v2/media uploads the photo as multipart (200 = processed,
+# 202 = still processing, then GET /api/v1/media/:id is polled until
+# the url appears), (2) POST /api/v1/statuses with status text,
+# media_ids[] and visibility public. 500 characters default (varies
+# by instance - text is capped at 500 to be safe). Rate ~300
+# requests per 5 minutes per account. The photo comes from the shared
+# Bluesky picker and is UPLOADED as bytes (Mastodon does not take a
+# remote image URL); when no verified photo is available the post
+# goes out TEXT-only (never a skipped run for that reason alone).
+# Mastodon v1 is POST-ONLY, like Tumblr/Threads: replies ARE
+# possible on Mastodon (GET /api/v1/statuses/:id/context +
+# in_reply_to_id), but need a per-post reply-fetch loop and posted-id
+# tracking, and were not built - a follow-up, not part of this build.
+MASTODON_MIN_POST_GAP_MINUTES = 5
+MASTODON_MAX_TEXT_CHARS = 500
+MASTODON_MEDIA_WAIT_SECONDS = 30
+
+LAST_MASTODON_SKIP = None
+
+
+def _mastodon_instance_base(account):
+    """The instance base URL for a Mastodon account: https://host.
+    Accepts 'mastodon.social', 'https://mastodon.social' or a pasted
+    profile URL - scheme, path and trailing slash are stripped."""
+    raw = ((account or {}).get("instance") or "").strip()
+    if not raw:
+        return ""
+    if "://" not in raw:
+        raw = "https://" + raw
+    try:
+        host = (urlparse(raw).netloc or "").strip().lower()
+    except Exception:
+        host = ""
+    if not host:
+        return ""
+    return "https://" + host
+
+
+def _mastodon_account_key(account):
+    """The per-account key for counts/gaps/settings: the instance
+    host, plus /@username when one is stored (two accounts on one
+    instance must not share a daily cap)."""
+    base = _mastodon_instance_base(account)
+    host = base.replace("https://", "", 1) if base else ""
+    user = ((account or {}).get("username") or "").strip().lstrip("@")
+    if host and user:
+        return host + "/@" + user
+    return host
+
+
+def list_mastodon_accounts():
+    """All Mastodon accounts: the MASTODON_ACCOUNTS env secret (JSON
+    list) or the single-account env vars. (The dashboard saves
+    accounts encrypted into the secret, same sealed-box pattern as
+    Bluesky/Reddit/Tumblr/Threads.)"""
+    return list(ENV_MASTODON_ACCOUNTS)
+
+
+def _mastodon_token(account):
+    """The access token for a Mastodon account, or ''. Never logged."""
+    return ((account or {}).get("access_token") or "").strip()
+
+
+def mastodon_request(account, method, path, **kwargs):
+    """One authenticated Mastodon API call against the account's own
+    instance. Returns the Response or None. The token travels as a
+    Bearer header, exactly as Mastodon's docs show it. Tokens do not
+    expire, so there is no refresh: a 401 means the stored token is
+    wrong or revoked - the log says so plainly (never the token
+    value) and the call is NOT retried. kwargs pass through to
+    requests (params/data/files/headers)."""
+    base = _mastodon_instance_base(account)
+    if not base:
+        log("warning", "mastodon: no instance set for this account - "
+                       "add one in the Mastodon tab")
+        return None
+    token = _mastodon_token(account)
+    if not token:
+        log("warning", f"mastodon: no access token for instance "
+                       f"'{_mastodon_account_key(account)}' - add one "
+                       "in the Mastodon tab")
+        return None
+    headers = dict(kwargs.pop("headers", {}) or {})
+    headers["Authorization"] = f"Bearer {token}"
+    url = base + path
+    try:
+        r = requests.request(method, url, headers=headers, timeout=25,
+                             **kwargs)
+    except Exception as e:
+        log("warning", f"mastodon {method} {path} failed: {e}")
+        return None
+    if r.status_code == 401:
+        log("warning", f"mastodon: access token rejected (401) for "
+                       f"instance '{_mastodon_account_key(account)}' - "
+                       "check the access token in the Mastodon tab "
+                       "(Preferences -> Development -> New application)")
+    return r
+
+
+def _fit_mastodon_text(hook, link):
+    """The Mastodon post text: hook + link, hard-capped at 500
+    characters at this single send point (Mastodon's default limit;
+    the link is never cut - the hook is trimmed to make room). Pure
+    function (no I/O) - unit-tested."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    if not link:
+        return hook[:MASTODON_MAX_TEXT_CHARS]
+    text = hook + "\n" + link if hook else link
+    if len(text) <= MASTODON_MAX_TEXT_CHARS:
+        return text
+    room = MASTODON_MAX_TEXT_CHARS - len(link) - 1
+    if room <= 0:
+        return link[:MASTODON_MAX_TEXT_CHARS]
+    return hook[:room].rstrip() + "\n" + link
+
+
+def mastodon_upload_media(account, image_path,
+                          wait_seconds=MASTODON_MEDIA_WAIT_SECONDS):
+    """Upload one photo to the account's instance: POST /api/v2/media
+    as multipart. Returns the media attachment id or None. A 200
+    means processed at once; a 202 means still processing, so GET
+    /api/v1/media/:id is polled (206 = still processing) until the
+    url appears, at most wait_seconds. The photo must already be
+    downloaded + verified (download_image only ever produces
+    .jpg/.png, both accepted by Mastodon)."""
+    if not image_path or not os.path.exists(image_path):
+        log("warning", "mastodon media upload failed: no verified photo file")
+        return None
+    mime = "image/png" if str(image_path).lower().endswith(".png") \
+        else "image/jpeg"
+    try:
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
+    except Exception as e:
+        log("warning", f"mastodon media upload failed: cannot read photo: {e}")
+        return None
+    if len(img_bytes) < 1000:
+        log("warning", "mastodon media upload failed: photo file too small")
+        return None
+    fname = os.path.basename(image_path) or "photo.jpg"
+    files = {"file": (fname, img_bytes, mime)}
+    r = mastodon_request(account, "POST", "/api/v2/media", files=files)
+    if r is None or r.status_code not in (200, 202):
+        log("warning", "mastodon media upload failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "mastodon media upload response not JSON")
+        return None
+    media_id = str((data or {}).get("id", ""))
+    if not media_id:
+        log("warning", "mastodon media upload returned no id")
+        return None
+    if r.status_code == 200:
+        return media_id
+    # 202: still processing - poll until the url appears.
+    waited = 0
+    while waited < wait_seconds:
+        r2 = mastodon_request(account, "GET", f"/api/v1/media/{media_id}")
+        if r2 is not None and r2.status_code == 200:
+            try:
+                if (r2.json() or {}).get("url"):
+                    return media_id
+            except Exception:
+                pass
+        elif r2 is not None and r2.status_code not in (200, 206):
+            log("warning", "mastodon media status check failed (HTTP "
+                           f"{r2.status_code})")
+            return None
+        step = min(2, wait_seconds - waited)
+        time.sleep(step)
+        waited += step
+    log("warning", f"mastodon media {media_id} still processing after "
+                   f"{wait_seconds}s - posting without it")
+    return None
+
+
+def mastodon_submit(account, text, image_path=None,
+                    wait_seconds=MASTODON_MEDIA_WAIT_SECONDS):
+    """Publish one Mastodon status: upload the photo first (when one
+    is given), then POST /api/v1/statuses with the text, media_ids[]
+    and visibility public. Returns the published status id or None.
+    A failed media upload does NOT fail the post - it goes out
+    TEXT-only instead (logged plainly). An Idempotency-Key header
+    guards against a retried request double-posting."""
+    text = (text or "").strip()
+    if not text:
+        return None
+    media_ids = []
+    if image_path:
+        media_id = mastodon_upload_media(account, image_path,
+                                         wait_seconds=wait_seconds)
+        if media_id:
+            media_ids = [media_id]
+        else:
+            log("info", "mastodon: media upload failed - posting text-only")
+    data = {"status": text, "visibility": "public"}
+    if media_ids:
+        data["media_ids[]"] = media_ids
+    key = (f"mastodon-{int(time.time())}-"
+           f"{random.randint(0, 999999)}")
+    r = mastodon_request(account, "POST", "/api/v1/statuses",
+                         data=data,
+                         headers={"Idempotency-Key": key})
+    if r is None or r.status_code not in (200, 201):
+        log("warning", "mastodon status post failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "mastodon status post response not JSON")
+        return None
+    post_id = str((data or {}).get("id", ""))
+    if not post_id:
+        log("warning", "mastodon status post returned no post id")
+        return None
+    log("info", f"mastodon: posted to "
+                f"{_mastodon_account_key(account)}: {post_id}")
+    return post_id
+
+
+MASTODON_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "mastodon_accounts.json")
+
+
+def get_mastodon_account_settings():
+    """Per-account settings from data/mastodon_accounts.json (public, no
+    passwords): [{instance, username, enabled, posts_per_day}].
+    Missing file = all enabled. Kept in its own file (not
+    accounts.json) so saving Bluesky/Reddit/Tumblr/Threads controls
+    can never wipe Mastodon entries and vice versa - the dashboard
+    writes this file from the Mastodon tab."""
+    if not os.path.exists(MASTODON_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(MASTODON_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            out = {}
+            for a in data:
+                if not isinstance(a, dict):
+                    continue
+                key = a.get("key") or _mastodon_account_key(a)
+                if key:
+                    out[key] = a
+            return out
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"mastodon_accounts.json load failed: {e}")
+    return {}
+
+
+def mastodon_account_enabled(key):
+    cfg = get_mastodon_account_settings().get(key)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def mastodon_account_posts_limit(key):
+    cfg = get_mastodon_account_settings().get(key)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+MASTODON_CAPTION_PROMPT = """Write ONE short, exciting Mastodon post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 400 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+Style: {tone}
+News: {headline}
+Link: {link}
+"""
+
+
+def _mastodon_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the
+    Mastodon account key (instance host), not the card name (same
+    rule as Bluesky/Reddit/Tumblr/Threads - two cards sharing one
+    account must not burst-post to it)."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _mastodon_gap_left(state, key):
+    """Time left on the 5-minute no-burst gap for a Mastodon account,
+    or None when it may post again."""
+    last = (state.get("last_mastodon_post_at") or {}).get(key or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=MASTODON_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_mastodon_post_at(state, key):
+    """Remember that this Mastodon account posted now (state.json, so
+    the gap survives across worker runs)."""
+    state.setdefault("last_mastodon_post_at", {})[key or ""] = now_iso()
+
+
+def record_mastodon_post(state, key):
+    """Count a Mastodon post for this account today (per-account limits)."""
+    counts = state.setdefault("mastodon_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[key] = int(today.get(key, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_mastodon_account(state, key):
+    counts = state.get("mastodon_post_counts", {})
+    return int(counts.get(today_str(), {}).get(key, 0))
+
+
+def _card_mastodon_post(card, state):
+    """Post ONE Mastodon card. Returns True on success.
+    The post is a fresh Political/War story from the SAME picker as
+    Bluesky (_pick_fresh_promo_news) with the SAME shared 24h
+    per-topic / per-link cooldown stores recorded, so the same story
+    never goes to Bluesky, Reddit, Tumblr, Threads and Mastodon on
+    the same day. The photo is UPLOADED as bytes to the account's own
+    instance (POST /api/v2/media, then POST /api/v1/statuses with
+    media_ids[]). When the story has no usable photo, the post still
+    goes out TEXT-only (a fresh story from _pick_fresh_reddit_news,
+    which needs no photo) - a missing photo never ends the run.
+    Text = hook + link, hard-capped at 500 chars by
+    _fit_mastodon_text. Same 5-minute no-burst gap per account. A
+    cooldown / no-news skip is a clean no-op."""
+    global LAST_MASTODON_SKIP
+    LAST_MASTODON_SKIP = None
+    name = card.get("name", "")
+    accs = [a for a in list_mastodon_accounts()
+            if not card.get("account_handle") or
+            _mastodon_account_key(a) == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Mastodon account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, photo = _pick_fresh_promo_news(card, state)
+    image_path = ""
+    if photo:
+        image_path = (photo or {}).get("local_path", "") or ""
+        if image_path and not os.path.exists(image_path):
+            image_path = ""
+    article_url = (photo or {}).get("article_url", "") if photo else ""
+    if not photo or not image_path:
+        # No verified photo for any fresh story - fall back to a
+        # fresh story that needs no photo and post TEXT-only (the
+        # picker already logged why; LAST_BSKY_SKIP says no_photo).
+        topic2, headline2, url2 = _pick_fresh_reddit_news(card, state)
+        if not headline2:
+            log("warning", f"card '{name}': no fresh news - Mastodon post "
+                           "skipped")
+            LAST_MASTODON_SKIP = {"cooldown": "cooldown",
+                                  "no_news": "no_news"}.get(
+                LAST_REDDIT_SKIP, "no_news")
+            return False
+        log("info", f"card '{name}': no verified photo - posting "
+                     "text-only to Mastodon")
+        topic, headline = topic2, headline2
+        article_url = url2 or ""
+        image_path = ""
+    headline = headline or topic
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_MASTODON_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_MASTODON_SKIP = "cooldown"
+        return False
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    text = (card.get("text") or "").strip()
+    if not text:
+        try:
+            text = (ai_write(
+                MASTODON_CAPTION_PROMPT.format(
+                    headline=headline[:150], link=effective_link,
+                    tone=tone_text), max_tokens=400) or "").strip()
+        except Exception:
+            text = ""
+        if not text:
+            text = headline
+    post_text = _fit_mastodon_text(text, effective_link)
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to Mastodon "
+                       f"(instance {_mastodon_account_key(accs[0])}) "
+                       f"'{headline[:60]}' -> {effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        key = _mastodon_account_key(acc)
+        if not mastodon_account_enabled(key):
+            continue
+        limit = mastodon_account_posts_limit(key)
+        if limit > 0 and posts_today_for_mastodon_account(state, key) >= limit:
+            log("info", f"card '{name}': Mastodon account {key} daily limit "
+                        "reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: mastodon_submit(acc, post_text,
+                                    image_path or None),
+            attempts=2, base_delay=5, label="mastodon submit")
+        if res:
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, key)
+            record_mastodon_post(state, key)
+            _record_mastodon_post_at(state, key)
+            log("info", f"card '{name}': posted to Mastodon ({key}): {res}")
+            ok = True
+            break
+        log("warning", f"card '{name}': mastodon submit failed")
+    return ok
+
+
+def _post_mastodon_card(card, state, due_slots):
+    """The posting loop for mastodon_post cards. Returns (made, last_error).
+    Mirrors _post_threads_card: 5-minute gap per account, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news) are no-ops, not failures. There is no
+    'no photo' skip: a story without a verified photo posts
+    text-only instead."""
+    global LAST_MASTODON_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _mastodon_gap_key(card)
+    if not dry and _mastodon_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{MASTODON_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_mastodon_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_MASTODON_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_mastodon_post_at(state, gap_key)
+        else:
+            if LAST_MASTODON_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_MASTODON_SKIP == "no_news":
+        return 0, "no fresh news"
+    return made, ("" if made else "post failed or skipped")
+
+
+# ---------------------------------------------------------------- Telegram
+# Free, no review, no approval queue (verified 2026-11-25 against
+# core.telegram.org/bots/api, Bot API 10.5): the user creates a bot
+# with @BotFather (/newbot) and gets ONE token - that token IS the
+# auth (no OAuth, no refresh, no expiry). The bot is added as a
+# channel admin with Post Messages permission, and each card picks
+# its own destination channel (card field "channel", e.g.
+# @primotodaynews). Publishing is ONE call: POST
+# https://api.telegram.org/bot<token>/sendMessage with chat_id +
+# text (1-4096 chars), or /sendPhoto with the photo as multipart
+# bytes + caption (0-1024 chars, hook + link, link never cut).
+# The photo comes from the shared Bluesky picker and is UPLOADED as
+# bytes (the worker already has it as a local file); when no
+# verified photo is available the post goes out TEXT-only via
+# sendMessage (never a skipped run for that reason alone). Rate is
+# ~1 message per second per chat - a short wait spaces sends.
+# This posts to a CHANNEL: the audience must join the channel
+# first, it is not a discovery feed. Telegram v1 is POST-ONLY:
+# channel posts have no reply cycle in the Bot API sense (channel
+# comments live in a linked discussion group), so no replies were
+# built - a follow-up, not part of this build.
+TELEGRAM_API_BASE = "https://api.telegram.org"
+TELEGRAM_MIN_POST_GAP_MINUTES = 5
+TELEGRAM_MAX_TEXT_CHARS = 4096
+TELEGRAM_MAX_CAPTION_CHARS = 1024
+TELEGRAM_MIN_SEND_INTERVAL_SECONDS = 1.1
+
+LAST_TELEGRAM_SKIP = None
+
+_TELEGRAM_LAST_SEND_AT = 0.0
+
+
+def _telegram_account_key(account=None):
+    """The per-bot key for counts/gaps/settings: there is ONE bot,
+    so every Telegram card shares this key. The per-channel split
+    lives in the daily counts and the gap (keyed by channel)."""
+    return "telegram-bot"
+
+
+def list_telegram_accounts():
+    """The Telegram bot: the TELEGRAM_BOT_TOKEN env secret (one
+    token, from @BotFather). An empty list means no bot is
+    configured - a Telegram card cannot run at all then."""
+    token = (ENV_TELEGRAM_BOT_TOKEN or "").strip()
+    if not token:
+        return []
+    return [{"bot_token": token}]
+
+
+def _telegram_token(account):
+    """The bot token for a Telegram account, or ''. Never logged -
+    the token is part of the request URL, so no URL is ever logged
+    either (only the method name)."""
+    return ((account or {}).get("bot_token") or "").strip()
+
+
+def _telegram_channel(card):
+    """The destination channel for a Telegram card: the card's
+    "channel" field, normalised to @channelusername (a bare name
+    gets the @; a numeric chat id is kept as-is)."""
+    raw = ((card or {}).get("channel") or "").strip()
+    if not raw:
+        return ""
+    if raw.startswith("@") or raw.startswith("-") \
+            or raw.lstrip("-").isdigit():
+        return raw
+    return "@" + raw
+
+
+def _telegram_rate_wait():
+    """Space sends ~1.1s apart per chat (Telegram's ~1 message/sec
+    per chat limit). Only sleeps the remainder since the last send,
+    so a first send never waits."""
+    global _TELEGRAM_LAST_SEND_AT
+    elapsed = time.time() - _TELEGRAM_LAST_SEND_AT
+    wait = TELEGRAM_MIN_SEND_INTERVAL_SECONDS - elapsed
+    if wait > 0:
+        time.sleep(wait)
+
+
+def _telegram_note_sent():
+    """Remember a send just happened (for _telegram_rate_wait)."""
+    global _TELEGRAM_LAST_SEND_AT
+    _TELEGRAM_LAST_SEND_AT = time.time()
+
+
+def telegram_api(token, method, **kwargs):
+    """One Telegram Bot API call: POST
+    https://api.telegram.org/bot<token>/<method>. Returns the
+    Response or None. The token travels in the URL (that is how the
+    Bot API works), so the URL is NEVER logged - only the method
+    name and the status. A 401 means the stored token is wrong or
+    revoked; a 403 means the bot is not an admin of the channel
+    (or was blocked); a 400 is usually a bad channel name - the log
+    says so plainly (never the token value) and the call is NOT
+    retried. kwargs pass through to requests (json/data/files)."""
+    token = (token or "").strip()
+    if not token:
+        log("warning", "telegram: no bot token - add one in the "
+                       "Telegram tab")
+        return None
+    url = TELEGRAM_API_BASE + "/bot" + token + "/" + method
+    try:
+        r = requests.request("POST", url, timeout=25, **kwargs)
+    except Exception as e:
+        log("warning", f"telegram {method} failed: {e}")
+        return None
+    if r.status_code == 401:
+        log("warning", "telegram: bot token rejected (401) - check "
+                       "the bot token in the Telegram tab")
+    elif r.status_code == 403:
+        log("warning", "telegram: bot is not allowed here (403) - "
+                       "add the bot as a channel admin with Post "
+                       "Messages permission")
+    elif r.status_code == 400:
+        try:
+            desc = (r.json() or {}).get("description", "")
+        except Exception:
+            desc = ""
+        log("warning", "telegram " + method + " rejected (400)" +
+                       (f": {desc}" if desc else
+                        " - check the channel name"))
+    return r
+
+
+def _fit_telegram_text(hook, link):
+    """The Telegram text message: hook + link, hard-capped at 4096
+    characters at this single send point (sendMessage's limit; the
+    link is never cut - the hook is trimmed to make room). Pure
+    function (no I/O) - unit-tested."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    if not link:
+        return hook[:TELEGRAM_MAX_TEXT_CHARS]
+    text = hook + "\n" + link if hook else link
+    if len(text) <= TELEGRAM_MAX_TEXT_CHARS:
+        return text
+    room = TELEGRAM_MAX_TEXT_CHARS - len(link) - 1
+    if room <= 0:
+        return link[:TELEGRAM_MAX_TEXT_CHARS]
+    return hook[:room].rstrip() + "\n" + link
+
+
+def _fit_telegram_caption(hook, link):
+    """The Telegram photo caption: hook + link, hard-capped at 1024
+    characters at this single send point (sendPhoto's caption
+    limit; the link is never cut - the hook is trimmed to make
+    room). Pure function (no I/O) - unit-tested."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    if not link:
+        return hook[:TELEGRAM_MAX_CAPTION_CHARS]
+    text = hook + "\n" + link if hook else link
+    if len(text) <= TELEGRAM_MAX_CAPTION_CHARS:
+        return text
+    room = TELEGRAM_MAX_CAPTION_CHARS - len(link) - 1
+    if room <= 0:
+        return link[:TELEGRAM_MAX_CAPTION_CHARS]
+    return hook[:room].rstrip() + "\n" + link
+
+
+def _telegram_message_id(r):
+    """The message_id from a Telegram send response, or ''. A
+    non-JSON or ok:false response logs plainly and yields ''."""
+    if r is None or r.status_code != 200:
+        return ""
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "telegram send response not JSON")
+        return ""
+    if not (data or {}).get("ok"):
+        return ""
+    mid = str(((data or {}).get("result") or {}).get("message_id", ""))
+    if not mid:
+        log("warning", "telegram send returned no message id")
+    return mid
+
+
+def telegram_send_message(token, chat_id, text):
+    """Send one text message to a channel: POST /sendMessage with
+    chat_id + text (1-4096 chars, fitted by _fit_telegram_text
+    before this is called). Returns the message_id or None."""
+    text = (text or "").strip()
+    if not text:
+        return None
+    _telegram_rate_wait()
+    r = telegram_api(token, "sendMessage",
+                     json={"chat_id": chat_id, "text": text})
+    _telegram_note_sent()
+    if r is None or r.status_code != 200:
+        log("warning", "telegram message post failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    return _telegram_message_id(r) or None
+
+
+def telegram_send_photo(token, chat_id, image_path, caption):
+    """Send one photo to a channel: POST /sendPhoto with the photo
+    as multipart bytes + caption (0-1024 chars). Returns the
+    message_id or None. The photo must already be downloaded +
+    verified (download_image only ever produces .jpg/.png)."""
+    if not image_path or not os.path.exists(image_path):
+        log("warning", "telegram photo send failed: no verified photo file")
+        return None
+    mime = "image/png" if str(image_path).lower().endswith(".png") \
+        else "image/jpeg"
+    try:
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
+    except Exception as e:
+        log("warning", f"telegram photo send failed: cannot read photo: {e}")
+        return None
+    if len(img_bytes) < 1000:
+        log("warning", "telegram photo send failed: photo file too small")
+        return None
+    fname = os.path.basename(image_path) or "photo.jpg"
+    files = {"photo": (fname, img_bytes, mime)}
+    _telegram_rate_wait()
+    r = telegram_api(token, "sendPhoto",
+                     data={"chat_id": chat_id, "caption": caption or ""},
+                     files=files)
+    _telegram_note_sent()
+    if r is None or r.status_code != 200:
+        log("warning", "telegram photo post failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    return _telegram_message_id(r) or None
+
+
+def telegram_submit(token, channel, hook, link, image_path=None):
+    """Publish one Telegram channel post: with a photo, sendPhoto
+    (caption = hook + link, capped at 1024); without one,
+    sendMessage (text = hook + link, capped at 4096). Returns the
+    published message_id or None. A failed photo send does NOT
+    fail the post - it goes out TEXT-only instead (logged
+    plainly)."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    if not hook and not link:
+        return None
+    if image_path:
+        mid = telegram_send_photo(
+            token, channel, image_path,
+            _fit_telegram_caption(hook, link))
+        if mid:
+            log("info", f"telegram: posted photo to {channel}: {mid}")
+            return mid
+        log("info", "telegram: photo send failed - posting text-only")
+    mid = telegram_send_message(token, channel,
+                                _fit_telegram_text(hook, link))
+    if mid:
+        log("info", f"telegram: posted to {channel}: {mid}")
+    else:
+        log("warning", "telegram message post failed")
+    return mid
+
+
+TELEGRAM_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "telegram_accounts.json")
+
+
+def get_telegram_account_settings():
+    """Per-bot settings from data/telegram_accounts.json (public, no
+    passwords): [{key: "telegram-bot", enabled, posts_per_day}].
+    Missing file = all enabled. Kept in its own file (not
+    accounts.json) so saving Bluesky/Reddit/Tumblr/Threads/Mastodon
+    controls can never wipe Telegram entries and vice versa - the
+    dashboard writes this file from the Telegram tab."""
+    if not os.path.exists(TELEGRAM_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(TELEGRAM_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            out = {}
+            for a in data:
+                if not isinstance(a, dict):
+                    continue
+                key = a.get("key") or _telegram_account_key()
+                if key:
+                    out[key] = a
+            return out
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"telegram_accounts.json load failed: {e}")
+    return {}
+
+
+def telegram_account_enabled(key):
+    cfg = get_telegram_account_settings().get(key)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def telegram_account_posts_limit(key):
+    cfg = get_telegram_account_settings().get(key)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+TELEGRAM_CAPTION_PROMPT = """Write ONE short, exciting Telegram channel post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 900 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+Style: {tone}
+News: {headline}
+Link: {link}
+"""
+
+
+def _telegram_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the
+    destination CHANNEL (same rule as Bluesky/Reddit/Tumblr/
+    Threads/Mastodon - two cards sharing one channel must not
+    burst-post to it)."""
+    if isinstance(card, dict):
+        return _telegram_channel(card) or card.get("name", "")
+    return str(card or "")
+
+
+def _telegram_gap_left(state, key):
+    """Time left on the 5-minute no-burst gap for a Telegram
+    channel, or None when it may post again."""
+    last = (state.get("last_telegram_post_at") or {}).get(key or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=TELEGRAM_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_telegram_post_at(state, key):
+    """Remember that this Telegram channel posted now (state.json,
+    so the gap survives across worker runs)."""
+    state.setdefault("last_telegram_post_at", {})[key or ""] = now_iso()
+
+
+def record_telegram_post(state, channel):
+    """Count a Telegram post for this channel today (per-channel
+    daily counts)."""
+    counts = state.setdefault("telegram_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[channel] = int(today.get(channel, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_telegram_channel(state, channel):
+    counts = state.get("telegram_post_counts", {})
+    return int(counts.get(today_str(), {}).get(channel, 0))
+
+
+def posts_today_for_telegram_bot(state):
+    """All Telegram posts today across every channel (the bot's
+    daily total - the per-bot posts_per_day cap counts this)."""
+    counts = state.get("telegram_post_counts", {})
+    return sum(int(v or 0)
+               for v in (counts.get(today_str(), {}) or {}).values())
+
+
+def _card_telegram_post(card, state):
+    """Post ONE Telegram card. Returns True on success.
+    The post is a fresh Political/War story from the SAME picker as
+    Bluesky (_pick_fresh_promo_news) with the SAME shared 24h
+    per-topic / per-link cooldown stores recorded, so the same story
+    never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon and
+    Telegram on the same day. The photo is UPLOADED as bytes to the
+    channel (POST /sendPhoto with a 1024-char caption). When the
+    story has no usable photo, the post still goes out TEXT-only
+    via /sendMessage (a fresh story from _pick_fresh_reddit_news,
+    which needs no photo) - a missing photo never ends the run.
+    Same 5-minute no-burst gap per channel. A cooldown / no-news
+    skip is a clean no-op. The bot token is never logged."""
+    global LAST_TELEGRAM_SKIP
+    LAST_TELEGRAM_SKIP = None
+    name = card.get("name", "")
+    accs = list_telegram_accounts()
+    if not accs:
+        log("warning", f"card '{name}': no Telegram bot token - post skipped")
+        return False
+    channel = _telegram_channel(card)
+    if not channel:
+        log("warning", f"card '{name}': no Telegram channel set - post "
+                       "skipped")
+        LAST_TELEGRAM_SKIP = "no_channel"
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, photo = _pick_fresh_promo_news(card, state)
+    image_path = ""
+    if photo:
+        image_path = (photo or {}).get("local_path", "") or ""
+        if image_path and not os.path.exists(image_path):
+            image_path = ""
+    article_url = (photo or {}).get("article_url", "") if photo else ""
+    if not photo or not image_path:
+        # No verified photo for any fresh story - fall back to a
+        # fresh story that needs no photo and post TEXT-only (the
+        # picker already logged why; LAST_BSKY_SKIP says no_photo).
+        topic2, headline2, url2 = _pick_fresh_reddit_news(card, state)
+        if not headline2:
+            log("warning", f"card '{name}': no fresh news - Telegram post "
+                           "skipped")
+            LAST_TELEGRAM_SKIP = {"cooldown": "cooldown",
+                                  "no_news": "no_news"}.get(
+                LAST_REDDIT_SKIP, "no_news")
+            return False
+        log("info", f"card '{name}': no verified photo - posting "
+                     "text-only to Telegram")
+        topic, headline = topic2, headline2
+        article_url = url2 or ""
+        image_path = ""
+    headline = headline or topic
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_TELEGRAM_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_TELEGRAM_SKIP = "cooldown"
+        return False
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    text = (card.get("text") or "").strip()
+    if not text:
+        try:
+            text = (ai_write(
+                TELEGRAM_CAPTION_PROMPT.format(
+                    headline=headline[:150], link=effective_link,
+                    tone=tone_text), max_tokens=400) or "").strip()
+        except Exception:
+            text = ""
+        if not text:
+            text = headline
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to Telegram "
+                       f"(channel {channel}) "
+                       f"'{headline[:60]}' -> {effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        key = _telegram_account_key(acc)
+        if not telegram_account_enabled(key):
+            continue
+        limit = telegram_account_posts_limit(key)
+        if limit > 0 and posts_today_for_telegram_bot(state) >= limit:
+            log("info", f"card '{name}': Telegram bot daily limit "
+                        "reached - skipping")
+            continue
+        token = _telegram_token(acc)
+        res = retry_with_backoff(
+            lambda: telegram_submit(token, channel, text,
+                                    effective_link,
+                                    image_path or None),
+            attempts=2, base_delay=5, label="telegram submit")
+        if res:
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, key)
+            record_telegram_post(state, channel)
+            _record_telegram_post_at(state, channel)
+            log("info", f"card '{name}': posted to Telegram ({channel}): {res}")
+            ok = True
+            break
+        log("warning", f"card '{name}': telegram submit failed")
+    return ok
+
+
+def _post_telegram_card(card, state, due_slots):
+    """The posting loop for telegram_post cards. Returns (made, last_error).
+    Mirrors _post_mastodon_card: 5-minute gap per channel, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news, no channel set) are no-ops, not failures.
+    There is no 'no photo' skip: a story without a verified photo posts
+    text-only instead."""
+    global LAST_TELEGRAM_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _telegram_gap_key(card)
+    if not dry and _telegram_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{TELEGRAM_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_telegram_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_TELEGRAM_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_telegram_post_at(state, gap_key)
+        else:
+            if LAST_TELEGRAM_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_TELEGRAM_SKIP == "no_news":
+        return 0, "no fresh news"
+    if made == 0 and LAST_TELEGRAM_SKIP == "no_channel":
+        return 0, "no channel set"
+    return made, ("" if made else "post failed or skipped")
+
+
+# ---------------------------------------------------------------- Nostr
+# Free, no account, no approval, no review (verified 2026-11-25
+# against NIP-01, github.com/nostr-protocol/nips/blob/master/01.md,
+# and pynostr 0.7.0 on PyPI): Nostr is a PROTOCOL, not a service -
+# there is no account to create and nobody to approve you. The user
+# already has (or makes) a keypair in any Nostr client (Primal,
+# Damus, Amethyst): the nsec private key IS the account, the npub
+# public key is the public identity. Publishing is ONE signed
+# kind-1 text-note event per post, broadcast over wss to public
+# relays (relay.damus.io, relay.nostr.band, nos.lol,
+# relay.snort.social): the worker sends ["EVENT", {...}] and waits
+# for ["OK", id, true, ""] - success is AT LEAST ONE relay acking.
+# Event fields per NIP-01: pubkey (hex), created_at (unix seconds),
+# kind 1, tags [], content; id = SHA-256 of the [0, pubkey,
+# created_at, kind, tags, content] serialization; sig = BIP-340
+# Schnorr signature of the id. Signing + broadcast use pynostr
+# (maintained fork of python-nostr, coincurve secp256k1) - no
+# hand-rolled crypto anywhere. The photo is NOT uploaded anywhere:
+# a kind-1 note is text, so the verified photo's PUBLIC URL goes in
+# the content as its own line (Nostr clients render image URLs
+# inline); a story with no photo URL posts text-only instead - there
+# is no 'no photo' skip. Nostr v1 is POST-ONLY: replies ARE possible
+# on Nostr (a kind-1 note with e/p tags per NIP-10), but need a
+# per-post reply-fetch loop (REQ subscription + EOSE) and posted-id
+# tracking, and were not built - see execute_card. Posting only.
+# The nsec is NEVER logged, never in state.json, never in a repo
+# file - only in the NOSTR_ACCOUNTS env secret. Counts and gaps are
+# keyed by the npub (public), which is safe to log and store.
+NOSTR_RELAYS = ["wss://relay.damus.io", "wss://relay.nostr.band",
+                "wss://nos.lol", "wss://relay.snort.social"]
+NOSTR_MIN_POST_GAP_MINUTES = 5
+NOSTR_MAX_TEXT_CHARS = 10000
+NOSTR_RELAY_TIMEOUT_SECONDS = 8
+
+LAST_NOSTR_SKIP = None
+
+
+def _nostr_private_key(account):
+    """The pynostr PrivateKey for a Nostr account, or None. Accepts
+    an nsec1... bech32 key (what Nostr clients show) or a 64-char
+    hex key. A bad key logs a plain warning - the key VALUE is never
+    logged, not even in part."""
+    if not _PYNOSTR_AVAILABLE:
+        return None
+    raw = ((account or {}).get("nsec") or "").strip()
+    if not raw:
+        return None
+    try:
+        if raw.lower().startswith("nsec1"):
+            return _NostrPrivateKey.from_nsec(raw)
+        return _NostrPrivateKey.from_hex(raw)
+    except Exception:
+        log("warning", "nostr: an account key could not be read - "
+                       "check the nsec in the Nostr tab")
+        return None
+
+
+def _nostr_account_key(account):
+    """The per-account key for counts/gaps/settings: the npub
+    (bech32 public key) DERIVED from the nsec. Public, safe to log
+    and store. A pasted npub is never trusted on its own - the
+    derived value always wins when the nsec can be read. "" when
+    the key is unreadable."""
+    sk = _nostr_private_key(account)
+    if sk is not None:
+        try:
+            return sk.public_key.bech32()
+        except Exception:
+            return ""
+    return ((account or {}).get("npub") or "").strip()
+
+
+def list_nostr_accounts():
+    """The Nostr accounts: the NOSTR_ACCOUNTS env secret (a JSON
+    list of {name?, npub?, nsec}). Each entry gains its DERIVED
+    npub (from the nsec) and keeps its nsec IN MEMORY ONLY for
+    signing. An unreadable nsec is skipped with a plain warning (no
+    key material in the log). An empty list means no key is
+    configured - a Nostr card cannot run at all then. The nsec NEVER
+    leaves this function except into the signing call - it is never
+    logged, never in state.json, never in a repo file."""
+    if not _PYNOSTR_AVAILABLE:
+        log("warning", "nostr: pynostr is not installed - add it to "
+                       "requirements.txt and reinstall")
+        return []
+    out = []
+    for acc in (ENV_NOSTR_ACCOUNTS or []):
+        if not isinstance(acc, dict):
+            continue
+        npub = _nostr_account_key(acc)
+        if not npub:
+            log("warning", "nostr: skipping an account whose key "
+                           "could not be read - check the nsec in "
+                           "the Nostr tab")
+            continue
+        entry = {"nsec": (acc.get("nsec") or "").strip(),
+                 "npub": npub}
+        if (acc.get("name") or "").strip():
+            entry["name"] = (acc.get("name") or "").strip()
+        out.append(entry)
+    return out
+
+
+def _fit_nostr_text(hook, link, image_url=None):
+    """The Nostr note text: hook, then the photo's public URL on its
+    own line when there is one (Nostr clients render image URLs
+    inline), then the link on its own line. Hard-capped at 10000
+    characters at this single send point (the Nostr note limit);
+    the link is never cut - the hook is trimmed to make room, and
+    the image URL is dropped before the link ever is. Pure function
+    (no I/O) - unit-tested."""
+    hook = (hook or "").strip()
+    link = (link or "").strip()
+    image_url = (image_url or "").strip()
+    lines = [hook] if hook else []
+    if image_url:
+        lines.append(image_url)
+    if link:
+        lines.append(link)
+    text = "\n".join(lines)
+    if len(text) <= NOSTR_MAX_TEXT_CHARS:
+        return text
+    tail = "\n".join([l for l in [image_url, link] if l])
+    room = NOSTR_MAX_TEXT_CHARS - len(tail) - (1 if tail else 0)
+    if room <= 0:
+        return tail[:NOSTR_MAX_TEXT_CHARS]
+    return hook[:room].rstrip() + ("\n" + tail if tail else "")
+
+
+def _nostr_build_event(account, text):
+    """Build + sign one kind-1 text-note event for an account.
+    Returns the signed pynostr Event, or None. The event id is the
+    NIP-01 SHA-256 of [0, pubkey, created_at, kind, tags, content]
+    and the signature is a BIP-340 Schnorr signature of the id -
+    both computed inside pynostr (coincurve), never here."""
+    if not _PYNOSTR_AVAILABLE:
+        return None
+    text = (text or "").strip()
+    if not text:
+        return None
+    sk = _nostr_private_key(account)
+    if sk is None:
+        return None
+    try:
+        event = _NostrEvent(content=text, tags=[])
+        event.sign(sk.hex())
+        return event
+    except Exception as e:
+        log("warning", f"nostr: could not sign the event: {e}")
+        return None
+
+
+def _nostr_count_oks(manager, event_id):
+    """Drain the relay manager's OK notices for one event id and
+    count the relays that ACCEPTED it (["OK", id, true, ...]).
+    Returns (accepted_count, [relay urls that accepted]). A relay
+    that rejected the event (ok=false, e.g. rate-limited) is NOT
+    counted - but a "duplicate:" ack still counts as accepted (the
+    event IS on that relay). Pure helper, no I/O."""
+    accepted = []
+    try:
+        pool = manager.message_pool
+        while pool.has_ok_notices():
+            notice = pool.get_ok_notice()
+            ok = notice.ok
+            if isinstance(ok, str):
+                ok = ok.strip().lower() == "true"
+            if notice.event_id == event_id and ok:
+                accepted.append(notice.url)
+    except Exception:
+        pass
+    return len(accepted), accepted
+
+
+def nostr_publish(account, text, relays=None):
+    """Publish one Nostr kind-1 note: sign it with the account's
+    nsec and broadcast it to the public relays, waiting for
+    ["OK", ...] acks. Returns the published event id (hex) or None.
+    Success is AT LEAST ONE relay acking - a dead relay never fails
+    the post, and a dead relay never hangs the worker: the relay
+    run is bounded by NOSTR_RELAY_TIMEOUT_SECONDS + 5s. The nsec is
+    never logged (only the public event id and the accepting relay
+    urls are)."""
+    if not _PYNOSTR_AVAILABLE:
+        log("warning", "nostr: pynostr is not installed - the post "
+                       "was skipped")
+        return None
+    event = _nostr_build_event(account, text)
+    if event is None:
+        return None
+    urls = list(relays or NOSTR_RELAYS)
+    manager = _NostrRelayManager(timeout=NOSTR_RELAY_TIMEOUT_SECONDS)
+    for url in urls:
+        try:
+            manager.add_relay(url)
+        except Exception:
+            pass
+
+    def _run():
+        try:
+            manager.publish_event(event)
+            manager.run_sync()
+        except Exception as e:
+            log("warning", f"nostr: relay broadcast failed: {e}")
+
+    worker = threading.Thread(target=_run, daemon=True)
+    worker.start()
+    worker.join(NOSTR_RELAY_TIMEOUT_SECONDS + 5)
+    try:
+        manager.close_all_relay_connections()
+    except Exception:
+        pass
+    count, accepted = _nostr_count_oks(manager, event.id)
+    if count:
+        log("info", f"nostr: published {event.id[:16]}... to "
+                    f"{count} relay(s): {', '.join(accepted)}")
+        return event.id
+    log("warning", "nostr: no relay accepted the event "
+                   f"({event.id[:16]}...) - post failed")
+    return None
+
+
+NOSTR_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "nostr_accounts.json")
+
+
+def get_nostr_account_settings():
+    """Per-key settings from data/nostr_accounts.json (public, no
+    secrets): [{key: <npub>, enabled, posts_per_day}]. Missing file
+    = all enabled. Kept in its own file (not accounts.json) so
+    saving Bluesky/Reddit/Tumblr/Threads/Mastodon/Telegram controls
+    can never wipe Nostr entries and vice versa - the dashboard
+    writes this file from the Nostr tab. The key is the npub
+    (public) - the nsec is never stored here."""
+    if not os.path.exists(NOSTR_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(NOSTR_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            out = {}
+            for a in data:
+                if not isinstance(a, dict):
+                    continue
+                key = a.get("key") or ""
+                if key:
+                    out[key] = a
+            return out
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"nostr_accounts.json load failed: {e}")
+    return {}
+
+
+def nostr_account_enabled(key):
+    cfg = get_nostr_account_settings().get(key)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def nostr_account_posts_limit(key):
+    cfg = get_nostr_account_settings().get(key)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+NOSTR_CAPTION_PROMPT = """Write ONE short, exciting Nostr post in ENGLISH about this news story, that makes people want to click the link below it. Sound like a real person sharing breaking news, not an ad. Keep it under 400 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+Style: {tone}
+News: {headline}
+Link: {link}
+"""
+
+
+def _nostr_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the
+    account's npub (card field account_handle, the public key) -
+    two cards sharing one key must not burst-post as it."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _nostr_gap_left(state, key):
+    """Time left on the 5-minute no-burst gap for a Nostr key, or
+    None when it may post again."""
+    last = (state.get("last_nostr_post_at") or {}).get(key or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=NOSTR_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_nostr_post_at(state, key):
+    """Remember that this Nostr key posted now (state.json, so the
+    gap survives across worker runs). The key is the npub - never
+    the nsec."""
+    state.setdefault("last_nostr_post_at", {})[key or ""] = now_iso()
+
+
+def record_nostr_post(state, key):
+    """Count a Nostr post for this key today (per-key daily
+    counts)."""
+    counts = state.setdefault("nostr_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[key] = int(today.get(key, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_nostr_account(state, key):
+    counts = state.get("nostr_post_counts", {})
+    return int(counts.get(today_str(), {}).get(key, 0))
+
+
+def _card_nostr_post(card, state):
+    """Post ONE Nostr card. Returns True on success.
+    The post is a fresh Political/War story from the SAME picker as
+    Bluesky (_pick_fresh_promo_news) with the SAME shared 24h
+    per-topic / per-link cooldown stores recorded, so the same story
+    never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon,
+    Telegram and Nostr on the same day. The verified photo's PUBLIC
+    URL goes in the note as its own line (Nostr clients render
+    image URLs inline) - nothing is uploaded. When the story has no
+    usable photo, the post still goes out TEXT-only (a fresh story
+    from _pick_fresh_reddit_news, which needs no photo) - a missing
+    photo never ends the run. Text = hook + photo URL + link,
+    hard-capped at 10000 chars by _fit_nostr_text. Same 5-minute
+    no-burst gap per key. A cooldown / no-news skip is a clean
+    no-op. The nsec is never logged."""
+    global LAST_NOSTR_SKIP
+    LAST_NOSTR_SKIP = None
+    name = card.get("name", "")
+    accs = [a for a in list_nostr_accounts()
+            if not card.get("account_handle") or
+            _nostr_account_key(a) == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Nostr key - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, photo = _pick_fresh_promo_news(card, state)
+    image_url = ""
+    if photo:
+        image_url = (photo or {}).get("url", "") or ""
+        if image_url and not image_url.lower().startswith("http"):
+            image_url = ""
+    article_url = (photo or {}).get("article_url", "") if photo else ""
+    if not photo:
+        # No verified photo for any fresh story - fall back to a
+        # fresh story that needs no photo and post TEXT-only (the
+        # picker already logged why; LAST_BSKY_SKIP says no_photo).
+        topic2, headline2, url2 = _pick_fresh_reddit_news(card, state)
+        if not headline2:
+            log("warning", f"card '{name}': no fresh news - Nostr post "
+                           "skipped")
+            LAST_NOSTR_SKIP = {"cooldown": "cooldown",
+                               "no_news": "no_news"}.get(
+                LAST_REDDIT_SKIP, "no_news")
+            return False
+        log("info", f"card '{name}': no verified photo - posting "
+                     "text-only to Nostr")
+        topic, headline = topic2, headline2
+        article_url = url2 or ""
+        image_url = ""
+    headline = headline or topic
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_NOSTR_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_NOSTR_SKIP = "cooldown"
+        return False
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    text = (card.get("text") or "").strip()
+    if not text:
+        try:
+            text = (ai_write(
+                NOSTR_CAPTION_PROMPT.format(
+                    headline=headline[:150], link=effective_link,
+                    tone=tone_text), max_tokens=400) or "").strip()
+        except Exception:
+            text = ""
+        if not text:
+            text = headline
+    post_text = _fit_nostr_text(text, effective_link,
+                                image_url or None)
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to Nostr "
+                       f"(npub {_nostr_account_key(accs[0])[:16]}...) "
+                       f"'{headline[:60]}' -> {effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        key = _nostr_account_key(acc)
+        if not key:
+            continue
+        if not nostr_account_enabled(key):
+            continue
+        limit = nostr_account_posts_limit(key)
+        if limit > 0 and posts_today_for_nostr_account(state, key) >= limit:
+            log("info", f"card '{name}': Nostr key {key[:16]}... daily "
+                        "limit reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: nostr_publish(acc, post_text),
+            attempts=2, base_delay=5, label="nostr publish")
+        if res:
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, key)
+            record_nostr_post(state, key)
+            _record_nostr_post_at(state, key)
+            log("info", f"card '{name}': posted to Nostr ({key[:16]}...): "
+                        f"{res[:16]}...")
+            ok = True
+            break
+        log("warning", f"card '{name}': nostr publish failed")
+    return ok
+
+
+def _post_nostr_card(card, state, due_slots):
+    """The posting loop for nostr_post cards. Returns (made, last_error).
+    Mirrors _post_mastodon_card: 5-minute gap per key, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news) are no-ops, not failures. There is no
+    'no photo' skip: a story without a verified photo posts
+    text-only instead (the photo URL line is simply absent)."""
+    global LAST_NOSTR_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _nostr_gap_key(card)
+    if not dry and _nostr_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{NOSTR_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_nostr_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_NOSTR_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_nostr_post_at(state, gap_key)
+        else:
+            if LAST_NOSTR_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_NOSTR_SKIP == "no_news":
+        return 0, "no fresh news"
+    return made, ("" if made else "post failed or skipped")
+
+
+# ---------------------------------------------------------------- Lemmy
+# Free, open API, no app registration, no review (verified 2026-11-25
+# against join-lemmy.org/docs/contributors/04-api.html - Lemmy's own
+# API page, which links the OpenAPI spec + lemmy-js-client - and the
+# lemmy_api_common 0.16.7 CreatePost struct {name, community_id, url,
+# body, auth}): any user account on any Lemmy instance (e.g.
+# lemmy.world) can log in with username + password and post. There
+# is no app to register and no approval to wait for - that is the
+# door that was closed for Reddit and open here.
+# Login: POST /api/v3/user/login {username_or_email, password} ->
+# {"jwt": ...}. The JWT is cached in memory and sent as the "auth"
+# field of every later JSON body (POST) or query param (GET); a 401
+# drops the cached JWT and retries once with a fresh login. Create
+# post: POST /api/v3/post {community_id, name, url, body, auth}.
+# The post goes INTO a community, which has its own rules - the card
+# names the community (REQUIRED, like Reddit's subreddit) and the
+# worker resolves the name to a community_id first via
+# GET /api/v3/community?name=<name> (cached in memory per
+# account+name). Title is hard-capped at 200 chars (Lemmy's
+# post-name limit). url = the card's Smartlink, body = the hook
+# text. NO photo is needed (a link post carries the link's own
+# preview). Repeated Smartlink = spam/ban risk - same mitigation as
+# Reddit: fresh story per post, varied titles, per-card caps, shared
+# cooldowns. Lemmy v1 is POST-ONLY: replies ARE possible
+# (POST /api/v3/comment with a parent_id), but need a per-post
+# reply-fetch loop and posted-id tracking, and were not built - see
+# execute_card. Posting only. The JWT and password are NEVER logged,
+# never in state.json, never in a repo file - only in the
+# LEMMY_ACCOUNTS env secret. Counts and gaps are keyed by
+# "instance|username", which is safe to log and store. Lemmy
+# rate-limits per IP, so the worker's shared GitHub Actions IP can
+# hit limits on a busy instance - a 429 is a clean skip, not a retry.
+LEMMY_MIN_POST_GAP_MINUTES = 5
+LEMMY_MAX_TITLE_CHARS = 200
+LEMMY_MAX_BODY_CHARS = 10000
+
+LAST_LEMMY_SKIP = None
+_LEMMY_JWTS = {}
+_LEMMY_COMMUNITIES = {}
+
+
+def _lemmy_instance_base(account):
+    """The instance base URL for a Lemmy account, e.g.
+    "https://lemmy.world". A bare host ("lemmy.world") gains the
+    https:// scheme; a trailing slash is stripped. "" when no
+    instance is set."""
+    raw = ((account or {}).get("instance") or "").strip().rstrip("/")
+    if not raw:
+        return ""
+    if not raw.lower().startswith(("http://", "https://")):
+        raw = "https://" + raw
+    return raw
+
+
+def _lemmy_account_key(account):
+    """The per-account key for counts/gaps/settings/controls:
+    "instance|username" (e.g. "lemmy.world|testuser"). Public, safe
+    to log and store - it holds no password and no JWT. "" when the
+    instance or username is missing."""
+    base = _lemmy_instance_base(account)
+    host = base.split("://", 1)[-1].strip("/").lower() if base else ""
+    username = ((account or {}).get("username") or "").strip()
+    if not host or not username:
+        return ""
+    return f"{host}|{username}"
+
+
+def list_lemmy_accounts():
+    """All Lemmy accounts: the LEMMY_ACCOUNTS env secret (JSON list)
+    or the single-account env vars. (The dashboard saves accounts
+    encrypted into the secret, same sealed-box pattern as Bluesky.)"""
+    return list(ENV_LEMMY_ACCOUNTS)
+
+
+def _lemmy_clean_community(name):
+    """Normalise a community as typed on the card: strip whitespace,
+    a leading '!' (the !community@instance form) and a leading 'c/'
+    (the c/community form). "news@lemmy.world" passes through as-is
+    - Lemmy resolves federated communities by that handle."""
+    c = (name or "").strip()
+    c = c.lstrip("!").strip()
+    if c.lower().startswith("c/"):
+        c = c[2:].strip()
+    return c
+
+
+def _lemmy_login(account):
+    """The JWT for a Lemmy account (POST /api/v3/user/login).
+    Cached in memory until a 401 drops it; a failed result is never
+    cached. Logs only success or failure - never the JWT or the
+    password."""
+    key = _lemmy_account_key(account)
+    if not key:
+        return None
+    cached = _LEMMY_JWTS.get(key)
+    if cached:
+        return cached
+    base = _lemmy_instance_base(account)
+    if not base:
+        return None
+    username = (account or {}).get("username", "")
+    try:
+        r = requests.post(
+            base + "/api/v3/user/login",
+            json={"username_or_email": username,
+                  "password": account.get("password", "")},
+            timeout=20)
+    except Exception as e:
+        log("warning", f"lemmy login failed for {key}: {e}")
+        return None
+    if r.status_code != 200:
+        log("warning", f"lemmy login failed for {key}: HTTP {r.status_code}")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", f"lemmy login response not JSON for {key}")
+        return None
+    token = data.get("jwt", "")
+    if not token:
+        log("warning", f"lemmy login returned no token for {key}")
+        return None
+    _LEMMY_JWTS[key] = token
+    log("info", f"lemmy: logged in as {key}")
+    return token
+
+
+def lemmy_request(account, method, path, **kwargs):
+    """One authenticated Lemmy API call. Returns the Response or
+    None. The JWT goes in the JSON body as "auth" (POST) or in the
+    query params (GET), per the Lemmy API v3 convention. On a 401
+    the cached JWT is dropped and the call is retried once with a
+    fresh login. kwargs pass through to requests (params/json)."""
+    key = _lemmy_account_key(account)
+    base = _lemmy_instance_base(account)
+    if not key or not base:
+        return None
+    url = base + path
+    for attempt in (1, 2):
+        token = _lemmy_login(account)
+        if not token:
+            return None
+        kw = dict(kwargs)
+        if method.upper() == "GET":
+            params = dict(kw.pop("params", {}) or {})
+            params["auth"] = token
+            kw["params"] = params
+        else:
+            body = dict(kw.pop("json", {}) or {})
+            body["auth"] = token
+            kw["json"] = body
+        try:
+            r = requests.request(method, url, timeout=25, **kw)
+        except Exception as e:
+            log("warning", f"lemmy {method} {path} failed: {e}")
+            return None
+        if r.status_code == 401 and attempt == 1:
+            _LEMMY_JWTS.pop(key, None)
+            log("info", f"lemmy: token expired for {key} - re-authenticating")
+            continue
+        return r
+    return None
+
+
+def lemmy_resolve_community(account, name):
+    """Resolve a community NAME to its numeric community_id (cached
+    in memory per account+name, so a card does not re-resolve on
+    every post). Returns the id or None. The name is given as the
+    user typed it on the card (e.g. news, or news@lemmy.world for a
+    federated community)."""
+    comm = _lemmy_clean_community(name)
+    if not comm:
+        return None
+    key = _lemmy_account_key(account)
+    cache_key = (key, comm.lower())
+    if cache_key in _LEMMY_COMMUNITIES:
+        return _LEMMY_COMMUNITIES[cache_key]
+    r = lemmy_request(account, "GET", "/api/v3/community",
+                      params={"name": comm})
+    if r is None or r.status_code != 200:
+        log("warning", f"lemmy: community c/{comm} lookup failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        cid = (((r.json().get("community_view") or {}).get("community")
+                or {}).get("id"))
+    except Exception:
+        log("warning", f"lemmy: community c/{comm} lookup not JSON")
+        return None
+    if not cid:
+        log("warning", f"lemmy: community c/{comm} not found on "
+                       f"{_lemmy_instance_base(account)}")
+        return None
+    _LEMMY_COMMUNITIES[cache_key] = cid
+    return cid
+
+
+def lemmy_submit(account, community, title, url=None, body=None):
+    """Create a Lemmy post in a community. A link post (title + url
+    + hook body). The title is hard-capped at 200 chars (Lemmy's
+    post-name limit) and the body at 10,000 chars at this single
+    send point. Returns (post_id, post_url) or None."""
+    comm = _lemmy_clean_community(community)
+    if not comm:
+        return None
+    title = (title or "").strip()[:LEMMY_MAX_TITLE_CHARS]
+    if not title:
+        return None
+    community_id = lemmy_resolve_community(account, comm)
+    if not community_id:
+        log("warning", f"lemmy: community c/{comm} could not be resolved")
+        return None
+    payload = {"community_id": community_id, "name": title}
+    if url:
+        payload["url"] = (url or "").strip()
+    if body:
+        payload["body"] = (body or "").strip()[:LEMMY_MAX_BODY_CHARS]
+    r = lemmy_request(account, "POST", "/api/v3/post", json=payload)
+    if r is None or r.status_code != 200:
+        log("warning", "lemmy submit failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        post = ((r.json().get("post_view") or {}).get("post") or {})
+    except Exception:
+        log("warning", "lemmy submit response not JSON")
+        return None
+    post_id = post.get("id")
+    if not post_id:
+        log("warning", "lemmy submit returned no post id")
+        return None
+    post_url = post.get("ap_id", "") or ""
+    log("info", f"lemmy: posted to c/{comm}: {post_url or post_id}")
+    return post_id, post_url
+
+
+LEMMY_TITLE_PROMPT = """Write ONE short, exciting Lemmy post title in ENGLISH about this news story, that makes people want to click it. Sound like a real person sharing breaking news, not an ad. Keep it under 200 characters. Do NOT add a link.
+
+News: {headline}
+"""
+
+LEMMY_HOOK_PROMPT = """Write ONE short, exciting hook in ENGLISH about this news story, that makes people want to click the link. Sound like a real person sharing breaking news, not an ad. Keep it under 400 characters. Do NOT add the link or a call-to-action yourself - they are added after your text.
+
+News: {headline}
+"""
+
+
+def _pick_fresh_lemmy_news(card, state):
+    """Pick a FRESH news story for a Lemmy post: (topic, headline,
+    article_url). Reuses the Reddit picker verbatim - the same
+    categories (ONLY USA political news and war news, rotating; the
+    card's topic_override is the only other allowed topic) and the
+    same 24h per-topic / per-link cooldowns, and NO photo is needed
+    (a Lemmy link post is a title + a link + a hook body), so a
+    story is picked as soon as it is fresh. Returns
+    (None, None, None) when no fresh story exists;
+    LAST_LEMMY_SKIP says why ("cooldown" or "no_news") - copied
+    from LAST_REDDIT_SKIP, which the shared picker sets."""
+    global LAST_LEMMY_SKIP
+    topic, headline, url = _pick_fresh_reddit_news(card, state)
+    LAST_LEMMY_SKIP = LAST_REDDIT_SKIP
+    return topic, headline, url
+
+
+def _lemmy_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the Lemmy
+    account key ("instance|username"), not the card name (same rule
+    as Bluesky - two cards sharing one account must not burst-post
+    to it)."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _lemmy_gap_left(state, key):
+    """Time left on the 5-minute no-burst gap for a Lemmy account,
+    or None when it may post again."""
+    last = (state.get("last_lemmy_post_at") or {}).get(key or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=LEMMY_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_lemmy_post_at(state, key):
+    """Remember that this Lemmy account posted now (state.json, so
+    the gap survives across worker runs)."""
+    state.setdefault("last_lemmy_post_at", {})[key or ""] = now_iso()
+
+
+def record_lemmy_post(state, key):
+    """Count a Lemmy post for this account today (per-account limits)."""
+    counts = state.setdefault("lemmy_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[key] = int(today.get(key, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_lemmy_account(state, key):
+    counts = state.get("lemmy_post_counts", {})
+    return int(counts.get(today_str(), {}).get(key, 0))
+
+
+LEMMY_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "lemmy_accounts.json")
+
+
+def get_lemmy_account_settings():
+    """Per-account settings from data/lemmy_accounts.json (public, no
+    passwords): [{key, enabled, posts_per_day}] keyed by
+    "instance|username". Missing file = all enabled. Kept in its own
+    file (not accounts.json) so saving Lemmy controls can never wipe
+    another platform's entries - the dashboard writes this file from
+    the Lemmy tab."""
+    if not os.path.exists(LEMMY_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(LEMMY_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {a["key"]: a for a in data
+                    if isinstance(a, dict) and a.get("key")}
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"lemmy_accounts.json load failed: {e}")
+    return {}
+
+
+def lemmy_account_enabled(key):
+    cfg = get_lemmy_account_settings().get(key)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def lemmy_account_posts_limit(key):
+    cfg = get_lemmy_account_settings().get(key)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+def _card_lemmy_post(card, state):
+    """Post ONE Lemmy card. Returns True on success.
+    The post is a LINK post to the card's community: the title is an
+    AI hook about a fresh Political/War news story (the headline
+    itself when the AI is down, the card's own text when set), the
+    URL is the card's link (or the story's own URL when the card has
+    no link) and the body is a short AI hook about the same story.
+    No photo is needed. Same 24h per-topic / per-link cooldowns as
+    Bluesky (shared stores - the same story never goes to both
+    Bluesky and Lemmy on the same day) and the same 5-minute
+    no-burst gap per account. A cooldown / no-news / no-community
+    skip is a clean no-op (LAST_LEMMY_SKIP)."""
+    global LAST_LEMMY_SKIP
+    LAST_LEMMY_SKIP = None
+    name = card.get("name", "")
+    community = _lemmy_clean_community(card.get("community") or "")
+    if not community:
+        log("warning", f"card '{name}': no community set - post skipped")
+        LAST_LEMMY_SKIP = "no_community"
+        return False
+    accs = [a for a in list_lemmy_accounts()
+            if not card.get("account_handle") or
+            _lemmy_account_key(a) == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Lemmy account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, article_url = _pick_fresh_lemmy_news(card, state)
+    if not headline:
+        # No fresh story (the picker already said why - "cooldown"
+        # or "no_news"; an absent reason defaults to no_news, same
+        # rule as Nostr).
+        if not LAST_LEMMY_SKIP:
+            LAST_LEMMY_SKIP = "no_news"
+        log("warning", f"card '{name}': no fresh news - Lemmy post skipped")
+        return False
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_LEMMY_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_LEMMY_SKIP = "cooldown"
+        return False
+    title = (card.get("text") or "").strip()
+    if not title:
+        try:
+            title = (ai_write(LEMMY_TITLE_PROMPT.format(headline=headline),
+                              max_tokens=200) or "").strip()
+        except Exception:
+            title = ""
+        if not title:
+            title = headline
+    title = title[:LEMMY_MAX_TITLE_CHARS]
+    try:
+        body = (ai_write(LEMMY_HOOK_PROMPT.format(headline=headline),
+                         max_tokens=400) or "").strip()
+    except Exception:
+        body = ""
+    if not body:
+        body = headline
+    body = body[:LEMMY_MAX_BODY_CHARS]
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to c/{community} "
+                       f"({_lemmy_account_key(accs[0])}) '{title[:60]}' -> "
+                       f"{effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        key = _lemmy_account_key(acc)
+        if not key:
+            continue
+        if not lemmy_account_enabled(key):
+            continue
+        limit = lemmy_account_posts_limit(key)
+        if limit > 0 and posts_today_for_lemmy_account(state, key) >= limit:
+            log("info", f"card '{name}': Lemmy account {key} daily "
+                        "limit reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: lemmy_submit(acc, community, title,
+                                 url=effective_link, body=body),
+            attempts=2, base_delay=5, label="lemmy submit")
+        if res:
+            post_id, post_url = res
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, key)
+            record_lemmy_post(state, key)
+            _record_lemmy_post_at(state, key)
+            log("info", f"card '{name}': posted to c/{community} as "
+                        f"{key}: {post_url or post_id}")
+            ok = True
+            break
+        log("warning", f"card '{name}': lemmy submit failed")
+    return ok
+
+
+def _post_lemmy_card(card, state, due_slots):
+    """The posting loop for lemmy_post cards. Returns (made, last_error).
+    Mirrors _post_reddit_card: 5-minute gap per account, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news, no community) are no-ops, not failures."""
+    global LAST_LEMMY_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _lemmy_gap_key(card)
+    if not dry and _lemmy_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{LEMMY_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_lemmy_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_LEMMY_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_lemmy_post_at(state, gap_key)
+        else:
+            if LAST_LEMMY_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_LEMMY_SKIP == "no_news":
+        return 0, "no fresh news"
+    if made == 0 and LAST_LEMMY_SKIP == "no_community":
+        return 0, "no community set"
+    return made, ("" if made else "post failed or skipped")
+
+
 # ---------------------------------------------------------------- article writing
 ARTICLE_PROMPT = """You are a news writer for a news blog. Write a complete,
 SEO-friendly news article in ENGLISH about this trending topic.
@@ -5904,6 +9573,489 @@ def prepare_bsky_image(local_path, ratio=None):
     except Exception as e:
         log("warning", f"prepare_bsky_image failed ({e}) - using original image")
         return local_path
+
+
+# ---------------------------------------------------------------- dev.to
+# Free, full REST API, no app registration, no review, no approval
+# (verified 2026-11-25 against the official Forem API v1 reference
+# at developers.forem.com/api/v1 - "Publish article" - plus the
+# dev.to API guides): POST https://dev.to/api/articles with
+# {"article": {title, body_markdown, published, tags, main_image,
+# canonical_url, description}} creates an article (201). Auth is
+# ONE header, "api-key: <key>" (+ Accept:
+# application/vnd.forem.api-v1+json); the key is generated at
+# dev.to Settings > Extensions. Tags are a comma-separated string,
+# max 4. Rate limit on article creation: 10 requests per 30s.
+#
+# TWO DESIGN DECISIONS (stated plainly, not buried):
+# 1. CANONICAL URL: the canonical_url should point at the Blogger
+#    post - but the Blogger API is restricted and posts go up via
+#    the browser, so the worker does NOT know the Blogger post URL
+#    at post time. RULE: post WITHOUT canonical_url when the worker
+#    does not know it (dev.to allows the field to be omitted) and
+#    log plainly that the canonical link should be set once the
+#    Blogger post is live. The card carries an OPTIONAL
+#    canonical_url field the user can fill per post; the default is
+#    "omit when unknown". The worker NEVER fabricates a URL and
+#    NEVER points canonical_url at the blog homepage.
+# 2. BODY FORMAT: generate the article in Markdown DIRECTLY (option
+#    b) - no HTML->Markdown converter. The worker's Gemini article
+#    text IS already Markdown (## subheadings, **bold** - see
+#    ARTICLE_PROMPT); build_article_html converts it to HTML only
+#    for Blogger. For dev.to the raw article text is used as-is
+#    (only the HEADLINE: line is dropped - it becomes the title).
+#    The verified photo's public URL goes in as main_image (the
+#    cover image), not embedded in the body.
+# Audience is developers - this is an SEO/canonical play, not a
+# news-feed play. dev.to v1 is POST-ONLY: article comments exist
+# (POST /api/comments) but the comment-fetch loop was not built -
+# see execute_card. The API key is NEVER logged, never in
+# state.json, never in a repo file - only in the DEVTO_API_KEY env
+# secret. Counts and gaps are keyed by "devto" (one key - there is
+# no account name, and the key itself never appears in state).
+DEVTO_MIN_POST_GAP_MINUTES = 5
+DEVTO_MAX_TITLE_CHARS = 200
+DEVTO_MAX_BODY_CHARS = 100000
+DEVTO_API_URL = "https://dev.to/api/articles"
+
+LAST_DEVTO_SKIP = None
+
+
+def devto_api_key():
+    """The dev.to API key from the DEVTO_API_KEY env secret.
+    Empty when not configured - a dev.to card cannot run then.
+    The key value is NEVER logged."""
+    return ENV_DEVTO_API_KEY
+
+
+def list_devto_accounts():
+    """The dev.to 'account': the single API key (one key, from
+    dev.to Settings > Extensions). An empty list means no key is
+    configured - a dev.to card cannot run at all then."""
+    if not devto_api_key():
+        return []
+    return [{"api_key": devto_api_key(), "name": "dev.to"}]
+
+
+def _devto_account_key(account=None):
+    """The per-key key for counts/gaps/settings/controls: always
+    "devto" (one API key - there is no account name, and the key
+    itself never appears in state or logs)."""
+    return "devto"
+
+
+def _devto_clean_tags(raw):
+    """Normalise tags (a list or a comma string) for dev.to: up to
+    4, lowercase, no spaces (spaces become '-'), only a-z, 0-9 and
+    '-'. Duplicates dropped, order kept."""
+    if isinstance(raw, str):
+        parts = raw.split(",")
+    elif isinstance(raw, (list, tuple)):
+        parts = list(raw)
+    else:
+        parts = []
+    out = []
+    for p in parts:
+        t = re.sub(r"[^a-z0-9\-]", "",
+                   str(p or "").strip().lower().replace(" ", "-"))
+        if t and t not in out:
+            out.append(t)
+    return out[:4]
+
+
+def _devto_tags(card, topic):
+    """The tags for a dev.to article (max 4). The card's own tags
+    win when set; otherwise war news gets news+world and everything
+    else (political news, a custom topic) gets news+politics."""
+    tags = _devto_clean_tags((card or {}).get("tags"))
+    if tags:
+        return tags
+    if (topic or "").strip().lower() == "war news":
+        return ["news", "world"]
+    return ["news", "politics"]
+
+
+def _devto_canonical_url(card):
+    """The card's optional Canonical URL (the Blogger post URL, once
+    it is live). Empty when unknown - the worker NEVER guesses a URL
+    and NEVER points it at the blog homepage: dev.to allows
+    canonical_url to be omitted, and _card_devto_post logs plainly
+    when it posts without one."""
+    raw = ((card or {}).get("canonical_url") or "").strip()
+    if not raw or not raw.lower().startswith("http"):
+        return ""
+    return raw
+
+
+def card_devto_published(card):
+    """Publish immediately (True) or save as a draft (False)? The
+    card's devto_published field decides; the default is True -
+    a scheduled dev.to card publishes, like every other card."""
+    v = (card or {}).get("devto_published")
+    if v is None:
+        return True
+    if isinstance(v, str):
+        return v.strip().lower() != "false"
+    return bool(v)
+
+
+def _devto_body_markdown(article_text):
+    """The dev.to article body, in Markdown, from the Gemini article
+    text. The text IS already Markdown (## subheadings, **bold** -
+    see ARTICLE_PROMPT), so it is used as-is: only the HEADLINE:
+    line is dropped (it becomes the title) and leading/trailing
+    blank lines are trimmed. No HTML is involved at all - that is
+    the whole point (option b: generate in Markdown directly)."""
+    lines = []
+    for line in (article_text or "").splitlines():
+        if line.strip().startswith("HEADLINE:"):
+            continue
+        lines.append(line.rstrip())
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    while lines and not lines[-1].strip():
+        lines.pop()
+    return "\n".join(lines)
+
+
+def devto_submit(title, body_markdown, tags, main_image=None,
+                 canonical_url=None, published=True):
+    """Create a dev.to article: POST /api/articles with
+    {"article": {...}}. The title is hard-capped at 200 chars and
+    the body at 100,000 chars at this single send point. Tags go as
+    the comma-separated string the official spec wants (max 4).
+    main_image is the cover image URL; canonical_url is only sent
+    when known (omitted otherwise - never fabricated, never the
+    homepage). Returns (article_id, article_url) or None. The API
+    key is NEVER logged (only the status and the article URL)."""
+    key = devto_api_key()
+    if not key:
+        log("warning", "dev.to submit failed: no API key configured")
+        return None
+    title = (title or "").strip()[:DEVTO_MAX_TITLE_CHARS]
+    body_markdown = (body_markdown or "").strip()[:DEVTO_MAX_BODY_CHARS]
+    if not title or not body_markdown:
+        return None
+    article = {"title": title, "body_markdown": body_markdown,
+               "published": bool(published)}
+    tag_list = _devto_clean_tags(tags)
+    if tag_list:
+        article["tags"] = ",".join(tag_list)
+    if main_image:
+        article["main_image"] = (main_image or "").strip()
+    if canonical_url:
+        article["canonical_url"] = (canonical_url or "").strip()
+    # description: the first real paragraph, plain text, <= 150 chars.
+    first_para = ""
+    for line in body_markdown.splitlines():
+        text = re.sub(r"[#*_`>\[\]()]", "", line).strip()
+        if len(text) >= 40:
+            first_para = text
+            break
+    if first_para:
+        article["description"] = first_para[:150]
+    try:
+        r = requests.post(
+            DEVTO_API_URL, json={"article": article},
+            headers={"api-key": key,
+                     "Accept": "application/vnd.forem.api-v1+json",
+                     "Content-Type": "application/json"},
+            timeout=25)
+    except Exception as e:
+        log("warning", f"dev.to submit failed: {e}")
+        return None
+    if r.status_code not in (200, 201):
+        log("warning", f"dev.to submit failed (HTTP {r.status_code})")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", "dev.to submit response not JSON")
+        return None
+    art_id = data.get("id")
+    if not art_id:
+        log("warning", "dev.to submit returned no article id")
+        return None
+    art_url = data.get("url", "") or ""
+    log("info", f"dev.to: posted '{title[:60]}': {art_url or art_id}")
+    return art_id, art_url
+
+
+def _pick_fresh_devto_news(card, state):
+    """Pick a FRESH news story for a dev.to article: (topic,
+    headline, article_url). Reuses the Reddit picker verbatim - the
+    same categories (ONLY USA political news and war news, rotating;
+    the card's topic_override is the only other allowed topic) and
+    the same 24h per-topic / per-link cooldowns, so the same story
+    never goes to two platforms the same day. Returns
+    (None, None, None) when no fresh story exists; LAST_DEVTO_SKIP
+    says why ("cooldown" or "no_news") - copied from
+    LAST_REDDIT_SKIP, which the shared picker sets."""
+    global LAST_DEVTO_SKIP
+    topic, headline, url = _pick_fresh_reddit_news(card, state)
+    LAST_DEVTO_SKIP = LAST_REDDIT_SKIP
+    return topic, headline, url
+
+
+def _devto_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: "devto"
+    (one API key - two cards sharing the key must not burst-post)."""
+    return "devto"
+
+
+def _devto_gap_left(state, key):
+    """Time left on the 5-minute no-burst gap for the dev.to key,
+    or None when it may post again."""
+    last = (state.get("last_devto_post_at") or {}).get(key or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=DEVTO_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_devto_post_at(state, key):
+    """Remember that dev.to posted now (state.json, so the gap
+    survives across worker runs)."""
+    state.setdefault("last_devto_post_at", {})[key or ""] = now_iso()
+
+
+def record_devto_post(state, key):
+    """Count a dev.to post for today (per-key daily counts)."""
+    counts = state.setdefault("devto_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[key] = int(today.get(key, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_devto_account(state, key):
+    counts = state.get("devto_post_counts", {})
+    return int(counts.get(today_str(), {}).get(key, 0))
+
+
+DEVTO_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "devto_accounts.json")
+
+
+def get_devto_account_settings():
+    """Per-key settings from data/devto_accounts.json (public, no
+    key): [{key: "devto", enabled, posts_per_day}]. Missing file =
+    all enabled. Kept in its own file (not accounts.json) so saving
+    dev.to controls can never wipe another platform's entries - the
+    dashboard writes this file from the dev.to tab."""
+    if not os.path.exists(DEVTO_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(DEVTO_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            out = {}
+            for a in data:
+                if not isinstance(a, dict):
+                    continue
+                key = a.get("key") or _devto_account_key()
+                if key:
+                    out[key] = a
+            return out
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"devto_accounts.json load failed: {e}")
+    return {}
+
+
+def devto_account_enabled(key):
+    cfg = get_devto_account_settings().get(key)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def devto_account_posts_limit(key):
+    cfg = get_devto_account_settings().get(key)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+def _card_devto_post(card, state):
+    """Post ONE dev.to article. Returns True on success.
+    The article is a FULL article about a fresh Political/War news
+    story (the same picker + shared cooldowns as Bluesky, so the
+    same story never goes to two platforms the same day), written
+    by Gemini in Markdown and posted with the verified photo as the
+    cover image (main_image). PHOTO FIRST (strict rule): no
+    verified photo = the story is dropped, never text-only - a
+    dev.to article without a cover image is not posted. The
+    canonical_url is the card's optional field, sent only when the
+    user filled it (the Blogger post URL, once live); when it is
+    empty the article posts WITHOUT canonical_url and the log says
+    so plainly. Same 5-minute no-burst gap per key. A cooldown /
+    no-news / no-photo skip is a clean no-op (LAST_DEVTO_SKIP)."""
+    global LAST_DEVTO_SKIP
+    LAST_DEVTO_SKIP = None
+    name = card.get("name", "")
+    key = _devto_account_key()
+    if not devto_api_key():
+        log("warning", f"card '{name}': no dev.to API key - post skipped")
+        LAST_DEVTO_SKIP = "no_key"
+        return False
+    if not devto_account_enabled(key):
+        log("info", f"card '{name}': dev.to key is disabled - skipping")
+        return False
+    limit = devto_account_posts_limit(key)
+    if limit > 0 and posts_today_for_devto_account(state, key) >= limit:
+        log("info", f"card '{name}': dev.to daily limit reached - skipping")
+        return False
+    topic, headline, article_url = _pick_fresh_devto_news(card, state)
+    if not headline:
+        # No fresh story (the picker already said why - "cooldown"
+        # or "no_news"; an absent reason defaults to no_news, same
+        # rule as Nostr/Lemmy).
+        if not LAST_DEVTO_SKIP:
+            LAST_DEVTO_SKIP = "no_news"
+        log("warning", f"card '{name}': no fresh news - dev.to post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_DEVTO_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_DEVTO_SKIP = "cooldown"
+        return False
+    # PHOTO FIRST: fetch + verify the photo BEFORE the AI writes
+    # anything - a dev.to article without a cover image is not
+    # posted (strict no-post-without-a-photo rule).
+    photo = fetch_verified_photo(topic)
+    if not photo:
+        log("warning", f"card '{name}': no photo, skipped - dev.to "
+                       f"article needs a verified real photo (cover image)")
+        LAST_DEVTO_SKIP = "no_photo"
+        return False
+    verified, sources, items = verify_news(topic)
+    if not verified:
+        log("warning", f"card '{name}': topic not verified (needs 2 "
+                       f"sources) - dev.to post skipped")
+        LAST_DEVTO_SKIP = "no_news"
+        return False
+    facts = "\n".join(f"- {i['title']} ({i['source']})" for i in items[:5])
+    length_text, max_tokens = ARTICLE_LENGTHS[card_length_mode(card)]
+    tone_text = ARTICLE_TONES[card_tone(card)]
+    article_text = ai_write(ARTICLE_PROMPT.format(
+        topic=topic, facts=facts, tone=tone_text, length=length_text),
+        max_tokens=max_tokens)
+    if not article_text:
+        log("warning", f"card '{name}': article writing failed for '{topic}'")
+        return False
+    title = extract_headline(article_text)
+    body = _devto_body_markdown(article_text)
+    if not body:
+        log("warning", f"card '{name}': empty article body for '{topic}'")
+        return False
+    tags = _devto_tags(card, topic)
+    canonical = _devto_canonical_url(card)
+    if not canonical:
+        log("info", f"card '{name}': no canonical URL set - posting "
+                    f"WITHOUT canonical_url; set the card's Canonical "
+                    f"URL once the Blogger post is live (never guessed, "
+                    f"never the homepage)")
+    main_image = (photo.get("url") or "").strip()
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to dev.to "
+                       f"'{title[:60]}' tags={','.join(tags)}"
+                       f"{' canonical=' + canonical if canonical else ' (no canonical_url)'}")
+        return True
+    res = retry_with_backoff(
+        lambda: devto_submit(title, body, tags, main_image=main_image,
+                             canonical_url=canonical,
+                             published=card_devto_published(card)),
+        attempts=2, base_delay=5, label="dev.to submit")
+    if res:
+        art_id, art_url = res
+        _record_promo_topic_posted(state, headline)
+        _record_promo_link_topic_posted(state, effective_link, headline)
+        _record_promo_account_posted(state, headline, key)
+        record_devto_post(state, key)
+        _record_devto_post_at(state, key)
+        log("info", f"card '{name}': posted to dev.to: {art_url or art_id}")
+        return True
+    log("warning", f"card '{name}': dev.to submit failed")
+    return False
+
+
+def _post_devto_card(card, state, due_slots):
+    """The posting loop for devto_post cards. Returns (made, last_error).
+    Mirrors _post_lemmy_card: 5-minute gap per key, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news, no photo) are no-ops, not failures."""
+    global LAST_DEVTO_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _devto_gap_key(card)
+    if not dry and _devto_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{DEVTO_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_devto_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_DEVTO_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_devto_post_at(state, gap_key)
+        else:
+            if LAST_DEVTO_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_DEVTO_SKIP == "no_news":
+        return 0, "no fresh news"
+    if made == 0 and LAST_DEVTO_SKIP == "no_photo":
+        return 0, "no photo, skipped"
+    if made == 0 and LAST_DEVTO_SKIP == "no_key":
+        return 0, "no api key"
+    return made, ("" if made else "post failed or skipped")
 
 
 def run_card_blogger(state, card, max_posts=None):
@@ -7037,6 +11189,27 @@ def execute_card(card, state, test_mode=False, post_only=False):
     if ctype == "reddit_post" and not workflow_enabled("reddit"):
         log("info", f"card '{name}': Reddit workflow is OFF - skipping")
         return False
+    if ctype == "tumblr_post" and not workflow_enabled("tumblr"):
+        log("info", f"card '{name}': Tumblr workflow is OFF - skipping")
+        return False
+    if ctype == "threads_post" and not workflow_enabled("threads"):
+        log("info", f"card '{name}': Threads workflow is OFF - skipping")
+        return False
+    if ctype == "mastodon_post" and not workflow_enabled("mastodon"):
+        log("info", f"card '{name}': Mastodon workflow is OFF - skipping")
+        return False
+    if ctype == "telegram_post" and not workflow_enabled("telegram"):
+        log("info", f"card '{name}': Telegram workflow is OFF - skipping")
+        return False
+    if ctype == "nostr_post" and not workflow_enabled("nostr"):
+        log("info", f"card '{name}': Nostr workflow is OFF - skipping")
+        return False
+    if ctype == "lemmy_post" and not workflow_enabled("lemmy"):
+        log("info", f"card '{name}': Lemmy workflow is OFF - skipping")
+        return False
+    if ctype == "devto_post" and not workflow_enabled("devto"):
+        log("info", f"card '{name}': dev.to workflow is OFF - skipping")
+        return False
     if ctype == "bluesky_reply" and not workflow_enabled("replies"):
         log("info", f"card '{name}': Bluesky replies are OFF - skipping")
         return False
@@ -7085,6 +11258,70 @@ def execute_card(card, state, test_mode=False, post_only=False):
             if isinstance(res, (tuple, list)) and len(res) == 2:
                 return int(res[0] or 0) + int(res[1] or 0)
             return 0
+        if ctype == "tumblr_post":
+            # Tumblr has NO public comment-reply API (notes are
+            # likes/reblogs; there is no endpoint to post a reply to
+            # a comment), so a Tumblr card never sends replies -
+            # posting only. This is a platform limit, not a bug.
+            log("info", f"card '{name}': Tumblr has no reply API - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "threads_post":
+            # Threads v1 is POST-ONLY (same call as Tumblr): the
+            # reply endpoints (threads_read_replies /
+            # threads_manage_replies) need two extra permissions and
+            # a per-post reply-fetch loop, and were not built - see
+            # the Threads section header. Posting only.
+            log("info", f"card '{name}': Threads replies are not built - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "mastodon_post":
+            # Mastodon v1 is POST-ONLY (same call as Tumblr/Threads):
+            # replies ARE possible on Mastodon (status context +
+            # in_reply_to_id), but need a per-post reply-fetch loop
+            # and posted-id tracking, and were not built - see the
+            # Mastodon section header. Posting only.
+            log("info", f"card '{name}': Mastodon replies are not built - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "telegram_post":
+            # Telegram v1 is POST-ONLY (same call as Tumblr/Threads/
+            # Mastodon): channel posts have no reply cycle in the
+            # Bot API sense (channel comments live in a linked
+            # discussion group), so no replies were built - see the
+            # Telegram section header. Posting only.
+            log("info", f"card '{name}': Telegram replies are not built - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "nostr_post":
+            # Nostr v1 is POST-ONLY (same call as Tumblr/Threads/
+            # Mastodon/Telegram): replies ARE possible on Nostr
+            # (kind-1 with e/p tags per NIP-10), but need a per-post
+            # reply-fetch loop and posted-id tracking, and were not
+            # built - see the Nostr section header. Posting only.
+            log("info", f"card '{name}': Nostr replies are not built - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "lemmy_post":
+            # Lemmy v1 is POST-ONLY (same call as Tumblr/Threads/
+            # Mastodon/Telegram/Nostr): replies ARE possible on Lemmy
+            # (POST /api/v3/comment with a parent_id), but need a
+            # per-post reply-fetch loop and posted-id tracking, and
+            # were not built - see the Lemmy section header.
+            # Posting only.
+            log("info", f"card '{name}': Lemmy replies are not built - "
+                        "replies skipped, posting only")
+            return 0
+        if ctype == "devto_post":
+            # dev.to v1 is POST-ONLY (same call as Tumblr/Threads/
+            # Mastodon/Telegram/Nostr/Lemmy): article comments ARE
+            # possible on dev.to (POST /api/comments), but need a
+            # per-article reply-fetch loop and posted-id tracking,
+            # and were not built - see the dev.to section header.
+            # Posting only.
+            log("info", f"card '{name}': dev.to replies are not built - "
+                        "replies skipped, posting only")
+            return 0
         res = run_bluesky_cycle(state, article=article,
                                 reply_own=reply_own,
                                 reply_others=reply_others,
@@ -7111,6 +11348,48 @@ def execute_card(card, state, test_mode=False, post_only=False):
             # A Reddit card with NO account cannot run at all.
             no_account = True
             last_error = "no Reddit account added - add one first (Reddit tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "tumblr_post" and not list_tumblr_accounts():
+            # A Tumblr card with NO account cannot run at all.
+            no_account = True
+            last_error = "no Tumblr account added - add one first (Tumblr tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "threads_post" and not list_threads_accounts():
+            # A Threads card with NO account cannot run at all.
+            no_account = True
+            last_error = "no Threads account added - add one first (Threads tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "mastodon_post" and not list_mastodon_accounts():
+            # A Mastodon card with NO account cannot run at all.
+            no_account = True
+            last_error = "no Mastodon account added - add one first (Mastodon tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "telegram_post" and not list_telegram_accounts():
+            # A Telegram card with NO bot token cannot run at all.
+            no_account = True
+            last_error = "no Telegram bot token added - add one first (Telegram tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "nostr_post" and not list_nostr_accounts():
+            # A Nostr card with NO key cannot run at all.
+            no_account = True
+            last_error = "no Nostr key added - add one first (Nostr tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "lemmy_post" and not list_lemmy_accounts():
+            # A Lemmy card with NO account cannot run at all.
+            no_account = True
+            last_error = "no Lemmy account added - add one first (Lemmy tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "devto_post" and not list_devto_accounts():
+            # A dev.to card with NO API key cannot run at all.
+            no_account = True
+            last_error = "no dev.to API key added - add one first (dev.to tab)"
             log("error", f"card '{name}': {last_error} - skipping, nothing posted")
             ok = False
         elif ctype == "blogger_post":
@@ -7249,6 +11528,175 @@ def execute_card(card, state, test_mode=False, post_only=False):
                     last_error = err or ""
                 else:
                     last_error = err or "post failed or skipped"
+        elif ctype == "tumblr_post":
+            # Tumblr posts need a verified photo (uploaded as NPF
+            # multipart) and a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. Tumblr
+            # has no reply API - _do_replies logs that and sends 0.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_tumblr_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached", "no photo, skipped")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "threads_post":
+            # Threads posts need a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. The
+            # photo posts with its original public URL (Threads
+            # downloads it); a story with no public photo URL posts
+            # TEXT-only instead - there is no 'no photo' skip.
+            # Threads v1 is post-only - _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_threads_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "mastodon_post":
+            # Mastodon posts need a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. The
+            # photo is UPLOADED to the account's own instance; a
+            # story with no verified photo posts TEXT-only instead -
+            # there is no 'no photo' skip. Mastodon v1 is post-only
+            # - _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_mastodon_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "telegram_post":
+            # Telegram posts need a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. The
+            # photo is UPLOADED as bytes to the card's channel
+            # (sendPhoto, 1024-char caption); a story with no
+            # verified photo posts TEXT-only via sendMessage instead
+            # (4096-char cap) - there is no 'no photo' skip.
+            # Telegram v1 is post-only - _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_telegram_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached", "no channel set")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "nostr_post":
+            # Nostr posts need a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. The
+            # verified photo's PUBLIC URL goes in the note as its own
+            # line (Nostr clients render image URLs inline); a story
+            # with no verified photo posts TEXT-only instead - there
+            # is no 'no photo' skip. Nostr v1 is post-only -
+            # _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_nostr_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "lemmy_post":
+            # Lemmy posts need a fresh Political/War story from the
+            # SAME picker + shared cooldowns as Bluesky, so the same
+            # story never goes to two platforms the same day. NO
+            # photo is needed: a Lemmy link post is a title + a link
+            # + a hook body, posted INTO the card's community - there
+            # is no 'no photo' skip. Lemmy v1 is post-only -
+            # _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_lemmy_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached", "no community set")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
+        elif ctype == "devto_post":
+            # dev.to posts are FULL articles about a fresh
+            # Political/War story from the SAME picker + shared
+            # cooldowns as Bluesky, so the same story never goes to
+            # two platforms the same day. A verified photo is
+            # REQUIRED (it is the cover image) - no photo is a clean
+            # skip. The canonical_url is the card's optional field,
+            # omitted when unknown. dev.to v1 is post-only -
+            # _do_replies logs that.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_devto_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached", "no photo, skipped")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
             last_error = f"unknown type {ctype}"
@@ -7299,12 +11747,28 @@ def _card_workflow(card):
     API is restricted while Bluesky still works). Reddit cards run in
     the Bluesky workflow (same 10-minute cadence, same --only bluesky
     flag) - no separate schedule is needed, and the Reddit workflow
-    toggle (reddit_enabled) gates them inside that run."""
+    toggle (reddit_enabled) gates them inside that run. Tumblr cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the tumblr_enabled toggle. Threads cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the threads_enabled toggle. Mastodon cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the mastodon_enabled toggle. Telegram
+    cards run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the telegram_enabled toggle. Nostr cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the nostr_enabled toggle. Lemmy cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the lemmy_enabled toggle. dev.to cards
+    run in the Bluesky workflow too (same cadence, same --only
+    bluesky flag), gated by the devto_enabled toggle."""
     t = card.get("type", "")
     if t == "blogger_post":
         return "blogger"
     if t in ("bluesky_post", "bluesky_promo", "bluesky_reply",
-             "reddit_post"):
+             "reddit_post", "tumblr_post", "threads_post",
+             "mastodon_post", "telegram_post", "nostr_post",
+             "lemmy_post", "devto_post"):
         return "bluesky"
     return None
 
@@ -7398,7 +11862,9 @@ def run_cards_cycle(state, only=None):
         post_only = False
         if not interval_due and card.get("type") in (
                 "bluesky_post", "bluesky_promo", "blogger_post",
-                "reddit_post"):
+                "reddit_post", "tumblr_post", "threads_post",
+                "mastodon_post", "telegram_post", "nostr_post",
+                "lemmy_post", "devto_post"):
             if card_posts_per_day(card) > 0:
                 slot_due, _slots = card_post_due(card, state)
                 if slot_due:
@@ -7487,12 +11953,22 @@ FORCE_DRY = False
 def workflow_enabled(name):
     """Is a workflow cycle switched on? name: blogger|bsky|replies|cards."""
     key = {"blogger": "blogger_enabled", "bsky": "bsky_enabled",
-           "reddit": "reddit_enabled",
+           "reddit": "reddit_enabled", "tumblr": "tumblr_enabled",
+           "threads": "threads_enabled", "mastodon": "mastodon_enabled",
+           "telegram": "telegram_enabled", "nostr": "nostr_enabled",
+           "lemmy": "lemmy_enabled", "devto": "devto_enabled",
            "replies": "replies_enabled", "cards": "cards_enabled"}.get(name)
     if not key:
         return True
     default = {"blogger": DEFAULT_BLOGGER_ENABLED, "bsky": DEFAULT_BSKY_ENABLED,
                "reddit": DEFAULT_REDDIT_ENABLED,
+               "tumblr": DEFAULT_TUMBLR_ENABLED,
+               "threads": DEFAULT_THREADS_ENABLED,
+               "mastodon": DEFAULT_MASTODON_ENABLED,
+               "telegram": DEFAULT_TELEGRAM_ENABLED,
+               "nostr": DEFAULT_NOSTR_ENABLED,
+               "lemmy": DEFAULT_LEMMY_ENABLED,
+               "devto": DEFAULT_DEVTO_ENABLED,
                "replies": DEFAULT_REPLIES_ENABLED,
                "cards": DEFAULT_CARDS_ENABLED}[name]
     return str(get_setting(key, default)).strip().lower() != "false"
@@ -7643,6 +12119,36 @@ def health_check(state=None):
         "ok": bool(reddit_accounts),
         "detail": f"{len(reddit_accounts)} account(s)" if reddit_accounts
                   else "no REDDIT_ACCOUNTS secret"}
+    tumblr_accounts = list_tumblr_accounts()
+    health["tumblr"] = {
+        "ok": bool(tumblr_accounts),
+        "detail": f"{len(tumblr_accounts)} account(s)" if tumblr_accounts
+                  else "no TUMBLR_ACCOUNTS secret"}
+    threads_accounts = list_threads_accounts()
+    health["threads"] = {
+        "ok": bool(threads_accounts),
+        "detail": f"{len(threads_accounts)} account(s)" if threads_accounts
+                  else "no THREADS_ACCOUNTS secret"}
+    mastodon_accounts = list_mastodon_accounts()
+    health["mastodon"] = {
+        "ok": bool(mastodon_accounts),
+        "detail": f"{len(mastodon_accounts)} account(s)" if mastodon_accounts
+                  else "no MASTODON_ACCOUNTS secret"}
+    telegram_accounts = list_telegram_accounts()
+    health["telegram"] = {
+        "ok": bool(telegram_accounts),
+        "detail": "bot token set" if telegram_accounts
+                  else "no TELEGRAM_BOT_TOKEN secret"}
+    lemmy_accounts = list_lemmy_accounts()
+    health["lemmy"] = {
+        "ok": bool(lemmy_accounts),
+        "detail": f"{len(lemmy_accounts)} account(s)" if lemmy_accounts
+                  else "no LEMMY_ACCOUNTS secret"}
+    devto_accounts = list_devto_accounts()
+    health["devto"] = {
+        "ok": bool(devto_accounts),
+        "detail": "API key set" if devto_accounts
+                  else "no DEVTO_API_KEY secret"}
     health["pexels"] = {
         "ok": bool(os.environ.get("PEXELS_API_KEY")),
         "detail": "key present" if os.environ.get("PEXELS_API_KEY")
@@ -7664,6 +12170,61 @@ def health_check(state=None):
             record_issue("warning", "health",
                          "Reddit card(s) exist but no Reddit account - "
                          "add one in the Reddit tab")
+    except Exception:
+        pass
+    # A Tumblr card with no Tumblr account is a setup problem (same as
+    # Bluesky/Reddit) - but no warning when the user simply does not
+    # use Tumblr.
+    try:
+        if not tumblr_accounts and any(
+                c.get("type") == "tumblr_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "Tumblr card(s) exist but no Tumblr account - "
+                         "add one in the Tumblr tab")
+    except Exception:
+        pass
+    # A Threads card with no Threads account is a setup problem (same
+    # as Bluesky/Reddit/Tumblr) - but no warning when the user simply
+    # does not use Threads.
+    try:
+        if not threads_accounts and any(
+                c.get("type") == "threads_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "Threads card(s) exist but no Threads account - "
+                         "add one in the Threads tab")
+    except Exception:
+        pass
+    # A Mastodon card with no Mastodon account is a setup problem (same
+    # as Bluesky/Reddit/Tumblr/Threads) - but no warning when the user
+    # simply does not use Mastodon.
+    try:
+        if not mastodon_accounts and any(
+                c.get("type") == "mastodon_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "Mastodon card(s) exist but no Mastodon account - "
+                         "add one in the Mastodon tab")
+    except Exception:
+        pass
+    # A Telegram card with no bot token is a setup problem (same
+    # as Bluesky/Reddit/Tumblr/Threads/Mastodon) - but no warning
+    # when the user simply does not use Telegram.
+    try:
+        if not telegram_accounts and any(
+                c.get("type") == "telegram_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "Telegram card(s) exist but no Telegram bot token - "
+                         "add one in the Telegram tab")
+    except Exception:
+        pass
+    # A dev.to card with no API key is a setup problem (same as
+    # Bluesky/Reddit/Tumblr/Threads/Mastodon/Telegram) - but no
+    # warning when the user simply does not use dev.to.
+    try:
+        if not devto_accounts and any(
+                c.get("type") == "devto_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "dev.to card(s) exist but no dev.to API key - "
+                         "add one in the dev.to tab")
     except Exception:
         pass
     return health
@@ -8251,6 +12812,7 @@ def api_settings():
     # switches, dry-run, circuit breaker and card defaults.
     keys = ("dry_run", "max_consecutive_failures",
             "blogger_enabled", "bsky_enabled", "reddit_enabled",
+            "mastodon_enabled", "telegram_enabled", "nostr_enabled",
             "replies_enabled",
             "cards_enabled", "blogger_bold_format",
             "card_default_interval_hours", "card_default_interval_minutes",
