@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 73,
-  "last_run": "2026-11-25T01:55:16.286380+00:00",
+  "runs": 74,
+  "last_run": "2026-11-25T01:57:39.308041+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
@@ -12,7 +12,7 @@
       "primonewstoday.bsky.social": 17
     },
     "2026-11-25": {
-      "primonewstoday.bsky.social": 1
+      "primonewstoday.bsky.social": 2
     }
   },
   "posted_promo_topics": {
@@ -43,7 +43,8 @@
     "attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953111+00:00",
     "corruption gallup government high news record widespread": "2026-11-24T22:47:14.660434+00:00",
     "coalition evacuation hodeidah iran jazeera led live order port saudi war": "2026-11-24T23:39:40.505157+00:00",
-    "abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793739+00:00"
+    "abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793739+00:00",
+    "cbs chemical defense develop iran israeli minister news update war weapon": "2026-11-25T01:58:51.451033+00:00"
   },
   "posted_promo_link_topics": {
     "https://shorturl.at/eZnco||2026 broke celebrity evan jonigkeit mamet split star weekly who year zosia": "2026-11-23T10:31:15.446628+00:00",
@@ -73,7 +74,8 @@
     "https://shorturl.at/eZnco||attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953153+00:00",
     "https://shorturl.at/eZnco||corruption gallup government high news record widespread": "2026-11-24T22:47:14.660468+00:00",
     "https://shorturl.at/eZnco||coalition evacuation hodeidah iran jazeera led live order port saudi war": "2026-11-24T23:39:40.505188+00:00",
-    "https://shorturl.at/eZnco||abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793772+00:00"
+    "https://shorturl.at/eZnco||abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793772+00:00",
+    "https://shorturl.at/eZnco||cbs chemical defense develop iran israeli minister news update war weapon": "2026-11-25T01:58:51.451072+00:00"
   },
   "posted_promo_captions": {
     "684f88fdb22717cf5c1bc4127ba32f8fb6899693": "2026-11-23T10:31:15.448152+00:00",
@@ -104,7 +106,8 @@
     "2d003a94465d7f4e1b0423776db8bef234553059": "2026-11-24T21:43:27.954771+00:00",
     "7a03e4f04923bb672254f839cc3532fdb8c4f99c": "2026-11-24T22:47:14.662262+00:00",
     "e0197d8175d336f4b809170f7e78111c8fd4611e": "2026-11-24T23:39:40.506160+00:00",
-    "dfa0db1415dd3d54fec7787c53c65667bba1ca5c": "2026-11-25T00:39:24.804028+00:00"
+    "dfa0db1415dd3d54fec7787c53c65667bba1ca5c": "2026-11-25T00:39:24.804028+00:00",
+    "3b1264e522d317163374d3c520d2fe2bff15bbd8": "2026-11-25T01:58:51.453588+00:00"
   },
   "file_card_post_counts": {
     "BlueSky Trend": {
@@ -117,16 +120,16 @@
     },
     "Adsterra Blogger": {
       "day": "2026-11-25",
-      "day_n": 6,
+      "day_n": 7,
       "week": "2026-W48",
-      "week_n": 18,
+      "week_n": 19,
       "month": "2026-11",
-      "month_n": 18
+      "month_n": 19
     }
   },
   "last_bsky_post_at": {
     "BlueSky Trend": "2026-11-24T01:06:35.754072+00:00",
-    "primonewstoday.bsky.social": "2026-11-25T00:39:24.804115+00:00"
+    "primonewstoday.bsky.social": "2026-11-25T01:58:51.453715+00:00"
   },
   "file_card_post_slots": {
     "BlueSky Trend": {
@@ -164,7 +167,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ]
     }
   },
@@ -177,16 +181,16 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 23,
+      "success": 24,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T00:39:24.819442+00:00"
+      "last_run": "2026-11-25T01:58:51.455097+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T00:39:24.819444+00:00"
+    "Adsterra Blogger": "2026-11-25T01:58:51.455103+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -195,16 +199,16 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-25",
-      "count": 1
+      "count": 2
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T01:55:16.287913+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T01:57:39.309720+00:00"
     }
   ],
   "posted_urls": [],
@@ -225,7 +229,12 @@
     "at://did:plc:p5jg7xhlh3fcyqlgx2tkdchp/app.bsky.feed.post/3n336azxttc26",
     "at://did:plc:huuhpix2deoxxfuvi26wec7w/app.bsky.feed.post/3n33bkxsn6s27",
     "at://did:plc:iekd22d6c3vmjpydj3x66ewv/app.bsky.feed.post/3n33waio3dw26",
-    "at://did:plc:zr24j24kyybkej6lhx3tgbss/app.bsky.feed.post/3n33w6gotrk25"
+    "at://did:plc:zr24j24kyybkej6lhx3tgbss/app.bsky.feed.post/3n33w6gotrk25",
+    "at://did:plc:wdhqi5o6qbbm6qllifr3biwj/app.bsky.feed.post/3n342io44wc2w",
+    "at://did:plc:wa3a4sgidmpurnyt5c65oppt/app.bsky.feed.post/3n342jvauss22",
+    "at://did:plc:qy5vpnfs64deyrhnagx2clez/app.bsky.feed.post/3n342nbtkbc2q",
+    "at://did:plc:hna4d4qfdrn4wg3f55usbno3/app.bsky.feed.post/3n342h4eick2b",
+    "at://did:plc:fwa4amwjgkdri5c7qdacg56y/app.bsky.feed.post/3n342mafj2k2v"
   ],
   "file_card_retries": {
     "BlueSky Trend": {
@@ -252,25 +261,26 @@
     "attack authoritie houthi injure iran jazeera live riyadh saudi tower war": "2026-11-24T21:43:27.953183+00:00|primonewstoday.bsky.social",
     "corruption gallup government high news record widespread": "2026-11-24T22:47:14.660492+00:00|primonewstoday.bsky.social",
     "coalition evacuation hodeidah iran jazeera led live order port saudi war": "2026-11-24T23:39:40.505207+00:00|primonewstoday.bsky.social",
-    "abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793791+00:00|primonewstoday.bsky.social"
+    "abc administration break comey here includ individual jame latest list news target trump video": "2026-11-25T00:39:24.793791+00:00|primonewstoday.bsky.social",
+    "cbs chemical defense develop iran israeli minister news update war weapon": "2026-11-25T01:58:51.451098+00:00|primonewstoday.bsky.social"
   },
   "file_card_reply_counts": {
     "Adsterra Blogger": {
       "day": "2026-11-25",
-      "n": 3
+      "n": 8
     }
   },
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "war news",
-        "headline": "Iran War Updates: Iran developing chemical weapons, Israeli defense minister says - CBS News",
-        "photo_url": "https://static01.nyt.com/images/2024/04/18/multimedia/18mideast-crisis-leadall-01-mfgc/18mideast-crisis-leadall-01-mfgc-videoSixteenByNine3000.jpg",
+        "topic": "USA political news",
+        "headline": "Top Democrats urge Cuba to free prisoners as US tensions rise | Exclusive - USA Today",
+        "photo_url": "https://s.yimg.com/lo/mysterio/api/5d5248a907b22ba7c6441ad938bec3182661623447e85b6c4418d7c32fc5a9a2/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https://media.zenfs.com/en/fox_news_text_979/b60197eb85bcca2ef01f84b746182c99.jpg",
         "photo_source": "bing-images",
-        "photo_alt": "Iran War Updates: Iran developing chemical weapons, Israeli defense minister says - CBS News",
-        "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp5UjZPOG9MaFE0SmZ5UndIejdacWRYT3hGVHZiNVQ1a1lOa0tUZVdjRm1rVDZkMWRPTWd2R0JLamZfYm1lcEREbE12ajRCNTZSdERlMFpObDVFSkowV2h3THRkdlFoMUxR?oc=5",
-        "hook": "🚨 Israel just dropped a massive warning: Iran is actively developing chemical weapons. This changes everything.",
-        "prepared_at": "2026-11-25T00:39:14.977088+00:00"
+        "photo_alt": "Democrats",
+        "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPclhXQlpqbzhCMWRZTFZ1RHRZSmppR2xKbUdOeFlfakFUc01zcWdnMDYtN3BJSGhmQmsyLWp4NGk5NG83cXRfSXcyOTc2WWZYM1UwY3pqaXlOaDFnR0N4ckJLUGtZaGxaY3l2SEN6cE11aUo0M3daUV9OaVNpWVVEMFlNRVN4aXc2ckdfdzc0dHd0T19uQzhsSWQyOXA0eVpUNmx6c1NXX2pGNmRXZ2g4VE5Yaw?oc=5",
+        "hook": "Top Dems just dropped a massive move on Cuba as tensions spike—and they're demanding the immediate release of political prisoners. This is huge.",
+        "prepared_at": "2026-11-25T01:58:33.197453+00:00"
       }
     ]
   }
