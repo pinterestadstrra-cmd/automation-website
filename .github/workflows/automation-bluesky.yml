@@ -10,6 +10,11 @@
 #   GEMINI_API_KEYS       comma-separated Gemini API keys (separate Google projects)
 #   GROQ_API_KEYS         comma-separated Groq API keys (separate Groq accounts)
 #   BLUESKY_ACCOUNTS      JSON list: [{"handle":"...","app_password":"..."}]
+#   REDDIT_ACCOUNTS       JSON list: [{"username":"...","password":"...",
+#                         "client_id":"...","client_secret":"..."}]
+#                         (or single-account secrets REDDIT_CLIENT_ID /
+#                         REDDIT_CLIENT_SECRET / REDDIT_USERNAME /
+#                         REDDIT_PASSWORD - the worker falls back to them)
 #   BLOG_ID               Blogger blog id (for article links)
 #   PEXELS_API_KEY        (optional) Pexels free key for photos
 #   PIXABAY_API_KEY       (optional) Pixabay free key for photos
@@ -62,6 +67,11 @@ jobs:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           BLUESKY_ACCOUNTS: ${{ secrets.BLUESKY_ACCOUNTS }}
+          REDDIT_ACCOUNTS: ${{ secrets.REDDIT_ACCOUNTS }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
           BLOG_ID: ${{ secrets.BLOG_ID }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
