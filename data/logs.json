@@ -2,6 +2,996 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T16:15:10.674620+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Day to end violence against women', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off', 'Montreal airport pizza slice', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-25T16:15:10.667929+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: too soon)",
+    "created_at": "2026-11-25T16:15:10.632725+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': posted less than 5 minutes ago - too soon, skipping",
+    "created_at": "2026-11-25T16:15:10.631635+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': post-only run (a posting slot is due; replies stay on the interval rhythm)",
+    "created_at": "2026-11-25T16:15:10.630186+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-25T16:15:10.628989+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: too soon)",
+    "created_at": "2026-11-25T16:15:10.627221+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted less than 5 minutes ago - too soon, skipping",
+    "created_at": "2026-11-25T16:15:10.626000+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': post-only run (a posting slot is due; replies stay on the interval rhythm)",
+    "created_at": "2026-11-25T16:15:10.624236+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-25T16:15:10.622934+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-25T16:15:10.620590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-25T16:15:07.473003+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-25T16:15:07.471833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+    "created_at": "2026-11-25T16:15:07.470392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:15:07.468958+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+    "created_at": "2026-11-25T16:15:07.446130+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-25T16:15:07.355036+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-25T16:15:07.159259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Ukraine'",
+    "created_at": "2026-11-25T16:15:07.026071+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-25T16:15:06.918313+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:05.705937+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:05.704862+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Ukraine war briefing: Zelenskyy and Hungary PM hai' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-25T16:15:05.703734+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:05.702512+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:05.701106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:05.699911+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:05.698752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Zelenskyy Hungary'",
+    "created_at": "2026-11-25T16:15:05.696490+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Zelenskyy Hungary'",
+    "created_at": "2026-11-25T16:15:05.581318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing Zelenskyy Hungary'",
+    "created_at": "2026-11-25T16:15:05.431345+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing Zelenskyy Hungary'",
+    "created_at": "2026-11-25T16:15:05.276190+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:03.509728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:03.508679+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:03.507284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:03.505969+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:03.504672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:03.503423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:03.500740+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:03.390377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:03.243480+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:03.087800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:02.512144+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:02.510955+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:02.509442+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:02.508181+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:02.506896+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:15:02.505578+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:02.503148+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:02.355251+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:02.187415+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
+    "created_at": "2026-11-25T16:15:01.903072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:01.051231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:15:01.050084+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:15:01.048915+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiywFBVV95cUxQS0NGbmNYUlhldnlJSjJhb3pNbGdNSWswaDFERVZWanhxa2FLYmhxbGUtbHZVc1VWS2R) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:15:01.046422+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T16:15:00.464625+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T16:15:00.463495+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Russia accuses NATO member Estonia of hostile actions ‘on the verge of unleashing open war’ - CNBC' (9 download(s) tried)",
+    "created_at": "2026-11-25T16:15:00.462251+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:15:00.460711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:15:00.458593+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- - image file looks like a flag, not a news photo",
+    "created_at": "2026-11-25T16:15:00.350447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:15:00.348881+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg",
+    "created_at": "2026-11-25T16:14:59.788205+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia accuses NATO member Estonia of hostile acti' (The photo shows Saint Basil's Cathedral in Moscow, Russia, which is unrelated to diplomatic tensions between Russia and Estonia.)",
+    "created_at": "2026-11-25T16:14:59.786406+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc",
+    "created_at": "2026-11-25T16:14:56.809132+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia accuses NATO member Estonia of hostile acti' (The photo shows the Church of the Savior on Spilled Blood in St. Petersburg, Russia, which is unrelated to Estonia or the news headline about Russia-E)",
+    "created_at": "2026-11-25T16:14:56.807508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/84/256988870_2d5679b0d9_b.jpg",
+    "created_at": "2026-11-25T16:14:52.276866+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg",
+    "created_at": "2026-11-25T16:14:52.193354+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51932070805_edb66814eb_b.jpg",
+    "created_at": "2026-11-25T16:14:52.106677+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg",
+    "created_at": "2026-11-25T16:14:52.021196+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5589/15147968852_3f9aa97d20_b.jpg",
+    "created_at": "2026-11-25T16:14:51.938565+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia'",
+    "created_at": "2026-11-25T16:14:51.823751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia'",
+    "created_at": "2026-11-25T16:14:51.649613+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia'",
+    "created_at": "2026-11-25T16:14:51.508408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Russia'",
+    "created_at": "2026-11-25T16:14:51.374871+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:50.675130+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:50.674024+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Russia accuses NATO member Estonia of hostile acti' - trying entity search 'Russia'",
+    "created_at": "2026-11-25T16:14:50.672906+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:50.671687+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:50.670407+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:50.668876+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:50.667699+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:14:50.665600+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:14:50.572783+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:14:50.410804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:14:50.215213+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:49.963186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:49.962023+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:49.960907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:49.959780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:49.958702+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:49.957502+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:49.955454+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:49.852267+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:49.717934+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:49.392582+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:48.773818+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:48.772784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:48.771733+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:48.770268+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:48.769027+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:48.767724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:48.765540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:48.657903+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:48.498754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:14:48.325641+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:47.273355+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:47.271973+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:14:47.270602+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiggFBVV95cUxQaFlnM2N0STRqLXdzZUlGVElDUk1sY3dQR2pYRzBNRHowc0p2M05CVHVBcDgyS2g3emF) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:14:47.268316+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T16:14:46.454438+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T16:14:46.453163+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (5 download(s) tried)",
+    "created_at": "2026-11-25T16:14:46.452080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/4d/3c/45/4d3c45b13c1ffa23ac2a3425210b0626.jpg (page: https://storage.googleapis.com/djzsyloosmezbe/types-of-thong-cuts.html | Types of thongs | Types of  - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T16:14:46.451004+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://m.media-amazon.com/images/S/aplus-media-library-service-media/71516d17-02ed-4ebc-97d9-d22292 (page: https://www.pinterest.com/pin/102668066511972575/ | Mua Morvia Varieties of Women Thong Pack Lacy Ta - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T16:14:46.449877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://img.freepik.com/premium-vector/types-of-women-s-panties-front-and-behind-view-underwear-set- (page: https://fado.vn/us/amazon/morvia-varieties-of-women-thong-pack-lacy-tanga-g-string-bikini-underwear- - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T16:14:46.448647+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): http://www.underwearnewsbriefs.com/wp-content/uploads/2017/05/Thong-Style-Charts.jpg (page: https://ru.freepik.com/premium-vector/types-of-women-s-panties-front-and-behind-view-underwear-set-c - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T16:14:46.447423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://upload.wikimedia.org/wikipedia/commons/b/b8/Indo-Iranian_origins.png",
+    "created_at": "2026-11-25T16:14:46.445901+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'How an Iranian Ally Gained the Upper Hand in Yemen' (. The map shows archaeological cultures of Bronze Age Eurasia, which is unrelated to the news headline about the current war in Yemen.)",
+    "created_at": "2026-11-25T16:14:46.444216+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3495/3771877710_089d7c732e_b.jpg",
+    "created_at": "2026-11-25T16:14:43.483251+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2232/2347354877_aacf8657b7_b.jpg",
+    "created_at": "2026-11-25T16:14:43.393402+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1433/1337744778_3567d7190e_b.jpg",
+    "created_at": "2026-11-25T16:14:43.307203+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6010/5918933751_71811c36aa_b.jpg",
+    "created_at": "2026-11-25T16:14:43.223392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iranian'",
+    "created_at": "2026-11-25T16:14:43.097124+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iranian'",
+    "created_at": "2026-11-25T16:14:42.806980+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iranian'",
+    "created_at": "2026-11-25T16:14:42.668697+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Iranian'",
+    "created_at": "2026-11-25T16:14:42.541512+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:41.874597+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:41.873384+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'How an Iranian Ally Gained the Upper Hand in Yemen' - trying entity search 'Iranian'",
+    "created_at": "2026-11-25T16:14:41.872178+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://media.printables.com/media/prints/354387/images/3007460_6d4a569f-1624-4613-bbbd-2f15647a3285 (page: Xenomorph Alien LG LEGO Fig by Spaceman Spiff | Download free STL model ... - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:41.870979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T16:14:41.869083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T16:14:41.771508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T16:14:41.621775+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T16:14:41.446786+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:41.013692+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:41.012602+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2012/05/Hyundai-Pony.jpg (page: Curbside Classic: 1987 Hyundai Excel - The Damn Near Deadly Sin ... - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:41.011373+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T16:14:41.009394+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T16:14:40.867422+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T16:14:40.713112+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T16:14:40.468368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:39.749818+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:39.748750+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://platform.twincities.eater.com/wp-content/uploads/sites/19/chorus/uploads/chorus_asset/file/2 (page: https://chicago.eater.com/2023/11/8/23950171/michelin-restaurants-chicago-stars-bib-gourmand-2023 |  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:39.747261+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://platform.eater.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25127104/EATE (page: https://twincities.eater.com/23939616/eater-awards-winners-twin-cities-minneapolis-st-paul-2023 | Ea - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:39.745950+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://cdn.vox-cdn.com/thumbor/hCinVPNFqAfWcSgQy_87Eentr-k=/0x0:1067x1600/1200x0/filters:focal(0x0: (page: https://www.eater.com/23939619/eater-awards-winners-2023-us-cities-new-york-los-angeles-chicago-best - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:39.744593+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://cdn.vox-cdn.com/thumbor/DZtbIX9h1LK37rrht3ilS6FaDy4=/0x0:1600x900/820x461/filters:focal(672x (page: https://chicago.eater.com/23939545/eater-awards-winners-best-restaurant-chicago-2023 | Chicago’s 202 - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T16:14:39.742224+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T16:14:39.739981+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T16:14:39.634871+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T16:14:39.490393+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T16:14:39.232616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:38.615306+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:14:38.614243+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:14:38.613075+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxOaDdOQkIyMWZBYUJGd19raENFUlNZRFhGZ0ctSzRyczJfWFloRVMtRXFlWkR4MVprWV9) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:14:38.610804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera live mine tanker war')",
+    "created_at": "2026-11-25T16:14:37.906730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-25T16:14:37.905328+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - skipped (same event used within 24h, event key '000 500 bbc figure lost nearly own people russia show ukrain')",
+    "created_at": "2026-11-25T16:14:37.903242+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-25T16:14:37.901462+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T16:14:37.191258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T16:14:36.848446+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T16:14:34.633225+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-25T16:14:34.631939+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #96 started (--only bluesky)",
+    "created_at": "2026-11-25T16:14:34.630308+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T16:12:38.197304+00:00",
     "card": ""
   },
@@ -207,996 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-25T16:12:31.227732+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Yemeni military official brands Iran Houthis’ ‘god' - trying entity search 'Yemeni'",
-    "created_at": "2026-11-25T16:12:31.226623+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/SEEDs/bi (page: https://www.beaconortho.com/blog/biceps-tendon-rupture-fixed/ | Biceps Tendon Rupture: Signs, Diagno - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:31.225328+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://orthopedicinstitutesf.com/wp-content/uploads/2024/11/Distal-Biceps-Rupture.jpg (page: https://www.webmd.com/a-to-z-guides/what-to-know-about-biceps-rupture | Jason L. Hurd, MD - Orthoped - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:31.224042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://c8.alamy.com/comp/2X89XGE/comparison-of-healthy-and-ruptured-biceps-tendon-2X89XGE.jpg (page: https://orthopedicinstitutesf.com/physicians/jason-l-hurd-md/ | Comparison of healthy and ruptured b - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:31.169333+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.lotusyogadallas.com/wp-content/uploads/2025/10/Symptoms-of-Bicep-Tear.png (page: https://www.alamy.com/comparison-of-healthy-and-ruptured-biceps-tendon-image607498542.html | Bicep T - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:31.129009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran'",
-    "created_at": "2026-11-25T16:12:31.030898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran'",
-    "created_at": "2026-11-25T16:12:30.893419+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Yemeni military official brands Iran'",
-    "created_at": "2026-11-25T16:12:30.753437+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran'",
-    "created_at": "2026-11-25T16:12:30.455041+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:30.326632+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:30.325569+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/104-Boneless-Cloud-Sectional-Couch-with-L-Shape-Chaise-Modern-Cordu (page: https://www.walmart.com/ip/Modern-Curved-Compression-Boneless-Sofa-Channel-Tufted-Sectional-Sofa-Cou - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:30.324222+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/96-Inch-Modular-Sectional-Couches-Living-Room-Modern-Boneless-Sofa- (page: https://www.walmart.com/ip/95-Cloud-Sectional-Sofa-Modern-L-Shaped-Couch-for-Living-Room-Corduroy-De - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:30.322943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://images.thdstatic.com/productImages/f723c5cd-6882-5d32-b53f-a0c6b159bf27/svn/camel-gdfstudio- (page: https://www.walmart.com/ip/Cloud-Sectional-Sofa-Modern-Minimalist-Upholstered-L-Shaped-Couch-Deep-Se - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:30.321573+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/Modern-Sectional-Sofa-63-7-Boneless-Loveseat-Couch-Modular-Design-C (page: https://www.homedepot.com/p/GDFSTUDIO-Mid-Century-Modern-122-in-Flared-Arm-Fabric-Modular-Sectional- - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:30.320392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:30.318026+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:29.947430+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:29.794933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:29.422769+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:29.317906+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:29.316860+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://media.gettyimages.com/id/95187394/photo/nobel-peace-prize-laureate-us-president-barack-obama (page: https://www.gettyimages.co.uk/photos/nobel-peace-laureate-barak-obama | 517 Nobel Prize Award Ceremo - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:29.315580+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.nydailynews.com/wp-content/uploads/migration/2023/08/03/C3BMJIDC5ZDYFOCCEMKQFNO2HU.jpg (page: https://www.gettyimages.com/photos/nobel-prize-award-ceremony-2009 | Barack Obama's life and career - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:29.314033+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.thoughtco.com/thmb/WlsszXMq9XBJdfreZ9ebaR1nrY4=/1199x1599/filters:fill(auto,1)/President (page: https://www.nydailynews.com/2023/08/03/barack-obamas-life-and-career/ | Interstellar Explained - Rea - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:29.300951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://media.gettyimages.com/id/95187382/de/foto/nobel-peace-prize-laureate-us-president-barack-oba (page: https://ausmalbilderfurkinder.de/interstellar-explained/ | Nobel Peace Prize laureate, US President  - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:29.032557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:28.983441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:28.866915+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:28.593612+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T16:12:28.080671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:27.038528+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:27.037382+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:12:27.036063+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxOdGItTnFaZjJRQmVUNVIwNENjYkIxNTVDSTVhaHE5MlpNRW1vUnNEUzFyMnp2SXU4aWJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:12:27.021508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
-    "created_at": "2026-11-25T16:12:26.616012+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-    "created_at": "2026-11-25T16:12:26.614709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the Russia-Ukraine war tore my family apart - BBC' - skipped (same event used within 24h, event key 'apart bbc family how russia tore ukraine war')",
-    "created_at": "2026-11-25T16:12:26.613308+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T16:12:26.611747+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T16:12:26.610353+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Russia accuses NATO member Estonia of hostile actions ‘on the verge of unleashing open war’ - CNBC' (12 download(s) tried)",
-    "created_at": "2026-11-25T16:12:26.396458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:26.395016+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:26.291187+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp1903287.jpg",
-    "created_at": "2026-11-25T16:12:26.234830+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp1903287.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
-    "created_at": "2026-11-25T16:12:26.233343+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg",
-    "created_at": "2026-11-25T16:12:26.098540+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:26.056281+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:26.054790+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1 (page: https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1%D0%B0%D0%BD%D0%B - page does not name the entity (Russia))",
-    "created_at": "2026-11-25T16:12:25.987773+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Olkhon_Island%2C_Capes%2C_cliffs_at_sunset% - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.985418+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.983987+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Mirny_in_Yakutia.jpg/1280px-Mirny_in_Yakuti (page: https://commons.wikimedia.org/wiki/File:Mirny_in_Yakutia.jpg | File:Mirny in Yakutia.jpg - page does not name the entity (Russia))",
-    "created_at": "2026-11-25T16:12:25.932579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ergaki%2C_Buiba_Valley%2C_Western_Sayan_Mou - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.931340+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.929787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Baikal%2C_Cape_Burhan%2C_Olkhon_Island%2C_L - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.869611+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.868224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/84/256988870_2d5679b0d9_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.814539+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.813128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.768682+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.641723+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/65535/51932070805_edb66814eb_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.589788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.588278+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.542383+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.541030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5589/15147968852_3f9aa97d20_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:25.497117+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:25.495646+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia'",
-    "created_at": "2026-11-25T16:12:25.421607+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia'",
-    "created_at": "2026-11-25T16:12:25.286281+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Russia'",
-    "created_at": "2026-11-25T16:12:25.154080+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Russia'",
-    "created_at": "2026-11-25T16:12:25.126311+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:25.086191+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:25.085076+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Russia accuses NATO member Estonia of hostile acti' - trying entity search 'Russia'",
-    "created_at": "2026-11-25T16:12:25.083812+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:25.082590+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:25.081132+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:25.079594+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:25.023965+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:12:24.904948+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:12:24.775481+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:12:24.650807+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:12:24.614192+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:24.571164+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:24.569930+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:24.568751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:24.567627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:24.566289+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:24.516118+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:24.485988+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:24.160491+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.993083+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.965458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:23.922327+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:23.921272+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:23.920007+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:23.918901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:23.917726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:23.916549+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.914230+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.785502+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.602791+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:12:23.575568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:23.532548+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:23.530690+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:12:23.529317+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiggFBVV95cUxQaFlnM2N0STRqLXdzZUlGVElDUk1sY3dQR2pYRzBNRHowc0p2M05CVHVBcDgyS2g3emF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:12:23.453096+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'More than 700,000 Russian soldiers have been killed in the U' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T16:12:23.082002+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T16:12:23.080926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'More than 700,000 Russian soldiers have been killed in the Ukraine war, new estimate suggests - NBC News' (7 download(s) tried)",
-    "created_at": "2026-11-25T16:12:23.079852+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://64.media.tumblr.com/a50601349197e82d3ae2997356e95d47/tumblr_mwuknvt4Np1svoqlco1_500.jpg (page: https://sean--opry.tumblr.com/page/118 | Sean O'pry - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:23.078688+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://media.gettyimages.com/id/813392340/photo/model-eric-rutherford-rapper-young-paris-and-model- (page: https://www.listal.com/viewimage/2217660 | Sean Opry Photos Photos and Premium High Res Pictures - G - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:23.077562+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://c8.alamy.com/comp/TYK8NY/sean-opry-arrives-for-the-premiere-of-homecoming-at-the-mgm-screeni (page: https://www.gettyimages.in/photos/sean-opry-photos - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:23.073536+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://i.pinimg.com/originals/d4/a6/41/d4a64189516e6ed9c6edd32b61d3fa03.jpg (page: https://www.alamy.com/sean-opry-arrives-for-the-premiere-of-homecoming-at-the-mgm-screening-room-in- - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:22.750672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/WTC-Fireman_requests_10_more_colleagues_%28 - source page title names only 0 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:12:22.748462+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:12:22.746871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/WTC-Fireman_requests_10_more_colleagues.jpg",
-    "created_at": "2026-11-25T16:12:22.701989+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'More than 700,000 Russian soldiers have been kille' (\n\nThe photo depicts a firefighter amidst the ruins of the World Trade Center after the September 11 attacks, which is unrelated to the Ukraine war.)",
-    "created_at": "2026-11-25T16:12:22.700550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/2/2d/Mossi-Languages_of_Burkina_Faso-jpg.jpg?utm_sour (page: https://commons.wikimedia.org/wiki/File:Mossi-Languages_of_Burkina_Faso-jpg.jpg | File:Mossi-Languag - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:20.597272+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/MV_Spitsbergen_arrives_at_Storkaia_in_Molde (page: https://commons.wikimedia.org/wiki/File:MV_Spitsbergen_arrives_at_Storkaia_in_Molde,_Norway,_on_Apri - page does not name the entity (More))",
-    "created_at": "2026-11-25T16:12:20.596070+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1291/1135876473_dbbb64dccf_b.jpg",
-    "created_at": "2026-11-25T16:12:20.594414+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/95/247673429_f22cbdd0a6_m.jpg",
-    "created_at": "2026-11-25T16:12:20.555024+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5085/5371612151_2f8d5b4947.jpg",
-    "created_at": "2026-11-25T16:12:20.502068+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3316/3444915507_361c8c2752.jpg",
-    "created_at": "2026-11-25T16:12:20.455484+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3442/3228761389_d6c07f5ae6_b.jpg",
-    "created_at": "2026-11-25T16:12:20.420364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'More'",
-    "created_at": "2026-11-25T16:12:19.937286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'More'",
-    "created_at": "2026-11-25T16:12:19.796158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (mime=image/tiff): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Moor%C3%A9_%28Mossi%29_language_text_in_Zig",
-    "created_at": "2026-11-25T16:12:19.661515+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'More'",
-    "created_at": "2026-11-25T16:12:19.660050+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'More'",
-    "created_at": "2026-11-25T16:12:19.631802+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:19.584490+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:19.583358+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'More than 700,000 Russian soldiers have been kille' - trying entity search 'More'",
-    "created_at": "2026-11-25T16:12:19.582375+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://i.etsystatic.com/25413988/r/il/a41eb6/4567420643/il_794xN.4567420643_amwj.jpg (page: Happy Shadow Thoughts Unisex Sweatshirt Front and Back - Etsy - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.581176+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/a/a3/Stamp_of_Russia_2001_No_700_Gherman_Titov.jpg?ut (page: https://commons.wikimedia.org/wiki/File:Stamp_of_Russia_2001_No_700_Gherman_Titov.jpg | File:Stamp o - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.580052+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Last_Address_-_Saint_Petersburg%2C_Dekabris (page: https://commons.wikimedia.org/wiki/File:Last_Address_-_Saint_Petersburg,_Dekabristov_Street,_62-64_( - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.579000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Chinese_Abroad%2C_ca._1930_AD_%28World%29.j (page: https://commons.wikimedia.org/wiki/File:Chinese_Abroad,_ca._1930_AD_(World).jpg | File:Chinese Abroa - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.577869+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Chinese_Abroad%2C_ca._1930_AD_%28Souteast_A (page: https://commons.wikimedia.org/wiki/File:Chinese_Abroad,_ca._1930_AD_(Souteast_Asia).jpg | File:Chine - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.576726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Carte_d%27une_partie_de_la_Sib%C3%A9rie_occ (page: https://commons.wikimedia.org/wiki/File:Carte_d%27une_partie_de_la_Sib%C3%A9rie_occidentale_avec_un_ - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.575604+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/d/df/Hubble_captures_Comet_ISON.jpg (page: https://commons.wikimedia.org/w/index.php?curid=25831559 | Hubble captures Comet ISON - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:19.572900+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'More than 700 000 Russian'",
-    "created_at": "2026-11-25T16:12:19.567116+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'More than 700 000 Russian'",
-    "created_at": "2026-11-25T16:12:19.115943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'More than 700 000 Russian'",
-    "created_at": "2026-11-25T16:12:18.985718+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'More than 700 000 Russian'",
-    "created_at": "2026-11-25T16:12:18.849597+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:18.801402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:18.800226+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://www.usmagazine.com/wp-content/uploads/2025/01/liam-hemsworth-gabriella-brooks-relationship-t (page: https://www.thehollywoodgossip.com/2025/09/liam-hemsworth-gabriella-brooks-engaged/ | Liam Hemsworth - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:18.799017+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://people.com/thmb/fmqh7q96nd_M3-7CPQbs142gryM=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://www.usmagazine.com/celebrity-news/pictures/liam-hemsworth-gabriella-brooks-relationship-time - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:18.797913+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://people.com/thmb/ZIbESc6MRGo-CxuZZU0F9uCoM0Q=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/movies/liam-hemsworth-gabriella-brooks-relationship-timeline/ | Who Is Liam Hemsw - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:18.796435+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://pagesix.com/wp-content/uploads/sites/3/2022/11/Gabriella-Brooks-liam-hemsworth-red-carpet-de (page: https://people.com/all-about-liam-hemsworth-gabriella-brooks-11808762 | Liam Hemsworth, Gabriella Br - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:12:18.795128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.794214+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.680615+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.530377+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.490535+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:17.439980+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:17.438976+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://www.fixdapp.com/wp-content/uploads/2024/06/Mass-airflow-sensor.jpeg (page:  - no source page to verify relevance)",
-    "created_at": "2026-11-25T16:12:17.437525+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.435184+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.321084+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.187529+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
-    "created_at": "2026-11-25T16:12:17.073211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:17.009288+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:12:17.008349+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:12:17.007272+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxONGNmcUJzRjV4UVpZYkV4dzdCR25rZ3pLODVLbEJ1eVh2aVM3QU5YTkM4TFptTmNLQzI) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:12:17.004977+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
-    "created_at": "2026-11-25T16:12:16.717222+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-25T16:12:16.618114+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T16:12:16.616251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-    "created_at": "2026-11-25T16:12:16.615114+00:00",
     "card": ""
   }
 ]
