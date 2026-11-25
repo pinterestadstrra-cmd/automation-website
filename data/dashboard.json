@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T06:08:02.215547+00:00",
-  "last_run": "2026-11-25T06:07:20.588496+00:00",
-  "runs": 78,
+  "generated_at": "2026-11-25T06:27:53.410017+00:00",
+  "last_run": "2026-11-25T06:27:47.796091+00:00",
+  "runs": 79,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -69,11 +69,11 @@
       "runs_today": 3,
       "posts_today": 8,
       "next_runs": [
-        "2026-11-25T12:23:02.157048+06:00",
         "2026-11-25T12:38:02.157048+06:00",
         "2026-11-25T12:53:02.157048+06:00",
         "2026-11-25T13:08:02.157048+06:00",
-        "2026-11-25T13:23:02.157048+06:00"
+        "2026-11-25T13:23:02.157048+06:00",
+        "2026-11-25T13:38:02.157048+06:00"
       ],
       "next_post_times": [
         "2026-11-25T12:52:00+06:00",
@@ -125,17 +125,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 3
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -147,12 +138,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -165,10 +156,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T06:07:20.590596+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T06:27:47.797030+00:00"
     }
   ],
   "dry_run": false,
@@ -179,17 +170,65 @@
   "trending": [
     "Planned lead detonation in Iowa",
     "Nvidia hiring first compliance officer",
-    "Wrong Lord of the Rings quotes",
-    "Aaron Rodgers benched against Broncos",
     "\"I Know Your Age\" quiz",
-    "Trump calls Putin his friend",
+    "ICE arrests at Seattle airport",
     "November full supermoon",
-    "Tidal bans AI-generated music",
     "Mario Kart World 1.9.0 update",
-    "Anthropic falls below IPO price"
+    "Bird photography",
+    "Measles risk grows for adults",
+    "Tidal bans AI-generated music",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T06:27:53.326274+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T06:27:53.325277+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T06:27:53.093413+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T06:27:47.797649+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T06:27:47.797037+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #79 started (--only blogger)",
+      "created_at": "2026-11-25T06:27:47.796110+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T06:08:02.217786+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Wrong Lord of the Rings quotes', 'Aaron Rodgers benched against Broncos', '\"I Know Your Age\" quiz']",
+      "created_at": "2026-11-25T06:08:02.212027+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -441,54 +480,6 @@
       "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
       "created_at": "2026-11-25T06:07:23.184825+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T06:07:20.592033+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-25T06:07:20.590607+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #78 started (--only bluesky)",
-      "created_at": "2026-11-25T06:07:20.588526+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T05:09:06.617553+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'Aaron Rodgers benched against Broncos', 'Nvidia hiring first compliance officer', '\"I Know Your Age\" quiz', 'Pentagon weighs loan to Trump Jr.-tied startup']",
-      "created_at": "2026-11-25T05:09:06.612602+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T05:09:06.514976+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T05:09:06.513510+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'hit inevitable jazeera oil plant putin retaliation russian u' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T05:09:06.511863+00:00",
-      "card": "Adsterra Blogger"
     }
   ]
 }
