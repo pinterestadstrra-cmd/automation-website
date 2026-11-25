@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T17:04:03.349418+00:00",
-  "last_run": "2026-11-25T17:03:59.606190+00:00",
-  "runs": 98,
+  "generated_at": "2026-11-25T17:49:06.923737+00:00",
+  "last_run": "2026-11-25T17:47:06.549046+00:00",
+  "runs": 99,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 2,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 2,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T16:52:04.623139+00:00",
-    "mastodon.social": "2026-11-25T16:52:29.272094+00:00"
+    "Adsterra Blogger": "2026-11-25T17:48:32.756214+00:00",
+    "mastodon.social": "2026-11-25T17:49:06.796514+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 39,
+      "success": 40,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T16:52:04.623136+00:00"
+      "last_run": "2026-11-25T17:48:32.756209+00:00"
     },
     "mastodon.social": {
-      "success": 3,
+      "success": 4,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T16:52:29.272091+00:00"
+      "last_run": "2026-11-25T17:49:06.796508+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T16:52:04.623139+00:00",
-      "runs_today": 13,
-      "posts_today": 17,
+      "last_run": "2026-11-25T17:48:32.756214+00:00",
+      "runs_today": 14,
+      "posts_today": 18,
       "next_runs": [
-        "2026-11-25T23:07:04.623139+06:00",
-        "2026-11-25T23:22:04.623139+06:00",
-        "2026-11-25T23:37:04.623139+06:00",
-        "2026-11-25T23:52:04.623139+06:00",
-        "2026-11-26T00:07:04.623139+06:00"
+        "2026-11-26T00:03:32.756214+06:00",
+        "2026-11-26T00:18:32.756214+06:00",
+        "2026-11-26T00:33:32.756214+06:00",
+        "2026-11-26T00:48:32.756214+06:00",
+        "2026-11-26T01:03:32.756214+06:00"
       ],
       "next_post_times": [
         "2026-11-26T00:03:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-26T03:08:00+06:00",
         "2026-11-26T04:04:00+06:00"
       ],
-      "success": 39,
+      "success": 40,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T16:52:29.272094+00:00",
-      "runs_today": 3,
-      "posts_today": 2,
+      "last_run": "2026-11-25T17:49:06.796514+00:00",
+      "runs_today": 4,
+      "posts_today": 3,
       "next_runs": [
-        "2026-11-25T23:07:29.272094+06:00",
-        "2026-11-25T23:22:29.272094+06:00",
-        "2026-11-25T23:37:29.272094+06:00",
-        "2026-11-25T23:52:29.272094+06:00",
-        "2026-11-26T00:07:29.272094+06:00"
+        "2026-11-26T00:04:06.796514+06:00",
+        "2026-11-26T00:19:06.796514+06:00",
+        "2026-11-26T00:34:06.796514+06:00",
+        "2026-11-26T00:49:06.796514+06:00",
+        "2026-11-26T01:04:06.796514+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T23:06:00+06:00",
         "2026-11-26T00:01:00+06:00",
         "2026-11-26T00:56:00+06:00",
         "2026-11-26T01:50:00+06:00",
-        "2026-11-26T03:06:00+06:00"
+        "2026-11-26T03:06:00+06:00",
+        "2026-11-26T04:00:00+06:00"
       ],
-      "success": 3,
+      "success": 4,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 13
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T17:03:59.607547+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T17:03:59.608702+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T17:47:06.550836+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Army lead detonation in Iowa",
-    "Grand Theft Auto VI",
-    "Kilmar Abrego Garcia case",
+    "Trump claims prices are falling",
     "Montreal airport pizza slice",
+    "Grand Theft Auto VI",
+    "King tides threaten Bay Area flooding",
     "Nvidia hiring first compliance officer",
-    "Steelers bench Aaron Rodgers",
-    "SoftBank shares fall in AI sell-off",
     "Day to end violence against women",
-    "PCE inflation hits three-year high",
-    "King tides threaten Bay Area flooding"
+    "SoftBank shares fall in AI sell-off",
+    "Steelers bench Aaron Rodgers",
+    "PCE inflation hits three-year high"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T17:04:03.098516+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T17:04:03.096927+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T17:04:02.655317+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T17:03:59.609796+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T17:03:59.608710+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T17:03:59.607555+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #98 started (--only blogger)",
-      "created_at": "2026-11-25T17:03:59.606212+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T16:52:29.583781+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['King tides threaten Bay Area flooding', 'Grand Theft Auto VI', 'Trump to meet El-Sayed on Trumpcare', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off']",
-      "created_at": "2026-11-25T16:52:29.578621+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T16:52:29.272111+00:00",
+      "created_at": "2026-11-25T17:49:06.796538+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T16:52:29.271009+00:00",
+      "created_at": "2026-11-25T17:49:06.795162+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678116006378579",
-      "created_at": "2026-11-25T16:52:29.269805+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678338656943991",
+      "created_at": "2026-11-25T17:49:06.793315+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117678116006378579",
-      "created_at": "2026-11-25T16:52:29.267311+00:00",
+      "message": "mastodon: posted to mastodon.social: 117678338656943991",
+      "created_at": "2026-11-25T17:49:06.790303+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T16:52:26.508804+00:00",
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-25T17:48:59.736542+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-25T17:48:59.676288+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-25T16:52:26.507725+00:00",
+      "message": "promo: photo search done - 20 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
+      "created_at": "2026-11-25T17:48:59.674889+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for ''Hopefully things get done': Americans react to historic pol': https://static.toiimg.com/thumb/msid-109274843,imgsize-41344,width-400,resizemode-4/109274843.jpg (from bing-images, query ''Hopefully things get done': Americans react to historic political shift - BBC', page: https://politicalsciencenow.com/how-do-americans-respond-to-partisan-political-violence/ | 'Shift in - matches 3 key entities (american, political, shift))",
-      "created_at": "2026-11-25T16:52:26.506440+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+      "created_at": "2026-11-25T17:48:59.673670+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches ''Hopefully things get done': Americans react to hi' (, the photo shows US political figures (Donald Trump and Joe Biden) relevant to a \"historic political shift\" headline about US politics.)",
-      "created_at": "2026-11-25T16:52:26.504779+00:00",
+      "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T17:48:59.671702+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://www.commonwealthunion.com/wp-content/uploads/2024/11/1.jpg",
-      "created_at": "2026-11-25T16:52:22.527166+00:00",
+      "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+      "created_at": "2026-11-25T17:48:59.670337+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for ''Hopefully things get done': Americans react to hi' (The photo shows Donald Trump, Satya Nadella, and Sundar Pichai with the U.S. Capitol, which does not depict the specific individuals reacting as descr)",
-      "created_at": "2026-11-25T16:52:22.523387+00:00",
+      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T17:48:59.668724+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/FB22/production/_116509246_voters.jpg",
-      "created_at": "2026-11-25T16:52:11.656450+00:00",
+      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T17:48:59.667322+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for ''Hopefully things get done': Americans react to hi' (. The image is a collage of four unrelated people and does not show the people, place, or specific event referenced in the news headline.)",
-      "created_at": "2026-11-25T16:52:11.639381+00:00",
+      "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-25T17:48:59.666000+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0768/live/644f5ed0-d8a6-11f1-b441-2b33b063138f.j (page: https://www.bbc.co.uk/news/world-us-canada-55656995 | Live updates: 2026 US midterm elections and re - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-25T16:52:06.840530+00:00",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
+      "created_at": "2026-11-25T17:48:59.663752+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-25T16:52:06.838175+00:00",
+      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T17:48:59.662407+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-25T16:52:06.416697+00:00",
+      "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+      "created_at": "2026-11-25T17:48:59.661163+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-25T16:52:06.272732+00:00",
+      "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+      "created_at": "2026-11-25T17:48:59.659363+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-      "created_at": "2026-11-25T16:52:05.942229+00:00",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+      "created_at": "2026-11-25T17:48:59.657811+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
+      "created_at": "2026-11-25T17:48:59.655900+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 5/6 tried: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T17:48:59.581339+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T17:48:59.580115+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'Advance the War Against Death in Season of Tyrael’s Gambit — Diablo IV - Blizzard News' (6 download(s) tried)",
+      "created_at": "2026-11-25T17:48:59.578767+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - page does not name the entity (Advance))",
+      "created_at": "2026-11-25T17:48:59.577517+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- - source page title names only 1 of 10 key entities - not a news article about the story",
+      "created_at": "2026-11-25T17:48:59.576134+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T17:48:59.574581+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png",
+      "created_at": "2026-11-25T17:48:59.501873+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e - source page title names only 1 of 10 key entities - not a news article about the story",
+      "created_at": "2026-11-25T17:48:59.446534+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T17:48:59.444737+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/3769/9713970948_671f4c3ab2_b.jpg (page: https://www.flickr.com/photos/55244200@N05/9713970948 | Peleliu Holds Advancement Exam - page does not name the entity (Advance))",
+      "created_at": "2026-11-25T17:48:59.059038+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52390620853_84dd421058_b.jpg",
+      "created_at": "2026-11-25T17:48:59.057337+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8034/8049966714_de3e8d74bb_b.jpg",
+      "created_at": "2026-11-25T17:48:59.020988+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/4134/4828565765_950ede1f94_b.jpg (page: https://www.flickr.com/photos/83536366@N00/4828565765 | Advanced UAV Technology AT1000 - page does not name the entity (Advance))",
+      "created_at": "2026-11-25T17:48:58.992186+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3353/4621394806_80e6e26623_b.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
+      "created_at": "2026-11-25T17:48:58.990817+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T17:48:58.989249+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Advance'",
+      "created_at": "2026-11-25T17:48:58.962398+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Advance'",
+      "created_at": "2026-11-25T17:48:58.839998+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Advance'",
+      "created_at": "2026-11-25T17:48:58.717603+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Advance'",
+      "created_at": "2026-11-25T17:48:58.695788+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T16:52:05.339164+00:00",
+      "created_at": "2026-11-25T17:48:58.309873+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T16:52:05.338258+00:00",
+      "created_at": "2026-11-25T17:48:58.308130+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
-      "created_at": "2026-11-25T16:52:05.337189+00:00",
+      "message": "photo: topical search found nothing for 'Advance the War Against Death in Season of Tyrael’' - trying entity search 'Advance'",
+      "created_at": "2026-11-25T17:48:58.306717+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T16:52:05.335438+00:00",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
+      "created_at": "2026-11-25T17:48:58.305171+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Here's a list of the individuals, including James Comey, tar' - skipped (same event used within 24h, event key 'abc administration break comey here includ individual jame l')",
-      "created_at": "2026-11-25T16:52:05.013229+00:00",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-25T17:48:58.303702+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T16:52:04.625727+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T16:52:04.624333+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T16:52:04.623152+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T16:52:04.622097+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'blame candidate democrat did good job losse midterm pbs repu' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T16:52:04.620594+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 3049x2033 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-25T16:52:02.659786+00:00",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-25T17:48:58.302039+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 3049x2033 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-25T16:52:02.658824+00:00",
+      "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-25T17:48:58.300630+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-25T16:52:02.656711+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T16:52:02.492612+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 1 own + 4 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T16:52:02.490709+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to desertharper.bsky.social on your post (comment: 'Hey, you never know, my HS let people letter in drama and ch') as primonewstoday.bsky.social: 'Totally get that! 🎭 High school drama and choir are hidden gems—so much more tha'",
-      "created_at": "2026-11-25T16:52:00.489594+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T16:51:59.905537+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to countrygal.bsky.social (hot post by thatericalper.com, comment: 'Oh how I love love TWIX') as primonewstoday.bsky.social: 'Twix are the perfect mix of sweet and salty—can't resist! 😋\n\nhttps://shorturl.at'",
-      "created_at": "2026-11-25T16:51:55.036843+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to xenolith.bsky.social (hot post by jamellebouie.net, comment: 'What’s your favorite recipe? I’m on the hunt for one.') as primonewstoday.bsky.social: 'I swear by a simple collard‑green braise: sauté garlic, onion, a splash of apple'",
-      "created_at": "2026-11-25T16:51:51.599030+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to gatorgirl1974.bsky.social (hot post by jamellebouie.net, comment: 'collardsonly.com. The collards pictured here are amazing 🤩') as primonewstoday.bsky.social: 'Those collards look next‑level! 😍 Nothing beats fresh greens straight from the b'",
-      "created_at": "2026-11-25T16:51:48.646408+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to kevinllong.bsky.social (hot post by jamellebouie.net, comment: 'It always pays to be friendly with stockers or merchandisers') as primonewstoday.bsky.social: 'Totally! A little kindness goes a long way—especially when they’re the ones savi'",
-      "created_at": "2026-11-25T16:51:45.681715+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T16:51:44.226033+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T16:51:44.224343+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Advance War Against Death Season'",
+      "created_at": "2026-11-25T17:48:58.297738+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T16:51:43.918149+00:00",
+      "message": "google-images: 0 candidate(s) for 'Advance War Against Death Season'",
+      "created_at": "2026-11-25T17:48:58.144888+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Advance War Against Death Season'",
+      "created_at": "2026-11-25T17:48:58.022566+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Advance War Against Death Season'",
+      "created_at": "2026-11-25T17:48:57.988205+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T17:48:57.694204+00:00",
       "card": ""
     }
   ]

@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T17:04:03.352112+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Army lead detonation in Iowa', 'Grand Theft Auto VI', 'Kilmar Abrego Garcia case', 'Montreal airport pizza slice', 'Nvidia hiring first compliance officer']",
-    "created_at": "2026-11-25T17:04:03.330368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-25T17:04:03.098516+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-25T17:04:03.096927+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-25T17:04:02.655317+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-25T17:03:59.609796+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-25T17:03:59.608710+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-25T17:03:59.607555+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #98 started (--only blogger)",
-    "created_at": "2026-11-25T17:03:59.606212+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T16:52:29.583781+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['King tides threaten Bay Area flooding', 'Grand Theft Auto VI', 'Trump to meet El-Sayed on Trumpcare', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off']",
-    "created_at": "2026-11-25T16:52:29.578621+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-25T16:52:29.272111+00:00",
+    "created_at": "2026-11-25T17:49:06.796538+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T16:52:29.271009+00:00",
+    "created_at": "2026-11-25T17:49:06.795162+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678116006378579",
-    "created_at": "2026-11-25T16:52:29.269805+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678338656943991",
+    "created_at": "2026-11-25T17:49:06.793315+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117678116006378579",
-    "created_at": "2026-11-25T16:52:29.267311+00:00",
+    "message": "mastodon: posted to mastodon.social: 117678338656943991",
+    "created_at": "2026-11-25T17:49:06.790303+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-25T16:52:26.508804+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-25T16:52:26.507725+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for ''Hopefully things get done': Americans react to historic pol': https://static.toiimg.com/thumb/msid-109274843,imgsize-41344,width-400,resizemode-4/109274843.jpg (from bing-images, query ''Hopefully things get done': Americans react to historic political shift - BBC', page: https://politicalsciencenow.com/how-do-americans-respond-to-partisan-political-violence/ | 'Shift in - matches 3 key entities (american, political, shift))",
-    "created_at": "2026-11-25T16:52:26.506440+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches ''Hopefully things get done': Americans react to hi' (, the photo shows US political figures (Donald Trump and Joe Biden) relevant to a \"historic political shift\" headline about US politics.)",
-    "created_at": "2026-11-25T16:52:26.504779+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://www.commonwealthunion.com/wp-content/uploads/2024/11/1.jpg",
-    "created_at": "2026-11-25T16:52:22.527166+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for ''Hopefully things get done': Americans react to hi' (The photo shows Donald Trump, Satya Nadella, and Sundar Pichai with the U.S. Capitol, which does not depict the specific individuals reacting as descr)",
-    "created_at": "2026-11-25T16:52:22.523387+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/FB22/production/_116509246_voters.jpg",
-    "created_at": "2026-11-25T16:52:11.656450+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for ''Hopefully things get done': Americans react to hi' (. The image is a collage of four unrelated people and does not show the people, place, or specific event referenced in the news headline.)",
-    "created_at": "2026-11-25T16:52:11.639381+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0768/live/644f5ed0-d8a6-11f1-b441-2b33b063138f.j (page: https://www.bbc.co.uk/news/world-us-canada-55656995 | Live updates: 2026 US midterm elections and re - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:52:06.840530+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T16:52:06.838175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T16:52:06.416697+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T16:52:06.272732+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T16:52:05.942229+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:52:05.339164+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:52:05.338258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:52:05.337189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:52:05.335438+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Here's a list of the individuals, including James Comey, tar' - skipped (same event used within 24h, event key 'abc administration break comey here includ individual jame l')",
-    "created_at": "2026-11-25T16:52:05.013229+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T16:52:04.625727+00:00",
+    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+    "created_at": "2026-11-25T17:48:59.736542+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T16:52:04.624333+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-25T16:52:04.623152+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T16:52:04.622097+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'blame candidate democrat did good job losse midterm pbs repu' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-25T16:52:04.620594+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 3049x2033 (ratio 1.50) - unchanged",
-    "created_at": "2026-11-25T16:52:02.659786+00:00",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-25T17:48:59.676288+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "prepare_bsky_image: original 3049x2033 (ratio 1.50) - kept, no crop",
-    "created_at": "2026-11-25T16:52:02.658824+00:00",
+    "message": "promo: photo search done - 20 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
+    "created_at": "2026-11-25T17:48:59.674889+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-25T16:52:02.656711+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T16:52:02.492612+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 1 own + 4 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-25T16:52:02.490709+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to desertharper.bsky.social on your post (comment: 'Hey, you never know, my HS let people letter in drama and ch') as primonewstoday.bsky.social: 'Totally get that! 🎭 High school drama and choir are hidden gems—so much more tha'",
-    "created_at": "2026-11-25T16:52:00.489594+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-25T16:51:59.905537+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to countrygal.bsky.social (hot post by thatericalper.com, comment: 'Oh how I love love TWIX') as primonewstoday.bsky.social: 'Twix are the perfect mix of sweet and salty—can't resist! 😋\n\nhttps://shorturl.at'",
-    "created_at": "2026-11-25T16:51:55.036843+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to xenolith.bsky.social (hot post by jamellebouie.net, comment: 'What’s your favorite recipe? I’m on the hunt for one.') as primonewstoday.bsky.social: 'I swear by a simple collard‑green braise: sauté garlic, onion, a splash of apple'",
-    "created_at": "2026-11-25T16:51:51.599030+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to gatorgirl1974.bsky.social (hot post by jamellebouie.net, comment: 'collardsonly.com. The collards pictured here are amazing 🤩') as primonewstoday.bsky.social: 'Those collards look next‑level! 😍 Nothing beats fresh greens straight from the b'",
-    "created_at": "2026-11-25T16:51:48.646408+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': replied to kevinllong.bsky.social (hot post by jamellebouie.net, comment: 'It always pays to be friendly with stockers or merchandisers') as primonewstoday.bsky.social: 'Totally! A little kindness goes a long way—especially when they’re the ones savi'",
-    "created_at": "2026-11-25T16:51:45.681715+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T16:51:44.226033+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-25T16:51:44.224343+00:00",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+    "created_at": "2026-11-25T17:48:59.673670+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-25T16:51:43.918149+00:00",
+    "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T17:48:59.671702+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-25T16:51:42.047947+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-25T16:51:42.046807+00:00",
+    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+    "created_at": "2026-11-25T17:48:59.670337+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "worker run #97 started (--only bluesky)",
-    "created_at": "2026-11-25T16:51:42.045411+00:00",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T17:48:59.668724+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T16:15:10.674620+00:00",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T17:48:59.667322+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Day to end violence against women', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off', 'Montreal airport pizza slice', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-25T16:15:10.667929+00:00",
+    "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-25T17:48:59.666000+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: too soon)",
-    "created_at": "2026-11-25T16:15:10.632725+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': posted less than 5 minutes ago - too soon, skipping",
-    "created_at": "2026-11-25T16:15:10.631635+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-    "created_at": "2026-11-25T16:15:10.630186+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T16:15:10.628989+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: too soon)",
-    "created_at": "2026-11-25T16:15:10.627221+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted less than 5 minutes ago - too soon, skipping",
-    "created_at": "2026-11-25T16:15:10.626000+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-    "created_at": "2026-11-25T16:15:10.624236+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T16:15:10.622934+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-25T16:15:10.620590+00:00",
+    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
+    "created_at": "2026-11-25T17:48:59.663752+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' - ACCEPTED real photo (from openverse)",
-    "created_at": "2026-11-25T16:15:07.473003+00:00",
+    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T17:48:59.662407+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-25T16:15:07.471833+00:00",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-25T17:48:59.661163+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-    "created_at": "2026-11-25T16:15:07.470392+00:00",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-25T17:48:59.659363+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-25T17:48:59.657811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
+    "created_at": "2026-11-25T17:48:59.655900+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 5/6 tried: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T17:48:59.581339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T17:48:59.580115+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Advance the War Against Death in Season of Tyrael’s Gambit — Diablo IV - Blizzard News' (6 download(s) tried)",
+    "created_at": "2026-11-25T17:48:59.578767+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - page does not name the entity (Advance))",
+    "created_at": "2026-11-25T17:48:59.577517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:59.576134+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:15:07.468958+00:00",
+    "created_at": "2026-11-25T17:48:59.574581+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
-    "created_at": "2026-11-25T16:15:07.446130+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png",
+    "created_at": "2026-11-25T17:48:59.501873+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-    "created_at": "2026-11-25T16:15:07.355036+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine'",
-    "created_at": "2026-11-25T16:15:07.159259+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Ukraine'",
-    "created_at": "2026-11-25T16:15:07.026071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Ukraine'",
-    "created_at": "2026-11-25T16:15:06.918313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:05.705937+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:05.704862+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Ukraine war briefing: Zelenskyy and Hungary PM hai' - trying entity search 'Ukraine'",
-    "created_at": "2026-11-25T16:15:05.703734+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:05.702512+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:05.701106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:05.699911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:05.698752+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Zelenskyy Hungary'",
-    "created_at": "2026-11-25T16:15:05.696490+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Zelenskyy Hungary'",
-    "created_at": "2026-11-25T16:15:05.581318+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing Zelenskyy Hungary'",
-    "created_at": "2026-11-25T16:15:05.431345+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing Zelenskyy Hungary'",
-    "created_at": "2026-11-25T16:15:05.276190+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:03.509728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:03.508679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:03.507284+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:03.505969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:03.504672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:03.503423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:03.500740+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:03.390377+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:03.243480+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:03.087800+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:02.512144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:02.510955+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:02.509442+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:02.508181+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:02.506896+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy and Hungary PM hai'): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:15:02.505578+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:02.503148+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:02.355251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:02.187415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era '",
-    "created_at": "2026-11-25T16:15:01.903072+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:01.051231+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:15:01.050084+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy and Hungary PM hail new era ' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:15:01.048915+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiywFBVV95cUxQS0NGbmNYUlhldnlJSjJhb3pNbGdNSWswaDFERVZWanhxa2FLYmhxbGUtbHZVc1VWS2R) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:15:01.046422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T16:15:00.464625+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T16:15:00.463495+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Russia accuses NATO member Estonia of hostile actions ‘on the verge of unleashing open war’ - CNBC' (9 download(s) tried)",
-    "created_at": "2026-11-25T16:15:00.462251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-25T16:15:00.460711+00:00",
+    "message": "photo: rejected (vision down, strict check): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:59.446534+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:15:00.458593+00:00",
+    "created_at": "2026-11-25T17:48:59.444737+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- - image file looks like a flag, not a news photo",
-    "created_at": "2026-11-25T16:15:00.350447+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/3769/9713970948_671f4c3ab2_b.jpg (page: https://www.flickr.com/photos/55244200@N05/9713970948 | Peleliu Holds Advancement Exam - page does not name the entity (Advance))",
+    "created_at": "2026-11-25T17:48:59.059038+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52390620853_84dd421058_b.jpg",
+    "created_at": "2026-11-25T17:48:59.057337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8034/8049966714_de3e8d74bb_b.jpg",
+    "created_at": "2026-11-25T17:48:59.020988+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/4134/4828565765_950ede1f94_b.jpg (page: https://www.flickr.com/photos/83536366@N00/4828565765 | Advanced UAV Technology AT1000 - page does not name the entity (Advance))",
+    "created_at": "2026-11-25T17:48:58.992186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3353/4621394806_80e6e26623_b.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:58.990817+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T16:15:00.348881+00:00",
+    "created_at": "2026-11-25T17:48:58.989249+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg",
-    "created_at": "2026-11-25T16:14:59.788205+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Advance'",
+    "created_at": "2026-11-25T17:48:58.962398+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'Russia accuses NATO member Estonia of hostile acti' (The photo shows Saint Basil's Cathedral in Moscow, Russia, which is unrelated to diplomatic tensions between Russia and Estonia.)",
-    "created_at": "2026-11-25T16:14:59.786406+00:00",
+    "message": "google-images: 0 candidate(s) for 'Advance'",
+    "created_at": "2026-11-25T17:48:58.839998+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc",
-    "created_at": "2026-11-25T16:14:56.809132+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Advance'",
+    "created_at": "2026-11-25T17:48:58.717603+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'Russia accuses NATO member Estonia of hostile acti' (The photo shows the Church of the Savior on Spilled Blood in St. Petersburg, Russia, which is unrelated to Estonia or the news headline about Russia-E)",
-    "created_at": "2026-11-25T16:14:56.807508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/84/256988870_2d5679b0d9_b.jpg",
-    "created_at": "2026-11-25T16:14:52.276866+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg",
-    "created_at": "2026-11-25T16:14:52.193354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51932070805_edb66814eb_b.jpg",
-    "created_at": "2026-11-25T16:14:52.106677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg",
-    "created_at": "2026-11-25T16:14:52.021196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5589/15147968852_3f9aa97d20_b.jpg",
-    "created_at": "2026-11-25T16:14:51.938565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia'",
-    "created_at": "2026-11-25T16:14:51.823751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia'",
-    "created_at": "2026-11-25T16:14:51.649613+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia'",
-    "created_at": "2026-11-25T16:14:51.508408+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Russia'",
-    "created_at": "2026-11-25T16:14:51.374871+00:00",
+    "message": "openverse: 5 result(s) for 'Advance'",
+    "created_at": "2026-11-25T17:48:58.695788+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:50.675130+00:00",
+    "created_at": "2026-11-25T17:48:58.309873+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:50.674024+00:00",
+    "created_at": "2026-11-25T17:48:58.308130+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Russia accuses NATO member Estonia of hostile acti' - trying entity search 'Russia'",
-    "created_at": "2026-11-25T16:14:50.672906+00:00",
+    "message": "photo: topical search found nothing for 'Advance the War Against Death in Season of Tyrael’' - trying entity search 'Advance'",
+    "created_at": "2026-11-25T17:48:58.306717+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:50.671687+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:58.305171+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:50.670407+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:58.303702+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:50.668876+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:58.302039+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:50.667699+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:58.300630+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:14:50.665600+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Advance War Against Death Season'",
+    "created_at": "2026-11-25T17:48:58.297738+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:14:50.572783+00:00",
+    "message": "google-images: 0 candidate(s) for 'Advance War Against Death Season'",
+    "created_at": "2026-11-25T17:48:58.144888+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:14:50.410804+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Advance War Against Death Season'",
+    "created_at": "2026-11-25T17:48:58.022566+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia'",
-    "created_at": "2026-11-25T16:14:50.215213+00:00",
+    "message": "openverse: 0 result(s) for 'Advance War Against Death Season'",
+    "created_at": "2026-11-25T17:48:57.988205+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:49.963186+00:00",
+    "created_at": "2026-11-25T17:48:57.694204+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:49.962023+00:00",
+    "created_at": "2026-11-25T17:48:57.691172+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:49.960907+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.689659+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:49.959780+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.688228+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:49.958702+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.686612+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:49.957502+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.685037+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:49.955454+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.681874+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:49.852267+00:00",
+    "message": "google-images: 0 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.550354+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:49.717934+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.448100+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:49.392582+00:00",
+    "message": "openverse: 0 result(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.427792+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:48.773818+00:00",
+    "created_at": "2026-11-25T17:48:57.153122+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:48.772784+00:00",
+    "created_at": "2026-11-25T17:48:57.151905+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumbs.dreamstime.com/z/russia-map-vector-new-colorful-customizable-layered-political-map-ru (page: https://old.sermitsiaq.ag/en/printable-map-of-russia.html | Russia Map Vector New 2024 Colorful - Cu - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:48.771733+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.150732+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.shutterstock.com/shutterstock/photos/641865835/display_1500/stock-vector-russia-map-and- (page: https://www.dreamstime.com/russia-map-vector-new-colorful-customizable-layered-political-map-russia- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:48.770268+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.149299+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://cdn.enjoytravel.com/img/travel-news/saint-basils-cathedral.jpg (page: https://www.shutterstock.com/search/political-map-russia | 7 Of The Most Famous Monuments In Russia  - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:48.769027+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.148004+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | The Top 15 Places to - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:48.767724+00:00",
+    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:57.146460+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:48.765540+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.143750+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:48.657903+00:00",
+    "message": "google-images: 0 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:57.015091+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:48.498754+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:56.909355+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
-    "created_at": "2026-11-25T16:14:48.325641+00:00",
+    "message": "openverse: 0 result(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
+    "created_at": "2026-11-25T17:48:56.886962+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:47.273355+00:00",
+    "created_at": "2026-11-25T17:48:56.759470+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:47.271973+00:00",
+    "created_at": "2026-11-25T17:48:56.757970+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no og:image)",
-    "created_at": "2026-11-25T16:14:47.270602+00:00",
+    "message": "photo candidate: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - rejected (no og:image)",
+    "created_at": "2026-11-25T17:48:56.756533+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiggFBVV95cUxQaFlnM2N0STRqLXdzZUlGVElDUk1sY3dQR2pYRzBNRHowc0p2M05CVHVBcDgyS2g3emF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T16:14:47.268316+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZTdSTS13V3lkVXV2UlFob2F0dldSUTJUTFM1UjhfdnRWNDh0VFJoMXBab3V4bW9Td1Q) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T17:48:56.753839+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 1/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T16:14:46.454438+00:00",
+    "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
+    "created_at": "2026-11-25T17:48:56.596748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 4/6 tried: 'VOTE: Do you think President Trump should end the war in Ira' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T17:48:56.594840+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'VOTE: Do you think President Trump should end the war in Ira' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T17:48:56.593599+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'VOTE: Do you think President Trump should end the war in Iran? - National News Desk' (7 download(s) tried)",
+    "created_at": "2026-11-25T17:48:56.592408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:56.591024+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:56.589525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - page does not name the entity (VOTE))",
+    "created_at": "2026-11-25T17:48:56.559225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - page does not name the entity (VOTE))",
+    "created_at": "2026-11-25T17:48:56.557905+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:56.556616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:56.554966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8471/8088602731_c012521865_b.jpg",
+    "created_at": "2026-11-25T17:48:56.435323+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2212/2245209899_49ce7e9aab_b.jpg",
+    "created_at": "2026-11-25T17:48:56.400071+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/2374/2244848870_0ffcd49991.jpg (page: https://www.flickr.com/photos/66685169@N00/2244848870 | Voted! - page does not name the entity (VOTE))",
+    "created_at": "2026-11-25T17:48:56.369737+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/102/292424332_9799b294c1.jpg (page: https://www.flickr.com/photos/35237093334@N01/292424332 | Voting - page does not name the entity (VOTE))",
+    "created_at": "2026-11-25T17:48:56.368318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/1045/5139577888_af4e58e490_b.jpg (page: https://www.flickr.com/photos/78428166@N00/5139577888 | I voted - page does not name the entity (VOTE))",
+    "created_at": "2026-11-25T17:48:56.366984+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'VOTE'",
+    "created_at": "2026-11-25T17:48:56.364300+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'VOTE'",
+    "created_at": "2026-11-25T17:48:56.253246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'VOTE'",
+    "created_at": "2026-11-25T17:48:56.119788+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'VOTE'",
+    "created_at": "2026-11-25T17:48:56.095961+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:56.034113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:56.032809+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'VOTE: Do you think President Trump should end the ' - trying entity search 'VOTE'",
+    "created_at": "2026-11-25T17:48:56.031626+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:56.029986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:56.027206+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:56.004585+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:56.003392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:56.002141+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/65535/53757356304_1ce8c7b152_b.jpg (page: https://www.flickr.com/photos/90536753@N00/53757356304 | Passing the encampment at WWU on a rainy da - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:56.000708+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'VOTE Do think President Trump'",
+    "created_at": "2026-11-25T17:48:55.997753+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'VOTE Do think President Trump'",
+    "created_at": "2026-11-25T17:48:55.874448+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'VOTE Do think President Trump'",
+    "created_at": "2026-11-25T17:48:55.767661+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 1 result(s) for 'VOTE Do think President Trump'",
+    "created_at": "2026-11-25T17:48:55.739263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:55.705713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:55.704405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:55.703145+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:55.701684+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.677049+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.675772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.674430+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.671956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.563155+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.425275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.405405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:55.358873+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:55.357541+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:55.356273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:55.354501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.328571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.327317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:55.325863+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.323182+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.188772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.059695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
+    "created_at": "2026-11-25T17:48:55.040293+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:54.998800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:54.997614+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'VOTE: Do you think President Trump should end the war in Ira' - rejected (no og:image)",
+    "created_at": "2026-11-25T17:48:54.996259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwwJBVV95cUxNOTlWWGs1aVJNZWZabF9NY1hpU1VQck4tYllvUmFrTWdTbjVYbF9pUF9DRGpnZDdQMml) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T17:48:54.993721+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'African insurgents take war to the skies with off-the-shelf ' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T17:48:54.797373+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T17:48:54.795308+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'African insurgents take war to the skies with off-the-shelf drones - Reuters' (12 download(s) tried)",
+    "created_at": "2026-11-25T17:48:54.794102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: download budget reached (12) - stopping",
+    "created_at": "2026-11-25T17:48:54.792785+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:54.791330+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:54.789540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.662305+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.660693+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.632397+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.630797+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Morocco_Africa_Flickr_Rosino_December_2005_ (page: https://commons.wikimedia.org/wiki/File:Morocco_Africa_Flickr_Rosino_December_2005_84514010_edited_b - page does not name the entity (African))",
+    "created_at": "2026-11-25T17:48:53.579795+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Central_African_Republic_-_Boy_in_Birao.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.578405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.576644+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/0/07/African_penguins.jpg?utm_source=commons.wikimedi",
+    "created_at": "2026-11-25T17:48:53.544434+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/African_hawk-eagle_%28Aquila_spilogaster%29 - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.526340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.524613+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/African_bush_elephants_%28Loxodonta_african - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.493591+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.492024+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7066/6904463913_76636437dc_b.jpg",
+    "created_at": "2026-11-25T17:48:53.459653+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5185/5609562359_ec401798ef_b.jpg",
+    "created_at": "2026-11-25T17:48:53.417457+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4041/4398058400_9d95276a3e_b.jpg",
+    "created_at": "2026-11-25T17:48:53.378366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4327/35624432570_fbd1eba130_b.jpg",
+    "created_at": "2026-11-25T17:48:53.348534+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/6209/6157400315_e30725de4a_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T17:48:53.315063+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T17:48:53.313423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'African'",
+    "created_at": "2026-11-25T17:48:53.289153+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'African'",
+    "created_at": "2026-11-25T17:48:53.172610+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'African'",
+    "created_at": "2026-11-25T17:48:53.055046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'African'",
+    "created_at": "2026-11-25T17:48:53.035010+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.981754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.980548+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'African insurgents take war to the skies with off-' - trying entity search 'African'",
+    "created_at": "2026-11-25T17:48:52.979422+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.978264+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.977040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.975667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.974402+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'African insurgents take war skies'",
+    "created_at": "2026-11-25T17:48:52.971805+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'African insurgents take war skies'",
+    "created_at": "2026-11-25T17:48:52.850435+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'African insurgents take war skies'",
+    "created_at": "2026-11-25T17:48:52.709780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'African insurgents take war skies'",
+    "created_at": "2026-11-25T17:48:52.689632+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.646625+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.645459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.644231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.642968+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.641634+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.639249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.636286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.479012+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.369464+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.349971+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.297973+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:52.296574+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.295209+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.293612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.292190+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T17:48:52.290834+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.288233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.178259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.042158+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T17:48:52.021565+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:51.977766+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T17:48:51.976561+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no og:image)",
+    "created_at": "2026-11-25T17:48:51.975032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxON0RjeHRWcGl1ZElENEhBX0x2blI3b2w1OC1vZ1U3SklwRTV5ajRTWVRXczVBTlBrN0J) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T17:48:51.971811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T17:48:51.688449+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T16:14:46.453163+00:00",
+    "created_at": "2026-11-25T17:48:51.687064+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (5 download(s) tried)",
-    "created_at": "2026-11-25T16:14:46.452080+00:00",
+    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (10 download(s) tried)",
+    "created_at": "2026-11-25T17:48:51.685550+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/4d/3c/45/4d3c45b13c1ffa23ac2a3425210b0626.jpg (page: https://storage.googleapis.com/djzsyloosmezbe/types-of-thong-cuts.html | Types of thongs | Types of  - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T16:14:46.451004+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperbat.com/img/181098-black-hd-background-wallpaper-black-wallpaper-black-desktop.jpg (page: https://wallpapercave.com/black-background-pictures-hd | Plain Black Computer Wallpapers - 4k, HD Ba - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T17:48:51.684367+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://m.media-amazon.com/images/S/aplus-media-library-service-media/71516d17-02ed-4ebc-97d9-d22292 (page: https://www.pinterest.com/pin/102668066511972575/ | Mua Morvia Varieties of Women Thong Pack Lacy Ta - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T16:14:46.449877+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperaccess.com/full/307214.jpg (page: https://wallpaperbat.com/plain-black-computer-wallpapers | Black Desktop Wallpapers - Top Free Black - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T17:48:51.683125+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://img.freepik.com/premium-vector/types-of-women-s-panties-front-and-behind-view-underwear-set- (page: https://fado.vn/us/amazon/morvia-varieties-of-women-thong-pack-lacy-tanga-g-string-bikini-underwear- - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T16:14:46.448647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): http://www.underwearnewsbriefs.com/wp-content/uploads/2017/05/Thong-Style-Charts.jpg (page: https://ru.freepik.com/premium-vector/types-of-women-s-panties-front-and-behind-view-underwear-set-c - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T16:14:46.447423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://upload.wikimedia.org/wikipedia/commons/b/b8/Indo-Iranian_origins.png",
-    "created_at": "2026-11-25T16:14:46.445901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'How an Iranian Ally Gained the Upper Hand in Yemen' (. The map shows archaeological cultures of Bronze Age Eurasia, which is unrelated to the news headline about the current war in Yemen.)",
-    "created_at": "2026-11-25T16:14:46.444216+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3495/3771877710_089d7c732e_b.jpg",
-    "created_at": "2026-11-25T16:14:43.483251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2232/2347354877_aacf8657b7_b.jpg",
-    "created_at": "2026-11-25T16:14:43.393402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1433/1337744778_3567d7190e_b.jpg",
-    "created_at": "2026-11-25T16:14:43.307203+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6010/5918933751_71811c36aa_b.jpg",
-    "created_at": "2026-11-25T16:14:43.223392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iranian'",
-    "created_at": "2026-11-25T16:14:43.097124+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iranian'",
-    "created_at": "2026-11-25T16:14:42.806980+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iranian'",
-    "created_at": "2026-11-25T16:14:42.668697+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Iranian'",
-    "created_at": "2026-11-25T16:14:42.541512+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:41.874597+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:41.873384+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'How an Iranian Ally Gained the Upper Hand in Yemen' - trying entity search 'Iranian'",
-    "created_at": "2026-11-25T16:14:41.872178+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://media.printables.com/media/prints/354387/images/3007460_6d4a569f-1624-4613-bbbd-2f15647a3285 (page: Xenomorph Alien LG LEGO Fig by Spaceman Spiff | Download free STL model ... - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:41.870979+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T16:14:41.869083+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T16:14:41.771508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T16:14:41.621775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T16:14:41.446786+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:41.013692+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:41.012602+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2012/05/Hyundai-Pony.jpg (page: Curbside Classic: 1987 Hyundai Excel - The Damn Near Deadly Sin ... - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:41.011373+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T16:14:41.009394+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T16:14:40.867422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T16:14:40.713112+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T16:14:40.468368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:39.749818+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:39.748750+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://platform.twincities.eater.com/wp-content/uploads/sites/19/chorus/uploads/chorus_asset/file/2 (page: https://chicago.eater.com/2023/11/8/23950171/michelin-restaurants-chicago-stars-bib-gourmand-2023 |  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:39.747261+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://wallpaperbat.com/img/26807142-black-wallpaper.jpg (page: https://wallpaperaccess.com/black-desktop | Best 34+ 4K Dark Wallpaper Desktop - Great Research - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T17:48:51.681949+00:00",
     "card": ""
   }
 ]
