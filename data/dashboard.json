@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T07:58:48.364298+00:00",
-  "last_run": "2026-11-25T07:58:46.338384+00:00",
-  "runs": 81,
+  "generated_at": "2026-11-25T08:53:52.853375+00:00",
+  "last_run": "2026-11-25T08:51:14.687846+00:00",
+  "runs": 82,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 2,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 2,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -35,7 +35,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T07:32:09.667896+00:00"
+    "Adsterra Blogger": "2026-11-25T08:53:52.770196+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -46,11 +46,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 29,
+      "success": 30,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T07:32:09.667893+00:00"
+      "last_run": "2026-11-25T08:53:52.770190+00:00"
     }
   },
   "file_cards": [
@@ -65,24 +65,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T07:32:09.667896+00:00",
-      "runs_today": 4,
-      "posts_today": 9,
+      "last_run": "2026-11-25T08:53:52.770196+00:00",
+      "runs_today": 5,
+      "posts_today": 10,
       "next_runs": [
-        "2026-11-25T14:02:09.667896+06:00",
-        "2026-11-25T14:17:09.667896+06:00",
-        "2026-11-25T14:32:09.667896+06:00",
-        "2026-11-25T14:47:09.667896+06:00",
-        "2026-11-25T15:02:09.667896+06:00"
+        "2026-11-25T15:08:52.770196+06:00",
+        "2026-11-25T15:23:52.770196+06:00",
+        "2026-11-25T15:38:52.770196+06:00",
+        "2026-11-25T15:53:52.770196+06:00",
+        "2026-11-25T16:08:52.770196+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T14:09:00+06:00",
         "2026-11-25T15:04:00+06:00",
         "2026-11-25T15:58:00+06:00",
         "2026-11-25T16:53:00+06:00",
-        "2026-11-25T18:10:00+06:00"
+        "2026-11-25T18:10:00+06:00",
+        "2026-11-25T19:05:00+06:00"
       ],
-      "success": 29,
+      "success": 30,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -125,8 +125,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 5
+    }
+  ],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -138,12 +147,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -156,10 +165,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T07:58:46.339967+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T08:51:14.689720+00:00"
     }
   ],
   "dry_run": false,
@@ -168,317 +177,317 @@
     "open": false
   },
   "trending": [
-    "Boreen daily trivia scores",
+    "UK energy price cap to rise",
     "Planned lead detonation in Iowa",
+    "Grand Theft Auto VI",
     "Nvidia hiring first compliance officer",
-    "November full supermoon",
-    "Cybersecurity breach reported at CIA",
+    "Boreen daily trivia scores",
+    "Trump calls Putin his friend",
     "Tidal bans AI-generated music",
-    "\"I Know Your Age\" quiz",
-    "Wrong Lord of the Rings quotes",
-    "Bird photography",
-    "Aaron Rodgers benched against Broncos"
+    "Google plans personalized AI TV channel",
+    "Aaron Rodgers benched against Broncos",
+    "Jensen Huang's daily therapy remark"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T07:58:48.290097+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T07:58:48.288338+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T07:58:47.976821+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T07:58:46.341323+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T07:58:46.339977+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #81 started (--only blogger)",
-      "created_at": "2026-11-25T07:58:46.338405+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T07:32:09.715926+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Bird photography', 'Grand Theft Auto VI', 'Trump floats Jensen Huang pardon']",
-      "created_at": "2026-11-25T07:32:09.712056+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T07:32:09.667913+00:00",
+      "created_at": "2026-11-25T08:53:52.770215+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T07:32:09.666840+00:00",
+      "created_at": "2026-11-25T08:53:52.768828+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'anxiety cbs nation nato news region russian ship sink some s' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T07:32:09.665413+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event '000 500 almost bbc death figure own russia show ukraine war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T08:53:52.767049+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-25T07:32:08.198858+00:00",
+      "message": "prepare_bsky_image: published 1200x675 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-25T08:53:51.408379+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-25T07:32:08.197868+00:00",
+      "message": "prepare_bsky_image: original 1200x675 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-25T08:53:51.407107+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'As Ukraine sinks Russian ships, some NATO nations voice anxi'",
-      "created_at": "2026-11-25T07:32:08.195961+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T07:32:07.958744+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T07:32:07.957506+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 0 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T07:32:07.955976+00:00",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Russia's own figures show almost 500,000 deaths in war in Uk'",
+      "created_at": "2026-11-25T08:53:51.404480+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T07:32:05.628754+00:00",
+      "created_at": "2026-11-25T08:53:50.888715+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "promo: no news available in Political / War - skipping (no fallback to other categories)",
-      "created_at": "2026-11-25T07:32:05.627612+00:00",
-      "card": ""
+      "message": "card 'Adsterra Blogger': reply run done: 1 own + 1 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-25T08:53:50.886115+00:00",
+      "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 0 candidate(s) tried, 0 fresh stories with a photo attempt, 0 real-photo search(es), no usable photo",
-      "created_at": "2026-11-25T07:32:05.626189+00:00",
-      "card": ""
+      "message": "card 'Adsterra Blogger': replied to mags69.bsky.social on your post (comment: '🤞') as primonewstoday.bsky.social: 'Fingers crossed! Thanks for the good vibes 🙏✨'",
+      "created_at": "2026-11-25T08:53:48.884830+00:00",
+      "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T07:32:04.703693+00:00",
-      "card": ""
+      "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T08:53:48.518795+00:00",
+      "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T07:32:04.345633+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T07:32:02.815128+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-25T07:32:02.814157+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #80 started (--only bluesky)",
-      "created_at": "2026-11-25T07:32:02.812757+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T06:27:53.411111+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', '\"I Know Your Age\" quiz', 'ICE arrests at Seattle airport', 'November full supermoon']",
-      "created_at": "2026-11-25T06:27:53.408237+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T06:27:53.326274+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T06:27:53.325277+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T06:27:53.093413+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T06:27:47.797649+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T06:27:47.797037+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #79 started (--only blogger)",
-      "created_at": "2026-11-25T06:27:47.796110+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T06:08:02.217786+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Wrong Lord of the Rings quotes', 'Aaron Rodgers benched against Broncos', '\"I Know Your Age\" quiz']",
-      "created_at": "2026-11-25T06:08:02.212027+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T06:08:02.157074+00:00",
+      "message": "card 'Adsterra Blogger': replied to pawmeadrink.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Eating the extra costs to keep prices low for their customer') as primonewstoday.bsky.social: 'That dedication really shines through—nothing beats a place that puts people fir'",
+      "created_at": "2026-11-25T08:53:43.303017+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T06:08:02.155794+00:00",
+      "created_at": "2026-11-25T08:53:41.846506+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'combat control democrat house nbc news representative trump ' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T06:08:02.153897+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 400x225 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-25T06:08:00.814030+00:00",
+      "message": "prepared ready post: 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-25T08:53:41.844780+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 400x225 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-25T06:08:00.812383+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Democrats win control of the House of Representatives with a'",
-      "created_at": "2026-11-25T06:08:00.806115+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T06:08:00.713054+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T06:08:00.711401+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 0 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T06:08:00.709645+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to lewtwin.bsky.social (hot post by bodegacats.bsky.social, comment: 'F U MOTH!!') as primonewstoday.bsky.social: 'Whoa, that’s some strong vibes! Hope you’re having a wild day.  \n\nhttps://shortu'",
-      "created_at": "2026-11-25T06:07:56.557483+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T06:07:55.335076+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'As Ukraine sinks Russian ships, some NATO nations voice anxi' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T06:07:55.333311+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'As Ukraine sinks Russian ships, some NATO nations voice anxi' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T06:07:52.237638+00:00",
+      "message": "photo candidate: 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T08:53:38.993798+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-25T06:07:52.236315+00:00",
+      "created_at": "2026-11-25T08:53:38.992408+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'As Ukraine sinks Russian ships, some NATO nations voice anxi': https://i.ytimg.com/vi/n_2yMlmPcQI/maxresdefault.jpg (from bing-images, query 'As Ukraine sinks Russian ships, some NATO nations voice anxiety over war's spread to new regions', page: https://www.dreamstime.com/photos-images/belarus-ukraine-moscow-map.html | Ukraine History: The Unto - matches 2 key entities (nation, ukraine))",
-      "created_at": "2026-11-25T06:07:52.234371+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma': https://i.ytimg.com/vi/cVY56Ggg3vI/maxresdefault.jpg (from bing-images, query 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘major setback’ - Al Jazeera', page: https://timesofindia.indiatimes.com/videos/international/iran-unleashes-84th-wave-of-missile-strikes - matches 5 key entities (iran, irgc, live, mock))",
+      "created_at": "2026-11-25T08:53:38.991234+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Iran war live: IRGC mocks US ‘strategic ambiguity’' (. The photo features Donald Trump, who is central to US-Iran relations discussed in the headline regarding the IRGC and US military tensions.)",
+      "created_at": "2026-11-25T08:53:38.989323+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma'",
+      "created_at": "2026-11-25T08:53:30.780877+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma'",
+      "created_at": "2026-11-25T08:53:30.365297+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma'",
+      "created_at": "2026-11-25T08:53:30.215678+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma'",
+      "created_at": "2026-11-25T08:53:29.834603+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T08:53:24.735801+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T08:53:24.734584+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: IRGC mocks US ‘strategic ambiguity’ after ‘ma' - rejected (no og:image)",
+      "created_at": "2026-11-25T08:53:24.733257+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVTdVVzk0Mm1WUVZsbG40MGM3bGNpak9OMG5GZ05lRHdaT2wyajBla0pxckk0VTkwbDN) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T08:53:24.730681+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Russia's own figures show almost 500,000 deaths in war in Uk' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-25T08:53:24.481026+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: Iran developing chemical weapons, Israeli ' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news upda')",
+      "created_at": "2026-11-25T08:53:24.478539+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Russia's own figures show almost 500,000 deaths in war in Uk' for card 'Adsterra Blogger' (queue now 1)",
+      "created_at": "2026-11-25T08:53:24.409243+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Russia's own figures show almost 500,000 deaths in war in Uk' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T08:53:03.437668+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-25T08:53:03.436496+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Russia's own figures show almost 500,000 deaths in war in Uk': https://cdn.hirunews.lk/Data/News_Images/202611/1795579187_4697881_hirunews.jpg (from bing-images, query 'Russia's own figures show almost 500,000 deaths in war in Ukraine - BBC', page: https://eng.pressbee.net/show4987093.html?title=russia-s-own-figures-show-almost-500-000-deaths-in-w - matches 11 key entities (000, 500, almost, bbc))",
+      "created_at": "2026-11-25T08:53:03.435252+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T08:53:03.433711+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https://substack-post-me",
+      "created_at": "2026-11-25T08:53:02.487991+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Russia's own figures show almost 500,000 deaths in' (, the photo is a bar chart showing Russian military losses by categories over time, not an image showing deaths or an event related to the headline.)",
+      "created_at": "2026-11-25T08:53:02.486287+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://substackcdn.com/image/fetch/$s_!UQ9Z!,f_auto,q_auto:good,fl_progressive:steep/https://substa",
+      "created_at": "2026-11-25T08:52:57.949384+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Russia's own figures show almost 500,000 deaths in' (The image is a bar chart showing the breakdown of specific elite military specialist casualties rather than depicting the overall casualty numbers or )",
+      "created_at": "2026-11-25T08:52:57.947337+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/A236/production/_133162514_newnewranks_weekly_d",
+      "created_at": "2026-11-25T08:52:44.402520+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Russia's own figures show almost 500,000 deaths in' (\n\nReason: The image is a chart showing weekly death counts, not a photo of the people or event itself.)",
+      "created_at": "2026-11-25T08:52:44.400591+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Russia's own figures show almost 500,000 deaths in war in Uk'",
+      "created_at": "2026-11-25T08:52:33.804771+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Russia's own figures show almost 500,000 deaths in war in Uk'",
+      "created_at": "2026-11-25T08:52:33.404427+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Russia's own figures show almost 500,000 deaths in war in Uk'",
+      "created_at": "2026-11-25T08:52:33.261960+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Russia's own figures show almost 500,000 deaths in war in Uk'",
+      "created_at": "2026-11-25T08:52:32.811475+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T08:52:26.009381+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T08:52:26.008038+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Russia's own figures show almost 500,000 deaths in war in Uk' - rejected (no og:image)",
+      "created_at": "2026-11-25T08:52:26.006391+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE52ekxuU3VuendQQVpId1BlX21DeXpnMW9teFNfV1A3Nng0ODhEblNKSmRVd0dHcjFpY2x) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T08:52:26.003703+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: Iran developing chemical weapons, Israeli ' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news upda')",
+      "created_at": "2026-11-25T08:52:25.733091+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T08:52:25.289811+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T08:52:24.979908+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T08:51:14.690930+00:00",
       "card": ""
     }
   ]
