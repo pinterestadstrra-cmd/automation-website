@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T14:48:21.400792+00:00",
-  "last_run": "2026-11-25T14:47:43.080361+00:00",
-  "runs": 92,
+  "generated_at": "2026-11-25T15:37:04.665441+00:00",
+  "last_run": "2026-11-25T15:37:01.914446+00:00",
+  "runs": 93,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -78,18 +78,18 @@
       "runs_today": 10,
       "posts_today": 15,
       "next_runs": [
-        "2026-11-25T21:03:21.218512+06:00",
-        "2026-11-25T21:18:21.218512+06:00",
-        "2026-11-25T21:33:21.218512+06:00",
         "2026-11-25T21:48:21.218512+06:00",
-        "2026-11-25T22:03:21.218512+06:00"
+        "2026-11-25T22:03:21.218512+06:00",
+        "2026-11-25T22:18:21.218512+06:00",
+        "2026-11-25T22:33:21.218512+06:00",
+        "2026-11-25T22:48:21.218512+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T21:06:00+06:00",
         "2026-11-25T21:50:00+06:00",
         "2026-11-25T22:55:00+06:00",
         "2026-11-26T00:03:00+06:00",
-        "2026-11-26T00:58:00+06:00"
+        "2026-11-26T00:58:00+06:00",
+        "2026-11-26T01:52:00+06:00"
       ],
       "success": 35,
       "fail": 4,
@@ -134,17 +134,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 10
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
@@ -163,12 +154,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -205,10 +196,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T14:47:43.081834+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T15:37:01.916023+00:00"
     }
   ],
   "dry_run": false,
@@ -217,19 +208,67 @@
     "open": false
   },
   "trending": [
-    "Lead explosion in Iowa",
-    "Montreal airport pizza slice",
-    "Steelers bench Aaron Rodgers",
-    "SoftBank shares fall in AI sell-off",
-    "Bird photography",
+    "Gillibrand backs Fetterman reelection",
+    "PCE inflation hits three-year high",
     "Grand Theft Auto VI",
-    "Burnham's UK-EU deal",
-    "Day to end violence against women",
+    "Montreal airport pizza slice",
+    "Emergency unfolds in Iowa",
     "Nvidia hiring first compliance officer",
-    "\"I Know Your Age\" quiz"
+    "Trump floats Jensen Huang pardon",
+    "Steelers bench Aaron Rodgers",
+    "Measles risk grows for adults",
+    "Day to end violence against women"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T15:37:04.460294+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T15:37:04.458637+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T15:37:04.229963+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T15:37:01.917456+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T15:37:01.916032+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #93 started (--only blogger)",
+      "created_at": "2026-11-25T15:37:01.914466+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T14:48:21.404105+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Lead explosion in Iowa', 'Montreal airport pizza slice', 'Steelers bench Aaron Rodgers', 'SoftBank shares fall in AI sell-off', 'Bird photography']",
+      "created_at": "2026-11-25T14:48:21.397530+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -480,54 +519,6 @@
       "level": "info",
       "message": "wikimedia: 0 result(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
       "created_at": "2026-11-25T14:48:06.846789+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
-      "created_at": "2026-11-25T14:48:06.442251+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:06.270919+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:06.270010+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:06.268762+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:06.267621+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:06.266544+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://uesukraine.com/wp-content/uploads/2016/09/ukraine-city.jpg (page: https://www.wine-searcher.com/regions-ukraine | About Ukraine - UESUkraine - Study in Ukraine - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:06.265459+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
-      "created_at": "2026-11-25T14:48:06.262868+00:00",
       "card": ""
     }
   ]

@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T15:37:04.668792+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Gillibrand backs Fetterman reelection', 'PCE inflation hits three-year high', 'Grand Theft Auto VI', 'Montreal airport pizza slice', 'Emergency unfolds in Iowa']",
+    "created_at": "2026-11-25T15:37:04.662116+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T15:37:04.460294+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T15:37:04.458637+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T15:37:04.229963+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T15:37:01.917456+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T15:37:01.916032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #93 started (--only blogger)",
+    "created_at": "2026-11-25T15:37:01.914466+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T14:48:21.404105+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo: ACCEPTED relevant photo for 'Democrats usher in a new era with their resounding sweep of ': https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (from bing-images, query 'Democrats usher in a new era with their resounding sweep of the House and the Senate', page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - matches 2 key entities (democrat, house))",
     "created_at": "2026-11-25T12:10:39.133547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T12:10:39.132164+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
-    "created_at": "2026-11-25T12:10:39.052660+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
-    "created_at": "2026-11-25T12:10:38.882667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
-    "created_at": "2026-11-25T12:10:38.756578+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
-    "created_at": "2026-11-25T12:10:38.359051+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T12:10:38.214713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T12:10:38.213763+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://s.yimg.com/lo/mysterio/api/f09cb1dd4ebfa17dad994a41b0286e0c1ea652296df9ff36817ac519907f947a/",
-    "created_at": "2026-11-25T12:10:38.212659+00:00",
     "card": ""
   }
 ]
