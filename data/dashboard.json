@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T11:34:15.667560+00:00",
-  "last_run": "2026-11-25T11:34:07.082910+00:00",
-  "runs": 87,
+  "generated_at": "2026-11-25T12:11:04.417563+00:00",
+  "last_run": "2026-11-25T12:08:53.515495+00:00",
+  "runs": 88,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,7 +42,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T11:05:33.035130+00:00"
+    "Adsterra Blogger": "2026-11-25T12:11:04.271496+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -53,11 +53,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 32,
+      "success": 33,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T11:05:33.035127+00:00"
+      "last_run": "2026-11-25T12:11:04.271493+00:00"
     }
   },
   "file_cards": [
@@ -74,24 +74,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T11:05:33.035130+00:00",
-      "runs_today": 7,
-      "posts_today": 12,
+      "last_run": "2026-11-25T12:11:04.271496+00:00",
+      "runs_today": 8,
+      "posts_today": 13,
       "next_runs": [
-        "2026-11-25T17:35:33.035130+06:00",
-        "2026-11-25T17:50:33.035130+06:00",
-        "2026-11-25T18:05:33.035130+06:00",
-        "2026-11-25T18:20:33.035130+06:00",
-        "2026-11-25T18:35:33.035130+06:00"
+        "2026-11-25T18:26:04.271496+06:00",
+        "2026-11-25T18:41:04.271496+06:00",
+        "2026-11-25T18:56:04.271496+06:00",
+        "2026-11-25T19:11:04.271496+06:00",
+        "2026-11-25T19:26:04.271496+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T18:10:00+06:00",
         "2026-11-25T19:05:00+06:00",
         "2026-11-25T20:01:00+06:00",
         "2026-11-25T21:06:00+06:00",
-        "2026-11-25T21:50:00+06:00"
+        "2026-11-25T21:50:00+06:00",
+        "2026-11-25T22:55:00+06:00"
       ],
-      "success": 32,
+      "success": 33,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -134,8 +134,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 8
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
@@ -154,12 +163,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -196,10 +205,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T11:34:07.084632+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T12:08:53.516793+00:00"
     }
   ],
   "dry_run": false,
@@ -208,317 +217,317 @@
     "open": false
   },
   "trending": [
+    "Montreal airport pizza slice",
     "Grand Theft Auto VI",
     "Army plans lead detonation in Iowa",
-    "Influencers invited to Downing Street",
-    "Nvidia hiring first compliance officer",
+    "Trump floats Jensen Huang pardon",
     "UK energy price cap to rise",
     "Day to end violence against women",
-    "Bird photography",
-    "Montreal airport pizza slice",
-    "November full supermoon",
-    "Steelers bench Aaron Rodgers"
+    "Steelers bench Aaron Rodgers",
+    "Nvidia hiring first compliance officer",
+    "Tidal bans AI-generated music",
+    "Aaron Rodgers benched against Broncos"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T11:34:15.573608+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T11:34:15.571832+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T11:34:15.226717+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T11:34:07.086015+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T11:34:07.084639+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #87 started (--only blogger)",
-      "created_at": "2026-11-25T11:34:07.082937+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T11:05:33.123171+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Grand Theft Auto VI', 'Nvidia hiring first compliance officer', 'Army plans lead detonation in Iowa', 'Day to end violence against women', 'UK energy price cap to rise']",
-      "created_at": "2026-11-25T11:05:33.117864+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T11:05:33.035150+00:00",
+      "created_at": "2026-11-25T12:11:04.271513+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T11:05:33.034355+00:00",
+      "created_at": "2026-11-25T12:11:04.270380+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'anthony bbc deep democrat heartland historic night push trum' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T11:05:33.032943+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event 'cbs claim denounce international iran law news strike tehran' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T12:11:04.268720+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1280x853 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-25T11:05:31.733602+00:00",
+      "message": "prepare_bsky_image: published 1080x720 (ratio 1.50) - unchanged",
+      "created_at": "2026-11-25T12:11:02.707287+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1280x853 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-25T11:05:31.732830+00:00",
+      "message": "prepare_bsky_image: original 1080x720 (ratio 1.50) - kept, no crop",
+      "created_at": "2026-11-25T12:11:02.705962+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Anthony Zurcher: Democrats push deep into Trump heartland on'",
-      "created_at": "2026-11-25T11:05:31.731144+00:00",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: Tehran denounces U.S. for using AI in stri'",
+      "created_at": "2026-11-25T12:11:02.703834+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T11:05:31.447648+00:00",
+      "created_at": "2026-11-25T12:11:02.594875+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T11:05:31.446526+00:00",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-25T12:11:02.593537+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T11:05:31.445029+00:00",
+      "created_at": "2026-11-25T12:11:02.591993+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to terguti.bsky.social (hot post by fonsiloaizap.bsky.social, comment: 'Por contarlo públicamente y porque un juez permitió que el m') as primonewstoday.bsky.social: 'That’s heartbreaking—justice should protect, not enable. My thoughts are with he'",
+      "created_at": "2026-11-25T12:10:56.621835+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T11:05:28.312943+00:00",
+      "created_at": "2026-11-25T12:10:54.439884+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepared ready post: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T11:05:28.310043+00:00",
+      "message": "prepared ready post: 'Democrats usher in a new era with their resounding sweep of ' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-25T12:10:54.438225+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T11:05:24.025362+00:00",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T12:10:39.135548+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-25T11:05:24.024782+00:00",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-25T12:10:39.134586+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Tehran denounces U.S. for using AI in stri': https://thenewamerican.com/assets/sites/2/img/449971/tehran-1080x720.jpg (from bing-images, query 'Iran War Updates: Tehran denounces U.S. for using AI in strikes it claims violate international law - CBS News', page: https://www.aol.com/articles/iran-live-updates-tehran-says-093556000.html | Report: Attack on Iran S - matches 3 key entities (iran, tehran, update))",
-      "created_at": "2026-11-25T11:05:24.024057+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Democrats usher in a new era with their resounding sweep of ': https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (from bing-images, query 'Democrats usher in a new era with their resounding sweep of the House and the Senate', page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - matches 2 key entities (democrat, house))",
+      "created_at": "2026-11-25T12:10:39.133547+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Iran War Updates: Tehran denounces U.S. for using ' (.)",
-      "created_at": "2026-11-25T11:05:24.022625+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T12:10:39.132164+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://cdn.nournews.ir/thumbnail/mXGD4CYNGAy6/yIu5WmkW3MG41VN4NQXtitKCrdKg4jbMNku5MLG_rrx9oU8uUJYWR",
-      "created_at": "2026-11-25T11:05:17.582231+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:10:39.052660+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "download_image: rejected (not a valid photo >=400px): https://cdn.nournews.ir/thumbnail/mXGD4CYNGAy6/yIu5WmkW3MG41VN4NQXtitKCrdKg4jbMNku5MLG_rrx9oU8uUJYWReAv9-B0WzCgydKjHZ8Ru",
-      "created_at": "2026-11-25T11:05:17.579829+00:00",
+      "message": "google-images: 0 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:10:38.882667+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Tehran denounces U.S. for using AI in stri'",
-      "created_at": "2026-11-25T11:05:15.175661+00:00",
+      "message": "wikimedia: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:10:38.756578+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran War Updates: Tehran denounces U.S. for using AI in stri'",
-      "created_at": "2026-11-25T11:05:15.027028+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Iran War Updates: Tehran denounces U.S. for using AI in stri'",
-      "created_at": "2026-11-25T11:05:14.882382+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran War Updates: Tehran denounces U.S. for using AI in stri'",
-      "created_at": "2026-11-25T11:05:14.496438+00:00",
+      "message": "openverse: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:10:38.359051+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T11:05:13.871401+00:00",
+      "created_at": "2026-11-25T12:10:38.214713+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T11:05:13.870741+00:00",
+      "created_at": "2026-11-25T12:10:38.213763+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - rejected (no og:image)",
-      "created_at": "2026-11-25T11:05:13.869737+00:00",
+      "message": "photo: rejected (vision NO): https://s.yimg.com/lo/mysterio/api/f09cb1dd4ebfa17dad994a41b0286e0c1ea652296df9ff36817ac519907f947a/",
+      "created_at": "2026-11-25T12:10:38.212659+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifkFVX3lxTE05bmJOWEtxU1hnYmlGcXV2cHM2SzlfUnBhVUk3QklXMzFEd3Eyd1BhRmhORDBNM21BZmh) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T11:05:13.867623+00:00",
+      "message": "vision: NO - photo rejected for 'Democrats usher in a new era with their resounding' (, the photo shows a political campaign event for James Talarico in Texas, not a legislative sweep of the House and Senate.)",
+      "created_at": "2026-11-25T12:10:38.211026+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Russia's own figures show it has lost almost 500,000 people ' - skipped (same event used within 24h, event key '000 500 almost bbc figure lost own people russia show ukrain')",
-      "created_at": "2026-11-25T11:05:13.458956+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats usher in a new era with their resounding'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.yahoo.com/news/politics/articles/democrats-congress-precipice-critical-test-100729718.ht - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T12:10:33.372147+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war updates: Saudi-led coalition orders evacuation of H' - skipped (same event used within 24h, event key 'coalition evacuation hodeidah iran jazeera led order port sa')",
-      "created_at": "2026-11-25T11:05:13.457618+00:00",
+      "message": "photo: rejected (vision NO): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png",
+      "created_at": "2026-11-25T12:10:33.371012+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Democrats usher in a new era with their resounding' (. The image is a logo for the Democratic Party rather than a photo showing the event or people mentioned in the news headline.)",
+      "created_at": "2026-11-25T12:10:33.369272+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
+      "created_at": "2026-11-25T12:09:01.744317+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Democrats usher in a new era with their resounding' (The photo shows political campaign buttons, not the people, places, or events associated with a legislative sweep.)",
+      "created_at": "2026-11-25T12:09:01.740470+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:08:58.992167+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:08:58.846010+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:08:58.700956+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+      "created_at": "2026-11-25T12:08:58.330916+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T12:08:58.258732+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T12:08:58.257768+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - rejected (no og:image)",
+      "created_at": "2026-11-25T12:08:58.256644+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxPblFTeDZOTlFNZ0hzLTJnczQ0dWk0TlVTTUhUY2dHbExHRXY3RkQtNGtkdTFrM000Nkh) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T12:08:58.254318+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T12:08:58.101031+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+      "created_at": "2026-11-25T12:08:58.100117+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
+      "created_at": "2026-11-25T12:08:58.098979+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Politics News | Breaking Political News, Video & Analysis-AB' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T12:08:58.097800+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+      "created_at": "2026-11-25T12:08:58.096845+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
+      "created_at": "2026-11-25T12:08:58.095639+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Two-thirds of Americans say country is headed in the wrong d' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T12:08:58.094140+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T11:05:12.919260+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T11:05:12.608235+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T11:05:03.043261+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-25T11:05:03.042499+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #86 started (--only bluesky)",
-      "created_at": "2026-11-25T11:05:03.041436+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T10:35:28.296398+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['UK energy price cap to rise', 'Army plans lead detonation in Iowa', 'Day to end violence against women', 'Grand Theft Auto VI', 'Influencers invited to Downing Street']",
-      "created_at": "2026-11-25T10:35:28.289978+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T10:35:27.516596+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T10:35:27.514417+00:00",
+      "created_at": "2026-11-25T12:08:57.434832+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T10:35:26.903475+00:00",
+      "created_at": "2026-11-25T12:08:57.062430+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T10:35:06.758394+00:00",
+      "created_at": "2026-11-25T12:08:53.517885+00:00",
       "card": ""
     },
     {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T10:35:06.757077+00:00",
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-25T12:08:53.516800+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #85 started (--only blogger)",
-      "created_at": "2026-11-25T10:35:06.755492+00:00",
+      "message": "worker run #88 started (--only bluesky)",
+      "created_at": "2026-11-25T12:08:53.515516+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "worker run finished",
-      "created_at": "2026-11-25T10:08:06.420645+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Influencers invited to Downing Street', 'UK energy price cap to rise', 'Army plans lead detonation in Iowa', 'Day to end violence against women', 'Grand Theft Auto VI']",
-      "created_at": "2026-11-25T10:08:06.413778+00:00",
+      "created_at": "2026-11-25T11:34:15.669555+00:00",
       "card": ""
     }
   ]
