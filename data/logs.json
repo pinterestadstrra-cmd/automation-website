@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T17:04:03.352112+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Army lead detonation in Iowa', 'Grand Theft Auto VI', 'Kilmar Abrego Garcia case', 'Montreal airport pizza slice', 'Nvidia hiring first compliance officer']",
+    "created_at": "2026-11-25T17:04:03.330368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T17:04:03.098516+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T17:04:03.096927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T17:04:02.655317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T17:03:59.609796+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T17:03:59.608710+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T17:03:59.607555+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #98 started (--only blogger)",
+    "created_at": "2026-11-25T17:03:59.606212+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T16:52:29.583781+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://platform.twincities.eater.com/wp-content/uploads/sites/19/chorus/uploads/chorus_asset/file/2 (page: https://chicago.eater.com/2023/11/8/23950171/michelin-restaurants-chicago-stars-bib-gourmand-2023 |  - only 0 of 10 key entities in the source page)",
     "created_at": "2026-11-25T16:14:39.747261+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://platform.eater.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25127104/EATE (page: https://twincities.eater.com/23939616/eater-awards-winners-twin-cities-minneapolis-st-paul-2023 | Ea - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:39.745950+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://cdn.vox-cdn.com/thumbor/hCinVPNFqAfWcSgQy_87Eentr-k=/0x0:1067x1600/1200x0/filters:focal(0x0: (page: https://www.eater.com/23939619/eater-awards-winners-2023-us-cities-new-york-los-angeles-chicago-best - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:39.744593+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://cdn.vox-cdn.com/thumbor/DZtbIX9h1LK37rrht3ilS6FaDy4=/0x0:1600x900/820x461/filters:focal(672x (page: https://chicago.eater.com/23939545/eater-awards-winners-best-restaurant-chicago-2023 | Chicago’s 202 - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T16:14:39.742224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T16:14:39.739981+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T16:14:39.634871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T16:14:39.490393+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T16:14:39.232616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:38.615306+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T16:14:38.614243+00:00",
     "card": ""
   }
 ]

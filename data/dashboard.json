@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T16:52:29.581620+00:00",
-  "last_run": "2026-11-25T16:51:42.045389+00:00",
-  "runs": 97,
+  "generated_at": "2026-11-25T17:04:03.349418+00:00",
+  "last_run": "2026-11-25T17:03:59.606190+00:00",
+  "runs": 98,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 5,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 5,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -93,11 +93,11 @@
         "2026-11-26T00:07:04.623139+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T22:55:00+06:00",
         "2026-11-26T00:03:00+06:00",
         "2026-11-26T00:58:00+06:00",
         "2026-11-26T01:52:00+06:00",
-        "2026-11-26T03:08:00+06:00"
+        "2026-11-26T03:08:00+06:00",
+        "2026-11-26T04:04:00+06:00"
       ],
       "success": 39,
       "fail": 4,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 12
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T16:51:42.046800+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T17:03:59.607547+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-25T17:03:59.608702+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
-    "King tides threaten Bay Area flooding",
+    "Army lead detonation in Iowa",
     "Grand Theft Auto VI",
-    "Trump to meet El-Sayed on Trumpcare",
-    "Gillibrand backs Fetterman reelection",
-    "SoftBank shares fall in AI sell-off",
-    "Nvidia hiring first compliance officer",
+    "Kilmar Abrego Garcia case",
     "Montreal airport pizza slice",
-    "Day to end violence against women",
+    "Nvidia hiring first compliance officer",
     "Steelers bench Aaron Rodgers",
-    "PCE inflation hits three-year high"
+    "SoftBank shares fall in AI sell-off",
+    "Day to end violence against women",
+    "PCE inflation hits three-year high",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T17:04:03.098516+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T17:04:03.096927+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T17:04:02.655317+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T17:03:59.609796+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-25T17:03:59.608710+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T17:03:59.607555+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #98 started (--only blogger)",
+      "created_at": "2026-11-25T17:03:59.606212+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T16:52:29.583781+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['King tides threaten Bay Area flooding', 'Grand Theft Auto VI', 'Trump to meet El-Sayed on Trumpcare', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off']",
+      "created_at": "2026-11-25T16:52:29.578621+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
@@ -564,60 +606,6 @@
       "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
       "created_at": "2026-11-25T16:51:43.918149+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T16:51:42.047947+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-25T16:51:42.046807+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #97 started (--only bluesky)",
-      "created_at": "2026-11-25T16:51:42.045411+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T16:15:10.674620+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Day to end violence against women', 'Gillibrand backs Fetterman reelection', 'SoftBank shares fall in AI sell-off', 'Montreal airport pizza slice', 'Grand Theft Auto VI']",
-      "created_at": "2026-11-25T16:15:10.667929+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social' ran (skipped: too soon)",
-      "created_at": "2026-11-25T16:15:10.632725+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': posted less than 5 minutes ago - too soon, skipping",
-      "created_at": "2026-11-25T16:15:10.631635+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': post-only run (a posting slot is due; replies stay on the interval rhythm)",
-      "created_at": "2026-11-25T16:15:10.630186+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T16:15:10.628989+00:00",
-      "card": "mastodon.social"
     }
   ]
 }
