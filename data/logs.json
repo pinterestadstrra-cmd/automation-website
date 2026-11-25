@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-25T15:48:01.671871+00:00",
+    "created_at": "2026-11-25T16:12:38.197304+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Montreal airport pizza slice', 'Grand Theft Auto VI', 'Emergency unfolds in Iowa', 'Trump calls Putin his friend', 'Nvidia hiring first compliance officer']",
-    "created_at": "2026-11-25T15:48:01.668413+00:00",
+    "message": "card 'mastodon.social' ran (ok - posted 1)",
+    "created_at": "2026-11-25T16:12:37.983781+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-25T16:12:37.982619+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117677959221868658",
+    "created_at": "2026-11-25T16:12:37.981122+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "mastodon: posted to mastodon.social: 117677959221868658",
+    "created_at": "2026-11-25T16:12:37.944722+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-25T15:48:01.590495+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T15:48:01.589764+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'argue behaviour call european latest news putrid sky troop t' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-25T15:48:01.588832+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1024x683 (ratio 1.50) - unchanged",
-    "created_at": "2026-11-25T15:47:59.956430+00:00",
+    "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-25T16:12:34.932499+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "prepare_bsky_image: original 1024x683 (ratio 1.50) - kept, no crop",
-    "created_at": "2026-11-25T15:47:59.955761+00:00",
+    "message": "promo category: war news",
+    "created_at": "2026-11-25T16:12:34.931373+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Ukraine war latest: European troops should be in Ukraine, ex'",
-    "created_at": "2026-11-25T15:47:59.954403+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T15:47:59.912692+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-25T15:47:59.911813+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-25T15:47:59.910283+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T15:47:56.693112+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Trump says Democrats 'did a good job,' blames Republican can' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-25T15:47:56.692294+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-25T15:47:55.140489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-25T15:47:55.139916+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://nationalsecurityjournal.org/something-strange-is-happening-to-trump-the-democrat-who-prosecu - matches 3 key entities (democrat, midterm, trump))",
-    "created_at": "2026-11-25T15:47:55.139272+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Iran war live: Another tanker ‘on fire’ after hitting mine i': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Another tanker ‘on fire’ after hitting mine in Hormuz - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Rules  - matches 4 key entities (iran, mine, tanker, war))",
+    "created_at": "2026-11-25T16:12:34.928972+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T15:47:55.138494+00:00",
+    "created_at": "2026-11-25T16:12:34.856820+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-25T15:47:55.080835+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Iran war live: Another tanker ‘on fire’ after hitting mine i'",
+    "created_at": "2026-11-25T16:12:34.134025+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-25T15:47:54.943522+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iran war live: Another tanker ‘on fire’ after hitting mine i'",
+    "created_at": "2026-11-25T16:12:33.993165+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-25T15:47:54.805958+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Iran war live: Another tanker ‘on fire’ after hitting mine i'",
+    "created_at": "2026-11-25T16:12:33.839395+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-25T15:47:54.686198+00:00",
+    "message": "openverse: 0 result(s) for 'Iran war live: Another tanker ‘on fire’ after hitting mine i'",
+    "created_at": "2026-11-25T16:12:33.809361+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:54.123033+00:00",
+    "created_at": "2026-11-25T16:12:33.588324+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:54.122443+00:00",
+    "created_at": "2026-11-25T16:12:33.587189+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
-    "created_at": "2026-11-25T15:47:54.121766+00:00",
+    "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:12:33.585818+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T15:47:54.120316+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVTdVVzk0Mm1WUVZsbG40MGM3bGNpak9OMG5GZ05lRHdaT2wyajBla0pxckk0VTkwbDN) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:12:33.523862+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 5/6 tried: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T16:12:33.187317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T16:12:33.185980+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ says Tehran is directing war - Fox News' (5 download(s) tried)",
+    "created_at": "2026-11-25T16:12:33.184801+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.pinimg.com/originals/5d/7c/1c/5d7c1ca698c2c062b68d2a8ac047a84c.jpg (page: https://www.pinterest.com/pin/2-year-activities--519110294552916694/ | Animal pictures for kids – Ar - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T16:12:33.183613+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.pinimg.com/originals/96/a5/fb/96a5fb2e33e8da67b3013922d8cbafcb.png (page: https://www.artofit.org/image-gallery/animal-pictures-for-kids/ | Animal Parents and Babies – Match  - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T16:12:33.182385+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://image.shutterstock.com/shutterstock/photos/124275535/display_1500/stock-vector-set-with-cart (page: https://www.pinterest.com/pin/783556035138745295/ | Set Cartoon Animals Babies Little Kidsvector Sto - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T16:12:33.181090+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.pinimg.com/originals/11/52/60/11526038ce7deddc9fef9132b19123d1.jpg?nii=t (page: https://www.shutterstock.com/image-vector/set-cartoon-animals-babies-little-kidsvector-124275535 | P - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T16:12:33.179818+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3952/15338431300_9cbfd31956_b.jpg",
+    "created_at": "2026-11-25T16:12:33.178238+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7382/10512738616_ecd02b8573_b.jpg",
+    "created_at": "2026-11-25T16:12:33.137853+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3795/10970666755_8f502d8096_b.jpg",
+    "created_at": "2026-11-25T16:12:33.075529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3696/10511762405_df957a48d4_b.jpg",
+    "created_at": "2026-11-25T16:12:32.993858+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3742/10740195953_dcb4de9812_b.jpg",
+    "created_at": "2026-11-25T16:12:32.955910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni'",
+    "created_at": "2026-11-25T16:12:32.781646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Yemeni'",
+    "created_at": "2026-11-25T16:12:32.645725+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Yemeni'",
+    "created_at": "2026-11-25T16:12:32.449086+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Yemeni'",
+    "created_at": "2026-11-25T16:12:32.280303+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:31.228840+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:31.227732+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Yemeni military official brands Iran Houthis’ ‘god' - trying entity search 'Yemeni'",
+    "created_at": "2026-11-25T16:12:31.226623+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/SEEDs/bi (page: https://www.beaconortho.com/blog/biceps-tendon-rupture-fixed/ | Biceps Tendon Rupture: Signs, Diagno - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:31.225328+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://orthopedicinstitutesf.com/wp-content/uploads/2024/11/Distal-Biceps-Rupture.jpg (page: https://www.webmd.com/a-to-z-guides/what-to-know-about-biceps-rupture | Jason L. Hurd, MD - Orthoped - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:31.224042+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://c8.alamy.com/comp/2X89XGE/comparison-of-healthy-and-ruptured-biceps-tendon-2X89XGE.jpg (page: https://orthopedicinstitutesf.com/physicians/jason-l-hurd-md/ | Comparison of healthy and ruptured b - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:31.169333+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.lotusyogadallas.com/wp-content/uploads/2025/10/Symptoms-of-Bicep-Tear.png (page: https://www.alamy.com/comparison-of-healthy-and-ruptured-biceps-tendon-image607498542.html | Bicep T - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:31.129009+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T16:12:31.030898+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T16:12:30.893419+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T16:12:30.753437+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T16:12:30.455041+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:30.326632+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:30.325569+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/104-Boneless-Cloud-Sectional-Couch-with-L-Shape-Chaise-Modern-Cordu (page: https://www.walmart.com/ip/Modern-Curved-Compression-Boneless-Sofa-Channel-Tufted-Sectional-Sofa-Cou - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:30.324222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/96-Inch-Modular-Sectional-Couches-Living-Room-Modern-Boneless-Sofa- (page: https://www.walmart.com/ip/95-Cloud-Sectional-Sofa-Modern-L-Shaped-Couch-for-Living-Room-Corduroy-De - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:30.322943+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://images.thdstatic.com/productImages/f723c5cd-6882-5d32-b53f-a0c6b159bf27/svn/camel-gdfstudio- (page: https://www.walmart.com/ip/Cloud-Sectional-Sofa-Modern-Minimalist-Upholstered-L-Shaped-Couch-Deep-Se - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:30.321573+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i5.walmartimages.com/seo/Modern-Sectional-Sofa-63-7-Boneless-Loveseat-Couch-Modular-Design-C (page: https://www.homedepot.com/p/GDFSTUDIO-Mid-Century-Modern-122-in-Flared-Arm-Fabric-Modular-Sectional- - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:30.320392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:30.318026+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:29.947430+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:29.794933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:29.422769+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:29.317906+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:29.316860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://media.gettyimages.com/id/95187394/photo/nobel-peace-prize-laureate-us-president-barack-obama (page: https://www.gettyimages.co.uk/photos/nobel-peace-laureate-barak-obama | 517 Nobel Prize Award Ceremo - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:29.315580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.nydailynews.com/wp-content/uploads/migration/2023/08/03/C3BMJIDC5ZDYFOCCEMKQFNO2HU.jpg (page: https://www.gettyimages.com/photos/nobel-prize-award-ceremony-2009 | Barack Obama's life and career - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:29.314033+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.thoughtco.com/thmb/WlsszXMq9XBJdfreZ9ebaR1nrY4=/1199x1599/filters:fill(auto,1)/President (page: https://www.nydailynews.com/2023/08/03/barack-obamas-life-and-career/ | Interstellar Explained - Rea - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:29.300951+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://media.gettyimages.com/id/95187382/de/foto/nobel-peace-prize-laureate-us-president-barack-oba (page: https://ausmalbilderfurkinder.de/interstellar-explained/ | Nobel Peace Prize laureate, US President  - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:29.032557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:28.983441+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:28.866915+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:28.593612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T16:12:28.080671+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:27.038528+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:27.037382+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:12:27.036063+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxOdGItTnFaZjJRQmVUNVIwNENjYkIxNTVDSTVhaHE5MlpNRW1vUnNEUzFyMnp2SXU4aWJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:12:27.021508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
+    "created_at": "2026-11-25T16:12:26.616012+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-25T16:12:26.614709+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How the Russia-Ukraine war tore my family apart - BBC' - skipped (same event used within 24h, event key 'apart bbc family how russia tore ukraine war')",
+    "created_at": "2026-11-25T16:12:26.613308+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 4/6 tried: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T16:12:26.611747+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T16:12:26.610353+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Russia accuses NATO member Estonia of hostile actions ‘on the verge of unleashing open war’ - CNBC' (12 download(s) tried)",
+    "created_at": "2026-11-25T16:12:26.396458+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:26.395016+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:26.291187+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp1903287.jpg",
+    "created_at": "2026-11-25T16:12:26.234830+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp1903287.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-25T16:12:26.233343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg",
+    "created_at": "2026-11-25T16:12:26.098540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:26.056281+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:26.054790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1 (page: https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1%D0%B0%D0%BD%D0%B - page does not name the entity (Russia))",
+    "created_at": "2026-11-25T16:12:25.987773+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Olkhon_Island%2C_Capes%2C_cliffs_at_sunset% - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.985418+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.983987+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Mirny_in_Yakutia.jpg/1280px-Mirny_in_Yakuti (page: https://commons.wikimedia.org/wiki/File:Mirny_in_Yakutia.jpg | File:Mirny in Yakutia.jpg - page does not name the entity (Russia))",
+    "created_at": "2026-11-25T16:12:25.932579+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ergaki%2C_Buiba_Valley%2C_Western_Sayan_Mou - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.931340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.929787+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Baikal%2C_Cape_Burhan%2C_Olkhon_Island%2C_L - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.869611+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.868224+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/84/256988870_2d5679b0d9_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.814539+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.813128+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.768682+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.641723+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/65535/51932070805_edb66814eb_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.589788+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.588278+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.542383+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.541030+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5589/15147968852_3f9aa97d20_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:25.497117+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:25.495646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia'",
+    "created_at": "2026-11-25T16:12:25.421607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia'",
+    "created_at": "2026-11-25T16:12:25.286281+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Russia'",
+    "created_at": "2026-11-25T16:12:25.154080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Russia'",
+    "created_at": "2026-11-25T16:12:25.126311+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:25.086191+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:25.085076+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Russia accuses NATO member Estonia of hostile acti' - trying entity search 'Russia'",
+    "created_at": "2026-11-25T16:12:25.083812+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:25.082590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:25.081132+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:25.079594+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:25.023965+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:12:24.904948+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:12:24.775481+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:12:24.650807+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia'",
+    "created_at": "2026-11-25T16:12:24.614192+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:24.571164+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:24.569930+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:24.568751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:24.567627+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:24.566289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:24.516118+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:24.485988+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:24.160491+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.993083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.965458+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:23.922327+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:23.921272+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://static01.nyt.com/images/2017/05/10/world/10Russia1/10Russia1-superJumbo.jpg (page: https://www.enjoytravel.com/en/travel-news/famous-for/famous-monuments-russia | At Russia’s Victory  - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:23.920007+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.nytimes.com/2017/05/09/world/europe/victory-day-russia-putin.html | Russian Flag Wallpap - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:23.918901+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | From Russia with love - remarkable tales of east - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:23.917726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia accuses NATO member Estonia of hostile acti'): https://www.tripsavvy.com/thmb/pXawGeVMnK5IvMUEQ2z9_8mDiF0=/2121x1414/filters:fill(auto,1)/the-churc (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:23.916549+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.914230+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.785502+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.602791+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia accuses NATO member Estonia of hostile actions ‘on th'",
+    "created_at": "2026-11-25T16:12:23.575568+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:23.532548+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:23.530690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:12:23.529317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiggFBVV95cUxQaFlnM2N0STRqLXdzZUlGVElDUk1sY3dQR2pYRzBNRHowc0p2M05CVHVBcDgyS2g3emF) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:12:23.453096+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'More than 700,000 Russian soldiers have been killed in the U' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T16:12:23.082002+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T16:12:23.080926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'More than 700,000 Russian soldiers have been killed in the Ukraine war, new estimate suggests - NBC News' (7 download(s) tried)",
+    "created_at": "2026-11-25T16:12:23.079852+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://64.media.tumblr.com/a50601349197e82d3ae2997356e95d47/tumblr_mwuknvt4Np1svoqlco1_500.jpg (page: https://sean--opry.tumblr.com/page/118 | Sean O'pry - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:23.078688+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://media.gettyimages.com/id/813392340/photo/model-eric-rutherford-rapper-young-paris-and-model- (page: https://www.listal.com/viewimage/2217660 | Sean Opry Photos Photos and Premium High Res Pictures - G - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:23.077562+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://c8.alamy.com/comp/TYK8NY/sean-opry-arrives-for-the-premiere-of-homecoming-at-the-mgm-screeni (page: https://www.gettyimages.in/photos/sean-opry-photos - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:23.073536+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://i.pinimg.com/originals/d4/a6/41/d4a64189516e6ed9c6edd32b61d3fa03.jpg (page: https://www.alamy.com/sean-opry-arrives-for-the-premiere-of-homecoming-at-the-mgm-screening-room-in- - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:22.750672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/WTC-Fireman_requests_10_more_colleagues_%28 - source page title names only 0 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T16:12:22.748462+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T16:12:22.746871+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/WTC-Fireman_requests_10_more_colleagues.jpg",
+    "created_at": "2026-11-25T16:12:22.701989+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'More than 700,000 Russian soldiers have been kille' (\n\nThe photo depicts a firefighter amidst the ruins of the World Trade Center after the September 11 attacks, which is unrelated to the Ukraine war.)",
+    "created_at": "2026-11-25T16:12:22.700550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/2/2d/Mossi-Languages_of_Burkina_Faso-jpg.jpg?utm_sour (page: https://commons.wikimedia.org/wiki/File:Mossi-Languages_of_Burkina_Faso-jpg.jpg | File:Mossi-Languag - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:20.597272+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/MV_Spitsbergen_arrives_at_Storkaia_in_Molde (page: https://commons.wikimedia.org/wiki/File:MV_Spitsbergen_arrives_at_Storkaia_in_Molde,_Norway,_on_Apri - page does not name the entity (More))",
+    "created_at": "2026-11-25T16:12:20.596070+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1291/1135876473_dbbb64dccf_b.jpg",
+    "created_at": "2026-11-25T16:12:20.594414+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/95/247673429_f22cbdd0a6_m.jpg",
+    "created_at": "2026-11-25T16:12:20.555024+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5085/5371612151_2f8d5b4947.jpg",
+    "created_at": "2026-11-25T16:12:20.502068+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3316/3444915507_361c8c2752.jpg",
+    "created_at": "2026-11-25T16:12:20.455484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3442/3228761389_d6c07f5ae6_b.jpg",
+    "created_at": "2026-11-25T16:12:20.420364+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'More'",
+    "created_at": "2026-11-25T16:12:19.937286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'More'",
+    "created_at": "2026-11-25T16:12:19.796158+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: rejected candidate (mime=image/tiff): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Moor%C3%A9_%28Mossi%29_language_text_in_Zig",
+    "created_at": "2026-11-25T16:12:19.661515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'More'",
+    "created_at": "2026-11-25T16:12:19.660050+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'More'",
+    "created_at": "2026-11-25T16:12:19.631802+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:19.584490+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:19.583358+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'More than 700,000 Russian soldiers have been kille' - trying entity search 'More'",
+    "created_at": "2026-11-25T16:12:19.582375+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://i.etsystatic.com/25413988/r/il/a41eb6/4567420643/il_794xN.4567420643_amwj.jpg (page: Happy Shadow Thoughts Unisex Sweatshirt Front and Back - Etsy - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.581176+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/a/a3/Stamp_of_Russia_2001_No_700_Gherman_Titov.jpg?ut (page: https://commons.wikimedia.org/wiki/File:Stamp_of_Russia_2001_No_700_Gherman_Titov.jpg | File:Stamp o - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.580052+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Last_Address_-_Saint_Petersburg%2C_Dekabris (page: https://commons.wikimedia.org/wiki/File:Last_Address_-_Saint_Petersburg,_Dekabristov_Street,_62-64_( - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.579000+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Chinese_Abroad%2C_ca._1930_AD_%28World%29.j (page: https://commons.wikimedia.org/wiki/File:Chinese_Abroad,_ca._1930_AD_(World).jpg | File:Chinese Abroa - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.577869+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Chinese_Abroad%2C_ca._1930_AD_%28Souteast_A (page: https://commons.wikimedia.org/wiki/File:Chinese_Abroad,_ca._1930_AD_(Souteast_Asia).jpg | File:Chine - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.576726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Carte_d%27une_partie_de_la_Sib%C3%A9rie_occ (page: https://commons.wikimedia.org/wiki/File:Carte_d%27une_partie_de_la_Sib%C3%A9rie_occidentale_avec_un_ - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.575604+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://upload.wikimedia.org/wikipedia/commons/d/df/Hubble_captures_Comet_ISON.jpg (page: https://commons.wikimedia.org/w/index.php?curid=25831559 | Hubble captures Comet ISON - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:19.572900+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'More than 700 000 Russian'",
+    "created_at": "2026-11-25T16:12:19.567116+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'More than 700 000 Russian'",
+    "created_at": "2026-11-25T16:12:19.115943+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'More than 700 000 Russian'",
+    "created_at": "2026-11-25T16:12:18.985718+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 1 result(s) for 'More than 700 000 Russian'",
+    "created_at": "2026-11-25T16:12:18.849597+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:18.801402+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:18.800226+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://www.usmagazine.com/wp-content/uploads/2025/01/liam-hemsworth-gabriella-brooks-relationship-t (page: https://www.thehollywoodgossip.com/2025/09/liam-hemsworth-gabriella-brooks-engaged/ | Liam Hemsworth - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:18.799017+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://people.com/thmb/fmqh7q96nd_M3-7CPQbs142gryM=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://www.usmagazine.com/celebrity-news/pictures/liam-hemsworth-gabriella-brooks-relationship-time - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:18.797913+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://people.com/thmb/ZIbESc6MRGo-CxuZZU0F9uCoM0Q=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/movies/liam-hemsworth-gabriella-brooks-relationship-timeline/ | Who Is Liam Hemsw - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:18.796435+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://pagesix.com/wp-content/uploads/sites/3/2022/11/Gabriella-Brooks-liam-hemsworth-red-carpet-de (page: https://people.com/all-about-liam-hemsworth-gabriella-brooks-11808762 | Liam Hemsworth, Gabriella Br - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T16:12:18.795128+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.794214+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.680615+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.530377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.490535+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:17.439980+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:17.438976+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'More than 700,000 Russian soldiers have been kille'): https://www.fixdapp.com/wp-content/uploads/2024/06/Mass-airflow-sensor.jpeg (page:  - no source page to verify relevance)",
+    "created_at": "2026-11-25T16:12:17.437525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.435184+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.321084+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.187529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'More than 700,000 Russian soldiers have been killed in the U'",
+    "created_at": "2026-11-25T16:12:17.073211+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:17.009288+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T16:12:17.008349+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - rejected (no og:image)",
+    "created_at": "2026-11-25T16:12:17.007272+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxONGNmcUJzRjV4UVpZYkV4dzdCR25rZ3pLODVLbEJ1eVh2aVM3QU5YTkM4TFptTmNLQzI) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T16:12:17.004977+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-25T16:12:16.717222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-25T16:12:16.618114+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T15:47:53.970671+00:00",
+    "created_at": "2026-11-25T16:12:16.616251+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-    "created_at": "2026-11-25T15:47:53.970088+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T15:47:53.969396+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T15:47:53.968824+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T15:47:53.968224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T15:47:53.967637+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for '\"TrumpCare\": Political Convergence Weighs on US Insurers - marketscreener.com' (5 download(s) tried)",
-    "created_at": "2026-11-25T15:47:53.967049+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://img.freepik.com/free-vector/simple-vibing-cat-square-meme_742173-4493.jpg?semt=ais_hybrid&w= (page: https://www.boredpanda.com/funny-cat-pics-and-memes/ | Funny cat memes Images - Free Download on Fre - page does not name the entity (TrumpCare))",
-    "created_at": "2026-11-25T15:47:53.966439+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://bestlifeonline.com/wp-content/uploads/sites/3/2018/06/cat-meme-54-0.jpg?resize=150 (page: https://www.freepik.com/free-photos-vectors/funny-cat-memes | 100 Funniest Cat Memes Ever (Especiall - page does not name the entity (TrumpCare))",
-    "created_at": "2026-11-25T15:47:53.965815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://s.yimg.com/lo/mysterio/api/f65cdb8280e66bcf546c74879fb560daeb4b18bcb564c7bd3572d717c6f02656/ (page: https://bestlifeonline.com/funniest-cat-memes-ever/ | The Real Cats Behind 10 Of The Most Iconic Cat - page does not name the entity (TrumpCare))",
-    "created_at": "2026-11-25T15:47:53.965174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-FT.jpg (page: https://sg.news.yahoo.com/real-cats-behind-10-most-103000140.html | Cat Memes That Are so Hilarious  - page does not name the entity (TrumpCare))",
-    "created_at": "2026-11-25T15:47:53.964456+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3762/33598460205_372311c741_b.jpg",
-    "created_at": "2026-11-25T15:47:53.963250+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4309/35998610832_38dbb65f78_b.jpg",
-    "created_at": "2026-11-25T15:47:53.856896+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4304/35298974444_a7c5309288_b.jpg",
-    "created_at": "2026-11-25T15:47:53.752297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1636/24857770173_fe37c8380f.jpg",
-    "created_at": "2026-11-25T15:47:53.652654+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4324/35998613382_f0870631b8_b.jpg",
-    "created_at": "2026-11-25T15:47:53.557998+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'TrumpCare'",
-    "created_at": "2026-11-25T15:47:53.456178+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'TrumpCare'",
-    "created_at": "2026-11-25T15:47:53.340357+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'TrumpCare'",
-    "created_at": "2026-11-25T15:47:53.183137+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'TrumpCare'",
-    "created_at": "2026-11-25T15:47:53.069230+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:52.610889+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:52.610305+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for '\"TrumpCare\": Political Convergence Weighs on US In' - trying entity search 'TrumpCare'",
-    "created_at": "2026-11-25T15:47:52.609710+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://assets.mycast.io/characters/lord-business-1226351-normal.jpg?1606425164 (page: https://au.pinterest.com/pin/214202526002352658/ | Find an Actor to Play Lord Business in The Lego M - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:52.609082+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.pinimg.com/originals/f0/af/9f/f0af9f6e66fe09bf98ceeb963721a07a.jpg (page: http://fr.lego.wikia.com/wiki/Fichier:The_LEGO_Movie_BA-Lord_Business.jpg | Pin on party | Lego movi - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:52.608418+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.ebayimg.com/images/g/~3oAAOSwhXZgf43Y/s-l1600.jpg (page: https://www.pinterest.com/pin/774689573394776220/ | The LEGO Movie; Lord Business / President Busine - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:52.607777+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): http://www.heyuguys.com/images/2013/11/The-Lego-Movie-Character-Poster-Lord-Business.jpg (page: https://www.charactour.com/hub/characters/view/Lord-Business.The-Lego-Movie | The Lego Movie Charact - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:52.607042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'TrumpCare Political Convergence Weighs US'",
-    "created_at": "2026-11-25T15:47:52.605401+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'TrumpCare Political Convergence Weighs US'",
-    "created_at": "2026-11-25T15:47:52.482969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'TrumpCare Political Convergence Weighs US'",
-    "created_at": "2026-11-25T15:47:52.355061+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'TrumpCare Political Convergence Weighs US'",
-    "created_at": "2026-11-25T15:47:52.237325+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:52.068299+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:52.067704+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.pinimg.com/originals/77/6e/80/776e8078bc5417fce90c86d0b548236e.jpg (page: Long neck and legs, small head and short tail make the serval's profile utterly distinctive ... - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:52.067026+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers'",
-    "created_at": "2026-11-25T15:47:52.065634+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers'",
-    "created_at": "2026-11-25T15:47:51.957627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers'",
-    "created_at": "2026-11-25T15:47:51.808883+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers'",
-    "created_at": "2026-11-25T15:47:51.474109+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:50.811146+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:50.810504+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.ytimg.com/vi/AwZwOSL-gDk/maxresdefault.jpg (page: THIS MOD IS AMAZING! HTTYD BOOK OF DRAGONS MOD #minecraft #fyp #howtotrainyourdragon # ... - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:50.809736+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers - m'",
-    "created_at": "2026-11-25T15:47:50.808235+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers - m'",
-    "created_at": "2026-11-25T15:47:50.618730+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers - m'",
-    "created_at": "2026-11-25T15:47:50.472256+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '\"TrumpCare\": Political Convergence Weighs on US Insurers - m'",
-    "created_at": "2026-11-25T15:47:50.045898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:49.344079+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:49.343429+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - rejected (no og:image)",
-    "created_at": "2026-11-25T15:47:49.342766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi1wFBVV95cUxOY1hBbEdFaXdwYlNnY2s5TG5lTllGeFlPNTFicUhXZGFqQlpoeEVsNzlZYmI3blFORWF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T15:47:49.341524+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
-    "created_at": "2026-11-25T15:47:49.202894+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T15:47:49.202117+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Five reasons why Republicans lost so badly - BBC' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T15:47:49.201514+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five reasons why Republicans lost so badly - BBC' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T15:47:49.200868+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Five reasons why Republicans lost so badly - BBC' (8 download(s) tried)",
-    "created_at": "2026-11-25T15:47:49.200108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i.ebayimg.com/images/g/EXwAAOSwAntlyoyq/s-l1600.jpg (page: https://shopee.ph/Pokemon-TCG-Level-Ball-129-163-2021-Sword-Shield-Battle-Styles-Competitive-Trainer - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:49.199427+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://pokejampacks.com/cdn/shop/files/ph-11134201-7r98o-lvzlrxc2eedt0a.jpg?v=1740750298&width=1946 (page: https://collectorworth.com/cards/level-ball-pokemon-battle-styles/ | Level Ball - 129/163 - Uncommon - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:49.198738+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://static0.thegamerimages.com/wordpress/wp-content/uploads/2020/08/Pokemon-TCG-Level-Ball-Art.j (page: https://pokejampacks.com/products/level-ball-129-163-uncommon-sword-shield-battle-styles-pokemon-tcg - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:49.197885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://pokemonkaartenverkopen.nl/wp-content/themes/versatile-child/modules/pokemon-tcg/assets/cards (page: https://www.sportscardinvestor.com/cards/level-ball-pokemon/2021-sword-shield-battle-styles-holo-sec - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:49.197181+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Street_number_5.jpg/1280px-Street_number_5. (page: https://commons.wikimedia.org/wiki/File:Street_number_5.jpg | File:Street number 5.jpg - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:49.196463+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/OL_ONAL_DIGIT_FIVE.jpg/1280px-OL_ONAL_DIGIT - source page title names only 1 of 7 key entities - not a news article about the story",
-    "created_at": "2026-11-25T15:47:49.195679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T15:47:49.194792+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Hausnummer_5_in_Frankreich.jpg/1280px-Hausn (page: https://commons.wikimedia.org/wiki/File:Hausnummer_5_in_Frankreich.jpg | File:Hausnummer 5 in Frankr - page does not name the entity (Five))",
-    "created_at": "2026-11-25T15:47:48.989632+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Five_children_on_a_motorcycle.jpg/1280px-Fi",
-    "created_at": "2026-11-25T15:47:48.988949+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Five reasons why Republicans lost so badly - BBC' (The photo shows children riding a motorcycle in a rural area, which is completely unrelated to American politics.)",
-    "created_at": "2026-11-25T15:47:48.986610+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://upload.wikimedia.org/wikipedia/commons/1/14/Five_%281951_film%29_trailer_1.jpg?utm_source=co",
-    "created_at": "2026-11-25T15:47:42.799475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Five reasons why Republicans lost so badly - BBC' (The photo is a still from a classic black-and-white film (specifically, *The Thing from Another World*), unrelated to current political news about Rep)",
-    "created_at": "2026-11-25T15:47:42.798405+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7422/10751725234_ef1a50fd02_b.jpg",
-    "created_at": "2026-11-25T15:47:39.790635+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7138/7668859772_6d89c1b10a_b.jpg",
-    "created_at": "2026-11-25T15:47:39.696016+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7350/13023077404_81c3b206f1_b.jpg",
-    "created_at": "2026-11-25T15:47:39.595115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1481/24300258539_06bfec3842_b.jpg",
-    "created_at": "2026-11-25T15:47:39.500254+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8105/8560235748_9d83412309_b.jpg",
-    "created_at": "2026-11-25T15:47:39.385951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five'",
-    "created_at": "2026-11-25T15:47:39.284944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five'",
-    "created_at": "2026-11-25T15:47:38.981957+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Five'",
-    "created_at": "2026-11-25T15:47:38.842293+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Five'",
-    "created_at": "2026-11-25T15:47:38.157149+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:37.640933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:37.640353+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Five reasons why Republicans lost so badly - BBC' - trying entity search 'Five'",
-    "created_at": "2026-11-25T15:47:37.639631+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i5.walmartimages.com/seo/Folgers-Coffee-Singles-Classic-Roast-Medium-Roast-Coffee-19-Single- (page: https://www.walmart.com/ip/Folgers-Classic-Roast-Instant-Coffee-8-oz-Package-May-Vary/16009204360 |  - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.639044+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i5.walmartimages.com/seo/Folgers-Classic-Roast-Instant-Coffee-12-oz-Jar_22858b92-31af-4f5b-b (page: https://www.walmart.com/ip/Folgers-Coffee-Singles-Classic-Roast-Medium-Roast-Coffee-19-Single-Serve- - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.638368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i5.walmartimages.com/seo/Folgers-Colombian-Ground-Coffee-Medium-Roast-19-2-oz-Total-with-2x- (page: https://www.walmart.com/ip/Folgers-Classic-Roast-Instant-Coffee-12-oz-Jar/10318502 | Folgers Colombi - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.637759+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i5.walmartimages.com/seo/Folgers-Prebiotic-Instant-Coffee-3g-Fiber-4-oz_2e030f03-d030-4af1-a (page: https://www.walmart.com/ip/Folgers-Colombian-Ground-Coffee-Medium-Roast-19-2-oz-Total-with-2x-Dispos - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.637174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/The_magazine_of_American_history_with_notes (page: https://commons.wikimedia.org/wiki/File:The_magazine_of_American_history_with_notes_and_queries_(187 - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.636525+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/The_American_educator%3B_completely_remodel (page: https://commons.wikimedia.org/wiki/File:The_American_educator;_completely_remodelled_and_rewritten_f - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.635879+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Sport_and_adventures_among_the_North-Americ (page: https://commons.wikimedia.org/wiki/File:Sport_and_adventures_among_the_North-American_Indians_(1890) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.635221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Republican_Rome%3B_her_conquests%2C_manners (page: https://commons.wikimedia.org/wiki/File:Republican_Rome;_her_conquests,_manners_and_institutions_fro - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.634551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Blue_book_of_Schuylkill_County_-_who_was_wh (page: https://commons.wikimedia.org/wiki/File:Blue_book_of_Schuylkill_County_-_who_was_who_and_why,_in_int - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:37.633812+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five reasons Republicans lost so'",
-    "created_at": "2026-11-25T15:47:37.632385+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five reasons Republicans lost so'",
-    "created_at": "2026-11-25T15:47:37.520428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Five reasons Republicans lost so'",
-    "created_at": "2026-11-25T15:47:37.371057+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five reasons Republicans lost so'",
-    "created_at": "2026-11-25T15:47:36.848639+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:35.889346+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:35.888574+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i.bang.com/screenshots/17520/movie/1/1008045.jpg (page: https://www.pinterest.com/pin/705165254131762325/ | Nicole is an ass eating lesbian like Fernanda Mi - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:35.887970+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/070fc15c-5904-4ba3-b9c5-6e111b525bba/dkyp4 (page: https://www.bang.com/video/VrQEwbrRn2ZIi0Vs/nicole-is-an-ass-eating-lesbian-like-fernanda-minsk | Bl - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:35.887335+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i.pinimg.com/originals/2d/82/1c/2d821c0f6d51479a25914fc7fe029541.jpg (page: https://www.deviantart.com/brownbase1973/art/Black-muscular-ghetto-lesbians-1267602847 | Pinterest - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:35.886731+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://i.pinimg.com/originals/86/36/33/8636337280c31cfcd92e154662efd21f.jpg (page: https://www.pinterest.com/pin/292241463313964419/ | black LGBT | That way - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:35.885956+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five reasons why Republicans lost so badly'",
-    "created_at": "2026-11-25T15:47:35.884667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five reasons why Republicans lost so badly'",
-    "created_at": "2026-11-25T15:47:35.761400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five reasons why Republicans lost so badly'",
-    "created_at": "2026-11-25T15:47:35.592915+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five reasons why Republicans lost so badly'",
-    "created_at": "2026-11-25T15:47:35.131663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:34.602676+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:34.602106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://media.fstatic.com/JPERUaPE6pz07keaiqG_13wKEuw=/322x478/smart/filters:format(webp)/media/movi (page: https://www.goldposter.com/12679749/full/ | The Odyssey - 19 de Novembro de 1987 | Filmow - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:34.601507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://render.fineartamerica.com/images/rendered/small/greeting-card/images/artworkimages/medium/3/ (page: https://filmow.com/the-odyssey-t283541/ | The Odyssey 2026 - Minimal Movie Poster - Retro Film Poste - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:34.600878+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://media.themoviedb.org/t/p/w300_and_h450_bestv2/dMMIitHErAxAaNeqq9Cz6g4U5Fo.jpg (page: https://fineartamerica.com/featured/18-the-odyssey-2026-minimal-movie-poster-retro-film-poster-vinta - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:34.600232+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five reasons why Republicans lost so badly - BBC'): https://cdn.cinematerial.com/p/297x/ccvoqor3/the-odyssey-movie-poster-md.jpg?v=1777959532 (page: https://www.themoviedb.org/movie/1368337-the-odyssey | The Odyssey (2026) movie posters - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:34.599484+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five reasons why Republicans lost so badly - BBC'",
-    "created_at": "2026-11-25T15:47:34.598151+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five reasons why Republicans lost so badly - BBC'",
-    "created_at": "2026-11-25T15:47:34.452422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five reasons why Republicans lost so badly - BBC'",
-    "created_at": "2026-11-25T15:47:34.281854+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five reasons why Republicans lost so badly - BBC'",
-    "created_at": "2026-11-25T15:47:33.809822+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:32.970627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:32.970039+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five reasons why Republicans lost so badly - BBC' - rejected (no og:image)",
-    "created_at": "2026-11-25T15:47:32.969281+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXRnNGeWZtaC01OVlBSVNVLU5NdXI4LUpReHF4ZC1jTDdReElFWi1GZTZOV0tmOGE1STJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T15:47:32.968127+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
-    "created_at": "2026-11-25T15:47:32.679066+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: ''Hopefully things get done': Americans react to historic pol' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T15:47:32.678204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T15:47:32.677582+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for ''Hopefully things get done': Americans react to historic political shift - BBC' (5 download(s) tried)",
-    "created_at": "2026-11-25T15:47:32.676985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://media.gettyimages.com/id/915469032/vector/france-button-with-french-flag-isolated-on-white.j (page: https://pngtree.com/so/blm-france-flag/6 | France Button With French Flag Isolated On White High-Res - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.676342+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://media.istockphoto.com/id/911404502/vector/france-button-with-french-flag-isolated-on-white.j (page: https://www.gettyimages.com/detail/illustration/france-button-with-french-flag-isolated-on-royalty-f - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.675683+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://static.vecteezy.com/system/resources/thumbnails/045/354/169/small_2x/france-flag-logo-png.pn (page: https://www.istockphoto.com/illustrations/drawing-of-the-france-flag | Flag Of France PNGs for Free  - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.675046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://static.vecteezy.com/system/resources/thumbnails/017/225/451/small_2x/france-flag-check-in-ic (page: https://www.vecteezy.com/free-png/flag-of-france | France Flag PNGs for Free Download - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.674388+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://upload.wikimedia.org/wikipedia/commons/d/d6/Mimus_polyglottos_-_United_States_National_Arbor (page: https://commons.wikimedia.org/wiki/File:Mimus_polyglottos_-_United_States_National_Arboretum_-_(2).j - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.673743+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Koi_pond_at_United_States_National_Arboretu (page: https://commons.wikimedia.org/wiki/File:Koi_pond_at_United_States_National_Arboretum_B_-_Stierch.jpg - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.673032+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Koi_pond_at_United_States_National_Arboretu (page: https://commons.wikimedia.org/wiki/File:Koi_pond_at_United_States_National_Arboretum_A_-_Stierch.jpg - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.672154+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Bulletin_-_United_States_National_Museum_%2 (page: https://commons.wikimedia.org/wiki/File:Bulletin_-_United_States_National_Museum_(1890)_(14792105093 - page does not name the entity (Americans))",
-    "created_at": "2026-11-25T15:47:32.671453+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://live.staticflickr.com/5344/9109117816_b816fb96dd_b.jpg",
-    "created_at": "2026-11-25T15:47:32.670762+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for ''Hopefully things get done': Americans react to hi' (, the photo depicts a tropical beach landscape, which is unrelated to the political news headline about Americans reacting to a political shift.)",
-    "created_at": "2026-11-25T15:47:32.669946+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1185/773418672_83abff8bc3_b.jpg",
-    "created_at": "2026-11-25T15:47:29.246744+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3048/2639363949_57f5d28638_b.jpg",
-    "created_at": "2026-11-25T15:47:29.151391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2935/14687804116_c553cd4dc4_b.jpg",
-    "created_at": "2026-11-25T15:47:29.051250+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5511/12125487143_711386f0f7_b.jpg",
-    "created_at": "2026-11-25T15:47:28.948204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Americans'",
-    "created_at": "2026-11-25T15:47:28.839766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Americans'",
-    "created_at": "2026-11-25T15:47:28.682907+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (width 227px < 400): https://upload.wikimedia.org/wikipedia/commons/c/cb/United_States_national_ice_hockey_team_jerseys_1",
-    "created_at": "2026-11-25T15:47:28.536532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Americans'",
-    "created_at": "2026-11-25T15:47:28.535591+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Americans'",
-    "created_at": "2026-11-25T15:47:26.586724+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:24.716803+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:24.716244+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for ''Hopefully things get done': Americans react to hi' - trying entity search 'Americans'",
-    "created_at": "2026-11-25T15:47:24.715679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://www.boredpanda.com/blog/wp-content/uploads/2022/09/105-6329b5d45e4d7__700.jpg (page: https://cheezburger.com/40071685/funniest-cat-memes-for-feline-fanatics-april-9-2025 | ‘Cats On Catn - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.715066+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://www.boredpanda.com/blog/wp-content/uploads/2023/07/funny-cat-pics-and-memes-18-64a814a742582 (page: https://www.boredpanda.com/cat-memes-catslovecatnip/ | 50 Funny And Relatable Cat Pics And Memes To  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.714413+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://cattime.com/wp-content/uploads/sites/14/gallery/25-funny-cat-memes/funny-cat-meme.jpg (page: https://www.boredpanda.com/funny-cat-pics-and-memes/ | 25 Funny Cat Memes That Will Make You LOL - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.713810+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://s.yimg.com/lo/mysterio/api/f65cdb8280e66bcf546c74879fb560daeb4b18bcb564c7bd3572d717c6f02656/ (page: https://cattime.com/lifestyle/1650-25-funny-cat-memes | The Real Cats Behind 10 Of The Most Iconic C - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.713056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.712465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.711872+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.711251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.710628+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Letter_signed_Sara%2C_Cromwell%2C_Conn.%2C_ (page: https://commons.wikimedia.org/wiki/File:Letter_signed_Sara,_Cromwell,_Conn.,_to_Ernst_(Filsinger),_S - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:24.709902+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Hopefully things get done Americans'",
-    "created_at": "2026-11-25T15:47:24.708618+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Hopefully things get done Americans'",
-    "created_at": "2026-11-25T15:47:24.485186+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Hopefully things get done Americans'",
-    "created_at": "2026-11-25T15:47:24.325731+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Hopefully things get done Americans'",
-    "created_at": "2026-11-25T15:47:23.793864+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:23.359503+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:23.358964+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://i.pinimg.com/originals/d6/36/81/d636812307b3efc2a7f9860bb282601c.jpg (page: https://tools.couchsurfing.com/beef-cuts-chart/printable-beef-cut-sheet-printable-word-searches | Kn - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:23.358391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://tasty.recipes/wp-content/uploads/2016/04/Cuts-of-Beef-Infographic-3.jpg (page: https://balivwtour.de/know-your-beef-cuts-and-where-they-come-from/ | Cuts of Beef [Infographic] | T - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:23.357790+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://www.wikihow.com/images/7/7d/Beef-Cuts-Chart-Step-1-Version-3.jpg (page: https://tasty.recipes/cuts-of-beef/ | Beef Cuts Chart: A Visual Guide - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:23.357153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://cdn.apartmenttherapy.info/image/upload/v1695846753/k/Design/2023-09/type-of-beef-cuts/Types- (page: https://www.wikihow.com/Beef-Cuts-Chart | This Not-So-Secret Ingredient Makes My Salad Dressing Lege - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:23.356024+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:23.354753+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:23.219509+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:23.038077+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:22.599887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:22.027301+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:22.026778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://m.media-amazon.com/images/I/41nqV2fJUHL._SS400_.jpg (page: https://www.ebay.com/itm/237190010107 | Milky Way Midnight Dark Chocolate Bar, 1.76 Ounce - Italy |  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:22.026235+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://e5d66f94ca693bb48497-2c865ea5a878283cc11d0e78be88b04c.ssl.cf2.rackcdn.com/0040000525340_WB_h (page: https://www.ubuy.co.it/en/product/14NA1AL2G-milky-way-midnight-dark-chocolate-bar-1-76-ounce-288-per - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:22.025634+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://47b028de2fe70547cb1d-aab714dad6fe443a8b8eda92868f8175.ssl.cf2.rackcdn.com/7b52e735-73a5-4599 (page: https://www.hy-vee.com/aisles-online/p/2601954/milky-way-minis-midnight-dark-chocolate-candy-bars |  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:22.024977+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://cdn11.bigcommerce.com/s-xun5w23utl/images/stencil/1280x1280/products/6081/10381/milky-way-mi (page: https://www.hy-vee.com/aisles-online/p/2601954/milky-way-minis-midnight-dark-chocolate-candy-bars |  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T15:47:22.024178+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:22.022760+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:21.896142+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:21.719058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
-    "created_at": "2026-11-25T15:47:21.386133+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T15:47:20.790914+00:00",
+    "created_at": "2026-11-25T16:12:16.615114+00:00",
     "card": ""
   }
 ]
