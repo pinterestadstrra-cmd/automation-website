@@ -287,6 +287,13 @@
       <button class="tab-btn" data-tab="blogger">Blogger</button>
       <button class="tab-btn" data-tab="bluesky">Bluesky</button>
       <button class="tab-btn" data-tab="reddit">Reddit</button>
+      <button class="tab-btn" data-tab="tumblr">Tumblr</button>
+      <button class="tab-btn" data-tab="threads">Threads</button>
+      <button class="tab-btn" data-tab="mastodon">Mastodon</button>
+      <button class="tab-btn" data-tab="telegram">Telegram</button>
+      <button class="tab-btn" data-tab="nostr">Nostr</button>
+      <button class="tab-btn" data-tab="lemmy">Lemmy</button>
+      <button class="tab-btn" data-tab="devto">dev.to</button>
       <button class="tab-btn" data-tab="logs">Logs</button>
       <button class="tab-btn" data-tab="settings">Settings</button>
     </nav>
@@ -643,6 +650,811 @@
       </div>
     </div>
 
+    <!-- ============ PAGE: TUMBLR ============ -->
+    <div id="page-tumblr" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Register a Tumblr app</b> at tumblr.com/oauth/apps (free, no review) - you get an OAuth consumer key + secret. Set the app's <b>OAuth2 redirect URL</b> to your blog address below.<br>
+          2) <b>Authorize it</b> in the box below - Tumblr gives you an access token (42 minutes) + a refresh token (42 days). Paste both into the account form.<br>
+          3) <b>Make a card:</b> post a photo + hook + link to your Tumblr blog. Each card posts fresh Political / War news with a verified real photo - the same story never goes to Bluesky, Reddit, Tumblr and Lemmy on the same day.<br>
+          4) <b>Tumblr has no reply API</b> - cards post only, they never reply to comments. <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the photo, but publishes nothing.
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Tumblr workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Tumblr posts</div>
+            <div class="desc">Post a photo + hook + link to a Tumblr blog (one unique post per blog).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="tumblr_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Tumblr accounts (unlimited - add as many as you want)</h2>
+        <div id="tumblrAccountList"></div>
+        <form id="tumblrAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfBlog">Tumblr blog name</label>
+              <input id="tfBlog" required placeholder="e.g. primotodaynews"></div>
+            <div><label for="tfClientId">Client ID (OAuth consumer key)</label>
+              <input id="tfClientId" required placeholder="from your Tumblr app"></div>
+            <div><label for="tfClientSecret">Client secret</label>
+              <input id="tfClientSecret" type="password" required placeholder="from your Tumblr app" autocomplete="off"></div>
+            <div><label for="tfAccessToken">Access token</label>
+              <input id="tfAccessToken" type="password" required placeholder="from the Authorize box below" autocomplete="off"></div>
+            <div><label for="tfRefreshToken">Refresh token</label>
+              <input id="tfRefreshToken" type="password" required placeholder="from the Authorize box below" autocomplete="off"></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div id="tumblrSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="tumblrSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryTumblrSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyTumblrSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>TUMBLR_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>TUMBLR_ACCOUNTS</code> secret (encrypted - only you can
+          see it). Tokens are never saved in the repo or on this page.
+          Note: Tumblr rotates the refresh token on every refresh - if a
+          run fails with "invalid_grant", re-authorize below and save the
+          new tokens.
+        </div>
+        <h2 style="margin-top:16px">Authorize - get your tokens (2 minutes)</h2>
+        <div class="note">
+          1) In your Tumblr app (tumblr.com/oauth/apps) set the <b>OAuth2 redirect URL</b> to the address below, then tap "Open Tumblr authorize page" and approve the app.<br>
+          2) Tumblr sends you back to that address with <code>?code=...</code> in the address bar - copy that code and paste it here, then tap "Exchange code for tokens". The tokens fill into the account form above - press "Add / update account" to save them.
+        </div>
+        <div class="form-grid" style="margin-top:10px">
+          <div><label for="tfAuthClientId">Client ID (same as above)</label>
+            <input id="tfAuthClientId" placeholder="from your Tumblr app"></div>
+          <div><label for="tfRedirectUri">OAuth2 redirect URL (set this in your Tumblr app too)</label>
+            <input id="tfRedirectUri" value="https://primotodaynews.blogspot.com/"></div>
+          <div><label for="tfAuthCode">Authorization code (?code=... from Tumblr)</label>
+            <input id="tfAuthCode" placeholder="paste the code here" autocomplete="off"></div>
+        </div>
+        <div class="row-btns">
+          <button type="button" class="btn-blue" id="openTumblrAuthBtn">Open Tumblr authorize page</button>
+          <button type="button" class="btn-teal" id="exchangeTumblrCodeBtn">Exchange code for tokens</button>
+        </div>
+        <div id="tumblrAuthMsg" class="status-msg hidden" style="margin-top:10px"></div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="tumblrAccountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveTumblrAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <!-- Tumblr cards: tumblr_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Tumblr cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a photo + hook + link to a Tumblr blog on its own
+          schedule. Every card has its own account (blog), link and posting
+          times. Make many cards - one per blog or link. Tumblr cards never
+          reply (Tumblr has no reply API).
+        </div>
+        <div class="toolbar">
+          <input type="text" id="tumblrCardSearch" placeholder="Search cards…">
+          <select id="tumblrCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="tumblrCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="tumblrBulkBar">
+          <b id="tumblrBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="tumblrBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="tumblrBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="tumblrBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="tumblrBulkClear">Clear</button>
+        </div>
+        <div id="tumblrCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addTumblrCardBtn">+ Add Tumblr card</button>
+          <button class="btn-ghost" id="exportTumblrCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importTumblrCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="tumblrCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Tumblr live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="tumblrLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: THREADS ============ -->
+    <div id="page-threads" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Create a Meta app</b> with the Threads use case (free) - you get a <b>Threads app ID + Threads app secret</b> (App Dashboard &gt; App settings &gt; Basic). Add <b>yourself as a Threads tester</b> (App Dashboard &gt; App roles &gt; Roles &gt; Add People &gt; Threads Tester) and accept the invite in Threads settings - no App Review needed for your own account.<br>
+          2) <b>Authorize it</b> in the box below - Threads gives you a short-lived token (1 hour), exchanged here for a <b>long-lived token (60 days)</b>. The worker refreshes it when it is at least 24 hours old, or if a post gets a 401.<br>
+          3) <b>Make a card:</b> post a photo + hook + link to Threads. Each card posts fresh Political / War news - the same story never goes to Bluesky, Reddit, Tumblr, Threads and Lemmy on the same day. The photo posts with its <b>original public URL</b> (Threads downloads it); if a story has no public photo URL, the post goes out <b>text-only</b> instead of skipping.<br>
+          4) <b>Threads v1 is post-only</b> - cards never reply to comments (reply endpoints need two extra permissions and were not built). <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the photo, but publishes nothing. Posts are capped at <b>500 characters</b> (hook + link).
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Threads workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Threads posts</div>
+            <div class="desc">Post a photo + hook + link to Threads (one unique post per account).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="threads_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Threads accounts (unlimited - add as many as you want)</h2>
+        <div id="threadsAccountList"></div>
+        <form id="threadsAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfThreadsUserId">Threads user ID</label>
+              <input id="tfThreadsUserId" required placeholder="numeric ID - filled by the Authorize box below"></div>
+            <div><label for="tfThreadsUsername">Threads username (optional, for display)</label>
+              <input id="tfThreadsUsername" placeholder="e.g. primotodaynews"></div>
+            <div><label for="tfThreadsAppId">Threads app ID</label>
+              <input id="tfThreadsAppId" required placeholder="from your Meta app (Threads app ID)"></div>
+            <div><label for="tfThreadsAppSecret">Threads app secret</label>
+              <input id="tfThreadsAppSecret" type="password" required placeholder="from your Meta app" autocomplete="off"></div>
+            <div><label for="tfThreadsAccessToken">Access token (long-lived, 60 days)</label>
+              <input id="tfThreadsAccessToken" type="password" required placeholder="from the Authorize box below" autocomplete="off"></div>
+            <input id="tfThreadsTokenObtainedAt" type="hidden">
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div id="threadsSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="threadsSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryThreadsSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyThreadsSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>THREADS_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>THREADS_ACCOUNTS</code> secret (encrypted - only you can
+          see it). Tokens are never saved in the repo or on this page.
+          Note: the long-lived token lasts 60 days - the worker refreshes
+          it when it is at least 24 hours old. If a run fails with a
+          401, re-authorize below and save the new token.
+        </div>
+        <h2 style="margin-top:16px">Authorize - get your tokens (2 minutes)</h2>
+        <div class="note">
+          1) In your Meta app (developers.facebook.com) add the <b>Threads use case</b>, set the <b>OAuth redirect URL</b> to the address below, add yourself as a <b>Threads tester</b> and accept the invite in Threads settings, then tap "Open Threads authorize page" and approve the app (permissions: threads_basic + threads_content_publish).<br>
+          2) Threads sends you back to that address with <code>?code=...</code> in the address bar - copy that code and paste it here, then tap "Exchange code for tokens". The short-lived token is exchanged for a 60-day token, your user ID is looked up, and everything fills into the account form above - press "Add / update account" to save them.
+        </div>
+        <div class="form-grid" style="margin-top:10px">
+          <div><label for="tfThreadsAuthAppId">Threads app ID (same as above)</label>
+            <input id="tfThreadsAuthAppId" placeholder="from your Meta app"></div>
+          <div><label for="tfThreadsRedirectUri">OAuth redirect URL (set this in your Meta app too)</label>
+            <input id="tfThreadsRedirectUri" value="https://primotodaynews.blogspot.com/"></div>
+          <div><label for="tfThreadsAuthCode">Authorization code (?code=... from Threads)</label>
+            <input id="tfThreadsAuthCode" placeholder="paste the code here" autocomplete="off"></div>
+        </div>
+        <div class="row-btns">
+          <button type="button" class="btn-blue" id="openThreadsAuthBtn">Open Threads authorize page</button>
+          <button type="button" class="btn-teal" id="exchangeThreadsCodeBtn">Exchange code for tokens</button>
+        </div>
+        <div id="threadsAuthMsg" class="status-msg hidden" style="margin-top:10px"></div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="threadsAccountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveThreadsAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <!-- Threads cards: threads_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Threads cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a photo + hook + link to Threads on its own
+          schedule. Every card has its own account (Threads user ID), link and posting
+          times. Make many cards - one per account or link. Threads cards never
+          reply (v1 is post-only).
+        </div>
+        <div class="toolbar">
+          <input type="text" id="threadsCardSearch" placeholder="Search cards…">
+          <select id="threadsCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="threadsCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="threadsBulkBar">
+          <b id="threadsBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="threadsBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="threadsBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="threadsBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="threadsBulkClear">Clear</button>
+        </div>
+        <div id="threadsCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addThreadsCardBtn">+ Add Threads card</button>
+          <button class="btn-ghost" id="exportThreadsCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importThreadsCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="threadsCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Threads live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="threadsLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: MASTODON ============ -->
+    <div id="page-mastodon" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Create a free Mastodon account</b> on any instance, e.g. mastodon.social (free, no review, no approval queue).<br>
+          2) <b>Get your access token:</b> log in on your instance, go to <b>Preferences &rarr; Development &rarr; New application</b>, give it a name, tick the scopes <b>write:statuses</b> + <b>write:media</b>, save it, and copy the <b>access token</b> it shows. The token never expires - paste it into the account form below (the instance + token).<br>
+          3) <b>Make a card:</b> post a photo + hook + link to Mastodon. Each card posts fresh Political / War news with a verified real photo - the same story never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon and Lemmy on the same day. The photo is <b>uploaded to your instance</b>; if a story has no verified photo, the post goes out <b>text-only</b> instead of skipping.<br>
+          4) <b>Mastodon v1 is post-only</b> - cards never reply to comments (reply support was not built). <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the photo, but publishes nothing. Posts are capped at <b>500 characters</b> (hook + link).
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Mastodon workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Mastodon posts</div>
+            <div class="desc">Post a photo + hook + link to Mastodon (one unique post per account).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="mastodon_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Mastodon accounts (unlimited - add as many as you want)</h2>
+        <div id="mastodonAccountList"></div>
+        <form id="mastodonAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfMastodonInstance">Instance (host only)</label>
+              <input id="tfMastodonInstance" required placeholder="e.g. mastodon.social"></div>
+            <div><label for="tfMastodonUsername">Username (optional, for display)</label>
+              <input id="tfMastodonUsername" placeholder="e.g. primotodaynews"></div>
+            <div><label for="tfMastodonAccessToken">Access token</label>
+              <input id="tfMastodonAccessToken" type="password" required placeholder="from Preferences &rarr; Development &rarr; New application" autocomplete="off"></div>
+          </div>
+          <div class="note" style="margin-top:8px">Where to get the token: log in on your instance &rarr; <b>Preferences &rarr; Development &rarr; New application</b> &rarr; name it, tick <b>write:statuses</b> + <b>write:media</b> &rarr; save &rarr; copy the <b>access token</b>. No app registration or approval is needed for your own account.</div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div id="mastodonSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="mastodonSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryMastodonSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyMastodonSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>MASTODON_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>MASTODON_ACCOUNTS</code> secret (encrypted - only you can
+          see it). Tokens are never saved in the repo or on this page.
+          The token never expires; if a run fails with a 401, the token
+          was revoked or is wrong - make a new one on your instance and
+          save it here again.
+        </div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="mastodonAccountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveMastodonAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <!-- Mastodon cards: mastodon_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Mastodon cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a photo + hook + link to Mastodon on its own
+          schedule. Every card has its own account (instance), link and posting
+          times. Make many cards - one per account or link. Mastodon cards never
+          reply (replies were not built for v1).
+        </div>
+        <div class="toolbar">
+          <input type="text" id="mastodonCardSearch" placeholder="Search cards…">
+          <select id="mastodonCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="mastodonCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="mastodonBulkBar">
+          <b id="mastodonBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="mastodonBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="mastodonBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="mastodonBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="mastodonBulkClear">Clear</button>
+        </div>
+        <div id="mastodonCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addMastodonCardBtn">+ Add Mastodon card</button>
+          <button class="btn-ghost" id="exportMastodonCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importMastodonCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="mastodonCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Mastodon live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="mastodonLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: TELEGRAM ============ -->
+    <div id="page-telegram" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Create a Telegram channel</b> (free, no review, no approval queue). Give it a public username, e.g. @primotodaynews - that is the channel each card posts to.<br>
+          2) <b>Create a bot:</b> open Telegram, search <b>@BotFather</b>, send <b>/newbot</b>, follow its questions, and copy the <b>bot token</b> it gives you. The token never expires.<br>
+          3) <b>Add the bot to your channel:</b> open the channel, tap its name &rarr; Administrators &rarr; Add Admin &rarr; pick your bot &rarr; turn ON <b>Post Messages</b> and save. Without this the bot cannot post (you will see a 403 in the log).<br>
+          4) <b>Make a card:</b> post a photo + hook + link to your channel. Each card posts fresh Political / War news with a verified real photo - the same story never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon, Telegram and Lemmy on the same day. The photo is <b>uploaded to Telegram</b>; if a story has no verified photo, the post goes out <b>text-only</b> instead of skipping.<br>
+          5) <b>This posts to a CHANNEL - not a discovery feed.</b> People only see the posts if they <b>join your channel first</b>. Share the channel link (t.me/primotodaynews) to grow it.<br>
+          6) <b>Telegram v1 is post-only</b> - cards never reply to comments (channel comments live in a linked discussion group, and reply support was not built). <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the photo, but publishes nothing. Photo captions are capped at <b>1024 characters</b>, text-only posts at <b>4096 characters</b> (hook + link).
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Telegram workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Telegram posts</div>
+            <div class="desc">Post a photo + hook + link to a Telegram channel (one unique post per channel).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="telegram_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Telegram bot (one bot - add yours here)</h2>
+        <div id="telegramAccountList"></div>
+        <form id="telegramAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfTelegramBotToken">Bot token</label>
+              <input id="tfTelegramBotToken" type="password" required placeholder="from @BotFather (/newbot)" autocomplete="off"></div>
+          </div>
+          <div class="note" style="margin-top:8px">Where to get the token: open Telegram &rarr; search <b>@BotFather</b> &rarr; send <b>/newbot</b> &rarr; answer its questions &rarr; copy the <b>bot token</b> it gives you. Then add the bot as a channel admin with <b>Post Messages</b> turned on. No app registration or approval is needed.</div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update bot</button>
+          </div>
+        </form>
+        <div id="telegramSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="telegramSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryTelegramSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyTelegramSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>TELEGRAM_BOT_TOKEN</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          The bot you add here is saved <b>in this browser</b> and in the
+          <code>TELEGRAM_BOT_TOKEN</code> secret (encrypted - only you can
+          see it). The token is never saved in the repo or on this page.
+          The token never expires; if a run fails with a 401, the token
+          was revoked or is wrong - make a new one with @BotFather and
+          save it here again. A 403 means the bot is not a channel admin
+          with Post Messages permission.
+        </div>
+        <h2 style="margin-top:16px">Bot controls</h2>
+        <div id="telegramAccountCtlList"><span class="empty">Add your bot above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveTelegramAccountCtlBtn">Save bot controls</button>
+        </div>
+      </div>
+
+      <!-- Telegram cards: telegram_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Telegram cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a photo + hook + link to one Telegram channel on its own
+          schedule. Every card has its own channel, link and posting
+          times. Make many cards - one per channel or link. Telegram cards never
+          reply (replies were not built for v1). Remember: this posts to a
+          <b>channel</b> - people only see the posts if they join the channel first.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="telegramCardSearch" placeholder="Search cards…">
+          <select id="telegramCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="telegramCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="telegramBulkBar">
+          <b id="telegramBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="telegramBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="telegramBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="telegramBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="telegramBulkClear">Clear</button>
+        </div>
+        <div id="telegramCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addTelegramCardBtn">+ Add Telegram card</button>
+          <button class="btn-ghost" id="exportTelegramCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importTelegramCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="telegramCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Telegram live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="telegramLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: NOSTR ============ -->
+    <div id="page-nostr" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>There is NO account to create - no signup, no approval, no review.</b> On Nostr your <b>keypair IS your account</b>: the <b>nsec</b> (private key) controls the identity, the <b>npub</b> (public key) is your public address.<br>
+          2) <b>Get a keypair in any Nostr app:</b> install <b>Primal</b>, <b>Damus</b> or <b>Amethyst</b> on your phone, create a key (or open Settings &rarr; Keys / Security on a key you already have) and copy <b>BOTH</b> the <b>npub</b> and the <b>nsec</b>. This dashboard has <b>no key generator</b> - paste the keys from your Nostr app.<br>
+          3) <b>Paste them below</b> (npub + nsec). The nsec is saved <b>in this browser</b> and in the <code>NOSTR_ACCOUNTS</code> secret (encrypted - only you can see it). <b>NEVER share your nsec with anyone, and never paste it anywhere else</b> - whoever holds it controls your Nostr identity and can post as you. The list below shows only your name + npub, never the nsec back.<br>
+          4) <b>Make a card:</b> a hook + photo link + link, published as a signed kind-1 note to public relays (relay.damus.io, relay.nostr.band, nos.lol, relay.snort.social). Each card posts fresh Political / War news with a verified real photo - the same story never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon, Telegram, Nostr and Lemmy on the same day. The photo itself is <b>not uploaded</b> - its public URL goes in the note as its own line, and Nostr apps show it inline; if a story has no photo, the post goes out <b>text-only</b> instead of skipping.<br>
+          5) <b>Nostr is a protocol, not one app.</b> Your notes appear in <b>every</b> Nostr client that reads those relays (Primal, Damus, Amethyst, Snort and more). There is no algorithm feed - people see notes from keys they follow, so share your npub (your Primal profile link) to grow.<br>
+          6) <b>Nostr v1 is post-only</b> - cards never reply (reply support was not built). <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the photo, but publishes nothing. Notes are capped at <b>10000 characters</b> (hook + photo link + link).
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Nostr workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Nostr posts</div>
+            <div class="desc">Post a hook + photo link + link as a signed Nostr note (one unique post per key).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="nostr_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Nostr keys (unlimited - add as many as you want)</h2>
+        <div id="nostrAccountList"></div>
+        <form id="nostrAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfNostrName">Name (optional, for display)</label>
+              <input id="tfNostrName" placeholder="e.g. Primo Today News"></div>
+            <div><label for="tfNostrNpub">npub (public key, required)</label>
+              <input id="tfNostrNpub" required placeholder="npub1..." autocomplete="off"></div>
+            <div><label for="tfNostrNsec">nsec (private key, required)</label>
+              <input id="tfNostrNsec" type="password" required placeholder="nsec1... - from your Nostr app, never share it" autocomplete="off"></div>
+          </div>
+          <div class="note" style="margin-top:8px">Where to get the keys: open your Nostr app (Primal / Damus / Amethyst) &rarr; Settings &rarr; Keys / Security &rarr; copy the <b>npub</b> and the <b>nsec</b>. The npub is only used here to label the key - the worker derives the real npub from the nsec, so a mistyped npub cannot post as the wrong key. No app registration or approval is needed - there is no Nostr account to create.</div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update key</button>
+          </div>
+        </form>
+        <div id="nostrSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="nostrSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryNostrSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyNostrSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>NOSTR_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Keys you add here are saved <b>in this browser</b> and in the
+          <code>NOSTR_ACCOUNTS</code> secret (encrypted - only you can
+          see it). The nsec is never saved in the repo, never shown
+          back on this page, and never logged - the list below shows
+          only the name + npub. If a run fails, the nsec was revoked
+          (new key in your Nostr app) or is wrong - save it here
+          again. Anyone with your nsec can post as you: keep it
+          private.
+        </div>
+        <h2 style="margin-top:16px">Per-key controls</h2>
+        <div id="nostrAccountCtlList"><span class="empty">Add a key above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveNostrAccountCtlBtn">Save key controls</button>
+        </div>
+      </div>
+
+      <!-- Nostr cards: nostr_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Nostr cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a hook + photo link + link as a signed Nostr note on its own
+          schedule. Every card has its own key (npub), link and posting
+          times. Make many cards - one per key or link. Nostr cards never
+          reply (replies were not built for v1). Remember: Nostr has no
+          algorithm feed - people only see the notes if they follow your key.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="nostrCardSearch" placeholder="Search cards…">
+          <select id="nostrCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="nostrCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="nostrBulkBar">
+          <b id="nostrBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="nostrBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="nostrBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="nostrBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="nostrBulkClear">Clear</button>
+        </div>
+        <div id="nostrCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addNostrCardBtn">+ Add Nostr card</button>
+          <button class="btn-ghost" id="exportNostrCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importNostrCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="nostrCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Nostr live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="nostrLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: LEMMY ============ -->
+    <div id="page-lemmy" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Lemmy is free, with an open API - no app registration, no approval, no review.</b> You just need an account on a Lemmy instance (a Lemmy server), e.g. <b>lemmy.world</b> - create it free at <b>lemmy.world/signup</b> (or any other instance you like).<br>
+          2) <b>Paste your account below</b> (instance + username + password). The password is saved <b>in this browser</b> and in the <code>LEMMY_ACCOUNTS</code> secret (encrypted - only you can see it). The worker logs in with your username + password - there is no app, no client ID and no token to create.<br>
+          3) <b>Make a card:</b> post a link to a <b>community</b> - a post goes INTO a community, which has its own rules, like a subreddit on Reddit. Each card posts fresh Political / War news with a hook title + hook body + link - the same story never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon, Telegram, Nostr and Lemmy on the same day. <b>No photo is needed</b> - a link post carries the link's own preview.<br>
+          4) <b>Pick news-link-friendly communities, and keep posts/day modest.</b> Posting the same link again and again into a community reads as spam to its moderators and risks a ban - the worker already protects you (a fresh story per post, a different title each time, per-card caps, the same story never posted twice in a day), but the community you pick still matters: a news community that welcomes links (e.g. <b>news</b>, <b>worldnews</b>) is safe, a small strict community is not.<br>
+          5) <b>Lemmy v1 is post-only</b> - cards never reply (reply support was not built). <b>Test a card first:</b> tap "Test" on a card - it writes the post, but publishes nothing. Titles are capped at <b>200 characters</b>.<br>
+          6) <b>Community names:</b> just the name (e.g. <b>news</b>) for a community on your own instance, or the full handle (e.g. <b>news@lemmy.world</b>) for a community on another instance. A leading <b>!</b> or <b>c/</b> is stripped for you.
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Lemmy workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Lemmy posts</div>
+            <div class="desc">Post a link to a community (one unique post per account).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="lemmy_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Lemmy accounts (unlimited - add as many as you want)</h2>
+        <div id="lemmyAccountList"></div>
+        <form id="lemmyAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfLemmyInstance">Instance (required)</label>
+              <input id="tfLemmyInstance" required placeholder="e.g. lemmy.world"></div>
+            <div><label for="tfLemmyUsername">Lemmy username</label>
+              <input id="tfLemmyUsername" required placeholder="your Lemmy username" autocomplete="off"></div>
+            <div><label for="tfLemmyPassword">Lemmy password</label>
+              <input id="tfLemmyPassword" type="password" required placeholder="your Lemmy password" autocomplete="off"></div>
+          </div>
+          <div class="note" style="margin-top:8px">Where to get the account: open <b>lemmy.world/signup</b> (or any other Lemmy instance) in your browser and create a free account - no app, no approval. Use the instance host only (e.g. <b>lemmy.world</b>) - the worker adds https:// itself.</div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div id="lemmySecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="lemmySecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryLemmySecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyLemmySecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>LEMMY_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>LEMMY_ACCOUNTS</code> secret (encrypted - only you can
+          see it). The password is never saved in the repo, never shown
+          back on this page, and never logged - the list below shows
+          only the instance + username. If a run fails, the password
+          was changed (new password on Lemmy) or is wrong - save it here
+          again.
+        </div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="lemmyAccountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveLemmyAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <!-- Lemmy cards: lemmy_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Lemmy cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a link to a community on its own
+          schedule. Every card has its own account (instance + username),
+          community, link and posting times. Make many cards - one per
+          account, community or link. Lemmy cards never reply (replies
+          were not built for v1). Remember: a post goes INTO a community
+          with its own rules - pick news-link-friendly communities and
+          keep posts/day modest, or moderators may ban the account.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="lemmyCardSearch" placeholder="Search cards…">
+          <select id="lemmyCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="lemmyCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="lemmyBulkBar">
+          <b id="lemmyBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="lemmyBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="lemmyBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="lemmyBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="lemmyBulkClear">Clear</button>
+        </div>
+        <div id="lemmyCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addLemmyCardBtn">+ Add Lemmy card</button>
+          <button class="btn-ghost" id="exportLemmyCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importLemmyCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="lemmyCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Lemmy live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="lemmyLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: DEV.TO ============ -->
+    <div id="page-devto" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>dev.to is free, with a full public API - no app registration, no approval, no review.</b> You just need a free dev.to account - create it at <b>dev.to/enter</b>.<br>
+          2) <b>Get your API key:</b> on dev.to, open <b>Settings &rarr; Extensions</b> (dev.to/settings/extensions), find <b>DEV Community API Keys</b>, tap <b>Generate API Key</b> and copy it.<br>
+          3) <b>Paste the key below.</b> It is saved <b>in this browser</b> and in the <code>DEVTO_API_KEY</code> secret (encrypted - only you can see it). The worker sends it as the <b>api-key header</b> - that is the whole login, no OAuth and no refresh.<br>
+          4) <b>Make a card:</b> the worker cross-posts the <b>FULL article</b> (the same article it writes for Blogger, in Markdown) to dev.to, with the verified photo as the <b>cover image</b>. Each card posts fresh Political / War news - the same story never goes to Bluesky, Reddit, Tumblr, Threads, Mastodon, Telegram, Nostr, Lemmy and dev.to on the same day. <b>No verified photo = no post</b> (a dev.to article without a cover image is not posted).<br>
+          5) <b>Plain truth: dev.to readers are DEVELOPERS, and this is an SEO / canonical play, not a news feed.</b> Your articles reach a developer audience and can rank on Google; they will not go viral like a short video. The point is the backlink + canonical credit to your blog, not breaking-news traffic.<br>
+          6) <b>Canonical URL:</b> the article SHOULD point back at the Blogger post - but the worker does not know the Blogger post URL (posts go up in the browser, not through the API). So the article posts <b>WITHOUT a canonical URL</b> unless you fill the card's <b>Canonical URL</b> field with the real Blogger post URL once it is live. The worker <b>never guesses a URL and never points it at the blog homepage</b> - the log says plainly when an article went out without one.<br>
+          7) <b>dev.to v1 is post-only</b> - cards never reply to article comments (reply support was not built). <b>Test a card first:</b> tap "Test" on a card - it writes the article and checks the photo, but publishes nothing. Tags are capped at <b>4</b> (war news gets <b>news, world</b>, everything else gets <b>news, politics</b> unless you set your own tags on the card).
+        </div>
+      </div>
+      <div class="panel">
+        <h2>dev.to workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">dev.to articles</div>
+            <div class="desc">Cross-post the full article to dev.to (one unique article per key).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="devto_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>dev.to API key (one key - add yours here)</h2>
+        <div id="devtoAccountList"></div>
+        <form id="devtoAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="tfDevtoApiKey">API key</label>
+              <input id="tfDevtoApiKey" type="password" required placeholder="from dev.to Settings > Extensions" autocomplete="off"></div>
+          </div>
+          <div class="note" style="margin-top:8px">Where to get the key: open <b>dev.to</b> &rarr; your profile picture &rarr; <b>Settings</b> &rarr; <b>Extensions</b> &rarr; <b>DEV Community API Keys</b> &rarr; <b>Generate API Key</b> &rarr; copy it. No app registration or approval is needed.</div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update key</button>
+          </div>
+        </form>
+        <div id="devtoSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="devtoSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryDevtoSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyDevtoSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>DEVTO_API_KEY</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          The key you add here is saved <b>in this browser</b> and in the
+          <code>DEVTO_API_KEY</code> secret (encrypted - only you can
+          see it). The key is never saved in the repo or on this page.
+          The key does not expire; if a run fails with a 401, the key
+          was revoked or is wrong - generate a new one on dev.to and
+          save it here again.
+        </div>
+        <h2 style="margin-top:16px">Key controls</h2>
+        <div id="devtoAccountCtlList"><span class="empty">Add your key above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveDevtoAccountCtlBtn">Save key controls</button>
+        </div>
+      </div>
+
+      <!-- dev.to cards: devto_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>dev.to cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card cross-posts the full article to dev.to on its own
+          schedule. Every card has its own tags, canonical URL, link and posting
+          times. Make many cards - one per tag set or link. dev.to cards never
+          reply (replies were not built for v1). Remember: the audience is
+          <b>developers</b> - this is an <b>SEO / canonical play, not a news feed</b>.
+          Fill in the <b>Canonical URL</b> on each card once its Blogger post is live,
+          or the article goes out without one.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="devtoCardSearch" placeholder="Search cards…">
+          <select id="devtoCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="devtoCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="devtoBulkBar">
+          <b id="devtoBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="devtoBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="devtoBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="devtoBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="devtoBulkClear">Clear</button>
+        </div>
+        <div id="devtoCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addDevtoCardBtn">+ Add dev.to card</button>
+          <button class="btn-ghost" id="exportDevtoCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importDevtoCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="devtoCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>dev.to live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="devtoLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
     <!-- ============ PAGE: LOGS ============ -->
     <div id="page-logs" class="page hidden">
       <div class="panel panel-red">
@@ -698,6 +1510,41 @@
           <div><div class="lbl">Reddit posts</div>
             <div class="desc">Post a link to a subreddit.</div></div>
           <input type="checkbox" class="wf-toggle" data-config="reddit_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Tumblr posts</div>
+            <div class="desc">Post a photo + hook + link to a Tumblr blog.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="tumblr_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Threads posts</div>
+            <div class="desc">Post a photo + hook + link to Threads (500 chars max).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="threads_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Mastodon posts</div>
+            <div class="desc">Post a photo + hook + link to Mastodon (500 chars max).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="mastodon_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Telegram posts</div>
+            <div class="desc">Post a photo + hook + link to a Telegram channel (caption 1024 chars max).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="telegram_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Nostr posts</div>
+            <div class="desc">Post a hook + photo link + link as a signed Nostr note (10000 chars max).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="nostr_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Lemmy posts</div>
+            <div class="desc">Post a link to a Lemmy community (title 200 chars max).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="lemmy_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">dev.to articles</div>
+            <div class="desc">Cross-post the full article to dev.to (developers read it - SEO/canonical play, not a news feed).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="devto_enabled" checked>
         </div>
         <div class="toggle-row">
           <div><div class="lbl">Manual cards</div>
@@ -840,6 +1687,13 @@ const API = "https://api.github.com/repos/" + OWNER + "/" + REPO;
 const TOKEN_KEY = "gh_token";
 const BSKY_KEY = "bsky_accounts";
 const REDDIT_KEY = "reddit_accounts";
+const TUMBLR_KEY = "tumblr_accounts";
+const THREADS_KEY = "threads_accounts";
+const MASTODON_KEY = "mastodon_accounts";
+const TELEGRAM_KEY = "telegram_bot";
+const NOSTR_KEY = "nostr_accounts";
+const LEMMY_KEY = "lemmy_accounts";
+const DEVTO_KEY = "devto_key";
 const SEEN_KEY = "seen_issues";
 const REFRESH_KEY = "refresh_seconds";
 const TMPL_KEY = "card_templates";
@@ -980,6 +1834,13 @@ $("logoutBtn").addEventListener("click", () => {
 let accountHandles = [];
 let accountsDetail = [];
 let redditAccountsDetail = [];
+let tumblrAccountsDetail = [];
+let threadsAccountsDetail = [];
+let mastodonAccountsDetail = [];
+let telegramAccountsDetail = [];
+let nostrAccountsDetail = [];
+let lemmyAccountsDetail = [];
+let devtoAccountsDetail = [];
 let lastData = null;
 let lastLogs = [];
 let lastRuns = -1;
@@ -1027,10 +1888,31 @@ async function loadStatus() {
   accountHandles = data.account_handles || [];
   accountsDetail = data.accounts_detail || [];
   redditAccountsDetail = data.reddit_accounts_detail || [];
+  tumblrAccountsDetail = data.tumblr_accounts_detail || [];
+  threadsAccountsDetail = data.threads_accounts_detail || [];
+  mastodonAccountsDetail = data.mastodon_accounts_detail || [];
+  telegramAccountsDetail = data.telegram_accounts_detail || [];
+  nostrAccountsDetail = data.nostr_accounts_detail || [];
+  lemmyAccountsDetail = data.lemmy_accounts_detail || [];
+  devtoAccountsDetail = data.devto_accounts_detail || [];
   renderAccountList();
   renderAccountControls();
   renderRedditAccountList();
   renderRedditAccountControls();
+  renderTumblrAccountList();
+  renderTumblrAccountControls();
+  renderThreadsAccountList();
+  renderThreadsAccountControls();
+  renderMastodonAccountList();
+  renderMastodonAccountControls();
+  renderTelegramAccountList();
+  renderTelegramAccountControls();
+  renderNostrAccountList();
+  renderNostrAccountControls();
+  renderLemmyAccountList();
+  renderLemmyAccountControls();
+  renderDevtoAccountList();
+  renderDevtoAccountControls();
 
   const settings = data.settings || {};
   const paused = String(settings.paused || "false").toLowerCase() === "true";
@@ -1200,6 +2082,13 @@ const LOG_FILTERS = {
             "promo", "cooldown", "too soon", "gemini", "groq", "ai_write",
             "og:image", "logo", "skipped", "skipping"],
   reddit: ["reddit"],
+  tumblr: ["tumblr"],
+  threads: ["threads"],
+  mastodon: ["mastodon"],
+  telegram: ["telegram"],
+  nostr: ["nostr"],
+  lemmy: ["lemmy"],
+  devto: ["devto"],
   settings: ["settings", "config", "toggle", "saved", "paused", "resume"],
 };
 function parseWorkerLogs(raw) {
@@ -1255,6 +2144,13 @@ function renderPageLogs(logs) {
   render("bloggerLog", LOG_FILTERS.blogger, 10);
   render("blueskyLog", LOG_FILTERS.bluesky, 10);
   render("redditLog", LOG_FILTERS.reddit, 10);
+  render("tumblrLog", LOG_FILTERS.tumblr, 10);
+  render("threadsLog", LOG_FILTERS.threads, 10);
+  render("mastodonLog", LOG_FILTERS.mastodon, 10);
+  render("telegramLog", LOG_FILTERS.telegram, 10);
+  render("nostrLog", LOG_FILTERS.nostr, 10);
+  render("lemmyLog", LOG_FILTERS.lemmy, 10);
+  render("devtoLog", LOG_FILTERS.devto, 10);
   render("settingsLog", LOG_FILTERS.settings, 10);
 }
 function renderFullLog(logs) {
@@ -1309,6 +2205,9 @@ let configLoaded = false;
 const CONFIG_DEFAULTS = {
   dry_run: false, max_consecutive_failures: 5,
   paused: false, blogger_enabled: true, bsky_enabled: true,
+  reddit_enabled: true, tumblr_enabled: true, threads_enabled: true,
+  mastodon_enabled: true, telegram_enabled: true, nostr_enabled: true,
+  lemmy_enabled: true, devto_enabled: true,
   replies_enabled: true, cards_enabled: true,
   blogger_bold_format: true, card_default_interval_hours: 0,
   card_default_interval_minutes: 30, card_default_posts_per_day: 0,
@@ -1515,16 +2414,30 @@ async function loadChecklist() {
    day), its own source/topic and (Bluesky) its own reply settings. */
 let cardsSha = "";
 let cards = [];
-let editingCard = null; // { tab: "blogger"|"bluesky"|"reddit", index: -1 }
+let editingCard = null; // { tab: "blogger"|"bluesky"|"reddit"|"tumblr"|"threads"|"mastodon"|"telegram"|"nostr"|"lemmy"|"devto", index: -1 }
 const BLOGGER_TYPES = ["blogger_post"];
 const BLUESKY_TYPES = ["bluesky_post", "bluesky_promo", "bluesky_reply"];
 const REDDIT_TYPES = ["reddit_post"];
+const TUMBLR_TYPES = ["tumblr_post"];
+const THREADS_TYPES = ["threads_post"];
+const MASTODON_TYPES = ["mastodon_post"];
+const TELEGRAM_TYPES = ["telegram_post"];
+const NOSTR_TYPES = ["nostr_post"];
+const LEMMY_TYPES = ["lemmy_post"];
+const DEVTO_TYPES = ["devto_post"];
 const TYPE_LABELS = {
   blogger_post: "Blogger post",
   bluesky_post: "Bluesky post",
   bluesky_promo: "Bluesky promo",
   bluesky_reply: "Bluesky replies",
   reddit_post: "Reddit post",
+  tumblr_post: "Tumblr post",
+  threads_post: "Threads post",
+  mastodon_post: "Mastodon post",
+  telegram_post: "Telegram post",
+  nostr_post: "Nostr post",
+  lemmy_post: "Lemmy post",
+  devto_post: "dev.to article",
 };
 const COLOR_LABELS = {
   "": "No colour", red: "Red", blue: "Blue", teal: "Teal",
@@ -1534,11 +2447,18 @@ const cardUI = {
   blogger: { q: "", sort: "name", filter: "all", selected: new Set() },
   bluesky: { q: "", sort: "name", filter: "all", selected: new Set() },
   reddit: { q: "", sort: "name", filter: "all", selected: new Set() },
+  tumblr: { q: "", sort: "name", filter: "all", selected: new Set() },
+  threads: { q: "", sort: "name", filter: "all", selected: new Set() },
+  mastodon: { q: "", sort: "name", filter: "all", selected: new Set() },
+  telegram: { q: "", sort: "name", filter: "all", selected: new Set() },
+  lemmy: { q: "", sort: "name", filter: "all", selected: new Set() },
+  devto: { q: "", sort: "name", filter: "all", selected: new Set() },
+  nostr: { q: "", sort: "name", filter: "all", selected: new Set() },
 };
 
 async function loadCards() {
   if (!getToken()) {
-    ["bloggerCardList", "blueskyCardList", "redditCardList"].forEach((id) => {
+    ["bloggerCardList", "blueskyCardList", "redditCardList", "tumblrCardList", "threadsCardList", "mastodonCardList", "telegramCardList", "nostrCardList", "lemmyCardList", "devtoCardList"].forEach((id) => {
       $(id).innerHTML = '<div class="empty">Log in to load and edit cards.</div>';
     });
     return;
@@ -1550,7 +2470,7 @@ async function loadCards() {
     if (!Array.isArray(cards)) cards = [];
     renderCardLists();
   } catch (e) {
-    ["bloggerCardList", "blueskyCardList", "redditCardList"].forEach((id) => {
+    ["bloggerCardList", "blueskyCardList", "redditCardList", "tumblrCardList", "threadsCardList", "mastodonCardList", "telegramCardList", "nostrCardList", "lemmyCardList", "devtoCardList"].forEach((id) => {
       $(id).innerHTML = '<div class="empty">Could not load cards: ' + esc(e.message) + "</div>";
     });
   }
@@ -1753,7 +2673,14 @@ function colorDot(color) {
 /* ---------- card lists (one per tab) ---------- */
 function cardsForTab(tab) {
   const types = tab === "blogger" ? BLOGGER_TYPES
-    : tab === "reddit" ? REDDIT_TYPES : BLUESKY_TYPES;
+    : tab === "reddit" ? REDDIT_TYPES
+    : tab === "tumblr" ? TUMBLR_TYPES
+    : tab === "threads" ? THREADS_TYPES
+    : tab === "mastodon" ? MASTODON_TYPES
+    : tab === "telegram" ? TELEGRAM_TYPES
+    : tab === "nostr" ? NOSTR_TYPES
+    : tab === "lemmy" ? LEMMY_TYPES
+    : tab === "devto" ? DEVTO_TYPES : BLUESKY_TYPES;
   return cards
     .map((c, i) => ({ c: c, i: i }))
     .filter((x) => types.includes(x.c.type));
@@ -1762,6 +2689,13 @@ function renderCardLists() {
   renderCardList("blogger");
   renderCardList("bluesky");
   renderCardList("reddit");
+  renderCardList("tumblr");
+  renderCardList("threads");
+  renderCardList("mastodon");
+  renderCardList("telegram");
+  renderCardList("nostr");
+  renderCardList("lemmy");
+  renderCardList("devto");
   renderDueSoon();
 }
 function renderCardList(tab) {
@@ -1776,7 +2710,7 @@ function renderCardList(tab) {
     const q = ui.q.toLowerCase();
     rows = rows.filter((x) => {
       const c = x.c;
-      return [c.name, c.link, c.topic_override, c.notes, c.account_handle, c.type, c.subreddit]
+      return [c.name, c.link, c.topic_override, c.notes, c.account_handle, c.type, c.subreddit, c.channel, c.community, c.canonical_url, c.tags]
         .some((v) => String(v || "").toLowerCase().includes(q));
     });
   }
@@ -1796,7 +2730,14 @@ function renderCardList(tab) {
   rows.forEach((x) => {
     const c = x.c, i = x.i;
     const e = enrichCard(c);
-    const knownAccs = tab === "reddit" ? redditAccountUsernames() : allAccountHandles();
+    const knownAccs = tab === "reddit" ? redditAccountUsernames()
+      : tab === "tumblr" ? tumblrAccountBlogs()
+      : tab === "threads" ? threadsAccountUserIds()
+      : tab === "mastodon" ? mastodonAccountKeys()
+      : tab === "telegram" ? telegramAccountKeys()
+      : tab === "nostr" ? nostrAccountKeys()
+      : tab === "lemmy" ? lemmyAccountKeys()
+      : tab === "devto" ? devtoAccountKeys() : allAccountHandles();
     const div = document.createElement("div");
     div.className = "card-row" + (ui.selected.has(i) ? " sel" : "");
     const perDay = Number(c.posts_per_day || 0);
@@ -1810,6 +2751,10 @@ function renderCardList(tab) {
       '<div class="meta">' + esc(TYPE_LABELS[c.type] || c.type) +
       (c.link ? " · " + esc(c.link) : "") +
       (c.type === "reddit_post" && c.subreddit ? " · r/" + esc(c.subreddit) : "") +
+      (c.type === "telegram_post" && c.channel ? " · " + esc(c.channel) : "") +
+      (c.type === "lemmy_post" && c.community ? " · c/" + esc(c.community) : "") +
+      (c.type === "devto_post" && c.tags ? " · tags: " + esc(Array.isArray(c.tags) ? c.tags.join(", ") : c.tags) : "") +
+      (c.type === "devto_post" ? (c.canonical_url ? " · canonical ✓" : " · no canonical yet") : "") +
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
       " · " + esc(intervalLabel(c)) +
       (perDay > 0 ? " · " + perDay + "/day (today: " + e.postsToday + ")" : " · unlimited/day") +
@@ -1828,7 +2773,7 @@ function renderCardList(tab) {
           (c.draft_only ? " · DRAFT only" : "") +
           (c.labels ? " · labels: " + esc(Array.isArray(c.labels) ? c.labels.join(", ") : c.labels) : "") : "") +
       (c.type !== "blogger_post" && c.bsky_image_ratio ? " · image " + esc(c.bsky_image_ratio) : "") +
-      (c.type !== "blogger_post" && (c.reply_own || c.reply_others)
+      (c.type !== "blogger_post" && c.type !== "tumblr_post" && c.type !== "threads_post" && c.type !== "mastodon_post" && c.type !== "telegram_post" && c.type !== "nostr_post" && c.type !== "lemmy_post" && c.type !== "devto_post" && (c.reply_own || c.reply_others)
         ? " · replies: " + (c.reply_own ? "ALL own " : "") + (c.reply_others ? "others " : "") +
           (Number(c.replies_per_run || 0) > 0 ? "· " + c.replies_per_run + "/run (others) " : "· unlimited/run (others) ") +
           "· last " + (Number(c.lookback_days ?? 7) || 7) + " days" : "") +
@@ -1836,9 +2781,13 @@ function renderCardList(tab) {
       "</div>" +
       (c.notes ? '<div class="meta">Note: ' + esc(c.notes) + "</div>" : "") +
       (c.type !== "blogger_post" && !knownAccs.length
-        ? '<div class="meta" style="color:#dc2626">No ' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' account added — this card cannot post or reply. Add one in the ' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' tab.</div>' : "") +
+        ? (c.type === "telegram_post"
+          ? '<div class="meta" style="color:#dc2626">No Telegram bot token added — this card cannot post. Add one in the Telegram tab.</div>'
+          : c.type === "devto_post"
+          ? '<div class="meta" style="color:#dc2626">No dev.to API key added — this card cannot post. Add one in the dev.to tab.</div>'
+          : '<div class="meta" style="color:#dc2626">No ' + (c.type === "reddit_post" ? "Reddit" : c.type === "tumblr_post" ? "Tumblr" : c.type === "threads_post" ? "Threads" : c.type === "mastodon_post" ? "Mastodon" : c.type === "nostr_post" ? "Nostr" : c.type === "lemmy_post" ? "Lemmy" : "Bluesky") + ' account added — this card cannot post' + ((c.type === "tumblr_post" || c.type === "threads_post" || c.type === "mastodon_post" || c.type === "nostr_post" || c.type === "lemmy_post") ? "" : " or reply") + '. Add one in the ' + (c.type === "reddit_post" ? "Reddit" : c.type === "tumblr_post" ? "Tumblr" : c.type === "threads_post" ? "Threads" : c.type === "mastodon_post" ? "Mastodon" : c.type === "nostr_post" ? "Nostr" : c.type === "lemmy_post" ? "Lemmy" : "Bluesky") + ' tab.</div>') : "") +
       (c.type !== "blogger_post" && c.account_handle && knownAccs.length && !knownAccs.includes(c.account_handle)
-        ? '<div class="meta" style="color:#dc2626">Account ' + esc(c.account_handle) + ' not found — add it first (' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' tab).</div>' : "") +
+        ? '<div class="meta" style="color:#dc2626">Account ' + esc(c.account_handle) + ' not found — add it first (' + (c.type === "reddit_post" ? "Reddit" : c.type === "tumblr_post" ? "Tumblr" : c.type === "threads_post" ? "Threads" : c.type === "mastodon_post" ? "Mastodon" : c.type === "telegram_post" ? "Telegram" : c.type === "nostr_post" ? "Nostr" : c.type === "lemmy_post" ? "Lemmy" : c.type === "devto_post" ? "dev.to" : "Bluesky") + ' tab).</div>' : "") +
       (e.lastError ? '<div class="meta" style="color:#dc2626">Last error: ' + esc(e.lastError) + "</div>" : "") +
       "</span></label>" +
       '<div class="actions">' +
@@ -2075,7 +3024,7 @@ function bulkAction(tab, action) {
     if (ok) renderCardLists();
   });
 }
-["blogger", "bluesky", "reddit"].forEach((tab) => {
+["blogger", "bluesky", "reddit", "tumblr", "threads", "mastodon", "telegram", "nostr", "lemmy", "devto"].forEach((tab) => {
   $(tab + "BulkPause").addEventListener("click", () => bulkAction(tab, "pause"));
   $(tab + "BulkResume").addEventListener("click", () => bulkAction(tab, "resume"));
   $(tab + "BulkDelete").addEventListener("click", () => bulkAction(tab, "delete"));
@@ -2113,6 +3062,13 @@ function exportCards() {
 $("exportBloggerCardsBtn").addEventListener("click", exportCards);
 $("exportBlueskyCardsBtn").addEventListener("click", exportCards);
 $("exportRedditCardsBtn").addEventListener("click", exportCards);
+$("exportTumblrCardsBtn").addEventListener("click", exportCards);
+$("exportThreadsCardsBtn").addEventListener("click", exportCards);
+$("exportMastodonCardsBtn").addEventListener("click", exportCards);
+$("exportTelegramCardsBtn").addEventListener("click", exportCards);
+$("exportNostrCardsBtn").addEventListener("click", exportCards);
+$("exportLemmyCardsBtn").addEventListener("click", exportCards);
+$("exportDevtoCardsBtn").addEventListener("click", exportCards);
 async function importCardsFile(file) {
   if (!file) return;
   try {
@@ -2125,6 +3081,13 @@ async function importCardsFile(file) {
     cardUI.blogger.selected.clear();
     cardUI.bluesky.selected.clear();
     cardUI.reddit.selected.clear();
+    cardUI.tumblr.selected.clear();
+    cardUI.threads.selected.clear();
+    cardUI.mastodon.selected.clear();
+    cardUI.telegram.selected.clear();
+    cardUI.nostr.selected.clear();
+    cardUI.lemmy.selected.clear();
+    cardUI.devto.selected.clear();
     if (await saveCards("Import cards from dashboard")) renderCardLists();
   } catch (e) {
     showMsg("Import failed: " + e.message, false);
@@ -2139,6 +3102,34 @@ $("importBlueskyCardsFile").addEventListener("change", (e) => {
   e.target.value = "";
 });
 $("importRedditCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importTumblrCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importThreadsCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importMastodonCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importTelegramCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importNostrCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importLemmyCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importDevtoCardsFile").addEventListener("change", (e) => {
   importCardsFile(e.target.files[0]);
   e.target.value = "";
 });
@@ -2157,11 +3148,23 @@ function openCardForm(tab, index, preset) {
   $("bloggerCardFormSlot").innerHTML = "";
   $("blueskyCardFormSlot").innerHTML = "";
   $("redditCardFormSlot").innerHTML = "";
+  $("tumblrCardFormSlot").innerHTML = "";
+  $("threadsCardFormSlot").innerHTML = "";
+  $("mastodonCardFormSlot").innerHTML = "";
+  $("telegramCardFormSlot").innerHTML = "";
+  $("devtoCardFormSlot").innerHTML = "";
   editingCard = { tab: tab, index: (index === undefined ? -1 : index) };
   const existing = index >= 0 ? cards[index] : null;
   const isBlogger = tab === "blogger";
   const isReddit = tab === "reddit";
-  const types = isBlogger ? BLOGGER_TYPES : isReddit ? REDDIT_TYPES : BLUESKY_TYPES;
+  const isTumblr = tab === "tumblr";
+  const isThreads = tab === "threads";
+  const isMastodon = tab === "mastodon";
+  const isTelegram = tab === "telegram";
+  const isNostr = tab === "nostr";
+  const isLemmy = tab === "lemmy";
+  const isDevto = tab === "devto";
+  const types = isBlogger ? BLOGGER_TYPES : isReddit ? REDDIT_TYPES : isTumblr ? TUMBLR_TYPES : isThreads ? THREADS_TYPES : isMastodon ? MASTODON_TYPES : isTelegram ? TELEGRAM_TYPES : isNostr ? NOSTR_TYPES : isLemmy ? LEMMY_TYPES : isDevto ? DEVTO_TYPES : BLUESKY_TYPES;
   const defH = Number(config.card_default_interval_hours ?? 0) || 0;
   const defM = Number(config.card_default_interval_minutes ?? 30) || 30;
   const defPerDay = Number(config.card_default_posts_per_day ?? 0) || 0;
@@ -2192,13 +3195,19 @@ function openCardForm(tab, index, preset) {
   const typeOptions = types.map((t) =>
     '<option value="' + t + '"' + (c.type === t ? " selected" : "") + ">" +
     esc(TYPE_LABELS[t]) + "</option>").join("");
-  const accs = isReddit ? redditAccountUsernames() : allAccountHandles();
+  const accs = isReddit ? redditAccountUsernames()
+    : isTumblr ? tumblrAccountBlogs()
+    : isThreads ? threadsAccountUserIds()
+    : isMastodon ? mastodonAccountKeys()
+    : isTelegram ? telegramAccountKeys()
+    : isNostr ? nostrAccountKeys() : isLemmy ? lemmyAccountKeys() : isDevto ? devtoAccountKeys() : allAccountHandles();
+  const accLabel = (h) => isThreads ? threadsAccountLabel(h) : isNostr ? nostrAccountLabel(h) : isLemmy ? lemmyAccountLabel(h) : h;
   const accOptions = '<option value="">Any account</option>' +
     accs.map((h) =>
       '<option value="' + esc(h) + '"' + (c.account_handle === h ? " selected" : "") + ">" +
-      esc(h) + "</option>").join("");
+      esc(accLabel(h)) + "</option>").join("");
   const accWarn = accs.length === 0
-    ? '<div class="status-msg status-err" style="display:block;margin-top:6px">No ' + (isReddit ? "Reddit" : "Bluesky") + ' account added — add one first (' + (isReddit ? "Reddit" : "Bluesky") + ' tab). This card cannot post or reply until an account exists.</div>'
+    ? '<div class="status-msg status-err" style="display:block;margin-top:6px">No ' + (isReddit ? "Reddit" : isTumblr ? "Tumblr" : isThreads ? "Threads" : isMastodon ? "Mastodon" : isTelegram ? "Telegram bot token" : isNostr ? "Nostr key" : isLemmy ? "Lemmy account" : isDevto ? "dev.to API key" : "Bluesky") + ' account added — add one first (' + (isReddit ? "Reddit" : isTumblr ? "Tumblr" : isThreads ? "Threads" : isMastodon ? "Mastodon" : isTelegram ? "Telegram" : isNostr ? "Nostr" : isLemmy ? "Lemmy" : isDevto ? "dev.to" : "Bluesky") + ' tab). This card cannot post' + ((isTumblr || isThreads || isMastodon || isTelegram || isNostr || isLemmy || isDevto) ? "" : " or reply") + ' until an account exists.</div>'
     : "";
   const colorOptions = Object.keys(COLOR_LABELS).map((k) =>
     '<option value="' + k + '"' + ((c.color || "") === k ? " selected" : "") + ">" +
@@ -2206,22 +3215,34 @@ function openCardForm(tab, index, preset) {
   const tmplOptions = '<option value="">Load a template…</option>' +
     getTemplates().map((t, i) =>
       '<option value="' + i + '">' + esc(t.name) + "</option>").join("");
-  const slot = $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot");
+  const slot = $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : tab === "tumblr" ? "tumblrCardFormSlot" : tab === "threads" ? "threadsCardFormSlot" : tab === "mastodon" ? "mastodonCardFormSlot" : tab === "telegram" ? "telegramCardFormSlot" : tab === "nostr" ? "nostrCardFormSlot" : tab === "lemmy" ? "lemmyCardFormSlot" : tab === "devto" ? "devtoCardFormSlot" : "blueskyCardFormSlot");
   slot.innerHTML =
     '<form id="cardForm" style="margin-top:14px;border-top:2px solid #e0f2fe;padding-top:14px">' +
-    "<h3>" + (existing ? "Edit card" : "New " + (isBlogger ? "Blogger" : isReddit ? "Reddit" : "Bluesky") + " card") + "</h3>" +
+    "<h3>" + (existing ? "Edit card" : "New " + (isBlogger ? "Blogger" : isReddit ? "Reddit" : isTumblr ? "Tumblr" : isThreads ? "Threads" : isMastodon ? "Mastodon" : isTelegram ? "Telegram" : isNostr ? "Nostr" : isLemmy ? "Lemmy" : isDevto ? "dev.to" : "Bluesky") + " card") + "</h3>" +
     '<div class="form-grid">' +
     '<div><label for="cfName">Card name</label>' +
     '<input id="cfName" required placeholder="e.g. Morning post" value="' + esc(c.name || "") + '"></div>' +
     '<div><label for="cfType">Type</label><select id="cfType">' + typeOptions + "</select></div>" +
     '<div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>' +
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
-    '<div><label for="cfAccount">' + (isReddit ? "Reddit account - which account this card posts and replies as" : "Bluesky account - which account this card posts and replies as") + "</label>" +
+    '<div><label for="cfAccount">' + (isReddit ? "Reddit account - which account this card posts and replies as" : isTumblr ? "Tumblr blog - which blog this card posts to" : isThreads ? "Threads account - which account this card posts as" : isMastodon ? "Mastodon account - which instance this card posts to" : isTelegram ? "Telegram bot - which bot this card posts as (one bot)" : isNostr ? "Nostr key - which key this card posts as (npub)" : isLemmy ? "Lemmy account - which account this card posts as (instance|username)" : isDevto ? "dev.to API key - which key this card posts as (one key)" : "Bluesky account - which account this card posts and replies as") + "</label>" +
     '<select id="cfAccount">' + accOptions + "</select>" +
     '<div class="field-help">Empty = the first account. The card always uses this one account.</div>' + accWarn + '</div>' +
     '<div id="cfSubredditWrap"><label for="cfSubreddit">Subreddit (required) - which subreddit this card posts to</label>' +
     '<input id="cfSubreddit" required placeholder="e.g. news" value="' + esc(c.subreddit || "") + '">' +
     '<div class="field-help">Without the "r/" - just the name, e.g. news.</div></div>' +
+    '<div id="cfCommunityWrap"><label for="cfCommunity">Community (required) - which Lemmy community this card posts to</label>' +
+    '<input id="cfCommunity" required placeholder="e.g. news" value="' + esc(c.community || "") + '">' +
+    '<div class="field-help">Just the name (e.g. news) for a community on your own instance, or the full handle (e.g. news@lemmy.world) for another instance. A leading ! or c/ is stripped.</div></div>' +
+    '<div id="cfChannelWrap"><label for="cfChannel">Channel (required) - which Telegram channel this card posts to</label>' +
+    '<input id="cfChannel" required placeholder="e.g. @primotodaynews" value="' + esc(c.channel || "") + '">' +
+    '<div class="field-help">The channel username with the @, e.g. @primotodaynews. The bot must be a channel admin with Post Messages on. People only see the posts if they join the channel first - it is not a discovery feed.</div></div>' +
+    '<div id="cfCanonicalWrap"><label for="cfCanonical">Canonical URL (optional) - the Blogger post URL, once it is live</label>' +
+    '<input id="cfCanonical" placeholder="e.g. https://primotodaynews.blogspot.com/2026/11/my-post.html" value="' + esc(c.canonical_url || "") + '">' +
+    '<div class="field-help">Leave EMPTY unless the Blogger post is already live. The article posts WITHOUT a canonical URL when this is empty - the worker never guesses a URL and never points it at the blog homepage. Paste the real Blogger post URL here once it is live.</div></div>' +
+    '<div id="cfTagsWrap"><label for="cfTags">Tags (optional) - up to 4, comma-separated</label>' +
+    '<input id="cfTags" placeholder="e.g. news, politics" value="' + esc(Array.isArray(c.tags) ? c.tags.join(", ") : (c.tags || "")) + '">' +
+    '<div class="field-help">Empty = war news gets news, world and everything else gets news, politics. Lowercase, no spaces.</div></div>' +
     '<div><label for="cfCount">Posts per run - how many posts each time the card runs</label>' +
     '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
@@ -2387,14 +3408,50 @@ function wireCardForm(tab, card) {
   const showSource = () => {
     const isBlog = $("cfType").value === "blogger_post";
     const isRedditType = $("cfType").value === "reddit_post";
+    const isTumblrType = $("cfType").value === "tumblr_post";
+    const isThreadsType = $("cfType").value === "threads_post";
+    const isMastodonType = $("cfType").value === "mastodon_post";
+    const isTelegramType = $("cfType").value === "telegram_post";
+    const isNostrType = $("cfType").value === "nostr_post";
+    const isLemmyType = $("cfType").value === "lemmy_post";
+    const isDevtoType = $("cfType").value === "devto_post";
     $("cfSourceSection").classList.toggle("hidden", !isBlog);
-    $("cfReplySection").classList.toggle("hidden", isBlog);
+    // Tumblr has no comment-reply API - its cards never reply, so
+    // the whole reply section stays hidden for tumblr_post.
+    // Threads v1 is post-only too - same rule for threads_post.
+    // Mastodon v1 is post-only too - same rule for mastodon_post.
+    // Telegram v1 is post-only too - same rule for telegram_post.
+    // Nostr v1 is post-only too - same rule for nostr_post.
+    // Lemmy v1 is post-only too - same rule for lemmy_post.
+    // dev.to v1 is post-only too - same rule for devto_post.
+    $("cfReplySection").classList.toggle("hidden", isBlog || isTumblrType || isThreadsType || isMastodonType || isTelegramType || isNostrType || isLemmyType || isDevtoType);
     $("cfBoldSection").classList.toggle("hidden", !isBlog);
     $("cfWindowSection").classList.toggle("hidden", !isBlog);
     $("cfStyleSection").classList.toggle("hidden", !isBlog);
-    $("cfRatioWrap").classList.toggle("hidden", isRedditType);
+    // Tumblr posts the photo in its original ratio (no crop), so the
+    // Bluesky ratio picker does not apply to tumblr_post either.
+    // Threads posts the photo at its original public URL too, so the
+    // ratio picker does not apply to threads_post either.
+    // Mastodon uploads the photo in its original ratio too, so the
+    // ratio picker does not apply to mastodon_post either.
+    // Telegram uploads the photo as-is too, so the ratio picker
+    // does not apply to telegram_post either.
+    // Nostr puts the photo URL in the note as its own line, so the
+    // ratio picker does not apply to nostr_post either.
+    // Lemmy needs no photo at all (a link post carries the link's
+    // own preview), so the ratio picker does not apply to
+    // lemmy_post either.
+    // dev.to posts the FULL article (no ratio applies), so the
+    // ratio picker does not apply to devto_post either.
+    $("cfRatioWrap").classList.toggle("hidden", isRedditType || isTumblrType || isThreadsType || isMastodonType || isTelegramType || isNostrType || isLemmyType || isDevtoType);
     $("cfSubredditWrap").classList.toggle("hidden", !isRedditType);
     $("cfSubreddit").required = isRedditType;
+    $("cfChannelWrap").classList.toggle("hidden", !isTelegramType);
+    $("cfChannel").required = isTelegramType;
+    $("cfCommunityWrap").classList.toggle("hidden", !isLemmyType);
+    $("cfCommunity").required = isLemmyType;
+    $("cfCanonicalWrap").classList.toggle("hidden", !isDevtoType);
+    $("cfTagsWrap").classList.toggle("hidden", !isDevtoType);
   };
   let source = card.source || "trending";
   let spread = card.spread_mode || "even";
@@ -2484,9 +3541,9 @@ function wireCardForm(tab, card) {
     openCardForm(tab, -1);
     // Fill the fresh form from the template (keep the tab's type list).
     const tc = JSON.parse(JSON.stringify(t));
-    const tabTypes = isBlogger ? BLOGGER_TYPES : tab === "reddit" ? REDDIT_TYPES : BLUESKY_TYPES;
+    const tabTypes = isBlogger ? BLOGGER_TYPES : tab === "reddit" ? REDDIT_TYPES : tab === "tumblr" ? TUMBLR_TYPES : tab === "threads" ? THREADS_TYPES : tab === "mastodon" ? MASTODON_TYPES : tab === "telegram" ? TELEGRAM_TYPES : tab === "nostr" ? NOSTR_TYPES : tab === "lemmy" ? LEMMY_TYPES : tab === "devto" ? DEVTO_TYPES : BLUESKY_TYPES;
     if (!(tabTypes.includes(tc.type))) {
-      tc.type = isBlogger ? "blogger_post" : tab === "reddit" ? "reddit_post" : "bluesky_post";
+      tc.type = isBlogger ? "blogger_post" : tab === "reddit" ? "reddit_post" : tab === "tumblr" ? "tumblr_post" : tab === "threads" ? "threads_post" : tab === "mastodon" ? "mastodon_post" : tab === "telegram" ? "telegram_post" : tab === "nostr" ? "nostr_post" : tab === "lemmy" ? "lemmy_post" : tab === "devto" ? "devto_post" : "bluesky_post";
     }
     fillCardForm(tc);
     showMsg("Template loaded: " + tmpls[idx].name, true);
@@ -2507,7 +3564,7 @@ function wireCardForm(tab, card) {
     showMsg("Template deleted.", true);
   });
   $("cfCancelBtn").addEventListener("click", () => {
-    $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+    $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : tab === "tumblr" ? "tumblrCardFormSlot" : tab === "threads" ? "threadsCardFormSlot" : tab === "mastodon" ? "mastodonCardFormSlot" : tab === "telegram" ? "telegramCardFormSlot" : tab === "nostr" ? "nostrCardFormSlot" : tab === "lemmy" ? "lemmyCardFormSlot" : tab === "devto" ? "devtoCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
     editingCard = null;
   });
   form.addEventListener("submit", async (e) => {
@@ -2516,6 +3573,8 @@ function wireCardForm(tab, card) {
     const data = readCardForm(tab);
     if (!data.name) { showMsg("Give the card a name.", false); return; }
     if (data.type === "reddit_post" && !data.subreddit) { showMsg("Enter the subreddit (e.g. news).", false); return; }
+    if (data.type === "telegram_post" && !data.channel) { showMsg("Enter the channel (e.g. @primotodaynews).", false); return; }
+    if (data.type === "lemmy_post" && !data.community) { showMsg("Enter the community (e.g. news).", false); return; }
     if (editingCard.index >= 0) {
       data.status = cards[editingCard.index].status || "active";
       cards[editingCard.index] = data;
@@ -2524,7 +3583,7 @@ function wireCardForm(tab, card) {
       cards.push(data);
     }
     if (await saveCards(editingCard.index >= 0 ? "Edit card from dashboard" : "Add card from dashboard")) {
-      $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+      $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : tab === "tumblr" ? "tumblrCardFormSlot" : tab === "threads" ? "threadsCardFormSlot" : tab === "mastodon" ? "mastodonCardFormSlot" : tab === "telegram" ? "telegramCardFormSlot" : tab === "nostr" ? "nostrCardFormSlot" : tab === "lemmy" ? "lemmyCardFormSlot" : tab === "devto" ? "devtoCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
       editingCard = null;
       renderCardLists();
     }
@@ -2536,6 +3595,21 @@ function wireCardForm(tab, card) {
 }
 function readCardForm(tab) {
   const isBlog = $("cfType").value === "blogger_post";
+  // Tumblr cards never reply (no reply API) and never crop the
+  // photo, so reply fields are forced off and no ratio is saved.
+  // Threads v1 is post-only too - same rule for threads_post.
+  // Mastodon v1 is post-only too - same rule for mastodon_post.
+  // Telegram v1 is post-only too - same rule for telegram_post.
+  // Nostr v1 is post-only too - same rule for nostr_post.
+  // Lemmy v1 is post-only too - same rule for lemmy_post.
+  // dev.to v1 is post-only too - same rule for devto_post.
+  const isLem = $("cfType").value === "lemmy_post";
+  const isDev = $("cfType").value === "devto_post";
+  const isTum = $("cfType").value === "tumblr_post";
+  const isThr = $("cfType").value === "threads_post";
+  const isMas = $("cfType").value === "mastodon_post";
+  const isTel = $("cfType").value === "telegram_post";
+  const isNos = $("cfType").value === "nostr_post";
   return {
     name: $("cfName").value.trim(),
     type: $("cfType").value,
@@ -2549,10 +3623,10 @@ function readCardForm(tab) {
     text: $("cfText").value.trim(),
     source: isBlog ? ($("cfTopic").value.trim() ? "custom" : sourceOfForm()) : "trending",
     topic_override: isBlog ? $("cfTopic").value.trim() : "",
-    reply_own: isBlog ? false : $("cfReplyOwn").checked,
-    reply_others: isBlog ? false : $("cfReplyOthers").checked,
-    replies_per_run: isBlog ? 0 : (Number($("cfRepliesPerRun").value) || 0),
-    lookback_days: isBlog ? 7 : Math.max(1, Math.min(30,
+    reply_own: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? false : $("cfReplyOwn").checked,
+    reply_others: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? false : $("cfReplyOthers").checked,
+    replies_per_run: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? 0 : (Number($("cfRepliesPerRun").value) || 0),
+    lookback_days: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? 7 : Math.max(1, Math.min(30,
       Number($("cfLookback").value) || 7)),
     bold_format: isBlog ? $("cfBold").checked : true,
     window_start: isBlog ? $("cfWindowStart").value.trim() : "",
@@ -2570,12 +3644,16 @@ function readCardForm(tab) {
     max_posts_per_month: Number($("cfMonthCap").value) || 0,
     retry_after_minutes: Math.max(1, Number($("cfRetryAfter").value) || 30),
     retry_max: Math.max(0, Number($("cfRetryMax").value) || 0),
-    replies_per_day: isBlog ? 0 : (Number($("cfRepliesPerDay").value) || 0),
-    reply_never: isBlog ? "" : $("cfReplyNever").value.trim(),
-    reply_only: isBlog ? "" : $("cfReplyOnly").value.trim(),
-    reply_skip_words: isBlog ? "" : $("cfSkipWords").value.trim(),
-    bsky_image_ratio: $("cfType").value === "reddit_post" ? undefined : (isBlog ? "16:9" : ($("cfRatio").value || "16:9")),
+    replies_per_day: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? 0 : (Number($("cfRepliesPerDay").value) || 0),
+    reply_never: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? "" : $("cfReplyNever").value.trim(),
+    reply_only: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? "" : $("cfReplyOnly").value.trim(),
+    reply_skip_words: (isBlog || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? "" : $("cfSkipWords").value.trim(),
+    bsky_image_ratio: ($("cfType").value === "reddit_post" || isTum || isThr || isMas || isTel || isNos || isLem || isDev) ? undefined : (isBlog ? "16:9" : ($("cfRatio").value || "16:9")),
     subreddit: $("cfType").value === "reddit_post" ? $("cfSubreddit").value.trim() : "",
+    channel: $("cfType").value === "telegram_post" ? $("cfChannel").value.trim() : "",
+    community: $("cfType").value === "lemmy_post" ? $("cfCommunity").value.trim() : "",
+    canonical_url: $("cfType").value === "devto_post" ? $("cfCanonical").value.trim() : "",
+    tags: $("cfType").value === "devto_post" ? $("cfTags").value.trim() : "",
     notes: $("cfNotes").value.trim(),
     color: $("cfColor").value || "",
   };
@@ -2618,6 +3696,10 @@ function fillCardForm(c) {
   $("cfSkipWords").value = c.reply_skip_words || "";
   $("cfRatio").value = c.bsky_image_ratio || "16:9";
   $("cfSubreddit").value = c.subreddit || "";
+  $("cfCommunity").value = c.community || "";
+  $("cfChannel").value = c.channel || "";
+  $("cfCanonical").value = c.canonical_url || "";
+  $("cfTags").value = Array.isArray(c.tags) ? c.tags.join(", ") : (c.tags || "");
   const days = Array.isArray(c.days_of_week) ? c.days_of_week : [0, 1, 2, 3, 4, 5, 6];
   document.querySelectorAll(".cfDay").forEach((x) => {
     x.checked = days.includes(Number(x.value));
@@ -2660,6 +3742,13 @@ function saveTemplate(name, card) {
 $("addBloggerCardBtn").addEventListener("click", () => openCardForm("blogger", -1));
 $("addBlueskyCardBtn").addEventListener("click", () => openCardForm("bluesky", -1));
 $("addRedditCardBtn").addEventListener("click", () => openCardForm("reddit", -1));
+$("addTumblrCardBtn").addEventListener("click", () => openCardForm("tumblr", -1));
+$("addThreadsCardBtn").addEventListener("click", () => openCardForm("threads", -1));
+$("addMastodonCardBtn").addEventListener("click", () => openCardForm("mastodon", -1));
+$("addTelegramCardBtn").addEventListener("click", () => openCardForm("telegram", -1));
+$("addNostrCardBtn").addEventListener("click", () => openCardForm("nostr", -1));
+$("addLemmyCardBtn").addEventListener("click", () => openCardForm("lemmy", -1));
+$("addDevtoCardBtn").addEventListener("click", () => openCardForm("devto", -1));
 
 /* ---------- Bluesky accounts (saved to the GitHub Secret) - UNLIMITED ---------- */
 function getSavedAccounts() {
@@ -3087,6 +4176,258 @@ $("copyRedditSecretBtn").addEventListener("click", async () => {
   }
 });
 
+/* ---------- Tumblr accounts (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Reddit accounts above, keyed by Tumblr blog name.
+   The worker reads the secret as plain JSON
+   [{"blog": "...", "client_id": "...", "client_secret": "...",
+     "access_token": "...", "refresh_token": "..."}] - the libsodium
+   encryption in updateTumblrSecret only protects the value in
+   transit to the GitHub API, which decrypts it server-side. */
+function getSavedTumblrAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(TUMBLR_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.blog) : [];
+  } catch (e) { return []; }
+}
+function saveSavedTumblrAccounts(list) {
+  localStorage.setItem(TUMBLR_KEY, JSON.stringify(list));
+}
+function missingTumblrFromBrowser() {
+  const saved = new Set(getSavedTumblrAccounts().map((a) => a.blog));
+  return tumblrAccountsDetail.map((d) => d.blog).filter((b) => b && !saved.has(b));
+}
+function renderTumblrAccountList() {
+  const saved = getSavedTumblrAccounts();
+  const el = $("tumblrAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !tumblrAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const detail = tumblrAccountsDetail.find((d) => d.blog === a.blog);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(a.blog) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeTumblrAccount(Number(btn.dataset.acc)));
+  });
+  missingTumblrFromBrowser().forEach((b) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(b) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const TUMBLR_SECRET_PENDING_KEY = "tumblr_secret_pending";
+function showTumblrSecretWarn(text) {
+  const el = $("tumblrSecretWarn");
+  if (!el) return;
+  $("tumblrSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideTumblrSecretWarn() {
+  const el = $("tumblrSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncTumblrSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(TUMBLR_SECRET_PENDING_KEY) === "1") {
+      showTumblrSecretWarn("The GitHub Secret (TUMBLR_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateTumblrSecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/TUMBLR_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(TUMBLR_SECRET_PENDING_KEY); } catch (e) {}
+    hideTumblrSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(TUMBLR_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showTumblrSecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeTumblrAccount(i) {
+  if (!confirm("Remove this account?")) return;
+  const saved = getSavedTumblrAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedTumblrAccounts(saved);
+  renderTumblrAccountList();
+  renderTumblrAccountControls();
+  if (await updateTumblrSecret(saved)) {
+    showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("tumblrAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const blog = $("tfBlog").value.trim();
+  const clientId = $("tfClientId").value.trim();
+  const clientSecret = $("tfClientSecret").value.trim();
+  const accessToken = $("tfAccessToken").value.trim();
+  const refreshToken = $("tfRefreshToken").value.trim();
+  if (!blog || !clientId || !clientSecret || !accessToken || !refreshToken) { showMsg("Enter the blog name, client ID, client secret, access token and refresh token.", false); return; }
+  const missing = missingTumblrFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedTumblrAccounts();
+  const idx = saved.findIndex((a) => a.blog === blog);
+  const entry = { blog: blog, client_id: clientId, client_secret: clientSecret,
+                  access_token: accessToken, refresh_token: refreshToken };
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedTumblrAccounts(saved);
+  renderTumblrAccountList();
+  renderTumblrAccountControls();
+  $("tumblrAccountForm").reset();
+  if (await updateTumblrSecret(saved)) {
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryTumblrSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryTumblrSecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateTumblrSecret(getSavedTumblrAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact TUMBLR_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"blog": "...", "client_id": "...", "client_secret": "...",
+     "access_token": "...", "refresh_token": "..."}] - the libsodium
+   encryption in updateTumblrSecret only protects the value in transit
+   to the GitHub API, which decrypts it server-side. Pasting the same
+   JSON straight into the Secret on GitHub stores exactly the same
+   value, so this needs no library at all. The warning stays until a
+   successful "Retry Secret save" confirms the Secret - that is the
+   only way the dashboard can KNOW it is saved. */
+$("copyTumblrSecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedTumblrAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name TUMBLR_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    // Fallback for browsers without clipboard permission.
+    const ta = document.createElement("textarea");
+    ta.value = value;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); await copied(); }
+    catch (err) { showMsg("Copy failed - the value could not be copied automatically.", false); }
+    ta.remove();
+  }
+});
+
+/* ---------- Tumblr authorize helper: get tokens in the browser ----------
+   Opens Tumblr's OAuth2 authorize page (scopes basic write
+   offline_access) and exchanges the returned code for an access +
+   refresh token, straight from this browser - the client secret
+   never leaves this page except in that one POST to Tumblr. The
+   tokens fill into the account form above; the user still presses
+   "Add / update account" to save them (browser + Secret). If
+   Tumblr blocks the exchange from a browser (CORS), the error says
+   so - paste the tokens into the form another way instead. */
+$("openTumblrAuthBtn").addEventListener("click", () => {
+  const cid = $("tfAuthClientId").value.trim() || $("tfClientId").value.trim();
+  const redirect = $("tfRedirectUri").value.trim();
+  if (!cid) { showMsg("Enter the Client ID first.", false); return; }
+  if (!redirect) { showMsg("Enter the OAuth2 redirect URL first.", false); return; }
+  const url = "https://www.tumblr.com/oauth2/authorize?client_id=" +
+    encodeURIComponent(cid) + "&response_type=code&scope=" +
+    encodeURIComponent("basic write offline_access") + "&redirect_uri=" +
+    encodeURIComponent(redirect);
+  window.open(url, "_blank");
+  showMsg("Approve the app on Tumblr, then copy the ?code=... from the address bar back here.", true);
+});
+$("exchangeTumblrCodeBtn").addEventListener("click", async () => {
+  const code = $("tfAuthCode").value.trim();
+  const cid = $("tfAuthClientId").value.trim() || $("tfClientId").value.trim();
+  const csec = $("tfClientSecret").value.trim();
+  const redirect = $("tfRedirectUri").value.trim();
+  const msg = $("tumblrAuthMsg");
+  const showAuthErr = (text) => {
+    msg.textContent = text;
+    msg.classList.remove("hidden");
+  };
+  msg.classList.add("hidden");
+  if (!code || !cid || !csec || !redirect) {
+    showAuthErr("Enter the Client ID + client secret above, the redirect URL, and the code from Tumblr.");
+    return;
+  }
+  try {
+    const res = await fetch("https://api.tumblr.com/v2/oauth2/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "authorization_code", code: code, client_id: cid,
+        client_secret: csec, redirect_uri: redirect }),
+    });
+    if (!res.ok) throw new Error("Tumblr said HTTP " + res.status);
+    const data = await res.json();
+    if (!data.access_token || !data.refresh_token) {
+      throw new Error("Tumblr returned no tokens - the code may have expired, get a fresh one.");
+    }
+    $("tfClientId").value = cid;
+    $("tfClientSecret").value = csec;
+    $("tfAccessToken").value = data.access_token;
+    $("tfRefreshToken").value = data.refresh_token;
+    showMsg("Tokens received - now enter your blog name above and press \"Add / update account\".", true);
+  } catch (e) {
+    showAuthErr("Could not exchange the code: " + e.message +
+      " (Tumblr may block this request from a browser - if so, get the tokens another way and paste them into the account form above.)");
+  }
+});
+
 /* ---------- per-account controls (data/accounts.json) ---------- */
 let accountCtlSha = "";
 let accountCtl = {};
@@ -3241,6 +4582,1839 @@ $("saveRedditAccountCtlBtn").addEventListener("click", async () => {
   }
 });
 
+/* ---------- Tumblr per-account controls (data/tumblr_accounts.json) ----------
+   Mirror of the Reddit per-account controls above, keyed by Tumblr
+   blog name. Kept in its own file (data/tumblr_accounts.json) so saving
+   one side's controls can never wipe another's entries. */
+let tumblrAccountCtlSha = "";
+let tumblrAccountCtl = {};
+async function loadTumblrAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/tumblr_accounts.json");
+    tumblrAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    tumblrAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.blog) tumblrAccountCtl[a.blog] = a; });
+    }
+    renderTumblrAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function tumblrAccountBlogs() {
+  const set = new Set(tumblrAccountsDetail.map((d) => d.blog).filter(Boolean));
+  getSavedTumblrAccounts().forEach((a) => set.add(a.blog));
+  Object.keys(tumblrAccountCtl).forEach((b) => set.add(b));
+  return Array.from(set);
+}
+function renderTumblrAccountControls() {
+  const blogs = tumblrAccountBlogs();
+  const el = $("tumblrAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!blogs.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  blogs.forEach((b) => {
+    const cfg = tumblrAccountCtl[b] || {};
+    const detail = tumblrAccountsDetail.find((d) => d.blog === b);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.blog = b;
+    div.innerHTML =
+      '<span class="name">' + esc(b) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveTumblrAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#tumblrAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      blog: row.dataset.blog,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Tumblr account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (tumblrAccountCtlSha) body.sha = tumblrAccountCtlSha;
+    const res = await gh("/contents/data/tumblr_accounts.json", "PUT", body);
+    tumblrAccountCtlSha = (res.content && res.content.sha) || tumblrAccountCtlSha;
+    list.forEach((a) => { tumblrAccountCtl[a.blog] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
+/* ---------- Threads accounts (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Tumblr accounts above, keyed by Threads user ID.
+   The worker reads the secret as plain JSON
+   [{"user_id": "...", "username": "...", "app_id": "...",
+     "app_secret": "...", "access_token": "...",
+     "token_obtained_at": "..."}] - the libsodium encryption in
+   updateThreadsSecret only protects the value in transit to the
+   GitHub API, which decrypts it server-side. */
+function getSavedThreadsAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(THREADS_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.user_id) : [];
+  } catch (e) { return []; }
+}
+function saveSavedThreadsAccounts(list) {
+  localStorage.setItem(THREADS_KEY, JSON.stringify(list));
+}
+function missingThreadsFromBrowser() {
+  const saved = new Set(getSavedThreadsAccounts().map((a) => a.user_id));
+  return threadsAccountsDetail.map((d) => d.user_id).filter((u) => u && !saved.has(u));
+}
+function threadsAccountLabel(uid) {
+  const saved = getSavedThreadsAccounts().find((a) => a.user_id === uid);
+  if (saved && saved.username) return saved.username + " (" + uid + ")";
+  const detail = threadsAccountsDetail.find((d) => d.user_id === uid);
+  if (detail && detail.username) return detail.username + " (" + uid + ")";
+  return uid;
+}
+function renderThreadsAccountList() {
+  const saved = getSavedThreadsAccounts();
+  const el = $("threadsAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !threadsAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const detail = threadsAccountsDetail.find((d) => d.user_id === a.user_id);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(threadsAccountLabel(a.user_id)) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeThreadsAccount(Number(btn.dataset.acc)));
+  });
+  missingThreadsFromBrowser().forEach((u) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(threadsAccountLabel(u)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const THREADS_SECRET_PENDING_KEY = "threads_secret_pending";
+function showThreadsSecretWarn(text) {
+  const el = $("threadsSecretWarn");
+  if (!el) return;
+  $("threadsSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideThreadsSecretWarn() {
+  const el = $("threadsSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncThreadsSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(THREADS_SECRET_PENDING_KEY) === "1") {
+      showThreadsSecretWarn("The GitHub Secret (THREADS_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateThreadsSecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/THREADS_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(THREADS_SECRET_PENDING_KEY); } catch (e) {}
+    hideThreadsSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(THREADS_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showThreadsSecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeThreadsAccount(i) {
+  if (!confirm("Remove this account?")) return;
+  const saved = getSavedThreadsAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedThreadsAccounts(saved);
+  renderThreadsAccountList();
+  renderThreadsAccountControls();
+  if (await updateThreadsSecret(saved)) {
+    showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("threadsAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const userId = $("tfThreadsUserId").value.trim();
+  const username = $("tfThreadsUsername").value.trim();
+  const appId = $("tfThreadsAppId").value.trim();
+  const appSecret = $("tfThreadsAppSecret").value.trim();
+  const accessToken = $("tfThreadsAccessToken").value.trim();
+  const obtainedAt = $("tfThreadsTokenObtainedAt").value.trim();
+  if (!userId || !appId || !appSecret || !accessToken) { showMsg("Enter the Threads user ID, app ID, app secret and access token.", false); return; }
+  const missing = missingThreadsFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedThreadsAccounts();
+  const idx = saved.findIndex((a) => a.user_id === userId);
+  const entry = { user_id: userId, app_id: appId, app_secret: appSecret,
+                  access_token: accessToken };
+  if (username) entry.username = username;
+  // The authorize helper records when the long-lived token was
+  // obtained - the worker refreshes it once it is 24h old. A token
+  // pasted by hand has no date, so the worker refreshes it only on
+  // a 401 instead.
+  if (obtainedAt) entry.token_obtained_at = obtainedAt;
+  else if (idx >= 0 && saved[idx].token_obtained_at) entry.token_obtained_at = saved[idx].token_obtained_at;
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedThreadsAccounts(saved);
+  renderThreadsAccountList();
+  renderThreadsAccountControls();
+  $("threadsAccountForm").reset();
+  if (await updateThreadsSecret(saved)) {
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryThreadsSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryThreadsSecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateThreadsSecret(getSavedThreadsAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact THREADS_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"user_id": "...", "username": "...", "app_id": "...",
+     "app_secret": "...", "access_token": "...",
+     "token_obtained_at": "..."}] - the libsodium encryption in
+   updateThreadsSecret only protects the value in transit to the
+   GitHub API, which decrypts it server-side. Pasting the same JSON
+   straight into the Secret on GitHub stores exactly the same value,
+   so this needs no library at all. The warning stays until a
+   successful "Retry Secret save" confirms the Secret - that is the
+   only way the dashboard can KNOW it is saved. */
+$("copyThreadsSecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedThreadsAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name THREADS_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    // Fallback for browsers without clipboard permission.
+    const ta = document.createElement("textarea");
+    ta.value = value;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); await copied(); }
+    catch (err) { showMsg("Copy failed - the value could not be copied automatically.", false); }
+    ta.remove();
+  }
+});
+
+/* ---------- Threads authorize helper: get tokens in the browser ----------
+   Opens Threads' OAuth2 authorize page (scopes threads_basic +
+   threads_content_publish) and exchanges the returned code for a
+   short-lived token, then a 60-day long-lived token, then looks up
+   the Threads user ID - straight from this browser. The app secret
+   never leaves this page except in those calls to Threads. The
+   tokens + user ID fill into the account form above; the user still
+   presses "Add / update account" to save them (browser + Secret).
+   If Threads blocks any exchange from a browser (CORS), the error
+   says so - paste the tokens into the form another way instead. */
+$("openThreadsAuthBtn").addEventListener("click", () => {
+  const appId = $("tfThreadsAuthAppId").value.trim() || $("tfThreadsAppId").value.trim();
+  const redirect = $("tfThreadsRedirectUri").value.trim();
+  if (!appId) { showMsg("Enter the Threads app ID first.", false); return; }
+  if (!redirect) { showMsg("Enter the OAuth redirect URL first.", false); return; }
+  const url = "https://threads.com/oauth/authorize?client_id=" +
+    encodeURIComponent(appId) + "&redirect_uri=" +
+    encodeURIComponent(redirect) + "&scope=" +
+    encodeURIComponent("threads_basic,threads_content_publish") +
+    "&response_type=code";
+  window.open(url, "_blank");
+  showMsg("Approve the app on Threads, then copy the ?code=... from the address bar back here.", true);
+});
+$("exchangeThreadsCodeBtn").addEventListener("click", async () => {
+  const code = $("tfThreadsAuthCode").value.trim();
+  const appId = $("tfThreadsAuthAppId").value.trim() || $("tfThreadsAppId").value.trim();
+  const appSecret = $("tfThreadsAppSecret").value.trim();
+  const redirect = $("tfThreadsRedirectUri").value.trim();
+  const msg = $("threadsAuthMsg");
+  const showAuthErr = (text) => {
+    msg.textContent = text;
+    msg.classList.remove("hidden");
+  };
+  msg.classList.add("hidden");
+  if (!code || !appId || !appSecret || !redirect) {
+    showAuthErr("Enter the Threads app ID + app secret above, the redirect URL, and the code from Threads.");
+    return;
+  }
+  try {
+    const res = await fetch("https://graph.threads.net/oauth/access_token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "authorization_code", code: code, client_id: appId,
+        client_secret: appSecret, redirect_uri: redirect }),
+    });
+    if (!res.ok) throw new Error("Threads said HTTP " + res.status);
+    const shortData = await res.json();
+    if (!shortData.access_token) {
+      throw new Error("Threads returned no short-lived token - the code may have expired, get a fresh one.");
+    }
+    const longRes = await fetch("https://graph.threads.net/access_token?grant_type=th_exchange_token" +
+      "&client_secret=" + encodeURIComponent(appSecret) +
+      "&access_token=" + encodeURIComponent(shortData.access_token));
+    if (!longRes.ok) throw new Error("Threads said HTTP " + longRes.status + " on the long-lived exchange");
+    const longData = await longRes.json();
+    if (!longData.access_token) {
+      throw new Error("Threads returned no long-lived token.");
+    }
+    const meRes = await fetch("https://graph.threads.net/v1.0/me?fields=id,username&access_token=" +
+      encodeURIComponent(longData.access_token));
+    if (!meRes.ok) throw new Error("Threads said HTTP " + meRes.status + " looking up your user ID");
+    const me = await meRes.json();
+    if (!me.id) throw new Error("Threads returned no user ID.");
+    $("tfThreadsAppId").value = appId;
+    $("tfThreadsAppSecret").value = appSecret;
+    $("tfThreadsAccessToken").value = longData.access_token;
+    $("tfThreadsUserId").value = me.id;
+    if (me.username) $("tfThreadsUsername").value = me.username;
+    $("tfThreadsTokenObtainedAt").value = new Date().toISOString();
+    showMsg("Tokens received (60-day token) - now press \"Add / update account\" above to save them.", true);
+  } catch (e) {
+    showAuthErr("Could not exchange the code: " + e.message +
+      " (Threads may block this request from a browser - if so, get the tokens another way and paste them into the account form above.)");
+  }
+});
+
+/* ---------- Threads per-account controls (data/threads_accounts.json) ----------
+   Mirror of the Tumblr per-account controls above, keyed by Threads
+   user ID. Kept in its own file (data/threads_accounts.json) so saving
+   one side's controls can never wipe another's entries. */
+let threadsAccountCtlSha = "";
+let threadsAccountCtl = {};
+async function loadThreadsAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/threads_accounts.json");
+    threadsAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    threadsAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.user_id) threadsAccountCtl[a.user_id] = a; });
+    }
+    renderThreadsAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function threadsAccountUserIds() {
+  const set = new Set(threadsAccountsDetail.map((d) => d.user_id).filter(Boolean));
+  getSavedThreadsAccounts().forEach((a) => set.add(a.user_id));
+  Object.keys(threadsAccountCtl).forEach((u) => set.add(u));
+  return Array.from(set);
+}
+function renderThreadsAccountControls() {
+  const uids = threadsAccountUserIds();
+  const el = $("threadsAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!uids.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  uids.forEach((u) => {
+    const cfg = threadsAccountCtl[u] || {};
+    const detail = threadsAccountsDetail.find((d) => d.user_id === u);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.userId = u;
+    div.innerHTML =
+      '<span class="name">' + esc(threadsAccountLabel(u)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveThreadsAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#threadsAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      user_id: row.dataset.userId,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Threads account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (threadsAccountCtlSha) body.sha = threadsAccountCtlSha;
+    const res = await gh("/contents/data/threads_accounts.json", "PUT", body);
+    threadsAccountCtlSha = (res.content && res.content.sha) || threadsAccountCtlSha;
+    list.forEach((a) => { threadsAccountCtl[a.user_id] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
+/* ---------- Mastodon accounts (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Tumblr accounts above, keyed by instance host
+   (+ /@username when one is stored - the same key the worker uses
+   for daily counts, gaps and per-account controls). The worker
+   reads the secret as plain JSON
+   [{"instance": "mastodon.social", "username": "...",
+     "access_token": "..."}] - the libsodium encryption in
+   updateMastodonSecret only protects the value in transit to the
+   GitHub API, which decrypts it server-side. No authorize helper:
+   the token comes straight from the instance web UI (Preferences ->
+   Development -> New application) and never expires. */
+function mastodonAccountKey(a) {
+  if (!a) return "";
+  let raw = String(a.instance || a.key || "").trim();
+  if (!raw) return "";
+  raw = raw.replace(/^https?:\/\//i, "").split("/")[0].toLowerCase();
+  if (!raw) return "";
+  const user = String(a.username || "").trim().replace(/^@/, "");
+  return user ? raw + "/@" + user : raw;
+}
+function getSavedMastodonAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(MASTODON_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.instance) : [];
+  } catch (e) { return []; }
+}
+function saveSavedMastodonAccounts(list) {
+  localStorage.setItem(MASTODON_KEY, JSON.stringify(list));
+}
+function missingMastodonFromBrowser() {
+  const saved = new Set(getSavedMastodonAccounts().map((a) => mastodonAccountKey(a)));
+  return mastodonAccountsDetail.map((d) => d.key).filter((k) => k && !saved.has(k));
+}
+function mastodonAccountLabel(key) {
+  const saved = getSavedMastodonAccounts().find((a) => mastodonAccountKey(a) === key);
+  if (saved && saved.username) return saved.username + " (" + key + ")";
+  const detail = mastodonAccountsDetail.find((d) => d.key === key);
+  if (detail && detail.username) return detail.username + " (" + key + ")";
+  return key;
+}
+function renderMastodonAccountList() {
+  const saved = getSavedMastodonAccounts();
+  const el = $("mastodonAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !mastodonAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const key = mastodonAccountKey(a);
+    const detail = mastodonAccountsDetail.find((d) => d.key === key);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(mastodonAccountLabel(key)) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeMastodonAccount(Number(btn.dataset.acc)));
+  });
+  missingMastodonFromBrowser().forEach((k) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(mastodonAccountLabel(k)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const MASTODON_SECRET_PENDING_KEY = "mastodon_secret_pending";
+function showMastodonSecretWarn(text) {
+  const el = $("mastodonSecretWarn");
+  if (!el) return;
+  $("mastodonSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideMastodonSecretWarn() {
+  const el = $("mastodonSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncMastodonSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(MASTODON_SECRET_PENDING_KEY) === "1") {
+      showMastodonSecretWarn("The GitHub Secret (MASTODON_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateMastodonSecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/MASTODON_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(MASTODON_SECRET_PENDING_KEY); } catch (e) {}
+    hideMastodonSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(MASTODON_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showMastodonSecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeMastodonAccount(i) {
+  if (!confirm("Remove this account?")) return;
+  const saved = getSavedMastodonAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedMastodonAccounts(saved);
+  renderMastodonAccountList();
+  renderMastodonAccountControls();
+  if (await updateMastodonSecret(saved)) {
+    showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("mastodonAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const instance = $("tfMastodonInstance").value.trim();
+  const username = $("tfMastodonUsername").value.trim();
+  const accessToken = $("tfMastodonAccessToken").value.trim();
+  if (!instance || !accessToken) { showMsg("Enter the instance (e.g. mastodon.social) and the access token.", false); return; }
+  const missing = missingMastodonFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedMastodonAccounts();
+  const entry = { instance: instance, access_token: accessToken };
+  if (username) entry.username = username;
+  const idx = saved.findIndex((a) => mastodonAccountKey(a) === mastodonAccountKey(entry));
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedMastodonAccounts(saved);
+  renderMastodonAccountList();
+  renderMastodonAccountControls();
+  $("mastodonAccountForm").reset();
+  if (await updateMastodonSecret(saved)) {
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryMastodonSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryMastodonSecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateMastodonSecret(getSavedMastodonAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact MASTODON_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"instance": "mastodon.social", "username": "...",
+     "access_token": "..."}] - the libsodium encryption in
+   updateMastodonSecret only protects the value in transit to the
+   GitHub API, which decrypts it server-side. Pasting the same JSON
+   straight into the Secret on GitHub stores exactly the same value,
+   so this needs no library at all. The warning stays until a
+   successful "Retry Secret save" confirms the Secret - that is the
+   only way the dashboard can KNOW it is saved. */
+$("copyMastodonSecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedMastodonAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name MASTODON_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = value;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      await copied();
+    } catch (e2) {
+      showMsg("Could not copy automatically - the secret value is: " + value, false);
+    }
+  }
+});
+
+/* ---------- Mastodon per-account controls (data/mastodon_accounts.json) ----------
+   Mirror of the Threads per-account controls above, keyed by
+   Mastodon account key (instance host, + /@username). Kept in its
+   own file (data/mastodon_accounts.json) so saving one side's
+   controls can never wipe another's entries. */
+let mastodonAccountCtlSha = "";
+let mastodonAccountCtl = {};
+async function loadMastodonAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/mastodon_accounts.json");
+    mastodonAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    mastodonAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.key) mastodonAccountCtl[a.key] = a; });
+    }
+    renderMastodonAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function mastodonAccountKeys() {
+  const set = new Set(mastodonAccountsDetail.map((d) => d.key).filter(Boolean));
+  getSavedMastodonAccounts().forEach((a) => set.add(mastodonAccountKey(a)));
+  Object.keys(mastodonAccountCtl).forEach((k) => set.add(k));
+  return Array.from(set);
+}
+function renderMastodonAccountControls() {
+  const keys = mastodonAccountKeys();
+  const el = $("mastodonAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!keys.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  keys.forEach((k) => {
+    const cfg = mastodonAccountCtl[k] || {};
+    const detail = mastodonAccountsDetail.find((d) => d.key === k);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.key = k;
+    div.innerHTML =
+      '<span class="name">' + esc(mastodonAccountLabel(k)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveMastodonAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#mastodonAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      key: row.dataset.key,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Mastodon account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (mastodonAccountCtlSha) body.sha = mastodonAccountCtlSha;
+    const res = await gh("/contents/data/mastodon_accounts.json", "PUT", body);
+    mastodonAccountCtlSha = (res.content && res.content.sha) || mastodonAccountCtlSha;
+    list.forEach((a) => { mastodonAccountCtl[a.key] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
+/* ---------- Telegram bot (saved to the GitHub Secret) - ONE BOT ----------
+   Unlike the other platforms there is no account list: ONE bot
+   token from @BotFather (/newbot) is the whole auth, and the
+   destination channel is picked per card (card field "channel").
+   The token is stored in this browser (localStorage "telegram_bot")
+   and encrypted into the TELEGRAM_BOT_TOKEN secret - the secret
+   value is the RAW token string (not JSON). The libsodium
+   encryption in updateTelegramSecret only protects the value in
+   transit to the GitHub API, which decrypts it server-side. The
+   token never expires; a 401 means it was revoked or is wrong, a
+   403 means the bot is not a channel admin with Post Messages. */
+function getSavedTelegramBot() {
+  try {
+    const bot = JSON.parse(localStorage.getItem(TELEGRAM_KEY) || "null");
+    return bot && bot.bot_token ? bot : null;
+  } catch (e) { return null; }
+}
+function saveSavedTelegramBot(bot) {
+  if (bot) localStorage.setItem(TELEGRAM_KEY, JSON.stringify(bot));
+  else localStorage.removeItem(TELEGRAM_KEY);
+}
+function missingTelegramFromBrowser() {
+  // The Secret (dashboard.json) has the bot, but this browser does
+  // not - saving now would REMOVE it from the Secret.
+  const saved = getSavedTelegramBot();
+  const inDetail = telegramAccountsDetail.some((d) => d.key === "telegram-bot");
+  return (!saved && inDetail) ? ["telegram-bot"] : [];
+}
+function telegramAccountLabel(key) {
+  return "Telegram bot";
+}
+function renderTelegramAccountList() {
+  const saved = getSavedTelegramBot();
+  const el = $("telegramAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  const detail = telegramAccountsDetail.find((d) => d.key === "telegram-bot");
+  if (!saved && !detail) {
+    el.innerHTML = '<div class="empty">No bot yet. Add yours below (one bot - get the token from @BotFather).</div>';
+    return;
+  }
+  if (saved) {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(telegramAccountLabel("telegram-bot")) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" id="removeTelegramBotBtn">Remove</button></div>';
+    el.appendChild(div);
+    div.querySelector("#removeTelegramBotBtn").addEventListener("click", removeTelegramBot);
+  }
+  missingTelegramFromBrowser().forEach((k) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(telegramAccountLabel(k)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const TELEGRAM_SECRET_PENDING_KEY = "telegram_secret_pending";
+function showTelegramSecretWarn(text) {
+  const el = $("telegramSecretWarn");
+  if (!el) return;
+  $("telegramSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideTelegramSecretWarn() {
+  const el = $("telegramSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncTelegramSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(TELEGRAM_SECRET_PENDING_KEY) === "1") {
+      showTelegramSecretWarn("The GitHub Secret (TELEGRAM_BOT_TOKEN) does not have your latest bot yet - the last save failed. The bot works in this browser, but the worker (GitHub) cannot use it until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateTelegramSecret(token) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(token || "");
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/TELEGRAM_BOT_TOKEN", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(TELEGRAM_SECRET_PENDING_KEY); } catch (e) {}
+    hideTelegramSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(TELEGRAM_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showTelegramSecretWarn("Could not save to the Secret: " + e.message +
+      " The bot is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeTelegramBot() {
+  if (!confirm("Remove this bot?")) return;
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedTelegramBot(null);
+  renderTelegramAccountList();
+  renderTelegramAccountControls();
+  if (await updateTelegramSecret("")) {
+    showMsg("Bot removed.", true);
+  } else {
+    showMsg("Bot removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("telegramAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const botToken = $("tfTelegramBotToken").value.trim();
+  if (!botToken) { showMsg("Enter the bot token from @BotFather.", false); return; }
+  const missing = missingTelegramFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has a bot not saved in this browser. " +
+    "Saving now will REPLACE it with this token. " +
+    "To keep the old one, re-enter it here first. Continue?")) return;
+  const bot = { bot_token: botToken };
+  // Save in THIS browser FIRST - the bot works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedTelegramBot(bot);
+  renderTelegramAccountList();
+  renderTelegramAccountControls();
+  $("telegramAccountForm").reset();
+  if (await updateTelegramSecret(botToken)) {
+    showMsg("Bot saved.", true);
+  } else {
+    showMsg("Bot saved in this browser - but the Secret is not updated yet. Press \"Retry Secret save\".", false);
+  }
+});
+$("retryTelegramSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryTelegramSecretBtn");
+  btn.disabled = true;
+  try {
+    const saved = getSavedTelegramBot();
+    if (await updateTelegramSecret(saved ? saved.bot_token : "")) {
+      showMsg("Secret saved.", true);
+    }
+  } finally {
+    btn.disabled = false;
+  }
+});
+$("copyTelegramSecretBtn").addEventListener("click", async () => {
+  const saved = getSavedTelegramBot();
+  const value = saved ? saved.bot_token : "";
+  try {
+    await navigator.clipboard.writeText(value);
+    showMsg("Secret value copied - paste it into the TELEGRAM_BOT_TOKEN Secret on GitHub.", true);
+  } catch (e) {
+    showMsg("Copy failed - select the token and copy it by hand.", false);
+  }
+});
+
+/* ---------- Telegram bot controls (data/telegram_accounts.json) ----------
+   Keyed by "telegram-bot" (there is ONE bot). Kept in its own file
+   (data/telegram_accounts.json) so saving one side's controls can
+   never wipe another's entries. The per-channel daily counts live
+   in the worker state, not here. */
+let telegramAccountCtlSha = "";
+let telegramAccountCtl = {};
+async function loadTelegramAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/telegram_accounts.json");
+    telegramAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    telegramAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.key) telegramAccountCtl[a.key] = a; });
+    }
+    renderTelegramAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function telegramAccountKeys() {
+  const set = new Set(telegramAccountsDetail.map((d) => d.key).filter(Boolean));
+  if (getSavedTelegramBot()) set.add("telegram-bot");
+  Object.keys(telegramAccountCtl).forEach((k) => set.add(k));
+  return Array.from(set);
+}
+function renderTelegramAccountControls() {
+  const keys = telegramAccountKeys();
+  const el = $("telegramAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!keys.length) {
+    el.innerHTML = '<span class="empty">Add your bot above to control it here.</span>';
+    return;
+  }
+  keys.forEach((k) => {
+    const cfg = telegramAccountCtl[k] || {};
+    const detail = telegramAccountsDetail.find((d) => d.key === k);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.key = k;
+    div.innerHTML =
+      '<span class="name">' + esc(telegramAccountLabel(k)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveTelegramAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#telegramAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      key: row.dataset.key,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Telegram bot controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (telegramAccountCtlSha) body.sha = telegramAccountCtlSha;
+    const res = await gh("/contents/data/telegram_accounts.json", "PUT", body);
+    telegramAccountCtlSha = (res.content && res.content.sha) || telegramAccountCtlSha;
+    list.forEach((a) => { telegramAccountCtl[a.key] = a; });
+    showMsg("Bot controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save bot controls: " + e.message, false);
+  }
+});
+
+/* ---------- dev.to API key (saved to the GitHub Secret) - ONE KEY ----------
+   Unlike the other platforms there is no account list: ONE API key
+   from dev.to Settings > Extensions is the whole auth. The key is
+   stored in this browser (localStorage "devto_key") and encrypted
+   into the DEVTO_API_KEY secret - the secret value is the RAW key
+   string (not JSON). The libsodium encryption in updateDevtoSecret
+   only protects the value in transit to the GitHub API, which
+   decrypts it server-side. The key does not expire; a 401 means it
+   was revoked or is wrong. Audience is developers - this is an
+   SEO/canonical play, not a news feed. */
+function getSavedDevtoKey() {
+  try {
+    const entry = JSON.parse(localStorage.getItem(DEVTO_KEY) || "null");
+    return entry && entry.api_key ? entry : null;
+  } catch (e) { return null; }
+}
+function saveSavedDevtoKey(entry) {
+  if (entry) localStorage.setItem(DEVTO_KEY, JSON.stringify(entry));
+  else localStorage.removeItem(DEVTO_KEY);
+}
+function missingDevtoFromBrowser() {
+  // The Secret (dashboard.json) has the key, but this browser does
+  // not - saving now would REMOVE it from the Secret.
+  const saved = getSavedDevtoKey();
+  const inDetail = devtoAccountsDetail.some((d) => d.key === "devto");
+  return (!saved && inDetail) ? ["devto"] : [];
+}
+function devtoAccountLabel(key) {
+  return "dev.to API key";
+}
+function renderDevtoAccountList() {
+  const saved = getSavedDevtoKey();
+  const el = $("devtoAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  const detail = devtoAccountsDetail.find((d) => d.key === "devto");
+  if (!saved && !detail) {
+    el.innerHTML = '<div class="empty">No key yet. Add yours below (one key - generate it at dev.to Settings &gt; Extensions).</div>';
+    return;
+  }
+  if (saved) {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(devtoAccountLabel("devto")) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" id="removeDevtoKeyBtn">Remove</button></div>';
+    el.appendChild(div);
+    div.querySelector("#removeDevtoKeyBtn").addEventListener("click", removeDevtoKey);
+  }
+  missingDevtoFromBrowser().forEach((k) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(devtoAccountLabel(k)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const DEVTO_SECRET_PENDING_KEY = "devto_secret_pending";
+function showDevtoSecretWarn(text) {
+  const el = $("devtoSecretWarn");
+  if (!el) return;
+  $("devtoSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideDevtoSecretWarn() {
+  const el = $("devtoSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncDevtoSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(DEVTO_SECRET_PENDING_KEY) === "1") {
+      showDevtoSecretWarn("The GitHub Secret (DEVTO_API_KEY) does not have your latest key yet - the last save failed. The key works in this browser, but the worker (GitHub) cannot use it until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateDevtoSecret(apiKey) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(apiKey || "");
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/DEVTO_API_KEY", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(DEVTO_SECRET_PENDING_KEY); } catch (e) {}
+    hideDevtoSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(DEVTO_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showDevtoSecretWarn("Could not save to the Secret: " + e.message +
+      " The key is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeDevtoKey() {
+  if (!confirm("Remove this API key?")) return;
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedDevtoKey(null);
+  renderDevtoAccountList();
+  renderDevtoAccountControls();
+  if (await updateDevtoSecret("")) {
+    showMsg("API key removed.", true);
+  } else {
+    showMsg("API key removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("devtoAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const apiKey = $("tfDevtoApiKey").value.trim();
+  if (!apiKey) { showMsg("Enter the API key from dev.to Settings > Extensions.", false); return; }
+  const missing = missingDevtoFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has a key not saved in this browser. " +
+    "Saving now will REPLACE it with this key. " +
+    "To keep the old one, re-enter it here first. Continue?")) return;
+  const entry = { api_key: apiKey };
+  // Save in THIS browser FIRST - the key works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedDevtoKey(entry);
+  renderDevtoAccountList();
+  renderDevtoAccountControls();
+  $("devtoAccountForm").reset();
+  if (await updateDevtoSecret(apiKey)) {
+    showMsg("API key saved.", true);
+  } else {
+    showMsg("API key saved in this browser - but the Secret is not updated yet. Press \"Retry Secret save\".", false);
+  }
+});
+$("retryDevtoSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryDevtoSecretBtn");
+  btn.disabled = true;
+  try {
+    const saved = getSavedDevtoKey();
+    if (await updateDevtoSecret(saved ? saved.api_key : "")) {
+      showMsg("Secret saved.", true);
+    }
+  } finally {
+    btn.disabled = false;
+  }
+});
+$("copyDevtoSecretBtn").addEventListener("click", async () => {
+  const saved = getSavedDevtoKey();
+  const value = saved ? saved.api_key : "";
+  try {
+    await navigator.clipboard.writeText(value);
+    showMsg("Secret value copied - paste it into the DEVTO_API_KEY Secret on GitHub.", true);
+  } catch (e) {
+    showMsg("Copy failed - select the key and copy it by hand.", false);
+  }
+});
+
+/* ---------- dev.to key controls (data/devto_accounts.json) ----------
+   Keyed by "devto" (there is ONE key). Kept in its own file
+   (data/devto_accounts.json) so saving one side's controls can
+   never wipe another's entries. The per-key daily counts live
+   in the worker state, not here. */
+let devtoAccountCtlSha = "";
+let devtoAccountCtl = {};
+async function loadDevtoAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/devto_accounts.json");
+    devtoAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    devtoAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.key) devtoAccountCtl[a.key] = a; });
+    }
+    renderDevtoAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function devtoAccountKeys() {
+  const set = new Set(devtoAccountsDetail.map((d) => d.key).filter(Boolean));
+  if (getSavedDevtoKey()) set.add("devto");
+  Object.keys(devtoAccountCtl).forEach((k) => set.add(k));
+  return Array.from(set);
+}
+function renderDevtoAccountControls() {
+  const keys = devtoAccountKeys();
+  const el = $("devtoAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!keys.length) {
+    el.innerHTML = '<span class="empty">Add your key above to control it here.</span>';
+    return;
+  }
+  keys.forEach((k) => {
+    const cfg = devtoAccountCtl[k] || {};
+    const detail = devtoAccountsDetail.find((d) => d.key === k);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.key = k;
+    div.innerHTML =
+      '<span class="name">' + esc(devtoAccountLabel(k)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveDevtoAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#devtoAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      key: row.dataset.key,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update dev.to key controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (devtoAccountCtlSha) body.sha = devtoAccountCtlSha;
+    const res = await gh("/contents/data/devto_accounts.json", "PUT", body);
+    devtoAccountCtlSha = (res.content && res.content.sha) || devtoAccountCtlSha;
+    list.forEach((a) => { devtoAccountCtl[a.key] = a; });
+    showMsg("Key controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save key controls: " + e.message, false);
+  }
+});
+
+/* ---------- Nostr keys (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Mastodon accounts above, keyed by npub (the public
+   key - the worker derives the SAME npub from the nsec and uses it
+   as the key for daily counts, gaps and per-key controls). The
+   worker reads the secret as plain JSON
+   [{"name": "...", "npub": "npub1...", "nsec": "nsec1..."}] - the
+   libsodium encryption in updateNostrSecret only protects the value
+   in transit to the GitHub API, which decrypts it server-side. The
+   nsec IS the account: whoever holds it controls the identity, so
+   it is NEVER shown back on this page (the list shows only the name
+   + npub), NEVER logged, and NEVER printed in any message - not
+   even in the copy fallback. There is no key generator here: the
+   user pastes the npub + nsec from their Nostr app (Primal / Damus
+   / Amethyst). The npub field is required so the dashboard can
+   label the key without doing crypto in the browser; the worker
+   re-derives the npub from the nsec and the derived value wins. */
+function nostrAccountKey(a) {
+  if (!a) return "";
+  return String(a.npub || a.key || "").trim();
+}
+function nostrShortNpub(npub) {
+  const n = String(npub || "").trim();
+  if (!n) return "";
+  return n.length > 20 ? n.slice(0, 12) + "…" + n.slice(-4) : n;
+}
+function getSavedNostrAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(NOSTR_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.npub && a.nsec) : [];
+  } catch (e) { return []; }
+}
+function saveSavedNostrAccounts(list) {
+  localStorage.setItem(NOSTR_KEY, JSON.stringify(list));
+}
+function missingNostrFromBrowser() {
+  const saved = new Set(getSavedNostrAccounts().map((a) => nostrAccountKey(a)));
+  return nostrAccountsDetail.map((d) => d.key).filter((k) => k && !saved.has(k));
+}
+function nostrAccountLabel(key) {
+  const saved = getSavedNostrAccounts().find((a) => nostrAccountKey(a) === key);
+  if (saved && saved.name) return saved.name + " (" + nostrShortNpub(key) + ")";
+  const detail = nostrAccountsDetail.find((d) => d.key === key);
+  if (detail && detail.name) return detail.name + " (" + nostrShortNpub(key) + ")";
+  return nostrShortNpub(key) || key;
+}
+function renderNostrAccountList() {
+  const saved = getSavedNostrAccounts();
+  const el = $("nostrAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !nostrAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No keys yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const key = nostrAccountKey(a);
+    const detail = nostrAccountsDetail.find((d) => d.key === key);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    // The nsec is NEVER rendered here - only the name + npub.
+    div.innerHTML = "<b>" + esc(nostrAccountLabel(key)) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeNostrAccount(Number(btn.dataset.acc)));
+  });
+  missingNostrFromBrowser().forEach((k) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(nostrAccountLabel(k)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const NOSTR_SECRET_PENDING_KEY = "nostr_secret_pending";
+function showNostrSecretWarn(text) {
+  const el = $("nostrSecretWarn");
+  if (!el) return;
+  $("nostrSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideNostrSecretWarn() {
+  const el = $("nostrSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncNostrSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(NOSTR_SECRET_PENDING_KEY) === "1") {
+      showNostrSecretWarn("The GitHub Secret (NOSTR_ACCOUNTS) does not have your latest keys yet - the last save failed. The keys work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateNostrSecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/NOSTR_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(NOSTR_SECRET_PENDING_KEY); } catch (e) {}
+    hideNostrSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(NOSTR_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showNostrSecretWarn("Could not save to the Secret: " + e.message +
+      " The key is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeNostrAccount(i) {
+  if (!confirm("Remove this key? The worker will stop posting as it. Your Nostr app still has the key - this only removes it from the dashboard and the Secret.")) return;
+  const saved = getSavedNostrAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedNostrAccounts(saved);
+  renderNostrAccountList();
+  renderNostrAccountControls();
+  if (await updateNostrSecret(saved)) {
+    showMsg("Key removed.", true);
+  } else {
+    showMsg("Key removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("nostrAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const name = $("tfNostrName").value.trim();
+  const npub = $("tfNostrNpub").value.trim();
+  const nsec = $("tfNostrNsec").value.trim();
+  if (!npub || !nsec) { showMsg("Enter the npub and the nsec from your Nostr app.", false); return; }
+  if (!npub.toLowerCase().startsWith("npub1")) { showMsg("That npub does not look right - it must start with npub1. Copy it from your Nostr app (Settings - Keys).", false); return; }
+  if (!nsec.toLowerCase().startsWith("nsec1")) { showMsg("That nsec does not look right - it must start with nsec1. Copy it from your Nostr app (Settings - Keys). Never share it with anyone.", false); return; }
+  const missing = missingNostrFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has keys not saved in this browser (" +
+    missing.map((k) => nostrShortNpub(k)).join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedNostrAccounts();
+  const entry = { npub: npub, nsec: nsec };
+  if (name) entry.name = name;
+  const idx = saved.findIndex((a) => nostrAccountKey(a) === nostrAccountKey(entry));
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the key works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedNostrAccounts(saved);
+  renderNostrAccountList();
+  renderNostrAccountControls();
+  $("nostrAccountForm").reset();
+  if (await updateNostrSecret(saved)) {
+    showMsg("Key saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Key saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryNostrSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryNostrSecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateNostrSecret(getSavedNostrAccounts())) {
+      showMsg("Secret saved - the worker now has your keys.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact NOSTR_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"name": "...", "npub": "npub1...", "nsec": "nsec1..."}] - the
+   libsodium encryption in updateNostrSecret only protects the value
+   in transit to the GitHub API, which decrypts it server-side.
+   Pasting the same JSON straight into the Secret on GitHub stores
+   exactly the same value, so this needs no library at all. The
+   warning stays until a successful "Retry Secret save" confirms
+   the Secret - that is the only way the dashboard can KNOW it is
+   saved. Unlike the other platforms, the fallback here NEVER prints
+   the value in a message: it holds the nsec, and the nsec must
+   never be shown back on screen. */
+$("copyNostrSecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedNostrAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name NOSTR_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = value;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      await copied();
+    } catch (e2) {
+      showMsg("Could not copy automatically - your browser blocked the clipboard. Copy the keys from your Nostr app again and paste them into the Secret yourself (GitHub - Settings - Secrets and variables - Actions - NOSTR_ACCOUNTS). The secret value is never shown on screen.", false);
+    }
+  }
+});
+
+/* ---------- Nostr per-key controls (data/nostr_accounts.json) ----------
+   Mirror of the Mastodon per-account controls above, keyed by npub
+   (the public key - never the nsec). Kept in its own file
+   (data/nostr_accounts.json) so saving one side's controls can
+   never wipe another's entries. */
+let nostrAccountCtlSha = "";
+let nostrAccountCtl = {};
+async function loadNostrAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/nostr_accounts.json");
+    nostrAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    nostrAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.key) nostrAccountCtl[a.key] = a; });
+    }
+    renderNostrAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function nostrAccountKeys() {
+  const set = new Set(nostrAccountsDetail.map((d) => d.key).filter(Boolean));
+  getSavedNostrAccounts().forEach((a) => set.add(nostrAccountKey(a)));
+  Object.keys(nostrAccountCtl).forEach((k) => set.add(k));
+  return Array.from(set);
+}
+function renderNostrAccountControls() {
+  const keys = nostrAccountKeys();
+  const el = $("nostrAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!keys.length) {
+    el.innerHTML = '<span class="empty">Add a key above to control it here.</span>';
+    return;
+  }
+  keys.forEach((k) => {
+    const cfg = nostrAccountCtl[k] || {};
+    const detail = nostrAccountsDetail.find((d) => d.key === k);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.key = k;
+    div.innerHTML =
+      '<span class="name">' + esc(nostrAccountLabel(k)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveNostrAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#nostrAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      key: row.dataset.key,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Nostr key controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (nostrAccountCtlSha) body.sha = nostrAccountCtlSha;
+    const res = await gh("/contents/data/nostr_accounts.json", "PUT", body);
+    nostrAccountCtlSha = (res.content && res.content.sha) || nostrAccountCtlSha;
+    list.forEach((a) => { nostrAccountCtl[a.key] = a; });
+    showMsg("Key controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save key controls: " + e.message, false);
+  }
+});
+
+/* ---------- Lemmy accounts (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Nostr accounts above, keyed by "instance|username"
+   (e.g. "lemmy.world|testuser" - the worker uses the SAME key for
+   daily counts, gaps and per-account controls). The worker reads
+   the secret as plain JSON
+   [{"instance": "lemmy.world", "username": "...", "password": "..."}]
+   - the libsodium encryption in updateLemmySecret only protects the
+   value in transit to the GitHub API, which decrypts it server-side.
+   The password IS the account: whoever holds it can post as the
+   user, so it is NEVER shown back on this page (the list shows only
+   the instance + username), NEVER logged, and NEVER printed in any
+   message - not even in the copy fallback. No app registration
+   exists on Lemmy: the user just has an account on an instance. */
+function lemmyCleanInstance(raw) {
+  let h = String(raw || "").trim().toLowerCase();
+  h = h.replace(/^https?:\/\//, "").replace(/\/+$/, "");
+  return h;
+}
+function lemmyAccountKey(a) {
+  if (!a) return "";
+  const host = lemmyCleanInstance(a.instance || a.host || "");
+  const user = String(a.username || a.user || "").trim();
+  if (!host || !user) return "";
+  return host + "|" + user;
+}
+function lemmyAccountLabel(key) {
+  return String(key || "").trim();
+}
+function getSavedLemmyAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(LEMMY_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.instance && a.username && a.password) : [];
+  } catch (e) { return []; }
+}
+function saveSavedLemmyAccounts(list) {
+  localStorage.setItem(LEMMY_KEY, JSON.stringify(list));
+}
+function missingLemmyFromBrowser() {
+  const saved = new Set(getSavedLemmyAccounts().map((a) => lemmyAccountKey(a)));
+  return lemmyAccountsDetail.map((d) => d.key).filter((k) => k && !saved.has(k));
+}
+function renderLemmyAccountList() {
+  const saved = getSavedLemmyAccounts();
+  const el = $("lemmyAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !lemmyAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const key = lemmyAccountKey(a);
+    const detail = lemmyAccountsDetail.find((d) => d.key === key);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    // The password is NEVER rendered here - only instance + username.
+    div.innerHTML = "<b>" + esc(lemmyAccountLabel(key)) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeLemmyAccount(Number(btn.dataset.acc)));
+  });
+  missingLemmyFromBrowser().forEach((k) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(lemmyAccountLabel(k)) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const LEMMY_SECRET_PENDING_KEY = "lemmy_secret_pending";
+function showLemmySecretWarn(text) {
+  const el = $("lemmySecretWarn");
+  if (!el) return;
+  $("lemmySecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideLemmySecretWarn() {
+  const el = $("lemmySecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncLemmySecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(LEMMY_SECRET_PENDING_KEY) === "1") {
+      showLemmySecretWarn("The GitHub Secret (LEMMY_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateLemmySecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/LEMMY_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(LEMMY_SECRET_PENDING_KEY); } catch (e) {}
+    hideLemmySecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(LEMMY_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showLemmySecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeLemmyAccount(i) {
+  if (!confirm("Remove this account? The worker will stop posting as it. Your Lemmy account still exists - this only removes it from the dashboard and the Secret.")) return;
+  const saved = getSavedLemmyAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedLemmyAccounts(saved);
+  renderLemmyAccountList();
+  renderLemmyAccountControls();
+  if (await updateLemmySecret(saved)) {
+    showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("lemmyAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const instance = lemmyCleanInstance($("tfLemmyInstance").value);
+  const username = $("tfLemmyUsername").value.trim();
+  const password = $("tfLemmyPassword").value;
+  if (!instance || !username || !password) { showMsg("Enter the instance, username and password.", false); return; }
+  if (instance.includes(" ") || instance.includes("/")) { showMsg("That instance does not look right - just the host, e.g. lemmy.world (no https://, no path).", false); return; }
+  const missing = missingLemmyFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedLemmyAccounts();
+  const entry = { instance: instance, username: username, password: password };
+  const idx = saved.findIndex((a) => lemmyAccountKey(a) === lemmyAccountKey(entry));
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedLemmyAccounts(saved);
+  renderLemmyAccountList();
+  renderLemmyAccountControls();
+  $("lemmyAccountForm").reset();
+  if (await updateLemmySecret(saved)) {
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryLemmySecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryLemmySecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateLemmySecret(getSavedLemmyAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact LEMMY_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"instance": "lemmy.world", "username": "...", "password": "..."}]
+   - the libsodium encryption in updateLemmySecret only protects the
+   value in transit to the GitHub API, which decrypts it server-side.
+   Pasting the same JSON straight into the Secret on GitHub stores
+   exactly the same value, so this needs no library at all. The
+   warning stays until a successful "Retry Secret save" confirms
+   the Secret - that is the only way the dashboard can KNOW it is
+   saved. Unlike the other platforms, the fallback here NEVER prints
+   the value in a message: it holds the password, and the password
+   must never be shown back on screen. */
+$("copyLemmySecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedLemmyAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name LEMMY_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = value;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      await copied();
+    } catch (e2) {
+      showMsg("Could not copy automatically - your browser blocked the clipboard. Copy the password from your Lemmy account again and paste it into the Secret yourself (GitHub - Settings - Secrets and variables - Actions - LEMMY_ACCOUNTS). The secret value is never shown on screen.", false);
+    }
+  }
+});
+
+/* ---------- Lemmy per-account controls (data/lemmy_accounts.json) ----------
+   Mirror of the Nostr per-key controls above, keyed by
+   "instance|username" (public - never the password). Kept in its own
+   file (data/lemmy_accounts.json) so saving one side's controls can
+   never wipe another's entries. */
+let lemmyAccountCtlSha = "";
+let lemmyAccountCtl = {};
+async function loadLemmyAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/lemmy_accounts.json");
+    lemmyAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    lemmyAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.key) lemmyAccountCtl[a.key] = a; });
+    }
+    renderLemmyAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function lemmyAccountKeys() {
+  const set = new Set(lemmyAccountsDetail.map((d) => d.key).filter(Boolean));
+  getSavedLemmyAccounts().forEach((a) => set.add(lemmyAccountKey(a)));
+  Object.keys(lemmyAccountCtl).forEach((k) => set.add(k));
+  return Array.from(set);
+}
+function renderLemmyAccountControls() {
+  const keys = lemmyAccountKeys();
+  const el = $("lemmyAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!keys.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  keys.forEach((k) => {
+    const cfg = lemmyAccountCtl[k] || {};
+    const detail = lemmyAccountsDetail.find((d) => d.key === k);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.key = k;
+    div.innerHTML =
+      '<span class="name">' + esc(lemmyAccountLabel(k)) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveLemmyAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#lemmyAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      key: row.dataset.key,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Lemmy account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (lemmyAccountCtlSha) body.sha = lemmyAccountCtlSha;
+    const res = await gh("/contents/data/lemmy_accounts.json", "PUT", body);
+    lemmyAccountCtlSha = (res.content && res.content.sha) || lemmyAccountCtlSha;
+    list.forEach((a) => { lemmyAccountCtl[a.key] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
 /* ---------- export / import (backup) + copy + reset ---------- */
 $("exportBtn").addEventListener("click", async () => {
   if (needToken()) return;
@@ -3361,13 +6535,41 @@ async function refreshAll() {
   await loadChecklist();
   await loadAccountCtl();
   await loadRedditAccountCtl();
+  await loadTumblrAccountCtl();
+  await loadThreadsAccountCtl();
+  await loadMastodonAccountCtl();
+  await loadTelegramAccountCtl();
+  await loadNostrAccountCtl();
+  await loadLemmyAccountCtl();
+  await loadDevtoAccountCtl();
   renderAccountList();
   renderAccountControls();
   renderRedditAccountList();
   renderRedditAccountControls();
+  renderTumblrAccountList();
+  renderTumblrAccountControls();
+  renderThreadsAccountList();
+  renderThreadsAccountControls();
+  renderMastodonAccountList();
+  renderMastodonAccountControls();
+  renderTelegramAccountList();
+  renderTelegramAccountControls();
+  renderNostrAccountList();
+  renderNostrAccountControls();
+  renderLemmyAccountList();
+  renderLemmyAccountControls();
+  renderDevtoAccountList();
+  renderDevtoAccountControls();
   renderCardLists();
   syncSecretWarn();
   syncRedditSecretWarn();
+  syncTumblrSecretWarn();
+  syncThreadsSecretWarn();
+  syncMastodonSecretWarn();
+  syncTelegramSecretWarn();
+  syncNostrSecretWarn();
+  syncLemmySecretWarn();
+  syncDevtoSecretWarn();
 }
 
 /* ---------- start: auto-login with the saved token ---------- */
