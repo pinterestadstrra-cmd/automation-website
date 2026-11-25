@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T20:56:10.256315+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['FCC approves SpaceX Starmind satellites', \"Gaza families' donation appeals\", 'Aaron Rodgers reportedly out', 'King tides threaten Bay Area flooding', 'Aaron Rodgers benched against Broncos']",
+    "created_at": "2026-11-25T20:56:10.250082+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T20:56:10.016155+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T20:56:10.014388+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T20:56:09.783767+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T20:56:06.902391+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T20:56:06.901071+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T20:56:06.899772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #106 started (--only blogger)",
+    "created_at": "2026-11-25T20:56:06.898276+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T20:38:17.399290+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://www.expocafeperu.com/w/2019/12/new-balance-1540v2-womens-sale-new-balance-1540-v2-womens-new (page: https://mazdaphamvandonghanoi.vn/new-mazda-cx-8-2-5l-signature-awd-1491915.html | New Balance 1540 M - only 1 of 28 key entities in the source page)",
     "created_at": "2026-11-25T18:37:48.712677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.expocafeperu.com/new-balance-1540-mens/ | Page 9 | 39,000+ New Years Set Pictures - only 1 of 28 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:48.710911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.freepik.com/photos/new-years-set/9 | Page 38 | Happy New Year Images - Free Download on  - only 1 of 28 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:48.708880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-    "created_at": "2026-11-25T18:37:48.705638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-    "created_at": "2026-11-25T18:37:48.532613+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-    "created_at": "2026-11-25T18:37:48.369756+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-    "created_at": "2026-11-25T18:37:48.299920+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:48.238822+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:48.237022+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://cdn.gianhangvn.com/image/new-mazda-cx8-bv-2-2iguxu5.jpg (page: https://www.freepik.com/photos/colorful-new-year-greetings/4 | New Mazda CX-8 2.5L Signature AWD - only 1 of 28 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:48.235368+00:00",
     "card": ""
   }
 ]
