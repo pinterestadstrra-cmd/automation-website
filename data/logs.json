@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T04:00:57.724536+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Measles risk grows for adults', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Dancing with the Stars scoring', 'November full supermoon']",
+    "created_at": "2026-11-25T04:00:57.719485+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T04:00:57.496258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T04:00:57.494741+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T04:00:57.234944+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T04:00:45.719172+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T04:00:45.718228+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #76 started (--only blogger)",
+    "created_at": "2026-11-25T04:00:45.716960+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T02:56:54.526512+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-24T23:32:56.336617+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-24T23:32:56.336037+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Here's a list of the individuals, including James ' - trying entity search 'James Comey'",
-    "created_at": "2026-11-24T23:32:56.335445+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://shaysshoes.com.au/cdn/shop/files/naot-sizechart.jpg?v=3517939442700210616 (page: https://www.amazon.com/Naot-Womens-Matai-Mary-Jane/dp/B00L5FY9LK | NAOT Conga Black | Orthotic Frien - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.334641+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://cdn.shopify.com/s/files/1/0628/7638/5337/files/naot-footwear-size-chart.png?v=1701285672 (page: https://shaysshoes.com.au/products/naot-conga | Revere Women's Genoa Shoe - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.334009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://modernshoe.com/media/img/size/Naot-Sizes.jpg (page: https://vergeofwellness.com/products/revere-orthopedic-footwear-amelle-genoa-f23-33gen | Naot Women' - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.333364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://cdn.shopify.com/s/files/1/0267/7869/7827/files/NAOT_SIZE_GUIDE.jpg?v=1584949035 (page: https://ossinework.com/naot-amadora-stone-n-63417-h53.html | Size Guides – Adavera Footwear - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.332688+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Senden%2C_Dortmund-Ems-Kanal_--_2014_--_299 (page: https://commons.wikimedia.org/wiki/File:Senden,_Dortmund-Ems-Kanal_--_2014_--_2991-5.jpg | File:Send - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.332029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Here's a list of the individuals, including James '): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/L%C3%BCdinghausen%2C_Berenbrock%2C_Dortmund (page: https://commons.wikimedia.org/wiki/File:L%C3%BCdinghausen,_Berenbrock,_Dortmund-Ems-Kanal_(an_der_Kr - the named person is not in the source page (comey, jame))",
-    "created_at": "2026-11-24T23:32:56.331291+00:00",
     "card": ""
   }
 ]
