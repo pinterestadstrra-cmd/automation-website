@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T21:56:54.580952+00:00",
-  "last_run": "2026-11-25T21:56:49.965627+00:00",
-  "runs": 108,
+  "generated_at": "2026-11-25T22:43:05.376211+00:00",
+  "last_run": "2026-11-25T22:37:35.487279+00:00",
+  "runs": 109,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T21:41:05.973680+00:00",
-    "mastodon.social": "2026-11-25T21:41:42.374389+00:00"
+    "Adsterra Blogger": "2026-11-25T22:41:01.811064+00:00",
+    "mastodon.social": "2026-11-25T22:43:05.200538+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 44,
+      "success": 45,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T21:41:05.973677+00:00"
+      "last_run": "2026-11-25T22:41:01.811059+00:00"
     },
     "mastodon.social": {
-      "success": 8,
+      "success": 9,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T21:41:42.374387+00:00"
+      "last_run": "2026-11-25T22:43:05.200531+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T21:41:05.973680+00:00",
-      "runs_today": 18,
-      "posts_today": 4,
+      "last_run": "2026-11-25T22:41:01.811064+00:00",
+      "runs_today": 19,
+      "posts_today": 5,
       "next_runs": [
-        "2026-11-26T04:11:05.973680+06:00",
-        "2026-11-26T04:26:05.973680+06:00",
-        "2026-11-26T04:41:05.973680+06:00",
-        "2026-11-26T04:56:05.973680+06:00",
-        "2026-11-26T05:11:05.973680+06:00"
+        "2026-11-26T04:56:01.811064+06:00",
+        "2026-11-26T05:11:01.811064+06:00",
+        "2026-11-26T05:26:01.811064+06:00",
+        "2026-11-26T05:41:01.811064+06:00",
+        "2026-11-26T05:56:01.811064+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T04:04:00+06:00",
         "2026-11-26T04:59:00+06:00",
         "2026-11-26T05:53:00+06:00",
         "2026-11-26T07:09:00+06:00",
-        "2026-11-26T08:05:00+06:00"
+        "2026-11-26T08:05:00+06:00",
+        "2026-11-26T09:00:00+06:00"
       ],
-      "success": 44,
+      "success": 45,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T21:41:42.374389+00:00",
-      "runs_today": 8,
-      "posts_today": 4,
+      "last_run": "2026-11-25T22:43:05.200538+00:00",
+      "runs_today": 9,
+      "posts_today": 5,
       "next_runs": [
-        "2026-11-26T04:11:42.374389+06:00",
-        "2026-11-26T04:26:42.374389+06:00",
-        "2026-11-26T04:41:42.374389+06:00",
-        "2026-11-26T04:56:42.374389+06:00",
-        "2026-11-26T05:11:42.374389+06:00"
+        "2026-11-26T04:58:05.200538+06:00",
+        "2026-11-26T05:13:05.200538+06:00",
+        "2026-11-26T05:28:05.200538+06:00",
+        "2026-11-26T05:43:05.200538+06:00",
+        "2026-11-26T05:58:05.200538+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T04:00:00+06:00",
         "2026-11-26T04:55:00+06:00",
         "2026-11-26T06:10:00+06:00",
         "2026-11-26T07:05:00+06:00",
-        "2026-11-26T08:03:00+06:00"
+        "2026-11-26T08:03:00+06:00",
+        "2026-11-26T08:58:00+06:00"
       ],
-      "success": 8,
+      "success": 9,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 18
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 8
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T21:56:49.966535+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T21:56:49.967257+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T22:37:35.488916+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
+    "Duran Duran's Andy Taylor dies",
+    "New Avengers: Doomsday poster",
+    "King tides threaten Bay Area flooding",
     "Macy's parade turns 100",
-    "Mike McCarthy's ice cream sandwich assistant",
-    "Medicare for All and universal healthcare",
+    "Aaron Rodgers criticizes Mike McCarthy",
     "FEMA hotline unanswered in Iowa",
-    "Aaron Rodgers benched against Broncos",
-    "Aaron Rodgers reportedly out",
-    "Grand Theft Auto VI",
-    "FCC approves SpaceX Starmind satellites",
-    "Huang reinstated as Nvidia CEO",
-    "Steven Universe actor comes out"
+    "AI water use compared to golf",
+    "Steven Universe actor comes out",
+    "Mike McCarthy's ice cream sandwich assistant",
+    "Huang reinstated as Nvidia CEO"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T21:56:54.383627+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T21:56:54.382391+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T21:56:54.079798+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T21:56:49.967887+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T21:56:49.967262+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T21:56:49.966541+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #108 started (--only blogger)",
-      "created_at": "2026-11-25T21:56:49.965646+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T21:41:42.374406+00:00",
+      "created_at": "2026-11-25T22:43:05.200560+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T21:41:42.373324+00:00",
+      "created_at": "2026-11-25T22:43:05.199137+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679253229018042",
-      "created_at": "2026-11-25T21:41:42.371731+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679494641285665",
+      "created_at": "2026-11-25T22:43:05.197669+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117679253229018042",
-      "created_at": "2026-11-25T21:41:42.229067+00:00",
+      "message": "mastodon: posted to mastodon.social: 117679494641285665",
+      "created_at": "2026-11-25T22:43:05.194900+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-25T21:41:35.656408+00:00",
+      "created_at": "2026-11-25T22:43:01.856916+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-25T21:41:35.602667+00:00",
+      "created_at": "2026-11-25T22:43:01.279826+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 20 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-25T21:41:35.601652+00:00",
+      "message": "promo: photo search done - 20 candidate(s) tried, 4 fresh stories with a photo attempt, 4 real-photo search(es), no usable photo",
+      "created_at": "2026-11-25T22:43:01.278693+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-25T21:41:35.600566+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+      "created_at": "2026-11-25T22:43:01.277603+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-      "created_at": "2026-11-25T21:41:35.599406+00:00",
+      "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T22:43:01.276039+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-25T21:41:35.598315+00:00",
+      "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+      "created_at": "2026-11-25T22:43:01.274884+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (9 download(s) tried)",
-      "created_at": "2026-11-25T21:41:35.597233+00:00",
+      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T22:43:01.273538+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-25T21:41:35.596123+00:00",
+      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T22:43:01.272317+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
+      "created_at": "2026-11-25T22:43:01.271158+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T22:43:01.269797+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 4/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T22:43:01.268557+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T22:43:01.267410+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (10 download(s) tried)",
+      "created_at": "2026-11-25T22:43:01.266271+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://d.newsweek.com/en/full/2535326/danica-patrick.jpg?w=1200&f=5dea864bc5c70098c7def389d9fb3be9 (page: Danica Patrick Blasts Starbucks After Gory Injury Update From Former NASCAR Driver - Newsweek - page does not name the entity (Bitter))",
+      "created_at": "2026-11-25T22:43:01.264819+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Bitter_Type_3_1Y7A6129.jpg/1280px-Bitter_Ty - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-25T22:43:01.261726+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T21:41:35.594298+00:00",
+      "created_at": "2026-11-25T22:43:01.260238+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-25T21:41:35.116250+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T21:41:35.114689+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-25T21:41:34.665400+00:00",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Bitter_Corsa_F_1X7A7182.jpg/1280px-Bitter_C - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-25T22:43:01.079943+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T21:41:34.663854+00:00",
+      "created_at": "2026-11-25T22:43:01.078273+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://e-tracking.net/app/img/how-its-works.png",
-      "created_at": "2026-11-25T21:41:34.585691+00:00",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Bitter_Astra_L_1X7A7183.jpg/1280px-Bitter_A - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-25T22:43:00.884832+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
-      "created_at": "2026-11-25T21:41:34.535902+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T22:43:00.883235+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
-      "created_at": "2026-11-25T21:41:34.508324+00:00",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Ale_Bitter.jpg/1280px-Ale_Bitter.jpg?utm_so - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-25T22:43:00.701975+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-      "created_at": "2026-11-25T21:41:34.474371+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T22:43:00.700660+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-      "created_at": "2026-11-25T21:41:34.443726+00:00",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Adriaen_Brouwer_-_The_Bitter_Potion_-_Googl - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-25T22:43:00.504756+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-      "created_at": "2026-11-25T21:41:34.412414+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T22:43:00.502864+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-25T21:41:34.377209+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
+      "created_at": "2026-11-25T22:43:00.289830+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-25T21:41:34.267118+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
+      "created_at": "2026-11-25T22:43:00.166971+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking'",
-      "created_at": "2026-11-25T21:41:34.159103+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
+      "created_at": "2026-11-25T22:43:00.053172+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-25T21:41:34.136998+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
+      "created_at": "2026-11-25T22:42:59.940184+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
+      "created_at": "2026-11-25T22:42:59.822377+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Bitter'",
+      "created_at": "2026-11-25T22:42:59.704010+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Bitter'",
+      "created_at": "2026-11-25T22:42:59.538279+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Bitter'",
+      "created_at": "2026-11-25T22:42:59.324762+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Bitter'",
+      "created_at": "2026-11-25T22:42:59.241234+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:33.676906+00:00",
+      "created_at": "2026-11-25T22:42:59.198157+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:33.675888+00:00",
+      "created_at": "2026-11-25T22:42:59.196821+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
-      "created_at": "2026-11-25T21:41:33.674750+00:00",
+      "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
+      "created_at": "2026-11-25T22:42:59.195471+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.673624+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/5b/0e/c6/5b0ec63f21f49b3b58d6fd726a84c84e.jpg (page: https://www.youtube.com/watch?v=g2D9WzwBfDE - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.194001+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.672452+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.ytimg.com/vi/gp1xC0imRBs/maxresdefault.jpg (page: https://www.pinterest.com/pin/507006870564579751/ | Take Me Home, Country Roads – John Denver (Class - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.192596+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.671274+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://greawarner.com/wp-content/uploads/2018/02/CountryRoadsCover-1.jpg (page: https://www.youtube.com/watch?v=gp1xC0imRBs | Country Roads - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.190950+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.670152+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.ytimg.com/vi/Fgwqi9Hj5OI/maxresdefault.jpg (page: https://greawarner.com/books/country-roads/ | Country Roads : COVER VERSION BY SUN DER - YouTube - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.189561+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-25T21:41:33.667461+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.188153+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-25T21:41:33.519111+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.186680+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-25T21:41:33.409871+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.185176+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-25T21:41:33.390513+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.183633+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:33.085370+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/A_history_of_all_nations_from_the_earliest_ (page: https://commons.wikimedia.org/wiki/File:A_history_of_all_nations_from_the_earliest_times;_being_a_un - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-25T22:42:59.182170+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T21:41:33.084392+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.083308+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.082262+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-25T21:41:33.081092+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Bitter U S political divide'",
+      "created_at": "2026-11-25T22:42:59.180034+00:00",
       "card": ""
     }
   ]
