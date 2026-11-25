@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T09:06:39.073225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['UK energy price cap to rise', 'Bird photography', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-25T09:06:39.070120+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T09:06:38.964948+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T09:06:38.963582+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T09:06:38.839309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T09:05:31.331223+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T09:05:31.330600+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #83 started (--only blogger)",
+    "created_at": "2026-11-25T09:05:31.329585+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T08:53:52.855555+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "prepare_bsky_image: published 900x489 (ratio 1.84) - unchanged",
     "created_at": "2026-11-25T04:01:12.511221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 900x489 (ratio 1.84) - kept, no crop",
-    "created_at": "2026-11-25T04:01:12.509412+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-25T04:01:12.507147+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-25T04:01:12.505443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump administration officials debating targeting Iran’s lea': https://mcnymx.infiniteuploads.cloud/2026/11/President-Donald-J.-Trump-2026.jpeg (from bing-images, query 'Trump administration officials debating targeting Iran’s leaders, sources say - NBC News', page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | House Democrats Put Trump Family, - matches 2 key entities (official, trump))",
-    "created_at": "2026-11-25T04:01:12.503565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T04:01:12.501330+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T04:01:12.477623+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T04:01:12.475174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-25T04:01:12.412375+00:00",
     "card": ""
   }
 ]

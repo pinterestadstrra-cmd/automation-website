@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T08:53:52.853375+00:00",
-  "last_run": "2026-11-25T08:51:14.687846+00:00",
-  "runs": 82,
+  "generated_at": "2026-11-25T09:06:39.072111+00:00",
+  "last_run": "2026-11-25T09:05:31.329571+00:00",
+  "runs": 83,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -76,11 +76,11 @@
         "2026-11-25T16:08:52.770196+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T15:04:00+06:00",
         "2026-11-25T15:58:00+06:00",
         "2026-11-25T16:53:00+06:00",
         "2026-11-25T18:10:00+06:00",
-        "2026-11-25T19:05:00+06:00"
+        "2026-11-25T19:05:00+06:00",
+        "2026-11-25T20:01:00+06:00"
       ],
       "success": 30,
       "fail": 4,
@@ -125,17 +125,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 5
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -147,12 +138,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -165,10 +156,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T08:51:14.689720+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T09:05:31.330594+00:00"
     }
   ],
   "dry_run": false,
@@ -178,18 +169,66 @@
   },
   "trending": [
     "UK energy price cap to rise",
+    "Bird photography",
     "Planned lead detonation in Iowa",
-    "Grand Theft Auto VI",
     "Nvidia hiring first compliance officer",
-    "Boreen daily trivia scores",
+    "Grand Theft Auto VI",
     "Trump calls Putin his friend",
-    "Tidal bans AI-generated music",
+    "Wave of software vulnerability disclosures",
     "Google plans personalized AI TV channel",
-    "Aaron Rodgers benched against Broncos",
-    "Jensen Huang's daily therapy remark"
+    "November full supermoon",
+    "Steelers bench Aaron Rodgers"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T09:06:38.964948+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T09:06:38.963582+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T09:06:38.839309+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T09:05:31.331223+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T09:05:31.330600+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #83 started (--only blogger)",
+      "created_at": "2026-11-25T09:05:31.329585+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T08:53:52.855555+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['UK energy price cap to rise', 'Planned lead detonation in Iowa', 'Grand Theft Auto VI', 'Nvidia hiring first compliance officer', 'Boreen daily trivia scores']",
+      "created_at": "2026-11-25T08:53:52.849603+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -440,54 +479,6 @@
       "level": "info",
       "message": "openverse: 0 result(s) for 'Russia's own figures show almost 500,000 deaths in war in Uk'",
       "created_at": "2026-11-25T08:52:32.811475+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T08:52:26.009381+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T08:52:26.008038+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Russia's own figures show almost 500,000 deaths in war in Uk' - rejected (no og:image)",
-      "created_at": "2026-11-25T08:52:26.006391+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE52ekxuU3VuendQQVpId1BlX21DeXpnMW9teFNfV1A3Nng0ODhEblNKSmRVd0dHcjFpY2x) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T08:52:26.003703+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Iran developing chemical weapons, Israeli ' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news upda')",
-      "created_at": "2026-11-25T08:52:25.733091+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T08:52:25.289811+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T08:52:24.979908+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T08:51:14.690930+00:00",
       "card": ""
     }
   ]
