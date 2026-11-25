@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T02:55:59.954638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['November full supermoon', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Wrong Lord of the Rings quotes', 'Tidal bans AI-generated music']",
+    "created_at": "2026-11-25T02:55:59.949695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T02:55:59.683590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T02:55:59.681153+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T02:55:59.291607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T02:55:50.500658+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T02:55:50.499590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #75 started (--only blogger)",
+    "created_at": "2026-11-25T02:55:50.497973+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T01:58:51.506341+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
     "created_at": "2026-11-24T23:32:51.666204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-24T23:32:51.551350+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-    "created_at": "2026-11-24T23:32:51.550681+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-24T23:32:51.549891+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-24T23:32:51.547790+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-24T23:32:51.301765+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (width 205px < 400): https://upload.wikimedia.org/wikipedia/commons/9/94/Logo_of_the_Democratic_Party_of_Guam.png?utm_sou",
-    "created_at": "2026-11-24T23:32:51.141987+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (width 210px < 400): https://upload.wikimedia.org/wikipedia/commons/7/79/American_Samoa_Democratic_Party_logo.png?utm_sou",
-    "created_at": "2026-11-24T23:32:51.141343+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-24T23:32:51.140079+00:00",
     "card": ""
   }
 ]

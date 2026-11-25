@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T01:58:51.504300+00:00",
-  "last_run": "2026-11-25T01:57:39.308041+00:00",
-  "runs": 74,
+  "generated_at": "2026-11-25T02:55:59.952734+00:00",
+  "last_run": "2026-11-25T02:55:50.497949+00:00",
+  "runs": 75,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 5,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 5,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -69,18 +69,18 @@
       "runs_today": 2,
       "posts_today": 7,
       "next_runs": [
-        "2026-11-25T08:13:51.455103+06:00",
-        "2026-11-25T08:28:51.455103+06:00",
-        "2026-11-25T08:43:51.455103+06:00",
         "2026-11-25T08:58:51.455103+06:00",
-        "2026-11-25T09:13:51.455103+06:00"
+        "2026-11-25T09:13:51.455103+06:00",
+        "2026-11-25T09:28:51.455103+06:00",
+        "2026-11-25T09:43:51.455103+06:00",
+        "2026-11-25T09:58:51.455103+06:00"
       ],
       "next_post_times": [
-        "2026-11-25T08:01:00+06:00",
         "2026-11-25T09:06:00+06:00",
         "2026-11-25T10:08:00+06:00",
         "2026-11-25T11:03:00+06:00",
-        "2026-11-25T11:57:00+06:00"
+        "2026-11-25T11:57:00+06:00",
+        "2026-11-25T12:52:00+06:00"
       ],
       "success": 24,
       "fail": 4,
@@ -125,17 +125,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 2
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -147,12 +138,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -165,10 +156,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T01:57:39.309720+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T02:55:50.499581+00:00"
     }
   ],
   "dry_run": false,
@@ -177,19 +168,67 @@
     "open": false
   },
   "trending": [
-    "Calls to release Epstein files",
+    "November full supermoon",
     "Planned lead detonation in Iowa",
     "Nvidia hiring first compliance officer",
-    "November full supermoon",
+    "Wrong Lord of the Rings quotes",
+    "Tidal bans AI-generated music",
+    "Kilmar Abrego Garcia case",
+    "Dancing with the Stars scoring",
+    "Jensen Huang's \"tortured story\" remark",
     "Kelsey Grammer's Beast first look",
-    "King tides threaten Bay Area flooding",
-    "\"I Know Your Age\" quiz",
-    "Pope Francis diary: devil encounters",
-    "GTA VI's Jason and Lucia",
-    "Tidal bans AI-generated music"
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T02:55:59.683590+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T02:55:59.681153+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T02:55:59.291607+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T02:55:50.500658+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T02:55:50.499590+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #75 started (--only blogger)",
+      "created_at": "2026-11-25T02:55:50.497973+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T01:58:51.506341+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Calls to release Epstein files', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'November full supermoon', \"Kelsey Grammer's Beast first look\"]",
+      "created_at": "2026-11-25T01:58:51.501246+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -440,54 +479,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://s.yimg.com/lo/mysterio/api/5d5248a907b22ba7c6441ad938bec3182661623447e85b6c4418d7c32fc5a9a2/ (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 11 key entities in the source page)",
       "created_at": "2026-11-25T01:58:04.027946+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://newscentraltv.com/democrats-seal-sweeping-congressional-majority/ | Democrats Secure Largest - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T01:58:04.026694+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats urge Cuba free prisoners'",
-      "created_at": "2026-11-25T01:58:04.024089+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats urge Cuba free prisoners'",
-      "created_at": "2026-11-25T01:58:03.909922+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Democrats urge Cuba free prisoners'",
-      "created_at": "2026-11-25T01:58:03.758922+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Democrats urge Cuba free prisoners'",
-      "created_at": "2026-11-25T01:58:03.300947+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T01:57:54.150246+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T01:57:54.148663+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://lasvegasthenandnow.com/wp-content/uploads/2026/06/Vanderpump-Hotel-Exterior-and-Road-scaled. (page: https://people.com/lisa-vanderpump-s-industrial-romantic-boutique-hotel-officially-opens-in-las-vega - only 0 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T01:57:54.146515+00:00",
       "card": ""
     }
   ]
