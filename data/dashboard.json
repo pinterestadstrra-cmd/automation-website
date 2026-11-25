@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T20:56:10.252959+00:00",
-  "last_run": "2026-11-25T20:56:06.898256+00:00",
-  "runs": 106,
+  "generated_at": "2026-11-25T21:41:42.630256+00:00",
+  "last_run": "2026-11-25T21:39:01.036078+00:00",
+  "runs": 107,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T20:37:49.945958+00:00",
-    "mastodon.social": "2026-11-25T20:38:17.182788+00:00"
+    "Adsterra Blogger": "2026-11-25T21:41:05.973680+00:00",
+    "mastodon.social": "2026-11-25T21:41:42.374389+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 43,
+      "success": 44,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T20:37:49.945955+00:00"
+      "last_run": "2026-11-25T21:41:05.973677+00:00"
     },
     "mastodon.social": {
-      "success": 7,
+      "success": 8,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T20:38:17.182784+00:00"
+      "last_run": "2026-11-25T21:41:42.374387+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T20:37:49.945958+00:00",
-      "runs_today": 17,
-      "posts_today": 3,
+      "last_run": "2026-11-25T21:41:05.973680+00:00",
+      "runs_today": 18,
+      "posts_today": 4,
       "next_runs": [
-        "2026-11-26T03:07:49.945958+06:00",
-        "2026-11-26T03:22:49.945958+06:00",
-        "2026-11-26T03:37:49.945958+06:00",
-        "2026-11-26T03:52:49.945958+06:00",
-        "2026-11-26T04:07:49.945958+06:00"
+        "2026-11-26T03:56:05.973680+06:00",
+        "2026-11-26T04:11:05.973680+06:00",
+        "2026-11-26T04:26:05.973680+06:00",
+        "2026-11-26T04:41:05.973680+06:00",
+        "2026-11-26T04:56:05.973680+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T03:08:00+06:00",
         "2026-11-26T04:04:00+06:00",
         "2026-11-26T04:59:00+06:00",
         "2026-11-26T05:53:00+06:00",
-        "2026-11-26T07:09:00+06:00"
+        "2026-11-26T07:09:00+06:00",
+        "2026-11-26T08:05:00+06:00"
       ],
-      "success": 43,
+      "success": 44,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T20:38:17.182788+00:00",
-      "runs_today": 7,
-      "posts_today": 3,
+      "last_run": "2026-11-25T21:41:42.374389+00:00",
+      "runs_today": 8,
+      "posts_today": 4,
       "next_runs": [
-        "2026-11-26T03:08:17.182788+06:00",
-        "2026-11-26T03:23:17.182788+06:00",
-        "2026-11-26T03:38:17.182788+06:00",
-        "2026-11-26T03:53:17.182788+06:00",
-        "2026-11-26T04:08:17.182788+06:00"
+        "2026-11-26T03:56:42.374389+06:00",
+        "2026-11-26T04:11:42.374389+06:00",
+        "2026-11-26T04:26:42.374389+06:00",
+        "2026-11-26T04:41:42.374389+06:00",
+        "2026-11-26T04:56:42.374389+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T03:06:00+06:00",
         "2026-11-26T04:00:00+06:00",
         "2026-11-26T04:55:00+06:00",
         "2026-11-26T06:10:00+06:00",
-        "2026-11-26T07:05:00+06:00"
+        "2026-11-26T07:05:00+06:00",
+        "2026-11-26T08:03:00+06:00"
       ],
-      "success": 7,
+      "success": 8,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 17
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 7
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T20:56:06.899763+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T20:56:06.901062+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T21:39:01.037511+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
+    "Macy's parade turns 100",
+    "Mike McCarthy's ice cream sandwich assistant",
     "FCC approves SpaceX Starmind satellites",
-    "Gaza families' donation appeals",
-    "Aaron Rodgers reportedly out",
-    "King tides threaten Bay Area flooding",
-    "Aaron Rodgers benched against Broncos",
+    "Vance blames Obama for detonation",
     "FEMA hotline unanswered in Iowa",
-    "Canned cranberry sauce",
+    "Aaron Rodgers reportedly out",
+    "Aaron Rodgers criticizes Mike McCarthy",
     "Huang reinstated as Nvidia CEO",
     "Grand Theft Auto VI",
-    "Joyce Carol Oates on trans literature"
+    "Steven Universe actor comes out"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T20:56:10.016155+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T20:56:10.014388+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T20:56:09.783767+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T20:56:06.902391+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T20:56:06.901071+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T20:56:06.899772+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #106 started (--only blogger)",
-      "created_at": "2026-11-25T20:56:06.898276+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T20:38:17.399290+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Grand Theft Auto VI', 'FCC approves SpaceX Starmind satellites', 'Israeli strikes in Gaza', 'Aaron Rodgers reportedly out', 'Aaron Rodgers criticizes Mike McCarthy']",
-      "created_at": "2026-11-25T20:38:17.393818+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T20:38:17.182812+00:00",
+      "created_at": "2026-11-25T21:41:42.374406+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T20:38:17.180858+00:00",
+      "created_at": "2026-11-25T21:41:42.373324+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679003875840138",
-      "created_at": "2026-11-25T20:38:17.178856+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679253229018042",
+      "created_at": "2026-11-25T21:41:42.371731+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117679003875840138",
-      "created_at": "2026-11-25T20:38:17.175836+00:00",
+      "message": "mastodon: posted to mastodon.social: 117679253229018042",
+      "created_at": "2026-11-25T21:41:42.229067+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Putin's war death toll reportedly tops 700,000 as Russia scr' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T20:38:09.896429+00:00",
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-25T21:41:35.656408+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-25T21:41:35.602667+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-25T20:38:09.895027+00:00",
+      "message": "promo: photo search done - 20 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-25T21:41:35.601652+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Putin's war death toll reportedly tops 700,000 as Russia scr': https://www.the-sun.com/wp-content/uploads/sites/6/2022/12/RB-COMP-RUSSIAS-LOSSES-2.jpg?quality=90&s (from bing-images, query 'Putin's war death toll reportedly tops 700,000 as Russia scrambles for recruits - Fox News', page: https://sofrep.com/news/russias-combat-death-toll-and-possible-escalation/ | Inside huge death toll  - matches 5 key entities (death, news, putin, russia))",
-      "created_at": "2026-11-25T20:38:09.893595+00:00",
+      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+      "created_at": "2026-11-25T21:41:35.600566+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Putin's war death toll reportedly tops 700,000 as ' (. The photo shows a Russian military cemetery and war losses graphic, depicting the human cost and casualties associated with Russia's war in Ukraine )",
-      "created_at": "2026-11-25T20:38:09.891895+00:00",
+      "message": "promo: story 6/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T21:41:35.599406+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Putin's war death toll reportedly tops 700,000 as Russia scr'",
-      "created_at": "2026-11-25T20:37:52.623167+00:00",
+      "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T21:41:35.598315+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Putin's war death toll reportedly tops 700,000 as Russia scr'",
-      "created_at": "2026-11-25T20:37:52.109678+00:00",
+      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (9 download(s) tried)",
+      "created_at": "2026-11-25T21:41:35.597233+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Putin's war death toll reportedly tops 700,000 as Russia scr'",
-      "created_at": "2026-11-25T20:37:51.922298+00:00",
+      "message": "photo: rejected (vision down, strict check): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-25T21:41:35.596123+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Putin's war death toll reportedly tops 700,000 as Russia scr'",
-      "created_at": "2026-11-25T20:37:51.668457+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T21:41:35.594298+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-25T21:41:35.116250+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T21:41:35.114689+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-25T21:41:34.665400+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T21:41:34.663854+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://e-tracking.net/app/img/how-its-works.png",
+      "created_at": "2026-11-25T21:41:34.585691+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
+      "created_at": "2026-11-25T21:41:34.535902+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
+      "created_at": "2026-11-25T21:41:34.508324+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
+      "created_at": "2026-11-25T21:41:34.474371+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
+      "created_at": "2026-11-25T21:41:34.443726+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
+      "created_at": "2026-11-25T21:41:34.412414+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-25T21:41:34.377209+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-25T21:41:34.267118+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Tracking'",
+      "created_at": "2026-11-25T21:41:34.159103+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Tracking'",
+      "created_at": "2026-11-25T21:41:34.136998+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T20:37:51.079776+00:00",
+      "created_at": "2026-11-25T21:41:33.676906+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T20:37:51.078213+00:00",
+      "created_at": "2026-11-25T21:41:33.675888+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Putin's war death toll reportedly tops 700,000 as Russia scr' - rejected (no og:image)",
-      "created_at": "2026-11-25T20:37:51.076858+00:00",
+      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
+      "created_at": "2026-11-25T21:41:33.674750+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxQU1NMcm5VaGI1YU5yZUtBbUxrTFRUcW5WOW9HSUM1QngtQ2d0a1NEZF9KWFVHSDhyNXA) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T20:37:51.074501+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.673624+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - skipped (same event used within 24h, event key '000 490 cbs data died leak news russian soldier suggest than')",
-      "created_at": "2026-11-25T20:37:50.587598+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.672452+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - skipped (same event used within 24h, event key 'hit inevitable jazeera oil plant putin retaliation russian u')",
-      "created_at": "2026-11-25T20:37:50.585926+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.671274+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
-      "created_at": "2026-11-25T20:37:50.584415+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.670152+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera live mine tanker war')",
-      "created_at": "2026-11-25T20:37:50.582576+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-25T21:41:33.667461+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T20:37:49.949075+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T20:37:49.947519+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T20:37:49.945977+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T20:37:49.944509+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'companie economic global importance nvidia push show time tr' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T20:37:49.942475+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1200x799 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-25T20:37:48.194725+00:00",
+      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-25T21:41:33.519111+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1200x799 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-25T20:37:48.193280+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-25T21:41:33.409871+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
-      "created_at": "2026-11-25T20:37:48.190510+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T20:37:47.885857+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T20:37:47.884312+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T20:37:47.881893+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to vqh888.bsky.social (hot post by jamellebouie.net, comment: 'Got mine Monday.  Your post is a cue for me to get my butt i') as primonewstoday.bsky.social: 'Haha, love that enthusiasm! Nothing like fresh greens to power up the day. Enjoy'",
-      "created_at": "2026-11-25T20:37:42.327664+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to alandvalonline.bsky.social (hot post by jamellebouie.net, comment: 'I was a Perishables Manager for Food Lion years ago.  Loved ') as primonewstoday.bsky.social: 'Wow, that’s the kind of green overload we all dream about! 🌿🚗\n\nhttps://shorturl.'",
-      "created_at": "2026-11-25T20:37:39.328029+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T20:37:37.453878+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'Trump's rescue of Nvidia's Huang brings political risks - BB' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T20:37:37.452028+00:00",
+      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-25T21:41:33.390513+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T20:37:33.544763+00:00",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T21:41:33.085370+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-25T20:37:33.543420+00:00",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T21:41:33.084392+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Trump's rescue of Nvidia's Huang brings political risks - BB': https://www.twincities.com/wp-content/uploads/2025/05/Trump_92784_9260f1.jpg (from bing-images, query 'Trump's rescue of Nvidia's Huang brings political risks - BBC', page: https://nypost.com/2025/12/08/business/trump-gives-green-light-to-nvidia-to-ship-powerful-ai-chips-t - matches 2 key entities (nvidia, trump))",
-      "created_at": "2026-11-25T20:37:33.541875+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.083308+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Trump's rescue of Nvidia's Huang brings political ' (The photo shows Donald Trump and Nvidia CEO Jensen Huang (Huang) standing together at a podium, directly matching the subjects of the headline.)",
-      "created_at": "2026-11-25T20:37:33.539950+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.082262+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://www.finance-monthly.com/wp-content/uploads/2025/07/108139103-17460485422025-04-30t212829z_78",
-      "created_at": "2026-11-25T20:35:57.031657+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.081092+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://politifact.com/wp-content/uploads/2026/02/Donald_Trump_and_Nvidia_CEO_Jensen_Huang_4-30-2025",
-      "created_at": "2026-11-25T20:35:56.344411+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-25T21:41:33.079883+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+      "created_at": "2026-11-25T21:41:33.077507+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+      "created_at": "2026-11-25T21:41:32.925179+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Tracking Trump's Crackdown on Higher Education'",
+      "created_at": "2026-11-25T21:41:32.800250+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
+      "created_at": "2026-11-25T21:41:32.780620+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T21:41:32.592760+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T21:41:32.591612+00:00",
       "card": ""
     }
   ]
