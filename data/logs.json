@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T19:56:59.406136+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Canned cranberry sauce', 'Steven Universe actor comes out', 'Grand Theft Auto VI', 'Showing up to Thanksgiving dinner', 'Aaron Rodgers criticizes Mike McCarthy']",
+    "created_at": "2026-11-25T19:56:59.399515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T19:56:59.168047+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T19:56:59.094859+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T19:56:58.748155+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T19:56:55.085399+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T19:56:55.084311+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T19:56:55.083225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #104 started (--only blogger)",
+    "created_at": "2026-11-25T19:56:55.081909+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T19:40:08.046431+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-25T18:37:45.422542+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarp/aarp_foundation/2022/aarp-banner-white-1140x311.imgcache.rev4d (page: https://my.aarpfoundation.org/student-loan-webinars/ | AARP Foundation - For a Future Without Senior - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:45.421038+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarp/aarp_foundation/2024/AARPF-Logo-1140x101.png (page: https://www.aarp.org/aarp-foundation/ | AARP Foundation - For a Future Without Senior Poverty - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:45.419451+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://foundation.aarp.org/files/aarp/AARPF_LogowTagCOLOR.jpg (page: https://foundation.aarp.org/ | Make a gift to help struggling seniors | AARP Foundation - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:45.417748+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarpe/en/home/press/releases/2017-11-09-aarp-foundation-rock-health (page: https://foundation.aarp.org/site/Donation/2025-web-widget | AARP Foundation, Rock Health Announce Fi - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:45.415998+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T18:37:45.413105+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T18:37:45.215201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T18:37:45.082007+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
-    "created_at": "2026-11-25T18:37:45.019000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:44.956094+00:00",
     "card": ""
   }
 ]
