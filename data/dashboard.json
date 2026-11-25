@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T02:55:59.952734+00:00",
-  "last_run": "2026-11-25T02:55:50.497949+00:00",
+  "generated_at": "2026-11-25T02:56:54.524402+00:00",
+  "last_run": "2026-11-25T02:55:44.975276+00:00",
   "runs": 75,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 3,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 3,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -35,7 +35,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T01:58:51.455103+00:00"
+    "Adsterra Blogger": "2026-11-25T02:56:54.503423+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -46,11 +46,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 24,
+      "success": 25,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T01:58:51.455097+00:00"
+      "last_run": "2026-11-25T02:56:54.503416+00:00"
     }
   },
   "file_cards": [
@@ -65,15 +65,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T01:58:51.455103+00:00",
-      "runs_today": 2,
-      "posts_today": 7,
+      "last_run": "2026-11-25T02:56:54.503423+00:00",
+      "runs_today": 3,
+      "posts_today": 8,
       "next_runs": [
-        "2026-11-25T08:58:51.455103+06:00",
-        "2026-11-25T09:13:51.455103+06:00",
-        "2026-11-25T09:28:51.455103+06:00",
-        "2026-11-25T09:43:51.455103+06:00",
-        "2026-11-25T09:58:51.455103+06:00"
+        "2026-11-25T09:11:54.503423+06:00",
+        "2026-11-25T09:26:54.503423+06:00",
+        "2026-11-25T09:41:54.503423+06:00",
+        "2026-11-25T09:56:54.503423+06:00",
+        "2026-11-25T10:11:54.503423+06:00"
       ],
       "next_post_times": [
         "2026-11-25T09:06:00+06:00",
@@ -82,7 +82,7 @@
         "2026-11-25T11:57:00+06:00",
         "2026-11-25T12:52:00+06:00"
       ],
-      "success": 24,
+      "success": 25,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -125,8 +125,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -138,12 +147,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -156,10 +165,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T02:55:50.499581+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T02:55:44.976883+00:00"
     }
   ],
   "dry_run": false,
@@ -183,38 +192,224 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T02:55:59.683590+00:00",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-25T02:56:54.503448+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T02:56:54.502197+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'cuba democrat exclusive free prisoner rise tension today top' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T02:56:54.500382+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1200x675 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-25T02:56:52.742372+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1200x675 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-25T02:56:52.741066+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
+      "created_at": "2026-11-25T02:56:52.737623+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T02:56:52.592981+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 3 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-25T02:56:52.591450+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 0 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T02:56:52.589895+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to tress333.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Wonderful human! Oh and Dr. El-Sayed, thank you for the Gree') as primonewstoday.bsky.social: 'Thanks! Nothing like a good pasty and a shout‑out to the Pack. 🙌\n\nhttps://shortu'",
+      "created_at": "2026-11-25T02:56:46.160908+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to heramopr77.bsky.social (hot post by abdulelsayed.bsky.social, comment: '') as primonewstoday.bsky.social: 'Sounds like a perfect blend of flavors and community vibes! 🌟\n\nhttps://shorturl.'",
+      "created_at": "2026-11-25T02:56:43.259890+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to skeeterpond.bsky.social (hot post by bodegacats.bsky.social, comment: 'zabloing') as primonewstoday.bsky.social: 'Haha, that's a new one! 😂\n\nhttps://shorturl.at/eZnco'",
+      "created_at": "2026-11-25T02:56:40.048961+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T02:56:38.664627+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-25T02:56:38.662621+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T02:56:04.066695+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-25T02:56:04.065366+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia': https://wallpapers.com/images/file/vladimir-putin-world-conference-ni91ta8e3u1imw93.jpg (from bing-images, query 'Putin says retaliation ‘inevitable’ after Ukraine hit Russian oil plants - Al Jazeera', page: https://www.bloomberg.com/opinion/articles/2022-09-01/vladimir-putin-is-russia-s-deluder-in-chief-on - matches 2 key entities (putin, ukraine))",
+      "created_at": "2026-11-25T02:56:04.063195+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Putin says retaliation ‘inevitable’ after Ukraine ' (, the photo shows Russian President Vladimir Putin, who is the subject making the statement referenced in the headline.)",
+      "created_at": "2026-11-25T02:56:04.059505+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): https://wallpapers.com/images/hd/vladimir-putin-pointing-to-his-left-vpnoo5uql151npyw.jpg (page: https://wallpapers.com/wallpapers/vladimir-putin-portrait-photo-i3jrcnpy457aef5w.html | [600+] Vladi - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T02:55:57.139795+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): http://static.kremlin.ru/media/events/press-photos/orig/41d3e9385e34ebc0e3ba.jpeg?kremlin-ru_photo-1 (page: https://wallpapers.com/vladimir-putin | Photo bank ∙ For the Media ∙ President of Russia - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T02:55:57.138489+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): https://wallpapercave.com/wp/wp3090445.jpg (page: http://en.kremlin.ru/press/photo | Vladimir Putin Wallpapers - Wallpaper Cave - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T02:55:57.137224+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
+      "created_at": "2026-11-25T02:55:57.134054+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
+      "created_at": "2026-11-25T02:55:57.012472+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
+      "created_at": "2026-11-25T02:55:56.906318+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
+      "created_at": "2026-11-25T02:55:56.537703+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T02:55:49.567830+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T02:55:49.566529+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - rejected (no og:image)",
+      "created_at": "2026-11-25T02:55:49.565176+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVlLVzNGdDA4X0FlQVJiZDFvR2RncEpnbThvT3ZhSTVrUzlwaXh6aWtreGRaaV82T1B) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T02:55:49.562547+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Saudi-led coalition strikes Yemen’s Hodeidah ' - skipped (same event used within 24h, event key 'coalition hodeidah iran jazeera led live port saudi strike w')",
+      "created_at": "2026-11-25T02:55:49.262440+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war updates: Saudi-led coalition orders evacuation of H' - skipped (same event used within 24h, event key 'coalition evacuation hodeidah iran jazeera led order port sa')",
+      "created_at": "2026-11-25T02:55:49.260930+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: Iran developing chemical weapons, Israeli ' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news upda')",
+      "created_at": "2026-11-25T02:55:49.258758+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T02:55:59.681153+00:00",
+      "created_at": "2026-11-25T02:55:48.779933+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T02:55:59.291607+00:00",
+      "created_at": "2026-11-25T02:55:48.427225+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T02:55:50.500658+00:00",
+      "created_at": "2026-11-25T02:55:44.978052+00:00",
       "card": ""
     },
     {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T02:55:50.499590+00:00",
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-25T02:55:44.976893+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #75 started (--only blogger)",
-      "created_at": "2026-11-25T02:55:50.497973+00:00",
+      "message": "worker run #75 started (--only bluesky)",
+      "created_at": "2026-11-25T02:55:44.975300+00:00",
       "card": ""
     },
     {
@@ -294,192 +489,6 @@
       "message": "card 'Adsterra Blogger': replied to caramel7126.bsky.social (hot post by abdulelsayed.bsky.social, comment: '💙💫💙💫💙💫💙💫') as primonewstoday.bsky.social: 'Love the vibe! Those emojis totally capture the excitement. 🌟\n\nhttps://shorturl.'",
       "created_at": "2026-11-25T01:58:42.930095+00:00",
       "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to timgrahamart.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Abdul just being a normal person really highlights what frea') as primonewstoday.bsky.social: 'Totally get it—seeing everyday folks just being themselves can be a real eye‑ope'",
-      "created_at": "2026-11-25T01:58:40.097468+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to berbotty.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'so Michigan had a bunch of miners immigrate from Cornwall ti') as primonewstoday.bsky.social: 'Totally! Those Cornish roots travel far—just like a good pasty finds a home wher'",
-      "created_at": "2026-11-25T01:58:37.231408+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to bokvokter.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Yesss Michigan pasties UP mentioned!!!!!! So thrilled to hav') as primonewstoday.bsky.social: 'Thanks! Michigan’s food scene is amazing—can’t wait to share more of those tasty'",
-      "created_at": "2026-11-25T01:58:34.442413+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T01:58:33.199060+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'Top Democrats urge Cuba to free prisoners as US tensions ris' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T01:58:33.197468+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T01:58:30.016962+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-25T01:58:30.015887+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Top Democrats urge Cuba to free prisoners as US tensions ris': https://s.yimg.com/lo/mysterio/api/5d5248a907b22ba7c6441ad938bec3182661623447e85b6c4418d7c32fc5a9a2/ (from bing-images, query 'Democrats', page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - page names the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:30.014616+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: YES - photo matches 'Top Democrats urge Cuba to free prisoners as US te' (. The image shows a group of prominent Democratic lawmakers, including Senate Majority Leader Chuck Schumer and House Democratic Leader Hakeem Jeffrie)",
-      "created_at": "2026-11-25T01:58:30.013129+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
-      "created_at": "2026-11-25T01:58:21.685351+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: NO - photo rejected for 'Top Democrats urge Cuba to free prisoners as US te' (\n\nReason: The image shows campaign buttons, not the people, places, or events related to US-Cuba relations or prisoners.)",
-      "created_at": "2026-11-25T01:58:21.683180+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://upload.wikimedia.org/wikipedia/commons/8/89/Richmond_County_Democratic_Party.png?utm_source= (page: https://commons.wikimedia.org/wiki/File:Richmond_County_Democratic_Party.png | File:Richmond County  - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:05.088449+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Democratic_presidential_ticket_1864b.jpg/12 (page: https://commons.wikimedia.org/wiki/File:Democratic_presidential_ticket_1864b.jpg | File:Democratic p - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:05.087413+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://upload.wikimedia.org/wikipedia/commons/5/55/Chicago_Democratic_Convention_1968.png?utm_sourc (page: https://commons.wikimedia.org/wiki/File:Chicago_Democratic_Convention_1968.png | File:Chicago Democr - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:05.086270+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:05.085058+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-      "created_at": "2026-11-25T01:58:05.083576+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:04.971427+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:04.970308+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-25T01:58:04.969181+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-25T01:58:04.966976+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-25T01:58:04.798875+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: rejected candidate (width 205px < 400): https://upload.wikimedia.org/wikipedia/commons/9/94/Logo_of_the_Democratic_Party_of_Guam.png?utm_sou",
-      "created_at": "2026-11-25T01:58:04.653430+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: rejected candidate (width 210px < 400): https://upload.wikimedia.org/wikipedia/commons/7/79/American_Samoa_Democratic_Party_logo.png?utm_sou",
-      "created_at": "2026-11-25T01:58:04.652249+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-25T01:58:04.650491+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-25T01:58:04.105085+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T01:58:04.036295+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T01:58:04.035185+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Top Democrats urge Cuba to free prisoners as US te' - trying entity search 'Democrats'",
-      "created_at": "2026-11-25T01:58:04.033971+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T01:58:04.030302+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T01:58:04.029161+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Top Democrats urge Cuba to free prisoners as US te'): https://s.yimg.com/lo/mysterio/api/5d5248a907b22ba7c6441ad938bec3182661623447e85b6c4418d7c32fc5a9a2/ (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-25T01:58:04.027946+00:00",
-      "card": ""
     }
   ]
 }
