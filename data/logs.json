@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-25T18:52:43.736699+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Canned cranberry sauce', 'AI water use compared to golf', 'Grand Theft Auto VI', 'Army lead detonation in Iowa', 'Nvidia hiring first compliance officer']",
+    "created_at": "2026-11-25T18:52:43.439419+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T18:52:43.310998+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T18:52:43.309246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T18:52:42.993761+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T18:52:36.190919+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T18:52:36.189767+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T18:52:36.188707+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #102 started (--only blogger)",
+    "created_at": "2026-11-25T18:52:36.187509+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-25T18:38:02.826338+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 9 key entities in the source page)",
     "created_at": "2026-11-25T18:37:36.632566+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:36.630607+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US shelves plans business deals'",
-    "created_at": "2026-11-25T18:37:36.627539+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US shelves plans business deals'",
-    "created_at": "2026-11-25T18:37:36.463342+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'US shelves plans business deals'",
-    "created_at": "2026-11-25T18:37:36.334428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US shelves plans business deals'",
-    "created_at": "2026-11-25T18:37:35.921533+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:35.517309+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:35.513985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:35.509599+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:35.507927+00:00",
     "card": ""
   }
 ]
