@@ -185,19 +185,18 @@ def _load_env_reddit_accounts():
 
 ENV_REDDIT_ACCOUNTS = _load_env_reddit_accounts()
 
-# Gemini models to try, in order (latest first).
-# Rebuild #7.4: gemini-2.5-flash-lite is DEAD for new users (live
-# API error 2026-11-23: HTTP 404 "no longer available to new users -
-# use models/gemini-3.5-flash-lite") - it is now LAST, never first.
-# User order 2026-11-23: install the LATEST Gemini model. Nov 2026
-# lineup: Gemini 4 Argon (flagship), Gemini 4 Hydrogen (fast,
-# lower-cost), Gemini 3.8 Flash (Google's recommended default for new
-# projects), then 3.5 Flash-Lite. Failover walks the whole list, so a
-# model that 404s costs one attempt and the next one is tried.
-GEMINI_MODELS = ["gemini-4-argon", "gemini-4-hydrogen",
-                 "gemini-3.8-flash", "gemini-3.5-flash-lite",
-                 "gemini-3.1-flash-lite", "gemini-2.5-flash",
-                 "gemini-2.0-flash", "gemini-2.5-flash-lite"]
+# Gemini models to try, in order.
+# Rebuild #7.12 (quota fix, user order 2026-11-25: use only 2-3
+# Gemini models): ONLY the models PROVEN to answer live. Health
+# checks 2026-11-24/25 answered on gemini-4-hydrogen (fast) and
+# gemini-3.5-flash-lite; gemini-4-argon 429s on EVERY key (the vision
+# check burned all 6 of its attempts on argon and never reached a
+# working model), and gemini-3.8-flash, gemini-3.1-flash-lite,
+# gemini-2.5-flash, gemini-2.0-flash and gemini-2.5-flash-lite never
+# answered live - so they are REMOVED. An unproven model name must
+# never burn the attempt budget again. If a third model is ever
+# proven live, add it here (and only here).
+GEMINI_MODELS = ["gemini-4-hydrogen", "gemini-3.5-flash-lite"]
 # Groq models to try, in order (free tier, confirmed model ids on
 # console.groq.com/docs/models, 2026-11-23). gpt-oss are reasoning
 # models - see _groq_call (reasoning_effort + max_completion_tokens).
@@ -953,31 +952,59 @@ def _gemini_vision_call(key, model, image_b64, mime, prompt):
                            f"top-level keys={','.join(keys) or 'none'})")
 
 
+def _gemini_attempt_order(keys, models):
+    """(key, model) pairs in round-robin order. Rebuild #7.12 (quota
+    fix, user order 2026-11-25): the old loops were MODEL-major (for
+    model: for key:), so a dead first model burned every attempt
+    before a working model was tried - live, vision spent all 6 of
+    its attempts on gemini-4-argon (HTTP 429 on every key) and never
+    reached gemini-4-hydrogen / gemini-3.5-flash-lite, the two models
+    proven to answer. Round-robin alternates the model on every
+    attempt while cycling the keys, so a dead model costs one attempt
+    and a dead key costs one attempt; the first len(keys) pairs cover
+    EVERY key (models alternating) and the full order covers every
+    key x model pair exactly once. Keys are shuffled by the caller
+    first, so the load spreads across projects. Returns a list of
+    (key, model) tuples (empty when no keys or no models)."""
+    keys = list(keys or [])
+    models = list(models or [])
+    if not keys or not models:
+        return []
+    pairs = []
+    for offset in range(len(models)):
+        for i, key in enumerate(keys):
+            pairs.append((key, models[(i + offset) % len(models)]))
+    return pairs
+
+
 def gemini_text(prompt, max_tokens=1500):
     """Write with Gemini. Returns text or '' (never raises).
     Rebuild #7.2: on total failure, log the SPECIFIC reason (how many
     keys were found, which models were tried, the exact error per
     status) instead of failing silently - the workflow log must show
-    WHY the AI is down. Key VALUES are never logged, only counts."""
+    WHY the AI is down. Key VALUES are never logged, only counts.
+    Rebuild #7.12: attempts walk _gemini_attempt_order (round-robin,
+    key + model alternating) so one dead model or one dead key never
+    burns the whole budget - the first len(keys) attempts already
+    cover every key. On 429, sleep 2s (per-minute backoff)."""
     if not GEMINI_KEYS:
         log("warning", "gemini_text: no GEMINI_API_KEYS configured (0 keys)")
         return ""
     keys = GEMINI_KEYS[:]
     random.shuffle(keys)
     seen = {}  # (code, detail) -> attempts
-    for model in GEMINI_MODELS:
-        for key in keys:
-            try:
-                text, code, detail = _gemini_call(key, model, prompt, max_tokens)
-                if text:
-                    return text
-                if code == 429:
-                    time.sleep(2)
-                sig = (code, detail or "no text returned")
-                seen[sig] = seen.get(sig, 0) + 1
-            except Exception as e:
-                sig = (0, f"network: {type(e).__name__}")
-                seen[sig] = seen.get(sig, 0) + 1
+    for key, model in _gemini_attempt_order(keys, GEMINI_MODELS):
+        try:
+            text, code, detail = _gemini_call(key, model, prompt, max_tokens)
+            if text:
+                return text
+            if code == 429:
+                time.sleep(2)
+            sig = (code, detail or "no text returned")
+            seen[sig] = seen.get(sig, 0) + 1
+        except Exception as e:
+            sig = (0, f"network: {type(e).__name__}")
+            seen[sig] = seen.get(sig, 0) + 1
     summary = "; ".join(
         f"HTTP {c} x{n}: {d}" for (c, d), n in list(seen.items())[:3])
     log("warning", f"gemini_text: all {len(keys)} key(s) x "
@@ -1703,6 +1730,23 @@ LOGO_FILE_STEMS = ("logo", "logos", "icon", "icons", "favicon",
                    "sprite", "placeholder", "no-image", "default-image",
                    "blank")
 
+# Rebuild #7.12: signals that an image is a flag-only / cartoon /
+# clipart / kids-story graphic - checked ONLY by the vision-down
+# strict check (_photo_strict_when_vision_down). Live failures
+# 2026-11-25: an Iranian flag on a Saudi/Yemen Hodeidah story and a
+# "MORAL KIDS STORIES" cartoon on a US election story both passed
+# the weak keyword check while the vision gate was down (Gemini 429).
+# A real news photograph that happens to show a flag is still FINE
+# when vision can judge it - these signals only apply when vision
+# cannot run.
+VISION_DOWN_FLAG_FILE_WORDS = ("flag", "flags")
+VISION_DOWN_JUNK_FILE_WORDS = ("cartoon", "clipart", "clip-art",
+                               "coloring", "colouring", "moral")
+VISION_DOWN_JUNK_HOSTS = ("pngmart", "vecteezy", "pngtree", "clipart")
+VISION_DOWN_JUNK_TITLE_PHRASES = ("cartoon", "clipart", "clip-art",
+                                  "coloring", "colouring", "moral kids",
+                                  "kids stories", "moral stories")
+
 
 def _is_logo_image_url(url):
     """True if an image URL is a BARE logo / icon / generic graphic,
@@ -1856,11 +1900,25 @@ def _news_photo(topic, state=None):
             # next candidate / real-photo fallback is tried); a vision
             # failure falls back to the keyword check, which
             # fetch_og_image already passed.
-            if _vision_gate(local, topic, vision) is False:
+            gate = _vision_gate(local, topic, vision)
+            if gate is False:
                 log("info", f"photo candidate for '{topic}': "
                             f"'{(item.get('title') or '')[:50]}' - rejected "
                             "(vision: does not show the person/subject)")
                 continue
+            if gate is None:
+                # Rebuild #7.12: vision down - the og:image must not
+                # pass on the keyword check alone. Only the
+                # junk-image signals apply here (fetch_og_image
+                # already verified the page is about the story).
+                ok, why = _photo_strict_when_vision_down(
+                    img, link, None, "", topic, require_title=False)
+                if not ok:
+                    log("info", f"photo candidate for '{topic}': "
+                                f"'{(item.get('title') or '')[:50]}' - "
+                                f"rejected (vision down, strict check): "
+                                f"{why}")
+                    continue
             log("info", f"photo: real news image for '{topic}' "
                         f"(from {item.get('source') or 'news'})")
             return {"url": img, "source": "news",
@@ -1928,7 +1986,9 @@ def _photo_search_queries(topic):
 # A vision API failure NEVER blocks a post by itself - the #7.6
 # keyword relevance check decides instead.
 VISION_MAX_CHECKS_PER_POST = 3  # max Gemini vision calls per promo post
-VISION_MAX_ATTEMPTS = 6         # max key/model attempts per vision check
+VISION_MAX_ATTEMPTS = 10        # max key/model attempts per vision check
+                                # (round-robin: all 10 keys, models
+                                # alternating - see _gemini_attempt_order)
 
 # Words that can never be part of a person's name in a headline:
 # places, organisations, publications, months, weekdays, titles,
@@ -2154,10 +2214,17 @@ def _gemini_vision_check(image_b64, mime, headline, person_names=None):
     reason) / (None, reason) - None means the vision call could not
     be made or its answer was unusable, and the caller must fall back
     to the #7.6 keyword relevance check instead. A vision API failure
-    NEVER blocks a post by itself. Walks the GEMINI_MODELS failover
-    list (gemini-3.5-flash-lite is the working model live), bounded
-    to VISION_MAX_ATTEMPTS attempts so one check cannot grind through
-    all keys x models. Never raises. Key values are never logged."""
+    NEVER blocks a post by itself. Rebuild #7.12 (quota fix, user
+    order 2026-11-25): ROOT CAUSE of the 2026-11-24/25 vision outage
+    - the loop was MODEL-major (for model: for key:) and capped at 6
+    attempts, so all 6 attempts burned on the FIRST model
+    (gemini-4-argon, HTTP 429 on every key) and vision NEVER reached
+    gemini-4-hydrogen / gemini-3.5-flash-lite, the two models proven
+    to answer live. Attempts now walk _gemini_attempt_order
+    (round-robin: every key, models alternating), bounded to
+    VISION_MAX_ATTEMPTS, so a dead model costs one attempt and a dead
+    key costs one attempt. On 429, sleep 2s (per-minute backoff).
+    Never raises. Key values are never logged."""
     if not GEMINI_KEYS:
         return None, "no GEMINI_API_KEYS configured"
     if not image_b64:
@@ -2167,34 +2234,31 @@ def _gemini_vision_check(image_b64, mime, headline, person_names=None):
     random.shuffle(keys)
     attempts = 0
     seen = {}
-    for model in GEMINI_MODELS:
-        for key in keys:
-            if attempts >= VISION_MAX_ATTEMPTS:
-                break
-            attempts += 1
-            try:
-                text, code, detail = _gemini_vision_call(
-                    key, model, image_b64, mime, prompt)
-            except Exception as e:
-                sig = (0, f"network: {type(e).__name__}")
-                seen[sig] = seen.get(sig, 0) + 1
-                continue
-            if not text:
-                if code == 429:
-                    time.sleep(2)
-                sig = (code, detail or "no text returned")
-                seen[sig] = seen.get(sig, 0) + 1
-                continue
-            ans = text.strip().upper()
-            reason = text.strip()
-            if ans.startswith("YES"):
-                return True, (reason[3:].strip(" -:") or "vision: YES")[:150]
-            if ans.startswith("NO"):
-                return False, (reason[2:].strip(" -:") or "vision: NO")[:150]
-            return None, ("vision answer unusable (did not start YES/NO): "
-                          f"{reason[:80]}")
+    for key, model in _gemini_attempt_order(keys, GEMINI_MODELS):
         if attempts >= VISION_MAX_ATTEMPTS:
             break
+        attempts += 1
+        try:
+            text, code, detail = _gemini_vision_call(
+                key, model, image_b64, mime, prompt)
+        except Exception as e:
+            sig = (0, f"network: {type(e).__name__}")
+            seen[sig] = seen.get(sig, 0) + 1
+            continue
+        if not text:
+            if code == 429:
+                time.sleep(2)
+            sig = (code, detail or "no text returned")
+            seen[sig] = seen.get(sig, 0) + 1
+            continue
+        ans = text.strip().upper()
+        reason = text.strip()
+        if ans.startswith("YES"):
+            return True, (reason[3:].strip(" -:") or "vision: YES")[:150]
+        if ans.startswith("NO"):
+            return False, (reason[2:].strip(" -:") or "vision: NO")[:150]
+        return None, ("vision answer unusable (did not start YES/NO): "
+                      f"{reason[:80]}")
     summary = "; ".join(
         f"HTTP {c} x{n}: {d}" for (c, d), n in list(seen.items())[:3])
     return None, (f"vision failed ({attempts} attempt(s) - "
@@ -2287,6 +2351,68 @@ def _photo_relevant(page_url, page_title, headline):
                       f"({', '.join(hits[:4])})")
     return False, (f"only {len(hits)} of {len(words)} key entities "
                    "in the source page")
+
+
+def _photo_strict_when_vision_down(url, page_url, page_title, alt,
+                                   headline, require_title=True):
+    """Strict photo check used ONLY when the Gemini vision gate could
+    not run (quota exhausted / API down) - a photo must NOT pass on a
+    weak keyword match alone. Rebuild #7.12 (live failures 2026-11-25:
+    an Iranian flag on a Saudi/Yemen Hodeidah story and a "MORAL KIDS
+    STORIES" cartoon on a US election story both passed _photo_relevant
+    on 2 generic words while vision was 429-down). Two bars: (1) the
+    image must not be a flag-only / cartoon / clipart / kids-story
+    graphic (image URL, host, alt text or page title signals); (2) the
+    source page TITLE must contain at least 2 of the story's key
+    entities - the page must be a news article ABOUT the story, not a
+    page that merely mentions two words in its URL. When the page has
+    no title, the URL alone must name 3 key entities. require_title
+    is False for an article's own og:image (fetch_og_image already
+    verified its page is about the story, so only the junk-image
+    signals apply there). Returns (ok, reason). Never raises."""
+    try:
+        u = str(url or "").strip().lower()
+        netloc = urlparse(u).netloc
+        if any(h in netloc for h in VISION_DOWN_JUNK_HOSTS):
+            return False, "image from a clipart/vector host"
+        parsed = urlparse(u)
+        stem = parsed.path.rsplit("/", 1)[-1]
+        stem = stem.rsplit(".", 1)[0] if "." in stem else stem
+        tokens = set(re.findall(r"[a-z0-9]+", stem.lower()))
+        if tokens & set(VISION_DOWN_FLAG_FILE_WORDS):
+            return False, "image file looks like a flag, not a news photo"
+        if tokens & set(VISION_DOWN_JUNK_FILE_WORDS):
+            return False, "image file looks like a cartoon/clipart"
+        if "kids" in tokens and "stories" in tokens:
+            return False, "image file looks like a kids-story graphic"
+        hay = ((page_title or "") + " " + (alt or "")).lower()
+        if any(p in hay for p in VISION_DOWN_JUNK_TITLE_PHRASES):
+            return False, "source page/alt describes a cartoon/clipart"
+    except Exception:
+        pass
+    if not require_title:
+        return True, "vision down but image is not a flag/cartoon"
+    words = _event_words(headline)
+    if not words:
+        return False, "no key entities in the headline"
+    title = (page_title or "").strip()
+    if title:
+        hay_words = {_stem_word(w)
+                     for w in re.findall(r"[a-z0-9]+", title.lower())}
+        hits = [w for w in words if w in hay_words]
+        need = min(2, len(words))
+        if len(hits) < need:
+            return False, (f"source page title names only {len(hits)} of "
+                           f"{len(words)} key entities - not a news "
+                           "article about the story")
+    else:
+        hay_words = {_stem_word(w) for w in re.findall(
+            r"[a-z0-9]+", (page_url or "").lower())}
+        hits = [w for w in words if w in hay_words]
+        if len(hits) < 3:
+            return False, (f"source page URL names only {len(hits)} key "
+                           "entities - not a news article about the story")
+    return True, "vision down but photo passes the strict check"
 
 
 def _real_photo_for_topic(topic, vision=None):
@@ -3455,9 +3581,23 @@ def _try_photo_query(query, topic, vision, tried_downloads, relevance):
         tried_downloads += 1
         local = download_image(url, topic)
         if local:
-            if _vision_gate(local, topic, vision) is False:
+            gate = _vision_gate(local, topic, vision)
+            if gate is False:
                 log("info", f"photo: rejected (vision NO): {url[:100]}")
                 continue
+            if gate is None:
+                # Rebuild #7.12: vision could not run (quota down) -
+                # do NOT accept on the weak keyword match alone. A
+                # flag / cartoon / clipart, or a photo whose source
+                # page is not a news article about the story, is
+                # rejected here; the next candidate is tried.
+                ok, why = _photo_strict_when_vision_down(
+                    url, cand.get("page_url"), cand.get("page_title"),
+                    cand.get("alt"), topic)
+                if not ok:
+                    log("info", f"photo: rejected (vision down, strict "
+                                f"check): {url[:100]} - {why}")
+                    continue
             log("info", f"photo: ACCEPTED relevant photo for "
                         f"'{topic[:60]}': {url[:100]} "
                         f"(from {cand.get('source') or 'stock'}, "
@@ -3685,11 +3825,37 @@ def _pick_fresh_promo_news(card, state):
                     # runs for the same story; a vision failure falls
                     # back to the #7.6 keyword check in
                     # fetch_og_image, which already passed.
-                    if _vision_gate(local, headline, vision) is False:
+                    gate = _vision_gate(local, headline, vision)
+                    if gate is False:
                         seen_imgs.add(img)
                         log("info", f"photo candidate: '{headline[:60]}' - "
                                     "rejected (vision NO - photo does not "
                                     "match the story)")
+                    elif gate is None:
+                        # Rebuild #7.12: vision down - the og:image
+                        # must not pass on the keyword check alone.
+                        # Only the junk-image signals apply here
+                        # (fetch_og_image already verified the page
+                        # is about the story).
+                        ok, why = _photo_strict_when_vision_down(
+                            img, link, None, "", headline,
+                            require_title=False)
+                        if not ok:
+                            seen_imgs.add(img)
+                            log("info", f"photo candidate: "
+                                        f"'{headline[:60]}' - rejected "
+                                        f"(vision down, strict check): "
+                                        f"{why}")
+                        else:
+                            cat = category_of.get(_norm_news_key(topic))
+                            if cat:
+                                log("info", f"promo category: {cat}")
+                            log("info", f"photo candidate: '{headline[:60]}' - "
+                                        f"ACCEPTED og:image (from {src})")
+                            return topic, headline, {
+                                "url": img, "source": "news",
+                                "alt": headline, "local_path": local,
+                                "article_url": link}
                     else:
                         cat = category_of.get(_norm_news_key(topic))
                         if cat:
