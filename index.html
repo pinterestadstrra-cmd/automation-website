@@ -286,6 +286,7 @@
       <button class="tab-btn active" data-tab="overview">Overview</button>
       <button class="tab-btn" data-tab="blogger">Blogger</button>
       <button class="tab-btn" data-tab="bluesky">Bluesky</button>
+      <button class="tab-btn" data-tab="reddit">Reddit</button>
       <button class="tab-btn" data-tab="logs">Logs</button>
       <button class="tab-btn" data-tab="settings">Settings</button>
     </nav>
@@ -536,6 +537,112 @@
       </div>
     </div>
 
+    <!-- ============ PAGE: REDDIT ============ -->
+    <div id="page-reddit" class="page hidden">
+      <div class="panel" style="background:#f0f9ff">
+        <h2>How this works (simple)</h2>
+        <div style="font-size:14px;line-height:1.7">
+          1) <b>Add your Reddit account below</b> (username + password + client ID + client secret from a Reddit app). Each card picks which account it posts and replies as.<br>
+          2) <b>Make a card:</b> post a link to a subreddit, or reply to comments. Set "run every X minutes" - the card checks replies on every run, and only posts at its spread-out posting times.<br>
+          3) <b>A reply card answers EVERY comment on YOUR posts</b> - it checks old posts too, from the last few days you set on the card - and fresh comments on hot posts in the subreddit (limited per run). Every reply is different, and every reply is written in that card's own log (tap "Logs" on the card).<br>
+          4) <b>Test a card first:</b> tap "Test" on a card - it writes the post and checks the link, but publishes nothing.
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Reddit workflows</h2>
+        <div class="toggle-row">
+          <div><div class="lbl">Reddit posts</div>
+            <div class="desc">Post a link to a subreddit (one unique post per account).</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="reddit_enabled" checked>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Reddit accounts (unlimited - add as many as you want)</h2>
+        <div id="redditAccountList"></div>
+        <form id="redditAccountForm" style="margin-top:12px">
+          <div class="form-grid">
+            <div><label for="rfUsername">Reddit username</label>
+              <input id="rfUsername" required placeholder="e.g. myname"></div>
+            <div><label for="rfPassword">Password</label>
+              <input id="rfPassword" type="password" required placeholder="your Reddit password" autocomplete="off"></div>
+            <div><label for="rfClientId">Client ID</label>
+              <input id="rfClientId" required placeholder="from your Reddit app"></div>
+            <div><label for="rfClientSecret">Client secret</label>
+              <input id="rfClientSecret" type="password" required placeholder="from your Reddit app" autocomplete="off"></div>
+          </div>
+          <div class="row-btns">
+            <button type="submit" class="btn-teal">Add / update account</button>
+          </div>
+        </form>
+        <div id="redditSecretWarn" class="status-msg status-err hidden" style="margin-top:10px">
+          <span id="redditSecretWarnText"></span>
+          <button type="button" class="btn-red btn-small" id="retryRedditSecretBtn" style="margin-left:8px">Retry Secret save</button>
+          <button type="button" class="btn-teal btn-small" id="copyRedditSecretBtn" style="margin-left:8px">Copy secret value</button>
+          <div style="margin-top:8px">No library needed: paste the copied value into your repo on GitHub - Settings &rarr; Secrets and variables &rarr; Actions &rarr; New repository secret, name <code>REDDIT_ACCOUNTS</code>.</div>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Accounts you add here are saved <b>in this browser</b> and in the
+          <code>REDDIT_ACCOUNTS</code> secret (encrypted - only you can
+          see it). The password is never saved in the repo or on this page.
+        </div>
+        <h2 style="margin-top:16px">Per-account controls</h2>
+        <div id="redditAccountCtlList"><span class="empty">Add an account above to control it here.</span></div>
+        <div class="row-btns">
+          <button class="btn-teal" id="saveRedditAccountCtlBtn">Save account controls</button>
+        </div>
+      </div>
+
+      <!-- Reddit cards: reddit_post cards live here. -->
+      <div class="panel panel-teal">
+        <h2>Reddit cards <span style="font-weight:400;font-size:13px;color:#475569">(unlimited - add as many as you want)</span></h2>
+        <div class="note">
+          Each card posts a link to a subreddit, or replies, on its own
+          schedule. Every card has its own reply settings: reply to
+          comments on <b>your own posts</b>, reply to <b>others'</b>
+          comments/posts, and how many replies per run. Make many cards
+          - one per account, subreddit or link.
+        </div>
+        <div class="toolbar">
+          <input type="text" id="redditCardSearch" placeholder="Search cards…">
+          <select id="redditCardSort">
+            <option value="name">Sort: name</option>
+            <option value="lastrun">Sort: last run</option>
+            <option value="status">Sort: status</option>
+            <option value="nextrun">Sort: next run</option>
+          </select>
+          <select id="redditCardFilter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="paused">Paused</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="bulk-bar" id="redditBulkBar">
+          <b id="redditBulkCount">0 selected</b>
+          <button class="btn-ghost btn-small" id="redditBulkPause">Pause</button>
+          <button class="btn-ghost btn-small" id="redditBulkResume">Resume</button>
+          <button class="btn-red btn-small" id="redditBulkDelete">Delete</button>
+          <button class="btn-ghost btn-small" id="redditBulkClear">Clear</button>
+        </div>
+        <div id="redditCardList"></div>
+        <div class="row-btns">
+          <button class="btn-blue" id="addRedditCardBtn">+ Add Reddit card</button>
+          <button class="btn-ghost" id="exportRedditCardsBtn">Export cards (JSON)</button>
+          <label class="btn-ghost" style="padding:8px 14px;border-radius:8px;cursor:pointer">
+            Import cards<input type="file" id="importRedditCardsFile" accept=".json" class="hidden">
+          </label>
+        </div>
+        <div class="card-form-slot" id="redditCardFormSlot"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Reddit live log <span class="pill pill-live" style="font-size:11px">Live (auto-refresh)</span></h2>
+        <div class="mini-log" id="redditLog"><span class="empty">—</span></div>
+        <div class="live-note">Live (auto-refresh) - this page is static, so there is no live push from a server. The log refreshes itself every few seconds.</div>
+      </div>
+    </div>
+
     <!-- ============ PAGE: LOGS ============ -->
     <div id="page-logs" class="page hidden">
       <div class="panel panel-red">
@@ -586,6 +693,11 @@
           <div><div class="lbl">Bluesky replies</div>
             <div class="desc">Reply to comments.</div></div>
           <input type="checkbox" class="wf-toggle" data-config="replies_enabled" checked>
+        </div>
+        <div class="toggle-row">
+          <div><div class="lbl">Reddit posts</div>
+            <div class="desc">Post a link to a subreddit.</div></div>
+          <input type="checkbox" class="wf-toggle" data-config="reddit_enabled" checked>
         </div>
         <div class="toggle-row">
           <div><div class="lbl">Manual cards</div>
@@ -727,6 +839,7 @@ const BRANCH = "main";
 const API = "https://api.github.com/repos/" + OWNER + "/" + REPO;
 const TOKEN_KEY = "gh_token";
 const BSKY_KEY = "bsky_accounts";
+const REDDIT_KEY = "reddit_accounts";
 const SEEN_KEY = "seen_issues";
 const REFRESH_KEY = "refresh_seconds";
 const TMPL_KEY = "card_templates";
@@ -866,6 +979,7 @@ $("logoutBtn").addEventListener("click", () => {
 /* ---------- status (public, no token) ---------- */
 let accountHandles = [];
 let accountsDetail = [];
+let redditAccountsDetail = [];
 let lastData = null;
 let lastLogs = [];
 let lastRuns = -1;
@@ -912,8 +1026,11 @@ async function loadStatus() {
 
   accountHandles = data.account_handles || [];
   accountsDetail = data.accounts_detail || [];
+  redditAccountsDetail = data.reddit_accounts_detail || [];
   renderAccountList();
   renderAccountControls();
+  renderRedditAccountList();
+  renderRedditAccountControls();
 
   const settings = data.settings || {};
   const paused = String(settings.paused || "false").toLowerCase() === "true";
@@ -1082,6 +1199,7 @@ const LOG_FILTERS = {
   bluesky: ["bluesky", "bsky", "reply", "replied", "login", "photo",
             "promo", "cooldown", "too soon", "gemini", "groq", "ai_write",
             "og:image", "logo", "skipped", "skipping"],
+  reddit: ["reddit"],
   settings: ["settings", "config", "toggle", "saved", "paused", "resume"],
 };
 function parseWorkerLogs(raw) {
@@ -1136,6 +1254,7 @@ function renderPageLogs(logs) {
   render("overviewLog", null, 8);
   render("bloggerLog", LOG_FILTERS.blogger, 10);
   render("blueskyLog", LOG_FILTERS.bluesky, 10);
+  render("redditLog", LOG_FILTERS.reddit, 10);
   render("settingsLog", LOG_FILTERS.settings, 10);
 }
 function renderFullLog(logs) {
@@ -1396,14 +1515,16 @@ async function loadChecklist() {
    day), its own source/topic and (Bluesky) its own reply settings. */
 let cardsSha = "";
 let cards = [];
-let editingCard = null; // { tab: "blogger"|"bluesky", index: -1 }
+let editingCard = null; // { tab: "blogger"|"bluesky"|"reddit", index: -1 }
 const BLOGGER_TYPES = ["blogger_post"];
 const BLUESKY_TYPES = ["bluesky_post", "bluesky_promo", "bluesky_reply"];
+const REDDIT_TYPES = ["reddit_post"];
 const TYPE_LABELS = {
   blogger_post: "Blogger post",
   bluesky_post: "Bluesky post",
   bluesky_promo: "Bluesky promo",
   bluesky_reply: "Bluesky replies",
+  reddit_post: "Reddit post",
 };
 const COLOR_LABELS = {
   "": "No colour", red: "Red", blue: "Blue", teal: "Teal",
@@ -1412,11 +1533,12 @@ const COLOR_LABELS = {
 const cardUI = {
   blogger: { q: "", sort: "name", filter: "all", selected: new Set() },
   bluesky: { q: "", sort: "name", filter: "all", selected: new Set() },
+  reddit: { q: "", sort: "name", filter: "all", selected: new Set() },
 };
 
 async function loadCards() {
   if (!getToken()) {
-    ["bloggerCardList", "blueskyCardList"].forEach((id) => {
+    ["bloggerCardList", "blueskyCardList", "redditCardList"].forEach((id) => {
       $(id).innerHTML = '<div class="empty">Log in to load and edit cards.</div>';
     });
     return;
@@ -1428,7 +1550,7 @@ async function loadCards() {
     if (!Array.isArray(cards)) cards = [];
     renderCardLists();
   } catch (e) {
-    ["bloggerCardList", "blueskyCardList"].forEach((id) => {
+    ["bloggerCardList", "blueskyCardList", "redditCardList"].forEach((id) => {
       $(id).innerHTML = '<div class="empty">Could not load cards: ' + esc(e.message) + "</div>";
     });
   }
@@ -1630,7 +1752,8 @@ function colorDot(color) {
 
 /* ---------- card lists (one per tab) ---------- */
 function cardsForTab(tab) {
-  const types = tab === "blogger" ? BLOGGER_TYPES : BLUESKY_TYPES;
+  const types = tab === "blogger" ? BLOGGER_TYPES
+    : tab === "reddit" ? REDDIT_TYPES : BLUESKY_TYPES;
   return cards
     .map((c, i) => ({ c: c, i: i }))
     .filter((x) => types.includes(x.c.type));
@@ -1638,11 +1761,12 @@ function cardsForTab(tab) {
 function renderCardLists() {
   renderCardList("blogger");
   renderCardList("bluesky");
+  renderCardList("reddit");
   renderDueSoon();
 }
 function renderCardList(tab) {
   const ui = cardUI[tab];
-  const listEl = $(tab === "blogger" ? "bloggerCardList" : "blueskyCardList");
+  const listEl = $(tab + "CardList");
   if (!listEl) return;
   let rows = cardsForTab(tab);
   if (ui.filter !== "all") {
@@ -1652,7 +1776,7 @@ function renderCardList(tab) {
     const q = ui.q.toLowerCase();
     rows = rows.filter((x) => {
       const c = x.c;
-      return [c.name, c.link, c.topic_override, c.notes, c.account_handle, c.type]
+      return [c.name, c.link, c.topic_override, c.notes, c.account_handle, c.type, c.subreddit]
         .some((v) => String(v || "").toLowerCase().includes(q));
     });
   }
@@ -1672,7 +1796,7 @@ function renderCardList(tab) {
   rows.forEach((x) => {
     const c = x.c, i = x.i;
     const e = enrichCard(c);
-    const knownAccs = allAccountHandles();
+    const knownAccs = tab === "reddit" ? redditAccountUsernames() : allAccountHandles();
     const div = document.createElement("div");
     div.className = "card-row" + (ui.selected.has(i) ? " sel" : "");
     const perDay = Number(c.posts_per_day || 0);
@@ -1685,6 +1809,7 @@ function renderCardList(tab) {
       statusBadge(e.computed) +
       '<div class="meta">' + esc(TYPE_LABELS[c.type] || c.type) +
       (c.link ? " · " + esc(c.link) : "") +
+      (c.type === "reddit_post" && c.subreddit ? " · r/" + esc(c.subreddit) : "") +
       (c.account_handle ? " · " + esc(c.account_handle) : "") +
       " · " + esc(intervalLabel(c)) +
       (perDay > 0 ? " · " + perDay + "/day (today: " + e.postsToday + ")" : " · unlimited/day") +
@@ -1711,9 +1836,9 @@ function renderCardList(tab) {
       "</div>" +
       (c.notes ? '<div class="meta">Note: ' + esc(c.notes) + "</div>" : "") +
       (c.type !== "blogger_post" && !knownAccs.length
-        ? '<div class="meta" style="color:#dc2626">No Bluesky account added — this card cannot post or reply. Add one in the Bluesky tab.</div>' : "") +
+        ? '<div class="meta" style="color:#dc2626">No ' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' account added — this card cannot post or reply. Add one in the ' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' tab.</div>' : "") +
       (c.type !== "blogger_post" && c.account_handle && knownAccs.length && !knownAccs.includes(c.account_handle)
-        ? '<div class="meta" style="color:#dc2626">Account ' + esc(c.account_handle) + ' not found — add it first (Bluesky tab).</div>' : "") +
+        ? '<div class="meta" style="color:#dc2626">Account ' + esc(c.account_handle) + ' not found — add it first (' + (c.type === "reddit_post" ? "Reddit" : "Bluesky") + ' tab).</div>' : "") +
       (e.lastError ? '<div class="meta" style="color:#dc2626">Last error: ' + esc(e.lastError) + "</div>" : "") +
       "</span></label>" +
       '<div class="actions">' +
@@ -1746,8 +1871,8 @@ function renderCardList(tab) {
 }
 function updateBulkBar(tab) {
   const ui = cardUI[tab];
-  const bar = $(tab === "blogger" ? "bloggerBulkBar" : "blueskyBulkBar");
-  const cnt = $(tab === "blogger" ? "bloggerBulkCount" : "blueskyBulkCount");
+  const bar = $(tab + "BulkBar");
+  const cnt = $(tab + "BulkCount");
   cnt.textContent = ui.selected.size + " selected";
   bar.classList.toggle("show", ui.selected.size > 0);
 }
@@ -1950,7 +2075,7 @@ function bulkAction(tab, action) {
     if (ok) renderCardLists();
   });
 }
-["blogger", "bluesky"].forEach((tab) => {
+["blogger", "bluesky", "reddit"].forEach((tab) => {
   $(tab + "BulkPause").addEventListener("click", () => bulkAction(tab, "pause"));
   $(tab + "BulkResume").addEventListener("click", () => bulkAction(tab, "resume"));
   $(tab + "BulkDelete").addEventListener("click", () => bulkAction(tab, "delete"));
@@ -1987,6 +2112,7 @@ function exportCards() {
 }
 $("exportBloggerCardsBtn").addEventListener("click", exportCards);
 $("exportBlueskyCardsBtn").addEventListener("click", exportCards);
+$("exportRedditCardsBtn").addEventListener("click", exportCards);
 async function importCardsFile(file) {
   if (!file) return;
   try {
@@ -1998,6 +2124,7 @@ async function importCardsFile(file) {
     cards = good;
     cardUI.blogger.selected.clear();
     cardUI.bluesky.selected.clear();
+    cardUI.reddit.selected.clear();
     if (await saveCards("Import cards from dashboard")) renderCardLists();
   } catch (e) {
     showMsg("Import failed: " + e.message, false);
@@ -2008,6 +2135,10 @@ $("importBloggerCardsFile").addEventListener("change", (e) => {
   e.target.value = "";
 });
 $("importBlueskyCardsFile").addEventListener("change", (e) => {
+  importCardsFile(e.target.files[0]);
+  e.target.value = "";
+});
+$("importRedditCardsFile").addEventListener("change", (e) => {
   importCardsFile(e.target.files[0]);
   e.target.value = "";
 });
@@ -2022,13 +2153,15 @@ const INTERVAL_PRESETS = [
 const PERDAY_PRESETS = [1, 2, 3, 5, 10];
 
 function openCardForm(tab, index, preset) {
-  // Only one form open at a time (the other tab's slot is cleared).
+  // Only one form open at a time (the other tabs' slots are cleared).
   $("bloggerCardFormSlot").innerHTML = "";
   $("blueskyCardFormSlot").innerHTML = "";
+  $("redditCardFormSlot").innerHTML = "";
   editingCard = { tab: tab, index: (index === undefined ? -1 : index) };
   const existing = index >= 0 ? cards[index] : null;
   const isBlogger = tab === "blogger";
-  const types = isBlogger ? BLOGGER_TYPES : BLUESKY_TYPES;
+  const isReddit = tab === "reddit";
+  const types = isBlogger ? BLOGGER_TYPES : isReddit ? REDDIT_TYPES : BLUESKY_TYPES;
   const defH = Number(config.card_default_interval_hours ?? 0) || 0;
   const defM = Number(config.card_default_interval_minutes ?? 30) || 30;
   const defPerDay = Number(config.card_default_posts_per_day ?? 0) || 0;
@@ -2059,12 +2192,13 @@ function openCardForm(tab, index, preset) {
   const typeOptions = types.map((t) =>
     '<option value="' + t + '"' + (c.type === t ? " selected" : "") + ">" +
     esc(TYPE_LABELS[t]) + "</option>").join("");
+  const accs = isReddit ? redditAccountUsernames() : allAccountHandles();
   const accOptions = '<option value="">Any account</option>' +
-    allAccountHandles().map((h) =>
+    accs.map((h) =>
       '<option value="' + esc(h) + '"' + (c.account_handle === h ? " selected" : "") + ">" +
       esc(h) + "</option>").join("");
-  const accWarn = allAccountHandles().length === 0
-    ? '<div class="status-msg status-err" style="display:block;margin-top:6px">No Bluesky account added — add one first (Bluesky tab). This card cannot post or reply until an account exists.</div>'
+  const accWarn = accs.length === 0
+    ? '<div class="status-msg status-err" style="display:block;margin-top:6px">No ' + (isReddit ? "Reddit" : "Bluesky") + ' account added — add one first (' + (isReddit ? "Reddit" : "Bluesky") + ' tab). This card cannot post or reply until an account exists.</div>'
     : "";
   const colorOptions = Object.keys(COLOR_LABELS).map((k) =>
     '<option value="' + k + '"' + ((c.color || "") === k ? " selected" : "") + ">" +
@@ -2072,19 +2206,22 @@ function openCardForm(tab, index, preset) {
   const tmplOptions = '<option value="">Load a template…</option>' +
     getTemplates().map((t, i) =>
       '<option value="' + i + '">' + esc(t.name) + "</option>").join("");
-  const slot = $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot");
+  const slot = $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot");
   slot.innerHTML =
     '<form id="cardForm" style="margin-top:14px;border-top:2px solid #e0f2fe;padding-top:14px">' +
-    "<h3>" + (existing ? "Edit card" : "New " + (isBlogger ? "Blogger" : "Bluesky") + " card") + "</h3>" +
+    "<h3>" + (existing ? "Edit card" : "New " + (isBlogger ? "Blogger" : isReddit ? "Reddit" : "Bluesky") + " card") + "</h3>" +
     '<div class="form-grid">' +
     '<div><label for="cfName">Card name</label>' +
     '<input id="cfName" required placeholder="e.g. Morning post" value="' + esc(c.name || "") + '"></div>' +
     '<div><label for="cfType">Type</label><select id="cfType">' + typeOptions + "</select></div>" +
     '<div class="full"><label for="cfLink">Link (for Bluesky promo: the link to market)</label>' +
     '<input id="cfLink" placeholder="https://..." value="' + esc(c.link || "") + '"></div>' +
-    '<div><label for="cfAccount">Bluesky account - which account this card posts and replies as</label>' +
+    '<div><label for="cfAccount">' + (isReddit ? "Reddit account - which account this card posts and replies as" : "Bluesky account - which account this card posts and replies as") + "</label>" +
     '<select id="cfAccount">' + accOptions + "</select>" +
     '<div class="field-help">Empty = the first account. The card always uses this one account.</div>' + accWarn + '</div>' +
+    '<div id="cfSubredditWrap"><label for="cfSubreddit">Subreddit (required) - which subreddit this card posts to</label>' +
+    '<input id="cfSubreddit" required placeholder="e.g. news" value="' + esc(c.subreddit || "") + '">' +
+    '<div class="field-help">Without the "r/" - just the name, e.g. news.</div></div>' +
     '<div><label for="cfCount">Posts per run - how many posts each time the card runs</label>' +
     '<input id="cfCount" type="number" min="1" value="' + esc(c.count ?? 1) + '"></div>' +
     "</div>" +
@@ -2202,7 +2339,7 @@ function openCardForm(tab, index, preset) {
     '<div class="form-grid"><div><label for="cfRepliesPerDay">Max replies per day (0 = no limit)</label>' +
     '<input id="cfRepliesPerDay" type="number" min="0" value="' + esc(c.replies_per_day ?? 0) + '">' +
     '<div class="field-help">Safety cap: the card never sends more replies than this in one day.</div></div>' +
-    '<div><label for="cfRatio">Bluesky image ratio</label><select id="cfRatio">' +
+    '<div id="cfRatioWrap"><label for="cfRatio">Bluesky image ratio</label><select id="cfRatio">' +
     [["16:9", "16:9 (wide)"], ["1:1", "1:1 (square)"], ["4:5", "4:5 (tall)"]].map(([v, l]) =>
       '<option value="' + v + '"' + ((c.bsky_image_ratio || "16:9") === v ? " selected" : "") + ">" + l + "</option>").join("") +
     "</select>" +
@@ -2249,11 +2386,15 @@ function wireCardForm(tab, card) {
   const form = $("cardForm");
   const showSource = () => {
     const isBlog = $("cfType").value === "blogger_post";
+    const isRedditType = $("cfType").value === "reddit_post";
     $("cfSourceSection").classList.toggle("hidden", !isBlog);
     $("cfReplySection").classList.toggle("hidden", isBlog);
     $("cfBoldSection").classList.toggle("hidden", !isBlog);
     $("cfWindowSection").classList.toggle("hidden", !isBlog);
     $("cfStyleSection").classList.toggle("hidden", !isBlog);
+    $("cfRatioWrap").classList.toggle("hidden", isRedditType);
+    $("cfSubredditWrap").classList.toggle("hidden", !isRedditType);
+    $("cfSubreddit").required = isRedditType;
   };
   let source = card.source || "trending";
   let spread = card.spread_mode || "even";
@@ -2343,8 +2484,9 @@ function wireCardForm(tab, card) {
     openCardForm(tab, -1);
     // Fill the fresh form from the template (keep the tab's type list).
     const tc = JSON.parse(JSON.stringify(t));
-    if (!((isBlogger ? BLOGGER_TYPES : BLUESKY_TYPES).includes(tc.type))) {
-      tc.type = isBlogger ? "blogger_post" : "bluesky_post";
+    const tabTypes = isBlogger ? BLOGGER_TYPES : tab === "reddit" ? REDDIT_TYPES : BLUESKY_TYPES;
+    if (!(tabTypes.includes(tc.type))) {
+      tc.type = isBlogger ? "blogger_post" : tab === "reddit" ? "reddit_post" : "bluesky_post";
     }
     fillCardForm(tc);
     showMsg("Template loaded: " + tmpls[idx].name, true);
@@ -2365,7 +2507,7 @@ function wireCardForm(tab, card) {
     showMsg("Template deleted.", true);
   });
   $("cfCancelBtn").addEventListener("click", () => {
-    $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+    $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
     editingCard = null;
   });
   form.addEventListener("submit", async (e) => {
@@ -2373,6 +2515,7 @@ function wireCardForm(tab, card) {
     if (needToken()) return;
     const data = readCardForm(tab);
     if (!data.name) { showMsg("Give the card a name.", false); return; }
+    if (data.type === "reddit_post" && !data.subreddit) { showMsg("Enter the subreddit (e.g. news).", false); return; }
     if (editingCard.index >= 0) {
       data.status = cards[editingCard.index].status || "active";
       cards[editingCard.index] = data;
@@ -2381,7 +2524,7 @@ function wireCardForm(tab, card) {
       cards.push(data);
     }
     if (await saveCards(editingCard.index >= 0 ? "Edit card from dashboard" : "Add card from dashboard")) {
-      $(tab === "blogger" ? "bloggerCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
+      $(tab === "blogger" ? "bloggerCardFormSlot" : tab === "reddit" ? "redditCardFormSlot" : "blueskyCardFormSlot").innerHTML = "";
       editingCard = null;
       renderCardLists();
     }
@@ -2431,7 +2574,8 @@ function readCardForm(tab) {
     reply_never: isBlog ? "" : $("cfReplyNever").value.trim(),
     reply_only: isBlog ? "" : $("cfReplyOnly").value.trim(),
     reply_skip_words: isBlog ? "" : $("cfSkipWords").value.trim(),
-    bsky_image_ratio: isBlog ? "16:9" : ($("cfRatio").value || "16:9"),
+    bsky_image_ratio: $("cfType").value === "reddit_post" ? undefined : (isBlog ? "16:9" : ($("cfRatio").value || "16:9")),
+    subreddit: $("cfType").value === "reddit_post" ? $("cfSubreddit").value.trim() : "",
     notes: $("cfNotes").value.trim(),
     color: $("cfColor").value || "",
   };
@@ -2473,6 +2617,7 @@ function fillCardForm(c) {
   $("cfReplyOnly").value = c.reply_only || "";
   $("cfSkipWords").value = c.reply_skip_words || "";
   $("cfRatio").value = c.bsky_image_ratio || "16:9";
+  $("cfSubreddit").value = c.subreddit || "";
   const days = Array.isArray(c.days_of_week) ? c.days_of_week : [0, 1, 2, 3, 4, 5, 6];
   document.querySelectorAll(".cfDay").forEach((x) => {
     x.checked = days.includes(Number(x.value));
@@ -2514,6 +2659,7 @@ function saveTemplate(name, card) {
 }
 $("addBloggerCardBtn").addEventListener("click", () => openCardForm("blogger", -1));
 $("addBlueskyCardBtn").addEventListener("click", () => openCardForm("bluesky", -1));
+$("addRedditCardBtn").addEventListener("click", () => openCardForm("reddit", -1));
 
 /* ---------- Bluesky accounts (saved to the GitHub Secret) - UNLIMITED ---------- */
 function getSavedAccounts() {
@@ -2751,6 +2897,196 @@ $("copySecretBtn").addEventListener("click", async () => {
   }
 });
 
+/* ---------- Reddit accounts (saved to the GitHub Secret) - UNLIMITED ----------
+   Mirror of the Bluesky accounts above, keyed by Reddit username.
+   The worker reads the secret as plain JSON
+   [{"username": "...", "password": "...", "client_id": "...",
+     "client_secret": "..."}] - the libsodium encryption in
+   updateRedditSecret only protects the value in transit to the GitHub
+   API, which decrypts it server-side. */
+function getSavedRedditAccounts() {
+  try {
+    const list = JSON.parse(localStorage.getItem(REDDIT_KEY) || "[]");
+    return Array.isArray(list) ? list.filter((a) => a && a.username) : [];
+  } catch (e) { return []; }
+}
+function saveSavedRedditAccounts(list) {
+  localStorage.setItem(REDDIT_KEY, JSON.stringify(list));
+}
+function missingRedditFromBrowser() {
+  const saved = new Set(getSavedRedditAccounts().map((a) => a.username));
+  return redditAccountsDetail.map((d) => d.username).filter((u) => u && !saved.has(u));
+}
+function renderRedditAccountList() {
+  const saved = getSavedRedditAccounts();
+  const el = $("redditAccountList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!saved.length && !redditAccountsDetail.length) {
+    el.innerHTML = '<div class="empty">No accounts yet. Add your first one below. (Unlimited - add as many as you want.)</div>';
+    return;
+  }
+  saved.forEach((a, i) => {
+    const detail = redditAccountsDetail.find((d) => d.username === a.username);
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(a.username) + "</b> " +
+      (detail
+        ? '<span class="meta">today: ' + esc(detail.posts_today) + " / " +
+          (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") +
+          (detail.enabled ? "" : " · disabled") + "</span>"
+        : "") +
+      '<div class="actions"><button class="btn-red" data-acc="' + i + '">Remove</button></div>';
+    el.appendChild(div);
+  });
+  el.querySelectorAll("button[data-acc]").forEach((btn) => {
+    btn.addEventListener("click", () => removeRedditAccount(Number(btn.dataset.acc)));
+  });
+  missingRedditFromBrowser().forEach((u) => {
+    const div = document.createElement("div");
+    div.className = "card-row";
+    div.innerHTML = "<b>" + esc(u) + "</b> " +
+      '<span class="meta">(in Secret - not saved in this browser)</span>';
+    el.appendChild(div);
+  });
+}
+const REDDIT_SECRET_PENDING_KEY = "reddit_secret_pending";
+function showRedditSecretWarn(text) {
+  const el = $("redditSecretWarn");
+  if (!el) return;
+  $("redditSecretWarnText").textContent = text;
+  el.classList.remove("hidden");
+}
+function hideRedditSecretWarn() {
+  const el = $("redditSecretWarn");
+  if (el) el.classList.add("hidden");
+}
+function syncRedditSecretWarn() {
+  // A Secret save failed before? Show the warning again on load.
+  try {
+    if (localStorage.getItem(REDDIT_SECRET_PENDING_KEY) === "1") {
+      showRedditSecretWarn("The GitHub Secret (REDDIT_ACCOUNTS) does not have your latest accounts yet - the last save failed. The accounts work in this browser, but the worker (GitHub) cannot use them until the Secret is saved. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself (no library needed).");
+    }
+  } catch (e) {}
+}
+async function updateRedditSecret(list) {
+  if (needToken()) return false;
+  try {
+    const ok = await ensureSodium();
+    if (!ok) throw new Error("the encryption library could not be loaded from any source - press \"Copy secret value\" below and paste it into the GitHub Secret yourself (no library needed)");
+    const pk = await gh("/actions/secrets/public-key");
+    await sodium.ready;
+    const pubKey = sodium.from_base64(pk.key, sodium.base64_variants.ORIGINAL);
+    const msg = sodium.from_string(JSON.stringify(list));
+    const enc = sodium.crypto_box_seal(msg, pubKey);
+    const encB64 = sodium.to_base64(enc, sodium.base64_variants.ORIGINAL);
+    await gh("/actions/secrets/REDDIT_ACCOUNTS", "PUT", {
+      encrypted_value: encB64, key_id: pk.key_id,
+    });
+    try { localStorage.removeItem(REDDIT_SECRET_PENDING_KEY); } catch (e) {}
+    hideRedditSecretWarn();
+    return true;
+  } catch (e) {
+    try { localStorage.setItem(REDDIT_SECRET_PENDING_KEY, "1"); } catch (err) {}
+    showMsg("Could not save to the Secret: " + e.message, false);
+    showRedditSecretWarn("Could not save to the Secret: " + e.message +
+      " The account is saved in this browser and works here, but the worker (GitHub) does not have it yet. Press \"Retry Secret save\" below, or \"Copy secret value\" and paste it into the Secret yourself.");
+    return false;
+  }
+}
+async function removeRedditAccount(i) {
+  if (!confirm("Remove this account?")) return;
+  const saved = getSavedRedditAccounts();
+  saved.splice(i, 1);
+  // Remove in THIS browser first - it is gone here even if the
+  // Secret save fails. The Secret copy is best-effort + retry.
+  saveSavedRedditAccounts(saved);
+  renderRedditAccountList();
+  renderRedditAccountControls();
+  if (await updateRedditSecret(saved)) {
+    showMsg("Account removed.", true);
+  } else {
+    showMsg("Account removed from this browser - but the Secret still has it. Press \"Retry Secret save\".", false);
+  }
+}
+$("redditAccountForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (needToken()) return;
+  const username = $("rfUsername").value.trim();
+  const pw = $("rfPassword").value.trim();
+  const clientId = $("rfClientId").value.trim();
+  const clientSecret = $("rfClientSecret").value.trim();
+  if (!username || !pw || !clientId || !clientSecret) { showMsg("Enter the username, password, client ID and client secret.", false); return; }
+  const missing = missingRedditFromBrowser();
+  if (missing.length && !confirm(
+    "The Secret already has accounts not saved in this browser (" +
+    missing.join(", ") + "). Saving now will REMOVE them from the Secret. " +
+    "To keep them, re-enter them here first. Continue?")) return;
+  const saved = getSavedRedditAccounts();
+  const idx = saved.findIndex((a) => a.username === username);
+  const entry = { username: username, password: pw, client_id: clientId, client_secret: clientSecret };
+  if (idx >= 0) saved[idx] = entry;
+  else saved.push(entry);
+  // Save in THIS browser FIRST - the account works here even if the
+  // Secret save fails (slow connection). The Secret copy is
+  // best-effort, with a warning + Retry button on failure.
+  saveSavedRedditAccounts(saved);
+  renderRedditAccountList();
+  renderRedditAccountControls();
+  $("redditAccountForm").reset();
+  if (await updateRedditSecret(saved)) {
+    showMsg("Account saved (in this browser + in the Secret).", true);
+    await loadStatus();
+  } else {
+    showMsg("Account saved in this browser - but NOT in the Secret yet (see the warning below). Press \"Retry Secret save\" when your connection is better.", false);
+  }
+});
+$("retryRedditSecretBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const btn = $("retryRedditSecretBtn");
+  btn.disabled = true;
+  btn.textContent = "Saving…";
+  try {
+    if (await updateRedditSecret(getSavedRedditAccounts())) {
+      showMsg("Secret saved - the worker now has your accounts.", true);
+      await loadStatus();
+    }
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Retry Secret save";
+  }
+});
+
+/* Manual fallback: copy the exact REDDIT_ACCOUNTS secret value.
+   The worker reads the secret as plain JSON
+   [{"username": "...", "password": "...", "client_id": "...",
+     "client_secret": "..."}] - the libsodium encryption in
+   updateRedditSecret only protects the value in transit to the GitHub
+   API, which decrypts it server-side. Pasting the same JSON straight
+   into the Secret on GitHub stores exactly the same value, so this
+   needs no library at all. The warning stays until a successful
+   "Retry Secret save" confirms the Secret - that is the only way the
+   dashboard can KNOW it is saved. */
+$("copyRedditSecretBtn").addEventListener("click", async () => {
+  const value = JSON.stringify(getSavedRedditAccounts());
+  const copied = async () => {
+    showMsg("Secret value copied. Paste it into your repo on GitHub - Settings -> Secrets and variables -> Actions -> New repository secret, name REDDIT_ACCOUNTS. Then press \"Retry Secret save\" to confirm it.", true);
+  };
+  try {
+    await navigator.clipboard.writeText(value);
+    await copied();
+  } catch (e) {
+    // Fallback for browsers without clipboard permission.
+    const ta = document.createElement("textarea");
+    ta.value = value;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); await copied(); }
+    catch (err) { showMsg("Copy failed - the value could not be copied automatically.", false); }
+    ta.remove();
+  }
+});
+
 /* ---------- per-account controls (data/accounts.json) ---------- */
 let accountCtlSha = "";
 let accountCtl = {};
@@ -2819,6 +3155,85 @@ $("saveAccountCtlBtn").addEventListener("click", async () => {
     const res = await gh("/contents/data/accounts.json", "PUT", body);
     accountCtlSha = (res.content && res.content.sha) || accountCtlSha;
     list.forEach((a) => { accountCtl[a.handle] = a; });
+    showMsg("Account controls saved.", true);
+    await loadStatus();
+  } catch (e) {
+    showMsg("Could not save account controls: " + e.message, false);
+  }
+});
+
+/* ---------- Reddit per-account controls (data/reddit_accounts.json) ----------
+   Mirror of the Bluesky per-account controls above, keyed by Reddit
+   username. Kept in its own file (data/reddit_accounts.json) so saving
+   one side's controls can never wipe the other's entries. */
+let redditAccountCtlSha = "";
+let redditAccountCtl = {};
+async function loadRedditAccountCtl() {
+  if (!getToken()) return;
+  try {
+    const file = await gh("/contents/data/reddit_accounts.json");
+    redditAccountCtlSha = file.sha || "";
+    const data = JSON.parse(b64ToUtf8(file.content || ""));
+    redditAccountCtl = {};
+    if (Array.isArray(data)) {
+      data.forEach((a) => { if (a && a.username) redditAccountCtl[a.username] = a; });
+    }
+    renderRedditAccountControls();
+  } catch (e) { /* file may not exist yet - treat as empty */ }
+}
+function redditAccountUsernames() {
+  const set = new Set(redditAccountsDetail.map((d) => d.username).filter(Boolean));
+  getSavedRedditAccounts().forEach((a) => set.add(a.username));
+  Object.keys(redditAccountCtl).forEach((u) => set.add(u));
+  return Array.from(set);
+}
+function renderRedditAccountControls() {
+  const usernames = redditAccountUsernames();
+  const el = $("redditAccountCtlList");
+  if (!el) return;
+  el.innerHTML = "";
+  if (!usernames.length) {
+    el.innerHTML = '<span class="empty">Add an account above to control it here.</span>';
+    return;
+  }
+  usernames.forEach((u) => {
+    const cfg = redditAccountCtl[u] || {};
+    const detail = redditAccountsDetail.find((d) => d.username === u);
+    const div = document.createElement("div");
+    div.className = "acc-ctl";
+    div.dataset.username = u;
+    div.innerHTML =
+      '<span class="name">' + esc(u) + "</span>" +
+      '<label><input type="checkbox" class="ctl-enabled"' +
+        (cfg.enabled === false ? "" : " checked") + "> Enabled</label>" +
+      '<label>Posts per day (0 = unlimited) ' +
+        '<input type="number" min="0" class="ctl-limit" value="' +
+        esc(cfg.posts_per_day ?? 0) + '"></label>' +
+      (detail ? '<span class="meta">today: ' + esc(detail.posts_today) +
+        " / " + (detail.posts_limit > 0 ? esc(detail.posts_limit) : "∞") + "</span>" : "");
+    el.appendChild(div);
+  });
+}
+$("saveRedditAccountCtlBtn").addEventListener("click", async () => {
+  if (needToken()) return;
+  const list = [];
+  document.querySelectorAll("#redditAccountCtlList .acc-ctl").forEach((row) => {
+    list.push({
+      username: row.dataset.username,
+      enabled: row.querySelector(".ctl-enabled").checked,
+      posts_per_day: Number(row.querySelector(".ctl-limit").value) || 0,
+    });
+  });
+  try {
+    const body = {
+      message: "Update Reddit account controls from dashboard",
+      content: utf8ToB64(JSON.stringify(list, null, 2) + "\n"),
+      branch: BRANCH,
+    };
+    if (redditAccountCtlSha) body.sha = redditAccountCtlSha;
+    const res = await gh("/contents/data/reddit_accounts.json", "PUT", body);
+    redditAccountCtlSha = (res.content && res.content.sha) || redditAccountCtlSha;
+    list.forEach((a) => { redditAccountCtl[a.username] = a; });
     showMsg("Account controls saved.", true);
     await loadStatus();
   } catch (e) {
@@ -2945,10 +3360,14 @@ async function refreshAll() {
   await loadRuns();
   await loadChecklist();
   await loadAccountCtl();
+  await loadRedditAccountCtl();
   renderAccountList();
   renderAccountControls();
+  renderRedditAccountList();
+  renderRedditAccountControls();
   renderCardLists();
   syncSecretWarn();
+  syncRedditSecretWarn();
 }
 
 /* ---------- start: auto-login with the saved token ---------- */

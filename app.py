@@ -46,6 +46,11 @@ SECRETS (never in the repo - GitHub Secrets / environment only)
   BLOGGER_REFRESH_TOKEN  Blogger OAuth refresh token (offline access)
   BLOG_ID                Blogger blog id
   BLUESKY_ACCOUNTS       JSON list [{"handle": "...", "app_password": "..."}]
+  REDDIT_ACCOUNTS        JSON list [{"username": "...", "password": "...",
+                         "client_id": "...", "client_secret": "..."}]
+                         (or single-account env vars REDDIT_CLIENT_ID /
+                         REDDIT_CLIENT_SECRET / REDDIT_USERNAME /
+                         REDDIT_PASSWORD)
   PEXELS_API_KEY         (optional) free Pexels key for photos
   PIXABAY_API_KEY        (optional) free Pixabay key for photos
   ADMIN_PASSWORD         dashboard password (admin panel)
@@ -75,6 +80,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote_plus, urlparse, urljoin
 
 import requests
+from requests.auth import HTTPBasicAuth
 from flask import Flask, request, jsonify, session, send_from_directory
 
 # ---------------------------------------------------------------- optional deps
@@ -150,6 +156,35 @@ def _load_env_bluesky_accounts():
 
 ENV_BLUESKY_ACCOUNTS = _load_env_bluesky_accounts()
 
+# Reddit accounts can come from the env secret (GitHub Actions) or from
+# single-account env vars. Same sealed-box pattern as BLUESKY_ACCOUNTS:
+# the dashboard encrypts the list into the REDDIT_ACCOUNTS secret.
+def _load_env_reddit_accounts():
+    raw = (os.environ.get("REDDIT_ACCOUNTS", "") or "").strip()
+    accounts = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            if isinstance(data, list):
+                accounts = [a for a in data
+                            if isinstance(a, dict) and a.get("username")
+                            and a.get("password") and a.get("client_id")
+                            and a.get("client_secret")]
+        except Exception:
+            accounts = []
+    if not accounts:
+        # Single account set directly as secrets (script-type app).
+        cid = (os.environ.get("REDDIT_CLIENT_ID", "") or "").strip()
+        csec = (os.environ.get("REDDIT_CLIENT_SECRET", "") or "").strip()
+        user = (os.environ.get("REDDIT_USERNAME", "") or "").strip()
+        pw = (os.environ.get("REDDIT_PASSWORD", "") or "").strip()
+        if cid and csec and user and pw:
+            accounts = [{"username": user, "password": pw,
+                         "client_id": cid, "client_secret": csec}]
+    return accounts
+
+ENV_REDDIT_ACCOUNTS = _load_env_reddit_accounts()
+
 # Gemini models to try, in order (latest first).
 # Rebuild #7.4: gemini-2.5-flash-lite is DEAD for new users (live
 # API error 2026-11-23: HTTP 404 "no longer available to new users -
@@ -181,6 +216,7 @@ DEFAULT_MAX_CONSECUTIVE_FAILURES = 5  # circuit breaker: pause after N failed ru
 # --- per-workflow On/Off toggles (safety switches only) ---
 DEFAULT_BLOGGER_ENABLED = "true"      # Blogger cards on/off
 DEFAULT_BSKY_ENABLED = "true"         # Bluesky cards on/off
+DEFAULT_REDDIT_ENABLED = "true"       # Reddit cards on/off
 DEFAULT_REPLIES_ENABLED = "true"      # Bluesky replies on/off
 DEFAULT_CARDS_ENABLED = "true"        # cards cycle on/off
 # --- Blogger article formatting ---
@@ -349,6 +385,7 @@ def init_db():
         "max_consecutive_failures": str(DEFAULT_MAX_CONSECUTIVE_FAILURES),
         "blogger_enabled": str(DEFAULT_BLOGGER_ENABLED),
         "bsky_enabled": str(DEFAULT_BSKY_ENABLED),
+        "reddit_enabled": str(DEFAULT_REDDIT_ENABLED),
         "replies_enabled": str(DEFAULT_REPLIES_ENABLED),
         "cards_enabled": str(DEFAULT_CARDS_ENABLED),
         "blogger_bold_format": str(DEFAULT_BLOGGER_BOLD_FORMAT),
@@ -544,13 +581,32 @@ def merge_worker_state(remote, local):
             merged[k] = local[k]
     for k in ("posted_promo_topics", "posted_promo_captions",
               "posted_promo_link_topics", "posted_promo_accounts",
-              "last_bsky_post_at"):
+              "last_bsky_post_at", "last_reddit_post_at"):
         m = dict(remote.get(k) or {})
         for kk, vv in (local.get(k) or {}).items():
             if kk not in m or str(vv or "") >= str(m.get(kk) or ""):
                 m[kk] = vv
         if m:
             merged[k] = m
+    # Reddit per-account daily post counts: max per date+username wins
+    # (a count must never go backwards on merge, or the daily cap
+    # would silently reset and an account could over-post).
+    _rc_remote = remote.get("reddit_post_counts") or {}
+    _rc_local = local.get("reddit_post_counts") or {}
+    _rc = {}
+    for _d in set(_rc_remote) | set(_rc_local):
+        _day = {}
+        for _u in set((_rc_remote.get(_d) or {})) | set((_rc_local.get(_d) or {})):
+            try:
+                _day[_u] = max(int((_rc_remote.get(_d) or {}).get(_u) or 0),
+                               int((_rc_local.get(_d) or {}).get(_u) or 0))
+            except Exception:
+                _day[_u] = ((_rc_remote.get(_d) or {}).get(_u)
+                            or (_rc_local.get(_d) or {}).get(_u) or 0)
+        if _day:
+            _rc[_d] = _day
+    if _rc:
+        merged["reddit_post_counts"] = _rc
     for k, cap in (("posted_urls", 500), ("posted_topics", 500),
                    ("replied_comments", 2000), ("recent_articles", 50)):
         seen = {}
@@ -678,6 +734,15 @@ def write_dashboard_json(state):
                 "posts_limit": account_posts_limit(h),
                 "posts_today": posts_today_for_account(state, h),
             })
+        reddit_accounts_detail = []
+        for a in list_reddit_accounts():
+            u = a["username"]
+            reddit_accounts_detail.append({
+                "username": u,
+                "enabled": reddit_account_enabled(u),
+                "posts_limit": reddit_account_posts_limit(u),
+                "posts_today": posts_today_for_reddit_account(state, u),
+            })
         # Enriched file cards (data/cards.json) for the dashboard: status
         # badge, last run, next 5 runs (Dhaka), success/fail counters.
         file_stats = state.get("file_card_stats", {}) or {}
@@ -697,6 +762,7 @@ def write_dashboard_json(state):
                 "name": nm, "type": c.get("type", ""), "status": st,
                 "computed_status": computed,
                 "link": c.get("link", ""),
+                "subreddit": c.get("subreddit", ""),
                 "account_handle": c.get("account_handle", ""),
                 "interval_minutes": card_interval_minutes(c),
                 "posts_per_day": card_posts_per_day(c),
@@ -756,7 +822,8 @@ def write_dashboard_json(state):
             "settings": {k: get_setting(k, "") for k in
                          ("paused", "dry_run",
                           "max_consecutive_failures", "blogger_enabled",
-                          "bsky_enabled", "replies_enabled", "cards_enabled",
+                          "bsky_enabled", "reddit_enabled", "replies_enabled",
+                          "cards_enabled",
                           "blogger_bold_format",
                           "card_default_interval_hours",
                           "card_default_interval_minutes",
@@ -776,6 +843,7 @@ def write_dashboard_json(state):
             "file_cards": file_cards_out,
             "account_handles": [a["handle"] for a in list_accounts()],
             "accounts_detail": accounts_detail,
+            "reddit_accounts_detail": reddit_accounts_detail,
             "health": health_check(state),
             "issues": get_issues(state),
             "dry_run": is_dry_run(),
@@ -3724,6 +3792,10 @@ def log_card_settings(card):
     nothing defaulted silently."""
     name = card.get("name", "")
     reply_own, reply_others, rpr, lb = card_reply_settings(card)
+    extra = ""
+    if card.get("type") == "reddit_post":
+        extra = (" subreddit=r/" +
+                 (card.get("subreddit") or "").strip().lstrip("r/"))
     log("info", f"card '{name}': settings type={card.get('type', '')} "
                 f"posts/day={card_posts_per_day(card)} "
                 f"posts/run={card_posts_per_run(card)} "
@@ -3738,7 +3810,7 @@ def log_card_settings(card):
                 f"month_cap={card_max_posts_per_month(card)} "
                 f"retry={card_retry_after_minutes(card)}m/"
                 f"{card_retry_max(card)} "
-                f"replies/day={card_replies_per_day(card)}")
+                f"replies/day={card_replies_per_day(card)}{extra}")
 
 
 def fetch_photo(topic):
@@ -4167,6 +4239,779 @@ def list_accounts():
     except Exception:
         pass
     return accounts
+
+
+# ---------------------------------------------------------------- Reddit
+# Reddit posting + replies, same model as Bluesky (user order 2026-11-24).
+# Reddit HAS a free OAuth API (script-type app): POST
+# https://www.reddit.com/api/v1/access_token with HTTP Basic auth
+# (client_id:client_secret), grant_type=password, username + password.
+# The token lives 1 hour; re-auth on 401. Posts go INTO a subreddit
+# (the card specifies which); each subreddit has its own rules, and
+# repeatedly posting the same link is spam-risky - so every post uses
+# a fresh Political/War story (same picker model as Bluesky) with a
+# different title, and the per-card daily caps apply. Quora was NOT
+# built: it has no public API (confirmed).
+# Rate limit: 100 queries/min per OAuth client ID. New apps need
+# approval under Reddit's Responsible Builder Policy.
+REDDIT_TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
+REDDIT_API_BASE = "https://oauth.reddit.com"
+REDDIT_MIN_POST_GAP_MINUTES = 5
+# In-memory OAuth token cache: username -> (token, expires_at).
+# Tokens live 1 hour; the cache is per run (the worker is short-lived).
+_REDDIT_TOKENS = {}
+
+LAST_REDDIT_SKIP = None
+
+
+def list_reddit_accounts():
+    """All Reddit accounts: the REDDIT_ACCOUNTS env secret (JSON list)
+    or the single-account env vars. (The dashboard saves accounts
+    encrypted into the secret, same sealed-box pattern as Bluesky.)"""
+    return list(ENV_REDDIT_ACCOUNTS)
+
+
+def _reddit_user_agent(username):
+    # Reddit requires a descriptive User-Agent (not the default
+    # python-requests one) or the API rejects the call.
+    return f"automation-website/1.0 (by /u/{username})"
+
+
+def _reddit_token(account):
+    """OAuth access token for a Reddit account (script-type app).
+    Returns the token string or None. Cached until shortly before
+    expiry; a failed result is never cached. Logs only success or
+    failure - never the token or any credential value."""
+    username = (account or {}).get("username", "")
+    cached = _REDDIT_TOKENS.get(username)
+    if cached:
+        token, expires_at = cached
+        if expires_at > now_utc() + timedelta(seconds=30):
+            return token
+    try:
+        r = requests.post(
+            REDDIT_TOKEN_URL,
+            auth=HTTPBasicAuth(account.get("client_id", ""),
+                               account.get("client_secret", "")),
+            data={"grant_type": "password",
+                  "username": username,
+                  "password": account.get("password", "")},
+            headers={"User-Agent": _reddit_user_agent(username)},
+            timeout=20)
+    except Exception as e:
+        log("warning", f"reddit token request failed for u/{username}: {e}")
+        return None
+    if r.status_code != 200:
+        log("warning", f"reddit token request failed for u/{username}: "
+                       f"HTTP {r.status_code}")
+        return None
+    try:
+        data = r.json()
+    except Exception:
+        log("warning", f"reddit token response not JSON for u/{username}")
+        return None
+    token = data.get("access_token", "")
+    if not token:
+        log("warning", f"reddit token request returned no token for u/{username}")
+        return None
+    try:
+        expires_in = int(data.get("expires_in") or 3600)
+    except Exception:
+        expires_in = 3600
+    _REDDIT_TOKENS[username] = (
+        token, now_utc() + timedelta(seconds=max(60, expires_in - 60)))
+    log("info", f"reddit: got access token for u/{username}")
+    return token
+
+
+def reddit_request(account, method, path, **kwargs):
+    """One authenticated Reddit API call. Returns the Response or None.
+    On a 401 the cached token is dropped and the call is retried once
+    with a fresh token. kwargs pass through to requests (params/data)."""
+    username = (account or {}).get("username", "")
+    headers = dict(kwargs.pop("headers", {}) or {})
+    headers["User-Agent"] = _reddit_user_agent(username)
+    url = REDDIT_API_BASE + path
+    for attempt in (1, 2):
+        token = _reddit_token(account)
+        if not token:
+            return None
+        headers["Authorization"] = f"bearer {token}"
+        try:
+            r = requests.request(method, url, headers=headers, timeout=25,
+                                 **kwargs)
+        except Exception as e:
+            log("warning", f"reddit {method} {path} failed: {e}")
+            return None
+        if r.status_code == 401 and attempt == 1:
+            _REDDIT_TOKENS.pop(username, None)
+            log("info", f"reddit: token expired for u/{username} - re-authenticating")
+            continue
+        return r
+    return None
+
+
+def reddit_submit(account, subreddit, title, url=None, text=None):
+    """Submit a Reddit post. A link post (title + url) when url is
+    given, else a text post (title + text). The title is hard-capped
+    at 300 chars at this single send point. Returns
+    (fullname, post_url) or None."""
+    sub = (subreddit or "").strip().lstrip("r/").strip()
+    if not sub:
+        return None
+    title = (title or "").strip()[:300]
+    if not title:
+        return None
+    if url:
+        payload = {"sr": sub, "kind": "link", "title": title,
+                   "url": (url or "").strip()}
+    else:
+        payload = {"sr": sub, "kind": "self", "title": title,
+                   "text": (text or "")[:10000]}
+    r = reddit_request(account, "POST", "/api/submit", data=payload)
+    if r is None or r.status_code != 200:
+        log("warning", "reddit submit failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = (r.json().get("json") or {})
+    except Exception:
+        log("warning", "reddit submit response not JSON")
+        return None
+    errors = data.get("errors") or []
+    if errors:
+        log("warning", f"reddit submit rejected: {errors[0][:2] if errors else errors}")
+        return None
+    d = data.get("data") or {}
+    fullname = d.get("name", "")
+    post_url = d.get("url", "")
+    if not fullname:
+        log("warning", "reddit submit returned no post id")
+        return None
+    log("info", f"reddit: posted to r/{sub}: {post_url or fullname}")
+    return fullname, post_url
+
+
+def reddit_comment(account, thing_id, text):
+    """Reply to a Reddit post/comment (thing_id = fullname t3_/t1_).
+    Text is hard-capped at 10,000 chars. Returns the comment
+    fullname or None."""
+    text = (text or "").strip()[:10000]
+    if not text or not thing_id:
+        return None
+    r = reddit_request(account, "POST", "/api/comment",
+                       data={"thing_id": thing_id, "text": text})
+    if r is None or r.status_code != 200:
+        log("warning", "reddit comment failed (HTTP "
+                       f"{r.status_code if r is not None else 'no response'})")
+        return None
+    try:
+        data = (r.json().get("json") or {})
+    except Exception:
+        log("warning", "reddit comment response not JSON")
+        return None
+    errors = data.get("errors") or []
+    if errors:
+        log("warning", f"reddit comment rejected: {errors[0][:2] if errors else errors}")
+        return None
+    d = data.get("data") or {}
+    for thing in (d.get("things") or []):
+        name = ((thing or {}).get("data") or {}).get("name", "")
+        if name:
+            return name
+    return None
+
+
+def reddit_own_posts_with_comments(account, username, subreddit, limit=25,
+                                   since=None):
+    """Our recent posts in a subreddit + their un-replied comments.
+    Returns [{id, fullname, replies:[{id, fullname, author, text}]}].
+    A comment is skipped when we already replied to it (a nested reply
+    in the thread authored by our own username) - so a comment is never
+    answered twice, even if the run state is lost. Mirrors
+    bluesky_own_posts_with_replies."""
+    sub = (subreddit or "").strip().lstrip("r/").strip()
+    out = []
+    if not sub:
+        return out
+    try:
+        cap = int(limit or 25)
+    except Exception:
+        cap = 25
+    cap = max(1, min(25, cap))
+    r = reddit_request(account, "GET", f"/user/{username}/submitted",
+                       params={"limit": 25})
+    if r is None or r.status_code != 200:
+        log("warning", "reddit own-posts fetch failed")
+        return out
+    try:
+        children = (r.json().get("data") or {}).get("children") or []
+    except Exception:
+        return out
+    scanned = 0
+    for child in children:
+        d = (child or {}).get("data") or {}
+        if (d.get("subreddit") or "").lower() != sub.lower():
+            continue
+        created = d.get("created_utc") or 0
+        try:
+            ts = datetime.fromtimestamp(float(created), tz=UTC)
+        except Exception:
+            ts = None
+        if since is not None and ts is not None and ts < since:
+            continue
+        scanned += 1
+        if scanned > cap:
+            break
+        post_id = d.get("id", "")
+        fullname = d.get("name", "")
+        replies = []
+        try:
+            cr = reddit_request(account, "GET",
+                                f"/r/{sub}/comments/{post_id}",
+                                params={"depth": 2, "limit": 100})
+            if cr is not None and cr.status_code == 200:
+                listing = cr.json()
+                comments = []
+                if isinstance(listing, list) and len(listing) > 1:
+                    comments = ((listing[1] or {}).get("data") or {}).get("children") or []
+                for c in comments:
+                    cd = (c or {}).get("data") or {}
+                    if cd.get("author") == username:
+                        continue
+                    # Already answered? A nested reply by our username.
+                    answered = False
+                    nested = cd.get("replies")
+                    if isinstance(nested, dict):
+                        for rep in ((nested.get("data") or {}).get("children") or []):
+                            rd = (rep or {}).get("data") or {}
+                            if rd.get("author") == username:
+                                answered = True
+                                break
+                    if answered:
+                        continue
+                    replies.append({"id": cd.get("id", ""),
+                                    "fullname": cd.get("name", ""),
+                                    "author": cd.get("author", ""),
+                                    "text": (cd.get("body") or "")[:300]})
+        except Exception as e:
+            log("warning", f"reddit comments fetch failed for {post_id}: {e}")
+        out.append({"id": post_id, "fullname": fullname, "replies": replies})
+    return out
+
+
+def reddit_hot_posts(subreddit, limit=10):
+    """Hot posts in a subreddit, highest score first. Returns
+    [{id, fullname, author, title, score, num_comments}]. Mirrors
+    get_high_engagement_posts (hot posts are public - any login works,
+    so the first Reddit account is used)."""
+    sub = (subreddit or "").strip().lstrip("r/").strip()
+    posts = []
+    accounts = list_reddit_accounts()
+    if not sub or not accounts:
+        return posts
+    r = reddit_request(accounts[0], "GET", f"/r/{sub}/hot",
+                       params={"limit": 25})
+    if r is None or r.status_code != 200:
+        log("warning", f"reddit hot posts fetch failed for r/{sub}")
+        return posts
+    try:
+        children = (r.json().get("data") or {}).get("children") or []
+    except Exception:
+        return posts
+    for child in children:
+        d = (child or {}).get("data") or {}
+        try:
+            score = int(d.get("score") or 0)
+        except Exception:
+            score = 0
+        try:
+            ncom = int(d.get("num_comments") or 0)
+        except Exception:
+            ncom = 0
+        posts.append({"id": d.get("id", ""), "fullname": d.get("name", ""),
+                      "author": d.get("author", ""),
+                      "title": (d.get("title") or "")[:200],
+                      "score": score, "num_comments": ncom})
+    posts.sort(key=lambda x: x["score"], reverse=True)
+    try:
+        lim = int(limit or 10)
+    except Exception:
+        lim = 10
+    return posts[:max(1, lim)]
+
+
+def reddit_fresh_comments(account, subreddit, post_id, minutes=5):
+    """Top-level comments on a post made within the last `minutes`
+    minutes. Mirrors get_fresh_comments."""
+    sub = (subreddit or "").strip().lstrip("r/").strip()
+    fresh = []
+    if not sub or not post_id:
+        return fresh
+    r = reddit_request(account, "GET", f"/r/{sub}/comments/{post_id}",
+                       params={"depth": 1, "limit": 100})
+    if r is None or r.status_code != 200:
+        return fresh
+    try:
+        listing = r.json()
+        comments = []
+        if isinstance(listing, list) and len(listing) > 1:
+            comments = ((listing[1] or {}).get("data") or {}).get("children") or []
+    except Exception:
+        return fresh
+    cutoff = now_utc() - timedelta(minutes=minutes)
+    for c in comments:
+        d = (c or {}).get("data") or {}
+        try:
+            ts = datetime.fromtimestamp(float(d.get("created_utc") or 0), tz=UTC)
+        except Exception:
+            continue
+        if ts >= cutoff:
+            fresh.append({"id": d.get("id", ""),
+                          "fullname": d.get("name", ""),
+                          "author": d.get("author", ""),
+                          "text": (d.get("body") or "")[:300]})
+    return fresh
+
+
+REDDIT_REPLY_PROMPT = """Write ONE short, natural, relevant Reddit reply in ENGLISH to
+this comment. It must sound like a real person, not an ad. Do NOT repeat
+the comment. Do NOT add any link. Keep it under 200 characters.
+
+Comment: "{comment}"
+Context (the post it was on): "{context}"
+"""
+
+REDDIT_OWN_REPLY_PROMPT = """Write ONE short, warm, natural Reddit reply in ENGLISH to
+this comment on my post. It must sound like a real person, not an ad.
+Do NOT repeat the comment. Do NOT add any link. Keep it under 200
+characters.
+
+Comment: "{comment}"
+"""
+
+REDDIT_TITLE_PROMPT = """Write ONE short, exciting Reddit post title in ENGLISH about this news story, that makes people want to click it. Sound like a real person sharing breaking news, not an ad. Keep it under 200 characters. Do NOT add a link.
+
+News: {headline}
+"""
+
+
+def run_reddit_cycle(state, subreddit, reply_own=True, reply_others=True,
+                     replies_per_run=0, lookback_days=7, card_name="",
+                     account_username="", replies_per_day=0,
+                     reply_never="", reply_only="", reply_skip_words=""):
+    """Reply to comments for ONE Reddit card (same model as
+    run_bluesky_cycle). Only the card's own account is used.
+    - OWN posts: reply to EVERY unanswered comment (no per-run cap) -
+      over runs the card answers all of them inside the lookback window.
+    - OTHERS' posts: replies_per_run caps the replies per run (0 = no cap).
+    - replies_per_day caps ALL replies this card sends in a day (0 = no cap).
+    - Reddit replies NEVER carry the promo link (a link dropped in a
+      reply reads as spam to subreddit moderators and risks a ban) -
+      the link lives on the card's own posts. The card's link is not
+      needed at all here, so no article is required either.
+    Returns (own_replies_sent, others_replies_sent)."""
+    accounts = list_reddit_accounts()
+    if not accounts:
+        log("info", "reddit cycle: no accounts configured")
+        return 0, 0
+    sub = (subreddit or "").strip().lstrip("r/").strip()
+    if not sub:
+        log("info", f"card '{card_name}': no subreddit set - skipping replies")
+        return 0, 0
+    if account_username:
+        use_accounts = [a for a in accounts
+                        if a["username"] == account_username]
+        if not use_accounts:
+            log("warning", f"reddit cycle: card '{card_name}' account "
+                           f"'u/{account_username}' not found - skipping replies "
+                           "(add that account first)")
+            return 0, 0
+    else:
+        use_accounts = accounts[:1]
+    dry = is_dry_run()
+    try:
+        per_run_replies = int(replies_per_run or 0)
+    except Exception:
+        per_run_replies = 0
+    try:
+        lb = int(lookback_days or 7)
+    except Exception:
+        lb = 7
+    lb = max(1, min(30, lb))
+    try:
+        day_cap = int(replies_per_day or 0)
+    except Exception:
+        day_cap = 0
+    tag = f"card '{card_name}': " if card_name else ""
+    filter_card = {"reply_never": reply_never, "reply_only": reply_only,
+                   "reply_skip_words": reply_skip_words}
+    state.setdefault("replied_comments", [])
+    own_done = 0
+    others_done = 0
+
+    def day_cap_reached():
+        return day_cap > 0 and card_replies_today(state, card_name) >= day_cap
+
+    def others_under_cap():
+        return per_run_replies <= 0 or others_done < per_run_replies
+
+    # --- 1) Replies to fresh comments on hot posts (OTHERS).
+    if reply_others is False:
+        log("info", f"{tag}reddit replies to others are OFF for this card - skipping")
+    else:
+        hot = reddit_hot_posts(sub, limit=5)
+        acc_idx = 0
+        for post in hot:
+            if not others_under_cap() or day_cap_reached():
+                break
+            acc = use_accounts[acc_idx % len(use_accounts)]
+            acc_idx += 1
+            if not reddit_account_enabled(acc["username"]):
+                continue
+            for comment in reddit_fresh_comments(acc, sub, post["id"], minutes=5):
+                if not others_under_cap() or day_cap_reached():
+                    break
+                if comment["fullname"] in state["replied_comments"]:
+                    continue
+                ok, why = reply_allowed(comment["author"], comment["text"],
+                                        filter_card)
+                if not ok:
+                    log("info", f"{tag}skipped reply to {comment['author']}: {why}")
+                    continue
+                if dry:
+                    log("warning", f"[DRY RUN] {tag}would reply to "
+                                   f"{comment['author']} (u/{acc['username']})")
+                    continue
+                reply_text = groq_text(REDDIT_REPLY_PROMPT.format(
+                    comment=comment["text"], context=post["title"]),
+                    max_tokens=400)
+                if not reply_text:
+                    continue
+                uri = retry_with_backoff(
+                    lambda: reddit_comment(acc, comment["fullname"], reply_text),
+                    attempts=2, base_delay=5, label="reddit reply (others)")
+                if uri:
+                    state["replied_comments"].append(comment["fullname"])
+                    record_reply(post["fullname"], comment["fullname"],
+                                 reply_text, acc["username"])
+                    record_card_reply_today(state, card_name)
+                    others_done += 1
+                    log("info", f"{tag}replied to {comment['author']} "
+                                f"(hot post in r/{sub}, "
+                                f"comment: '{comment['text'][:60]}') "
+                                f"as u/{acc['username']}: '{reply_text[:80]}'")
+                    time.sleep(2)
+    # --- 2) Reply to comments on our OWN posts (ALL of them, lookback window).
+    if reply_own is False:
+        log("info", f"{tag}reddit replies to own posts are OFF for this card - skipping")
+        return own_done, others_done
+    own_cutoff = now_utc() - timedelta(days=lb)
+    for acc in use_accounts:
+        if day_cap_reached():
+            break
+        if not reddit_account_enabled(acc["username"]):
+            continue
+        if dry:
+            log("warning", f"[DRY RUN] {tag}would check own-post comments "
+                           f"from the last {lb} days (u/{acc['username']})")
+            continue
+        own_posts = reddit_own_posts_with_comments(
+            acc, acc["username"], sub, limit=25, since=own_cutoff)
+        pending = sum(len(o["replies"]) for o in own_posts)
+        log("info", f"{tag}found {pending} un-replied comment(s) on "
+                    f"{len(own_posts)} own post(s) from the last {lb} day(s) "
+                    f"(u/{acc['username']})")
+        for own in own_posts:
+            for comment in own["replies"]:
+                if day_cap_reached():
+                    break
+                if comment["fullname"] in state["replied_comments"]:
+                    continue
+                if comment["author"] == acc["username"]:
+                    continue
+                ok, why = reply_allowed(comment["author"], comment["text"],
+                                        filter_card)
+                if not ok:
+                    log("info", f"{tag}skipped reply to {comment['author']}: {why}")
+                    continue
+                reply_text = groq_text(REDDIT_OWN_REPLY_PROMPT.format(
+                    comment=comment["text"]), max_tokens=300)
+                if not reply_text:
+                    continue
+                uri = retry_with_backoff(
+                    lambda: reddit_comment(acc, comment["fullname"], reply_text),
+                    attempts=2, base_delay=5, label="reddit reply (own)")
+                if uri:
+                    state["replied_comments"].append(comment["fullname"])
+                    record_reply(own["fullname"], comment["fullname"],
+                                 reply_text, acc["username"])
+                    record_card_reply_today(state, card_name)
+                    own_done += 1
+                    log("info", f"{tag}replied to {comment['author']} on your "
+                                f"post (comment: '{comment['text'][:60]}') "
+                                f"as u/{acc['username']}: '{reply_text[:80]}'")
+                    time.sleep(2)
+    log("info", f"{tag}reply run done: {own_done} own + {others_done} others "
+                f"replies sent (lookback {lb} day(s))")
+    return own_done, others_done
+
+
+def _pick_fresh_reddit_news(card, state):
+    """Pick a FRESH news story for a Reddit post: (topic, headline,
+    article_url). Same categories as the Bluesky promo picker (ONLY USA
+    political news and war news, rotating; the card's topic_override is
+    the only other allowed topic) and the same 24h per-topic / per-link
+    cooldowns - but NO photo is needed (a Reddit link post is a title
+    + a link, no image), so a story is picked as soon as it is fresh.
+    Non-visual stories are skipped early (same as the Bluesky picker).
+    Returns (None, None, None) when no fresh story exists;
+    LAST_REDDIT_SKIP says why ("cooldown" or "no_news")."""
+    global LAST_REDDIT_SKIP
+    LAST_REDDIT_SKIP = None
+    cat_topics = _rotated_promo_categories(state)
+    topics = list(cat_topics)
+    if isinstance(card, dict):
+        override = (card.get("topic_override") or "").strip()
+        if override:
+            topics.append(override)
+    seen_topics = set()
+    uniq = []
+    for t in topics:
+        k = _norm_news_key(t)
+        if k and k not in seen_topics:
+            seen_topics.add(k)
+            uniq.append(t)
+    topics = uniq
+    had_items = False
+    tried_story_keys = set()
+    for topic in topics:
+        try:
+            _verified, _sources, items = verify_news(topic)
+        except Exception:
+            continue
+        if items:
+            had_items = True
+        seen = set()
+        items = sorted(items or [],
+                       key=lambda it: _big_outlet_rank(it.get("source"),
+                                                       it.get("link")))
+        for item in items[:PICK_MAX_ITEMS_PER_TOPIC]:
+            link = (item.get("link") or "").strip()
+            if not link or link in seen:
+                continue
+            seen.add(link)
+            headline = (item.get("title") or "").strip() or topic
+            if _is_non_visual_headline(headline):
+                continue
+            if _promo_topic_cooldown_left(state, headline) is not None:
+                continue
+            if _promo_link_topic_cooldown_left(
+                    state, (card.get("link") or ""), headline) is not None:
+                continue
+            if _headline_in_ready_queue(state, headline):
+                continue
+            story_key = _norm_news_key(headline)
+            if story_key in tried_story_keys:
+                continue
+            tried_story_keys.add(story_key)
+            return topic, headline, link
+    if not had_items:
+        LAST_REDDIT_SKIP = "no_news"
+        log("info", "reddit: no news available in Political / War - skipping")
+    else:
+        LAST_REDDIT_SKIP = "cooldown"
+        log("info", "reddit: every fresh news story was already used "
+                    "within 24h - cooldown, skipping")
+    return None, None, None
+
+
+def _reddit_gap_key(card):
+    """The key the 5-minute no-burst gap is stored under: the Reddit
+    username, not the card name (same rule as Bluesky - two cards
+    sharing one account must not burst-post to it)."""
+    if isinstance(card, dict):
+        return (card.get("account_handle") or "").strip() or card.get("name", "")
+    return str(card or "")
+
+
+def _reddit_gap_left(state, username):
+    """Time left on the 5-minute no-burst gap for a Reddit account,
+    or None when it may post again."""
+    last = (state.get("last_reddit_post_at") or {}).get(username or "")
+    if not last:
+        return None
+    try:
+        dt = datetime.fromisoformat(last)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=UTC)
+    except Exception:
+        return None
+    left = dt + timedelta(minutes=REDDIT_MIN_POST_GAP_MINUTES) - now_utc()
+    return left if left.total_seconds() > 0 else None
+
+
+def _record_reddit_post_at(state, username):
+    """Remember that this Reddit account posted now (state.json, so
+    the gap survives across worker runs)."""
+    state.setdefault("last_reddit_post_at", {})[username or ""] = now_iso()
+
+
+def record_reddit_post(state, username):
+    """Count a Reddit post for this account today (per-account limits)."""
+    counts = state.setdefault("reddit_post_counts", {})
+    today = counts.setdefault(today_str(), {})
+    today[username] = int(today.get(username, 0)) + 1
+    for d in list(counts.keys()):
+        try:
+            if (now_utc().date() - datetime.strptime(d, "%Y-%m-%d").date()).days > 3:
+                counts.pop(d, None)
+        except Exception:
+            counts.pop(d, None)
+
+
+def posts_today_for_reddit_account(state, username):
+    counts = state.get("reddit_post_counts", {})
+    return int(counts.get(today_str(), {}).get(username, 0))
+
+
+def _card_reddit_post(card, state):
+    """Post ONE Reddit card. Returns True on success.
+    The post is a LINK post to the card's subreddit: the title is an
+    AI hook about a fresh Political/War news story (the headline
+    itself when the AI is down, the card's own text when set) and the
+    URL is the card's link (or the story's own URL when the card has
+    no link). No photo is needed. Same 24h per-topic / per-link
+    cooldowns as Bluesky (shared stores - the same story never goes
+    to both Bluesky and Reddit on the same day) and the same 5-minute
+    no-burst gap per account. A cooldown / no-news / no-subreddit
+    skip is a clean no-op (LAST_REDDIT_SKIP)."""
+    global LAST_REDDIT_SKIP
+    LAST_REDDIT_SKIP = None
+    name = card.get("name", "")
+    sub = (card.get("subreddit") or "").strip().lstrip("r/").strip()
+    if not sub:
+        log("warning", f"card '{name}': no subreddit set - post skipped")
+        LAST_REDDIT_SKIP = "no_subreddit"
+        return False
+    accs = [a for a in list_reddit_accounts()
+            if not card.get("account_handle") or
+            a["username"] == card["account_handle"]]
+    if not accs:
+        log("warning", f"card '{name}': no usable Reddit account - post skipped")
+        return False
+    link = (card.get("link") or "").strip()
+    topic, headline, article_url = _pick_fresh_reddit_news(card, state)
+    if not headline:
+        log("warning", f"card '{name}': no fresh news - Reddit post skipped")
+        return False
+    effective_link = link or article_url
+    if _promo_topic_cooldown_left(state, headline) is not None:
+        log("info", f"card '{name}': news story already used within "
+                    f"24h - cooldown, skipping")
+        LAST_REDDIT_SKIP = "cooldown"
+        return False
+    if _promo_link_topic_cooldown_left(state, effective_link, headline) is not None:
+        log("info", f"card '{name}': same link + same event within "
+                    f"24h - cooldown, skipping")
+        LAST_REDDIT_SKIP = "cooldown"
+        return False
+    title = (card.get("text") or "").strip()
+    if not title:
+        try:
+            title = (ai_write(REDDIT_TITLE_PROMPT.format(headline=headline),
+                              max_tokens=200) or "").strip()
+        except Exception:
+            title = ""
+        if not title:
+            title = headline
+    title = title[:300]
+    if is_dry_run():
+        log("warning", f"[DRY RUN] card '{name}': would post to r/{sub} "
+                       f"(u/{accs[0]['username']}) '{title[:60]}' -> "
+                       f"{effective_link[:60]}")
+        return True
+    ok = False
+    for acc in accs[:1]:
+        if not reddit_account_enabled(acc["username"]):
+            continue
+        limit = reddit_account_posts_limit(acc["username"])
+        if limit > 0 and posts_today_for_reddit_account(state, acc["username"]) >= limit:
+            log("info", f"card '{name}': account u/{acc['username']} daily "
+                        "limit reached - skipping")
+            continue
+        res = retry_with_backoff(
+            lambda: reddit_submit(acc, sub, title, url=effective_link),
+            attempts=2, base_delay=5, label="reddit submit")
+        if res:
+            fullname, post_url = res
+            _record_promo_topic_posted(state, headline)
+            _record_promo_link_topic_posted(state, effective_link, headline)
+            _record_promo_account_posted(state, headline, acc["username"])
+            record_reddit_post(state, acc["username"])
+            _record_reddit_post_at(state, acc["username"])
+            log("info", f"card '{name}': posted to r/{sub} as "
+                        f"u/{acc['username']}: {post_url or fullname}")
+            ok = True
+            break
+        log("warning", f"card '{name}': reddit submit failed")
+    return ok
+
+
+def _post_reddit_card(card, state, due_slots):
+    """The posting loop for reddit_post cards. Returns (made, last_error).
+    Mirrors _post_bsky_card: 5-minute gap per account, posts-per-run,
+    due slots, day/week/month caps. Clean skips (cooldown, too soon,
+    cap, no fresh news, no subreddit) are no-ops, not failures."""
+    global LAST_REDDIT_SKIP
+    name = card.get("name", "")
+    dry = is_dry_run()
+    made = 0
+    cooldown_hit = False
+    cap_hit = False
+    gap_key = _reddit_gap_key(card)
+    if not dry and _reddit_gap_left(state, gap_key) is not None:
+        log("info", f"card '{name}': posted less than "
+                    f"{REDDIT_MIN_POST_GAP_MINUTES} minutes ago - too soon, skipping")
+        return 0, "too soon"
+    while True:
+        card = _refresh_card(card)
+        log_card_settings(card)
+        remaining = card_caps_remaining(state, name, card)
+        if remaining is not None and remaining <= 0:
+            log("info", f"card '{name}': post cap reached - skipping")
+            cap_hit = True
+            break
+        if made >= card_posts_per_run(card):
+            break
+        if due_slots and made >= len(due_slots):
+            break
+        try:
+            posted = _card_reddit_post(card, state)
+        except Exception as e:
+            log("error", f"card '{name}': post attempt failed: {e}")
+            LAST_REDDIT_SKIP = None
+            break
+        if posted:
+            made += 1
+            if not dry:
+                record_card_post(state, name)
+                _record_reddit_post_at(state, gap_key)
+        else:
+            if LAST_REDDIT_SKIP == "cooldown":
+                cooldown_hit = True
+            break
+    if made and not dry and due_slots:
+        mark_slots_used(state, name, due_slots[:made])
+    if cooldown_hit and made == 0:
+        return 0, "cooldown"
+    if cap_hit and made == 0:
+        return 0, "post cap reached"
+    if made == 0 and LAST_REDDIT_SKIP == "no_news":
+        return 0, "no fresh news"
+    if made == 0 and LAST_REDDIT_SKIP == "no_subreddit":
+        return 0, "no subreddit set"
+    return made, ("" if made else "post failed or skipped")
 
 
 # ---------------------------------------------------------------- article writing
@@ -6022,6 +6867,9 @@ def execute_card(card, state, test_mode=False, post_only=False):
     if ctype in ("bluesky_post", "bluesky_promo") and not workflow_enabled("bsky"):
         log("info", f"card '{name}': Bluesky workflow is OFF - skipping")
         return False
+    if ctype == "reddit_post" and not workflow_enabled("reddit"):
+        log("info", f"card '{name}': Reddit workflow is OFF - skipping")
+        return False
     if ctype == "bluesky_reply" and not workflow_enabled("replies"):
         log("info", f"card '{name}': Bluesky replies are OFF - skipping")
         return False
@@ -6055,6 +6903,21 @@ def execute_card(card, state, test_mode=False, post_only=False):
             return 0
         if not workflow_enabled("replies"):
             return 0
+        if ctype == "reddit_post":
+            # Reddit replies never carry the link (spam risk) and need
+            # no article - the subreddit is the only extra input.
+            res = run_reddit_cycle(
+                state, subreddit=card.get("subreddit") or "",
+                reply_own=reply_own, reply_others=reply_others,
+                replies_per_run=rpr, lookback_days=lb, card_name=name,
+                account_username=card.get("account_handle") or "",
+                replies_per_day=card_replies_per_day(card),
+                reply_never=card.get("reply_never") or "",
+                reply_only=card.get("reply_only") or "",
+                reply_skip_words=card.get("reply_skip_words") or "")
+            if isinstance(res, (tuple, list)) and len(res) == 2:
+                return int(res[0] or 0) + int(res[1] or 0)
+            return 0
         res = run_bluesky_cycle(state, article=article,
                                 reply_own=reply_own,
                                 reply_others=reply_others,
@@ -6075,6 +6938,12 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 and not list_accounts():
             no_account = True
             last_error = "no Bluesky account added - add one first (Bluesky tab)"
+            log("error", f"card '{name}': {last_error} - skipping, nothing posted")
+            ok = False
+        elif ctype == "reddit_post" and not list_reddit_accounts():
+            # A Reddit card with NO account cannot run at all.
+            no_account = True
+            last_error = "no Reddit account added - add one first (Reddit tab)"
             log("error", f"card '{name}': {last_error} - skipping, nothing posted")
             ok = False
         elif ctype == "blogger_post":
@@ -6193,6 +7062,26 @@ def execute_card(card, state, test_mode=False, post_only=False):
                 else:
                     replies_sent = _do_replies(article)
                     ok = True
+        elif ctype == "reddit_post":
+            # Reddit posts need no article and no photo: a link post
+            # (title + link) to the card's subreddit. Replies never
+            # carry the link (spam risk on Reddit) and need no article.
+            replies_sent = _do_replies(None)
+            if not post_due:
+                log("info", f"card '{name}': not a posting time - "
+                            "replies only, nothing posted this run")
+                last_error = "not a posting time"
+                ok = True
+            else:
+                made, err = _post_reddit_card(card, state, due_slots)
+                # Clean skip = successful run (same rule as Bluesky).
+                ok = made > 0 or err in (
+                    "cooldown", "too soon", "no fresh news",
+                    "post cap reached", "no subreddit set")
+                if ok:
+                    last_error = err or ""
+                else:
+                    last_error = err or "post failed or skipped"
         else:
             log("warning", f"card '{name}': unknown type {ctype}")
             last_error = f"unknown type {ctype}"
@@ -6237,14 +7126,18 @@ def execute_card(card, state, test_mode=False, post_only=False):
 
 def _card_workflow(card):
     """Which GitHub Actions workflow runs this card: 'blogger' for
-    blogger_post, 'bluesky' for bluesky_* cards, None for unknown types.
-    Blogger and Bluesky run as TWO separate workflows so each can be
-    enabled/disabled on its own (the Blogger API is restricted while
-    Bluesky still works)."""
+    blogger_post, 'bluesky' for bluesky_* AND reddit_post cards, None
+    for unknown types. Blogger and Bluesky run as TWO separate
+    workflows so each can be enabled/disabled on its own (the Blogger
+    API is restricted while Bluesky still works). Reddit cards run in
+    the Bluesky workflow (same 10-minute cadence, same --only bluesky
+    flag) - no separate schedule is needed, and the Reddit workflow
+    toggle (reddit_enabled) gates them inside that run."""
     t = card.get("type", "")
     if t == "blogger_post":
         return "blogger"
-    if t in ("bluesky_post", "bluesky_promo", "bluesky_reply"):
+    if t in ("bluesky_post", "bluesky_promo", "bluesky_reply",
+             "reddit_post"):
         return "bluesky"
     return None
 
@@ -6337,7 +7230,8 @@ def run_cards_cycle(state, only=None):
         interval_due = file_card_due(card, state)
         post_only = False
         if not interval_due and card.get("type") in (
-                "bluesky_post", "bluesky_promo", "blogger_post"):
+                "bluesky_post", "bluesky_promo", "blogger_post",
+                "reddit_post"):
             if card_posts_per_day(card) > 0:
                 slot_due, _slots = card_post_due(card, state)
                 if slot_due:
@@ -6426,10 +7320,12 @@ FORCE_DRY = False
 def workflow_enabled(name):
     """Is a workflow cycle switched on? name: blogger|bsky|replies|cards."""
     key = {"blogger": "blogger_enabled", "bsky": "bsky_enabled",
+           "reddit": "reddit_enabled",
            "replies": "replies_enabled", "cards": "cards_enabled"}.get(name)
     if not key:
         return True
     default = {"blogger": DEFAULT_BLOGGER_ENABLED, "bsky": DEFAULT_BSKY_ENABLED,
+               "reddit": DEFAULT_REDDIT_ENABLED,
                "replies": DEFAULT_REPLIES_ENABLED,
                "cards": DEFAULT_CARDS_ENABLED}[name]
     return str(get_setting(key, default)).strip().lower() != "false"
@@ -6465,6 +7361,47 @@ def account_enabled(handle):
 
 def account_posts_limit(handle):
     cfg = get_account_settings().get(handle)
+    if not cfg:
+        return 0
+    try:
+        return int(cfg.get("posts_per_day") or 0)
+    except Exception:
+        return 0
+
+
+REDDIT_ACCOUNT_SETTINGS_PATH = os.path.join(DATA_DIR, "reddit_accounts.json")
+
+
+def get_reddit_account_settings():
+    """Per-account settings from data/reddit_accounts.json (public, no
+    passwords): [{username, enabled, posts_per_day}]. Missing file =
+    all enabled. Kept in its own file (not accounts.json) so saving
+    Bluesky controls can never wipe Reddit entries and vice versa -
+    the dashboard writes this file from the Reddit tab."""
+    if not os.path.exists(REDDIT_ACCOUNT_SETTINGS_PATH):
+        return {}
+    try:
+        with open(REDDIT_ACCOUNT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return {a["username"]: a for a in data
+                    if isinstance(a, dict) and a.get("username")}
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        log("warning", f"reddit_accounts.json load failed: {e}")
+    return {}
+
+
+def reddit_account_enabled(username):
+    cfg = get_reddit_account_settings().get(username)
+    if not cfg:
+        return True
+    return cfg.get("enabled", True) is not False
+
+
+def reddit_account_posts_limit(username):
+    cfg = get_reddit_account_settings().get(username)
     if not cfg:
         return 0
     try:
@@ -6534,6 +7471,11 @@ def health_check(state=None):
         "ok": bool(accounts),
         "detail": f"{len(accounts)} account(s)" if accounts
                   else "no BLUESKY_ACCOUNTS secret"}
+    reddit_accounts = list_reddit_accounts()
+    health["reddit"] = {
+        "ok": bool(reddit_accounts),
+        "detail": f"{len(reddit_accounts)} account(s)" if reddit_accounts
+                  else "no REDDIT_ACCOUNTS secret"}
     health["pexels"] = {
         "ok": bool(os.environ.get("PEXELS_API_KEY")),
         "detail": "key present" if os.environ.get("PEXELS_API_KEY")
@@ -6547,6 +7489,16 @@ def health_check(state=None):
     if not health["bluesky"]["ok"]:
         record_issue("warning", "health",
                      "No Bluesky accounts - posts and replies are skipped")
+    # A Reddit card with no Reddit account is a setup problem (same as
+    # Bluesky) - but no warning when the user simply does not use Reddit.
+    try:
+        if not reddit_accounts and any(
+                c.get("type") == "reddit_post" for c in load_file_cards()):
+            record_issue("warning", "health",
+                         "Reddit card(s) exist but no Reddit account - "
+                         "add one in the Reddit tab")
+    except Exception:
+        pass
     return health
 
 
@@ -7131,7 +8083,8 @@ def api_settings():
     # Card-only: the only remaining global settings are the safety
     # switches, dry-run, circuit breaker and card defaults.
     keys = ("dry_run", "max_consecutive_failures",
-            "blogger_enabled", "bsky_enabled", "replies_enabled",
+            "blogger_enabled", "bsky_enabled", "reddit_enabled",
+            "replies_enabled",
             "cards_enabled", "blogger_bold_format",
             "card_default_interval_hours", "card_default_interval_minutes",
             "card_default_posts_per_day", "card_default_reply_own",
