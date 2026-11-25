@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T04:00:57.722404+00:00",
-  "last_run": "2026-11-25T04:00:45.716939+00:00",
+  "generated_at": "2026-11-25T04:02:15.721182+00:00",
+  "last_run": "2026-11-25T03:57:34.533977+00:00",
   "runs": 76,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -35,7 +35,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T02:56:54.503423+00:00"
+    "Adsterra Blogger": "2026-11-25T04:02:15.489295+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -46,11 +46,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 25,
+      "success": 26,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T02:56:54.503416+00:00"
+      "last_run": "2026-11-25T04:02:15.489291+00:00"
     }
   },
   "file_cards": [
@@ -65,15 +65,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T02:56:54.503423+00:00",
-      "runs_today": 2,
-      "posts_today": 7,
+      "last_run": "2026-11-25T04:02:15.489295+00:00",
+      "runs_today": 3,
+      "posts_today": 8,
       "next_runs": [
-        "2026-11-25T10:11:54.503423+06:00",
-        "2026-11-25T10:26:54.503423+06:00",
-        "2026-11-25T10:41:54.503423+06:00",
-        "2026-11-25T10:56:54.503423+06:00",
-        "2026-11-25T11:11:54.503423+06:00"
+        "2026-11-25T10:17:15.489295+06:00",
+        "2026-11-25T10:32:15.489295+06:00",
+        "2026-11-25T10:47:15.489295+06:00",
+        "2026-11-25T11:02:15.489295+06:00",
+        "2026-11-25T11:17:15.489295+06:00"
       ],
       "next_post_times": [
         "2026-11-25T10:08:00+06:00",
@@ -82,7 +82,7 @@
         "2026-11-25T12:52:00+06:00",
         "2026-11-25T14:09:00+06:00"
       ],
-      "success": 25,
+      "success": 26,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -125,8 +125,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "reddit_accounts_detail": [],
   "health": {
     "gemini": {
@@ -138,12 +147,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -156,10 +165,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T04:00:45.718220+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T03:57:34.536003+00:00"
     }
   ],
   "dry_run": false,
@@ -183,302 +192,302 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T04:00:57.496258+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T04:00:57.494741+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T04:00:57.234944+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T04:00:45.719172+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T04:00:45.718228+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #76 started (--only blogger)",
-      "created_at": "2026-11-25T04:00:45.716960+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T02:56:54.526512+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['November full supermoon', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Wrong Lord of the Rings quotes', 'Tidal bans AI-generated music']",
-      "created_at": "2026-11-25T02:56:54.521645+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T02:56:54.503448+00:00",
+      "created_at": "2026-11-25T04:02:15.489319+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T02:56:54.502197+00:00",
+      "created_at": "2026-11-25T04:02:15.487447+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'cuba democrat exclusive free prisoner rise tension today top' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T02:56:54.500382+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event 'administration debat iran leader nbc news official source ta' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T04:02:15.485112+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1200x675 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-25T02:56:52.742372+00:00",
+      "message": "prepare_bsky_image: published 900x489 (ratio 1.84) - unchanged",
+      "created_at": "2026-11-25T04:01:12.511221+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1200x675 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-25T02:56:52.741066+00:00",
+      "message": "prepare_bsky_image: original 900x489 (ratio 1.84) - kept, no crop",
+      "created_at": "2026-11-25T04:01:12.509412+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Top Democrats urge Cuba to free prisoners as US tensions ris'",
-      "created_at": "2026-11-25T02:56:52.737623+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T02:56:52.592981+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 3 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T02:56:52.591450+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': found 0 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T02:56:52.589895+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to tress333.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Wonderful human! Oh and Dr. El-Sayed, thank you for the Gree') as primonewstoday.bsky.social: 'Thanks! Nothing like a good pasty and a shout‑out to the Pack. 🙌\n\nhttps://shortu'",
-      "created_at": "2026-11-25T02:56:46.160908+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to heramopr77.bsky.social (hot post by abdulelsayed.bsky.social, comment: '') as primonewstoday.bsky.social: 'Sounds like a perfect blend of flavors and community vibes! 🌟\n\nhttps://shorturl.'",
-      "created_at": "2026-11-25T02:56:43.259890+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': replied to skeeterpond.bsky.social (hot post by bodegacats.bsky.social, comment: 'zabloing') as primonewstoday.bsky.social: 'Haha, that's a new one! 😂\n\nhttps://shorturl.at/eZnco'",
-      "created_at": "2026-11-25T02:56:40.048961+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T02:56:38.664627+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepared ready post: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T02:56:38.662621+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T02:56:04.066695+00:00",
+      "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T04:01:12.507147+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-25T02:56:04.065366+00:00",
+      "created_at": "2026-11-25T04:01:12.505443+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia': https://wallpapers.com/images/file/vladimir-putin-world-conference-ni91ta8e3u1imw93.jpg (from bing-images, query 'Putin says retaliation ‘inevitable’ after Ukraine hit Russian oil plants - Al Jazeera', page: https://www.bloomberg.com/opinion/articles/2022-09-01/vladimir-putin-is-russia-s-deluder-in-chief-on - matches 2 key entities (putin, ukraine))",
-      "created_at": "2026-11-25T02:56:04.063195+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Trump administration officials debating targeting Iran’s lea': https://mcnymx.infiniteuploads.cloud/2026/11/President-Donald-J.-Trump-2026.jpeg (from bing-images, query 'Trump administration officials debating targeting Iran’s leaders, sources say - NBC News', page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | House Democrats Put Trump Family, - matches 2 key entities (official, trump))",
+      "created_at": "2026-11-25T04:01:12.503565+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Putin says retaliation ‘inevitable’ after Ukraine ' (, the photo shows Russian President Vladimir Putin, who is the subject making the statement referenced in the headline.)",
-      "created_at": "2026-11-25T02:56:04.059505+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:01:12.501330+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T02:55:59.954638+00:00",
+      "message": "photo: rejected (vision down, strict check): https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:01:12.477623+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['November full supermoon', 'Planned lead detonation in Iowa', 'Nvidia hiring first compliance officer', 'Wrong Lord of the Rings quotes', 'Tidal bans AI-generated music']",
-      "created_at": "2026-11-25T02:55:59.949695+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:01:12.475174+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T02:55:59.683590+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-25T04:01:12.412375+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T02:55:59.681153+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-25T04:01:12.167375+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T02:55:59.291607+00:00",
+      "message": "wikimedia: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-25T04:01:11.957209+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): https://wallpapers.com/images/hd/vladimir-putin-pointing-to-his-left-vpnoo5uql151npyw.jpg (page: https://wallpapers.com/wallpapers/vladimir-putin-portrait-photo-i3jrcnpy457aef5w.html | [600+] Vladi - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T02:55:57.139795+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): http://static.kremlin.ru/media/events/press-photos/orig/41d3e9385e34ebc0e3ba.jpeg?kremlin-ru_photo-1 (page: https://wallpapers.com/vladimir-putin | Photo bank ∙ For the Media ∙ President of Russia - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T02:55:57.138489+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Putin says retaliation ‘inevitable’ after Ukraine '): https://wallpapercave.com/wp/wp3090445.jpg (page: http://en.kremlin.ru/press/photo | Vladimir Putin Wallpapers - Wallpaper Cave - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T02:55:57.137224+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
-      "created_at": "2026-11-25T02:55:57.134054+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
-      "created_at": "2026-11-25T02:55:57.012472+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
-      "created_at": "2026-11-25T02:55:56.906318+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia'",
-      "created_at": "2026-11-25T02:55:56.537703+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T02:55:50.500658+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T02:55:50.499590+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #75 started (--only blogger)",
-      "created_at": "2026-11-25T02:55:50.497973+00:00",
+      "message": "openverse: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-25T04:01:11.474665+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T02:55:49.567830+00:00",
+      "created_at": "2026-11-25T04:00:56.701894+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T02:55:49.566529+00:00",
+      "created_at": "2026-11-25T04:00:56.700210+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - rejected (no og:image)",
-      "created_at": "2026-11-25T02:55:49.565176+00:00",
+      "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - rejected (no og:image)",
+      "created_at": "2026-11-25T04:00:56.697877+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitwFBVV95cUxNbVlLVzNGdDA4X0FlQVJiZDFvR2RncEpnbThvT3ZhSTVrUzlwaXh6aWtreGRaaV82T1B) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T02:55:49.562547+00:00",
+      "message": "promo: story 4/6 tried: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T04:00:56.123603+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Saudi-led coalition strikes Yemen’s Hodeidah ' - skipped (same event used within 24h, event key 'coalition hodeidah iran jazeera led live port saudi strike w')",
-      "created_at": "2026-11-25T02:55:49.262440+00:00",
+      "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T04:00:56.121380+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war updates: Saudi-led coalition orders evacuation of H' - skipped (same event used within 24h, event key 'coalition evacuation hodeidah iran jazeera led order port sa')",
-      "created_at": "2026-11-25T02:55:49.260930+00:00",
+      "message": "photo: no real photo found for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War - The New York Times' (12 download(s) tried)",
+      "created_at": "2026-11-25T04:00:56.119522+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Iran developing chemical weapons, Israeli ' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news upda')",
-      "created_at": "2026-11-25T02:55:49.258758+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://c.ndtvimg.com/2026-11/rgai3ujs_trump-pardons-turkey-thanksgiving_625x300_25_November_26.jpeg",
+      "created_at": "2026-11-25T04:00:56.117335+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T02:55:48.779933+00:00",
+      "message": "photo: rejected (vision down, strict check): https://obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.955538+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T02:55:48.427225+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.952940+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://mcnymx.infiniteuploads.cloud/2026/11/President-Donald-J.-Trump-2026.jpeg - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.679566+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.677431+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.477895+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.475844+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/President_Trump_Visits_St._John%27s_Episcop - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.408203+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.406042+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Melania_Trump_2011.jpg/1280px-Melania_Trump - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.287447+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.285272+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/January_2025_Official_Presidential_Portrait - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.144750+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.142774+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Donald_Trump_official_portrait_%28cropped%2 - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:55.006427+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:55.004113+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/1280px-D - source page title names only 1 of 11 key entities - not a news article about the story",
+      "created_at": "2026-11-25T04:00:54.835488+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-25T04:00:54.833084+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Trump'",
+      "created_at": "2026-11-25T04:00:54.695773+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Trump'",
+      "created_at": "2026-11-25T04:00:54.509804+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Trump'",
+      "created_at": "2026-11-25T04:00:54.252685+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: search HTTP 500 for 'Trump'",
+      "created_at": "2026-11-25T04:00:53.692389+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T04:00:47.110384+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T04:00:47.108792+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: topical search found nothing for 'Trump’s Nvidia Push Shows Companies’ Importance in' - trying entity search 'Trump'",
+      "created_at": "2026-11-25T04:00:47.107014+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://c.ndtvimg.com/2026-11/rgai3ujs_trump-pardons-turkey-thanksgiving_625x300_25_November_26.jpeg",
+      "created_at": "2026-11-25T04:00:47.104538+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg (page: https://www.ndtv.com/world-news/trump-pardons-turkeys-freedom-and-feathers-from-fowl-thanksgiving-fa - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-25T04:00:47.021368+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://mcnymx.infiniteuploads.cloud/2026/11/President-Donald-J.-Trump-2026.jpeg (page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | House Democrats Put Trump Family, - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-25T04:00:47.019590+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump’s Nvidia Push Shows Companies’ Importance in'): https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg (page: https://www.tampafp.com/house-democrats-put-trump-family-officials-on-notice-ahead-of-january-takeov - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-25T04:00:47.017693+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Trump s Nvidia Push Shows'",
+      "created_at": "2026-11-25T04:00:47.014437+00:00",
       "card": ""
     }
   ]
