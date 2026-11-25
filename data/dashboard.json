@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T22:57:07.476191+00:00",
-  "last_run": "2026-11-25T22:55:06.459006+00:00",
-  "runs": 110,
+  "generated_at": "2026-11-25T23:36:21.398068+00:00",
+  "last_run": "2026-11-25T23:31:28.283142+00:00",
+  "runs": 111,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T22:41:01.811064+00:00",
-    "mastodon.social": "2026-11-25T22:43:05.200538+00:00"
+    "Adsterra Blogger": "2026-11-25T23:35:21.541300+00:00",
+    "mastodon.social": "2026-11-25T23:36:21.295785+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 45,
+      "success": 46,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T22:41:01.811059+00:00"
+      "last_run": "2026-11-25T23:35:21.541298+00:00"
     },
     "mastodon.social": {
-      "success": 9,
+      "success": 10,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T22:43:05.200531+00:00"
+      "last_run": "2026-11-25T23:36:21.295783+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T22:41:01.811064+00:00",
-      "runs_today": 19,
-      "posts_today": 5,
+      "last_run": "2026-11-25T23:35:21.541300+00:00",
+      "runs_today": 20,
+      "posts_today": 6,
       "next_runs": [
-        "2026-11-26T05:11:01.811064+06:00",
-        "2026-11-26T05:26:01.811064+06:00",
-        "2026-11-26T05:41:01.811064+06:00",
-        "2026-11-26T05:56:01.811064+06:00",
-        "2026-11-26T06:11:01.811064+06:00"
+        "2026-11-26T05:50:21.541300+06:00",
+        "2026-11-26T06:05:21.541300+06:00",
+        "2026-11-26T06:20:21.541300+06:00",
+        "2026-11-26T06:35:21.541300+06:00",
+        "2026-11-26T06:50:21.541300+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T04:59:00+06:00",
         "2026-11-26T05:53:00+06:00",
         "2026-11-26T07:09:00+06:00",
         "2026-11-26T08:05:00+06:00",
-        "2026-11-26T09:00:00+06:00"
+        "2026-11-26T09:00:00+06:00",
+        "2026-11-26T09:59:00+06:00"
       ],
-      "success": 45,
+      "success": 46,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T22:43:05.200538+00:00",
-      "runs_today": 9,
-      "posts_today": 5,
+      "last_run": "2026-11-25T23:36:21.295785+00:00",
+      "runs_today": 10,
+      "posts_today": 6,
       "next_runs": [
-        "2026-11-26T04:58:05.200538+06:00",
-        "2026-11-26T05:13:05.200538+06:00",
-        "2026-11-26T05:28:05.200538+06:00",
-        "2026-11-26T05:43:05.200538+06:00",
-        "2026-11-26T05:58:05.200538+06:00"
+        "2026-11-26T05:51:21.295785+06:00",
+        "2026-11-26T06:06:21.295785+06:00",
+        "2026-11-26T06:21:21.295785+06:00",
+        "2026-11-26T06:36:21.295785+06:00",
+        "2026-11-26T06:51:21.295785+06:00"
       ],
       "next_post_times": [
         "2026-11-26T06:10:00+06:00",
@@ -171,7 +171,7 @@
         "2026-11-26T08:58:00+06:00",
         "2026-11-26T10:00:00+06:00"
       ],
-      "success": 9,
+      "success": 10,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 19
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 9
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T22:55:06.460660+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T22:55:06.461952+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T23:31:28.284384+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Danielle Smith's UCP government controversies",
+    "Describe a film without its name",
+    "Denny's restores Jensen Huang plaque",
     "New Avengers: Doomsday poster",
-    "Duran Duran's Andy Taylor dies",
     "Aaron Rodgers reportedly out",
+    "Duran Duran's Andy Taylor dies",
     "Macy's parade turns 100",
-    "Huang reinstated as Nvidia CEO",
+    "Trump floats Jensen Huang pardon",
     "FEMA hotline unanswered in Iowa",
-    "Grand Theft Auto VI",
-    "Montreal airport pizza slice",
+    "FCC approves SpaceX Starmind satellites",
     "Mike McCarthy's ice cream sandwich assistant"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T22:57:07.443808+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T22:57:07.441909+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T22:57:07.215719+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T22:55:06.463150+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T22:55:06.461960+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T22:55:06.460669+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #110 started (--only blogger)",
-      "created_at": "2026-11-25T22:55:06.459032+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T22:43:05.200560+00:00",
+      "created_at": "2026-11-25T23:36:21.295802+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T22:43:05.199137+00:00",
+      "created_at": "2026-11-25T23:36:21.295044+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679494641285665",
-      "created_at": "2026-11-25T22:43:05.197669+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679704079019250",
+      "created_at": "2026-11-25T23:36:21.293992+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117679494641285665",
-      "created_at": "2026-11-25T22:43:05.194900+00:00",
+      "message": "mastodon: posted to mastodon.social: 117679704079019250",
+      "created_at": "2026-11-25T23:36:21.291855+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-25T22:43:01.856916+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-25T22:43:01.279826+00:00",
+      "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T23:36:14.803503+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 20 candidate(s) tried, 4 fresh stories with a photo attempt, 4 real-photo search(es), no usable photo",
-      "created_at": "2026-11-25T22:43:01.278693+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-25T23:36:14.802830+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
-      "created_at": "2026-11-25T22:43:01.277603+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-25T22:43:01.276039+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-      "created_at": "2026-11-25T22:43:01.274884+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-25T22:43:01.273538+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-25T22:43:01.272317+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
-      "created_at": "2026-11-25T22:43:01.271158+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-25T22:43:01.269797+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: story 4/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
-      "created_at": "2026-11-25T22:43:01.268557+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-25T22:43:01.267410+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (10 download(s) tried)",
-      "created_at": "2026-11-25T22:43:01.266271+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://d.newsweek.com/en/full/2535326/danica-patrick.jpg?w=1200&f=5dea864bc5c70098c7def389d9fb3be9 (page: Danica Patrick Blasts Starbucks After Gory Injury Update From Former NASCAR Driver - Newsweek - page does not name the entity (Bitter))",
-      "created_at": "2026-11-25T22:43:01.264819+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Bitter_Type_3_1Y7A6129.jpg/1280px-Bitter_Ty - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-25T22:43:01.261726+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'How the War Turned Sudan Into a Country Without a Newspaper ': https://www.economist.com/content-assets/images/20230708_SRP054.jpg (from bing-images, query 'War Turned Sudan Into Country', page: https://global.espreso.tv/russia-ukraine-war-no-easy-path-ahead-ukrainian-reservists-council-head-ty - matches 2 key entities (how, war))",
+      "created_at": "2026-11-25T23:36:14.801896+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T22:43:01.260238+00:00",
+      "created_at": "2026-11-25T23:36:14.800612+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Bitter_Corsa_F_1X7A7182.jpg/1280px-Bitter_C - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-25T22:43:01.079943+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T22:43:01.078273+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Bitter_Astra_L_1X7A7183.jpg/1280px-Bitter_A - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-25T22:43:00.884832+00:00",
+      "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 - source page title names only 0 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-25T23:36:14.492524+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T22:43:00.883235+00:00",
+      "created_at": "2026-11-25T23:36:14.491619+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Ale_Bitter.jpg/1280px-Ale_Bitter.jpg?utm_so - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-25T22:43:00.701975+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | Cinematic Depiction of War i - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.467128+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T22:43:00.700660+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.freepik.com/premium-ai-image/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-int - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.466436+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Adriaen_Brouwer_-_The_Bitter_Potion_-_Googl - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-25T22:43:00.504756+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Person_taking_photograph.jpg/1280px-Person_ (page: https://commons.wikimedia.org/wiki/File:Person_taking_photograph.jpg | File:Person taking photograph - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.465547+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T22:43:00.502864+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Fire_and_sword_in_the_Sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.464757+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
-      "created_at": "2026-11-25T22:43:00.289830+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Fire_and_sword_in_the_Sudan%3B_a_personal_n (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan;_a_personal_narrative_of_fightin - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.464030+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
-      "created_at": "2026-11-25T22:43:00.166971+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Fire_and_Sword_in_the_sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_Sword_in_the_sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.463237+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
-      "created_at": "2026-11-25T22:43:00.053172+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Asia_%28late_19th_century-_early_20th_centu (page: https://commons.wikimedia.org/wiki/File:Asia_(late_19th_century-_early_20th_century).jpg | File:Asia - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.462286+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
-      "created_at": "2026-11-25T22:42:59.940184+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://live.staticflickr.com/1884/44632251721_448453f5c5.jpg (page: https://www.flickr.com/photos/139494057@N07/44632251721 | A stranger in Olondria : being the complet - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:14.461387+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
-      "created_at": "2026-11-25T22:42:59.822377+00:00",
+      "message": "bing-images: 4 candidate(s) for 'War Turned Sudan Into Country'",
+      "created_at": "2026-11-25T23:36:14.458920+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Bitter'",
-      "created_at": "2026-11-25T22:42:59.704010+00:00",
+      "message": "google-images: 0 candidate(s) for 'War Turned Sudan Into Country'",
+      "created_at": "2026-11-25T23:36:14.332444+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Bitter'",
-      "created_at": "2026-11-25T22:42:59.538279+00:00",
+      "message": "wikimedia: 5 result(s) for 'War Turned Sudan Into Country'",
+      "created_at": "2026-11-25T23:36:14.206471+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Bitter'",
-      "created_at": "2026-11-25T22:42:59.324762+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Bitter'",
-      "created_at": "2026-11-25T22:42:59.241234+00:00",
+      "message": "openverse: 1 result(s) for 'War Turned Sudan Into Country'",
+      "created_at": "2026-11-25T23:36:13.903933+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T22:42:59.198157+00:00",
+      "created_at": "2026-11-25T23:36:13.874583+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T22:42:59.196821+00:00",
+      "created_at": "2026-11-25T23:36:13.873962+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
-      "created_at": "2026-11-25T22:42:59.195471+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.873297+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/5b/0e/c6/5b0ec63f21f49b3b58d6fd726a84c84e.jpg (page: https://www.youtube.com/watch?v=g2D9WzwBfDE - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T22:42:59.194001+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.872581+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.ytimg.com/vi/gp1xC0imRBs/maxresdefault.jpg (page: https://www.pinterest.com/pin/507006870564579751/ | Take Me Home, Country Roads – John Denver (Class - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T22:42:59.192596+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.871854+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://greawarner.com/wp-content/uploads/2018/02/CountryRoadsCover-1.jpg (page: https://www.youtube.com/watch?v=gp1xC0imRBs | Country Roads - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T22:42:59.190950+00:00",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.870966+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
+      "created_at": "2026-11-25T23:36:13.868019+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
+      "created_at": "2026-11-25T23:36:13.756221+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
+      "created_at": "2026-11-25T23:36:13.652108+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
+      "created_at": "2026-11-25T23:36:13.468732+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T23:36:13.433548+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T23:36:13.432892+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.432147+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.431156+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.430262+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-25T23:36:13.429395+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
+      "created_at": "2026-11-25T23:36:13.426778+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
+      "created_at": "2026-11-25T23:36:13.315495+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
+      "created_at": "2026-11-25T23:36:13.199410+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
+      "created_at": "2026-11-25T23:36:13.015509+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T23:36:12.974715+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T23:36:12.974012+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - rejected (no og:image)",
+      "created_at": "2026-11-25T23:36:12.973182+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxQOUw3TjdCalhKUW9naVRaY2t1bG91NjlqVG5jYnRUNHlMVG5RX1hfcFJDZVNnTHBQWHc) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T23:36:12.971197+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 2/6 tried: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T23:36:12.811833+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T23:36:12.811218+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'What Is Childhood to Gaza's Generation Raised in War? - Haaretz' (6 download(s) tried)",
+      "created_at": "2026-11-25T23:36:12.810638+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://image2.slideserve.com/5360615/figure-23-2b-the-respiratory-epithelium-of-the-nasal-cavity-an (page: http://www.earthslab.com/anatomy/nasal-cavity/ | PPT - 23 The Respiratory System PowerPoint Presenta - page does not name the entity (Childhood))",
+      "created_at": "2026-11-25T23:36:12.810019+00:00",
       "card": ""
     }
   ]
