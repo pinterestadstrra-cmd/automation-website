@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T18:52:43.734860+00:00",
-  "last_run": "2026-11-25T18:52:36.187490+00:00",
-  "runs": 102,
+  "generated_at": "2026-11-25T19:40:08.043560+00:00",
+  "last_run": "2026-11-25T19:38:08.927161+00:00",
+  "runs": 103,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T18:37:08.630152+00:00",
-    "mastodon.social": "2026-11-25T18:38:02.826312+00:00"
+    "Adsterra Blogger": "2026-11-25T19:39:44.608125+00:00",
+    "mastodon.social": "2026-11-25T19:40:07.921267+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 41,
+      "success": 42,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T18:37:08.630147+00:00"
+      "last_run": "2026-11-25T19:39:44.608121+00:00"
     },
     "mastodon.social": {
-      "success": 5,
+      "success": 6,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T18:38:02.826308+00:00"
+      "last_run": "2026-11-25T19:40:07.921262+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T18:37:08.630152+00:00",
-      "runs_today": 15,
-      "posts_today": 1,
+      "last_run": "2026-11-25T19:39:44.608125+00:00",
+      "runs_today": 16,
+      "posts_today": 2,
       "next_runs": [
-        "2026-11-26T01:07:08.630152+06:00",
-        "2026-11-26T01:22:08.630152+06:00",
-        "2026-11-26T01:37:08.630152+06:00",
-        "2026-11-26T01:52:08.630152+06:00",
-        "2026-11-26T02:07:08.630152+06:00"
+        "2026-11-26T01:54:44.608125+06:00",
+        "2026-11-26T02:09:44.608125+06:00",
+        "2026-11-26T02:24:44.608125+06:00",
+        "2026-11-26T02:39:44.608125+06:00",
+        "2026-11-26T02:54:44.608125+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T00:58:00+06:00",
         "2026-11-26T01:52:00+06:00",
         "2026-11-26T03:08:00+06:00",
         "2026-11-26T04:04:00+06:00",
-        "2026-11-26T04:59:00+06:00"
+        "2026-11-26T04:59:00+06:00",
+        "2026-11-26T05:53:00+06:00"
       ],
-      "success": 41,
+      "success": 42,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T18:38:02.826312+00:00",
-      "runs_today": 5,
-      "posts_today": 1,
+      "last_run": "2026-11-25T19:40:07.921267+00:00",
+      "runs_today": 6,
+      "posts_today": 2,
       "next_runs": [
-        "2026-11-26T00:53:02.826312+06:00",
-        "2026-11-26T01:08:02.826312+06:00",
-        "2026-11-26T01:23:02.826312+06:00",
-        "2026-11-26T01:38:02.826312+06:00",
-        "2026-11-26T01:53:02.826312+06:00"
+        "2026-11-26T01:55:07.921267+06:00",
+        "2026-11-26T02:10:07.921267+06:00",
+        "2026-11-26T02:25:07.921267+06:00",
+        "2026-11-26T02:40:07.921267+06:00",
+        "2026-11-26T02:55:07.921267+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T00:56:00+06:00",
         "2026-11-26T01:50:00+06:00",
         "2026-11-26T03:06:00+06:00",
         "2026-11-26T04:00:00+06:00",
-        "2026-11-26T04:55:00+06:00"
+        "2026-11-26T04:55:00+06:00",
+        "2026-11-26T06:10:00+06:00"
       ],
-      "success": 5,
+      "success": 6,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 15
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 5
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T18:52:36.188701+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T18:52:36.189762+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T19:38:08.929040+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Canned cranberry sauce",
-    "AI water use compared to golf",
+    "Steven Universe actor comes out",
+    "Showing up to Thanksgiving dinner",
     "Grand Theft Auto VI",
-    "Army lead detonation in Iowa",
-    "Nvidia hiring first compliance officer",
+    "FEMA hotline unanswered in Iowa",
     "Van Hollen challenges Schumer",
-    "Montreal airport pizza slice",
-    "Gordon Ramsay to host Top Gear",
-    "Day to end violence against women",
-    "Steelers bench Aaron Rodgers"
+    "Aaron Rodgers criticizes Mike McCarthy",
+    "AI water use compared to golf",
+    "Nvidia hiring first compliance officer",
+    "Montreal airport pizza slice"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T18:52:43.310998+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T18:52:43.309246+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T18:52:42.993761+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T18:52:36.190919+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T18:52:36.189767+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T18:52:36.188707+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #102 started (--only blogger)",
-      "created_at": "2026-11-25T18:52:36.187509+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T18:38:02.826338+00:00",
+      "created_at": "2026-11-25T19:40:07.921294+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T18:38:02.824415+00:00",
+      "created_at": "2026-11-25T19:40:07.918650+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678531081597897",
-      "created_at": "2026-11-25T18:38:02.822222+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678775176961387",
+      "created_at": "2026-11-25T19:40:07.851403+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117678531081597897",
-      "created_at": "2026-11-25T18:38:02.818687+00:00",
+      "message": "mastodon: posted to mastodon.social: 117678775176961387",
+      "created_at": "2026-11-25T19:40:07.847825+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'The New York Times. . The war in Iran has reignited Yemen’s ' - ACCEPTED real photo (from wikimedia)",
-      "created_at": "2026-11-25T18:37:50.793259+00:00",
+      "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T19:39:49.952366+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-25T18:37:50.791638+00:00",
+      "created_at": "2026-11-25T19:39:49.950717+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'The New York Times. . The war in Iran has reignited Yemen’s ': https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Abraham_Lincoln_and_the_battles_of_the_Civi (from wikimedia, query 'York Times war Iran has', page: https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_and_the_battles_of_the_Civil_War_(1886)_(145 - matches 3 key entities (civil, http, war))",
-      "created_at": "2026-11-25T18:37:50.790062+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'African insurgents take war to the skies with off-the-shelf ': https://www.military.africa/wp-content/uploads/2025/02/rebels-terrorists-and-insurgents-nonstate-act (from bing-images, query 'African insurgents take war to the skies with off-the-shelf drones - Reuters', page: https://www.dailymaverick.co.za/article/2025-06-03-drones-in-africa-are-a-new-frontier-for-armed-gro - matches 2 key entities (drone, insurgent))",
+      "created_at": "2026-11-25T19:39:49.948898+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T18:37:50.787980+00:00",
+      "message": "vision: YES - photo matches 'African insurgents take war to the skies with off-' (. The photo shows an African individual in camouflage holding a consumer-grade drone, which directly illustrates the Reuters headline about African in)",
+      "created_at": "2026-11-25T19:39:49.946673+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/A_history_of_all_nations_from_the_earliest_ - source page title names only 1 of 28 key entities - not a news article about the story",
-      "created_at": "2026-11-25T18:37:50.363777+00:00",
+      "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+      "created_at": "2026-11-25T19:39:46.302470+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T18:37:50.361372+00:00",
+      "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+      "created_at": "2026-11-25T19:39:45.802713+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://live.staticflickr.com/65535/53806424909_a4d20ceb69_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53806424909 | Heather Cox Richardson - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:49.953079+00:00",
+      "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+      "created_at": "2026-11-25T19:39:45.463537+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6046/6422578785_3835a32b55_b.jpg",
-      "created_at": "2026-11-25T18:37:49.950576+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'York Times war Iran has'",
-      "created_at": "2026-11-25T18:37:49.482632+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'York Times war Iran has'",
-      "created_at": "2026-11-25T18:37:49.309423+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'York Times war Iran has'",
-      "created_at": "2026-11-25T18:37:49.188948+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 2 result(s) for 'York Times war Iran has'",
-      "created_at": "2026-11-25T18:37:48.785508+00:00",
+      "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+      "created_at": "2026-11-25T19:39:45.270839+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:48.717591+00:00",
+      "created_at": "2026-11-25T19:39:45.012795+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:48.715823+00:00",
+      "created_at": "2026-11-25T19:39:45.010732+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://cdn.gianhangvn.com/image/new-mazda-cx8-bv-2-2iguxu5.jpg (page: https://www.freepik.com/photos/colorful-new-year-greetings/4 | New Mazda CX-8 2.5L Signature AWD - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.714379+00:00",
+      "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no og:image)",
+      "created_at": "2026-11-25T19:39:45.009049+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://www.expocafeperu.com/w/2019/12/new-balance-1540v2-womens-sale-new-balance-1540-v2-womens-new (page: https://mazdaphamvandonghanoi.vn/new-mazda-cx-8-2-5l-signature-awd-1491915.html | New Balance 1540 M - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.712677+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxON0RjeHRWcGl1ZElENEhBX0x2blI3b2w1OC1vZ1U3SklwRTV5ajRTWVRXczVBTlBrN0J) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T19:39:45.005818+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.expocafeperu.com/new-balance-1540-mens/ | Page 9 | 39,000+ New Years Set Pictures - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.710911+00:00",
+      "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - skipped (same event used within 24h, event key 'administration debat iran leader nbc news official source ta')",
+      "created_at": "2026-11-25T19:39:44.689697+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.freepik.com/photos/new-years-set/9 | Page 38 | Happy New Year Images - Free Download on  - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.708880+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.705638+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.532613+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.369756+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.299920+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:48.238822+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:48.237022+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://cdn.gianhangvn.com/image/new-mazda-cx8-bv-2-2iguxu5.jpg (page: https://www.freepik.com/photos/colorful-new-year-greetings/4 | New Mazda CX-8 2.5L Signature AWD - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.235368+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://www.expocafeperu.com/w/2019/12/new-balance-1540v2-womens-sale-new-balance-1540-v2-womens-new (page: https://mazdaphamvandonghanoi.vn/new-mazda-cx-8-2-5l-signature-awd-1491915.html | New Balance 1540 M - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.233419+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.expocafeperu.com/new-balance-1540-mens/ | Page 9 | 39,000+ New Years Set Pictures - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.231376+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.freepik.com/photos/new-years-set/9 | Page 38 | Happy New Year Images - Free Download on  - only 1 of 28 key entities in the source page)",
-      "created_at": "2026-11-25T18:37:48.229433+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.226289+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:48.079583+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:47.933165+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
-      "created_at": "2026-11-25T18:37:47.866230+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:47.786264+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T18:37:47.784542+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'The New York Times. . The war in Iran has reignited Yemen’s ' - rejected (no og:image)",
-      "created_at": "2026-11-25T18:37:47.782772+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqwFBVV95cUxPLVFsNE8wR3RVMWFQVmJRNGthNXFScUtaUm1PUW9tcGdhREZJVXBScmU4a2NzQ09fcjF) - skipping, og:image would be the logo",
-      "created_at": "2026-11-25T18:37:47.779772+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran says another tanker on fire after hitting mine in Hormu' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera mine tanker')",
-      "created_at": "2026-11-25T18:37:47.551303+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
-      "created_at": "2026-11-25T18:37:47.549399+00:00",
+      "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-25T19:39:44.688050+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-      "created_at": "2026-11-25T18:37:47.547599+00:00",
+      "created_at": "2026-11-25T19:39:44.685781+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - skipped (same event used within 24h, event key '000 490 cbs data died leak news russian soldier suggest than')",
+      "created_at": "2026-11-25T19:39:44.683971+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - skipped (same event used within 24h, event key 'hit inevitable jazeera oil plant putin retaliation russian u')",
+      "created_at": "2026-11-25T19:39:44.682033+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+      "created_at": "2026-11-25T19:39:44.680156+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera live mine tanker war')",
+      "created_at": "2026-11-25T19:39:44.677756+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-25T19:39:44.612101+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-25T19:39:44.610101+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-25T19:39:44.608148+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T19:39:44.606405+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'badly bbc five lost reason republican why' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T19:39:44.604146+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-25T19:39:42.786426+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-25T19:39:42.784672+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Five reasons why Republicans lost so badly - BBC'",
+      "created_at": "2026-11-25T19:39:42.781761+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T19:39:42.740884+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-25T19:39:42.738838+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T19:39:42.736505+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': replied to twiladarkside.bsky.social (hot post by jonathanslater.bsky.social, comment: 'I get all the nostalgia, but the good old days was just not ') as primonewstoday.bsky.social: 'Totally get that—nostalgia’s a sweet filter, even when the past had its own shad'",
+      "created_at": "2026-11-25T19:39:37.627962+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-25T19:39:35.352909+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-25T19:39:35.350549+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T19:39:27.809311+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-25T19:39:27.807520+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec': https://nypost.com/wp-content/uploads/sites/2/2025/12/nvidia-jensen-huang-trump-china.jpg?quality=75 (from bing-images, query 'Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War - The New York Times', page: https://247wallst.com/investing/2026/05/15/trump-bought-up-to-5-million-of-nvidia-stock-then-okd-ai- - matches 2 key entities (nvidia, trump))",
+      "created_at": "2026-11-25T19:39:27.805640+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Trump’s Nvidia Push Shows Companies’ Importance in' (The photo shows Jensen)",
+      "created_at": "2026-11-25T19:39:27.803247+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+      "created_at": "2026-11-25T19:39:08.867096+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+      "created_at": "2026-11-25T19:39:08.285342+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+      "created_at": "2026-11-25T19:39:08.150483+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+      "created_at": "2026-11-25T19:39:07.950671+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-25T19:39:07.873633+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-25T19:39:07.871920+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - rejected (no og:image)",
+      "created_at": "2026-11-25T19:39:07.870070+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxQakQ0a2JfUmZTVkdhSmRUR3lpNF96cTVzdDVyaEtyYmhlbkdiWHJYNFRhdEpjUzhHeUc) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T19:39:07.867057+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+      "created_at": "2026-11-25T19:39:07.399601+00:00",
       "card": ""
     }
   ]

@@ -2,6 +2,582 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T19:40:08.046431+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Canned cranberry sauce', 'Steven Universe actor comes out', 'Showing up to Thanksgiving dinner', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa']",
+    "created_at": "2026-11-25T19:40:08.039727+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (ok - posted 1)",
+    "created_at": "2026-11-25T19:40:07.921294+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-25T19:40:07.918650+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678775176961387",
+    "created_at": "2026-11-25T19:40:07.851403+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "mastodon: posted to mastodon.social: 117678775176961387",
+    "created_at": "2026-11-25T19:40:07.847825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-25T19:39:49.952366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-25T19:39:49.950717+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'African insurgents take war to the skies with off-the-shelf ': https://www.military.africa/wp-content/uploads/2025/02/rebels-terrorists-and-insurgents-nonstate-act (from bing-images, query 'African insurgents take war to the skies with off-the-shelf drones - Reuters', page: https://www.dailymaverick.co.za/article/2025-06-03-drones-in-africa-are-a-new-frontier-for-armed-gro - matches 2 key entities (drone, insurgent))",
+    "created_at": "2026-11-25T19:39:49.948898+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'African insurgents take war to the skies with off-' (. The photo shows an African individual in camouflage holding a consumer-grade drone, which directly illustrates the Reuters headline about African in)",
+    "created_at": "2026-11-25T19:39:49.946673+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T19:39:46.302470+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T19:39:45.802713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T19:39:45.463537+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
+    "created_at": "2026-11-25T19:39:45.270839+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T19:39:45.012795+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T19:39:45.010732+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no og:image)",
+    "created_at": "2026-11-25T19:39:45.009049+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxON0RjeHRWcGl1ZElENEhBX0x2blI3b2w1OC1vZ1U3SklwRTV5ajRTWVRXczVBTlBrN0J) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T19:39:45.005818+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - skipped (same event used within 24h, event key 'administration debat iran leader nbc news official source ta')",
+    "created_at": "2026-11-25T19:39:44.689697+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-25T19:39:44.688050+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-25T19:39:44.685781+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - skipped (same event used within 24h, event key '000 490 cbs data died leak news russian soldier suggest than')",
+    "created_at": "2026-11-25T19:39:44.683971+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - skipped (same event used within 24h, event key 'hit inevitable jazeera oil plant putin retaliation russian u')",
+    "created_at": "2026-11-25T19:39:44.682033+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-25T19:39:44.680156+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera live mine tanker war')",
+    "created_at": "2026-11-25T19:39:44.677756+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-25T19:39:44.612101+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-25T19:39:44.610101+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+    "created_at": "2026-11-25T19:39:44.608148+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-25T19:39:44.606405+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': promo posted - event 'badly bbc five lost reason republican why' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+    "created_at": "2026-11-25T19:39:44.604146+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1280x720 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-25T19:39:42.786426+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 1280x720 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-25T19:39:42.784672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Five reasons why Republicans lost so badly - BBC'",
+    "created_at": "2026-11-25T19:39:42.781761+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-25T19:39:42.740884+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-25T19:39:42.738838+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-25T19:39:42.736505+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to twiladarkside.bsky.social (hot post by jonathanslater.bsky.social, comment: 'I get all the nostalgia, but the good old days was just not ') as primonewstoday.bsky.social: 'Totally get that—nostalgia’s a sweet filter, even when the past had its own shad'",
+    "created_at": "2026-11-25T19:39:37.627962+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-25T19:39:35.352909+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-25T19:39:35.350549+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-25T19:39:27.809311+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-25T19:39:27.807520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec': https://nypost.com/wp-content/uploads/sites/2/2025/12/nvidia-jensen-huang-trump-china.jpg?quality=75 (from bing-images, query 'Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War - The New York Times', page: https://247wallst.com/investing/2026/05/15/trump-bought-up-to-5-million-of-nvidia-stock-then-okd-ai- - matches 2 key entities (nvidia, trump))",
+    "created_at": "2026-11-25T19:39:27.805640+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Trump’s Nvidia Push Shows Companies’ Importance in' (The photo shows Jensen)",
+    "created_at": "2026-11-25T19:39:27.803247+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+    "created_at": "2026-11-25T19:39:08.867096+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+    "created_at": "2026-11-25T19:39:08.285342+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+    "created_at": "2026-11-25T19:39:08.150483+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec'",
+    "created_at": "2026-11-25T19:39:07.950671+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T19:39:07.873633+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T19:39:07.871920+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - rejected (no og:image)",
+    "created_at": "2026-11-25T19:39:07.870070+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiogFBVV95cUxQakQ0a2JfUmZTVkdhSmRUR3lpNF96cTVzdDVyaEtyYmhlbkdiWHJYNFRhdEpjUzhHeUc) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T19:39:07.867057+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-25T19:39:07.399601+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - skipped (same event used within 24h, event key '000 490 cbs data died leak news russian soldier suggest than')",
+    "created_at": "2026-11-25T19:39:07.397656+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Putin says retaliation ‘inevitable’ after Ukraine hit Russia' - skipped (same event used within 24h, event key 'hit inevitable jazeera oil plant putin retaliation russian u')",
+    "created_at": "2026-11-25T19:39:07.395070+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-25T19:39:07.392956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Another tanker ‘on fire’ after hitting mine i' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera live mine tanker war')",
+    "created_at": "2026-11-25T19:39:07.390569+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+    "created_at": "2026-11-25T19:39:06.812083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T19:39:06.810252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+    "created_at": "2026-11-25T19:39:06.808620+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T19:39:06.807036+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T19:39:06.805463+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
+    "created_at": "2026-11-25T19:39:06.803706+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-25T19:39:06.801924+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Five reasons why Republicans lost so badly - BBC' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-25T19:39:06.800062+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-25T19:39:06.797221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-25T19:39:06.795322+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-25T19:39:06.793489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
+    "created_at": "2026-11-25T19:39:06.791053+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Five reasons why Republicans lost so badly - BBC' for card 'Adsterra Blogger' (queue now 1)",
+    "created_at": "2026-11-25T19:39:06.719434+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Five reasons why Republicans lost so badly - BBC' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-25T19:39:04.028708+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-25T19:39:04.027259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Five reasons why Republicans lost so badly - BBC': https://i.ytimg.com/vi/WcYedC5QFXo/maxresdefault.jpg (from bing-images, query 'Five reasons why Republicans lost so badly - BBC', page: https://www.wsj.com/opinion/gavin-newsoms-gerrymandering-measure-is-likely-to-fail-77116052 | Are Th - matches 2 key entities (badly, republican))",
+    "created_at": "2026-11-25T19:39:04.025305+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T19:39:04.022920+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://s.yimg.com/lo/mysterio/api/f857c78f1e492eebbc11dc7664fee2af97257efbd6386eefcd2d9213dffc5a22/",
+    "created_at": "2026-11-25T19:39:03.942001+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Five reasons why Republicans lost so badly - BBC' (\n\nThe photo features a banner about the \"US MIDTERM ELECTIONS 2026\" and an image of the US Capitol building, which does not depict the 2022 midterm el)",
+    "created_at": "2026-11-25T19:39:03.939514+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/images/ic/1024x576/p0k36scy.jpg",
+    "created_at": "2026-11-25T19:39:00.376298+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Five reasons why Republicans lost so badly - BBC' (.)",
+    "created_at": "2026-11-25T19:39:00.374092+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://i.ytimg.com/vi/7QFl5utGTV8/maxresdefault.jpg",
+    "created_at": "2026-11-25T19:38:41.049082+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Five reasons why Republicans lost so badly - BBC' (\n\nThe headline discusses Republicans losing an election, while the photo depicts Donald Trump in front of an American flag graphic for a BBC podcast a)",
+    "created_at": "2026-11-25T19:38:41.036737+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Five reasons why Republicans lost so badly - BBC'",
+    "created_at": "2026-11-25T19:38:34.782537+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Five reasons why Republicans lost so badly - BBC'",
+    "created_at": "2026-11-25T19:38:34.318630+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Five reasons why Republicans lost so badly - BBC'",
+    "created_at": "2026-11-25T19:38:34.178970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Five reasons why Republicans lost so badly - BBC'",
+    "created_at": "2026-11-25T19:38:33.497018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T19:38:33.046025+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T19:38:33.044247+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Five reasons why Republicans lost so badly - BBC' - rejected (no og:image)",
+    "created_at": "2026-11-25T19:38:33.042252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXRnNGeWZtaC01OVlBSVNVLU5NdXI4LUpReHF4ZC1jTDdReElFWi1GZTZOV0tmOGE1STJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T19:38:33.039343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-25T19:38:32.771454+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-25T19:38:32.769428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-25T19:38:32.767526+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
+    "created_at": "2026-11-25T19:38:32.765153+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T19:38:32.171201+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T19:38:31.916057+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T19:38:08.930628+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-25T19:38:08.929049+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #103 started (--only bluesky)",
+    "created_at": "2026-11-25T19:38:08.927184+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T18:52:43.736699+00:00",
     "card": ""
   },
@@ -621,582 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-25T18:37:44.956094+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:44.954552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no og:image)",
-    "created_at": "2026-11-25T18:37:44.952833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxOdGItTnFaZjJRQmVUNVIwNENjYkIxNTVDSTVhaHE5MlpNRW1vUnNEUzFyMnp2SXU4aWJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T18:37:44.949527+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T18:37:44.261815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T18:37:44.260347+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (10 download(s) tried)",
-    "created_at": "2026-11-25T18:37:44.258784+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.etsystatic.com/21293703/r/il/6be553/2184154322/il_fullxfull.2184154322_42vj.jpg (page: https://www.h2gowaterbottle.com/custom-owala-water-bottle-2/ | Custom Bottle Design _ Custom Water B - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T18:37:44.257395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://sibottle.com/wp-content/uploads/2023/06/trending-designs-of-stainless-steel-water-bottle.png (page: https://re-imaginingcommunity.org/custom-bottle-design-custom-water-bottles/ | How To Stay Ahead Of  - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T18:37:44.255617+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/8d396c195805095.66146f50684be.jpg (page: https://sibottle.com/how-to-stay-ahead-of-competitors-as-a-stainless-steel-water-bottle-manufacturer - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T18:37:44.253979+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://images.squarespace-cdn.com/content/v1/54ec2161e4b01dbc251cbdae/1574023031541-39ZMAWI3ZIL8MRH (page: https://www.behance.net/gallery/195805095/Water-Bottle-Branding-Packaging-Design | Water Bottle Desi - page does not name the entity (Iranian))",
-    "created_at": "2026-11-25T18:37:44.252369+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Map_of_Attested_and_Hypothetical_Old_Indo-I - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:44.250643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:44.248463+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/6/6b/Iranian_languages_distribution.png?utm_source=co - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:44.061836+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:44.057679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Iranian_Tiles_1.JPG/1280px-Iranian_Tiles_1. - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:43.934307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:43.932180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/2/28/Iranian_Languages_tree.png?utm_source=commons.wi - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:43.754756+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:43.752726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Distribution_of_Iranian_Languages.png/1280p - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:43.661196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:43.659131+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/b/b8/Indo-Iranian_origins.png - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:43.492713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:43.490489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3495/3771877710_089d7c732e_b.jpg",
-    "created_at": "2026-11-25T18:37:43.341225+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2232/2347354877_aacf8657b7_b.jpg",
-    "created_at": "2026-11-25T18:37:43.261165+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1433/1337744778_3567d7190e_b.jpg",
-    "created_at": "2026-11-25T18:37:43.174849+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6010/5918933751_71811c36aa_b.jpg",
-    "created_at": "2026-11-25T18:37:43.095572+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iranian'",
-    "created_at": "2026-11-25T18:37:43.006944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iranian'",
-    "created_at": "2026-11-25T18:37:42.784457+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Iranian'",
-    "created_at": "2026-11-25T18:37:42.662201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Iranian'",
-    "created_at": "2026-11-25T18:37:42.598406+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:42.520966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:42.519194+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'How an Iranian Ally Gained the Upper Hand in Yemen' - trying entity search 'Iranian'",
-    "created_at": "2026-11-25T18:37:42.517558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://media.gettyimages.com/id/1346716750/photo/close-up-of-angry-boy-pointing-index-finger.jpg?s= (page: 20,112 Boy Pointing Stock Photos, High-Res Pictures, and Images - Getty Images - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:42.515772+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T18:37:42.509672+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T18:37:42.380513+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T18:37:42.259467+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
-    "created_at": "2026-11-25T18:37:42.188598+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:42.118968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:42.117428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/A8HPzZe5dnMYt4KV3RFmcYSb6HA=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://parade.com/tv/derek-hough-hayley-hough-exclusive-interview | Inside Derek Hough and Hayley E - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:42.115815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/r7oJMbOBCuS86D-EfFC5oud-iIg=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:42.114035+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/z1WZ3JxNoYNup7MsdZcY4JmTOSw=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:42.112242+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/uDvlwOTytKrYD49ekadIMJQwAtM=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:42.110355+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T18:37:42.107423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T18:37:41.944146+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T18:37:41.799828+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
-    "created_at": "2026-11-25T18:37:41.731182+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:41.679018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:41.677599+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/02/be/da/02beda4bdec545a1f85dd4542ff20540.png (page: https://www.etsy.com/listing/1579446918/25-popular-cat-breeds-as-kittens-kittens | breeds of cat😺 ne - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:41.676111+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/ed/2b/75/ed2b75f632bfd764e5affef0ed2f042d.png (page: https://nl.pinterest.com/pin/10696117860042415/ | Cat Breeds | Cats breeds list, Tiger looking cat b - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:41.674467+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://m.media-amazon.com/images/I/81GAnSUkp3L._AC_SL1500_.jpg (page: https://www.pinterest.com/pin/cat-breeds--5066618329164911/ | HLLNWB Breeds of Cat Poster Types of C - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:41.672555+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.etsystatic.com/17927448/r/il/0d86b2/5712778798/il_1140xN.5712778798_jnzw.jpg (page: https://www.amazon.ca/HLLNWB-Breeds-Poster-Unframed-16x24inch/dp/B0B9T3F12R | Cat Breeds Poster, Ref - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:41.670770+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T18:37:41.667782+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T18:37:41.504947+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T18:37:41.386033+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
-    "created_at": "2026-11-25T18:37:41.319917+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:41.266323+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:41.264585+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no og:image)",
-    "created_at": "2026-11-25T18:37:41.262845+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxOaDdOQkIyMWZBYUJGd19raENFUlNZRFhGZ0ctSzRyczJfWFloRVMtRXFlWkR4MVprWV9) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T18:37:41.259787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'US shelves plans for business deals with Russia to end Ukrai' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T18:37:40.685535+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US shelves plans for business deals with Russia to end Ukrai' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T18:37:40.683883+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'US shelves plans for business deals with Russia to end Ukraine war, FT says - Reuters' (11 download(s) tried)",
-    "created_at": "2026-11-25T18:37:40.681861+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://images.thdstatic.com/productImages/a0213bbb-af18-4a60-afef-e4e81e00f30a/svn/rustic-brown-dec - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:40.679940+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:40.677438+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://m.media-amazon.com/images/I/71v7z+RBN7L.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:40.317141+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:40.315235+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://i.etsystatic.com/27136853/r/il/6b67f9/6199521598/il_1080xN.6199521598_tl8r.jpg - source page title names only 0 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:40.179283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:40.177217+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.e-a-a.com/wp-content/uploads/2025/02/best-wall-mounted-shelves.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:40.057129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:40.055040+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Une_Restauration_by_Edouard_Dantan.jpg/1280 (page: https://commons.wikimedia.org/wiki/File:Une_Restauration_by_Edouard_Dantan.jpg | File:Une Restaurati - page does not name the entity (shelves))",
-    "created_at": "2026-11-25T18:37:39.860703+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Shelve.jpg/1280px-Shelve.jpg?utm_source=com - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:39.858449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:39.474180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/H%C3%B6xter_Germany_Corvey-Abbey-01.jpg/128 (page: https://commons.wikimedia.org/wiki/File:H%C3%B6xter_Germany_Corvey-Abbey-01.jpg | File:Höxter German - page does not name the entity (shelves))",
-    "created_at": "2026-11-25T18:37:39.184352+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Empty_shelves_in_the_hand_sanitizer_section - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:39.182546+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:39.180297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/13-11-02-olb-by-RalfR-03.jpg/1280px-13-11-0 (page: https://commons.wikimedia.org/wiki/File:13-11-02-olb-by-RalfR-03.jpg | File:13-11-02-olb-by-RalfR-03 - page does not name the entity (shelves))",
-    "created_at": "2026-11-25T18:37:38.759859+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5555/15072199721_d38f798aeb_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T18:37:38.758140+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T18:37:38.756049+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5250/5365888653_73de452937_b.jpg",
-    "created_at": "2026-11-25T18:37:38.688910+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/24/66053431_bb16382f83_b.jpg",
-    "created_at": "2026-11-25T18:37:38.540922+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7276/7025960033_7f6dff9ab2_b.jpg",
-    "created_at": "2026-11-25T18:37:38.420575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2920/14429725130_d7814686bb_b.jpg",
-    "created_at": "2026-11-25T18:37:38.317117+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'shelves'",
-    "created_at": "2026-11-25T18:37:38.107941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'shelves'",
-    "created_at": "2026-11-25T18:37:37.832159+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'shelves'",
-    "created_at": "2026-11-25T18:37:37.669670+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'shelves'",
-    "created_at": "2026-11-25T18:37:37.263576+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:36.640395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T18:37:36.638934+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'US shelves plans for business deals with Russia to' - trying entity search 'shelves'",
-    "created_at": "2026-11-25T18:37:36.637407+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:36.635838+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:36.634221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T18:37:36.632566+00:00",
     "card": ""
   }
 ]
