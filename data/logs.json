@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-25T22:57:07.479804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Danielle Smith's UCP government controversies\", 'New Avengers: Doomsday poster', \"Duran Duran's Andy Taylor dies\", 'Aaron Rodgers reportedly out', \"Macy's parade turns 100\"]",
+    "created_at": "2026-11-25T22:57:07.472878+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T22:57:07.443808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T22:57:07.441909+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-25T22:57:07.215719+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T22:55:06.463150+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-25T22:55:06.461960+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T22:55:06.460669+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #110 started (--only blogger)",
+    "created_at": "2026-11-25T22:55:06.459032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-25T22:43:05.200560+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-25T22:42:46.711293+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://image.cnbcfm.com/api/v1/image/106852216-1615410632865-a3_img_10_57_160_1347655_1000-16154105 (page: https://fortune.com/company/dow/ | Dow Jones Today In Real Time – Dow Jones Live – BBVN - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T22:42:46.709600+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://vwzcr.park-n-dine.com/dow-jones-today-in-real-time-dow-jones-live/ | DOW: Dow Inc Latest Sto - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T22:42:46.708190+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://stocktwits.com/symbol/DOW | Dow will shut down three upstream European assets in response to - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T22:42:46.706723+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://cloudfront-us-east-2.images.arcpublishing.com/reuters/JS2ELJQDMRKLNHUEFMBXZUBHOQ.jpg (page: https://corporate.dow.com/en-us/news/press-releases/dow-will-shut-down-three-upstream-european-asset - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T22:42:46.705274+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-25T22:42:46.702888+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-25T22:42:46.573693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-25T22:42:46.417104+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-25T22:42:46.332660+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T22:42:46.289511+00:00",
     "card": ""
   }
 ]
