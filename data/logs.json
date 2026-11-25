@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T17:54:16.915151+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Trump claims prices are falling', 'Montreal airport pizza slice', 'Army lead detonation in Iowa', 'Grand Theft Auto VI', 'Day to end violence against women']",
-    "created_at": "2026-11-25T17:54:16.909787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-25T17:54:16.804693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-25T17:54:16.803171+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-25T17:54:16.545417+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-25T17:54:13.890314+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-25T17:54:13.889310+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-25T17:54:13.888197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #100 started (--only blogger)",
-    "created_at": "2026-11-25T17:54:13.886932+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-25T17:49:06.796538+00:00",
+    "created_at": "2026-11-25T18:38:02.826338+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T17:49:06.795162+00:00",
+    "created_at": "2026-11-25T18:38:02.824415+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678338656943991",
-    "created_at": "2026-11-25T17:49:06.793315+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117678531081597897",
+    "created_at": "2026-11-25T18:38:02.822222+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117678338656943991",
-    "created_at": "2026-11-25T17:49:06.790303+00:00",
+    "message": "mastodon: posted to mastodon.social: 117678531081597897",
+    "created_at": "2026-11-25T18:38:02.818687+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-25T17:48:59.736542+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-25T17:48:59.676288+00:00",
+    "message": "photo candidate: 'The New York Times. . The war in Iran has reignited Yemen’s ' - ACCEPTED real photo (from wikimedia)",
+    "created_at": "2026-11-25T18:37:50.793259+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 20 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
-    "created_at": "2026-11-25T17:48:59.674889+00:00",
+    "message": "promo category: war news",
+    "created_at": "2026-11-25T18:37:50.791638+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
-    "created_at": "2026-11-25T17:48:59.673670+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T17:48:59.671702+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-    "created_at": "2026-11-25T17:48:59.670337+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T17:48:59.668724+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T17:48:59.667322+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-25T17:48:59.666000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
-    "created_at": "2026-11-25T17:48:59.663752+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-25T17:48:59.662407+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
-    "created_at": "2026-11-25T17:48:59.661163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
-    "created_at": "2026-11-25T17:48:59.659363+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-25T17:48:59.657811+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Administration's pro-Trump TV ad is taxpayer-funded - ABC Ne' - skipped (same event used within 24h, event key 'abc administration break fund latest news pro taxpayer trump')",
-    "created_at": "2026-11-25T17:48:59.655900+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 5/6 tried: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T17:48:59.581339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T17:48:59.580115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Advance the War Against Death in Season of Tyrael’s Gambit — Diablo IV - Blizzard News' (6 download(s) tried)",
-    "created_at": "2026-11-25T17:48:59.578767+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - page does not name the entity (Advance))",
-    "created_at": "2026-11-25T17:48:59.577517+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:59.576134+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'The New York Times. . The war in Iran has reignited Yemen’s ': https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Abraham_Lincoln_and_the_battles_of_the_Civi (from wikimedia, query 'York Times war Iran has', page: https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_and_the_battles_of_the_Civil_War_(1886)_(145 - matches 3 key entities (civil, http, war))",
+    "created_at": "2026-11-25T18:37:50.790062+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:59.574581+00:00",
+    "created_at": "2026-11-25T18:37:50.787980+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png",
-    "created_at": "2026-11-25T17:48:59.501873+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:59.446534+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/A_history_of_all_nations_from_the_earliest_ - source page title names only 1 of 28 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:50.363777+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:59.444737+00:00",
+    "created_at": "2026-11-25T18:37:50.361372+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/3769/9713970948_671f4c3ab2_b.jpg (page: https://www.flickr.com/photos/55244200@N05/9713970948 | Peleliu Holds Advancement Exam - page does not name the entity (Advance))",
-    "created_at": "2026-11-25T17:48:59.059038+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://live.staticflickr.com/65535/53806424909_a4d20ceb69_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53806424909 | Heather Cox Richardson - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:49.953079+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52390620853_84dd421058_b.jpg",
-    "created_at": "2026-11-25T17:48:59.057337+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6046/6422578785_3835a32b55_b.jpg",
+    "created_at": "2026-11-25T18:37:49.950576+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8034/8049966714_de3e8d74bb_b.jpg",
-    "created_at": "2026-11-25T17:48:59.020988+00:00",
+    "message": "bing-images: 4 candidate(s) for 'York Times war Iran has'",
+    "created_at": "2026-11-25T18:37:49.482632+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://live.staticflickr.com/4134/4828565765_950ede1f94_b.jpg (page: https://www.flickr.com/photos/83536366@N00/4828565765 | Advanced UAV Technology AT1000 - page does not name the entity (Advance))",
-    "created_at": "2026-11-25T17:48:58.992186+00:00",
+    "message": "google-images: 0 candidate(s) for 'York Times war Iran has'",
+    "created_at": "2026-11-25T18:37:49.309423+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3353/4621394806_80e6e26623_b.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:58.990817+00:00",
+    "message": "wikimedia: 5 result(s) for 'York Times war Iran has'",
+    "created_at": "2026-11-25T18:37:49.188948+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:58.989249+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Advance'",
-    "created_at": "2026-11-25T17:48:58.962398+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Advance'",
-    "created_at": "2026-11-25T17:48:58.839998+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Advance'",
-    "created_at": "2026-11-25T17:48:58.717603+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Advance'",
-    "created_at": "2026-11-25T17:48:58.695788+00:00",
+    "message": "openverse: 2 result(s) for 'York Times war Iran has'",
+    "created_at": "2026-11-25T18:37:48.785508+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:58.309873+00:00",
+    "created_at": "2026-11-25T18:37:48.717591+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:58.308130+00:00",
+    "created_at": "2026-11-25T18:37:48.715823+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Advance the War Against Death in Season of Tyrael’' - trying entity search 'Advance'",
-    "created_at": "2026-11-25T17:48:58.306717+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://cdn.gianhangvn.com/image/new-mazda-cx8-bv-2-2iguxu5.jpg (page: https://www.freepik.com/photos/colorful-new-year-greetings/4 | New Mazda CX-8 2.5L Signature AWD - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.714379+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:58.305171+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://www.expocafeperu.com/w/2019/12/new-balance-1540v2-womens-sale-new-balance-1540-v2-womens-new (page: https://mazdaphamvandonghanoi.vn/new-mazda-cx-8-2-5l-signature-awd-1491915.html | New Balance 1540 M - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.712677+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:58.303702+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.expocafeperu.com/new-balance-1540-mens/ | Page 9 | 39,000+ New Years Set Pictures - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.710911+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:58.302039+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.freepik.com/photos/new-years-set/9 | Page 38 | Happy New Year Images - Free Download on  - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.708880+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:58.300630+00:00",
+    "message": "bing-images: 4 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.705638+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Advance War Against Death Season'",
-    "created_at": "2026-11-25T17:48:58.297738+00:00",
+    "message": "google-images: 0 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.532613+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Advance War Against Death Season'",
-    "created_at": "2026-11-25T17:48:58.144888+00:00",
+    "message": "wikimedia: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.369756+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Advance War Against Death Season'",
-    "created_at": "2026-11-25T17:48:58.022566+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Advance War Against Death Season'",
-    "created_at": "2026-11-25T17:48:57.988205+00:00",
+    "message": "openverse: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.299920+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:57.694204+00:00",
+    "created_at": "2026-11-25T18:37:48.238822+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:57.691172+00:00",
+    "created_at": "2026-11-25T18:37:48.237022+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.689659+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://cdn.gianhangvn.com/image/new-mazda-cx8-bv-2-2iguxu5.jpg (page: https://www.freepik.com/photos/colorful-new-year-greetings/4 | New Mazda CX-8 2.5L Signature AWD - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.235368+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.688228+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://www.expocafeperu.com/w/2019/12/new-balance-1540v2-womens-sale-new-balance-1540-v2-womens-new (page: https://mazdaphamvandonghanoi.vn/new-mazda-cx-8-2-5l-signature-awd-1491915.html | New Balance 1540 M - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.233419+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.686612+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.expocafeperu.com/new-balance-1540-mens/ | Page 9 | 39,000+ New Years Set Pictures - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.231376+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.685037+00:00",
+    "message": "photo: rejected (irrelevant to 'The New York Times. . The war in Iran has reignite'): https://img.freepik.com/premium-photo/happy-new-year-happy-new-year-2024-happy-new-year-2025-happy-n (page: https://www.freepik.com/photos/new-years-set/9 | Page 38 | Happy New Year Images - Free Download on  - only 1 of 28 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:48.229433+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.681874+00:00",
+    "message": "bing-images: 4 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.226289+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.550354+00:00",
+    "message": "google-images: 0 candidate(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:48.079583+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.448100+00:00",
+    "message": "wikimedia: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:47.933165+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.427792+00:00",
+    "message": "openverse: 0 result(s) for 'The New York Times. . The war in Iran has reignited Yemen’s '",
+    "created_at": "2026-11-25T18:37:47.866230+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:57.153122+00:00",
+    "created_at": "2026-11-25T18:37:47.786264+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:57.151905+00:00",
+    "created_at": "2026-11-25T18:37:47.784542+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://hfprod.farmaciasanpablo.com.mx/sys-master-azureproductimages/h50/hbd/47508541734942/Fsp480Wx (page: https://comenzi.farmaciatei.ro/vet/mancare-pentru-animale/hrana-uscata/ | Vooy Farma | Buscador de m - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.150732+00:00",
+    "message": "photo candidate: 'The New York Times. . The war in Iran has reignited Yemen’s ' - rejected (no og:image)",
+    "created_at": "2026-11-25T18:37:47.782772+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://wpcdn.us-east-1.vip.tn-cloud.net/www.wnky.com/content/uploads/2022/12/o/v/advance-auto-vo00- (page: https://vooyfarma.com/san-pablo-farmacia/vitaminas-y-suplementos/enfagrow-advance-suplemento-aliment - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.149299+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqwFBVV95cUxPLVFsNE8wR3RVMWFQVmJRNGthNXFScUtaUm1PUW9tcGdhREZJVXBScmU4a2NzQ09fcjF) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T18:37:47.779772+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://advancepet.com.au/medialib/2023-08/Advance-Logo-Blue.png (page: https://www.wnky.com/advance-auto-parts-reopens-new-building-one-year-after-tornado-damage/ | Why Ad - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.148004+00:00",
+    "message": "photo candidate: 'Iran says another tanker on fire after hitting mine in Hormu' - skipped (same event used within 24h, event key 'another fire hitt hormuz iran jazeera mine tanker')",
+    "created_at": "2026-11-25T18:37:47.551303+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Advance the War Against Death in Season of Tyrael’'): https://media.wwltv.com/assets/CCT/images/f551e198-003f-4568-9cce-013919606df5/20241114T173531/f551e (page: https://advancepet.com.au/why-advance | Advance Auto Parts East Millbrook Road Raleigh Nc - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:57.146460+00:00",
+    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
+    "created_at": "2026-11-25T18:37:47.549399+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.143750+00:00",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-25T18:37:47.547599+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:57.015091+00:00",
+    "message": "promo: story 4/6 tried: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T18:37:47.545608+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:56.909355+00:00",
+    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T18:37:47.544102+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Advance the War Against Death in Season of Tyrael’s Gambit —'",
-    "created_at": "2026-11-25T17:48:56.886962+00:00",
+    "message": "photo: no real photo found for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ says Tehran is directing war - Fox News' (8 download(s) tried)",
+    "created_at": "2026-11-25T18:37:47.542575+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Zhu-Ye-Qing-Tea-03.jpg/1280px-Zhu-Ye-Qing-T (page: https://commons.wikimedia.org/wiki/File:Zhu-Ye-Qing-Tea-03.jpg | File:Zhu-Ye-Qing-Tea-03.jpg - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T18:37:47.540936+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/0/0b/Yemeni_people_-_Yemeni_soldier.jpg?utm_source=co - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:47.539256+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:47.537253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/a/a6/South_Yemeni_YSP_conference.jpg?utm_source=commo - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:47.340784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:47.338258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/General_Charles_Q._Brown%2C_Chairman_of_the (page: https://commons.wikimedia.org/wiki/File:General_Charles_Q._Brown,_Chairman_of_the_Joint_Chiefs_of_St - page does not name the entity (Yemeni))",
+    "created_at": "2026-11-25T18:37:47.241870+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/7/73/Ancient_Yemeni_kingdom_of_saba.jpg?utm_source=co - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:47.239982+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:47.237683+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3952/15338431300_9cbfd31956_b.jpg",
+    "created_at": "2026-11-25T18:37:47.111794+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7382/10512738616_ecd02b8573_b.jpg",
+    "created_at": "2026-11-25T18:37:47.020819+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3795/10970666755_8f502d8096_b.jpg",
+    "created_at": "2026-11-25T18:37:46.934799+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3696/10511762405_df957a48d4_b.jpg",
+    "created_at": "2026-11-25T18:37:46.851983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3742/10740195953_dcb4de9812_b.jpg",
+    "created_at": "2026-11-25T18:37:46.770362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 0 candidate(s) for 'Yemeni'",
+    "created_at": "2026-11-25T18:37:46.680646+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Yemeni'",
+    "created_at": "2026-11-25T18:37:46.531649+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Yemeni'",
+    "created_at": "2026-11-25T18:37:46.412506+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Yemeni'",
+    "created_at": "2026-11-25T18:37:46.336745+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:56.759470+00:00",
+    "created_at": "2026-11-25T18:37:46.258581+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:56.757970+00:00",
+    "created_at": "2026-11-25T18:37:46.257061+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Advance the War Against Death in Season of Tyrael’s Gambit —' - rejected (no og:image)",
-    "created_at": "2026-11-25T17:48:56.756533+00:00",
+    "message": "photo: topical search found nothing for 'Yemeni military official brands Iran Houthis’ ‘god' - trying entity search 'Yemeni'",
+    "created_at": "2026-11-25T18:37:46.255582+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZTdSTS13V3lkVXV2UlFob2F0dldSUTJUTFM1UjhfdnRWNDh0VFJoMXBab3V4bW9Td1Q) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T17:48:56.753839+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.etsystatic.com/63167451/r/il/62f5e4/8843863688/il_794xN.8843863688_oqyb.jpg (page: https://www.tiktok.com/@huicart7/video/7674737870908706068 | Ragdoll Cat Art, White Cat Art Print, C - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:46.254097+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
-    "created_at": "2026-11-25T17:48:56.596748+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.etsystatic.com/66122469/r/il/b41c39/8351286351/il_800x800.8351286351_lwu4.jpg (page: https://www.etsy.com/listing/4615535103/ragdoll-cat-art-white-cat-art-print-cute | Floral Cat Art -  - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:46.252327+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 4/6 tried: 'VOTE: Do you think President Trump should end the war in Ira' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T17:48:56.594840+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.etsystatic.com/67381695/r/il/074517/8824857560/il_1080xN.8824857560_7pfu.jpg (page: https://www.etsy.com/market/floral_cat_art?page=2 | Original Cat Painting Soft Pastel Wall Art Print - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:46.250642+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'VOTE: Do you think President Trump should end the war in Ira' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T17:48:56.593599+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.etsystatic.com/52927036/c/2066/2066/216/468/il/80b3c7/7521634977/il_800x800.7521634977_8dn (page: https://www.etsy.com/listing/4613239056/original-cat-painting-soft-pastel-wall | Abstract Cat Art -  - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:46.248935+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'VOTE: Do you think President Trump should end the war in Iran? - National News Desk' (7 download(s) tried)",
-    "created_at": "2026-11-25T17:48:56.592408+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T18:37:46.246065+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:56.591024+00:00",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T18:37:46.083910+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:56.589525+00:00",
+    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T18:37:45.978597+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - page does not name the entity (VOTE))",
-    "created_at": "2026-11-25T17:48:56.559225+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - page does not name the entity (VOTE))",
-    "created_at": "2026-11-25T17:48:56.557905+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:56.556616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:56.554966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8471/8088602731_c012521865_b.jpg",
-    "created_at": "2026-11-25T17:48:56.435323+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2212/2245209899_49ce7e9aab_b.jpg",
-    "created_at": "2026-11-25T17:48:56.400071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/2374/2244848870_0ffcd49991.jpg (page: https://www.flickr.com/photos/66685169@N00/2244848870 | Voted! - page does not name the entity (VOTE))",
-    "created_at": "2026-11-25T17:48:56.369737+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/102/292424332_9799b294c1.jpg (page: https://www.flickr.com/photos/35237093334@N01/292424332 | Voting - page does not name the entity (VOTE))",
-    "created_at": "2026-11-25T17:48:56.368318+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/1045/5139577888_af4e58e490_b.jpg (page: https://www.flickr.com/photos/78428166@N00/5139577888 | I voted - page does not name the entity (VOTE))",
-    "created_at": "2026-11-25T17:48:56.366984+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'VOTE'",
-    "created_at": "2026-11-25T17:48:56.364300+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'VOTE'",
-    "created_at": "2026-11-25T17:48:56.253246+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'VOTE'",
-    "created_at": "2026-11-25T17:48:56.119788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'VOTE'",
-    "created_at": "2026-11-25T17:48:56.095961+00:00",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran'",
+    "created_at": "2026-11-25T18:37:45.903797+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:56.034113+00:00",
+    "created_at": "2026-11-25T18:37:45.839001+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:56.032809+00:00",
+    "created_at": "2026-11-25T18:37:45.837321+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'VOTE: Do you think President Trump should end the ' - trying entity search 'VOTE'",
-    "created_at": "2026-11-25T17:48:56.031626+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.jambase.com/wp-content/uploads/staticmaps/g/3060997-go-pool-at-the-flamingo-las-vegas/go (page: Go Pool at The Flamingo Las Vegas in Las Vegas, NV - Concerts, Tickets, Map, Directions - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.835647+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:56.029986+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.bachelorettevegas.com/pool-parties/images/flamingo/Flamingo-Go-Pool-Layout-Map.jpg (page: https://www.jambase.com/venue/go-pool-at-the-flamingo-las-vegas | Flamingo Go Pool Las Vegas | Bache - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.833942+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:56.027206+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://i.ebayimg.com/images/g/G8gAAOSwlFVjzDNa/s-l1200.jpg (page: https://www.bachelorettevegas.com/pool-parties/flamingo-go-pool.html | Flamingo Las Vegas Map: Casin - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.832098+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:56.004585+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://www.vegasunzipped.com/wp-content/uploads/2020/06/flamingo-map.jpg (page: https://vectormap.info/flamingo-las-vegas-map-casino-hotel-towers-attractions/ | Las Vegas Hotel and - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.830400+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:56.003392+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.827613+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:56.002141+00:00",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.683198+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://live.staticflickr.com/65535/53757356304_1ce8c7b152_b.jpg (page: https://www.flickr.com/photos/90536753@N00/53757356304 | Passing the encampment at WWU on a rainy da - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:56.000708+00:00",
+    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.555736+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'VOTE Do think President Trump'",
-    "created_at": "2026-11-25T17:48:55.997753+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'VOTE Do think President Trump'",
-    "created_at": "2026-11-25T17:48:55.874448+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'VOTE Do think President Trump'",
-    "created_at": "2026-11-25T17:48:55.767661+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'VOTE Do think President Trump'",
-    "created_at": "2026-11-25T17:48:55.739263+00:00",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.491133+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:55.705713+00:00",
+    "created_at": "2026-11-25T18:37:45.424100+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:55.704405+00:00",
+    "created_at": "2026-11-25T18:37:45.422542+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:55.703145+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarp/aarp_foundation/2022/aarp-banner-white-1140x311.imgcache.rev4d (page: https://my.aarpfoundation.org/student-loan-webinars/ | AARP Foundation - For a Future Without Senior - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.421038+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:55.701684+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarp/aarp_foundation/2024/AARPF-Logo-1140x101.png (page: https://www.aarp.org/aarp-foundation/ | AARP Foundation - For a Future Without Senior Poverty - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.419451+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.677049+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://foundation.aarp.org/files/aarp/AARPF_LogowTagCOLOR.jpg (page: https://foundation.aarp.org/ | Make a gift to help struggling seniors | AARP Foundation - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.417748+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.675772+00:00",
+    "message": "photo: rejected (irrelevant to 'Yemeni military official brands Iran Houthis’ ‘god'): https://cdn.aarp.net/content/dam/aarpe/en/home/press/releases/2017-11-09-aarp-foundation-rock-health (page: https://foundation.aarp.org/site/Donation/2025-web-widget | AARP Foundation, Rock Health Announce Fi - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:45.415998+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.674430+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.413105+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.671956+00:00",
+    "message": "google-images: 0 candidate(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.215201+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.563155+00:00",
+    "message": "wikimedia: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.082007+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.425275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.405405+00:00",
+    "message": "openverse: 0 result(s) for 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s'",
+    "created_at": "2026-11-25T18:37:45.019000+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:55.358873+00:00",
+    "created_at": "2026-11-25T18:37:44.956094+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:55.357541+00:00",
+    "created_at": "2026-11-25T18:37:44.954552+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.heragenda.com/brand-img/44728/0x0/2024/09/09143811/vote2.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:55.356273+00:00",
+    "message": "photo candidate: 'Yemeni military official brands Iran Houthis’ ‘godfather,’ s' - rejected (no og:image)",
+    "created_at": "2026-11-25T18:37:44.952833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxOdGItTnFaZjJRQmVUNVIwNENjYkIxNTVDSTVhaHE5MlpNRW1vUnNEUzFyMnp2SXU4aWJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T18:37:44.949527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T18:37:44.261815+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T18:37:44.260347+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - The New York Times' (10 download(s) tried)",
+    "created_at": "2026-11-25T18:37:44.258784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.etsystatic.com/21293703/r/il/6be553/2184154322/il_fullxfull.2184154322_42vj.jpg (page: https://www.h2gowaterbottle.com/custom-owala-water-bottle-2/ | Custom Bottle Design _ Custom Water B - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T18:37:44.257395+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://sibottle.com/wp-content/uploads/2023/06/trending-designs-of-stainless-steel-water-bottle.png (page: https://re-imaginingcommunity.org/custom-bottle-design-custom-water-bottles/ | How To Stay Ahead Of  - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T18:37:44.255617+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/8d396c195805095.66146f50684be.jpg (page: https://sibottle.com/how-to-stay-ahead-of-competitors-as-a-stainless-steel-water-bottle-manufacturer - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T18:37:44.253979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://images.squarespace-cdn.com/content/v1/54ec2161e4b01dbc251cbdae/1574023031541-39ZMAWI3ZIL8MRH (page: https://www.behance.net/gallery/195805095/Water-Bottle-Branding-Packaging-Design | Water Bottle Desi - page does not name the entity (Iranian))",
+    "created_at": "2026-11-25T18:37:44.252369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Map_of_Attested_and_Hypothetical_Old_Indo-I - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:44.250643+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:55.354501+00:00",
+    "created_at": "2026-11-25T18:37:44.248463+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://media.istockphoto.com/id/2161396990/photo/portrait-of-a-young-african-american-woman-voting- (page: https://heragenda.com/p/voter-registration-facts-how-to/ | 1,300+ Inside Voting Booth Stock Photos,  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.328571+00:00",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/6/6b/Iranian_languages_distribution.png?utm_source=co - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:44.061836+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://images.pexels.com/photos/5935742/pexels-photo-5935742.jpeg?cs=srgb&dl=pexels-sora-shimazaki- (page: https://www.istockphoto.com/photos/inside-voting-booth | Voting Photos, Download The BEST Free Votin - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.327317+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:44.057679+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'VOTE: Do you think President Trump should end the '): https://static01.nyt.com/images/2018/11/05/autossell/no-vote-thumb/no-vote-thumb-videoSixteenByNineJ (page: https://www.pexels.com/search/voting/ | Opinion | Why Americans Don’t Vote (and What to Do About It) - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:55.325863+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Iranian_Tiles_1.JPG/1280px-Iranian_Tiles_1. - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:43.934307+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.323182+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:43.932180+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.188772+00:00",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/2/28/Iranian_Languages_tree.png?utm_source=commons.wi - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:43.754756+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.059695+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:43.752726+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'VOTE: Do you think President Trump should end the war in Ira'",
-    "created_at": "2026-11-25T17:48:55.040293+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Distribution_of_Iranian_Languages.png/1280p - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:43.661196+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:43.659131+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/b/b8/Indo-Iranian_origins.png - source page title names only 1 of 10 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:43.492713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:43.490489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3495/3771877710_089d7c732e_b.jpg",
+    "created_at": "2026-11-25T18:37:43.341225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2232/2347354877_aacf8657b7_b.jpg",
+    "created_at": "2026-11-25T18:37:43.261165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1433/1337744778_3567d7190e_b.jpg",
+    "created_at": "2026-11-25T18:37:43.174849+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6010/5918933751_71811c36aa_b.jpg",
+    "created_at": "2026-11-25T18:37:43.095572+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iranian'",
+    "created_at": "2026-11-25T18:37:43.006944+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iranian'",
+    "created_at": "2026-11-25T18:37:42.784457+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Iranian'",
+    "created_at": "2026-11-25T18:37:42.662201+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Iranian'",
+    "created_at": "2026-11-25T18:37:42.598406+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:54.998800+00:00",
+    "created_at": "2026-11-25T18:37:42.520966+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:54.997614+00:00",
+    "created_at": "2026-11-25T18:37:42.519194+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'VOTE: Do you think President Trump should end the war in Ira' - rejected (no og:image)",
-    "created_at": "2026-11-25T17:48:54.996259+00:00",
+    "message": "photo: topical search found nothing for 'How an Iranian Ally Gained the Upper Hand in Yemen' - trying entity search 'Iranian'",
+    "created_at": "2026-11-25T18:37:42.517558+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwwJBVV95cUxNOTlWWGs1aVJNZWZabF9NY1hpU1VQck4tYllvUmFrTWdTbjVYbF9pUF9DRGpnZDdQMml) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T17:48:54.993721+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://media.gettyimages.com/id/1346716750/photo/close-up-of-angry-boy-pointing-index-finger.jpg?s= (page: 20,112 Boy Pointing Stock Photos, High-Res Pictures, and Images - Getty Images - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:42.515772+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 3/6 tried: 'African insurgents take war to the skies with off-the-shelf ' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T17:48:54.797373+00:00",
+    "message": "bing-images: 1 candidate(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T18:37:42.509672+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T17:48:54.795308+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T18:37:42.380513+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'African insurgents take war to the skies with off-the-shelf drones - Reuters' (12 download(s) tried)",
-    "created_at": "2026-11-25T17:48:54.794102+00:00",
+    "message": "wikimedia: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T18:37:42.259467+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: download budget reached (12) - stopping",
-    "created_at": "2026-11-25T17:48:54.792785+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:54.791330+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:54.789540+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.662305+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.660693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.632397+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.630797+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Morocco_Africa_Flickr_Rosino_December_2005_ (page: https://commons.wikimedia.org/wiki/File:Morocco_Africa_Flickr_Rosino_December_2005_84514010_edited_b - page does not name the entity (African))",
-    "created_at": "2026-11-25T17:48:53.579795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Central_African_Republic_-_Boy_in_Birao.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.578405+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.576644+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/0/07/African_penguins.jpg?utm_source=commons.wikimedi",
-    "created_at": "2026-11-25T17:48:53.544434+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/African_hawk-eagle_%28Aquila_spilogaster%29 - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.526340+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.524613+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/African_bush_elephants_%28Loxodonta_african - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.493591+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.492024+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7066/6904463913_76636437dc_b.jpg",
-    "created_at": "2026-11-25T17:48:53.459653+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5185/5609562359_ec401798ef_b.jpg",
-    "created_at": "2026-11-25T17:48:53.417457+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4041/4398058400_9d95276a3e_b.jpg",
-    "created_at": "2026-11-25T17:48:53.378366+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4327/35624432570_fbd1eba130_b.jpg",
-    "created_at": "2026-11-25T17:48:53.348534+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/6209/6157400315_e30725de4a_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T17:48:53.315063+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T17:48:53.313423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'African'",
-    "created_at": "2026-11-25T17:48:53.289153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'African'",
-    "created_at": "2026-11-25T17:48:53.172610+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'African'",
-    "created_at": "2026-11-25T17:48:53.055046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'African'",
-    "created_at": "2026-11-25T17:48:53.035010+00:00",
+    "message": "openverse: 0 result(s) for 'Iranian Ally Gained Upper Hand'",
+    "created_at": "2026-11-25T18:37:42.188598+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.981754+00:00",
+    "created_at": "2026-11-25T18:37:42.118968+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.980548+00:00",
+    "created_at": "2026-11-25T18:37:42.117428+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'African insurgents take war to the skies with off-' - trying entity search 'African'",
-    "created_at": "2026-11-25T17:48:52.979422+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/A8HPzZe5dnMYt4KV3RFmcYSb6HA=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://parade.com/tv/derek-hough-hayley-hough-exclusive-interview | Inside Derek Hough and Hayley E - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:42.115815+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.978264+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/r7oJMbOBCuS86D-EfFC5oud-iIg=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:42.114035+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.977040+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/z1WZ3JxNoYNup7MsdZcY4JmTOSw=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:42.112242+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.975667+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://people.com/thmb/uDvlwOTytKrYD49ekadIMJQwAtM=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://people.com/inside-derek-hough-and-hayley-erbert-california-wedding-exclusive-photos-7853273  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:42.110355+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.974402+00:00",
+    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T18:37:42.107423+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'African insurgents take war skies'",
-    "created_at": "2026-11-25T17:48:52.971805+00:00",
+    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T18:37:41.944146+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'African insurgents take war skies'",
-    "created_at": "2026-11-25T17:48:52.850435+00:00",
+    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T18:37:41.799828+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'African insurgents take war skies'",
-    "created_at": "2026-11-25T17:48:52.709780+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'African insurgents take war skies'",
-    "created_at": "2026-11-25T17:48:52.689632+00:00",
+    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War'",
+    "created_at": "2026-11-25T18:37:41.731182+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.646625+00:00",
+    "created_at": "2026-11-25T18:37:41.679018+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.645459+00:00",
+    "created_at": "2026-11-25T18:37:41.677599+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.644231+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/02/be/da/02beda4bdec545a1f85dd4542ff20540.png (page: https://www.etsy.com/listing/1579446918/25-popular-cat-breeds-as-kittens-kittens | breeds of cat😺 ne - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:41.676111+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.642968+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.pinimg.com/originals/ed/2b/75/ed2b75f632bfd764e5affef0ed2f042d.png (page: https://nl.pinterest.com/pin/10696117860042415/ | Cat Breeds | Cats breeds list, Tiger looking cat b - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:41.674467+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.641634+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://m.media-amazon.com/images/I/81GAnSUkp3L._AC_SL1500_.jpg (page: https://www.pinterest.com/pin/cat-breeds--5066618329164911/ | HLLNWB Breeds of Cat Poster Types of C - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:41.672555+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.639249+00:00",
+    "message": "photo: rejected (irrelevant to 'How an Iranian Ally Gained the Upper Hand in Yemen'): https://i.etsystatic.com/17927448/r/il/0d86b2/5712778798/il_1140xN.5712778798_jnzw.jpg (page: https://www.amazon.ca/HLLNWB-Breeds-Poster-Unframed-16x24inch/dp/B0B9T3F12R | Cat Breeds Poster, Ref - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:41.670770+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.636286+00:00",
+    "message": "bing-images: 4 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T18:37:41.667782+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.479012+00:00",
+    "message": "google-images: 0 candidate(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T18:37:41.504947+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.369464+00:00",
+    "message": "wikimedia: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T18:37:41.386033+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.349971+00:00",
+    "message": "openverse: 0 result(s) for 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T'",
+    "created_at": "2026-11-25T18:37:41.319917+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.297973+00:00",
+    "created_at": "2026-11-25T18:37:41.266323+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:52.296574+00:00",
+    "created_at": "2026-11-25T18:37:41.264585+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://get.pxhere.com/photo/people-woman-female-young-carnival-color-africa-child-black-tribe-festi (page: https://mc.nthebag.com/african-portrait-photographer-9-photographes-africains-que-vous-devez-absolum - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.295209+00:00",
+    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - rejected (no og:image)",
+    "created_at": "2026-11-25T18:37:41.262845+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/30107398/pexels-photo-30107398.png?cs=srgb&dl=pexels-royalrouge-301 (page: https://pxhere.com/en/photo/1067744 | Vibrant Traditional African Attire Outdoors · Free Stock Photo - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.293612+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilwFBVV95cUxOaDdOQkIyMWZBYUJGd19raENFUlNZRFhGZ0ctSzRyczJfWFloRVMtRXFlWkR4MVprWV9) - skipping, og:image would be the logo",
+    "created_at": "2026-11-25T18:37:41.259787+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://as2.ftcdn.net/v2/jpg/09/17/33/89/1000_F_917338971_xfDLQm21d0sVWEdDytUGOogNerOu5DxH.jpg (page: https://www.pexels.com/photo/vibrant-traditional-african-attire-outdoors-30107398/ | Celebrate the I - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.292190+00:00",
+    "message": "promo: story 2/6 tried: 'US shelves plans for business deals with Russia to end Ukrai' - no usable photo, trying the next story",
+    "created_at": "2026-11-25T18:37:40.685535+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'African insurgents take war to the skies with off-'): https://images.pexels.com/photos/34735512/pexels-photo-34735512.jpeg?cs=srgb&dl=pexels-skylight-view (page: https://stock.adobe.com/images/celebrate-the-international-day-for-people-of-african-descent-with-a- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T17:48:52.290834+00:00",
+    "message": "photo candidate: 'US shelves plans for business deals with Russia to end Ukrai' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-25T18:37:40.683883+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.288233+00:00",
+    "message": "photo: no real photo found for 'US shelves plans for business deals with Russia to end Ukraine war, FT says - Reuters' (11 download(s) tried)",
+    "created_at": "2026-11-25T18:37:40.681861+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.178259+00:00",
+    "message": "photo: rejected (vision down, strict check): https://images.thdstatic.com/productImages/a0213bbb-af18-4a60-afef-e4e81e00f30a/svn/rustic-brown-dec - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:40.679940+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.042158+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:40.677438+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'African insurgents take war to the skies with off-the-shelf '",
-    "created_at": "2026-11-25T17:48:52.021565+00:00",
+    "message": "photo: rejected (vision down, strict check): https://m.media-amazon.com/images/I/71v7z+RBN7L.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:40.317141+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:40.315235+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://i.etsystatic.com/27136853/r/il/6b67f9/6199521598/il_1080xN.6199521598_tl8r.jpg - source page title names only 0 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:40.179283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:40.177217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.e-a-a.com/wp-content/uploads/2025/02/best-wall-mounted-shelves.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:40.057129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:40.055040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Une_Restauration_by_Edouard_Dantan.jpg/1280 (page: https://commons.wikimedia.org/wiki/File:Une_Restauration_by_Edouard_Dantan.jpg | File:Une Restaurati - page does not name the entity (shelves))",
+    "created_at": "2026-11-25T18:37:39.860703+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Shelve.jpg/1280px-Shelve.jpg?utm_source=com - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:39.858449+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:39.474180+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/H%C3%B6xter_Germany_Corvey-Abbey-01.jpg/128 (page: https://commons.wikimedia.org/wiki/File:H%C3%B6xter_Germany_Corvey-Abbey-01.jpg | File:Höxter German - page does not name the entity (shelves))",
+    "created_at": "2026-11-25T18:37:39.184352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Empty_shelves_in_the_hand_sanitizer_section - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:39.182546+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:39.180297+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/13-11-02-olb-by-RalfR-03.jpg/1280px-13-11-0 (page: https://commons.wikimedia.org/wiki/File:13-11-02-olb-by-RalfR-03.jpg | File:13-11-02-olb-by-RalfR-03 - page does not name the entity (shelves))",
+    "created_at": "2026-11-25T18:37:38.759859+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5555/15072199721_d38f798aeb_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-25T18:37:38.758140+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-25T18:37:38.756049+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5250/5365888653_73de452937_b.jpg",
+    "created_at": "2026-11-25T18:37:38.688910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/24/66053431_bb16382f83_b.jpg",
+    "created_at": "2026-11-25T18:37:38.540922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7276/7025960033_7f6dff9ab2_b.jpg",
+    "created_at": "2026-11-25T18:37:38.420575+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2920/14429725130_d7814686bb_b.jpg",
+    "created_at": "2026-11-25T18:37:38.317117+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'shelves'",
+    "created_at": "2026-11-25T18:37:38.107941+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'shelves'",
+    "created_at": "2026-11-25T18:37:37.832159+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'shelves'",
+    "created_at": "2026-11-25T18:37:37.669670+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'shelves'",
+    "created_at": "2026-11-25T18:37:37.263576+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T17:48:51.977766+00:00",
+    "created_at": "2026-11-25T18:37:36.640395+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T18:37:36.638934+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'US shelves plans for business deals with Russia to' - trying entity search 'shelves'",
+    "created_at": "2026-11-25T18:37:36.637407+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:36.635838+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:36.634221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:36.632566+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:36.630607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'US shelves plans business deals'",
+    "created_at": "2026-11-25T18:37:36.627539+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US shelves plans business deals'",
+    "created_at": "2026-11-25T18:37:36.463342+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'US shelves plans business deals'",
+    "created_at": "2026-11-25T18:37:36.334428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US shelves plans business deals'",
+    "created_at": "2026-11-25T18:37:35.921533+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-25T18:37:35.517309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-25T18:37:35.513985+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:35.509599+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US shelves plans for business deals with Russia to'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-25T18:37:35.507927+00:00",
     "card": ""
   }
 ]
