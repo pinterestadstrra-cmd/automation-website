@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T12:11:04.417563+00:00",
-  "last_run": "2026-11-25T12:08:53.515495+00:00",
-  "runs": 88,
+  "generated_at": "2026-11-25T12:41:37.564872+00:00",
+  "last_run": "2026-11-25T12:40:35.397838+00:00",
+  "runs": 89,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -78,11 +78,11 @@
       "runs_today": 8,
       "posts_today": 13,
       "next_runs": [
-        "2026-11-25T18:26:04.271496+06:00",
-        "2026-11-25T18:41:04.271496+06:00",
         "2026-11-25T18:56:04.271496+06:00",
         "2026-11-25T19:11:04.271496+06:00",
-        "2026-11-25T19:26:04.271496+06:00"
+        "2026-11-25T19:26:04.271496+06:00",
+        "2026-11-25T19:41:04.271496+06:00",
+        "2026-11-25T19:56:04.271496+06:00"
       ],
       "next_post_times": [
         "2026-11-25T19:05:00+06:00",
@@ -134,17 +134,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 8
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
@@ -163,12 +154,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -205,10 +196,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T12:08:53.516793+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T12:40:35.399405+00:00"
     }
   ],
   "dry_run": false,
@@ -217,19 +208,67 @@
     "open": false
   },
   "trending": [
-    "Montreal airport pizza slice",
-    "Grand Theft Auto VI",
     "Army plans lead detonation in Iowa",
-    "Trump floats Jensen Huang pardon",
-    "UK energy price cap to rise",
-    "Day to end violence against women",
-    "Steelers bench Aaron Rodgers",
     "Nvidia hiring first compliance officer",
-    "Tidal bans AI-generated music",
-    "Aaron Rodgers benched against Broncos"
+    "Kilmar Abrego Garcia case",
+    "Steelers bench Aaron Rodgers",
+    "UK energy price cap to rise",
+    "Grand Theft Auto VI",
+    "Day to end violence against women",
+    "Montreal airport pizza slice",
+    "November full supermoon",
+    "Most memorable TV theme songs"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T12:41:37.386708+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T12:41:37.385002+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-25T12:41:37.135682+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T12:40:35.400778+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T12:40:35.399427+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #89 started (--only blogger)",
+      "created_at": "2026-11-25T12:40:35.397864+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T12:11:04.420259+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Montreal airport pizza slice', 'Grand Theft Auto VI', 'Army plans lead detonation in Iowa', 'Trump floats Jensen Huang pardon', 'UK energy price cap to rise']",
+      "created_at": "2026-11-25T12:11:04.414571+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -480,54 +519,6 @@
       "level": "info",
       "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
       "created_at": "2026-11-25T12:08:58.096845+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Top Democrats urge Cuba to free prisoners as US tensions ris' - skipped (same event used within 24h, event key 'cuba democrat exclusive free prisoner rise tension today top')",
-      "created_at": "2026-11-25T12:08:58.095639+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Two-thirds of Americans say country is headed in the wrong d' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-      "created_at": "2026-11-25T12:08:58.094140+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T12:08:57.434832+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T12:08:57.062430+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T12:08:53.517885+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-25T12:08:53.516800+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #88 started (--only bluesky)",
-      "created_at": "2026-11-25T12:08:53.515516+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T11:34:15.669555+00:00",
       "card": ""
     }
   ]
