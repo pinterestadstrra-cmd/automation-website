@@ -9,3 +9,4 @@ google-auth-oauthlib
 gunicorn
 Pillow
 grapheme  # rebuild #7.9: reference grapheme counting for the 300-grapheme Bluesky cap (code falls back to a built-in segmenter if missing)
+pynostr[websocket-client]  # Nostr (platform 5 of 8): kind-1 event signing (BIP-340 Schnorr, coincurve) + relay broadcast over wss; the [websocket-client] extra is what RelayManager uses to talk to relays
