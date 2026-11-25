@@ -15,6 +15,56 @@
 #                         (or single-account secrets REDDIT_CLIENT_ID /
 #                         REDDIT_CLIENT_SECRET / REDDIT_USERNAME /
 #                         REDDIT_PASSWORD - the worker falls back to them)
+#   TUMBLR_ACCOUNTS       JSON list: [{"blog":"...","client_id":"...",
+#                         "client_secret":"...","access_token":"...",
+#                         "refresh_token":"..."}] (OAuth2, free, no review)
+#                         (or single-account secrets TUMBLR_BLOG /
+#                         TUMBLR_CLIENT_ID / TUMBLR_CLIENT_SECRET /
+#                         TUMBLR_ACCESS_TOKEN / TUMBLR_REFRESH_TOKEN -
+#                         the worker falls back to them)
+#   THREADS_ACCOUNTS      JSON list: [{"user_id":"...","username":"...",
+#                         "app_id":"...","app_secret":"...",
+#                         "access_token":"...","token_obtained_at":"..."}]
+#                         (OAuth2, free, no App Review for your own
+#                         account - add yourself as a Threads tester)
+#                         (or single-account secrets THREADS_USER_ID /
+#                         THREADS_APP_ID / THREADS_APP_SECRET /
+#                         THREADS_ACCESS_TOKEN - the worker falls back
+#                         to them)
+#   MASTODON_ACCOUNTS     JSON list: [{"instance":"mastodon.social",
+#                         "access_token":"..."}] (free, no review -
+#                         token from the instance web UI: Preferences
+#                         -> Development -> New application, scopes
+#                         write:statuses + write:media; tokens do not
+#                         expire, no refresh)
+#                         (or single-account secrets MASTODON_INSTANCE /
+#                         MASTODON_ACCESS_TOKEN - the worker falls back
+#                         to them)
+#   TELEGRAM_BOT_TOKEN    bot token from @BotFather (free, no review -
+#                         /newbot, then add the bot as a channel admin
+#                         with Post Messages permission; the token
+#                         never expires, no OAuth, no refresh)
+#   NOSTR_ACCOUNTS        JSON list: [{"name":"...","npub":"...","nsec":"..."}]
+#                         (free, no account, no approval, no review -
+#                         the nsec IS the account: paste it from any
+#                         Nostr client, e.g. Primal / Damus / Amethyst;
+#                         the worker derives the npub from the nsec)
+#                         (or single-account secrets NOSTR_NSEC /
+#                         NOSTR_NAME - the worker falls back to them)
+#   LEMMY_ACCOUNTS        JSON list: [{"instance":"lemmy.world",
+#                         "username":"...","password":"..."}] (free,
+#                         open API, no app registration, no review -
+#                         log in with username + password on any
+#                         Lemmy instance; the worker resolves the
+#                         card's community name to an id itself)
+#                         (or single-account secrets LEMMY_INSTANCE /
+#                         LEMMY_USERNAME / LEMMY_PASSWORD - the worker
+#                         falls back to them)
+#   DEVTO_API_KEY         dev.to API key (free, full REST API, no
+#                         app registration, no review - generate at
+#                         dev.to Settings > Extensions; POST
+#                         /api/articles publishes a full article with
+#                         canonical_url back to the blog post)
 #   BLOG_ID               Blogger blog id (for article links)
 #   PEXELS_API_KEY        (optional) Pexels free key for photos
 #   PIXABAY_API_KEY       (optional) Pixabay free key for photos
@@ -72,6 +122,29 @@ jobs:
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
           REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          TUMBLR_ACCOUNTS: ${{ secrets.TUMBLR_ACCOUNTS }}
+          TUMBLR_BLOG: ${{ secrets.TUMBLR_BLOG }}
+          TUMBLR_CLIENT_ID: ${{ secrets.TUMBLR_CLIENT_ID }}
+          TUMBLR_CLIENT_SECRET: ${{ secrets.TUMBLR_CLIENT_SECRET }}
+          TUMBLR_ACCESS_TOKEN: ${{ secrets.TUMBLR_ACCESS_TOKEN }}
+          TUMBLR_REFRESH_TOKEN: ${{ secrets.TUMBLR_REFRESH_TOKEN }}
+          THREADS_ACCOUNTS: ${{ secrets.THREADS_ACCOUNTS }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_APP_ID: ${{ secrets.THREADS_APP_ID }}
+          THREADS_APP_SECRET: ${{ secrets.THREADS_APP_SECRET }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          MASTODON_ACCOUNTS: ${{ secrets.MASTODON_ACCOUNTS }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          NOSTR_ACCOUNTS: ${{ secrets.NOSTR_ACCOUNTS }}
+          NOSTR_NSEC: ${{ secrets.NOSTR_NSEC }}
+          NOSTR_NAME: ${{ secrets.NOSTR_NAME }}
+          LEMMY_ACCOUNTS: ${{ secrets.LEMMY_ACCOUNTS }}
+          LEMMY_INSTANCE: ${{ secrets.LEMMY_INSTANCE }}
+          LEMMY_USERNAME: ${{ secrets.LEMMY_USERNAME }}
+          LEMMY_PASSWORD: ${{ secrets.LEMMY_PASSWORD }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
           BLOG_ID: ${{ secrets.BLOG_ID }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
