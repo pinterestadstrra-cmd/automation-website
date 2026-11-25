@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T10:08:06.417172+00:00",
-  "last_run": "2026-11-25T10:06:38.662603+00:00",
-  "runs": 84,
+  "generated_at": "2026-11-25T10:35:28.293040+00:00",
+  "last_run": "2026-11-25T10:35:06.755471+00:00",
+  "runs": 85,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -78,11 +78,11 @@
       "runs_today": 6,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-25T16:23:06.220293+06:00",
         "2026-11-25T16:38:06.220293+06:00",
         "2026-11-25T16:53:06.220293+06:00",
         "2026-11-25T17:08:06.220293+06:00",
-        "2026-11-25T17:23:06.220293+06:00"
+        "2026-11-25T17:23:06.220293+06:00",
+        "2026-11-25T17:38:06.220293+06:00"
       ],
       "next_post_times": [
         "2026-11-25T16:53:00+06:00",
@@ -134,17 +134,8 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
@@ -163,12 +154,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -205,10 +196,10 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-25T10:06:38.664789+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-25T10:35:06.757068+00:00"
     }
   ],
   "dry_run": false,
@@ -217,19 +208,67 @@
     "open": false
   },
   "trending": [
-    "Influencers invited to Downing Street",
     "UK energy price cap to rise",
     "Army plans lead detonation in Iowa",
     "Day to end violence against women",
     "Grand Theft Auto VI",
-    "Aaron Rodgers benched against Broncos",
-    "Tidal bans AI-generated music",
-    "Jensen Huang's \"tortured story\" remark",
-    "Bird photography",
-    "Nvidia hiring first compliance officer"
+    "Influencers invited to Downing Street",
+    "November full supermoon",
+    "Nvidia hiring first compliance officer",
+    "Boreen daily trivia scores",
+    "Wrong Lord of the Rings quotes",
+    "King tides threaten Bay Area flooding"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-25T10:35:27.516596+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-25T10:35:27.514417+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-25T10:35:26.903475+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-25T10:35:06.758394+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-25T10:35:06.757077+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #85 started (--only blogger)",
+      "created_at": "2026-11-25T10:35:06.755492+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-25T10:08:06.420645+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Influencers invited to Downing Street', 'UK energy price cap to rise', 'Army plans lead detonation in Iowa', 'Day to end violence against women', 'Grand Theft Auto VI']",
+      "created_at": "2026-11-25T10:08:06.413778+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
@@ -480,54 +519,6 @@
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
       "created_at": "2026-11-25T10:06:57.378754+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T10:06:57.377260+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Anthony Zurcher: Democrats push deep into Trump he'): https://cdn.nba.com/manage/2025/08/carmelo-anthony-knicks-1.jpg (page: https://prntbl.concejomunicipaldechinu.gov.co/anthony-edwards-runs-off-court/ | Carmelo Anthony’s Ha - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-25T10:06:57.376147+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Anthony Zurcher: Democrats push deep into Trump he'): https://static.independent.co.uk/2023/03/15/15/16f2ffd4403b7cf5061060f8a4aca676Y29udGVudHNlYXJjaGFwa (page: https://www.nba.com/news/carmelo-anthony-hall-of-fame-feature-2025?lctg=5e6397fdb7074d458b90c591&lid - only 1 of 10 key entities in the source page)",
-      "created_at": "2026-11-25T10:06:57.375128+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Anthony Zurcher: Democrats push deep into Trump he'): https://notjustok.com/wp-content/uploads/2022/10/20221002_153329-1536x864.jpg (page: https://www.independent.co.uk/sport/football/antony-manchester-united-spain-erik-ten-hag-alejandro-g - the named person is not in the source page (anthony, zurcher))",
-      "created_at": "2026-11-25T10:06:57.374129+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Anthony Zurcher: Democrats push deep into Trump he'): https://cdn1.unitedinfocus.com/uploads/14/2022/09/GettyImages-1242946288-1536x1024.jpg (page: https://notjustok.com/sports/antony-becomes-the-first-manchester-united-football-history/ | Antony s - the named person is not in the source page (anthony, zurcher))",
-      "created_at": "2026-11-25T10:06:57.373024+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Anthony Zurcher: Democrats push deep into Trump heartland on'",
-      "created_at": "2026-11-25T10:06:57.370518+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Anthony Zurcher: Democrats push deep into Trump heartland on'",
-      "created_at": "2026-11-25T10:06:57.151928+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Anthony Zurcher: Democrats push deep into Trump heartland on'",
-      "created_at": "2026-11-25T10:06:56.977288+00:00",
       "card": ""
     }
   ]

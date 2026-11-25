@@ -2,6 +2,54 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-25T10:35:28.296398+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['UK energy price cap to rise', 'Army plans lead detonation in Iowa', 'Day to end violence against women', 'Grand Theft Auto VI', 'Influencers invited to Downing Street']",
+    "created_at": "2026-11-25T10:35:28.289978+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-25T10:35:27.516596+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-25T10:35:27.514417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-25T10:35:26.903475+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-25T10:35:06.758394+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-25T10:35:06.757077+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #85 started (--only blogger)",
+    "created_at": "2026-11-25T10:35:06.755492+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-25T10:08:06.420645+00:00",
     "card": ""
   },
@@ -1149,54 +1197,6 @@
     "level": "info",
     "message": "vision: NO - photo rejected for 'As Ukraine sinks Russian ships, some NATO nations ' (\n\nReason: The image is an illustration/poster titled \"The History of Ukraine\" featuring historical and cultural imagery, not a photograph depicting cu)",
     "created_at": "2026-11-25T06:07:43.983465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'As Ukraine sinks Russian ships, some NATO nations '): https://www.riotimesonline.com/wp-content/uploads/2026/10/ukraine-politics-explained-2026-photo-1536 (page: https://www.un.org/geospatial/en/content/ukraine | Ukraine Politics Explained, Who Holds Power in 20 - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-25T06:07:30.838266+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'As Ukraine sinks Russian ships, some NATO nations '): https://www.politico.eu/cdn-cgi/image/width=1160,height=751,quality=80,onerror=redirect,format=auto/ (page: https://www.riotimesonline.com/ukraine-politics-explained-who-holds-power-2026/ | EU to host Ukraine - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-25T06:07:30.836848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'As Ukraine sinks Russian ships, some NATO nations '): https://democrats.gumlet.io/images/Countries/Ukraine.jpg?width=3175&height=2646&mode=crop&crop=focal (page: https://www.politico.eu/article/eu-to-host-ukraine-reconstruction-talks-with-us-and-uk/ | Ukraine |  - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-25T06:07:30.834884+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'As Ukraine sinks Russian ships, some NATO nations voice anxi'",
-    "created_at": "2026-11-25T06:07:30.831470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'As Ukraine sinks Russian ships, some NATO nations voice anxi'",
-    "created_at": "2026-11-25T06:07:30.684371+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'As Ukraine sinks Russian ships, some NATO nations voice anxi'",
-    "created_at": "2026-11-25T06:07:30.536404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'As Ukraine sinks Russian ships, some NATO nations voice anxi'",
-    "created_at": "2026-11-25T06:07:30.173711+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T06:07:25.181607+00:00",
     "card": ""
   }
 ]
