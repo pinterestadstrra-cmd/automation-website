@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T15:37:04.665441+00:00",
-  "last_run": "2026-11-25T15:37:01.914446+00:00",
-  "runs": 93,
+  "generated_at": "2026-11-25T15:48:01.670088+00:00",
+  "last_run": "2026-11-25T15:47:17.281142+00:00",
+  "runs": 94,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,7 +42,7 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T14:48:21.218512+00:00"
+    "Adsterra Blogger": "2026-11-25T15:48:01.590481+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -53,11 +53,11 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 35,
+      "success": 36,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T14:48:21.218507+00:00"
+      "last_run": "2026-11-25T15:48:01.590479+00:00"
     }
   },
   "file_cards": [
@@ -74,15 +74,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T14:48:21.218512+00:00",
-      "runs_today": 10,
-      "posts_today": 15,
+      "last_run": "2026-11-25T15:48:01.590481+00:00",
+      "runs_today": 11,
+      "posts_today": 16,
       "next_runs": [
-        "2026-11-25T21:48:21.218512+06:00",
-        "2026-11-25T22:03:21.218512+06:00",
-        "2026-11-25T22:18:21.218512+06:00",
-        "2026-11-25T22:33:21.218512+06:00",
-        "2026-11-25T22:48:21.218512+06:00"
+        "2026-11-25T22:03:01.590481+06:00",
+        "2026-11-25T22:18:01.590481+06:00",
+        "2026-11-25T22:33:01.590481+06:00",
+        "2026-11-25T22:48:01.590481+06:00",
+        "2026-11-25T23:03:01.590481+06:00"
       ],
       "next_post_times": [
         "2026-11-25T21:50:00+06:00",
@@ -91,7 +91,7 @@
         "2026-11-26T00:58:00+06:00",
         "2026-11-26T01:52:00+06:00"
       ],
-      "success": 35,
+      "success": 36,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -134,8 +134,17 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 11
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
@@ -154,12 +163,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -196,10 +205,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T15:37:01.916023+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-25T15:47:17.282036+00:00"
     }
   ],
   "dry_run": false,
@@ -208,317 +217,317 @@
     "open": false
   },
   "trending": [
-    "Gillibrand backs Fetterman reelection",
-    "PCE inflation hits three-year high",
-    "Grand Theft Auto VI",
     "Montreal airport pizza slice",
+    "Grand Theft Auto VI",
     "Emergency unfolds in Iowa",
+    "Trump calls Putin his friend",
     "Nvidia hiring first compliance officer",
-    "Trump floats Jensen Huang pardon",
     "Steelers bench Aaron Rodgers",
+    "Trump pardons Thanksgiving turkeys",
+    "Day to end violence against women",
     "Measles risk grows for adults",
-    "Day to end violence against women"
+    "SoftBank shares fall in AI sell-off"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T15:37:04.460294+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T15:37:04.458637+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-25T15:37:04.229963+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T15:37:01.917456+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T15:37:01.916032+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #93 started (--only blogger)",
-      "created_at": "2026-11-25T15:37:01.914466+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T14:48:21.404105+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Lead explosion in Iowa', 'Montreal airport pizza slice', 'Steelers bench Aaron Rodgers', 'SoftBank shares fall in AI sell-off', 'Bird photography']",
-      "created_at": "2026-11-25T14:48:21.397530+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-25T14:48:21.218531+00:00",
+      "created_at": "2026-11-25T15:48:01.590495+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T14:48:21.217399+00:00",
+      "created_at": "2026-11-25T15:48:01.589764+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'abc attack break claim fund houthis iran january latest live' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T14:48:21.215650+00:00",
+      "message": "card 'Adsterra Blogger': promo posted - event 'argue behaviour call european latest news putrid sky troop t' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-25T15:48:01.588832+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1080x1920 (ratio 0.56) - unchanged",
-      "created_at": "2026-11-25T14:48:19.245579+00:00",
+      "message": "prepare_bsky_image: published 1024x683 (ratio 1.50) - unchanged",
+      "created_at": "2026-11-25T15:47:59.956430+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1080x1920 (ratio 0.56) - kept, no crop",
-      "created_at": "2026-11-25T14:48:19.244588+00:00",
+      "message": "prepare_bsky_image: original 1024x683 (ratio 1.50) - kept, no crop",
+      "created_at": "2026-11-25T15:47:59.955761+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran live updates: Trump says war 'funded' through January, '",
-      "created_at": "2026-11-25T14:48:19.242434+00:00",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Ukraine war latest: European troops should be in Ukraine, ex'",
+      "created_at": "2026-11-25T15:47:59.954403+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T14:48:19.190451+00:00",
+      "created_at": "2026-11-25T15:47:59.912692+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-25T14:48:19.189199+00:00",
+      "created_at": "2026-11-25T15:47:59.911813+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': found 1 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-25T14:48:19.187348+00:00",
+      "created_at": "2026-11-25T15:47:59.910283+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-25T14:48:13.902465+00:00",
+      "created_at": "2026-11-25T15:47:56.693112+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "prepared ready post: 'Ukraine war latest: European troops should be in Ukraine, ex' for card 'Adsterra Blogger' (queue now 2)",
-      "created_at": "2026-11-25T14:48:13.899046+00:00",
+      "message": "prepared ready post: 'Trump says Democrats 'did a good job,' blames Republican can' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-25T15:47:56.692294+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war latest: European troops should be in Ukraine, ex' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-25T14:48:09.952763+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-25T15:47:55.140489+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-25T14:48:09.951811+00:00",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-25T15:47:55.139916+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: European troops should be in Ukraine, ex': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-      "created_at": "2026-11-25T14:48:09.950768+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://static.the-independent.com/2026/11/20/22/Trump__3518.jpg (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://nationalsecurityjournal.org/something-strange-is-happening-to-trump-the-democrat-who-prosecu - matches 3 key entities (democrat, midterm, trump))",
+      "created_at": "2026-11-25T15:47:55.139272+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T14:48:09.949306+00:00",
+      "created_at": "2026-11-25T15:47:55.138494+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
-      "created_at": "2026-11-25T14:48:09.924088+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-25T15:47:55.080835+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-25T14:48:09.875940+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-25T15:47:54.943522+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-25T14:48:09.615453+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-25T15:47:54.805958+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-25T14:48:09.501414+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-25T14:48:08.716340+00:00",
+      "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-25T15:47:54.686198+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:08.686349+00:00",
+      "created_at": "2026-11-25T15:47:54.123033+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:08.685356+00:00",
+      "created_at": "2026-11-25T15:47:54.122443+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Ukraine war latest: European troops should be in U' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-25T14:48:08.684324+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
+      "created_at": "2026-11-25T15:47:54.121766+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.683271+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-25T15:47:54.120316+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.682158+00:00",
+      "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T15:47:53.970671+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.680994+00:00",
+      "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+      "created_at": "2026-11-25T15:47:53.970088+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://uesukraine.com/wp-content/uploads/2016/09/ukraine-city.jpg (page: https://www.wine-searcher.com/regions-ukraine | About Ukraine - UESUkraine - Study in Ukraine - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.679647+00:00",
+      "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T15:47:53.969396+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/The_future_of_Ukraine_directly_depends_on_t (page: https://commons.wikimedia.org/wiki/File:The_future_of_Ukraine_directly_depends_on_the_strength_of_ou - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.678638+00:00",
+      "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+      "created_at": "2026-11-25T15:47:53.968824+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/MuslimWorldDemographics2022.png/1280px-Musl (page: https://commons.wikimedia.org/wiki/File:MuslimWorldDemographics2022.png | File:MuslimWorldDemographi - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:08.677462+00:00",
+      "message": "promo: story 3/6 tried: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - no usable photo, trying the next story",
+      "created_at": "2026-11-25T15:47:53.968224+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest European troops'",
-      "created_at": "2026-11-25T14:48:08.675151+00:00",
+      "message": "photo candidate: '\"TrumpCare\": Political Convergence Weighs on US Insurers - m' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-25T15:47:53.967637+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war latest European troops'",
-      "created_at": "2026-11-25T14:48:08.528295+00:00",
+      "message": "photo: no real photo found for '\"TrumpCare\": Political Convergence Weighs on US Insurers - marketscreener.com' (5 download(s) tried)",
+      "created_at": "2026-11-25T15:47:53.967049+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 2 result(s) for 'Ukraine war latest European troops'",
-      "created_at": "2026-11-25T14:48:08.409988+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://img.freepik.com/free-vector/simple-vibing-cat-square-meme_742173-4493.jpg?semt=ais_hybrid&w= (page: https://www.boredpanda.com/funny-cat-pics-and-memes/ | Funny cat memes Images - Free Download on Fre - page does not name the entity (TrumpCare))",
+      "created_at": "2026-11-25T15:47:53.966439+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war latest European troops'",
-      "created_at": "2026-11-25T14:48:07.602880+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://bestlifeonline.com/wp-content/uploads/sites/3/2018/06/cat-meme-54-0.jpg?resize=150 (page: https://www.freepik.com/free-photos-vectors/funny-cat-memes | 100 Funniest Cat Memes Ever (Especiall - page does not name the entity (TrumpCare))",
+      "created_at": "2026-11-25T15:47:53.965815+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://s.yimg.com/lo/mysterio/api/f65cdb8280e66bcf546c74879fb560daeb4b18bcb564c7bd3572d717c6f02656/ (page: https://bestlifeonline.com/funniest-cat-memes-ever/ | The Real Cats Behind 10 Of The Most Iconic Cat - page does not name the entity (TrumpCare))",
+      "created_at": "2026-11-25T15:47:53.965174+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-FT.jpg (page: https://sg.news.yahoo.com/real-cats-behind-10-most-103000140.html | Cat Memes That Are so Hilarious  - page does not name the entity (TrumpCare))",
+      "created_at": "2026-11-25T15:47:53.964456+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3762/33598460205_372311c741_b.jpg",
+      "created_at": "2026-11-25T15:47:53.963250+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4309/35998610832_38dbb65f78_b.jpg",
+      "created_at": "2026-11-25T15:47:53.856896+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4304/35298974444_a7c5309288_b.jpg",
+      "created_at": "2026-11-25T15:47:53.752297+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1636/24857770173_fe37c8380f.jpg",
+      "created_at": "2026-11-25T15:47:53.652654+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4324/35998613382_f0870631b8_b.jpg",
+      "created_at": "2026-11-25T15:47:53.557998+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'TrumpCare'",
+      "created_at": "2026-11-25T15:47:53.456178+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'TrumpCare'",
+      "created_at": "2026-11-25T15:47:53.340357+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'TrumpCare'",
+      "created_at": "2026-11-25T15:47:53.183137+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'TrumpCare'",
+      "created_at": "2026-11-25T15:47:53.069230+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:07.163403+00:00",
+      "created_at": "2026-11-25T15:47:52.610889+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T14:48:07.162440+00:00",
+      "created_at": "2026-11-25T15:47:52.610305+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:07.161548+00:00",
+      "message": "photo: topical search found nothing for '\"TrumpCare\": Political Convergence Weighs on US In' - trying entity search 'TrumpCare'",
+      "created_at": "2026-11-25T15:47:52.609710+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:07.160575+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://assets.mycast.io/characters/lord-business-1226351-normal.jpg?1606425164 (page: https://au.pinterest.com/pin/214202526002352658/ | Find an Actor to Play Lord Business in The Lego M - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-25T15:47:52.609082+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:07.159500+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.pinimg.com/originals/f0/af/9f/f0af9f6e66fe09bf98ceeb963721a07a.jpg (page: http://fr.lego.wikia.com/wiki/Fichier:The_LEGO_Movie_BA-Lord_Business.jpg | Pin on party | Lego movi - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-25T15:47:52.608418+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: European troops should be in U'): https://uesukraine.com/wp-content/uploads/2016/09/ukraine-city.jpg (page: https://www.wine-searcher.com/regions-ukraine | About Ukraine - UESUkraine - Study in Ukraine - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-25T14:48:07.158357+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): https://i.ebayimg.com/images/g/~3oAAOSwhXZgf43Y/s-l1600.jpg (page: https://www.pinterest.com/pin/774689573394776220/ | The LEGO Movie; Lord Business / President Busine - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-25T15:47:52.607777+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
-      "created_at": "2026-11-25T14:48:07.155936+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
-      "created_at": "2026-11-25T14:48:06.995302+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Ukraine war latest: European troops should be in Ukraine, ex'",
-      "created_at": "2026-11-25T14:48:06.846789+00:00",
+      "message": "photo: rejected (irrelevant to '\"TrumpCare\": Political Convergence Weighs on US In'): http://www.heyuguys.com/images/2013/11/The-Lego-Movie-Character-Poster-Lord-Business.jpg (page: https://www.charactour.com/hub/characters/view/Lord-Business.The-Lego-Movie | The Lego Movie Charact - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-25T15:47:52.607042+00:00",
       "card": ""
     }
   ]
