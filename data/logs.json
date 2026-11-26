@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T17:55:15.273463+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Trump calls GDP revision fake', 'Birthday twin spectrum prompt', \"Macy's parade postponed to Saturday\", 'Aaron Rodgers reportedly out']",
+    "created_at": "2026-11-26T17:55:15.267688+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T17:55:15.183087+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T17:55:15.107002+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T17:55:14.636897+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T17:54:53.052605+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T17:54:53.051408+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T17:54:53.050058+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #141 started (--only blogger)",
+    "created_at": "2026-11-26T17:54:53.048558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T17:47:27.679332+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'nuclear'",
     "created_at": "2026-11-26T17:45:24.646058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'nuclear'",
-    "created_at": "2026-11-26T17:45:24.560707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:12.232963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:12.231887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'UK nuclear test veterans win 40-year battle for in' - trying entity search 'nuclear'",
-    "created_at": "2026-11-26T17:45:12.230914+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.pinimg.com/736x/5e/bc/37/5ebc372919881c9f99a868eb6a0578f1.jpg (page: https://br.freepik.com/vetores-premium/conjunto-de-cartas-de-baralho-as-de-quatro-naipes-vetor_22767 - only 0 of 16 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:12.229687+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://media.istockphoto.com/id/1383772594/pt/vetorial/karta-as-pik-ikona.jpg?s=1024x1024&w=is&k=20 (page: https://ar.pinterest.com/pin/327566572914435743/ | Vetores de Cartão Ou Ícone Pic e mais imagens de  - only 0 of 16 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:12.228493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://w7.pngwing.com/pngs/902/280/png-transparent-ace-of-spades-playing-card-ace-of-hearts-spades- (page: https://www.istockphoto.com/br/vetor/cartão-ou-ícone-pic-gm1383772594-443482293 | Ás de espadas Bara - only 0 of 16 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:12.227322+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://1.bp.blogspot.com/-yUA4YNvsgKw/V0PysmOBTDI/AAAAAAAAIng/0VkJ0KNftOESps1ZAKoSvixxuG2v0m6VgCLcB (page: https://www.pngwing.com/pt/free-png-bknvj | Conversas Cartomânticas: Um pouco sobre o Ás de Espadas. - only 0 of 16 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:12.226120+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win'",
-    "created_at": "2026-11-26T17:45:12.224232+00:00",
     "card": ""
   }
 ]

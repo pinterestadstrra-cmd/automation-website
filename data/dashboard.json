@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T17:47:27.675958+00:00",
-  "last_run": "2026-11-26T17:42:05.617094+00:00",
-  "runs": 140,
+  "generated_at": "2026-11-26T17:55:15.270690+00:00",
+  "last_run": "2026-11-26T17:54:53.048532+00:00",
+  "runs": 141,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -93,11 +93,11 @@
         "2026-11-27T01:01:02.441110+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T23:52:00+06:00",
         "2026-11-27T00:57:00+06:00",
         "2026-11-27T02:02:00+06:00",
         "2026-11-27T03:07:00+06:00",
-        "2026-11-27T03:53:00+06:00"
+        "2026-11-27T03:53:00+06:00",
+        "2026-11-27T04:58:00+06:00"
       ],
       "success": 62,
       "fail": 4,
@@ -165,11 +165,11 @@
         "2026-11-27T01:02:27.525268+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T23:54:00+06:00",
         "2026-11-27T00:59:00+06:00",
         "2026-11-27T02:04:00+06:00",
         "2026-11-27T03:09:00+06:00",
-        "2026-11-27T03:53:00+06:00"
+        "2026-11-27T03:53:00+06:00",
+        "2026-11-27T04:58:00+06:00"
       ],
       "success": 16,
       "fail": 10,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 14
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T17:42:05.618696+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T17:54:53.050049+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T17:54:53.051398+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,72 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
+    "Trump calls GDP revision fake",
     "Birthday twin spectrum prompt",
     "Macy's parade postponed to Saturday",
-    "Mike McCarthy's ice cream sandwich assistant",
-    "Trump calls GDP revision fake",
-    "Nvidia chip exports to China",
-    "Grand Theft Auto VI",
-    "Vance blames Obama for detonation",
     "Aaron Rodgers reportedly out",
+    "UK net migration falls to 77,000",
+    "Mike McCarthy's ice cream sandwich assistant",
+    "Describe a film without its name",
+    "Rockstar UK union vote",
     "Musk pledges kids SpaceX shares"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T17:55:15.183087+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T17:55:15.107002+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-26T17:55:14.636897+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T17:54:53.052605+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T17:54:53.051408+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T17:54:53.050058+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #141 started (--only blogger)",
+      "created_at": "2026-11-26T17:54:53.048558+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T17:47:27.679332+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', \"Macy's parade postponed to Saturday\", \"Mike McCarthy's ice cream sandwich assistant\", 'Trump calls GDP revision fake']",
+      "created_at": "2026-11-26T17:47:27.673005+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
       "created_at": "2026-11-26T17:46:33.985332+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F534/production/_92427726_baa32723-0642-4210-8f6",
-      "created_at": "2026-11-26T17:46:33.984157+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: NO - photo rejected for 'Tracking Trump's Crackdown on Higher Education - U' (. The photo shows Joe Biden and Barack Obama, which is unrelated to the news headline about Trump's crackdown on higher education.)",
-      "created_at": "2026-11-26T17:46:33.982604+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/lifestyle-images/celebrity/58c7d2fbb24ce97c4c47d3d3/joebama-m (page: https://www.bbc.co.uk/news/election-us-2016-37972626 | Joe Biden Finally Reveals His Favourite Barac - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T17:46:25.012372+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://s.hdnux.com/photos/55/01/42/11802754/10/1920x0.jpg (page: https://graziadaily.co.uk/celebrity/news/joe-biden-barack-obama-meme/ | Joe Biden memes are giving A - only 1 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T17:46:25.011010+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/media/6006/d529/5a3f/fa4a/dd23/3233/Screen-Shot-2016-11-19-at (page: https://www.mysanantonio.com/entertainment/article/Joe-Biden-memes-are-giving-America-a-much-needed- - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T17:46:25.009789+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T17:46:25.007850+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T17:46:24.864106+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T17:46:24.721348+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T17:46:24.637201+00:00",
       "card": ""
     }
   ]
