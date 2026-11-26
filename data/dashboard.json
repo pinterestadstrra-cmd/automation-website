@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T06:07:38.668482+00:00",
-  "last_run": "2026-11-26T06:05:11.056550+00:00",
-  "runs": 121,
+  "generated_at": "2026-11-26T06:27:57.344175+00:00",
+  "last_run": "2026-11-26T06:27:41.787810+00:00",
+  "runs": 122,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 5,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T12:21:42.933657+06:00",
         "2026-11-26T12:36:42.933657+06:00",
         "2026-11-26T12:51:42.933657+06:00",
         "2026-11-26T13:06:42.933657+06:00",
-        "2026-11-26T13:21:42.933657+06:00"
+        "2026-11-26T13:21:42.933657+06:00",
+        "2026-11-26T13:36:42.933657+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T12:09:00+06:00",
         "2026-11-26T12:53:00+06:00",
         "2026-11-26T14:00:00+06:00",
         "2026-11-26T15:05:00+06:00",
-        "2026-11-26T16:10:00+06:00"
+        "2026-11-26T16:10:00+06:00",
+        "2026-11-26T16:54:00+06:00"
       ],
       "success": 52,
       "fail": 4,
@@ -158,18 +158,18 @@
       "runs_today": 5,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T12:22:38.579286+06:00",
         "2026-11-26T12:37:38.579286+06:00",
         "2026-11-26T12:52:38.579286+06:00",
         "2026-11-26T13:07:38.579286+06:00",
-        "2026-11-26T13:22:38.579286+06:00"
+        "2026-11-26T13:22:38.579286+06:00",
+        "2026-11-26T13:37:38.579286+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T12:10:00+06:00",
         "2026-11-26T12:54:00+06:00",
         "2026-11-26T13:59:00+06:00",
         "2026-11-26T15:04:00+06:00",
-        "2026-11-26T16:09:00+06:00"
+        "2026-11-26T16:09:00+06:00",
+        "2026-11-26T16:53:00+06:00"
       ],
       "success": 16,
       "fail": 0,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 5
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T06:05:11.058323+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T06:27:41.788844+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T06:27:41.789559+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,60 @@
   },
   "trending": [
     "Victorian Coalition plans sewage privatization",
-    "Duran Duran's Andy Taylor dies",
-    "FCC approves SpaceX Starmind satellites",
     "Thanksgiving Day celebrations",
-    "Kushner praises Putin's restraint",
-    "Describe a film without its name",
-    "Aaron Rodgers reportedly out",
-    "Macy's parade turns 100",
-    "New Avengers: Doomsday poster",
-    "World tops 2C for six straight days"
+    "Duran Duran's Andy Taylor dies",
+    "Grand Theft Auto VI",
+    "FEMA hotline unanswered in Iowa",
+    "FCC approves SpaceX Starmind satellites",
+    "Ocarina of Time remake",
+    "PCE inflation hits three-year high",
+    "November full supermoon",
+    "Wave of software vulnerability disclosures"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T06:27:57.210923+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T06:27:57.209488+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-26T06:27:56.930130+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T06:27:41.790222+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T06:27:41.789564+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T06:27:41.788852+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #122 started (--only blogger)",
+      "created_at": "2026-11-26T06:27:41.787834+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
@@ -575,48 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
       "created_at": "2026-11-26T06:07:32.222847+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-      "created_at": "2026-11-26T06:07:32.220302+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-      "created_at": "2026-11-26T06:07:32.036774+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-      "created_at": "2026-11-26T06:07:31.903204+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-      "created_at": "2026-11-26T06:07:31.885825+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T06:07:31.859844+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T06:07:31.858581+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-      "created_at": "2026-11-26T06:07:31.857192+00:00",
       "card": ""
     }
   ]

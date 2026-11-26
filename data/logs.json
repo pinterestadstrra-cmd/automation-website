@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-26T06:27:57.346086+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victorian Coalition plans sewage privatization', 'Thanksgiving Day celebrations', \"Duran Duran's Andy Taylor dies\", 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa']",
+    "created_at": "2026-11-26T06:27:57.341589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T06:27:57.210923+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T06:27:57.209488+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T06:27:56.930130+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T06:27:41.790222+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T06:27:41.789564+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T06:27:41.788852+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #122 started (--only blogger)",
+    "created_at": "2026-11-26T06:27:41.787834+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-26T06:07:38.579305+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (same event used within 24h, event key 'explosion intercept iran jazeera live missile riyadh rock sa')",
     "created_at": "2026-11-26T06:06:46.426826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: '4 takeaways from election night - PBS' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T06:06:46.367053+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '4 takeaways from election night - PBS' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T06:06:46.365844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for '4 takeaways from election night - PBS' (5 download(s) tried)",
-    "created_at": "2026-11-26T06:06:46.364532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.etsystatic.com/16431976/r/il/5e8ae6/5604552750/il_fullxfull.5604552750_644m.jpg (page: https://www.pinterest.com/lydiakahn/tattoo-ideas/ | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
-    "created_at": "2026-11-26T06:06:46.363206+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.pinimg.com/736x/98/93/e4/9893e4086e2a5fe50deb864dc4736431.jpg (page: https://bronctattooaus.com/inspiration/baobab-tree-tattoo | Africa & baobab finished | Africa roots  - page does not name the entity (takeaways))",
-    "created_at": "2026-11-26T06:06:46.361791+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://d1kq2dqeox7x40.cloudfront.net/images/posts/20191223_QqzRWJpFpGYJr9K.png (page: https://www.pinterest.com/pin/135811744987557859/ | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
-    "created_at": "2026-11-26T06:06:46.360407+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.pinimg.com/736x/50/93/72/509372f30b8ff9d14e01da443bfc2917.jpg (page: https://orangetattooshop.com/styles/baobab-tree-tattoo | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
-    "created_at": "2026-11-26T06:06:46.358774+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2715/4231023911_08f087a135_b.jpg",
-    "created_at": "2026-11-26T06:06:46.357153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4009/4231022007_c1b25be1a6_b.jpg",
-    "created_at": "2026-11-26T06:06:46.264217+00:00",
     "card": ""
   }
 ]
