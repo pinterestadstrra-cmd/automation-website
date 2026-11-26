@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T07:57:25.158470+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', \"Duran Duran's Andy Taylor dies\", 'FCC approves SpaceX Starmind satellites', 'Describe a film without its name']",
+    "created_at": "2026-11-26T07:57:25.086929+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T07:57:24.916871+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T07:57:24.915319+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T07:57:24.525961+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T07:57:21.613349+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T07:57:21.612325+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T07:57:21.611180+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #124 started (--only blogger)",
+    "created_at": "2026-11-26T07:57:21.609749+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T07:31:11.921072+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (vision NO): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312",
     "created_at": "2026-11-26T07:28:55.022498+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (The photo shows soldiers operating artillery in a combat zone, which is unrelated to Sudan's farmers threatened by war and drought.)",
-    "created_at": "2026-11-26T07:28:55.020663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens",
-    "created_at": "2026-11-26T07:28:51.632833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (. The photo shows soldiers in a combat zone, whereas the headline is about farmers and drought in Sudan.)",
-    "created_at": "2026-11-26T07:28:51.631087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg.",
-    "created_at": "2026-11-26T07:28:36.551297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (. The photo shows soldiers in winter gear on snowy terrain with tanks, likely in Eastern Europe, rather than anything related to Sudan, drought, or fa)",
-    "created_at": "2026-11-26T07:28:36.549425+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Thure_de_Thulstrup_-_L._Prang_and_Co._-_Bat (page: https://commons.wikimedia.org/wiki/File:Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg - page does not name the entity (War))",
-    "created_at": "2026-11-26T07:28:31.319703+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_ (page: https://commons.wikimedia.org/wiki/File:Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_Google_Ar - page does not name the entity (War))",
-    "created_at": "2026-11-26T07:28:31.318652+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kurz_%26_Allison_-_Assault_on_Fort_Sanders. (page: https://commons.wikimedia.org/wiki/File:Kurz_%26_Allison_-_Assault_on_Fort_Sanders.jpg | File:Kurz & - page does not name the entity (War))",
-    "created_at": "2026-11-26T07:28:31.317511+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Gaza_envelope_after_coordinated_surprise_of (page: https://commons.wikimedia.org/wiki/File:Gaza_envelope_after_coordinated_surprise_offensive_on_Israel - page does not name the entity (War))",
-    "created_at": "2026-11-26T07:28:31.316354+00:00",
     "card": ""
   }
 ]
