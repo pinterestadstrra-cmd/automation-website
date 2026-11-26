@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T15:34:54.914978+00:00",
-  "last_run": "2026-11-26T15:34:20.335080+00:00",
-  "runs": 136,
+  "generated_at": "2026-11-26T15:43:11.178404+00:00",
+  "last_run": "2026-11-26T15:38:56.287922+00:00",
+  "runs": 137,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 3,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 3,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T14:34:49.087071+00:00",
-    "mastodon.social": "2026-11-26T14:38:27.635538+00:00"
+    "Adsterra Blogger": "2026-11-26T15:41:51.891274+00:00",
+    "mastodon.social": "2026-11-26T15:43:11.021123+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 59,
+      "success": 60,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T14:34:49.087063+00:00"
+      "last_run": "2026-11-26T15:41:51.891271+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 7,
+      "fail": 8,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T14:38:27.635535+00:00"
+      "last_run": "2026-11-26T15:43:11.021121+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T14:34:49.087071+00:00",
-      "runs_today": 12,
-      "posts_today": 18,
+      "last_run": "2026-11-26T15:41:51.891274+00:00",
+      "runs_today": 13,
+      "posts_today": 19,
       "next_runs": [
-        "2026-11-26T21:49:49.087071+06:00",
-        "2026-11-26T22:04:49.087071+06:00",
-        "2026-11-26T22:19:49.087071+06:00",
-        "2026-11-26T22:34:49.087071+06:00",
-        "2026-11-26T22:49:49.087071+06:00"
+        "2026-11-26T21:56:51.891274+06:00",
+        "2026-11-26T22:11:51.891274+06:00",
+        "2026-11-26T22:26:51.891274+06:00",
+        "2026-11-26T22:41:51.891274+06:00",
+        "2026-11-26T22:56:51.891274+06:00"
       ],
       "next_post_times": [
         "2026-11-26T22:06:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-27T00:57:00+06:00",
         "2026-11-27T02:02:00+06:00"
       ],
-      "success": 59,
+      "success": 60,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T14:38:27.635538+00:00",
-      "runs_today": 12,
+      "last_run": "2026-11-26T15:43:11.021123+00:00",
+      "runs_today": 13,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T21:38:27.635538+06:00",
-        "2026-11-26T21:53:27.635538+06:00",
-        "2026-11-26T22:08:27.635538+06:00",
-        "2026-11-26T22:23:27.635538+06:00",
-        "2026-11-26T22:38:27.635538+06:00"
+        "2026-11-26T21:58:11.021123+06:00",
+        "2026-11-26T22:13:11.021123+06:00",
+        "2026-11-26T22:28:11.021123+06:00",
+        "2026-11-26T22:43:11.021123+06:00",
+        "2026-11-26T22:58:11.021123+06:00"
       ],
       "next_post_times": [
         "2026-11-26T22:04:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T02:04:00+06:00"
       ],
       "success": 16,
-      "fail": 7,
+      "fail": 8,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 13
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T15:34:20.336543+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T15:34:20.358433+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T15:38:56.289415+00:00"
     }
   ],
   "dry_run": false,
@@ -309,302 +321,302 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T15:34:54.699103+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T15:34:54.697515+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-26T15:34:54.374858+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T15:34:20.359575+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T15:34:20.358441+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T15:34:20.336551+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #136 started (--only blogger)",
-      "created_at": "2026-11-26T15:34:20.335105+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T14:38:27.724360+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Thanksgiving storm threatens travel', 'Nvidia chip exports to China', 'Grand Theft Auto VI', 'UK net migration falls to 77,000']",
-      "created_at": "2026-11-26T14:38:27.717887+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T14:38:27.635564+00:00",
+      "created_at": "2026-11-26T15:43:11.021156+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-26T14:38:27.634289+00:00",
+      "created_at": "2026-11-26T15:43:11.020100+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T14:38:27.632512+00:00",
+      "created_at": "2026-11-26T15:43:11.018561+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T14:38:17.630241+00:00",
+      "created_at": "2026-11-26T15:43:00.991167+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T15:43:00.461504+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T15:43:00.459304+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T14:38:12.343282+00:00",
+      "created_at": "2026-11-26T15:42:55.000732+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T14:38:12.340783+00:00",
+      "created_at": "2026-11-26T15:42:54.975265+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-26T14:37:12.896958+00:00",
-      "card": "mastodon.social"
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T15:42:54.690024+00:00",
+      "card": ""
     },
     {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-26T14:37:12.230275+00:00",
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T15:42:54.687799+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 16 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-26T14:37:12.229064+00:00",
+      "message": "photo candidate: 'Ukraine war latest: Kremlin responds after Trump and NATO wa' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-26T15:42:34.594319+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-26T14:37:12.227933+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T15:42:34.593226+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T14:37:12.226880+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: Kremlin responds after Trump and NATO wa': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+      "created_at": "2026-11-26T15:42:34.592093+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T14:37:12.225764+00:00",
+      "message": "vision: YES - photo matches 'Ukraine war latest: Kremlin responds after Trump a' (, the photo shows Ukrainian President Volodymyr Zelenskyy, who is the central figure associated with the Ukraine war mentioned in the headline.)",
+      "created_at": "2026-11-26T15:42:34.590618+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - The New York Times' (5 download(s) tried)",
-      "created_at": "2026-11-26T14:37:12.224622+00:00",
+      "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+      "created_at": "2026-11-26T15:42:30.020638+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://i.pinimg.com/736x/ff/88/65/ff8865c939fd0b6c1d6346437c35dc78.jpg (page: Anime Free Coloring Sheets: Fun Printable Crafts For Kids - page does not name the entity (Brazilian))",
-      "created_at": "2026-11-26T14:37:12.223504+00:00",
+      "message": "vision: NO - photo rejected for 'Ukraine war latest: Kremlin responds after Trump a' (The photo shows women in traditional Slavic dress in a forest, unrelated to the Ukraine war.)",
+      "created_at": "2026-11-26T15:42:30.019193+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3254/2618691826_3d39696d50_m.jpg",
-      "created_at": "2026-11-26T14:37:12.222019+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-26T15:42:14.045425+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1187/1322526082_63ba214c83_b.jpg",
-      "created_at": "2026-11-26T14:37:12.138929+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-26T15:42:13.882477+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2344/1736647915_5ec4e8e662.jpg",
-      "created_at": "2026-11-26T14:37:12.050104+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+      "created_at": "2026-11-26T15:42:13.731043+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3164/3015356590_9b3f39a572_b.jpg",
-      "created_at": "2026-11-26T14:37:11.967713+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5/7350847_db21e0abb9.jpg",
-      "created_at": "2026-11-26T14:37:11.882017+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Brazilian'",
-      "created_at": "2026-11-26T14:37:11.788076+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Brazilian'",
-      "created_at": "2026-11-26T14:37:11.511647+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Brazilian'",
-      "created_at": "2026-11-26T14:37:11.361187+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Brazilian'",
-      "created_at": "2026-11-26T14:37:11.341554+00:00",
+      "message": "openverse: 5 result(s) for 'Ukraine'",
+      "created_at": "2026-11-26T15:42:13.632739+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T14:37:10.663506+00:00",
+      "created_at": "2026-11-26T15:42:13.192408+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T14:37:10.662175+00:00",
+      "created_at": "2026-11-26T15:42:13.191453+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Brazilian Duped Into Fighting for Russia: ‘War Is ' - trying entity search 'Brazilian'",
-      "created_at": "2026-11-26T14:37:10.660811+00:00",
+      "message": "photo: topical search found nothing for 'Ukraine war latest: Kremlin responds after Trump a' - trying entity search 'Ukraine'",
+      "created_at": "2026-11-26T15:42:13.190495+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://d.travelerstoday.com/en/full/1725928/hotel-rooms.jpg (page: https://www.expedia.co.uk/Akita-Hotels-E-Hotel.h15364116.Hotel-Information | U.S. Hotel Forecast Jum - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:10.659450+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:13.189455+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://greenstreetnews.com/tachyon/2026/11/Generic-hotel-facade-scaled.jpg?resize=1200,630 (page: https://www.travelerstoday.com/articles/61391/20261123/us-hotel-forecast-jumps-again-what-record-dem - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:10.658268+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:13.188080+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://hotelprojectleads.com/wp-content/uploads/2023/08/hotel-1.jpg (page: https://greenstreetnews.com/article/new-hotel-shop-seeks-acquisiton-loan-for-its-debut-deal/ | The H - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:10.656995+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:13.088621+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://images.trvl-media.com/lodging/140000000/139180000/139171400/139171357/e384d1a8.jpg?impolicy= (page: https://hotelprojectleads.com/the-hotel-beyond-the-room-turning-existing-assets-into-guest-value/ |  - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:10.655258+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:13.087317+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Brazilian Duped Into Fighting Russia'",
-      "created_at": "2026-11-26T14:37:10.653215+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest Kremlin responds'",
+      "created_at": "2026-11-26T15:42:13.075585+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Brazilian Duped Into Fighting Russia'",
-      "created_at": "2026-11-26T14:37:10.543965+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war latest Kremlin responds'",
+      "created_at": "2026-11-26T15:42:12.889247+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Brazilian Duped Into Fighting Russia'",
-      "created_at": "2026-11-26T14:37:10.416886+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest Kremlin responds'",
+      "created_at": "2026-11-26T15:42:12.755733+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Brazilian Duped Into Fighting Russia'",
-      "created_at": "2026-11-26T14:37:10.397468+00:00",
+      "message": "openverse: 0 result(s) for 'Ukraine war latest Kremlin responds'",
+      "created_at": "2026-11-26T15:42:12.671105+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T14:37:09.800054+00:00",
+      "created_at": "2026-11-26T15:42:12.158951+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T14:37:09.798953+00:00",
+      "created_at": "2026-11-26T15:42:12.157914+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://plazadearmasqro.com.mx/core/plazada/assets/images/2025/11/25/familia-valentc3adn-elizalde-af (page: https://www.tvynovelas.com/especiales/valentin-elizalde-hijas-gallitas-cantantes-museo | Se cumplen  - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:09.797914+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://keywestattractions.org/wp-content/uploads/2022/11/Schooner-Wharf-Lighted-Boat-Parade.jpg (page: Schooner Wharf Lighted Boat Parade – Key West Attractions Association - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:12.156730+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://www.eluniversal.com.mx/resizer/v2/5P3GTI4Y4ZGOLJW2UZIV43ZNKE.jpg?auth=7fb78c6435bae94d84d9be (page: https://plazadearmasqro.com.mx/viral/2025/nov/25/se-cumplen-19-anos-del-asesinato-de-valentin-elizal - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:09.796654+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:12.128369+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://cdn.revistafama.com/uploads/media/2024/11/19/hija-valentin-elizalde-envia-desgarrador.jpg (page: https://www.eluniversal.com.mx/espectaculos/hija-de-valentin-elizalde-recuerda-como-vivio-la-muerte- - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:09.795200+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:12.002713+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://mx-bits.com/assets/uploads/hijas.jpg (page: https://www.revistafama.com/celebridades/hija-valentin-elizalde-envia-mensaje-18-anos-muerte-padre | - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T14:37:09.794044+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:11.863240+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’'",
-      "created_at": "2026-11-26T14:37:09.791848+00:00",
+      "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:11.778618+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T15:42:11.256882+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T15:42:11.255951+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://i.dailymail.co.uk/1s/2025/04/17/17/97396947-14622937-Gillis_pictured_with_girlfriend_Grace_B (page: https://www.red94.net/news/63280-shane-gillis-splits-from-girlfriend-grace-brassel-after-11-month-re - only 1 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:11.254990+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://statico.soapcentral.com/editor/2025/07/49410-17527409467758-1920.jpg (page: https://marriedceleb.com/grace-brassel | Who is Shane Gillis' girlfriend Grace Brassel? Age and all  - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:11.253867+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-768x519.jpeg (page: https://www.soapcentral.com/entertainment/who-shane-gillis-girlfriend-grace-brassel-age-2025-espy-ho - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:11.252835+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-Bio-768x524.jpeg (page: https://socialstarage.com/grace-brassel/ | Grace Brassel – Age, Bio, Height, Weight, Boyfriend, Net  - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T15:42:11.251586+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:11.249337+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:11.112847+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:10.971318+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+      "created_at": "2026-11-26T15:42:10.887457+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T15:42:10.290213+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T15:42:10.289141+00:00",
       "card": ""
     }
   ]

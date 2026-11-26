@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-26T15:34:54.917649+00:00",
+    "created_at": "2026-11-26T15:43:11.181163+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Kushner praises Putin's restraint\", 'Aaron Rodgers reportedly out', 'UK net migration falls to 77,000', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-26T15:34:54.911824+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T15:34:54.699103+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T15:34:54.697515+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T15:34:54.374858+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T15:34:20.359575+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T15:34:20.358441+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T15:34:20.336551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #136 started (--only blogger)",
-    "created_at": "2026-11-26T15:34:20.335105+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T14:38:27.724360+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Thanksgiving storm threatens travel', 'Nvidia chip exports to China', 'Grand Theft Auto VI', 'UK net migration falls to 77,000']",
-    "created_at": "2026-11-26T14:38:27.717887+00:00",
+    "created_at": "2026-11-26T15:43:11.175324+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-26T14:38:27.635564+00:00",
+    "created_at": "2026-11-26T15:43:11.021156+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-26T14:38:27.634289+00:00",
+    "created_at": "2026-11-26T15:43:11.020100+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-26T14:38:27.632512+00:00",
+    "created_at": "2026-11-26T15:43:11.018561+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T14:38:17.630241+00:00",
+    "created_at": "2026-11-26T15:43:00.991167+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T15:43:00.461504+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T15:43:00.459304+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-26T14:38:12.343282+00:00",
+    "created_at": "2026-11-26T15:42:55.000732+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T14:38:12.340783+00:00",
+    "created_at": "2026-11-26T15:42:54.975265+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T14:37:12.896958+00:00",
-    "card": "mastodon.social"
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T15:42:54.690024+00:00",
+    "card": ""
   },
   {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T14:37:12.230275+00:00",
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T15:42:54.687799+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 16 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T14:37:12.229064+00:00",
+    "message": "photo candidate: 'Ukraine war latest: Kremlin responds after Trump and NATO wa' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-26T15:42:34.594319+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-    "created_at": "2026-11-26T14:37:12.227933+00:00",
+    "message": "promo category: war news",
+    "created_at": "2026-11-26T15:42:34.593226+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 6/6 tried: 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T14:37:12.226880+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: Kremlin responds after Trump and NATO wa': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+    "created_at": "2026-11-26T15:42:34.592093+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T14:37:12.225764+00:00",
+    "message": "vision: YES - photo matches 'Ukraine war latest: Kremlin responds after Trump a' (, the photo shows Ukrainian President Volodymyr Zelenskyy, who is the central figure associated with the Ukraine war mentioned in the headline.)",
+    "created_at": "2026-11-26T15:42:34.590618+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - The New York Times' (5 download(s) tried)",
-    "created_at": "2026-11-26T14:37:12.224622+00:00",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+    "created_at": "2026-11-26T15:42:30.020638+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://i.pinimg.com/736x/ff/88/65/ff8865c939fd0b6c1d6346437c35dc78.jpg (page: Anime Free Coloring Sheets: Fun Printable Crafts For Kids - page does not name the entity (Brazilian))",
-    "created_at": "2026-11-26T14:37:12.223504+00:00",
+    "message": "vision: NO - photo rejected for 'Ukraine war latest: Kremlin responds after Trump a' (The photo shows women in traditional Slavic dress in a forest, unrelated to the Ukraine war.)",
+    "created_at": "2026-11-26T15:42:30.019193+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3254/2618691826_3d39696d50_m.jpg",
-    "created_at": "2026-11-26T14:37:12.222019+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-26T15:42:14.045425+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1187/1322526082_63ba214c83_b.jpg",
-    "created_at": "2026-11-26T14:37:12.138929+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-26T15:42:13.882477+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2344/1736647915_5ec4e8e662.jpg",
-    "created_at": "2026-11-26T14:37:12.050104+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-26T15:42:13.731043+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3164/3015356590_9b3f39a572_b.jpg",
-    "created_at": "2026-11-26T14:37:11.967713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5/7350847_db21e0abb9.jpg",
-    "created_at": "2026-11-26T14:37:11.882017+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Brazilian'",
-    "created_at": "2026-11-26T14:37:11.788076+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Brazilian'",
-    "created_at": "2026-11-26T14:37:11.511647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Brazilian'",
-    "created_at": "2026-11-26T14:37:11.361187+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Brazilian'",
-    "created_at": "2026-11-26T14:37:11.341554+00:00",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-26T15:42:13.632739+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:10.663506+00:00",
+    "created_at": "2026-11-26T15:42:13.192408+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:10.662175+00:00",
+    "created_at": "2026-11-26T15:42:13.191453+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Brazilian Duped Into Fighting for Russia: ‘War Is ' - trying entity search 'Brazilian'",
-    "created_at": "2026-11-26T14:37:10.660811+00:00",
+    "message": "photo: topical search found nothing for 'Ukraine war latest: Kremlin responds after Trump a' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-26T15:42:13.190495+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://d.travelerstoday.com/en/full/1725928/hotel-rooms.jpg (page: https://www.expedia.co.uk/Akita-Hotels-E-Hotel.h15364116.Hotel-Information | U.S. Hotel Forecast Jum - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:10.659450+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:13.189455+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://greenstreetnews.com/tachyon/2026/11/Generic-hotel-facade-scaled.jpg?resize=1200,630 (page: https://www.travelerstoday.com/articles/61391/20261123/us-hotel-forecast-jumps-again-what-record-dem - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:10.658268+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:13.188080+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://hotelprojectleads.com/wp-content/uploads/2023/08/hotel-1.jpg (page: https://greenstreetnews.com/article/new-hotel-shop-seeks-acquisiton-loan-for-its-debut-deal/ | The H - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:10.656995+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:13.088621+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://images.trvl-media.com/lodging/140000000/139180000/139171400/139171357/e384d1a8.jpg?impolicy= (page: https://hotelprojectleads.com/the-hotel-beyond-the-room-turning-existing-assets-into-guest-value/ |  - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:10.655258+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:13.087317+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Brazilian Duped Into Fighting Russia'",
-    "created_at": "2026-11-26T14:37:10.653215+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest Kremlin responds'",
+    "created_at": "2026-11-26T15:42:13.075585+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Brazilian Duped Into Fighting Russia'",
-    "created_at": "2026-11-26T14:37:10.543965+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest Kremlin responds'",
+    "created_at": "2026-11-26T15:42:12.889247+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Brazilian Duped Into Fighting Russia'",
-    "created_at": "2026-11-26T14:37:10.416886+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest Kremlin responds'",
+    "created_at": "2026-11-26T15:42:12.755733+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Brazilian Duped Into Fighting Russia'",
-    "created_at": "2026-11-26T14:37:10.397468+00:00",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest Kremlin responds'",
+    "created_at": "2026-11-26T15:42:12.671105+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:09.800054+00:00",
+    "created_at": "2026-11-26T15:42:12.158951+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:09.798953+00:00",
+    "created_at": "2026-11-26T15:42:12.157914+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://plazadearmasqro.com.mx/core/plazada/assets/images/2025/11/25/familia-valentc3adn-elizalde-af (page: https://www.tvynovelas.com/especiales/valentin-elizalde-hijas-gallitas-cantantes-museo | Se cumplen  - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.797914+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://keywestattractions.org/wp-content/uploads/2022/11/Schooner-Wharf-Lighted-Boat-Parade.jpg (page: Schooner Wharf Lighted Boat Parade – Key West Attractions Association - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:12.156730+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://www.eluniversal.com.mx/resizer/v2/5P3GTI4Y4ZGOLJW2UZIV43ZNKE.jpg?auth=7fb78c6435bae94d84d9be (page: https://plazadearmasqro.com.mx/viral/2025/nov/25/se-cumplen-19-anos-del-asesinato-de-valentin-elizal - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.796654+00:00",
+    "message": "bing-images: 1 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:12.128369+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://cdn.revistafama.com/uploads/media/2024/11/19/hija-valentin-elizalde-envia-desgarrador.jpg (page: https://www.eluniversal.com.mx/espectaculos/hija-de-valentin-elizalde-recuerda-como-vivio-la-muerte- - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.795200+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:12.002713+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://mx-bits.com/assets/uploads/hijas.jpg (page: https://www.revistafama.com/celebridades/hija-valentin-elizalde-envia-mensaje-18-anos-muerte-padre | - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.794044+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:11.863240+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’'",
-    "created_at": "2026-11-26T14:37:09.791848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’'",
-    "created_at": "2026-11-26T14:37:09.649810+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’'",
-    "created_at": "2026-11-26T14:37:09.502258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’'",
-    "created_at": "2026-11-26T14:37:09.480138+00:00",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:11.778618+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:09.086868+00:00",
+    "created_at": "2026-11-26T15:42:11.256882+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:09.085747+00:00",
+    "created_at": "2026-11-26T15:42:11.255951+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://images.justwatch.com/poster/354977274/s332/temporada-2.jpg (page: https://www.mtggoldfish.com/price/foundations/493/elspeths-smite | Elsbeth - Ver la serie online com - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.084663+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://i.dailymail.co.uk/1s/2025/04/17/17/97396947-14622937-Gillis_pictured_with_girlfriend_Grace_B (page: https://www.red94.net/news/63280-shane-gillis-splits-from-girlfriend-grace-brassel-after-11-month-re - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:11.254990+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b48bed5e-a8d5-456f-bdbe-edb2268d75eb/dge06 (page: https://www.justwatch.com/es/serie/elsbeth | Gawayn-Fanclub DeviantArt Gallery - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.083274+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://statico.soapcentral.com/editor/2025/07/49410-17527409467758-1920.jpg (page: https://marriedceleb.com/grace-brassel | Who is Shane Gillis' girlfriend Grace Brassel? Age and all  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:11.253867+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://cdn.clicker.com/images/tv/73405/poster-180x270.jpg (page: https://www.deviantart.com/gawayn-fanclub/gallery/ | Elsbeth - Where To Watch TV Show - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.081917+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-768x519.jpeg (page: https://www.soapcentral.com/entertainment/who-shane-gillis-girlfriend-grace-brassel-age-2025-espy-ho - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:11.252835+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Brazilian Duped Into Fighting for Russia: ‘War Is '): https://images.justwatch.com/poster/355198780/s332/.jpg (page: https://www.clicker.com/tv/elsbeth/ | Elsbeth - watch tv series streaming online - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:09.080570+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-Bio-768x524.jpeg (page: https://socialstarage.com/grace-brassel/ | Grace Brassel – Age, Bio, Height, Weight, Boyfriend, Net  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:11.251586+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th'",
-    "created_at": "2026-11-26T14:37:09.077928+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:11.249337+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th'",
-    "created_at": "2026-11-26T14:37:08.913120+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:11.112847+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th'",
-    "created_at": "2026-11-26T14:37:08.764024+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:10.971318+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th'",
-    "created_at": "2026-11-26T14:37:08.743012+00:00",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
+    "created_at": "2026-11-26T15:42:10.887457+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:08.185569+00:00",
+    "created_at": "2026-11-26T15:42:10.290213+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:08.184499+00:00",
+    "created_at": "2026-11-26T15:42:10.289141+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Brazilian Duped Into Fighting for Russia: ‘War Is Hell’ - Th' - rejected (no og:image)",
-    "created_at": "2026-11-26T14:37:08.183315+00:00",
+    "message": "photo candidate: 'Ukraine war latest: Kremlin responds after Trump and NATO wa' - rejected (no og:image)",
+    "created_at": "2026-11-26T15:42:10.287699+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTUtzUk9TS1EtOENIeS1WOUVKS21xTTA5MFNRa1lmTmtHbnN3cDloV0JLbklJeGlnNDl) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T14:37:08.180934+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxQZXFfdnlza0JfdVgyQS13Rml1WXR6dFpLVUxoUk11VHRhOTVmRzhOMlpfUXJ6WHpxNjZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T15:42:10.204847+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 5/6 tried: 'Can Trump continue with Iran war despite funding restriction' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T14:37:07.775208+00:00",
+    "message": "promo: story 2/6 tried: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T15:42:09.938338+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Can Trump continue with Iran war despite funding restriction' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T14:37:07.774111+00:00",
+    "message": "photo candidate: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T15:42:09.937381+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Can Trump continue with Iran war despite funding restrictions? - Al Jazeera' (9 download(s) tried)",
-    "created_at": "2026-11-26T14:37:07.772922+00:00",
+    "message": "photo: no real photo found for 'Iran war updates: Tehran says US drone downed near Hormuz - Al Jazeera' (5 download(s) tried)",
+    "created_at": "2026-11-26T15:42:09.936432+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:07.771837+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://thumbs.dreamstime.com/b/dhole-cuon-alpinus-pack-wild-asian-dogs-relaxes-successful-hunt-rust (page: https://www.vecteezy.com/photo/55167644-pack-of-dholes-chasing-prey-through-open-forest-their-lithe- - page does not name the entity (Iran))",
+    "created_at": "2026-11-26T15:42:09.935393+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:07.770389+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://www.activewild.com/wp-content/uploads/2020/03/dhole-pack.jpg (page: https://www.dreamstime.com/dhole-cuon-alpinus-pack-wild-asian-dogs-relaxes-successful-hunt-rusty-ind - page does not name the entity (Iran))",
+    "created_at": "2026-11-26T15:42:09.934355+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:07.647954+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://thumbs.dreamstime.com/b/striking-formation-pack-dholes-stands-together-their-reddish-fur-shi (page: https://www.activewild.com/dhole/ | In a Striking Formation, a Pack of Dholes Stands Together, Their - page does not name the entity (Iran))",
+    "created_at": "2026-11-26T15:42:09.933265+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:07.646426+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://c8.alamy.com/comp/BJ09G4/a-pack-of-dholes-or-indian-wild-dogs-in-kanha-national-park-BJ09G4. (page: https://www.dreamstime.com/striking-formation-pack-dholes-stands-together-their-reddish-fur-shimmeri - page does not name the entity (Iran))",
+    "created_at": "2026-11-26T15:42:09.932203+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:07.586293+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3164/3063189829_17b63b86da_b.jpg",
+    "created_at": "2026-11-26T15:42:09.930706+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:07.584893+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1701/26028309594_b402f61d29_b.jpg",
+    "created_at": "2026-11-26T15:42:09.811546+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:07.173598+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg",
+    "created_at": "2026-11-26T15:42:09.706156+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:07.170349+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
+    "created_at": "2026-11-26T15:42:09.497790+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5581/14235998518_fc8fd1a27d_b.jpg",
-    "created_at": "2026-11-26T14:37:07.117297+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
+    "created_at": "2026-11-26T15:42:09.387798+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/8789/17215465351_cc1e377890_b.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:07.038851+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T15:42:09.267952+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:07.037447+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T15:42:09.084498+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T14:37:07.021013+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Iran'",
+    "created_at": "2026-11-26T15:42:08.895625+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3906/14422616255_e43468d43d_b.jpg",
-    "created_at": "2026-11-26T14:37:06.939458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg",
-    "created_at": "2026-11-26T14:37:06.861622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:06.778146+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:06.676283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump'",
-    "created_at": "2026-11-26T14:37:06.525609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:06.505644+00:00",
+    "message": "openverse: 5 result(s) for 'Iran'",
+    "created_at": "2026-11-26T15:42:08.746243+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:06.476336+00:00",
+    "created_at": "2026-11-26T15:42:07.998627+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:06.475216+00:00",
+    "created_at": "2026-11-26T15:42:07.997643+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Can Trump continue with Iran war despite funding r' - trying entity search 'Trump'",
-    "created_at": "2026-11-26T14:37:06.474048+00:00",
+    "message": "photo: topical search found nothing for 'Iran war updates: Tehran says US drone downed near' - trying entity search 'Iran'",
+    "created_at": "2026-11-26T15:42:07.996672+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:06.472696+00:00",
+    "message": "bing-images: 0 candidate(s) for 'Iran war updates Tehran says'",
+    "created_at": "2026-11-26T15:42:07.994509+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat (page: https://www.motherjones.com/politics/2026/11/on-the-eve-of-the-midterms-trumps-closing-argument-is-a - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:06.471397+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iran war updates Tehran says'",
+    "created_at": "2026-11-26T15:42:07.770694+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.ntd.com/trump-says-us-has-concluded-very-big-trade-deal-with-philippines_1186017.html |  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:06.470086+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Iran war updates Tehran says'",
+    "created_at": "2026-11-26T15:42:07.611477+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a (page: https://nationalsecurityjournal.org/something-strange-is-happening-to-trump-the-democrat-who-prosecu - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:06.468894+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump continue Iran war despite'",
-    "created_at": "2026-11-26T14:37:06.466772+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump continue Iran war despite'",
-    "created_at": "2026-11-26T14:37:06.347836+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump continue Iran war despite'",
-    "created_at": "2026-11-26T14:37:06.214132+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump continue Iran war despite'",
-    "created_at": "2026-11-26T14:37:06.193982+00:00",
+    "message": "openverse: 0 result(s) for 'Iran war updates Tehran says'",
+    "created_at": "2026-11-26T15:42:07.508296+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:05.756838+00:00",
+    "created_at": "2026-11-26T15:42:07.109614+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:05.755699+00:00",
+    "created_at": "2026-11-26T15:42:07.108103+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://media.istockphoto.com/id/1557806628/photo/soda-can-aluminum-can-beer-can.jpg?s=612x612&w=0&k (page: https://www.alamy.com/stock-photo/beer-tin-can.html | 53,300+ Drink Can Stock Photos, Pictures & Roy - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.754172+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://i.pinimg.com/originals/16/9e/aa/169eaa03ef0f1b6a32bc76cd93cbc9c8.jpg (page: https://exynxfjvv.blob.core.windows.net/what-techniques-are-used-in-art.html | 15 Acrylic Painting T - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:07.106908+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://design4users.com/wp-content/uploads/2021/01/can-design-graphics.jpg (page: https://www.istockphoto.com/photos/Drink-Can | 20+ Catchy and Original Concepts of Drink Can Design  - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.752955+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://i.ytimg.com/vi/cDzcoyeaRKI/maxresdefault.jpg (page: https://www.pinterest.com/pin/795870565406453581/ | Best Painting Techniques: Elevate Your Art with  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:07.105639+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://p.turbosquid.com/ts-thumb/zH/gJhOcA/b3/single_high_can/jpg/1699206934/1920x1080/fit_q87/2a2e (page: https://design4users.com/drink-can-design/ | 3D Tin Can - TurboSquid 2148765 - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.751766+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://i.pinimg.com/originals/cb/31/53/cb315307ea90e9a6035938dc89ff5db8.jpg (page: https://paintingproguide.com/best-painting-techniques/ | Art Technique Examples : Art Techniques – J - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:07.104316+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://png.pngtree.com/png-clipart/20231007/original/pngtree-metal-tin-can-realistic-3d-drink-icon- (page: https://www.turbosquid.com/3d-models/3d-tin-can-2148765 | Tin Can Etymology at Paige Brown blog - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.750641+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://i.pinimg.com/originals/2a/6a/16/2a6a16cfe330a73c24cdfe55bec098bf.jpg (page: https://yorubareligion.org/art-technique-examples-art-techniques/ | Painting Methods And Techniques  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:07.101883+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:05.748637+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Iran war updates: Tehran says US drone downed near Hormuz'",
+    "created_at": "2026-11-26T15:42:07.093270+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:05.650731+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iran war updates: Tehran says US drone downed near Hormuz'",
+    "created_at": "2026-11-26T15:42:06.934628+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:05.508548+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Iran war updates: Tehran says US drone downed near Hormuz'",
+    "created_at": "2026-11-26T15:42:06.791234+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:05.488337+00:00",
+    "message": "openverse: 0 result(s) for 'Iran war updates: Tehran says US drone downed near Hormuz'",
+    "created_at": "2026-11-26T15:42:06.707750+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:05.027238+00:00",
+    "created_at": "2026-11-26T15:42:06.147642+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:05.026084+00:00",
+    "created_at": "2026-11-26T15:42:06.146482+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://media.istockphoto.com/id/1557806628/photo/soda-can-aluminum-can-beer-can.jpg?s=612x612&w=0&k (page: https://www.alamy.com/stock-photo/beer-tin-can.html | 53,300+ Drink Can Stock Photos, Pictures & Roy - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.024802+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://m.media-amazon.com/images/I/81Lh52cZlWL._AC_SL1500_.jpg (page: https://www.reddit.com/r/AcerOfficial/comments/17omtqw/new_acer_swift_3_battery_life/ | Acer Swift 3 - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:06.145331+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://design4users.com/wp-content/uploads/2021/01/can-design-graphics.jpg (page: https://www.istockphoto.com/photos/Drink-Can | 20+ Catchy and Original Concepts of Drink Can Design  - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.023504+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://cdn.arstechnica.net/wp-content/uploads/2019/10/Acer-Swift-3-benchmarks.013-1536x1152.jpeg (page: https://manuals.plus/asin/B08C5DJCXX | Acer Swift 3 review: Better as a budget device than as a mid- - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:06.144314+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://p.turbosquid.com/ts-thumb/zH/gJhOcA/b3/single_high_can/jpg/1699206934/1920x1080/fit_q87/2a2e (page: https://design4users.com/drink-can-design/ | 3D Tin Can - TurboSquid 2148765 - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.022243+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://us.v-cdn.net/6029997/uploads/728CRO2M73VF/batterylifeacer.png (page: https://arstechnica.com/gadgets/2019/10/acer-swift-3-review-better-as-a-budget-device-than-as-a-mid- - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:06.143303+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can Trump continue with Iran war despite funding r'): https://png.pngtree.com/png-clipart/20231007/original/pngtree-metal-tin-can-realistic-3d-drink-icon- (page: https://www.turbosquid.com/3d-models/3d-tin-can-2148765 | Tin Can Etymology at Paige Brown blog - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:05.021085+00:00",
+    "message": "photo: rejected (irrelevant to 'Iran war updates: Tehran says US drone downed near'): https://images.expertreviews.co.uk/wp-content/uploads/2023/02/acer_swift_3_sf314-71_review_-_battery (page: https://community.acer.com/en/discussion/707126/battery-calibration-reset-with-my-acer-swift-3-model - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T15:42:06.142225+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:05.018994+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Iran war updates: Tehran says US drone downed near Hormuz - '",
+    "created_at": "2026-11-26T15:42:06.140039+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:04.892465+00:00",
+    "message": "google-images: 0 candidate(s) for 'Iran war updates: Tehran says US drone downed near Hormuz - '",
+    "created_at": "2026-11-26T15:42:06.015552+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:04.762509+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Iran war updates: Tehran says US drone downed near Hormuz - '",
+    "created_at": "2026-11-26T15:42:05.829824+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Can Trump continue with Iran war despite funding restriction'",
-    "created_at": "2026-11-26T14:37:04.742319+00:00",
+    "message": "openverse: 0 result(s) for 'Iran war updates: Tehran says US drone downed near Hormuz - '",
+    "created_at": "2026-11-26T15:42:05.744993+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:04.286709+00:00",
+    "created_at": "2026-11-26T15:42:05.180187+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:04.285495+00:00",
+    "created_at": "2026-11-26T15:42:05.179017+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Can Trump continue with Iran war despite funding restriction' - rejected (no og:image)",
-    "created_at": "2026-11-26T14:37:04.284233+00:00",
+    "message": "photo candidate: 'Iran war updates: Tehran says US drone downed near Hormuz - ' - rejected (no og:image)",
+    "created_at": "2026-11-26T15:42:05.162991+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipgFBVV95cUxPU3RqQ0dlWHRjbm5jSTd1SjV0YU9vUlhIX1JCUTh6ZFh6RWVHSFY4V2ZWWWNjMG9DVEd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T14:37:04.281813+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbWR0bkU2OVhEblItVlJfdGlxNUZlQnBvWVVWNHJjSnJPMnRUME5MVXY5YzdhNExQUlZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T15:42:05.132241+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: 'Russia's own figures show it has lost nearly 500,000 people ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T15:42:04.814219+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T15:42:04.813283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Russia's own figures show it has lost nearly 500,000 people in Ukraine war - BBC' (5 download(s) tried)",
+    "created_at": "2026-11-26T15:42:04.812398+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://i.etsystatic.com/53143995/r/il/91e9ad/6418991643/il_1080xN.6418991643_j5bb.jpg (page: https://www.etsy.com/listing/1800033767/12-pages-church-thanksgiving-service | 8 Pages Church Thanks - page does not name the entity (Russia))",
+    "created_at": "2026-11-26T15:42:04.811524+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://cdn11.bigcommerce.com/s-bnu69r06r2/images/stencil/590x590/products/4059/7542/U1719-media-01_ (page: https://www.etsy.com/listing/1814079669/8-pages-church-thanksgiving-sunday | Church Bulletins | Wors - page does not name the entity (Russia))",
+    "created_at": "2026-11-26T15:42:04.810547+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://cdn11.bigcommerce.com/s-bnu69r06r2/images/stencil/1000x1000/products/16707/24875/U4351-media (page: https://www.concordiasupply.com/Church-Bulletins - page does not name the entity (Russia))",
+    "created_at": "2026-11-26T15:42:04.809417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://elbethelchurch.net/wp-content/uploads/2017/11/Community-Wide-Thanksgiving-Service-bulletin-1 (page: https://www.concordiasupply.com/church-bulletin-11-thanksgiving-u4351 | Community Wide Thanksgiving  - page does not name the entity (Russia))",
+    "created_at": "2026-11-26T15:42:04.808383+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/84/256988870_2d5679b0d9_b.jpg",
+    "created_at": "2026-11-26T15:42:04.806962+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg",
+    "created_at": "2026-11-26T15:42:04.690907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51932070805_edb66814eb_b.jpg",
+    "created_at": "2026-11-26T15:42:04.581253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg",
+    "created_at": "2026-11-26T15:42:04.459877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/5589/15147968852_3f9aa97d20_b.jpg",
+    "created_at": "2026-11-26T15:42:04.343053+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia's own figures show it has lost nearly 500,0' (. The image depicts a church landscape in winter, which is unrelated to the casualties of the war in Ukraine mentioned in the headline.)",
+    "created_at": "2026-11-26T15:42:04.332842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia'",
+    "created_at": "2026-11-26T15:41:56.079699+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia'",
+    "created_at": "2026-11-26T15:41:55.934776+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Russia'",
+    "created_at": "2026-11-26T15:41:55.799492+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Russia'",
+    "created_at": "2026-11-26T15:41:55.714575+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:55.656062+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:55.655142+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Russia's own figures show it has lost nearly 500,0' - trying entity search 'Russia'",
+    "created_at": "2026-11-26T15:41:55.654256+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.carvewallpaper.com/cdn/shop/files/watercolor-butterfly-floral-wallpaper-mural-romantic-b (page: https://wallpaper.mob.org/pc/image/earth-poppy-277780.html | Flower Wallpaper Murals – Stunning Bota - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.653185+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.carvewallpaper.com/cdn/shop/files/peony-butterfly-flower-wallpaper-mural-pink-purple-gra (page: https://www.carvewallpaper.com/collections/floral-wallpaper-murals-designs | Rose and Peony Wallpape - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.652207+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://wallpaper.forfun.com/fetch/a4/a4e0b2bba1e85e8df322802800f8a6d3.jpeg?w=1200&r=0.5625&f=webp (page: https://unsplash.com/s/photos/flowers-4k-wallpaper-for-laptop | Desktop wallpaper: Earth, Tulip, Flo - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.651236+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://likeapic.com/files/9822/tropical-flowers-and-monstera-leaves_8360x4705_likeapic.com.jpg (page: https://wallpaper.mob.org/pc/image/earth-tulip-flower-pink_flower-471164.html | Tropical Flowers and - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.650230+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/The_industries_of_Russia_%281893%29_wheat_p (page: https://commons.wikimedia.org/wiki/File:The_industries_of_Russia_(1893)_wheat_production.jpg | File: - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.648983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/The_industries_of_Russia_%281893%29_spring_ (page: https://commons.wikimedia.org/wiki/File:The_industries_of_Russia_(1893)_spring_wheat_yield.jpg | Fil - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.647934+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/The_industries_of_Russia_%281893%29_rye_yie (page: https://commons.wikimedia.org/wiki/File:The_industries_of_Russia_(1893)_rye_yield.jpg | File:The ind - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.646833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/The_industries_of_Russia_%281893%29_rye_pro (page: https://commons.wikimedia.org/wiki/File:The_industries_of_Russia_(1893)_rye_production.jpg | File:Th - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.645614+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/The_industries_of_Russia_%281893%29_oats_pr (page: https://commons.wikimedia.org/wiki/File:The_industries_of_Russia_(1893)_oats_production.jpg | File:T - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:55.644559+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia s own figures show'",
+    "created_at": "2026-11-26T15:41:55.642339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia s own figures show'",
+    "created_at": "2026-11-26T15:41:55.473437+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Russia s own figures show'",
+    "created_at": "2026-11-26T15:41:55.323142+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia s own figures show'",
+    "created_at": "2026-11-26T15:41:54.803574+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:54.538052+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:54.536999+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.boredpanda.com/blog/wp-content/uploads/2023/12/the-odd-cat-sanctuary-memes-fb-656c41a346 (page: https://www.boredpanda.com/cat-memes-catsweek/ | 50 Funny And Relatable Cat Memes That Might Make Yo - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:54.536024+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://wallpapers.com/images/file/funny-cat-memes-pictures-d8lv0mys8gq9qnwd.jpg (page: https://www.boredpanda.com/the-odd-cat-sanctuary-memes/ | Download Funny Cat Memes Pictures | Wallpa - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:54.534911+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://img.buzzfeed.com/buzzfeed-static/static/2023-04/4/1/asset/59fe9b1748b2/sub-buzz-788-16805719 (page: https://wallpapers.com/picture/funny-cat-memes-pictures-d8lv0mys8gq9qnwd.html | 66 Funny Cat Memes T - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:54.533828+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-FT.jpg (page: https://www.buzzfeed.com/laurafrustaci/cat-memes | Cat Memes That Are so Hilarious You'll Laugh at T - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:54.532726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:54.530393+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:54.415570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:54.268027+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:54.182929+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:53.704501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:53.703379+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://pjsandpaint.com/wp-content/uploads/2019/11/thanksgiving-scattergories.jpg (page: https://www.etsy.com/listing/871053418/thanksgiving-party-game-printable | Thanksgiving Scattergorie - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:53.701842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://foxfarmhome.com/wp-content/uploads/2023/06/Thanksgiving-Scattergories-1-791x1024.png (page: https://pjsandpaint.com/printables/thanksgiving-scattergories-free-printable-game/ | Thanksgiving Sc - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:53.700563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://i.pinimg.com/736x/59/c5/90/59c590c66c73fd557a67620fb5d67c64.jpg (page: https://foxfarmhome.com/thanksgiving-scattergories-game-with-free-printables/ | Thanksgiving Games T - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:53.696603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://i.etsystatic.com/31121058/r/il/b00541/6410590188/il_1080xN.6410590188_efla.jpg (page: https://www.pinterest.com/pin/thanksgiving-games-thanksgiving-scattergories-fall-scattergories-game- - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T15:41:53.695474+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:53.692974+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:53.468499+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:53.311721+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
+    "created_at": "2026-11-26T15:41:53.227126+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:52.654035+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T15:41:52.653030+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - rejected (no og:image)",
+    "created_at": "2026-11-26T15:41:52.651919+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE52ekxuU3VuendQQVpId1BlX21DeXpnMW9teFNfV1A3Nng0ODhEblNKSmRVd0dHcjFpY2x) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T15:41:52.649781+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
-    "created_at": "2026-11-26T14:37:03.936308+00:00",
+    "created_at": "2026-11-26T15:41:52.370770+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief push Russia to avoid any actions that woul' - skipped (same event used within 24h, event key 'action any avoid chief expand fox nato news push russia trum')",
-    "created_at": "2026-11-26T14:37:03.934625+00:00",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T15:41:51.895741+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T15:41:51.893988+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+    "created_at": "2026-11-26T15:41:51.891292+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T15:41:51.888613+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': promo posted - event 'allie attack back cbs escalate houthi inch iran live news oi' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T15:41:51.886808+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1200x675 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-26T15:41:49.479626+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 4/6 tried: 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T14:37:03.932851+00:00",
+    "message": "prepare_bsky_image: original 1200x675 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-26T15:41:49.478530+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T14:37:03.931638+00:00",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Live Updates: Oil prices inch back up as Iran and its Houthi'",
+    "created_at": "2026-11-26T15:41:49.476161+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T15:41:49.291258+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 3 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-26T15:41:49.289972+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T15:41:49.288426+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to seanfl50.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'From the UK, happy Thanksgiving!') as primonewstoday.bsky.social: 'Thanks! Hope you’re enjoying a cozy turkey feast across the pond. Cheers to good'",
+    "created_at": "2026-11-26T15:41:44.285661+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to galfrompa.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'Community!') as primonewstoday.bsky.social: 'Totally feel you—there’s something magical about sharing a turkey‑time vibe with'",
+    "created_at": "2026-11-26T15:41:41.176441+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to altermann99.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'Did this really happen? Hahah') as primonewstoday.bsky.social: 'Haha, I swear we saw turkey‑scented commuters and a rogue drumline! Thanksgiving'",
+    "created_at": "2026-11-26T15:41:38.318301+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T15:41:36.710972+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Beyond Red vs. Blue: The Political Typology - Pew Research C' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-26T15:41:36.708784+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Trump, NATO chief caution Russia as attacks on Ukraine’s energy infrastructure intensify - CNBC' (12 download(s) tried)",
-    "created_at": "2026-11-26T14:37:03.930327+00:00",
+    "message": "photo candidate: 'Beyond Red vs. Blue: The Political Typology - Pew Research C' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-26T15:41:20.470292+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:03.929147+00:00",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-26T15:41:20.468636+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:03.927726+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Beyond Red vs. Blue: The Political Typology - Pew Research C': https://upload.wikimedia.org/wikipedia/commons/4/4e/Beyond_Red_vs._Blue-_Millennial_Perspectives_on_ (from openverse, query 'Beyond Red vs Blue Political', page: https://commons.wikimedia.org/w/index.php?curid=109472014 | Beyond Red vs. Blue- Millennial Perspect - matches 3 key entities (beyond, blue, red))",
+    "created_at": "2026-11-26T15:41:20.466125+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:03.570198+00:00",
+    "message": "vision: YES - photo matches 'Beyond Red vs. Blue: The Political Typology - Pew ' (, the image depicts a panel discussion on political typology corresponding to the Pew Research Center headline.)",
+    "created_at": "2026-11-26T15:41:20.453608+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:03.568754+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5486/30534179601_39275c14f3_b.jpg",
+    "created_at": "2026-11-26T15:40:42.459761+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:03.321236+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5820/30534175901_6ae0aa3d3e_b.jpg",
+    "created_at": "2026-11-26T15:40:42.352614+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:03.319617+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Beyond Red vs Blue Political'",
+    "created_at": "2026-11-26T15:40:42.247192+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:02.700275+00:00",
+    "message": "google-images: 0 candidate(s) for 'Beyond Red vs Blue Political'",
+    "created_at": "2026-11-26T15:40:42.092725+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:02.698779+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Beyond Red vs Blue Political'",
+    "created_at": "2026-11-26T15:40:41.949196+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5581/14235998518_fc8fd1a27d_b.jpg",
-    "created_at": "2026-11-26T14:37:02.643397+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/8789/17215465351_cc1e377890_b.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:02.556839+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:02.555496+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T14:37:02.535836+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3906/14422616255_e43468d43d_b.jpg",
-    "created_at": "2026-11-26T14:37:02.456327+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg",
-    "created_at": "2026-11-26T14:37:02.373535+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:02.247508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:02.108473+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump'",
-    "created_at": "2026-11-26T14:37:01.969177+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-26T14:37:01.946637+00:00",
+    "message": "openverse: 3 result(s) for 'Beyond Red vs Blue Political'",
+    "created_at": "2026-11-26T15:40:41.864095+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:01.286748+00:00",
+    "created_at": "2026-11-26T15:40:41.294428+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:01.285713+00:00",
+    "created_at": "2026-11-26T15:40:41.293473+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Trump, NATO chief caution Russia as attacks on Ukr' - trying entity search 'Trump'",
-    "created_at": "2026-11-26T14:37:01.284529+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://www.nameguider.com/wp-content/uploads/2022/11/Gaming-Names-for-Girls.jpg (page: https://orah.co/gamer-tags/ | 840+ Ideas For Game Names And Suggestions | Name Guider - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:41.292561+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:01.283344+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://lordofnames.com/wp-content/uploads/2025/01/Gamertags-for-Girls-683x1024.jpg (page: https://arcade.josefsklinik.de/gamer-tags-names-400-funny-cool-and-best-gaming-names/ | 763 Cool Xbo - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:41.291525+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat (page: https://www.motherjones.com/politics/2026/11/on-the-eve-of-the-midterms-trumps-closing-argument-is-a - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:01.282043+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://www.wikihow.com/images/thumb/b/b2/Cool-Gamertags-Step-5.jpg/v4-460px-Cool-Gamertags-Step-5.j (page: https://namehassle.com/gaming-usernames/ | 70+ Cool Gamertags (and Generator) to Use for Your Profil - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:41.290487+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.ntd.com/trump-says-us-has-concluded-very-big-trade-deal-with-philippines_1186017.html |  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:01.280765+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://parade.com/.image/w_3840,q_auto:good,c_limit/ODowMDAwMDAwMDAxMDY1NTky/funny-gamertags-girls. (page: https://rueckenwind-sportservice.de/unique-and-cute-gamertag-ideas-to-stand-out/ | 265 Funny Gamerta - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:41.289448+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:01.279466+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Beyond Red vs. Blue: The Political Typology'",
+    "created_at": "2026-11-26T15:40:41.286738+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:01.277925+00:00",
+    "message": "google-images: 0 candidate(s) for 'Beyond Red vs. Blue: The Political Typology'",
+    "created_at": "2026-11-26T15:40:41.135188+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump NATO chief caution Russia'",
-    "created_at": "2026-11-26T14:37:01.194582+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Beyond Red vs. Blue: The Political Typology'",
+    "created_at": "2026-11-26T15:40:40.973417+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump NATO chief caution Russia'",
-    "created_at": "2026-11-26T14:37:01.060542+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump NATO chief caution Russia'",
-    "created_at": "2026-11-26T14:37:00.907400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump NATO chief caution Russia'",
-    "created_at": "2026-11-26T14:37:00.886108+00:00",
+    "message": "openverse: 0 result(s) for 'Beyond Red vs. Blue: The Political Typology'",
+    "created_at": "2026-11-26T15:40:40.889015+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:00.398174+00:00",
+    "created_at": "2026-11-26T15:40:40.324733+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:37:00.397129+00:00",
+    "created_at": "2026-11-26T15:40:40.323621+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:00.396053+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://dinoanimals.com/animals/domestic-cat/ | Adult Brown Tabby Cat · Free Stock Photo - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:40.322295+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat (page: https://www.motherjones.com/politics/2026/11/on-the-eve-of-the-midterms-trumps-closing-argument-is-a - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:00.394636+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Best Nature Luxury Interior Tips In Swi - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:40.320516+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.ntd.com/trump-says-us-has-concluded-very-big-trade-deal-with-philippines_1186017.html |  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:37:00.393333+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T14:37:00.392060+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T14:37:00.390511+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:37:00.338616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:36:59.972428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:36:59.826648+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:36:59.806220+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:36:59.092096+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:36:59.090841+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://www.motherjones.com/wp-content/uploads/2026/11/trump-rp-sized.jpg?resize=1300 (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:36:59.089625+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://media.wonderwall.com/umcebvyqmj/uploads/2026/11/22/trump-reposts-trumpcare-health-care-senat (page: https://www.motherjones.com/politics/2026/11/on-the-eve-of-the-midterms-trumps-closing-argument-is-a - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:36:59.088384+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump, NATO chief caution Russia as attacks on Ukr'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.ntd.com/trump-says-us-has-concluded-very-big-trade-deal-with-philippines_1186017.html |  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T14:36:59.087206+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://dscdn.daily-sun.com/english/uploads/news_photos/2026/11/21/Putin-Xi-Trump-Reuters-2026-6b00a",
-    "created_at": "2026-11-26T14:36:59.085849+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Trump, NATO chief caution Russia as attacks on Ukr' (. The image is a fabricated or AI-generated photo showing Vladimir Putin, Xi Jinping, and Donald Trump together, which does not depict the event or pe)",
-    "created_at": "2026-11-26T14:36:59.084297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:35:22.374619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:35:22.249738+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:35:22.092329+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
-    "created_at": "2026-11-26T14:35:22.072402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:35:21.568453+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:35:21.567356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene' - rejected (no og:image)",
-    "created_at": "2026-11-26T14:35:21.566056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifEFVX3lxTE1UYkNOcV9TeElnTHlhSTRvWktGNmtNRS1fWGcxQUtKX3I1b0dhRkkxLUE4VW1XUC01UXV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T14:35:21.563973+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Oil prices inch back up as Iran and its Houthi' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-26T14:35:21.225894+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Beyond Red vs. Blue: The Political Typology - Pew Research C' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T14:35:21.153066+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Beyond Red vs. Blue: The Political Typology - Pew Research C' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T14:35:21.151978+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Beyond Red vs. Blue: The Political Typology - Pew Research Center' (9 download(s) tried)",
-    "created_at": "2026-11-26T14:35:21.150867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7474/16176654816_dddb23231a_b.jpg",
-    "created_at": "2026-11-26T14:35:21.149441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2848/9527779732_b18b1ecaae_b.jpg",
-    "created_at": "2026-11-26T14:35:21.066589+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/48897267623_713816c1de_b.jpg",
-    "created_at": "2026-11-26T14:35:20.984258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3632/3505233583_542fde91f9_b.jpg",
-    "created_at": "2026-11-26T14:35:20.897002+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/48881397073_c189eba6a9_b.jpg",
-    "created_at": "2026-11-26T14:35:20.811807+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 0 candidate(s) for 'Beyond'",
-    "created_at": "2026-11-26T14:35:20.726143+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Beyond'",
-    "created_at": "2026-11-26T14:35:20.495562+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Beyond'",
-    "created_at": "2026-11-26T14:35:20.357320+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Beyond'",
-    "created_at": "2026-11-26T14:35:20.336797+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T14:35:19.571610+00:00",
+    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Cat Pictures Printable - UK  - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T15:40:40.319446+00:00",
     "card": ""
   }
 ]
