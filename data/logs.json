@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T22:57:08.543484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', \"Macy's parade postponed to Saturday\", 'Grand Theft Auto VI', 'UK net migration falls to 77,000']",
+    "created_at": "2026-11-26T22:57:08.536475+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T22:57:08.426979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T22:57:08.423975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T22:57:08.204558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T22:57:01.969250+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T22:57:01.968068+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T22:57:01.966765+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #151 started (--only blogger)",
+    "created_at": "2026-11-26T22:57:01.965238+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T22:37:36.763447+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Employee Tracking vs. Mo - only 1 of 8 key entities in the source page)",
     "created_at": "2026-11-26T22:37:03.774108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | LJS Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.773368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T22:37:03.771674+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T22:37:03.666831+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T22:37:03.558037+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T22:37:03.543304+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:03.513740+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:03.513165+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://blog-cdn.route4me.com/2019/05/861109a3-route4me-vehicle-tracking-system.jpg (page: https://www.trackingmore.com/blog/magento-shipping-tracking/ | Route4Me's Vehicle Tracking System |  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.512561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://blog.route4me.com/route4me-vehicle-tracking-system/ | Logistics Shipment Tracking Dashboard  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.511934+00:00",
     "card": ""
   }
 ]
