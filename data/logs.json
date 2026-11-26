@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T20:04:14.498399+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Wu-Tang Clan Thanksgiving halftime show', 'Grand Theft Auto VI', 'Israeli strikes in Gaza', 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-26T20:04:14.493635+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T20:04:14.239368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T20:04:14.234658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T20:04:13.836617+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T20:04:11.622629+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T20:04:11.621408+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T20:04:11.620249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #145 started (--only blogger)",
+    "created_at": "2026-11-26T20:04:11.618901+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T19:54:30.377858+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: no real photo found for 'WWE's CM Punk leaving politics out of the ring for USA vs Mexico match at Survivor Series: WarGames - Fox News' (9 download(s) tried)",
     "created_at": "2026-11-26T19:53:01.992361+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.wrestleview.com/wp-content/uploads/2023/01/097_RAW_0102023CM_39585-d0d73f72159d328b59c72 - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-26T19:53:01.991292+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T19:53:01.989831+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://image.api.playstation.com/vulcan/ap/rnd/202501/1623/068123d291265a61f85713615aa2f255077fbf16",
-    "created_at": "2026-11-26T19:53:01.791226+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'WWE's CM Punk leaving politics out of the ring for' (. The image is a promotional cover for the WWE 2K25 video game featuring Roman Reigns, not CM Punk or the Survivor Series: WarGames event.)",
-    "created_at": "2026-11-26T19:53:01.789722+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://wallpapers.com/images/hd/cool-wwe-3ny74nus835twbrs.jpg",
-    "created_at": "2026-11-26T19:52:56.687355+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'WWE's CM Punk leaving politics out of the ring for' (. The image is a graphic poster featuring Roman)",
-    "created_at": "2026-11-26T19:52:56.685881+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/11/netflix.jpg",
-    "created_at": "2026-11-26T19:52:20.355045+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'WWE's CM Punk leaving politics out of the ring for' (. The photo shows WWE wrestlers Bianca Belair, Roman Reigns, and Cody Rhodes, whereas the headline is about CM Punk.)",
-    "created_at": "2026-11-26T19:52:20.353434+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7008/6777137961_35e146d1d1_b.jpg",
-    "created_at": "2026-11-26T19:52:17.969428+00:00",
     "card": ""
   }
 ]
