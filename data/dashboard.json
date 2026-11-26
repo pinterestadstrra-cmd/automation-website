@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T01:10:32.133201+00:00",
-  "last_run": "2026-11-26T01:10:28.348303+00:00",
-  "runs": 114,
+  "generated_at": "2026-11-26T02:02:44.873444+00:00",
+  "last_run": "2026-11-26T01:59:33.836943+00:00",
+  "runs": 115,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T00:34:04.047530+00:00",
-    "mastodon.social": "2026-11-26T00:34:58.899402+00:00"
+    "Adsterra Blogger": "2026-11-26T02:00:56.768742+00:00",
+    "mastodon.social": "2026-11-26T02:02:44.573017+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 47,
+      "success": 48,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T00:34:04.047526+00:00"
+      "last_run": "2026-11-26T02:00:56.768739+00:00"
     },
     "mastodon.social": {
-      "success": 11,
+      "success": 12,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T00:34:58.899398+00:00"
+      "last_run": "2026-11-26T02:02:44.573016+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T00:34:04.047530+00:00",
-      "runs_today": 1,
-      "posts_today": 7,
+      "last_run": "2026-11-26T02:00:56.768742+00:00",
+      "runs_today": 2,
+      "posts_today": 8,
       "next_runs": [
-        "2026-11-26T07:19:04.047530+06:00",
-        "2026-11-26T07:34:04.047530+06:00",
-        "2026-11-26T07:49:04.047530+06:00",
-        "2026-11-26T08:04:04.047530+06:00",
-        "2026-11-26T08:19:04.047530+06:00"
+        "2026-11-26T08:15:56.768742+06:00",
+        "2026-11-26T08:30:56.768742+06:00",
+        "2026-11-26T08:45:56.768742+06:00",
+        "2026-11-26T09:00:56.768742+06:00",
+        "2026-11-26T09:15:56.768742+06:00"
       ],
       "next_post_times": [
         "2026-11-26T08:05:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-26T11:04:00+06:00",
         "2026-11-26T12:09:00+06:00"
       ],
-      "success": 47,
+      "success": 48,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T00:34:58.899402+00:00",
-      "runs_today": 1,
-      "posts_today": 7,
+      "last_run": "2026-11-26T02:02:44.573017+00:00",
+      "runs_today": 2,
+      "posts_today": 8,
       "next_runs": [
-        "2026-11-26T07:19:58.899402+06:00",
-        "2026-11-26T07:34:58.899402+06:00",
-        "2026-11-26T07:49:58.899402+06:00",
-        "2026-11-26T08:04:58.899402+06:00",
-        "2026-11-26T08:19:58.899402+06:00"
+        "2026-11-26T08:17:44.573017+06:00",
+        "2026-11-26T08:32:44.573017+06:00",
+        "2026-11-26T08:47:44.573017+06:00",
+        "2026-11-26T09:02:44.573017+06:00",
+        "2026-11-26T09:17:44.573017+06:00"
       ],
       "next_post_times": [
         "2026-11-26T08:03:00+06:00",
@@ -171,7 +171,7 @@
         "2026-11-26T11:05:00+06:00",
         "2026-11-26T12:10:00+06:00"
       ],
-      "success": 11,
+      "success": 12,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 2
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 2
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T01:10:28.349883+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T01:10:28.351212+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T01:59:33.838207+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Grand Theft Auto VI",
-    "New Avengers: Doomsday poster",
-    "Describe a film without its name",
-    "Aaron Rodgers reportedly out",
+    "Thanksgiving Day celebrations",
     "FEMA hotline unanswered in Iowa",
-    "Macy's parade turns 100",
+    "Describe a film without its name",
+    "Duran Duran's Andy Taylor dies",
+    "Aaron Rodgers reportedly out",
     "Denny's restores Jensen Huang plaque",
-    "Huang reinstated as Nvidia CEO",
-    "Trump calls Putin his friend",
-    "FCC approves SpaceX Starmind satellites"
+    "Kushner praises Putin's restraint",
+    "New Avengers: Doomsday poster",
+    "Macy's parade turns 100",
+    "Huang reinstated as Nvidia CEO"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T01:10:32.012570+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T01:10:32.010769+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-26T01:10:31.809189+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T01:10:28.352462+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T01:10:28.351220+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T01:10:28.349893+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #114 started (--only blogger)",
-      "created_at": "2026-11-26T01:10:28.348324+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-26T00:34:58.899426+00:00",
+      "created_at": "2026-11-26T02:02:44.573033+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-26T00:34:58.898254+00:00",
+      "created_at": "2026-11-26T02:02:44.571907+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679934600938964",
-      "created_at": "2026-11-26T00:34:58.896830+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680279712179327",
+      "created_at": "2026-11-26T02:02:44.570504+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117679934600938964",
-      "created_at": "2026-11-26T00:34:58.894159+00:00",
+      "message": "mastodon: posted to mastodon.social: 117680279712179327",
+      "created_at": "2026-11-26T02:02:44.567798+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-26T00:34:50.708802+00:00",
+      "created_at": "2026-11-26T02:02:34.680265+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-26T00:34:49.944079+00:00",
+      "created_at": "2026-11-26T02:02:34.568778+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 22 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
-      "created_at": "2026-11-26T00:34:49.943023+00:00",
+      "message": "promo: photo search done - 18 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-26T02:02:34.567808+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 5/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T00:34:49.941877+00:00",
+      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+      "created_at": "2026-11-26T02:02:34.566917+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T00:34:49.940789+00:00",
+      "message": "promo: story 6/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T02:02:34.566039+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'DOW Launches Automated SI Solution for Classification Management - U.S. Department of War (.gov)' (9 download(s) tried)",
-      "created_at": "2026-11-26T00:34:49.939645+00:00",
+      "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T02:02:34.565113+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://wallpaperaccess.com/full/13422728.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-      "created_at": "2026-11-26T00:34:49.938439+00:00",
+      "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (6 download(s) tried)",
+      "created_at": "2026-11-26T02:02:34.564165+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - page does not name the entity (Bitter))",
+      "created_at": "2026-11-26T02:02:34.563275+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - page does not name the entity (Bitter))",
+      "created_at": "2026-11-26T02:02:34.562372+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - page does not name the entity (Bitter))",
+      "created_at": "2026-11-26T02:02:34.561414+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-26T02:02:34.560322+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T00:34:49.936953+00:00",
+      "created_at": "2026-11-26T02:02:34.558926+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image.",
-      "created_at": "2026-11-26T00:34:49.634163+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
+      "created_at": "2026-11-26T02:02:34.399484+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi",
-      "created_at": "2026-11-26T00:34:49.546277+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
+      "created_at": "2026-11-26T02:02:34.301061+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://logos.stocktwits-cdn.com/DOW.png - source page title names only 1 of 9 key entities - not a news article about the story",
-      "created_at": "2026-11-26T00:34:49.290604+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
+      "created_at": "2026-11-26T02:02:34.207438+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T00:34:49.289128+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
+      "created_at": "2026-11-26T02:02:34.116581+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5213/5538883692_05fa7d1112_b.jpg",
-      "created_at": "2026-11-26T00:34:49.179698+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
+      "created_at": "2026-11-26T02:02:34.020533+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2850/9725249858_0998732c71_b.jpg",
-      "created_at": "2026-11-26T00:34:49.123358+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Bitter'",
+      "created_at": "2026-11-26T02:02:33.924083+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/50/129209518_4b292bacbd_b.jpg",
-      "created_at": "2026-11-26T00:34:49.077281+00:00",
+      "message": "google-images: 0 candidate(s) for 'Bitter'",
+      "created_at": "2026-11-26T02:02:33.688222+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8568/16236662916_6331356e5c_b.jpg",
-      "created_at": "2026-11-26T00:34:49.025479+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Bitter'",
+      "created_at": "2026-11-26T02:02:33.528628+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3192/2899705638_2efe9044e6.jpg",
-      "created_at": "2026-11-26T00:34:48.973124+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'DOW'",
-      "created_at": "2026-11-26T00:34:48.919978+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'DOW'",
-      "created_at": "2026-11-26T00:34:48.700301+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'DOW'",
-      "created_at": "2026-11-26T00:34:48.570390+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'DOW'",
-      "created_at": "2026-11-26T00:34:48.505152+00:00",
+      "message": "openverse: 5 result(s) for 'Bitter'",
+      "created_at": "2026-11-26T02:02:33.473308+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T00:34:48.301374+00:00",
+      "created_at": "2026-11-26T02:02:33.109584+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T00:34:48.300367+00:00",
+      "created_at": "2026-11-26T02:02:33.108712+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'DOW Launches Automated SI Solution for Classificat' - trying entity search 'DOW'",
-      "created_at": "2026-11-26T00:34:48.299266+00:00",
+      "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
+      "created_at": "2026-11-26T02:02:33.107833+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:48.298145+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:33.106872+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:48.297018+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:33.105957+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:48.295831+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:33.104994+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:48.294590+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:33.103983+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution'",
-      "created_at": "2026-11-26T00:34:48.292091+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Bitter U S political divide'",
+      "created_at": "2026-11-26T02:02:33.101655+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution'",
-      "created_at": "2026-11-26T00:34:48.104837+00:00",
+      "message": "google-images: 0 candidate(s) for 'Bitter U S political divide'",
+      "created_at": "2026-11-26T02:02:32.876926+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'DOW Launches Automated SI Solution'",
-      "created_at": "2026-11-26T00:34:47.966965+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Bitter U S political divide'",
+      "created_at": "2026-11-26T02:02:32.694071+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution'",
-      "created_at": "2026-11-26T00:34:47.905204+00:00",
+      "message": "openverse: 0 result(s) for 'Bitter U S political divide'",
+      "created_at": "2026-11-26T02:02:32.637998+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T00:34:47.809974+00:00",
+      "created_at": "2026-11-26T02:02:32.336273+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T00:34:47.808813+00:00",
+      "created_at": "2026-11-26T02:02:32.335268+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:47.807682+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:32.334322+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:47.806366+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:32.333365+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:47.805045+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:32.332110+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T00:34:47.803882+00:00",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:32.331074+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-      "created_at": "2026-11-26T00:34:47.801387+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+      "created_at": "2026-11-26T02:02:32.328886+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+      "created_at": "2026-11-26T02:02:32.116318+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Bitter U.S. political divide spurs industry to move you to a'",
+      "created_at": "2026-11-26T02:02:31.961019+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+      "created_at": "2026-11-26T02:02:31.905623+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T02:02:31.468216+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T02:02:31.467273+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:31.466221+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T02:02:31.465200+00:00",
       "card": ""
     }
   ]

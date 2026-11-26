@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-26T01:10:32.136569+00:00",
+    "created_at": "2026-11-26T02:02:44.875424+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Grand Theft Auto VI', 'New Avengers: Doomsday poster', 'Describe a film without its name', 'Aaron Rodgers reportedly out', 'FEMA hotline unanswered in Iowa']",
-    "created_at": "2026-11-26T01:10:32.130049+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T01:10:32.012570+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T01:10:32.010769+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-26T01:10:31.809189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T01:10:28.352462+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T01:10:28.351220+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T01:10:28.349893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #114 started (--only blogger)",
-    "created_at": "2026-11-26T01:10:28.348324+00:00",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'FEMA hotline unanswered in Iowa', 'Describe a film without its name', \"Duran Duran's Andy Taylor dies\", 'Aaron Rodgers reportedly out']",
+    "created_at": "2026-11-26T02:02:44.870357+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-26T00:34:58.899426+00:00",
+    "created_at": "2026-11-26T02:02:44.573033+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T00:34:58.898254+00:00",
+    "created_at": "2026-11-26T02:02:44.571907+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679934600938964",
-    "created_at": "2026-11-26T00:34:58.896830+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680279712179327",
+    "created_at": "2026-11-26T02:02:44.570504+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117679934600938964",
-    "created_at": "2026-11-26T00:34:58.894159+00:00",
+    "message": "mastodon: posted to mastodon.social: 117680279712179327",
+    "created_at": "2026-11-26T02:02:44.567798+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T00:34:50.708802+00:00",
+    "created_at": "2026-11-26T02:02:34.680265+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T00:34:49.944079+00:00",
+    "created_at": "2026-11-26T02:02:34.568778+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 22 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T00:34:49.943023+00:00",
+    "message": "promo: photo search done - 18 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+    "created_at": "2026-11-26T02:02:34.567808+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 5/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T00:34:49.941877+00:00",
+    "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+    "created_at": "2026-11-26T02:02:34.566917+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 6/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:02:34.566039+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T02:02:34.565113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (6 download(s) tried)",
+    "created_at": "2026-11-26T02:02:34.564165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - page does not name the entity (Bitter))",
+    "created_at": "2026-11-26T02:02:34.563275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - page does not name the entity (Bitter))",
+    "created_at": "2026-11-26T02:02:34.562372+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - page does not name the entity (Bitter))",
+    "created_at": "2026-11-26T02:02:34.561414+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:02:34.560322+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:02:34.558926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
+    "created_at": "2026-11-26T02:02:34.399484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
+    "created_at": "2026-11-26T02:02:34.301061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
+    "created_at": "2026-11-26T02:02:34.207438+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
+    "created_at": "2026-11-26T02:02:34.116581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
+    "created_at": "2026-11-26T02:02:34.020533+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Bitter'",
+    "created_at": "2026-11-26T02:02:33.924083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Bitter'",
+    "created_at": "2026-11-26T02:02:33.688222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Bitter'",
+    "created_at": "2026-11-26T02:02:33.528628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Bitter'",
+    "created_at": "2026-11-26T02:02:33.473308+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:33.109584+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:33.108712+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
+    "created_at": "2026-11-26T02:02:33.107833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:33.106872+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:33.105957+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:33.104994+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:33.103983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Bitter U S political divide'",
+    "created_at": "2026-11-26T02:02:33.101655+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Bitter U S political divide'",
+    "created_at": "2026-11-26T02:02:32.876926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Bitter U S political divide'",
+    "created_at": "2026-11-26T02:02:32.694071+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Bitter U S political divide'",
+    "created_at": "2026-11-26T02:02:32.637998+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:32.336273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:32.335268+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:32.334322+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:32.333365+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:32.332110+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:32.331074+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:32.328886+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:32.116318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.961019+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.905623+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:31.468216+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:31.467273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:31.466221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:31.465200+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:31.464217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:31.463133+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.460816+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.275639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.075766+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:02:31.014883+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:30.569823+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:30.568949+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no og:image)",
+    "created_at": "2026-11-26T02:02:30.567966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQkZhT3BJZDVXRjNyRzdodmtaakJxY21WZ1VjcGpLOW16UkF2Z3pjRF9saFlLS3NoUzR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T02:02:30.565845+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 5/6 tried: 'US voters rebuke Trump as Democrats win control of Congress ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:02:30.347587+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T02:02:30.346413+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'US voters rebuke Trump as Democrats win control of Congress in ‘blue wave’ | US midterm elections 2026 - The Guardian' (5 download(s) tried)",
+    "created_at": "2026-11-26T02:02:30.345527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://cdn.donmai.us/sample/27/d2/__gundam_aerial_gundam_and_1_more_drawn_by_shiromoca__sample-27d2 (page: https://www.deviantart.com/darkfreedom23/art/gundam-aerial-941823958 | gundam aerial (gundam and 1 m - page does not name the entity (voters))",
+    "created_at": "2026-11-26T02:02:30.344579+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://cdn.donmai.us/original/7e/f3/__gundam_aerial_gundam_and_1_more_drawn_by_aron_e__7ef3fbd197d1 (page: https://danbooru.donmai.us/posts/5234514 | gundam aerial (gundam and 1 more) drawn by aron_e | Danbo - page does not name the entity (voters))",
+    "created_at": "2026-11-26T02:02:30.343638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80cbd3d4-497b-4345-b1a4-c71317d60280/dfycv (page: https://danbooru.donmai.us/posts/5986947 | Aerial Gundam By Me by ust2212 on DeviantArt - page does not name the entity (voters))",
+    "created_at": "2026-11-26T02:02:30.342634+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c136b720-d270-4ef3-b2c5-3a4c681dc3ad/dfeku (page: https://www.deviantart.com/ust2212/art/Aerial-Gundam-By-Me-964699950 | GUNDAM AERIAL by yuuiguchi on - page does not name the entity (voters))",
+    "created_at": "2026-11-26T02:02:30.341598+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8040/8025019059_fe8d1cc51c_b.jpg",
+    "created_at": "2026-11-26T02:02:30.340074+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6098/6235829161_d50c21339f_b.jpg",
+    "created_at": "2026-11-26T02:02:30.243104+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7109/8159197152_256e4a4d01_b.jpg",
+    "created_at": "2026-11-26T02:02:30.141803+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1191/4724602875_63431cf258.jpg",
+    "created_at": "2026-11-26T02:02:30.053720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4042/4366779225_22b5c0b800_m.jpg",
+    "created_at": "2026-11-26T02:02:29.949080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'voters'",
+    "created_at": "2026-11-26T02:02:29.842357+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'voters'",
+    "created_at": "2026-11-26T02:02:29.606436+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'voters'",
+    "created_at": "2026-11-26T02:02:29.459468+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'voters'",
+    "created_at": "2026-11-26T02:02:29.402129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:29.037339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:29.036374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'US voters rebuke Trump as Democrats win control of' - trying entity search 'voters'",
+    "created_at": "2026-11-26T02:02:29.035457+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:29.034531+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:29.033426+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:29.032404+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:29.031367+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump Democrats'",
+    "created_at": "2026-11-26T02:02:29.029253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump Democrats'",
+    "created_at": "2026-11-26T02:02:28.849269+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump Democrats'",
+    "created_at": "2026-11-26T02:02:28.666071+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US voters rebuke Trump Democrats'",
+    "created_at": "2026-11-26T02:02:28.602956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:28.272633+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:28.271741+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:28.270667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:28.269697+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:28.268711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:28.267643+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:28.265368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:28.062135+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:27.844563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:27.787685+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:27.390000+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:27.389009+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:27.387893+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:27.386941+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:27.385981+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:27.384970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:27.379791+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:27.179163+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:26.997152+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
+    "created_at": "2026-11-26T02:02:26.941214+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:26.390485+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:02:26.389447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - rejected (no og:image)",
+    "created_at": "2026-11-26T02:02:26.388445+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikwFBVV95cUxPVmdUeDdGZGtQckFXbURIc3pBVW1Bb2ZfdVBMSkI2V05FYm5FQzdOOXB3cUdSelh0S2J) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T02:02:26.386309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-26T02:02:25.976987+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-26T02:02:25.975994+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-26T02:02:25.974938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+    "created_at": "2026-11-26T02:02:25.973472+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 4/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:02:25.438227+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T00:34:49.940789+00:00",
+    "created_at": "2026-11-26T02:02:25.434427+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: no real photo found for 'DOW Launches Automated SI Solution for Classification Management - U.S. Department of War (.gov)' (9 download(s) tried)",
-    "created_at": "2026-11-26T00:34:49.939645+00:00",
+    "created_at": "2026-11-26T02:02:25.433347+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://wallpaperaccess.com/full/13422728.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:49.938439+00:00",
+    "created_at": "2026-11-26T02:02:25.432356+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:49.936953+00:00",
+    "created_at": "2026-11-26T02:02:25.430798+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image.",
-    "created_at": "2026-11-26T00:34:49.634163+00:00",
+    "created_at": "2026-11-26T02:02:25.216634+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi",
-    "created_at": "2026-11-26T00:34:49.546277+00:00",
+    "created_at": "2026-11-26T02:02:25.061624+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://logos.stocktwits-cdn.com/DOW.png - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:49.290604+00:00",
+    "created_at": "2026-11-26T02:02:24.487163+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:49.289128+00:00",
+    "created_at": "2026-11-26T02:02:24.485803+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5213/5538883692_05fa7d1112_b.jpg",
-    "created_at": "2026-11-26T00:34:49.179698+00:00",
+    "created_at": "2026-11-26T02:02:24.267921+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2850/9725249858_0998732c71_b.jpg",
-    "created_at": "2026-11-26T00:34:49.123358+00:00",
+    "created_at": "2026-11-26T02:02:24.176835+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/50/129209518_4b292bacbd_b.jpg",
-    "created_at": "2026-11-26T00:34:49.077281+00:00",
+    "created_at": "2026-11-26T02:02:24.085267+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8568/16236662916_6331356e5c_b.jpg",
-    "created_at": "2026-11-26T00:34:49.025479+00:00",
+    "created_at": "2026-11-26T02:02:23.996282+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3192/2899705638_2efe9044e6.jpg",
-    "created_at": "2026-11-26T00:34:48.973124+00:00",
+    "created_at": "2026-11-26T02:02:23.903283+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'DOW'",
-    "created_at": "2026-11-26T00:34:48.919978+00:00",
+    "created_at": "2026-11-26T02:02:23.784281+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'DOW'",
-    "created_at": "2026-11-26T00:34:48.700301+00:00",
+    "created_at": "2026-11-26T02:02:23.497656+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'DOW'",
-    "created_at": "2026-11-26T00:34:48.570390+00:00",
+    "created_at": "2026-11-26T02:02:23.207181+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'DOW'",
-    "created_at": "2026-11-26T00:34:48.505152+00:00",
+    "created_at": "2026-11-26T02:02:23.143128+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:48.301374+00:00",
+    "created_at": "2026-11-26T02:02:22.738976+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:48.300367+00:00",
+    "created_at": "2026-11-26T02:02:22.737891+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'DOW Launches Automated SI Solution for Classificat' - trying entity search 'DOW'",
-    "created_at": "2026-11-26T00:34:48.299266+00:00",
+    "created_at": "2026-11-26T02:02:22.736907+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:48.298145+00:00",
+    "created_at": "2026-11-26T02:02:22.735811+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:48.297018+00:00",
+    "created_at": "2026-11-26T02:02:22.734728+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:48.295831+00:00",
+    "created_at": "2026-11-26T02:02:22.733745+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:48.294590+00:00",
+    "created_at": "2026-11-26T02:02:22.732623+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T00:34:48.292091+00:00",
+    "created_at": "2026-11-26T02:02:22.730642+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T00:34:48.104837+00:00",
+    "created_at": "2026-11-26T02:02:22.560202+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T00:34:47.966965+00:00",
+    "created_at": "2026-11-26T02:02:22.387866+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T00:34:47.905204+00:00",
+    "created_at": "2026-11-26T02:02:22.326964+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:47.809974+00:00",
+    "created_at": "2026-11-26T02:02:22.032329+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:47.808813+00:00",
+    "created_at": "2026-11-26T02:02:22.031410+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:47.807682+00:00",
+    "created_at": "2026-11-26T02:02:22.030503+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:47.806366+00:00",
+    "created_at": "2026-11-26T02:02:22.029505+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:47.805045+00:00",
+    "created_at": "2026-11-26T02:02:22.028468+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:47.803882+00:00",
+    "created_at": "2026-11-26T02:02:22.027510+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:47.801387+00:00",
+    "created_at": "2026-11-26T02:02:22.025311+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:47.678511+00:00",
+    "created_at": "2026-11-26T02:02:21.829628+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:47.558658+00:00",
+    "created_at": "2026-11-26T02:02:21.612070+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:46.902458+00:00",
+    "created_at": "2026-11-26T02:02:21.144020+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:46.716379+00:00",
+    "created_at": "2026-11-26T02:02:20.913933+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:46.715105+00:00",
+    "created_at": "2026-11-26T02:02:20.913062+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:46.713989+00:00",
+    "created_at": "2026-11-26T02:02:20.912185+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:46.712698+00:00",
+    "created_at": "2026-11-26T02:02:20.911259+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:46.711348+00:00",
+    "created_at": "2026-11-26T02:02:20.910169+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:46.710113+00:00",
+    "created_at": "2026-11-26T02:02:20.908965+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:46.707701+00:00",
+    "created_at": "2026-11-26T02:02:20.902867+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:46.589917+00:00",
+    "created_at": "2026-11-26T02:02:20.713985+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:46.430531+00:00",
+    "created_at": "2026-11-26T02:02:20.542584+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T00:34:46.005306+00:00",
+    "created_at": "2026-11-26T02:02:20.346129+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:45.760138+00:00",
+    "created_at": "2026-11-26T02:02:19.990747+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:45.758997+00:00",
+    "created_at": "2026-11-26T02:02:19.989609+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no og:image)",
-    "created_at": "2026-11-26T00:34:45.757868+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMixgFBVV95cUxQOWpJaE5MaTR4RHc4NUdUN0ZZLWJubU5fTFM2SDFxaWdOb2EzUzRkQ2t6VVg5ZjdKRVh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T00:34:45.755321+00:00",
+    "created_at": "2026-11-26T02:02:19.988075+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
-    "created_at": "2026-11-26T00:34:45.445243+00:00",
+    "created_at": "2026-11-26T02:02:19.425639+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Will Netanyahu lead Israel into another war with Iran before' - skipped (same event used within 24h, event key 'another forward iran israel lead leader netanyahu take war')",
-    "created_at": "2026-11-26T00:34:45.443806+00:00",
+    "message": "promo: story 3/6 tried: ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:02:19.424388+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 4/6 tried: 'UK nuclear test veterans win 40-year battle for inquiry into' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T00:34:45.442119+00:00",
+    "message": "photo candidate: ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T02:02:19.423209+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T00:34:45.440869+00:00",
+    "message": "photo: no real photo found for ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - Deadline' (9 download(s) tried)",
+    "created_at": "2026-11-26T02:02:19.422009+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'UK nuclear test veterans win 40-year battle for inquiry into Cold War tests they say damaged health - AP News' (12 download(s) tried)",
-    "created_at": "2026-11-26T00:34:45.439711+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://scitechdaily.com/images/Nuclear-Bomb-Explosion-in-City.jpg (page: https://pngimg.com/image/99509 | Study Shows More Than 100 Million Dead If India and Pakistan Wage . - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T00:34:45.438537+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://pngimg.com/uploads/radiation/radiation_PNG99511.png - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:45.437385+00:00",
+    "message": "photo: rejected (vision down, strict check): https://static.vecteezy.com/system/resources/previews/036/594/620/non_2x/ai-generated-book-store-adv - image from a clipart/vector host",
+    "created_at": "2026-11-26T02:02:19.420638+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:45.435910+00:00",
+    "created_at": "2026-11-26T02:02:19.419144+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): http://www.idom.com/wp-content/uploads/2016/06/IDOM_Nuclear_Services_News_OIEA_Copyright_hxdyl.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:45.299435+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:45.297890+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cursoparalaunam.com/wp-content/uploads/2020/03/PLANTA-NUCLEAR2.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:43.994495+00:00",
+    "message": "photo: rejected (vision down, strict check): https://cdn.pixabay.com/photo/2019/01/30/08/29/book-3964038_1280.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:02:19.296865+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:43.993020+00:00",
+    "created_at": "2026-11-26T02:02:19.295244+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6% (page: https://commons.wikimedia.org/wiki/File:%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7 - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T00:34:43.853356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/c/cf/Nuclear_Reaction_In_the_Sun.jpg?utm_source=commo",
-    "created_at": "2026-11-26T00:34:43.851926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Nuclear_Power_Plant_Cattenom.jpg/1280px-Nuc - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:43.793168+00:00",
+    "message": "photo: rejected (vision down, strict check): https://webstockreview.net/images/book-clipart-animated-13.png - image file looks like a cartoon/clipart",
+    "created_at": "2026-11-26T02:02:19.171391+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:43.791811+00:00",
+    "created_at": "2026-11-26T02:02:19.167461+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/McMurdo_Nuclear_Power.jpg/1280px-McMurdo_Nu - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:43.653359+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://www.clays.co.uk/wp-content/uploads/hero-books.jpg",
+    "created_at": "2026-11-26T02:02:19.020271+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:43.651957+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Margaret_Hamilton_-_restoration.jpg/1280px- (page: https://commons.wikimedia.org/wiki/File:Margaret_Hamilton_-_restoration.jpg | File:Margaret Hamilton - page does not name the entity (Book))",
+    "created_at": "2026-11-26T02:02:18.760148+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Koeberg_Nuclear_Powerplant_-_Entry_Prohibit - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:43.496338+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Liji_2.jpg/1280px-Liji_2.jpg?utm_source=com (page: https://commons.wikimedia.org/wiki/File:Liji_2.jpg | File:Liji 2.jpg - page does not name the entity (Book))",
+    "created_at": "2026-11-26T02:02:18.758913+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:43.494790+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Grandes_Heures_Anne_de_Bretagne_Saint_Marc. (page: https://commons.wikimedia.org/wiki/File:Grandes_Heures_Anne_de_Bretagne_Saint_Marc.jpg | File:Grande - page does not name the entity (Book))",
+    "created_at": "2026-11-26T02:02:18.757833+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2578/4165048616_ae3bb76265_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:43.322284+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/13-11-02-olb-by-RalfR-03.jpg/1280px-13-11-0 (page: https://commons.wikimedia.org/wiki/File:13-11-02-olb-by-RalfR-03.jpg | File:13-11-02-olb-by-RalfR-03 - page does not name the entity (Book))",
+    "created_at": "2026-11-26T02:02:18.756793+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:43.320943+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1957/45581470721_7c7492a325_b.jpg",
+    "created_at": "2026-11-26T02:02:18.755270+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
-    "created_at": "2026-11-26T00:34:43.299165+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2353/2096273707_620c84678e_b.jpg",
+    "created_at": "2026-11-26T02:02:18.657755+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4/5003022_fbe68de5aa_b.jpg",
-    "created_at": "2026-11-26T00:34:43.253547+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5575/14169669030_c96bde7fe7_b.jpg",
+    "created_at": "2026-11-26T02:02:18.554577+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5025/5606183129_9695c06f9e_b.jpg",
-    "created_at": "2026-11-26T00:34:43.208885+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3611/3649703207_89d5426618_b.jpg",
+    "created_at": "2026-11-26T02:02:18.457587+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2599/3686680582_c4e2a0c7fa.jpg",
-    "created_at": "2026-11-26T00:34:43.126806+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4088/5062517727_bc6527942b_b.jpg",
+    "created_at": "2026-11-26T02:02:18.364983+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'nuclear'",
-    "created_at": "2026-11-26T00:34:43.072836+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Book'",
+    "created_at": "2026-11-26T02:02:18.249183+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'nuclear'",
-    "created_at": "2026-11-26T00:34:42.929408+00:00",
+    "message": "google-images: 0 candidate(s) for 'Book'",
+    "created_at": "2026-11-26T02:02:18.033715+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 5 result(s) for 'nuclear'",
-    "created_at": "2026-11-26T00:34:42.791369+00:00",
+    "message": "wikimedia: rejected candidate (mime=image/gif): https://upload.wikimedia.org/wikipedia/commons/e/e8/Newtons_cradle_animation_book.gif?utm_source=com",
+    "created_at": "2026-11-26T02:02:17.840255+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 5 result(s) for 'nuclear'",
-    "created_at": "2026-11-26T00:34:42.403325+00:00",
+    "message": "wikimedia: 5 result(s) for 'Book'",
+    "created_at": "2026-11-26T02:02:17.838704+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Book'",
+    "created_at": "2026-11-26T02:02:17.502241+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:42.023893+00:00",
+    "created_at": "2026-11-26T02:02:16.948623+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:42.022612+00:00",
+    "created_at": "2026-11-26T02:02:16.947707+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'UK nuclear test veterans win 40-year battle for in' - trying entity search 'nuclear'",
-    "created_at": "2026-11-26T00:34:42.021340+00:00",
+    "message": "photo: topical search found nothing for ''Ba's Book' Explores Family Bonds Impacted By Viet' - trying entity search 'Book'",
+    "created_at": "2026-11-26T02:02:16.946843+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:42.020139+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://cellrive.com/wp-content/uploads/2025/10/revolutionizing-parkinsons-treatment-ohsus-pioneerin (page: https://www.sovereign-usa.com/post/the-benefits-of-incisionless-surgery-faster-recovery-and-enhanced - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:16.945973+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:42.018866+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://sis-org.ai/wp-content/uploads/2026/03/headshot-jay-redan.jpg (page: https://cellrive.com/revolutionizing-parkinsons-treatment-ohsus-pioneering-incisionless-surgery/ | L - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:16.945042+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:42.017586+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:42.016244+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win'",
-    "created_at": "2026-11-26T00:34:42.013814+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win'",
-    "created_at": "2026-11-26T00:34:41.866798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win'",
-    "created_at": "2026-11-26T00:34:41.727754+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win'",
-    "created_at": "2026-11-26T00:34:41.293809+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:41.123550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:41.122344+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:41.121195+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:41.120030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:41.118701+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:41.116700+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:41.114274+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:40.989707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:40.788201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:40.327935+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:39.975800+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:39.974562+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:39.973415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:39.972173+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:39.970844+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:39.969706+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:39.967144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:39.850734+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:39.665585+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
-    "created_at": "2026-11-26T00:34:39.112501+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:38.856713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:38.855699+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no og:image)",
-    "created_at": "2026-11-26T00:34:38.854554+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZUMwTHBUX2xURVd1Y3hvcEdZdXp2ZENFQ2RlMUwyeGotdXQ0dzBQV2JiWWl1ZlRkN29) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T00:34:38.852223+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - skipped (same event used within 24h, event key 'african drone insurgent off reuter shelf skie take war')",
-    "created_at": "2026-11-26T00:34:38.299248+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
-    "created_at": "2026-11-26T00:34:38.297671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-    "created_at": "2026-11-26T00:34:38.296057+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
-    "created_at": "2026-11-26T00:34:38.294415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Five Russian military jets hit in airfield strike, says Ukra' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T00:34:38.292976+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T00:34:38.291943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Five Russian military jets hit in airfield strike, says Ukraine - BBC' (12 download(s) tried)",
-    "created_at": "2026-11-26T00:34:38.290836+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:38.289697+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:38.288301+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:38.172354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:38.170860+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:38.020963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:38.019302+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:37.402261+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:37.400942+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Street_number_5.jpg/1280px-Street_number_5. (page: https://commons.wikimedia.org/wiki/File:Street_number_5.jpg | File:Street number 5.jpg - page does not name the entity (Five))",
-    "created_at": "2026-11-26T00:34:37.269449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/OL_ONAL_DIGIT_FIVE.jpg/1280px-OL_ONAL_DIGIT - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:37.268312+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:37.267009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Hausnummer_5_in_Frankreich.jpg/1280px-Hausn (page: https://commons.wikimedia.org/wiki/File:Hausnummer_5_in_Frankreich.jpg | File:Hausnummer 5 in Frankr - page does not name the entity (Five))",
-    "created_at": "2026-11-26T00:34:37.165800+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Five_children_on_a_motorcycle.jpg/1280px-Fi - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:37.164473+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:37.163102+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/1/14/Five_%281951_film%29_trailer_1.jpg?utm_source=co - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T00:34:37.044538+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T00:34:37.043030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7422/10751725234_ef1a50fd02_b.jpg",
-    "created_at": "2026-11-26T00:34:36.931824+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7138/7668859772_6d89c1b10a_b.jpg",
-    "created_at": "2026-11-26T00:34:36.878861+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7350/13023077404_81c3b206f1_b.jpg",
-    "created_at": "2026-11-26T00:34:36.834270+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1481/24300258539_06bfec3842_b.jpg",
-    "created_at": "2026-11-26T00:34:36.784927+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8105/8560235748_9d83412309_b.jpg",
-    "created_at": "2026-11-26T00:34:36.703695+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five'",
-    "created_at": "2026-11-26T00:34:36.655149+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five'",
-    "created_at": "2026-11-26T00:34:36.483337+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Five'",
-    "created_at": "2026-11-26T00:34:36.314283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Five'",
-    "created_at": "2026-11-26T00:34:35.748568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:35.411149+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:35.410067+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Five Russian military jets hit in airfield strike,' - trying entity search 'Five'",
-    "created_at": "2026-11-26T00:34:35.408970+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:35.407783+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:35.406575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:35.405327+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:35.404061+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-7 (page: https://commons.wikimedia.org/wiki/File:SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-75_%22%D0%94%D0%B2 - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:35.402824+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-26T00:34:35.400316+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-26T00:34:35.275684+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 1 result(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-26T00:34:35.121058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-26T00:34:34.821350+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:34.591315+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:34.590178+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:34.589055+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:34.587783+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:34.586491+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:34.585258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:34.582877+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:34.463662+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:34.319904+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:34.141550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:33.969108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:33.968072+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:33.967091+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:33.966045+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:33.964938+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T00:34:33.962901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:33.960682+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:33.840580+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:33.716772+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-26T00:34:33.487592+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:33.255042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T00:34:33.254046+00:00",
+    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://gchfoundation.org.au/wp-content/uploads/2024/07/GCHF-Screen-2.jpg (page: https://sis-org.ai/leadership/ | Incisionless surgery on the brain, that is changing lives. - GC ... - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:02:16.944063+00:00",
     "card": ""
   }
 ]
