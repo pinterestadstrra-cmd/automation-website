@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-26T03:59:02.920777+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['FEMA hotline unanswered in Iowa', 'Aaron Rodgers reportedly out', 'Thanksgiving Day celebrations', \"Macy's parade turns 100\", 'Grand Theft Auto VI']",
+    "created_at": "2026-11-26T03:59:02.916861+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T03:59:02.805849+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T03:59:02.804770+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T03:59:02.619262+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T03:58:54.451196+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T03:58:54.450510+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T03:58:54.449777+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #118 started (--only blogger)",
+    "created_at": "2026-11-26T03:58:54.448774+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-26T02:59:44.593554+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
     "created_at": "2026-11-26T02:59:10.424051+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:59:10.422928+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:59:10.421752+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:59:10.420151+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:59:10.202324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:59:10.017630+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:59:09.960364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:59:09.919408+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:59:09.918354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no og:image)",
-    "created_at": "2026-11-26T02:59:09.917202+00:00",
     "card": ""
   }
 ]
