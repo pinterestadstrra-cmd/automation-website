@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T18:58:29.639348+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', \"Macy's parade postponed to Saturday\", 'Trump calls GDP revision fake', 'Describe a film without its name']",
+    "created_at": "2026-11-26T18:58:29.634808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T18:58:29.420072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T18:58:29.417811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T18:58:28.989874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T18:58:16.302574+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T18:58:16.301437+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T18:58:16.298213+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #143 started (--only blogger)",
+    "created_at": "2026-11-26T18:58:16.294217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T18:39:01.960887+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
     "created_at": "2026-11-26T17:45:38.979999+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
-    "created_at": "2026-11-26T17:45:38.894627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:32.186602+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:32.185294+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/9c/4a/c5/9c4ac5dfe44c9ecc03c539ea3dd60257.jpg (page: https://cheezburger.com/8940805/14-dumb-cat-memes-for-your-very-dumb-caturday-enjoyment | Pin by Isa - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:32.184041+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/02/02/5d/02025dd86050c999f1d5be767e0c27e2.jpg (page: https://www.pinterest.com/pin/324751823129589782/ | Funny Cat Memes | Lucu - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:32.182788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/75/c7/ea/75c7ea09a87acabc2d8f1943d5eecf34.jpg (page: https://www.pinterest.com/pin/funny-cat-memes--598767712969812867/ | Pin by ☆ on Pins by you | Cat m - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:32.181537+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/originals/30/e1/a9/30e1a9847a51776b46806d622f04a99f.jpg (page: https://www.pinterest.com/pin/789255903462460958/ - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T17:45:32.180266+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
-    "created_at": "2026-11-26T17:45:32.178405+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
-    "created_at": "2026-11-26T17:45:31.978429+00:00",
     "card": ""
   }
 ]

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T18:39:01.957775+00:00",
-  "last_run": "2026-11-26T18:38:50.817233+00:00",
-  "runs": 142,
+  "generated_at": "2026-11-26T18:58:29.637480+00:00",
+  "last_run": "2026-11-26T18:58:16.294196+00:00",
+  "runs": 143,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 1,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 16,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T00:54:01.804212+06:00",
         "2026-11-27T01:09:01.804212+06:00",
         "2026-11-27T01:24:01.804212+06:00",
         "2026-11-27T01:39:01.804212+06:00",
-        "2026-11-27T01:54:01.804212+06:00"
+        "2026-11-27T01:54:01.804212+06:00",
+        "2026-11-27T02:09:01.804212+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T00:57:00+06:00",
         "2026-11-27T02:02:00+06:00",
         "2026-11-27T03:07:00+06:00",
         "2026-11-27T03:53:00+06:00",
-        "2026-11-27T04:58:00+06:00"
+        "2026-11-27T04:58:00+06:00",
+        "2026-11-27T06:03:00+06:00"
       ],
       "success": 63,
       "fail": 4,
@@ -158,11 +158,11 @@
       "runs_today": 16,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T00:54:01.808085+06:00",
         "2026-11-27T01:09:01.808085+06:00",
         "2026-11-27T01:24:01.808085+06:00",
         "2026-11-27T01:39:01.808085+06:00",
-        "2026-11-27T01:54:01.808085+06:00"
+        "2026-11-27T01:54:01.808085+06:00",
+        "2026-11-27T02:09:01.808085+06:00"
       ],
       "next_post_times": [
         "2026-11-27T00:59:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 14
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T18:38:50.818693+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T18:58:16.298207+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T18:58:16.301432+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
-    "Thanksgiving Day celebrations",
     "Birthday twin spectrum prompt",
-    "Medicare for All and universal healthcare",
+    "Thanksgiving Day celebrations",
     "Macy's parade postponed to Saturday",
     "Trump calls GDP revision fake",
-    "Nvidia chip exports to China",
+    "Describe a film without its name",
+    "Vance blames Obama for detonation",
     "Grand Theft Auto VI",
     "Aaron Rodgers reportedly out",
-    "Describe a film without its name",
-    "Steven Universe actor comes out"
+    "Musk pledges kids SpaceX shares",
+    "New Avengers: Doomsday poster"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T18:58:29.420072+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T18:58:29.417811+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-26T18:58:28.989874+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T18:58:16.302574+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T18:58:16.301437+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T18:58:16.298213+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #143 started (--only blogger)",
+      "created_at": "2026-11-26T18:58:16.294217+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T18:39:01.960887+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Medicare for All and universal healthcare', \"Macy's parade postponed to Saturday\", 'Trump calls GDP revision fake']",
+      "created_at": "2026-11-26T18:39:01.954538+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: not a posting time)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "vision: NO - photo rejected for 'Trump says Democrats 'did a good job,' blames Repu' (, the photo shows Donald Trump and a woman applauding in front of an \"Iowa\" banner, which does not depict his comments on Democratic performance or mi)",
       "created_at": "2026-11-26T17:46:57.639158+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T17:46:43.474555+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T17:46:43.349420+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T17:46:43.197285+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T17:46:43.112428+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T17:46:35.319771+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T17:46:35.318644+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
-      "created_at": "2026-11-26T17:46:35.317487+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-26T17:46:35.315516+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
-      "created_at": "2026-11-26T17:46:35.153857+00:00",
       "card": ""
     }
   ]
