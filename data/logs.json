@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T10:13:47.783424+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Grand Theft Auto VI', \"Kushner praises Putin's restraint\", 'FEMA hotline unanswered in Iowa', \"Denny's restores Jensen Huang plaque\"]",
+    "created_at": "2026-11-26T10:13:47.778183+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T10:13:47.452284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T10:13:47.449948+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T10:13:47.039615+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T10:12:51.678188+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T10:12:51.677156+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T10:12:51.676018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #128 started (--only blogger)",
+    "created_at": "2026-11-26T10:12:51.674578+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T09:53:56.984865+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "mastodon: media upload failed - posting text-only",
     "created_at": "2026-11-26T07:30:56.073884+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-26T07:30:56.071275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Elon Musk says record $446m spending on US midterms was 'pre' - ACCEPTED real photo (from openverse)",
-    "created_at": "2026-11-26T07:29:55.974328+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-26T07:29:55.973240+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Elon Musk says record $446m spending on US midterms was 'pre': https://live.staticflickr.com/4172/33486317334_185fc13b3c_b.jpg (from openverse, query 'Elon Musk', page: https://www.flickr.com/photos/44124348109@N01/33486317334 | Elon Musk at TED 2017 - page names the entity (Elon Musk))",
-    "created_at": "2026-11-26T07:29:55.972078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T07:29:55.970685+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Elon Musk'",
-    "created_at": "2026-11-26T07:29:55.936494+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Elon Musk'",
-    "created_at": "2026-11-26T07:29:55.699654+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Elon Musk'",
-    "created_at": "2026-11-26T07:29:55.561489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Elon Musk'",
-    "created_at": "2026-11-26T07:29:55.225091+00:00",
     "card": ""
   }
 ]
