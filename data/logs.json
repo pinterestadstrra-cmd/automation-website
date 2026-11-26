@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T20:58:16.530025+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', 'FCC approves SpaceX Starmind satellites', 'Grand Theft Auto VI', 'Lions vs. Bears']",
+    "created_at": "2026-11-26T20:58:16.523710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T20:58:16.296966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T20:58:16.295102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T20:58:15.942894+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T20:58:07.834207+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T20:58:07.833124+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T20:58:07.831940+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #147 started (--only blogger)",
+    "created_at": "2026-11-26T20:58:07.830516+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T20:42:25.285723+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "vision: YES - photo matches 'Russia's own figures show it has lost nearly 500,0' (. The photo shows St. Basil's Cathedral in)",
     "created_at": "2026-11-26T20:41:06.308430+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7312/10096297923_e8773368cf_b.jpg",
-    "created_at": "2026-11-26T20:40:05.150218+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4339/36366522401_0fdb4c9ab9_b.jpg",
-    "created_at": "2026-11-26T20:40:05.105548+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5698/30062345825_3715964625_b.jpg",
-    "created_at": "2026-11-26T20:40:05.055425+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg",
-    "created_at": "2026-11-26T20:40:05.003066+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg",
-    "created_at": "2026-11-26T20:40:04.945837+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia'",
-    "created_at": "2026-11-26T20:40:04.897465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia'",
-    "created_at": "2026-11-26T20:40:04.747738+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Russia'",
-    "created_at": "2026-11-26T20:40:04.621049+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Russia'",
-    "created_at": "2026-11-26T20:40:04.561593+00:00",
     "card": ""
   }
 ]

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T20:42:25.282307+00:00",
-  "last_run": "2026-11-26T20:38:46.783601+00:00",
-  "runs": 146,
+  "generated_at": "2026-11-26T20:58:16.527022+00:00",
+  "last_run": "2026-11-26T20:58:07.830495+00:00",
+  "runs": 147,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 18,
       "posts_today": 2,
       "next_runs": [
-        "2026-11-27T02:56:15.127631+06:00",
         "2026-11-27T03:11:15.127631+06:00",
         "2026-11-27T03:26:15.127631+06:00",
         "2026-11-27T03:41:15.127631+06:00",
-        "2026-11-27T03:56:15.127631+06:00"
+        "2026-11-27T03:56:15.127631+06:00",
+        "2026-11-27T04:11:15.127631+06:00"
       ],
       "next_post_times": [
         "2026-11-27T03:07:00+06:00",
@@ -158,11 +158,11 @@
       "runs_today": 18,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T02:57:25.071881+06:00",
         "2026-11-27T03:12:25.071881+06:00",
         "2026-11-27T03:27:25.071881+06:00",
         "2026-11-27T03:42:25.071881+06:00",
-        "2026-11-27T03:57:25.071881+06:00"
+        "2026-11-27T03:57:25.071881+06:00",
+        "2026-11-27T04:12:25.071881+06:00"
       ],
       "next_post_times": [
         "2026-11-27T03:09:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 16
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T20:38:46.785149+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T20:58:07.831929+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T20:58:07.833114+00:00"
     }
   ],
   "dry_run": false,
@@ -308,17 +296,71 @@
   "trending": [
     "Birthday twin spectrum prompt",
     "Thanksgiving Day celebrations",
-    "Tornado warning in Hampton Roads",
-    "Thanksgiving storm threatens travel",
-    "Nvidia chip exports to China",
-    "Trump calls GDP revision fake",
-    "Kushner praises Putin's restraint",
+    "FCC approves SpaceX Starmind satellites",
     "Grand Theft Auto VI",
     "Lions vs. Bears",
-    "Describe a film without its name"
+    "UK net migration falls to 77,000",
+    "Describe a film without its name",
+    "Thanksgiving storm threatens travel",
+    "Aaron Rodgers reportedly out",
+    "Nvidia chip exports to China"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T20:58:16.296966+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T20:58:16.295102+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-26T20:58:15.942894+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T20:58:07.834207+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T20:58:07.833124+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T20:58:07.831940+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #147 started (--only blogger)",
+      "created_at": "2026-11-26T20:58:07.830516+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T20:42:25.285723+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', 'Tornado warning in Hampton Roads', 'Thanksgiving storm threatens travel', 'Nvidia chip exports to China']",
+      "created_at": "2026-11-26T20:42:25.278915+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "pexels: API key not configured - skipping",
       "created_at": "2026-11-26T20:42:03.336794+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
-      "created_at": "2026-11-26T20:42:03.335678+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdna.artstation.com/p/assets/covers/images/020/217/242/large/lee-grimes-lee-grimes-screensho (page: https://www.youtube.com/watch?v=y3F4yxBtihM | ArtStation - Plants Vs Zombies Garden Warfare 2 Boss M - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T20:42:03.334453+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/lpVG0Wwz6fQ/maxresdefault.jpg (page: https://www.artstation.com/artwork/oOmDXw | Playing as bosses! | PvZ GW2 modded - YouTube - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T20:42:03.332718+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/38atyJjiE44/maxresdefault.jpg (page: https://www.youtube.com/watch?v=lpVG0Wwz6fQ | Plants vs Zombies Garden Warfare 2 Boss Gargantuar Gam - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T20:42:03.331327+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/jI9NNtEvNfk/maxresdefault.jpg (page: https://www.youtube.com/watch?v=38atyJjiE44 | Plants Vs Zombies GW2 Mod - Playing as Yeti boss (PC)  - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-26T20:42:03.330029+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T20:42:03.327022+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T20:42:03.200234+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T20:42:03.063575+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-      "created_at": "2026-11-26T20:42:03.002953+00:00",
       "card": ""
     }
   ]
