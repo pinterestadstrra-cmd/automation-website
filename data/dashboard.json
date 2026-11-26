@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T16:40:51.137328+00:00",
-  "last_run": "2026-11-26T16:40:36.335287+00:00",
-  "runs": 138,
+  "generated_at": "2026-11-26T16:52:21.819827+00:00",
+  "last_run": "2026-11-26T16:45:35.559386+00:00",
+  "runs": 139,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 3,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 3,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T15:41:51.891274+00:00",
-    "mastodon.social": "2026-11-26T15:43:11.021123+00:00"
+    "Adsterra Blogger": "2026-11-26T16:50:34.557690+00:00",
+    "mastodon.social": "2026-11-26T16:52:21.665994+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 60,
+      "success": 61,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T15:41:51.891271+00:00"
+      "last_run": "2026-11-26T16:50:34.557687+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 8,
+      "fail": 9,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T15:43:11.021121+00:00"
+      "last_run": "2026-11-26T16:52:21.665989+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T15:41:51.891274+00:00",
-      "runs_today": 13,
+      "last_run": "2026-11-26T16:50:34.557690+00:00",
+      "runs_today": 14,
       "posts_today": 19,
       "next_runs": [
-        "2026-11-26T22:41:51.891274+06:00",
-        "2026-11-26T22:56:51.891274+06:00",
-        "2026-11-26T23:11:51.891274+06:00",
-        "2026-11-26T23:26:51.891274+06:00",
-        "2026-11-26T23:41:51.891274+06:00"
+        "2026-11-26T23:05:34.557690+06:00",
+        "2026-11-26T23:20:34.557690+06:00",
+        "2026-11-26T23:35:34.557690+06:00",
+        "2026-11-26T23:50:34.557690+06:00",
+        "2026-11-27T00:05:34.557690+06:00"
       ],
       "next_post_times": [
         "2026-11-26T23:01:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-27T02:02:00+06:00",
         "2026-11-27T03:07:00+06:00"
       ],
-      "success": 60,
+      "success": 61,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T15:43:11.021123+00:00",
-      "runs_today": 13,
+      "last_run": "2026-11-26T16:52:21.665994+00:00",
+      "runs_today": 14,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T22:43:11.021123+06:00",
-        "2026-11-26T22:58:11.021123+06:00",
-        "2026-11-26T23:13:11.021123+06:00",
-        "2026-11-26T23:28:11.021123+06:00",
-        "2026-11-26T23:43:11.021123+06:00"
+        "2026-11-26T23:07:21.665994+06:00",
+        "2026-11-26T23:22:21.665994+06:00",
+        "2026-11-26T23:37:21.665994+06:00",
+        "2026-11-26T23:52:21.665994+06:00",
+        "2026-11-27T00:07:21.665994+06:00"
       ],
       "next_post_times": [
         "2026-11-26T22:59:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T03:09:00+06:00"
       ],
       "success": 16,
-      "fail": 8,
+      "fail": 9,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 13
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T16:40:36.336761+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T16:40:36.338047+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T16:45:35.560951+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
+    "Trump calls GDP revision fake",
+    "Birthday twin spectrum prompt",
     "Musk pledges kids SpaceX shares",
     "Macy's parade postponed to Saturday",
     "Aaron Rodgers reportedly out",
-    "Kushner praises Putin's restraint",
     "Rockstar UK union vote",
-    "UK net migration falls to 77,000",
     "Grand Theft Auto VI",
-    "Birthday twin spectrum prompt",
-    "Duran Duran's Andy Taylor dies"
+    "Describe a film without its name",
+    "Vance blames Obama for detonation"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T16:40:50.897014+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T16:40:50.894578+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-26T16:40:50.601657+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T16:40:36.339243+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T16:40:36.338055+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T16:40:36.336770+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #138 started (--only blogger)",
-      "created_at": "2026-11-26T16:40:36.335306+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T15:43:11.181163+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Kushner praises Putin's restraint\", 'Aaron Rodgers reportedly out', 'UK net migration falls to 77,000', 'Grand Theft Auto VI']",
-      "created_at": "2026-11-26T15:43:11.175324+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T15:43:11.021156+00:00",
+      "created_at": "2026-11-26T16:52:21.666030+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-26T15:43:11.020100+00:00",
+      "created_at": "2026-11-26T16:52:21.664847+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T15:43:11.018561+00:00",
+      "created_at": "2026-11-26T16:52:21.663223+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T15:43:00.991167+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T15:43:00.461504+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T15:43:00.459304+00:00",
+      "created_at": "2026-11-26T16:52:11.660576+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T15:42:55.000732+00:00",
+      "created_at": "2026-11-26T16:52:06.459410+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T15:42:54.975265+00:00",
+      "created_at": "2026-11-26T16:52:06.456856+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T15:42:54.690024+00:00",
-      "card": ""
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-26T16:51:55.348080+00:00",
+      "card": "mastodon.social"
     },
     {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T15:42:54.687799+00:00",
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-26T16:51:55.284066+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war latest: Kremlin responds after Trump and NATO wa' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-26T15:42:34.594319+00:00",
+      "message": "promo: photo search done - 12 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-26T16:51:55.283078+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-26T15:42:34.593226+00:00",
+      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+      "created_at": "2026-11-26T16:51:55.282088+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: Kremlin responds after Trump and NATO wa': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-      "created_at": "2026-11-26T15:42:34.592093+00:00",
+      "message": "promo: story 6/6 tried: 'Estimates of Russians killed in Ukraine surpass all combined' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T16:51:55.280885+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Ukraine war latest: Kremlin responds after Trump a' (, the photo shows Ukrainian President Volodymyr Zelenskyy, who is the central figure associated with the Ukraine war mentioned in the headline.)",
-      "created_at": "2026-11-26T15:42:34.590618+00:00",
+      "message": "photo candidate: 'Estimates of Russians killed in Ukraine surpass all combined' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T16:51:55.279888+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
-      "created_at": "2026-11-26T15:42:30.020638+00:00",
+      "message": "photo: no real photo found for 'Estimates of Russians killed in Ukraine surpass all combined US war deaths since WWI - Military Times' (2 download(s) tried)",
+      "created_at": "2026-11-26T16:51:55.278896+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for 'Ukraine war latest: Kremlin responds after Trump a' (The photo shows women in traditional Slavic dress in a forest, unrelated to the Ukraine war.)",
-      "created_at": "2026-11-26T15:42:30.019193+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/201709450-space-phone-dark-phone-space-oled-hd-phone-wallpaper.jpg (page: https://wallpaperbat.com/4k-oled-galaxy-wallpapers | 4K OLED Space Wallpapers - 4k, HD Backgrounds o - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.277764+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-26T15:42:14.045425+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/30205778-phone-oled-space-wallpaper.png (page: https://wallpaperbat.com/4k-oled-space-wallpapers | OLED Space Wallpapers - 4k, HD Backgrounds on Wa - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.276640+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-26T15:42:13.882477+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/29158217-amoled-black-space-wallpaper.jpg (page: https://wallpaperbat.com/oled-space | 4K OLED Space Wallpapers - 4k, HD Backgrounds on WallpaperBat - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.275393+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
-      "created_at": "2026-11-26T15:42:13.731043+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpapercave.com/wp/wp7091599.jpg (page: https://wallpaperbat.com/4k-oled-space-wallpapers | Oled Space Wallpapers - Wallpaper Cave - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.274244+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-26T15:42:13.632739+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/5166/5222953275_5b1ea294e3_b.jpg (page: https://www.flickr.com/photos/71401718@N00/5222953275 | Computer laptop information station for writ - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.273100+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:13.192408+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2865/13873744025_421692cec7_b.jpg",
+      "created_at": "2026-11-26T16:51:55.271623+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:13.191453+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_Embryo_-_Approximately_8_weeks_estimated_g (page: https://commons.wikimedia.org/w/index.php?curid=5840564 | File:Human Embryo - Approximately 8 weeks  - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.226460+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Ukraine war latest: Kremlin responds after Trump a' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-26T15:42:13.190495+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/2675/3794906215_02d0be6285_b.jpg (page: https://www.flickr.com/photos/36913103@N03/3794906215 | Gold from eastern Congo. The war in Congo is - page does not name the entity (Estimates))",
+      "created_at": "2026-11-26T16:51:55.225286+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:13.189455+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/48412616647_d2ea108f07_b.jpg",
+      "created_at": "2026-11-26T16:51:55.223629+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:13.188080+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Estimates'",
+      "created_at": "2026-11-26T16:51:55.176631+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:13.088621+00:00",
+      "message": "google-images: 0 candidate(s) for 'Estimates'",
+      "created_at": "2026-11-26T16:51:55.031849+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:13.087317+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Estimates'",
+      "created_at": "2026-11-26T16:51:54.900007+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest Kremlin responds'",
-      "created_at": "2026-11-26T15:42:13.075585+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war latest Kremlin responds'",
-      "created_at": "2026-11-26T15:42:12.889247+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest Kremlin responds'",
-      "created_at": "2026-11-26T15:42:12.755733+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war latest Kremlin responds'",
-      "created_at": "2026-11-26T15:42:12.671105+00:00",
+      "message": "openverse: 5 result(s) for 'Estimates'",
+      "created_at": "2026-11-26T16:51:54.839797+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:12.158951+00:00",
+      "created_at": "2026-11-26T16:51:54.806076+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:12.157914+00:00",
+      "created_at": "2026-11-26T16:51:54.804986+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://keywestattractions.org/wp-content/uploads/2022/11/Schooner-Wharf-Lighted-Boat-Parade.jpg (page: Schooner Wharf Lighted Boat Parade – Key West Attractions Association - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:12.156730+00:00",
+      "message": "photo: topical search found nothing for 'Estimates of Russians killed in Ukraine surpass al' - trying entity search 'Estimates'",
+      "created_at": "2026-11-26T16:51:54.803017+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:12.128369+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://clip.cafe/img16x9/crixus-s5.jpg (page: https://www.pinterest.com/pin/spartacus-naevia-and-crixus--417568196682451669/ | Crixus. Gannicus an - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.801859+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:12.002713+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/9f/f8/29/9ff829b3a8fc765f94141979c7f984e8.jpg (page: https://clip.cafe/spartacus-2010/crixus-s5/ | Spartacus - Naevia and Crixus - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.800469+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:11.863240+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.wallpapersafari.com/32/12/N3sQDu.jpg (page: https://it.pinterest.com/pin/334955291018992113/ | 🔥 Free Download Crixus Naevia Spartacus Blood San - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.799152+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:11.778618+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): http://www.postavy.cz/obrazky/crixus-90456.jpg (page: https://wallpapersafari.com/w/N3sQDu | Crixus - Spartacus - POSTAVY.cz - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.797794+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
+      "created_at": "2026-11-26T16:51:54.795248+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
+      "created_at": "2026-11-26T16:51:54.696594+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Estimates Russians killed Ukraine surpass'",
+      "created_at": "2026-11-26T16:51:54.560174+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Estimates Russians killed Ukraine surpass'",
+      "created_at": "2026-11-26T16:51:54.501048+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:11.256882+00:00",
+      "created_at": "2026-11-26T16:51:54.465137+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:11.255951+00:00",
+      "created_at": "2026-11-26T16:51:54.464045+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://i.dailymail.co.uk/1s/2025/04/17/17/97396947-14622937-Gillis_pictured_with_girlfriend_Grace_B (page: https://www.red94.net/news/63280-shane-gillis-splits-from-girlfriend-grace-brassel-after-11-month-re - only 1 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:11.254990+00:00",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://www.celebritystyleguide.com/wp-content/uploads/2021/07/Emma-Watson-Floral-Dress.jpg (page: https://www.pinterest.com/pin/856880266595577262/ | Emma Watson's Floral Dress - Celebrity Style Gui - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.462983+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://1.bp.blogspot.com/-0nnY_W3U0pM/VyY0zTXHlyI/AAAAAAACAGI/07KbM2lD1CY7Up5_6MAalUqKUmFWSusYACLcB (page: https://www.celebritystyleguide.com/celebrity-style-post/j-mendel-floral-dress/ | Emma Watson wears  - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.460934+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/0d/f0/a3/0df0a36357cee074cb0a0ef29651f2e9.jpg (page: https://www.myfacehunter.com/2016/05/emma-watson-wears-strapless-floral-look.html | Emma Watson atte - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.459668+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.justjared.com/wp-content/uploads/2014/03/watson-nycafter/emma-watson-floral-fierce-noah- (page: https://www.pinterest.com/pin/emma-watson-attended-the-premiere-of-the-circle-at-ugc-normandie-in-pa - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.458388+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
+      "created_at": "2026-11-26T16:51:54.455854+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
+      "created_at": "2026-11-26T16:51:54.357350+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Estimates of Russians killed in Ukraine surpass all combined'",
+      "created_at": "2026-11-26T16:51:54.165656+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
+      "created_at": "2026-11-26T16:51:54.091637+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T16:51:54.037545+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T16:51:54.036150+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/173045-download-neon-city-4k-5k-wallpapers-free-download-hd-wallpapers. (page: https://wallpaperbat.com/neon-landscape-wallpapers | Neon City Wallpapers - 4k, HD Backgrounds on Wa - only 0 of 13 key entities in the source page)",
+      "created_at": "2026-11-26T16:51:54.034766+00:00",
       "card": ""
     }
   ]

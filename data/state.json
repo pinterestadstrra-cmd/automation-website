@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 138,
-  "last_run": "2026-11-26T16:40:36.335287+00:00",
+  "runs": 139,
+  "last_run": "2026-11-26T16:45:35.559386+00:00",
   "bsky_post_counts": {
     "2026-11-23": {
       "primotodaynews.bsky.social": 2,
@@ -358,24 +358,24 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 60,
+      "success": 61,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T15:41:51.891271+00:00"
+      "last_run": "2026-11-26T16:50:34.557687+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 8,
+      "fail": 9,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T15:43:11.021121+00:00"
+      "last_run": "2026-11-26T16:52:21.665989+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T15:41:51.891274+00:00",
-    "mastodon.social": "2026-11-26T15:43:11.021123+00:00"
+    "Adsterra Blogger": "2026-11-26T16:50:34.557690+00:00",
+    "mastodon.social": "2026-11-26T16:52:21.665994+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -384,26 +384,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-26",
-      "count": 13
+      "count": 14
     },
     "mastodon.social": {
       "date": "2026-11-26",
-      "count": 13
+      "count": 14
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T16:40:36.336761+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T16:40:36.338047+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T16:45:35.560951+00:00"
     }
   ],
   "posted_urls": [],
@@ -483,7 +477,10 @@
     "at://did:plc:vxgbwth4iavkjahiqlqh6v6v/app.bsky.feed.post/3n37rfl3q722a",
     "at://did:plc:psvm6vz63ao3tww6ko3xi32o/app.bsky.feed.post/3n37yvhwcg222",
     "at://did:plc:d2bl2utudkpig7wh6mrjl5sg/app.bsky.feed.post/3n37z5bg3uc2e",
-    "at://did:plc:4ghka4wo7znwir2xjlzzlkmo/app.bsky.feed.post/3n37z5qa7qc2y"
+    "at://did:plc:4ghka4wo7znwir2xjlzzlkmo/app.bsky.feed.post/3n37z5qa7qc2y",
+    "at://did:plc:ufw46p4u3pvhdq2wrledkess/app.bsky.feed.post/3n3a4rhytvc2y",
+    "at://did:plc:tap7kaeru5urgcpjdgpzvccc/app.bsky.feed.post/3n3a4m2afd22h",
+    "at://did:plc:psvm6vz63ao3tww6ko3xi32o/app.bsky.feed.post/3n37z73g2ik22"
   ],
   "file_card_retries": {
     "BlueSky Trend": {
@@ -491,7 +488,7 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 8,
+      "fails": 9,
       "next_retry": ""
     }
   },
@@ -561,29 +558,29 @@
   "file_card_reply_counts": {
     "Adsterra Blogger": {
       "day": "2026-11-26",
-      "n": 33
+      "n": 36
     }
   },
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "USA political news",
-        "headline": "Beyond Red vs. Blue: The Political Typology - Pew Research Center",
-        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Beyond_Red_vs._Blue-_Millennial_Perspectives_on_Reuniting_America.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "photo_source": "openverse",
-        "photo_alt": "Beyond Red vs. Blue- Millennial Perspectives on Reuniting America",
-        "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMXRYVl9XZUNveDdDemhrNFNJRlpOSk1zNEVLOVRHMG1ieDB3cC1IVndQclZLdDdrSEMweHlUSEJuakxPWlJYa29zWUo3WFdGOGE1SENqYWZKSThjNlR2MHVocnpvNXJubTVQTzBvZW00U094ZS1KTlBKU0F5bDhYUXVJRzFrazFuZFhJRHkxOHpnWXQz?oc=5",
-        "hook": "Forget everything you thought you knew about Red vs. Blue. Pew Research just dropped a massive new study that shatters the standard political playbook. This changes EVERYTHING.",
-        "prepared_at": "2026-11-26T15:41:36.708769+00:00"
+        "topic": "war news",
+        "headline": "Trump, NATO chief caution Russia as attacks on Ukraine’s energy infrastructure intensify - CNBC",
+        "photo_url": "https://images.inkl.com/s3/article/lead_image/24107144/vladimir-putin-donald-trump.jpg",
+        "photo_source": "bing-images",
+        "photo_alt": "Trump, NATO chief caution Russia as attacks on Ukraine’s energy infrastructure intensify - CNBC",
+        "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1UYkNOcV9TeElnTHlhSTRvWktGNmtNRS1fWGcxQUtKX3I1b0dhRkkxLUE4VW1XUC01UXVUd1FGVjh0aGdHVTBGVHJvbVdsMjZ3bDR0UC0xSTRVYzRWSU1vbHJoanNBZnhzYkkzQUZYWGNIWDR0bmtEMlluQTjSAYIBQVVfeXFMTVBta3Z1MXJQQ1htZ3AtNExvaW5wTlg5TFRyWDdBdUVjX3o3MjFqOE9pcDVFNm9iQjEwMkpDOGZpWldTX2VhUW5FX3ZTekQ1V0JDbzdtamxsRkpWLUtDSmNySWt3M1N2MmhLcW4xdTJhRnhLNTBXaVJFNm9zR0V4OVNwUQ?oc=5",
+        "hook": "Trump and the NATO chief just stepped in. As Russia relentlessly pounds Ukraine's power grid, a major escalation is unfolding right now.",
+        "prepared_at": "2026-11-26T16:47:53.661074+00:00"
       }
     ]
   },
   "mastodon_post_counts": {
-    "2026-11-26": {
-      "mastodon.social": 6
-    },
     "2026-11-25": {
       "mastodon.social": 9
+    },
+    "2026-11-26": {
+      "mastodon.social": 6
     }
   },
   "last_mastodon_post_at": {
