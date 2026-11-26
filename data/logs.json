@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T02:38:20.520674+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Duran Duran's Andy Taylor dies\", 'Describe a film without its name', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa']",
+    "created_at": "2026-11-26T02:38:20.516116+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T02:38:20.175185+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T02:38:20.170722+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T02:38:19.869296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T02:38:18.694206+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T02:38:18.693189+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T02:38:18.692150+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #116 started (--only blogger)",
+    "created_at": "2026-11-26T02:38:18.690797+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T02:02:44.875424+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Book'",
     "created_at": "2026-11-26T02:02:18.033715+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (mime=image/gif): https://upload.wikimedia.org/wikipedia/commons/e/e8/Newtons_cradle_animation_book.gif?utm_source=com",
-    "created_at": "2026-11-26T02:02:17.840255+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Book'",
-    "created_at": "2026-11-26T02:02:17.838704+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Book'",
-    "created_at": "2026-11-26T02:02:17.502241+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:16.948623+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:16.947707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for ''Ba's Book' Explores Family Bonds Impacted By Viet' - trying entity search 'Book'",
-    "created_at": "2026-11-26T02:02:16.946843+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://cellrive.com/wp-content/uploads/2025/10/revolutionizing-parkinsons-treatment-ohsus-pioneerin (page: https://www.sovereign-usa.com/post/the-benefits-of-incisionless-surgery-faster-recovery-and-enhanced - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:16.945973+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://sis-org.ai/wp-content/uploads/2026/03/headshot-jay-redan.jpg (page: https://cellrive.com/revolutionizing-parkinsons-treatment-ohsus-pioneering-incisionless-surgery/ | L - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:16.945042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://gchfoundation.org.au/wp-content/uploads/2024/07/GCHF-Screen-2.jpg (page: https://sis-org.ai/leadership/ | Incisionless surgery on the brain, that is changing lives. - GC ... - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:16.944063+00:00",
     "card": ""
   }
 ]
