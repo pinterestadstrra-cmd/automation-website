@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T02:38:20.520674+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Duran Duran's Andy Taylor dies\", 'Describe a film without its name', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa']",
-    "created_at": "2026-11-26T02:38:20.516116+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T02:38:20.175185+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T02:38:20.170722+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T02:38:19.869296+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T02:38:18.694206+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T02:38:18.693189+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T02:38:18.692150+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #116 started (--only blogger)",
-    "created_at": "2026-11-26T02:38:18.690797+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T02:02:44.875424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'FEMA hotline unanswered in Iowa', 'Describe a film without its name', \"Duran Duran's Andy Taylor dies\", 'Aaron Rodgers reportedly out']",
-    "created_at": "2026-11-26T02:02:44.870357+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-26T02:02:44.573033+00:00",
+    "created_at": "2026-11-26T02:59:44.593554+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T02:02:44.571907+00:00",
+    "created_at": "2026-11-26T02:59:44.592456+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680279712179327",
-    "created_at": "2026-11-26T02:02:44.570504+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680503827491832",
+    "created_at": "2026-11-26T02:59:44.591212+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117680279712179327",
-    "created_at": "2026-11-26T02:02:44.567798+00:00",
+    "message": "mastodon: posted to mastodon.social: 117680503827491832",
+    "created_at": "2026-11-26T02:59:44.588833+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T02:02:34.680265+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T02:02:34.568778+00:00",
+    "message": "photo candidate: 'Ukraine attacks Russian military base, says five planes stru' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-26T02:59:24.228561+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 18 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T02:02:34.567808+00:00",
+    "message": "promo category: war news",
+    "created_at": "2026-11-26T02:59:24.227519+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-    "created_at": "2026-11-26T02:02:34.566917+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine attacks Russian military base, says five planes stru': https://www.reporterworldnews.com/storage/gallery/2026/11/02/ukraine.jpg (from bing-images, query 'Ukraine attacks Russian military base, says five planes struck - Al Jazeera', page: https://news.sky.com/story/ukraine-news-live-turkey-will-not-approve-finland-and-swedens-nato-bids-u - matches 2 key entities (russian, ukraine))",
+    "created_at": "2026-11-26T02:59:24.226272+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 6/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T02:02:34.566039+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:24.224983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://cryptopotato.com/wp-content/uploads/2022/03/Ukraine.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:24.099115+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:24.097728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine attacks Russian military base, says five p'): https://www.ukrainianworldcongress.org/wp-content/uploads/2026/11/kyiv-ukraine-january-2014-ukrainia (page: https://cryptorank.io/news/feed/380c5-ukraine-passes-bill-to-legalize-bitcoin-and-crypto-sets-18-tax - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:23.972710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+    "created_at": "2026-11-26T02:59:23.971014+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+    "created_at": "2026-11-26T02:59:23.785511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+    "created_at": "2026-11-26T02:59:23.607223+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+    "created_at": "2026-11-26T02:59:23.230167+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:21.754573+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:21.753489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine attacks Russian military base, says five planes stru' - rejected (no og:image)",
+    "created_at": "2026-11-26T02:59:21.752207+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipgFBVV95cUxOcnZLbDdzMzg2dFlMM0c3d2FkbHpsRTB5Uk1QampGSXI4Sk9lZDRxZDA1LWFBVDVtaGl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T02:59:21.521480+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-26T02:59:21.054990+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-26T02:59:21.053695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 4/6 tried: 'Iran developing chemical weapons, Israeli defense minister s' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:59:21.052026+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T02:59:21.050950+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Iran developing chemical weapons, Israeli defense minister says - CBS News' (12 download(s) tried)",
+    "created_at": "2026-11-26T02:59:21.049790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: download budget reached (12) - stopping",
+    "created_at": "2026-11-26T02:59:21.048682+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Iranian_Tiles_1.JPG/1280px-Iranian_Tiles_1. (page: https://commons.wikimedia.org/wiki/File:Iranian_Tiles_1.JPG | File:Iranian Tiles 1.JPG - page does not name the entity (Iran))",
+    "created_at": "2026-11-26T02:59:21.047578+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Anti-IR_Iran_demonstration_Sofia_2026-02-15 - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:21.046156+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:21.044887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3164/3063189829_17b63b86da_b.jpg",
+    "created_at": "2026-11-26T02:59:20.875937+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1701/26028309594_b402f61d29_b.jpg",
+    "created_at": "2026-11-26T02:59:20.798225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg",
+    "created_at": "2026-11-26T02:59:20.718407+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
+    "created_at": "2026-11-26T02:59:20.651603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
+    "created_at": "2026-11-26T02:59:20.575129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T02:59:20.494965+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T02:59:20.268831+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Iran'",
+    "created_at": "2026-11-26T02:59:20.080155+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Iran'",
+    "created_at": "2026-11-26T02:59:19.677525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:19.597663+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:19.596595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Iran developing chemical weapons, Israeli defense ' - trying entity search 'Iran'",
+    "created_at": "2026-11-26T02:59:19.593233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg (page: https://cebudailynews.inquirer.net/787919/singer-parastoo-ahmadi-flogged-by-iran-authorities-over-co - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:19.589711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T02:59:19.588212+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:19.535987+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:19.534466+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:19.425870+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran developing chemical weapons Israeli'",
+    "created_at": "2026-11-26T02:59:19.422610+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran developing chemical weapons Israeli'",
+    "created_at": "2026-11-26T02:59:19.251797+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iran developing chemical weapons Israeli'",
+    "created_at": "2026-11-26T02:59:19.063557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran developing chemical weapons Israeli'",
+    "created_at": "2026-11-26T02:59:18.677929+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:18.636975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:18.635825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg (page: https://cebudailynews.inquirer.net/787919/singer-parastoo-ahmadi-flogged-by-iran-authorities-over-co - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:18.634513+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T02:59:18.632987+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:18.581037+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:18.579579+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:18.493007+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:18.491009+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:18.291502+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:18.141578+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:18.038495+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:17.965408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:17.964273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg (page: https://cebudailynews.inquirer.net/787919/singer-parastoo-ahmadi-flogged-by-iran-authorities-over-co - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:17.963120+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T02:59:17.961730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:17.907062+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:17.905910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:17.811459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:17.809480+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:17.608141+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:17.450323+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran developing chemical weapons, Israeli defense minister s'",
+    "created_at": "2026-11-26T02:59:17.389192+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:17.330207+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:17.329129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - rejected (no og:image)",
+    "created_at": "2026-11-26T02:59:17.327665+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxORUlsRWg2Szd1Z3JjWkRCcFVMdTh1cDhrT0lxUEZ0UXRHVjZ5QWJaSWRFVmxfT2Nlcnp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T02:59:17.325571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+    "created_at": "2026-11-26T02:59:16.739392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
+    "created_at": "2026-11-26T02:59:16.326263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:59:16.324873+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T02:59:16.323887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (8 download(s) tried)",
+    "created_at": "2026-11-26T02:59:16.322836+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Parapente_-_158.jpg/1280px-Parapente_-_158. (page: https://commons.wikimedia.org/wiki/File:Parapente_-_158.jpg | File:Parapente - 158.jpg - page does not name the entity (Tracking))",
+    "created_at": "2026-11-26T02:59:16.321745+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Global_tropical_cyclone_tracks-edit2.jpg/12 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:16.320596+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:16.319385+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://upload.wikimedia.org/wikipedia/commons/b/ba/Eye_Gaze_Autism_1.png?utm_source=commons.wikimed (page: https://commons.wikimedia.org/wiki/File:Eye_Gaze_Autism_1.png | File:Eye Gaze Autism 1.png - page does not name the entity (Tracking))",
+    "created_at": "2026-11-26T02:59:16.187061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Avalanche_of_snow_across_railroad_tracks_in - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:16.185904+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:16.184524+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Animal_tracking_in_fiji.JPG/1280px-Animal_t - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:16.067820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:16.066166+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
+    "created_at": "2026-11-26T02:59:15.937332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
+    "created_at": "2026-11-26T02:59:15.877211+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
+    "created_at": "2026-11-26T02:59:15.796517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
+    "created_at": "2026-11-26T02:59:15.725983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
+    "created_at": "2026-11-26T02:59:15.656328+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 0 candidate(s) for 'Tracking'",
+    "created_at": "2026-11-26T02:59:15.569366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking'",
+    "created_at": "2026-11-26T02:59:15.413263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Tracking'",
+    "created_at": "2026-11-26T02:59:15.238069+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Tracking'",
+    "created_at": "2026-11-26T02:59:15.180182+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:15.107001+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:15.105785+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
+    "created_at": "2026-11-26T02:59:15.104560+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.etsystatic.com/36331390/r/il/7f7414/7099257761/il_fullxfull.7099257761_79wl.jpg (page: https://www.etsy.com/listing/4341135719/lapis-lazuli-healing-crystal-pyramid | Lapis Lazuli Healing  - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:15.103425+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.etsystatic.com/20860012/r/il/ff79c6/3006372114/il_fullxfull.3006372114_ogug.jpg (page: https://www.etsy.com/listing/4341135719/lapis-lazuli-healing-crystal-pyramid - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:15.102241+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.etsystatic.com/26128885/r/il/7b24d8/3053145213/il_fullxfull.3053145213_t5gy.jpg (page: https://www.etsy.com/listing/998863371/small-lapis-lazuli-crystal-towers-12 | Lapis Lazuli Grid Crys - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:15.101089+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://loveheartgift.com/wp-content/uploads/2023/09/lapis-lazuli-crystal-grid-seven-star-array.jpg (page: https://www.etsy.com/listing/984133034/lapis-lazuli-grid-crystals-double | Crystal Grid Seven Star A - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:15.099851+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T02:59:15.097367+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T02:59:14.890039+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T02:59:14.716217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T02:59:14.660317+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:14.621428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:14.612674+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://clickamericana.com/wp-content/uploads/1970s-dresses-Summer-classics-for-juniors-770x1074.jpg (page: https://storage.googleapis.com/dpblzlplboyqve/dresses-worn-in-1970s.html | The most popular 1970 dre - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:14.611454+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://vintagedancer.com/wp-content/uploads/1970s-formal-dress-cocktail-party-500-454x1536.jpg (page: https://clickamericana.com/topics/beauty-fashion/vintage-clothing/the-most-popular-1970-dresses-were - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:14.610234+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.pinimg.com/originals/ee/15/3e/ee153e1015f8a605c22b2021cd3dff3b.jpg (page: https://vintagedancer.com/1970s/1970s-formal-dress-evening-gown-history/ | Pin on 1970s fashion - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:14.608770+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.pinimg.com/736x/8b/8c/f7/8b8cf7ba0629775defc4fbb84895cf8e.jpg (page: https://uk.pinterest.com/pin/1970s-fashion--473933560791657994/ | Mini Dresses In The 70S at Jacob F - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:14.607515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T02:59:14.605255+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T02:59:14.384883+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T02:59:14.192722+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T02:59:14.132794+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:14.086250+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:14.081638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://byzantinechurchsupplies.com/wp-content/uploads/2020/12/IMG_4781.jpg (page: Gospel Book in Metal Cover – Byzantine Church Supplies - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:14.080513+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T02:59:14.078378+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T02:59:13.887814+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T02:59:13.722096+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T02:59:13.661280+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:13.615887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T02:59:13.614840+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no og:image)",
+    "created_at": "2026-11-26T02:59:13.613611+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTUZubnNDTkxCZmFWbDRoSVY1SFhVblZ2Y3RRNThYS0tSTzg1VDVMWEctd2VaMzA0M2F) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T02:59:13.611120+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - skipped (same event used within 24h, event key 'corruption gallup government high news record widespread')",
+    "created_at": "2026-11-26T02:59:13.357080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+    "created_at": "2026-11-26T02:59:13.355620+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T02:59:13.354417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T02:59:13.353352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T02:59:13.339475+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T02:02:34.565113+00:00",
+    "created_at": "2026-11-26T02:59:13.338133+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (6 download(s) tried)",
-    "created_at": "2026-11-26T02:02:34.564165+00:00",
+    "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (11 download(s) tried)",
+    "created_at": "2026-11-26T02:59:13.323962+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - page does not name the entity (Bitter))",
-    "created_at": "2026-11-26T02:02:34.563275+00:00",
+    "created_at": "2026-11-26T02:59:13.322820+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - page does not name the entity (Bitter))",
-    "created_at": "2026-11-26T02:02:34.562372+00:00",
+    "created_at": "2026-11-26T02:59:13.307568+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - page does not name the entity (Bitter))",
-    "created_at": "2026-11-26T02:02:34.561414+00:00",
+    "created_at": "2026-11-26T02:59:13.299469+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T02:02:34.560322+00:00",
+    "created_at": "2026-11-26T02:59:13.298252+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:34.558926+00:00",
+    "created_at": "2026-11-26T02:59:13.296873+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Bitter_Type_3_1Y7A6129.jpg/1280px-Bitter_Ty - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:13.226172+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:13.224788+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Bitter_Corsa_F_1X7A7182.jpg/1280px-Bitter_C - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:13.095002+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:13.093511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Bitter_Astra_L_1X7A7183.jpg/1280px-Bitter_A - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:12.954320+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:12.952951+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Ale_Bitter.jpg/1280px-Ale_Bitter.jpg?utm_so - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:12.825637+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:12.824200+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Adriaen_Brouwer_-_The_Bitter_Potion_-_Googl - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:12.685906+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:12.684564+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
-    "created_at": "2026-11-26T02:02:34.399484+00:00",
+    "created_at": "2026-11-26T02:59:12.533294+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
-    "created_at": "2026-11-26T02:02:34.301061+00:00",
+    "created_at": "2026-11-26T02:59:12.453454+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
-    "created_at": "2026-11-26T02:02:34.207438+00:00",
+    "created_at": "2026-11-26T02:59:12.375624+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
-    "created_at": "2026-11-26T02:02:34.116581+00:00",
+    "created_at": "2026-11-26T02:59:12.299670+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
-    "created_at": "2026-11-26T02:02:34.020533+00:00",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T02:59:12.233123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T02:59:12.231942+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Bitter'",
-    "created_at": "2026-11-26T02:02:33.924083+00:00",
+    "created_at": "2026-11-26T02:59:12.170229+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Bitter'",
-    "created_at": "2026-11-26T02:02:33.688222+00:00",
+    "created_at": "2026-11-26T02:59:11.969747+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Bitter'",
-    "created_at": "2026-11-26T02:02:33.528628+00:00",
+    "message": "wikimedia: 5 result(s) for 'Bitter'",
+    "created_at": "2026-11-26T02:59:11.780321+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'Bitter'",
-    "created_at": "2026-11-26T02:02:33.473308+00:00",
+    "created_at": "2026-11-26T02:59:11.726444+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:33.109584+00:00",
+    "created_at": "2026-11-26T02:59:11.678549+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:33.108712+00:00",
+    "created_at": "2026-11-26T02:59:11.677545+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
-    "created_at": "2026-11-26T02:02:33.107833+00:00",
+    "created_at": "2026-11-26T02:59:11.676543+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:33.106872+00:00",
+    "created_at": "2026-11-26T02:59:11.675478+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:33.105957+00:00",
+    "created_at": "2026-11-26T02:59:11.674452+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:33.104994+00:00",
+    "created_at": "2026-11-26T02:59:11.673403+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:33.103983+00:00",
+    "created_at": "2026-11-26T02:59:11.672281+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:11.671196+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:11.670096+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:11.668704+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Frances_%28Appleton%29_Longfellow_to_Susan_ (page: https://commons.wikimedia.org/wiki/File:Frances_(Appleton)_Longfellow_to_Susan_(Benjamin)_Stackpole, - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:11.667506+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/A_history_of_all_nations_from_the_earliest_ (page: https://commons.wikimedia.org/wiki/File:A_history_of_all_nations_from_the_earliest_times;_being_a_un - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T02:59:11.665977+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Bitter U S political divide'",
-    "created_at": "2026-11-26T02:02:33.101655+00:00",
+    "created_at": "2026-11-26T02:59:11.663585+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Bitter U S political divide'",
-    "created_at": "2026-11-26T02:02:32.876926+00:00",
+    "created_at": "2026-11-26T02:59:11.482258+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Bitter U S political divide'",
-    "created_at": "2026-11-26T02:02:32.694071+00:00",
+    "message": "wikimedia: 5 result(s) for 'Bitter U S political divide'",
+    "created_at": "2026-11-26T02:59:11.315248+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Bitter U S political divide'",
-    "created_at": "2026-11-26T02:02:32.637998+00:00",
+    "created_at": "2026-11-26T02:59:11.237767+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:32.336273+00:00",
+    "created_at": "2026-11-26T02:59:11.194715+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:32.335268+00:00",
+    "created_at": "2026-11-26T02:59:11.193667+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:32.334322+00:00",
+    "created_at": "2026-11-26T02:59:11.192515+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:32.333365+00:00",
+    "created_at": "2026-11-26T02:59:11.178565+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:32.332110+00:00",
+    "created_at": "2026-11-26T02:59:11.177464+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:32.331074+00:00",
+    "created_at": "2026-11-26T02:59:11.176282+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:32.328886+00:00",
+    "created_at": "2026-11-26T02:59:11.174338+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:32.116318+00:00",
+    "created_at": "2026-11-26T02:59:10.767171+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.961019+00:00",
+    "message": "wikimedia: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:59:10.548818+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.905623+00:00",
+    "created_at": "2026-11-26T02:59:10.490844+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:31.468216+00:00",
+    "created_at": "2026-11-26T02:59:10.427211+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:31.467273+00:00",
+    "created_at": "2026-11-26T02:59:10.426262+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:31.466221+00:00",
+    "created_at": "2026-11-26T02:59:10.425068+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:31.465200+00:00",
+    "created_at": "2026-11-26T02:59:10.424051+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:31.464217+00:00",
+    "created_at": "2026-11-26T02:59:10.422928+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:31.463133+00:00",
+    "created_at": "2026-11-26T02:59:10.421752+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.460816+00:00",
+    "created_at": "2026-11-26T02:59:10.420151+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.275639+00:00",
+    "created_at": "2026-11-26T02:59:10.202324+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.075766+00:00",
+    "message": "wikimedia: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
+    "created_at": "2026-11-26T02:59:10.017630+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Bitter U.S. political divide spurs industry to move you to a'",
-    "created_at": "2026-11-26T02:02:31.014883+00:00",
+    "created_at": "2026-11-26T02:59:09.960364+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:30.569823+00:00",
+    "created_at": "2026-11-26T02:59:09.919408+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:30.568949+00:00",
+    "created_at": "2026-11-26T02:59:09.918354+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no og:image)",
-    "created_at": "2026-11-26T02:02:30.567966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQkZhT3BJZDVXRjNyRzdodmtaakJxY21WZ1VjcGpLOW16UkF2Z3pjRF9saFlLS3NoUzR) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T02:02:30.565845+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 5/6 tried: 'US voters rebuke Trump as Democrats win control of Congress ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T02:02:30.347587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T02:02:30.346413+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'US voters rebuke Trump as Democrats win control of Congress in ‘blue wave’ | US midterm elections 2026 - The Guardian' (5 download(s) tried)",
-    "created_at": "2026-11-26T02:02:30.345527+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://cdn.donmai.us/sample/27/d2/__gundam_aerial_gundam_and_1_more_drawn_by_shiromoca__sample-27d2 (page: https://www.deviantart.com/darkfreedom23/art/gundam-aerial-941823958 | gundam aerial (gundam and 1 m - page does not name the entity (voters))",
-    "created_at": "2026-11-26T02:02:30.344579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://cdn.donmai.us/original/7e/f3/__gundam_aerial_gundam_and_1_more_drawn_by_aron_e__7ef3fbd197d1 (page: https://danbooru.donmai.us/posts/5234514 | gundam aerial (gundam and 1 more) drawn by aron_e | Danbo - page does not name the entity (voters))",
-    "created_at": "2026-11-26T02:02:30.343638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80cbd3d4-497b-4345-b1a4-c71317d60280/dfycv (page: https://danbooru.donmai.us/posts/5986947 | Aerial Gundam By Me by ust2212 on DeviantArt - page does not name the entity (voters))",
-    "created_at": "2026-11-26T02:02:30.342634+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c136b720-d270-4ef3-b2c5-3a4c681dc3ad/dfeku (page: https://www.deviantart.com/ust2212/art/Aerial-Gundam-By-Me-964699950 | GUNDAM AERIAL by yuuiguchi on - page does not name the entity (voters))",
-    "created_at": "2026-11-26T02:02:30.341598+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8040/8025019059_fe8d1cc51c_b.jpg",
-    "created_at": "2026-11-26T02:02:30.340074+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6098/6235829161_d50c21339f_b.jpg",
-    "created_at": "2026-11-26T02:02:30.243104+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7109/8159197152_256e4a4d01_b.jpg",
-    "created_at": "2026-11-26T02:02:30.141803+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1191/4724602875_63431cf258.jpg",
-    "created_at": "2026-11-26T02:02:30.053720+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4042/4366779225_22b5c0b800_m.jpg",
-    "created_at": "2026-11-26T02:02:29.949080+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'voters'",
-    "created_at": "2026-11-26T02:02:29.842357+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'voters'",
-    "created_at": "2026-11-26T02:02:29.606436+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'voters'",
-    "created_at": "2026-11-26T02:02:29.459468+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'voters'",
-    "created_at": "2026-11-26T02:02:29.402129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:29.037339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:29.036374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'US voters rebuke Trump as Democrats win control of' - trying entity search 'voters'",
-    "created_at": "2026-11-26T02:02:29.035457+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:29.034531+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:29.033426+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:29.032404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:29.031367+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump Democrats'",
-    "created_at": "2026-11-26T02:02:29.029253+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump Democrats'",
-    "created_at": "2026-11-26T02:02:28.849269+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump Democrats'",
-    "created_at": "2026-11-26T02:02:28.666071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US voters rebuke Trump Democrats'",
-    "created_at": "2026-11-26T02:02:28.602956+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:28.272633+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:28.271741+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:28.270667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:28.269697+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:28.268711+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:28.267643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:28.265368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:28.062135+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:27.844563+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:27.787685+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:27.390000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:27.389009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://static.vecteezy.com/system/resources/previews/019/895/871/non_2x/geographical-map-of-united- (page: https://printable-us-map.com/labeled-geographical-map-of-usa/ | Geo Map United States Of America Map - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:27.387893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): http://2.bp.blogspot.com/-ye4t_DY4O8M/TCFE3It_ngI/AAAAAAAAAF0/IuDk3hhFIPU/s1600/usa.jpg (page: https://narodnatribuna.info/lists/t/geo-map-united-states-of-america-map/ | BUY RARE COINS: ONE US D - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:27.386941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://worksheets.clipart-library.com/images2/geography-maps/geography-maps-35.jpg (page: http://standardshopee.blogspot.com/2011/02/one-us-dollar-bill-some-interesting.html | Map Of The Us  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:27.385981+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'US voters rebuke Trump as Democrats win control of'): https://printablemapofusa.com/wp-content/uploads/2022/09/usa-detailed-physical-map-n-o-w-1.jpg (page: https://utpaqp.edu.pe/post/map-of-the-us-with-states-labeled/ | Us Geographical Map Labeled – United - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:27.384970+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:27.379791+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:27.179163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:26.997152+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'US voters rebuke Trump as Democrats win control of Congress '",
-    "created_at": "2026-11-26T02:02:26.941214+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:26.390485+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:26.389447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - rejected (no og:image)",
-    "created_at": "2026-11-26T02:02:26.388445+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikwFBVV95cUxPVmdUeDdGZGtQckFXbURIc3pBVW1Bb2ZfdVBMSkI2V05FYm5FQzdOOXB3cUdSelh0S2J) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T02:02:26.386309+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
-    "created_at": "2026-11-26T02:02:25.976987+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
-    "created_at": "2026-11-26T02:02:25.975994+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-26T02:02:25.974938+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
-    "created_at": "2026-11-26T02:02:25.973472+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T02:02:25.438227+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T02:02:25.434427+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'DOW Launches Automated SI Solution for Classification Management - U.S. Department of War (.gov)' (9 download(s) tried)",
-    "created_at": "2026-11-26T02:02:25.433347+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://wallpaperaccess.com/full/13422728.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T02:02:25.432356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:25.430798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image.",
-    "created_at": "2026-11-26T02:02:25.216634+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi",
-    "created_at": "2026-11-26T02:02:25.061624+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://logos.stocktwits-cdn.com/DOW.png - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T02:02:24.487163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:24.485803+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5213/5538883692_05fa7d1112_b.jpg",
-    "created_at": "2026-11-26T02:02:24.267921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2850/9725249858_0998732c71_b.jpg",
-    "created_at": "2026-11-26T02:02:24.176835+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/50/129209518_4b292bacbd_b.jpg",
-    "created_at": "2026-11-26T02:02:24.085267+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8568/16236662916_6331356e5c_b.jpg",
-    "created_at": "2026-11-26T02:02:23.996282+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3192/2899705638_2efe9044e6.jpg",
-    "created_at": "2026-11-26T02:02:23.903283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'DOW'",
-    "created_at": "2026-11-26T02:02:23.784281+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'DOW'",
-    "created_at": "2026-11-26T02:02:23.497656+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'DOW'",
-    "created_at": "2026-11-26T02:02:23.207181+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'DOW'",
-    "created_at": "2026-11-26T02:02:23.143128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:22.738976+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:22.737891+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'DOW Launches Automated SI Solution for Classificat' - trying entity search 'DOW'",
-    "created_at": "2026-11-26T02:02:22.736907+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.735811+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.734728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.733745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.732623+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T02:02:22.730642+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T02:02:22.560202+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T02:02:22.387866+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution'",
-    "created_at": "2026-11-26T02:02:22.326964+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:22.032329+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:22.031410+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.030503+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.029505+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.028468+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:22.027510+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:22.025311+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:21.829628+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:21.612070+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:21.144020+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:20.913933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:20.913062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:20.912185+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:20.911259+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:20.910169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T02:02:20.908965+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:20.902867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:20.713985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:20.542584+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
-    "created_at": "2026-11-26T02:02:20.346129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:19.990747+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T02:02:19.989609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no og:image)",
-    "created_at": "2026-11-26T02:02:19.988075+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
-    "created_at": "2026-11-26T02:02:19.425639+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T02:02:19.424388+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T02:02:19.423209+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for ''Ba's Book' Explores Family Bonds Impacted By Vietnam War - Deadline' (9 download(s) tried)",
-    "created_at": "2026-11-26T02:02:19.422009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static.vecteezy.com/system/resources/previews/036/594/620/non_2x/ai-generated-book-store-adv - image from a clipart/vector host",
-    "created_at": "2026-11-26T02:02:19.420638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:19.419144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.pixabay.com/photo/2019/01/30/08/29/book-3964038_1280.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T02:02:19.296865+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:19.295244+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://webstockreview.net/images/book-clipart-animated-13.png - image file looks like a cartoon/clipart",
-    "created_at": "2026-11-26T02:02:19.171391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T02:02:19.167461+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.clays.co.uk/wp-content/uploads/hero-books.jpg",
-    "created_at": "2026-11-26T02:02:19.020271+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Margaret_Hamilton_-_restoration.jpg/1280px- (page: https://commons.wikimedia.org/wiki/File:Margaret_Hamilton_-_restoration.jpg | File:Margaret Hamilton - page does not name the entity (Book))",
-    "created_at": "2026-11-26T02:02:18.760148+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Liji_2.jpg/1280px-Liji_2.jpg?utm_source=com (page: https://commons.wikimedia.org/wiki/File:Liji_2.jpg | File:Liji 2.jpg - page does not name the entity (Book))",
-    "created_at": "2026-11-26T02:02:18.758913+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Grandes_Heures_Anne_de_Bretagne_Saint_Marc. (page: https://commons.wikimedia.org/wiki/File:Grandes_Heures_Anne_de_Bretagne_Saint_Marc.jpg | File:Grande - page does not name the entity (Book))",
-    "created_at": "2026-11-26T02:02:18.757833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to ''Ba's Book' Explores Family Bonds Impacted By Viet'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/13-11-02-olb-by-RalfR-03.jpg/1280px-13-11-0 (page: https://commons.wikimedia.org/wiki/File:13-11-02-olb-by-RalfR-03.jpg | File:13-11-02-olb-by-RalfR-03 - page does not name the entity (Book))",
-    "created_at": "2026-11-26T02:02:18.756793+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1957/45581470721_7c7492a325_b.jpg",
-    "created_at": "2026-11-26T02:02:18.755270+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2353/2096273707_620c84678e_b.jpg",
-    "created_at": "2026-11-26T02:02:18.657755+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5575/14169669030_c96bde7fe7_b.jpg",
-    "created_at": "2026-11-26T02:02:18.554577+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3611/3649703207_89d5426618_b.jpg",
-    "created_at": "2026-11-26T02:02:18.457587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4088/5062517727_bc6527942b_b.jpg",
-    "created_at": "2026-11-26T02:02:18.364983+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Book'",
-    "created_at": "2026-11-26T02:02:18.249183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Book'",
-    "created_at": "2026-11-26T02:02:18.033715+00:00",
+    "created_at": "2026-11-26T02:59:09.917202+00:00",
     "card": ""
   }
 ]

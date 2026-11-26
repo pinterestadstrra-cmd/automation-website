@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T02:38:20.518836+00:00",
-  "last_run": "2026-11-26T02:38:18.690760+00:00",
-  "runs": 116,
+  "generated_at": "2026-11-26T02:59:44.920133+00:00",
+  "last_run": "2026-11-26T02:55:49.080813+00:00",
+  "runs": 117,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 1,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T02:00:56.768742+00:00",
-    "mastodon.social": "2026-11-26T02:02:44.573017+00:00"
+    "Adsterra Blogger": "2026-11-26T02:58:52.525378+00:00",
+    "mastodon.social": "2026-11-26T02:59:44.593541+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 48,
+      "success": 49,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T02:00:56.768739+00:00"
+      "last_run": "2026-11-26T02:58:52.525376+00:00"
     },
     "mastodon.social": {
-      "success": 12,
+      "success": 13,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T02:02:44.573016+00:00"
+      "last_run": "2026-11-26T02:59:44.593539+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T02:00:56.768742+00:00",
-      "runs_today": 2,
-      "posts_today": 8,
+      "last_run": "2026-11-26T02:58:52.525378+00:00",
+      "runs_today": 3,
+      "posts_today": 9,
       "next_runs": [
-        "2026-11-26T08:45:56.768742+06:00",
-        "2026-11-26T09:00:56.768742+06:00",
-        "2026-11-26T09:15:56.768742+06:00",
-        "2026-11-26T09:30:56.768742+06:00",
-        "2026-11-26T09:45:56.768742+06:00"
+        "2026-11-26T09:13:52.525378+06:00",
+        "2026-11-26T09:28:52.525378+06:00",
+        "2026-11-26T09:43:52.525378+06:00",
+        "2026-11-26T09:58:52.525378+06:00",
+        "2026-11-26T10:13:52.525378+06:00"
       ],
       "next_post_times": [
         "2026-11-26T09:00:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-26T12:09:00+06:00",
         "2026-11-26T12:53:00+06:00"
       ],
-      "success": 48,
+      "success": 49,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T02:02:44.573017+00:00",
-      "runs_today": 2,
-      "posts_today": 8,
+      "last_run": "2026-11-26T02:59:44.593541+00:00",
+      "runs_today": 3,
+      "posts_today": 9,
       "next_runs": [
-        "2026-11-26T08:47:44.573017+06:00",
-        "2026-11-26T09:02:44.573017+06:00",
-        "2026-11-26T09:17:44.573017+06:00",
-        "2026-11-26T09:32:44.573017+06:00",
-        "2026-11-26T09:47:44.573017+06:00"
+        "2026-11-26T09:14:44.593541+06:00",
+        "2026-11-26T09:29:44.593541+06:00",
+        "2026-11-26T09:44:44.593541+06:00",
+        "2026-11-26T09:59:44.593541+06:00",
+        "2026-11-26T10:14:44.593541+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T08:58:00+06:00",
         "2026-11-26T10:00:00+06:00",
         "2026-11-26T11:05:00+06:00",
         "2026-11-26T12:10:00+06:00",
-        "2026-11-26T12:54:00+06:00"
+        "2026-11-26T12:54:00+06:00",
+        "2026-11-26T13:59:00+06:00"
       ],
-      "success": 12,
+      "success": 13,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 3
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T02:38:18.692145+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T02:38:18.693184+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T02:55:49.082120+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Thanksgiving Day celebrations",
-    "Duran Duran's Andy Taylor dies",
-    "Describe a film without its name",
-    "Grand Theft Auto VI",
     "FEMA hotline unanswered in Iowa",
     "Macy's parade turns 100",
-    "Denny's restores Jensen Huang plaque",
+    "Duran Duran's Andy Taylor dies",
+    "Describe a film without its name",
+    "Thanksgiving Day celebrations",
+    "Trump floats Jensen Huang pardon",
     "Aaron Rodgers reportedly out",
-    "ABC licenses FCC court case",
-    "Denny's post backing Jensen Huang"
+    "Grand Theft Auto VI",
+    "Nvidia chip exports to China",
+    "FCC approves SpaceX Starmind satellites"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T02:38:20.175185+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T02:38:20.170722+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-26T02:38:19.869296+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T02:38:18.694206+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T02:38:18.693189+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T02:38:18.692150+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #116 started (--only blogger)",
-      "created_at": "2026-11-26T02:38:18.690797+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T02:02:44.875424+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'FEMA hotline unanswered in Iowa', 'Describe a film without its name', \"Duran Duran's Andy Taylor dies\", 'Aaron Rodgers reportedly out']",
-      "created_at": "2026-11-26T02:02:44.870357+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-26T02:02:44.573033+00:00",
+      "created_at": "2026-11-26T02:59:44.593554+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-26T02:02:44.571907+00:00",
+      "created_at": "2026-11-26T02:59:44.592456+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680279712179327",
-      "created_at": "2026-11-26T02:02:44.570504+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680503827491832",
+      "created_at": "2026-11-26T02:59:44.591212+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117680279712179327",
-      "created_at": "2026-11-26T02:02:44.567798+00:00",
+      "message": "mastodon: posted to mastodon.social: 117680503827491832",
+      "created_at": "2026-11-26T02:59:44.588833+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-26T02:02:34.680265+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-26T02:02:34.568778+00:00",
+      "message": "photo candidate: 'Ukraine attacks Russian military base, says five planes stru' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T02:59:24.228561+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 18 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-26T02:02:34.567808+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T02:59:24.227519+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-26T02:02:34.566917+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo: story 6/6 tried: 'Bitter U.S. political divide spurs industry to move you to a' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T02:02:34.566039+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Bitter U.S. political divide spurs industry to move you to a' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T02:02:34.565113+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Bitter U.S. political divide spurs industry to move you to a more ideologically friendly place - Washington Times' (6 download(s) tried)",
-      "created_at": "2026-11-26T02:02:34.564165+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - page does not name the entity (Bitter))",
-      "created_at": "2026-11-26T02:02:34.563275+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - page does not name the entity (Bitter))",
-      "created_at": "2026-11-26T02:02:34.562372+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - page does not name the entity (Bitter))",
-      "created_at": "2026-11-26T02:02:34.561414+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-      "created_at": "2026-11-26T02:02:34.560322+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine attacks Russian military base, says five planes stru': https://www.reporterworldnews.com/storage/gallery/2026/11/02/ukraine.jpg (from bing-images, query 'Ukraine attacks Russian military base, says five planes struck - Al Jazeera', page: https://news.sky.com/story/ukraine-news-live-turkey-will-not-approve-finland-and-swedens-nato-bids-u - matches 2 key entities (russian, ukraine))",
+      "created_at": "2026-11-26T02:59:24.226272+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T02:02:34.558926+00:00",
+      "created_at": "2026-11-26T02:59:24.224983+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3099/3111180478_d205cb6e7b_b.jpg",
-      "created_at": "2026-11-26T02:02:34.399484+00:00",
+      "message": "photo: rejected (vision down, strict check): https://cryptopotato.com/wp-content/uploads/2022/03/Ukraine.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-26T02:59:24.099115+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3089/2919893591_dcf5db1a96_b.jpg",
-      "created_at": "2026-11-26T02:02:34.301061+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T02:59:24.097728+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1217/729325732_ef1410d7d9_b.jpg",
-      "created_at": "2026-11-26T02:02:34.207438+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine attacks Russian military base, says five p'): https://www.ukrainianworldcongress.org/wp-content/uploads/2026/11/kyiv-ukraine-january-2014-ukrainia (page: https://cryptorank.io/news/feed/380c5-ukraine-passes-bill-to-legalize-bitcoin-and-crypto-sets-18-tax - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T02:59:23.972710+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3146/2569248472_e198b8df04.jpg",
-      "created_at": "2026-11-26T02:02:34.116581+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+      "created_at": "2026-11-26T02:59:23.971014+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4289/35278641720_3a62f03bd0_b.jpg",
-      "created_at": "2026-11-26T02:02:34.020533+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+      "created_at": "2026-11-26T02:59:23.785511+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Bitter'",
-      "created_at": "2026-11-26T02:02:33.924083+00:00",
+      "message": "wikimedia: 0 result(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+      "created_at": "2026-11-26T02:59:23.607223+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Bitter'",
-      "created_at": "2026-11-26T02:02:33.688222+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Bitter'",
-      "created_at": "2026-11-26T02:02:33.528628+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Bitter'",
-      "created_at": "2026-11-26T02:02:33.473308+00:00",
+      "message": "openverse: 0 result(s) for 'Ukraine attacks Russian military base, says five planes stru'",
+      "created_at": "2026-11-26T02:59:23.230167+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T02:02:33.109584+00:00",
+      "created_at": "2026-11-26T02:59:21.754573+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T02:02:33.108712+00:00",
+      "created_at": "2026-11-26T02:59:21.753489+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Bitter U.S. political divide spurs industry to mov' - trying entity search 'Bitter'",
-      "created_at": "2026-11-26T02:02:33.107833+00:00",
+      "message": "photo candidate: 'Ukraine attacks Russian military base, says five planes stru' - rejected (no og:image)",
+      "created_at": "2026-11-26T02:59:21.752207+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:33.106872+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipgFBVV95cUxOcnZLbDdzMzg2dFlMM0c3d2FkbHpsRTB5Uk1QampGSXI4Sk9lZDRxZDA1LWFBVDVtaGl) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T02:59:21.521480+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:33.105957+00:00",
+      "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+      "created_at": "2026-11-26T02:59:21.054990+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:33.104994+00:00",
+      "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-26T02:59:21.053695+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://i.pinimg.com/736x/da/6a/62/da6a62959dfb28258146ec69fefe21c0.jpg (page: https://colorreflections.com/showcase/di-bruno-bros-bottle-shop-window-graphics/ | Bitter: la coctel - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:33.103983+00:00",
+      "message": "promo: story 4/6 tried: 'Iran developing chemical weapons, Israeli defense minister s' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T02:59:21.052026+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Bitter U S political divide'",
-      "created_at": "2026-11-26T02:02:33.101655+00:00",
+      "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T02:59:21.050950+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Bitter U S political divide'",
-      "created_at": "2026-11-26T02:02:32.876926+00:00",
+      "message": "photo: no real photo found for 'Iran developing chemical weapons, Israeli defense minister says - CBS News' (12 download(s) tried)",
+      "created_at": "2026-11-26T02:59:21.049790+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Bitter U S political divide'",
-      "created_at": "2026-11-26T02:02:32.694071+00:00",
+      "message": "photo: download budget reached (12) - stopping",
+      "created_at": "2026-11-26T02:59:21.048682+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Bitter U S political divide'",
-      "created_at": "2026-11-26T02:02:32.637998+00:00",
+      "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Iranian_Tiles_1.JPG/1280px-Iranian_Tiles_1. (page: https://commons.wikimedia.org/wiki/File:Iranian_Tiles_1.JPG | File:Iranian Tiles 1.JPG - page does not name the entity (Iran))",
+      "created_at": "2026-11-26T02:59:21.047578+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Anti-IR_Iran_demonstration_Sofia_2026-02-15 - source page title names only 1 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-26T02:59:21.046156+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T02:59:21.044887+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3164/3063189829_17b63b86da_b.jpg",
+      "created_at": "2026-11-26T02:59:20.875937+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1701/26028309594_b402f61d29_b.jpg",
+      "created_at": "2026-11-26T02:59:20.798225+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg",
+      "created_at": "2026-11-26T02:59:20.718407+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
+      "created_at": "2026-11-26T02:59:20.651603+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
+      "created_at": "2026-11-26T02:59:20.575129+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran'",
+      "created_at": "2026-11-26T02:59:20.494965+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran'",
+      "created_at": "2026-11-26T02:59:20.268831+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Iran'",
+      "created_at": "2026-11-26T02:59:20.080155+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Iran'",
+      "created_at": "2026-11-26T02:59:19.677525+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T02:02:32.336273+00:00",
+      "created_at": "2026-11-26T02:59:19.597663+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T02:02:32.335268+00:00",
+      "created_at": "2026-11-26T02:59:19.596595+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://patch.com/img/cdn/users/86497/2016/02/raw/20160256c49b30677ca.jpg (page: https://allthebitter.com/ | Bittersweet Decision for Alexandria's Bittersweet Cafe | Old Town ... - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:32.334322+00:00",
+      "message": "photo: topical search found nothing for 'Iran developing chemical weapons, Israeli defense ' - trying entity search 'Iran'",
+      "created_at": "2026-11-26T02:59:19.593233+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://static01.nyt.com/images/2016/01/10/nyregion/10JOINTSS-slide-UIWE/10JOINTSS-slide-UIWE-facebo (page: https://patch.com/virginia/oldtownalexandria/bittersweet-decision-alexandrias-bittersweet-cafe | Whe - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:32.333365+00:00",
+      "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg (page: https://cebudailynews.inquirer.net/787919/singer-parastoo-ahmadi-flogged-by-iran-authorities-over-co - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T02:59:19.589711+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Bitter U.S. political divide spurs industry to mov'): https://colorreflections.com/wp-content/uploads/2020/07/IMG_1423.jpg (page: https://www.nytimes.com/slideshow/2016/01/10/nyregion/a-store-where-home-brewers-can-tell-their-stor - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-26T02:02:32.332110+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+      "created_at": "2026-11-26T02:59:19.588212+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-26T02:59:19.535987+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T02:59:19.534466+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Iran developing chemical weapons, Israeli defense '): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T02:59:19.425870+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran developing chemical weapons Israeli'",
+      "created_at": "2026-11-26T02:59:19.422610+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran developing chemical weapons Israeli'",
+      "created_at": "2026-11-26T02:59:19.251797+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Iran developing chemical weapons Israeli'",
+      "created_at": "2026-11-26T02:59:19.063557+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Iran developing chemical weapons Israeli'",
+      "created_at": "2026-11-26T02:59:18.677929+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T02:59:18.636975+00:00",
       "card": ""
     }
   ]
