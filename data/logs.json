@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-26T06:27:57.346086+00:00",
+    "created_at": "2026-11-26T07:31:11.921072+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Victorian Coalition plans sewage privatization', 'Thanksgiving Day celebrations', \"Duran Duran's Andy Taylor dies\", 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa']",
-    "created_at": "2026-11-26T06:27:57.341589+00:00",
+    "message": "trending (bluesky): ['FEMA hotline unanswered in Iowa', \"Duran Duran's Andy Taylor dies\", 'Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Victorian Coalition plans sewage privatization']",
+    "created_at": "2026-11-26T07:31:11.914657+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T06:27:57.210923+00:00",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-26T07:31:11.775843+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': run failed (1/2 retries) - next retry at 14:01 Dhaka",
+    "created_at": "2026-11-26T07:31:11.774677+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-26T07:31:11.772714+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-26T07:31:01.769901+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T06:27:57.209488+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T06:27:56.930130+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T06:27:41.790222+00:00",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T07:31:01.585134+00:00",
     "card": ""
   },
   {
     "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T06:27:41.789564+00:00",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T07:31:01.582813+00:00",
     "card": ""
   },
   {
     "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T06:27:41.788852+00:00",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-26T07:30:56.247808+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-26T07:30:56.245369+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "worker run #122 started (--only blogger)",
-    "created_at": "2026-11-26T06:27:41.787834+00:00",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T07:30:56.073884+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T07:30:56.071275+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-26T06:07:38.579305+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T06:07:38.577923+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117681242690220696",
-    "created_at": "2026-11-26T06:07:38.576437+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117681242690220696",
-    "created_at": "2026-11-26T06:07:38.573864+00:00",
+    "message": "photo candidate: 'Elon Musk says record $446m spending on US midterms was 'pre' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-26T07:29:55.974328+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T06:07:33.148242+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T06:07:33.090287+00:00",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-26T07:29:55.973240+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 21 candidate(s) tried, 4 fresh stories with a photo attempt, 4 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T06:07:33.089158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T06:07:33.087879+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T06:07:33.086719+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, report says - Iran International' (12 download(s) tried)",
-    "created_at": "2026-11-26T06:07:33.085261+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: download budget reached (12) - stopping",
-    "created_at": "2026-11-26T06:07:33.083926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:33.082694+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Elon Musk says record $446m spending on US midterms was 'pre': https://live.staticflickr.com/4172/33486317334_185fc13b3c_b.jpg (from openverse, query 'Elon Musk', page: https://www.flickr.com/photos/44124348109@N01/33486317334 | Elon Musk at TED 2017 - page names the entity (Elon Musk))",
+    "created_at": "2026-11-26T07:29:55.972078+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:33.081203+00:00",
+    "created_at": "2026-11-26T07:29:55.970685+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:33.057458+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Elon Musk'",
+    "created_at": "2026-11-26T07:29:55.936494+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:33.055976+00:00",
+    "message": "google-images: 0 candidate(s) for 'Elon Musk'",
+    "created_at": "2026-11-26T07:29:55.699654+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
-    "created_at": "2026-11-26T06:07:33.027323+00:00",
+    "message": "wikimedia: 5 result(s) for 'Elon Musk'",
+    "created_at": "2026-11-26T07:29:55.561489+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran'",
-    "created_at": "2026-11-26T06:07:32.995833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran'",
-    "created_at": "2026-11-26T06:07:32.882085+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Iran'",
-    "created_at": "2026-11-26T06:07:32.772115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Iran'",
-    "created_at": "2026-11-26T06:07:32.755270+00:00",
+    "message": "openverse: 5 result(s) for 'Elon Musk'",
+    "created_at": "2026-11-26T07:29:55.225091+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:32.720123+00:00",
+    "created_at": "2026-11-26T07:29:45.552333+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:32.718862+00:00",
+    "created_at": "2026-11-26T07:29:45.551302+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Iran-backed Iraqi militia prepares for renewed US-' - trying entity search 'Iran'",
-    "created_at": "2026-11-26T06:07:32.717593+00:00",
+    "message": "photo: topical search found nothing for 'Elon Musk says record $446m spending on US midterm' - trying entity search 'Elon Musk'",
+    "created_at": "2026-11-26T07:29:45.550219+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:32.716151+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://i.pinimg.com/originals/3b/3b/4b/3b3b4bd8e9f629b5e66944e29765b5ad.jpg (page: https://storage.googleapis.com/drabugewncpire/facebook-instagram.html | Cara Login Instagram Melalui - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:45.549146+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:32.714645+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://upleap.com/wp-content/uploads/2023/08/image-4.jpeg (page: https://punyatemaku.blogspot.com/2023/01/cara-login-instagram-melalui-facebook.html | How to Create  - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:45.547910+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
-    "created_at": "2026-11-26T06:07:32.664118+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://thepreviewapp.com/wp-content/uploads/2018/09/cant-login-facebook-instagram-username-password (page: https://upleap.com/blog/how-to-create-instagram-login/ | Instagram Log In Via Facebook – Instagram C - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:45.546549+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:32.638037+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://about.fb.com/wp-content/uploads/2022/09/02_Logging-in.jpg?resize=890%2C775 (page: https://youthopp.org/instagram-log-in-via-facebook-instagram-connect-to-facebook/ | Making it Easier - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:45.545225+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:32.636751+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Elon Musk says record 446m'",
+    "created_at": "2026-11-26T07:29:45.542838+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:32.611185+00:00",
+    "message": "google-images: 0 candidate(s) for 'Elon Musk says record 446m'",
+    "created_at": "2026-11-26T07:29:45.429781+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/100_ARW_supports_Airstrikes_%288231116%29.j (page: https://commons.wikimedia.org/wiki/File:100_ARW_supports_Airstrikes_(8231116).jpg | File:100 ARW sup - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:32.609926+00:00",
+    "message": "wikimedia: 0 result(s) for 'Elon Musk says record 446m'",
+    "created_at": "2026-11-26T07:29:45.299800+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/100_ARW_supports_Airstrikes_%288231115%29.j (page: https://commons.wikimedia.org/wiki/File:100_ARW_supports_Airstrikes_(8231115).jpg | File:100 ARW sup - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:32.608568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran backed Iraqi militia prepares'",
-    "created_at": "2026-11-26T06:07:32.606067+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran backed Iraqi militia prepares'",
-    "created_at": "2026-11-26T06:07:32.492402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 2 result(s) for 'Iran backed Iraqi militia prepares'",
-    "created_at": "2026-11-26T06:07:32.383775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran backed Iraqi militia prepares'",
-    "created_at": "2026-11-26T06:07:32.365427+00:00",
+    "message": "openverse: 0 result(s) for 'Elon Musk says record 446m'",
+    "created_at": "2026-11-26T07:29:44.832109+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:32.325386+00:00",
+    "created_at": "2026-11-26T07:29:40.301364+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:32.324230+00:00",
+    "created_at": "2026-11-26T07:29:40.300311+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:32.323029+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36452/skodakaroq.jpg?anchor=center&mode=crop&width=644&height=362&rn (page: https://www.carkeys.co.uk/guides?%3bpage&%3bpaid+social&%3bamp%3bpage&page=1 | Car Buyers Guides and - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:40.299205+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:32.321464+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36267/image-6.jpeg?center=0.57961783439490444 (page: https://www.carkeys.co.uk/guides?%3bpage=5&%3bpaid%2bsocial=142&amp%3bfbclid=IwAR29sDlaSF4V2tN8bQUqf - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:40.298062+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
-    "created_at": "2026-11-26T06:07:32.280376+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36225/embedded7719349.jpg?anchor=center&mode=crop&width=644&height=3 (page: https://www.basilfordofniagarafalls.com/used/Chevrolet/2023-Chevrolet-Suburban-15327339ac18150fc7e84 - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:40.296902+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:32.247314+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://static.cargurus.com/images/forsale/2026/11/17/23/36/2023_tesla_model_3-pic-86297897281765086 (page: https://www.carkeys.co.uk/car-reviews?%3b%3bfbclid=iwar00zlmo1g4p1xmt-cofznu6jzxtv8-acpbjrxrs1aslbng - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:40.295323+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:32.245761+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:40.293190+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:32.222847+00:00",
+    "message": "google-images: 0 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:40.096707+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:32.220302+00:00",
+    "message": "wikimedia: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:39.948714+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:32.036774+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.903204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.885825+00:00",
+    "message": "openverse: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:39.544720+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:31.859844+00:00",
+    "created_at": "2026-11-26T07:29:36.337832+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:31.858581+00:00",
+    "created_at": "2026-11-26T07:29:36.336617+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:31.857192+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://st4.depositphotos.com/1038919/23628/i/1600/depositphotos_236282970-stock-photo-scheveningen- (page: https://www.alamy.com/stock-photo/den-haag-beach.html | Scheveningen beach, The Hague – Stock Editor - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:36.334927+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:31.855765+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://cdn.audleytravel.com/1050/749/79/15986897-scheveningen-beach-the-hague.jpg (page: https://depositphotos.com/236282970/stock-photo-scheveningen-beach-the-hague.html | Visit The Hague  - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:36.333700+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
-    "created_at": "2026-11-26T06:07:31.811008+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://thumbs.dreamstime.com/b/scheveningen-beach-hague-beautiful-summer-day-netherlands-schevening (page: https://www.audleytravel.com/us/netherlands/places-to-go/the-hague | Scheveningen Beach in Hague Sto - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:36.332293+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:31.779526+00:00",
+    "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://thumbs.dreamstime.com/b/scheveningen-beach-kurhaus-landmark-north-sea-hague-netherlands-sche (page: https://www.dreamstime.com/scheveningen-beach-hague-beautiful-summer-day-netherlands-scheveningen-be - the named person is not in the source page (elon, musk))",
+    "created_at": "2026-11-26T07:29:36.331077+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:31.777916+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:36.328585+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:31.630113+00:00",
+    "message": "google-images: 0 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:36.166884+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.627381+00:00",
+    "message": "wikimedia: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:36.047330+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.475532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.362885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
-    "created_at": "2026-11-26T06:07:31.345524+00:00",
+    "message": "openverse: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
+    "created_at": "2026-11-26T07:29:35.684864+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:31.315772+00:00",
+    "created_at": "2026-11-26T07:29:30.824034+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:31.314158+00:00",
+    "created_at": "2026-11-26T07:29:30.822910+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - rejected (no og:image)",
-    "created_at": "2026-11-26T06:07:31.312872+00:00",
+    "message": "photo candidate: 'Elon Musk says record $446m spending on US midterms was 'pre' - rejected (no og:image)",
+    "created_at": "2026-11-26T07:29:30.821784+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nbnlBSmI3TzRsT0NlQ0RKNDJta0Z3MVIxclNKTFFEX1IyRlN1MW9VRUZTbVN6d0dOVnN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T06:07:31.310422+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FM3BjWHRfbFlaeW94aHdZTVhaVUUxUUJsdFR6cHRjYVg2VVdFT1pPVVNuR2FQMnJQQlR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T07:29:30.819385+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
-    "created_at": "2026-11-26T06:07:31.146527+00:00",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-26T07:29:30.541348+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 3/6 tried: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T06:07:31.145006+00:00",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-26T07:29:30.540119+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T06:07:31.143713+00:00",
+    "message": "photo candidate: 'US voters rebuke Trump as Democrats win control of Congress ' - skipped (same event used within 24h, event key '2026 blue congress control democrat election guardian midter')",
+    "created_at": "2026-11-26T07:29:30.538828+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Russian Offensive Campaign Assessment, November 25, 2026 - Institute for the Study of War' (12 download(s) tried)",
-    "created_at": "2026-11-26T06:07:31.141436+00:00",
+    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+    "created_at": "2026-11-26T07:29:30.537094+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: download budget reached (12) - stopping",
-    "created_at": "2026-11-26T06:07:31.140287+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:31.139064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:31.137460+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:31.033202+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:31.031411+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:30.986489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:30.984917+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1 (page: https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1%D0%B0%D0%BD%D0%B - page does not name the entity (Russian))",
-    "created_at": "2026-11-26T06:07:30.949346+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Russian_peasant_girls_in_front_of_a_traditi - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:30.948100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:30.946532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Olkhon_Island%2C_Capes%2C_cliffs_at_sunset% (page: https://commons.wikimedia.org/wiki/File:Olkhon_Island,_Capes,_cliffs_at_sunset,_Lake_Baikal,_Russia. - page does not name the entity (Russian))",
-    "created_at": "2026-11-26T06:07:30.913029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ergaki%2C_Buiba_Valley%2C_Western_Sayan_Mou (page: https://commons.wikimedia.org/wiki/File:Ergaki,_Buiba_Valley,_Western_Sayan_Mountains,_Krasnoyarsk_K - page does not name the entity (Russian))",
-    "created_at": "2026-11-26T06:07:30.911820+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Baikal%2C_Cape_Burhan%2C_Olkhon_Island%2C_L (page: https://commons.wikimedia.org/wiki/File:Baikal,_Cape_Burhan,_Olkhon_Island,_Lake_Baikal,_Russia.jpg  - page does not name the entity (Russian))",
-    "created_at": "2026-11-26T06:07:30.910552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4108/4962605183_d425c55d39_b.jpg",
-    "created_at": "2026-11-26T06:07:30.909050+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/65535/52322248381_14743ba564_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:30.881944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:30.880514+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3868/14809341570_8df42937ff_b.jpg",
-    "created_at": "2026-11-26T06:07:30.850438+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3149/3011275416_8312c708cc_b.jpg",
-    "created_at": "2026-11-26T06:07:30.814449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6064/6148619952_83d4e49fb8_b.jpg",
-    "created_at": "2026-11-26T06:07:30.789194+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russian'",
-    "created_at": "2026-11-26T06:07:30.722676+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russian'",
-    "created_at": "2026-11-26T06:07:30.605296+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Russian'",
-    "created_at": "2026-11-26T06:07:30.512364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Russian'",
-    "created_at": "2026-11-26T06:07:30.493571+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:30.460327+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:30.459187+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Russian Offensive Campaign Assessment, November 25' - trying entity search 'Russian'",
-    "created_at": "2026-11-26T06:07:30.458066+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.456943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.455616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.454194+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:30.452726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:30.450922+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment November'",
-    "created_at": "2026-11-26T06:07:30.417186+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment November'",
-    "created_at": "2026-11-26T06:07:30.312323+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
-    "created_at": "2026-11-26T06:07:30.202888+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
-    "created_at": "2026-11-26T06:07:30.185374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:30.152473+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:30.150813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.149388+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.147995+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:30.146553+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:30.143342+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:30.141520+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
-    "created_at": "2026-11-26T06:07:30.106075+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
-    "created_at": "2026-11-26T06:07:30.000727+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
-    "created_at": "2026-11-26T06:07:29.878078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
-    "created_at": "2026-11-26T06:07:29.859441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:29.825452+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:29.824213+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:29.823017+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:29.821550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-26T06:07:29.820282+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:29.818735+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:29.817094+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
-    "created_at": "2026-11-26T06:07:29.779690+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
-    "created_at": "2026-11-26T06:07:29.592463+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
-    "created_at": "2026-11-26T06:07:29.491872+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
-    "created_at": "2026-11-26T06:07:29.474100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:29.419865+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:07:29.418720+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no og:image)",
-    "created_at": "2026-11-26T06:07:29.417407+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxPUkpYNWJheFpTc3l5ZjdodEktRGpjcDVVZVo5ZDA1cW9DLVJ5X2wwMFJPZzhBcnhTUHJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T06:07:29.414638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T06:07:29.251842+00:00",
+    "message": "promo: story 3/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T07:29:29.997147+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T06:07:29.250707+00:00",
+    "created_at": "2026-11-26T07:29:29.996016+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: no real photo found for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ' (10 download(s) tried)",
-    "created_at": "2026-11-26T06:07:29.249462+00:00",
+    "created_at": "2026-11-26T07:29:29.994865+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://thumbs.dreamstime.com/b/group-cute-pastel-animal-figurines-smiling-faces-adorable-kawaii-toy (page: https://discordpfp.gg/pfp/cute-blueberry-waffle-plush | Kawaii Figurines Stock Illustrations – 606 K - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T06:07:29.248247+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://wishes1234.com/wp-content/uploads/2024/11/Happy-Thanksgiving-day-picture-scaled.jpg (page: https://wishes1234.com/happy-thanksgiving-wishes/ | Thanksgiving Wishes - Great Research - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T07:29:29.993600+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/5d/61/2b/5d612bc7a492968b85f2b57097bdbec7.jpg (page: https://www.dreamstime.com/illustration/kawaii-figurines.html | Hình vẽ 3D đáng yêu | Đang yêu, Dễ t - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T06:07:29.246877+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://wishes1234.com/wp-content/uploads/2024/11/Thanksgiving-greetings-image-1600x2048.jpg (page: https://epm.cnc.stanford.edu/thanksgiving-wishes/happy-thanksgiving-wishes-with-beautiful-images | H - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T07:29:29.992231+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/736x/63/01/03/6301032f464dbfbc4e69c5fbff933e07.jpg (page: https://www.pinterest.com/pin/76068681199399057/ | Adorable Kawaii Plushies on a Bed | Korilakkuma p - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T06:07:29.245577+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://wishes1234.com/wp-content/uploads/2024/11/Happy-Thanksgiving-image-with-beautiful-greetings- (page: https://wishes1234.com/happy-thanksgiving-wishes/ | Happy Thanksgiving Wishes with beautiful Images - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T07:29:29.990996+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/a6/5b/9c/a65b9c98bc0506a595efabf66a9a0510.jpg?nii=t (page: https://www.pinterest.com/pin/789959590912972737/ | Cute Pink Pfp - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T06:07:29.244305+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://happybirthdayblessings.com/wp-content/uploads/2024/11/Happy-Thanksgiving-greetings-scaled.jp (page: https://wishes1234.com/happy-thanksgiving-wishes/ | Best Happy Thanksgiving Images with beautiful me - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T07:29:29.989707+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Vanessa_indica-Silent_Valley-2016-08-14-001 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:29.242938+00:00",
+    "created_at": "2026-11-26T07:29:29.988395+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:29.241336+00:00",
+    "created_at": "2026-11-26T07:29:29.986999+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Poster_for_Quo_Vadis_%281913_silent_film%29 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T06:07:29.214905+00:00",
+    "created_at": "2026-11-26T07:29:29.832900+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T06:07:29.213059+00:00",
+    "created_at": "2026-11-26T07:29:29.831295+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Poster_for_Quo_Vadis_%281913_silent_film%29",
-    "created_at": "2026-11-26T06:07:29.156724+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Poster_for_Quo_Vadis_%281913_silent_film%29 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:29:29.628109+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (The image is a vintage poster for the 1913 silent film *Quo Vadis*, depicting Emperor Nero playing a lyre while Rome burns, which is unrelated to the )",
-    "created_at": "2026-11-26T06:07:29.154985+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:29:29.626247+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pareronia_hippia-Silent_Valley-2016-08-15-0",
-    "created_at": "2026-11-26T06:07:25.706483+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pareronia_hippia-Silent_Valley-2016-08-15-0 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:29:29.409098+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (. The photo shows a butterfly resting on a red flower, which is completely unrelated to the headline about Iran's economy and a U.S. blockade.)",
-    "created_at": "2026-11-26T06:07:25.704910+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:29:29.407642+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Aularches_miliaris-Silent_Valley-2016-08-13",
-    "created_at": "2026-11-26T06:07:13.483400+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Aularches_miliaris-Silent_Valley-2016-08-13 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:29:29.254515+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (. The photo shows a grasshopper on a twig, which is completely unrelated to Iran's economy or a U.S. blockade.)",
-    "created_at": "2026-11-26T06:07:13.481606+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:29:29.252930+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/36/121704670_1b7a489603_b.jpg",
-    "created_at": "2026-11-26T06:06:48.270079+00:00",
+    "created_at": "2026-11-26T07:29:29.077159+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4031/4635122384_1be7d7b323_b.jpg",
-    "created_at": "2026-11-26T06:06:48.178956+00:00",
+    "created_at": "2026-11-26T07:29:29.020509+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8212/8269563681_a2ebe006d8.jpg",
-    "created_at": "2026-11-26T06:06:48.080290+00:00",
+    "created_at": "2026-11-26T07:29:28.976174+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7711/16897629490_52b11534d8_b.jpg",
-    "created_at": "2026-11-26T06:06:47.983116+00:00",
+    "created_at": "2026-11-26T07:29:28.925987+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6227/6308048699_3490fa07b3_b.jpg",
-    "created_at": "2026-11-26T06:06:47.893006+00:00",
+    "created_at": "2026-11-26T07:29:28.874908+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Silent'",
-    "created_at": "2026-11-26T06:06:47.803769+00:00",
+    "created_at": "2026-11-26T07:29:28.821806+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Silent'",
-    "created_at": "2026-11-26T06:06:47.641527+00:00",
+    "created_at": "2026-11-26T07:29:28.709258+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 5 result(s) for 'Silent'",
-    "created_at": "2026-11-26T06:06:47.464183+00:00",
+    "created_at": "2026-11-26T07:29:28.562895+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'Silent'",
-    "created_at": "2026-11-26T06:06:47.445874+00:00",
+    "created_at": "2026-11-26T07:29:28.113577+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:47.412808+00:00",
+    "created_at": "2026-11-26T07:29:16.378049+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:47.411685+00:00",
+    "created_at": "2026-11-26T07:29:16.376973+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' - trying entity search 'Silent'",
-    "created_at": "2026-11-26T06:06:47.410393+00:00",
+    "created_at": "2026-11-26T07:29:16.375847+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://static1.srcdn.com/wordpress/wp-content/uploads/2016/11/Monica-and-Chandler-in-Friends-Thanks (page: https://www.pinterest.ph/pin/friends-iconic-moments-in-2023--32862272274510229/ | Friends: 10 Bigges - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T06:06:47.409016+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://iv1.lisimg.com/image/33054774/740full-sophie-cunningham.jpg (page: https://x.com/beehaber/status/2054490583167648255 | Picture of Sophie Cunningham - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:16.374692+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/a9/49/d0/a949d03e8bdcbcd17a2284c5bd2d58a4.jpg (page: https://screenrant.com/friends-monica-character-growth/ | Monica gellar aesthetic || friends | Monic - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T06:06:47.407509+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.the-sun.com/wp-content/uploads/sites/6/2026/04/photo-credit-katherine-goguen-sports-1072 (page: https://www.listal.com/viewimage/33054774 | WNBA star Sophie Cunningham looks red-hot in tiny bikini - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:16.373549+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.themarysue.com/wp-content/uploads/2023/11/Thanksgiving-Leftovers-Eat-Now.jpg?w=1200&resi (page: https://www.pinterest.com/pin/84090718039736338/ | 10 best 'Friends' episodes, ranked | The Mary Sue - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T06:06:47.405967+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://pbs.twimg.com/media/HIKCyuVbYAA8X1C.jpg (page: https://x.com/RobertJKingsbu1/status/2056180147544580146 | Sophie Cunningham Debuts in 2026 Sports I - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:16.372458+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://static1.srcdn.com/wordpress/wp-content/uploads/2021/01/Friends-Turkey-On-Head.jpg (page: https://www.themarysue.com/20-years-after-it-ended-we-still-love-friends-and-here-are-the-ten-episod - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T06:06:47.404444+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://pbs.twimg.com/media/HIKCyuXboAA43bf.jpg?name=orig (page: https://x.com/i/trending/2054384641952346233 | Sophie Cunningham Debuts in 2026 SI Swimsuit Issue - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:16.371065+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T06:06:47.401657+00:00",
+    "created_at": "2026-11-26T07:29:16.368796+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T06:06:47.240473+00:00",
+    "created_at": "2026-11-26T07:29:16.237778+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T06:06:47.129103+00:00",
+    "created_at": "2026-11-26T07:29:16.106404+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T06:06:47.110050+00:00",
+    "created_at": "2026-11-26T07:29:15.807179+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:47.080823+00:00",
+    "created_at": "2026-11-26T07:29:12.881684+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:47.079578+00:00",
+    "created_at": "2026-11-26T07:29:12.880614+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/the-finals-screenshot-file-a087d224.jpg (page:  - no source page to verify relevance)",
-    "created_at": "2026-11-26T06:06:47.078314+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2020/10/Land.jpg (page: https://apppage.net/preview/bhulekh.uplandrecord | UP Bhulekh Online Guide (2024): Check Khasra, Kha - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:12.879550+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:47.075721+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://img.staticmb.com/mbcontent/images/crop/uploads/ver2/XIwvQlc61t8ZIpanz4mAnjU5yiPgMTsF1FomAJaW (page: https://www.hexahome.in/blog/guides/bhulekh-up-land-records/ | UP Bhulekh Etah 2026 - Check Etah Lan - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:12.878214+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.ytimg.com/vi/mr2R4rJFdjQ/maxresdefault.jpg (page: https://www.magicbricks.com/blog/up-bhulekh-etah-land-records/142383.html | Bhulekh up bhulekh - las - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:12.876847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.99acres.com/microsite/wp-content/blogs.dir/6161/files/2020/10/land-records-in-UP-2.jpg (page: https://lasoparb760.weebly.com/blog/bhulekh-up-bhulekh | UP Bhulekh Online Guide (2024): Check Khasr - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:12.875708+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T07:29:12.873305+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.985281+00:00",
+    "created_at": "2026-11-26T07:29:12.695509+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.885298+00:00",
+    "created_at": "2026-11-26T07:29:12.573594+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.867054+00:00",
+    "created_at": "2026-11-26T07:29:12.362244+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:46.838259+00:00",
+    "created_at": "2026-11-26T07:29:10.423394+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:46.836908+00:00",
+    "created_at": "2026-11-26T07:29:10.422247+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn3.localdatacdn.com/ks/overland-park/2431105/original/f27VUAfBfc.jpg (page: PAN-ASIA SUPERMARKET - Overland Park KS - Hours, Directions, Reviews ... - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T06:06:46.835606+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/d9/ff/24/d9ff246e91cbc091be5f039c594f5a36.jpg?nice-looking-11-captiva (page: https://storage.googleapis.com/pirbfnkdxhjfhfvblog/home-decor-ideas-in-pinterest.html | 20 Beauteous - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:10.421228+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.832970+00:00",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://1.bp.blogspot.com/-F9_h6IVWUx0/XX8lgPqDYiI/AAAAAAAAAIQ/f9kGElXZA2kIhfpPuhZwpNI1KBqLX43AACLcB (page: https://vrogueco.blogspot.com/2021/05/20-beauteous-home-decorating-ideas.html | Pinterest Home Decor - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:10.420089+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cozydiyhome.com/wp-content/uploads/2024/01/2024-Home-Decor-Trends-and-How-to-Get-Them-on-a-B (page: https://imagesofhomedesigns.blogspot.com/2019/09/pinterest-home-decor-ideas-help.html | Home Decor T - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:10.418868+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/e6/da/35/e6da35dfb64f8cafd0df68ab6a95ed70.jpg?nii=t (page: https://in.pinterest.com/pin/26106872837420845/ | Pinterest Home Decor Ideas - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:10.417520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T07:29:10.415118+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.749758+00:00",
+    "created_at": "2026-11-26T07:29:10.241725+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.648574+00:00",
+    "created_at": "2026-11-26T07:29:10.103730+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T06:06:46.630345+00:00",
+    "created_at": "2026-11-26T07:29:09.840192+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:46.601855+00:00",
+    "created_at": "2026-11-26T07:29:07.923511+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T06:06:46.600601+00:00",
+    "created_at": "2026-11-26T07:29:07.922289+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no og:image)",
-    "created_at": "2026-11-26T06:06:46.599274+00:00",
+    "created_at": "2026-11-26T07:29:07.921042+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPQUZoNE5qVlVJSWdVTHRMY1R0bFBac204aUVreDhOR3NtUE4yWjBESlJMUHZoLVo0Njd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T06:06:46.596562+00:00",
+    "created_at": "2026-11-26T07:29:07.918742+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - skipped (same event used within 24h, event key '000 700 estimate kill nbc news russian soldier suggest than ')",
-    "created_at": "2026-11-26T06:06:46.439412+00:00",
+    "message": "promo: story 2/6 tried: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T07:29:07.779052+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
-    "created_at": "2026-11-26T06:06:46.437428+00:00",
+    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T07:29:07.778042+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - skipped (same event used within 24h, event key '000 500 bbc figure lost nearly own people russia show ukrain')",
-    "created_at": "2026-11-26T06:06:46.435765+00:00",
+    "message": "photo: no real photo found for 'Russian Offensive Campaign Assessment, November 25, 2026 - Institute for the Study of War' (9 download(s) tried)",
+    "created_at": "2026-11-26T07:29:07.776942+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Stop using tear gas on battlefield, do' - skipped (same event used within 24h, event key 'battlefield brief countrie dozen gas guardian russia stop te')",
-    "created_at": "2026-11-26T06:06:46.434277+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp1903287.jpg",
+    "created_at": "2026-11-26T07:29:07.775915+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp1903287.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-26T07:29:07.774673+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://cdn.britannica.com/83/84883-050-053834E9/Red-Square-Moscow.jpg - source page title names only 0 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:29:07.742962+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:29:07.741508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://www.britannica.com/place/Moscow/The-Kremlin | From Russia with love - remarkable tales of ea - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T07:29:07.640586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): http://wallpapercave.com/wp/wp1903232.jpg",
+    "created_at": "2026-11-26T07:29:07.639320+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "download_image error: HTTPConnectionPool(host='wallpapercave.com', port=80): Max retries exceeded with url: /wp/wp1903232.jpg (Caused by NameResolutionError(\"HTTPConnection(host='wallpapercave.com', port=80): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-26T07:29:07.638112+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1 (page: https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1%D0%B0%D0%BD%D0%B - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T07:29:07.626375+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Russian_peasant_girls_in_front_of_a_traditi - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:29:07.625135+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:29:07.623730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Olkhon_Island%2C_Capes%2C_cliffs_at_sunset% (page: https://commons.wikimedia.org/wiki/File:Olkhon_Island,_Capes,_cliffs_at_sunset,_Lake_Baikal,_Russia. - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T07:29:07.409493+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ergaki%2C_Buiba_Valley%2C_Western_Sayan_Mou (page: https://commons.wikimedia.org/wiki/File:Ergaki,_Buiba_Valley,_Western_Sayan_Mountains,_Krasnoyarsk_K - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T07:29:07.408218+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Baikal%2C_Cape_Burhan%2C_Olkhon_Island%2C_L (page: https://commons.wikimedia.org/wiki/File:Baikal,_Cape_Burhan,_Olkhon_Island,_Lake_Baikal,_Russia.jpg  - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T07:29:07.406922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4108/4962605183_d425c55d39_b.jpg",
+    "created_at": "2026-11-26T07:29:07.405545+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52322248381_14743ba564_b.jpg",
+    "created_at": "2026-11-26T07:29:07.354831+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3868/14809341570_8df42937ff_b.jpg",
+    "created_at": "2026-11-26T07:29:07.298404+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3149/3011275416_8312c708cc_b.jpg",
+    "created_at": "2026-11-26T07:29:07.250484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6064/6148619952_83d4e49fb8_b.jpg",
+    "created_at": "2026-11-26T07:29:07.200837+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian'",
+    "created_at": "2026-11-26T07:29:07.021994+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian'",
+    "created_at": "2026-11-26T07:29:06.824010+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Russian'",
+    "created_at": "2026-11-26T07:29:06.698597+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Russian'",
+    "created_at": "2026-11-26T07:29:05.994042+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T07:29:02.155857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T07:29:02.154652+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Russian Offensive Campaign Assessment, November 25' - trying entity search 'Russian'",
+    "created_at": "2026-11-26T07:29:02.153339+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.wsj.com/articles/more-russian-troops-enter-ukraine-1424342640 | Russian Flag Wallpapers  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:02.152112+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://cdn.britannica.com/83/84883-050-053834E9/Red-Square-Moscow.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | Moscow - Kremlin, Red Square, History | Britanni - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:02.150603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://www.britannica.com/place/Moscow/The-Kremlin | From Russia with love - remarkable tales of ea - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:02.149097+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): http://wallpapercave.com/wp/wp1903232.jpg (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:02.147905+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T07:29:02.145445+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T07:29:02.007123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T07:29:01.873725+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T07:29:01.365098+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T07:29:00.304653+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T07:29:00.303525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.wsj.com/articles/more-russian-troops-enter-ukraine-1424342640 | Russian Flag Wallpapers  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:00.302037+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://cdn.britannica.com/83/84883-050-053834E9/Red-Square-Moscow.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | Moscow - Kremlin, Red Square, History | Britanni - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:00.300932+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://www.britannica.com/place/Moscow/The-Kremlin | From Russia with love - remarkable tales of ea - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:00.299639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): http://wallpapercave.com/wp/wp1903232.jpg (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:29:00.298253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T07:29:00.295704+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T07:29:00.122590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T07:29:00.005884+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T07:28:59.628535+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T07:28:57.685330+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T07:28:57.684170+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://wallpapercave.com/wp/wp1903287.jpg (page: https://www.wsj.com/articles/more-russian-troops-enter-ukraine-1424342640 | Russian Flag Wallpapers  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:28:57.682668+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://cdn.britannica.com/83/84883-050-053834E9/Red-Square-Moscow.jpg (page: https://wallpapercave.com/russian-flag-wallpapers | Moscow - Kremlin, Red Square, History | Britanni - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:28:57.681232+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://www.britannica.com/place/Moscow/The-Kremlin | From Russia with love - remarkable tales of ea - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:28:57.678592+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): http://wallpapercave.com/wp/wp1903232.jpg (page: https://www.thecourier.co.uk/fp/news/uk-world/273283/russia-love-remarkable-tales-east-coast-scots-t - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T07:28:57.677343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T07:28:57.674994+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T07:28:57.560953+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T07:28:57.430227+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T07:28:57.190892+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T07:28:55.224411+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T07:28:55.223265+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no og:image)",
+    "created_at": "2026-11-26T07:28:55.221782+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxPUkpYNWJheFpTc3l5ZjdodEktRGpjcDVVZVo5ZDA1cW9DLVJ5X2wwMFJPZzhBcnhTUHJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T07:28:55.219404+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump Ally Warns of Potential ‘Civil War’ Due to Democrats’ ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-26T07:28:55.088383+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'As Ukraine sinks Russian ships, some NATO nations voice anxi' - skipped (same event used within 24h, event key 'anxiety cbs nation nato news region russian ship sink some s')",
+    "created_at": "2026-11-26T07:28:55.085533+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
-    "created_at": "2026-11-26T06:06:46.432318+00:00",
+    "created_at": "2026-11-26T07:28:55.084079+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-    "created_at": "2026-11-26T06:06:46.430476+00:00",
+    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - skipped (same event used within 24h, event key 'airfield bbc five hit jets military russian strike ukraine')",
+    "created_at": "2026-11-26T07:28:55.082371+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
-    "created_at": "2026-11-26T06:06:46.428800+00:00",
+    "message": "photo candidate: 'Ukraine war briefing: Stop using teargas on battlefield, doz' - skipped (same event used within 24h, event key 'battlefield brief countrie dozen guardian russia stop tearga')",
+    "created_at": "2026-11-26T07:28:55.080836+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (same event used within 24h, event key 'explosion intercept iran jazeera live missile riyadh rock sa')",
-    "created_at": "2026-11-26T06:06:46.426826+00:00",
+    "message": "promo: story 1/6 tried: 'War and drought threaten livelihoods of Sudan’s farmers - Al' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T07:28:55.079080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'War and drought threaten livelihoods of Sudan’s farmers - Al' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T07:28:55.077877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'War and drought threaten livelihoods of Sudan’s farmers - Al Jazeera' (4 download(s) tried)",
+    "created_at": "2026-11-26T07:28:55.076290+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.economist.com/content-assets/images/20230708_SRP054.jpg - source page title names only 1 of 7 key entities - not a news article about the story",
+    "created_at": "2026-11-26T07:28:55.074895+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T07:28:55.073104+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312",
+    "created_at": "2026-11-26T07:28:55.022498+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (The photo shows soldiers operating artillery in a combat zone, which is unrelated to Sudan's farmers threatened by war and drought.)",
+    "created_at": "2026-11-26T07:28:55.020663+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens",
+    "created_at": "2026-11-26T07:28:51.632833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (. The photo shows soldiers in a combat zone, whereas the headline is about farmers and drought in Sudan.)",
+    "created_at": "2026-11-26T07:28:51.631087+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg.",
+    "created_at": "2026-11-26T07:28:36.551297+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'War and drought threaten livelihoods of Sudan’s fa' (. The photo shows soldiers in winter gear on snowy terrain with tanks, likely in Eastern Europe, rather than anything related to Sudan, drought, or fa)",
+    "created_at": "2026-11-26T07:28:36.549425+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Thure_de_Thulstrup_-_L._Prang_and_Co._-_Bat (page: https://commons.wikimedia.org/wiki/File:Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg - page does not name the entity (War))",
+    "created_at": "2026-11-26T07:28:31.319703+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_ (page: https://commons.wikimedia.org/wiki/File:Pedro_Am%C3%A9rico_-_Independ%C3%AAncia_ou_Morte_-_Google_Ar - page does not name the entity (War))",
+    "created_at": "2026-11-26T07:28:31.318652+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kurz_%26_Allison_-_Assault_on_Fort_Sanders. (page: https://commons.wikimedia.org/wiki/File:Kurz_%26_Allison_-_Assault_on_Fort_Sanders.jpg | File:Kurz & - page does not name the entity (War))",
+    "created_at": "2026-11-26T07:28:31.317511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'War and drought threaten livelihoods of Sudan’s fa'): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Gaza_envelope_after_coordinated_surprise_of (page: https://commons.wikimedia.org/wiki/File:Gaza_envelope_after_coordinated_surprise_offensive_on_Israel - page does not name the entity (War))",
+    "created_at": "2026-11-26T07:28:31.316354+00:00",
     "card": ""
   }
 ]
