@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T05:06:00.190582+00:00",
-  "last_run": "2026-11-26T05:04:27.237434+00:00",
-  "runs": 119,
+  "generated_at": "2026-11-26T05:07:34.694592+00:00",
+  "last_run": "2026-11-26T05:07:23.528383+00:00",
+  "runs": 120,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 4,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 4,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 4
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 5
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T05:04:27.238457+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T05:07:23.529710+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T05:07:23.530714+00:00"
     }
   ],
   "dry_run": false,
@@ -319,6 +307,60 @@
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T05:07:34.461413+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T05:07:34.459899+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-26T05:07:34.170175+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T05:07:23.531708+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T05:07:23.530720+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T05:07:23.529718+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #120 started (--only blogger)",
+      "created_at": "2026-11-26T05:07:23.528407+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T05:06:00.192560+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Describe a film without its name', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa', 'Aaron Rodgers reportedly out', 'Victorian Coalition plans sewage privatization']",
+      "created_at": "2026-11-26T05:06:00.188009+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
       "created_at": "2026-11-26T05:05:49.532726+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-      "created_at": "2026-11-26T05:05:49.507183+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-      "created_at": "2026-11-26T05:05:49.477249+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-      "created_at": "2026-11-26T05:05:49.450113+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T05:05:49.420880+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T05:05:49.300733+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-26T05:05:49.204627+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-26T05:05:48.684353+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T05:05:48.647277+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T05:05:48.646675+00:00",
       "card": ""
     }
   ]
