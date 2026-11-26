@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T20:58:16.527022+00:00",
-  "last_run": "2026-11-26T20:58:07.830495+00:00",
-  "runs": 147,
+  "generated_at": "2026-11-26T21:37:54.280683+00:00",
+  "last_run": "2026-11-26T21:35:04.531428+00:00",
+  "runs": 148,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T20:41:15.127631+00:00",
-    "mastodon.social": "2026-11-26T20:42:25.071881+00:00"
+    "Adsterra Blogger": "2026-11-26T21:37:08.244895+00:00",
+    "mastodon.social": "2026-11-26T21:37:54.215094+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 65,
+      "success": 66,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T20:41:15.127627+00:00"
+      "last_run": "2026-11-26T21:37:08.244888+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 12,
+      "fail": 13,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T20:42:25.071878+00:00"
+      "last_run": "2026-11-26T21:37:54.215091+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T20:41:15.127631+00:00",
-      "runs_today": 18,
-      "posts_today": 2,
+      "last_run": "2026-11-26T21:37:08.244895+00:00",
+      "runs_today": 19,
+      "posts_today": 3,
       "next_runs": [
-        "2026-11-27T03:11:15.127631+06:00",
-        "2026-11-27T03:26:15.127631+06:00",
-        "2026-11-27T03:41:15.127631+06:00",
-        "2026-11-27T03:56:15.127631+06:00",
-        "2026-11-27T04:11:15.127631+06:00"
+        "2026-11-27T03:52:08.244895+06:00",
+        "2026-11-27T04:07:08.244895+06:00",
+        "2026-11-27T04:22:08.244895+06:00",
+        "2026-11-27T04:37:08.244895+06:00",
+        "2026-11-27T04:52:08.244895+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T03:07:00+06:00",
         "2026-11-27T03:53:00+06:00",
         "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
-        "2026-11-27T07:08:00+06:00"
+        "2026-11-27T07:08:00+06:00",
+        "2026-11-27T07:50:00+06:00"
       ],
-      "success": 65,
+      "success": 66,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T20:42:25.071881+00:00",
-      "runs_today": 18,
+      "last_run": "2026-11-26T21:37:54.215094+00:00",
+      "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T03:12:25.071881+06:00",
-        "2026-11-27T03:27:25.071881+06:00",
-        "2026-11-27T03:42:25.071881+06:00",
-        "2026-11-27T03:57:25.071881+06:00",
-        "2026-11-27T04:12:25.071881+06:00"
+        "2026-11-27T03:52:54.215094+06:00",
+        "2026-11-27T04:07:54.215094+06:00",
+        "2026-11-27T04:22:54.215094+06:00",
+        "2026-11-27T04:37:54.215094+06:00",
+        "2026-11-27T04:52:54.215094+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T03:09:00+06:00",
         "2026-11-27T03:53:00+06:00",
         "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
-        "2026-11-27T07:08:00+06:00"
+        "2026-11-27T07:08:00+06:00",
+        "2026-11-27T07:52:00+06:00"
       ],
       "success": 17,
-      "fail": 12,
+      "fail": 13,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 17
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T20:58:07.831929+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T20:58:07.833114+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T21:35:04.532962+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Birthday twin spectrum prompt",
+    "Musk pledges kids SpaceX shares",
+    "Katie Miller car seat claim",
     "Thanksgiving Day celebrations",
-    "FCC approves SpaceX Starmind satellites",
-    "Grand Theft Auto VI",
-    "Lions vs. Bears",
-    "UK net migration falls to 77,000",
     "Describe a film without its name",
-    "Thanksgiving storm threatens travel",
-    "Aaron Rodgers reportedly out",
-    "Nvidia chip exports to China"
+    "Trump calls GDP revision fake",
+    "Nvidia chip exports to China",
+    "Macy's parade postponed to Saturday",
+    "Grand Theft Auto VI",
+    "Thanksgiving storm knocks out power"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T20:58:16.296966+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T20:58:16.295102+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-26T20:58:15.942894+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T20:58:07.834207+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T20:58:07.833124+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T20:58:07.831940+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #147 started (--only blogger)",
-      "created_at": "2026-11-26T20:58:07.830516+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T20:42:25.285723+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', 'Tornado warning in Hampton Roads', 'Thanksgiving storm threatens travel', 'Nvidia chip exports to China']",
-      "created_at": "2026-11-26T20:42:25.278915+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T20:42:25.071903+00:00",
+      "created_at": "2026-11-26T21:37:54.215134+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 03:12 Dhaka",
-      "created_at": "2026-11-26T20:42:25.070750+00:00",
+      "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+      "created_at": "2026-11-26T21:37:54.213936+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T20:42:25.068993+00:00",
+      "created_at": "2026-11-26T21:37:54.211764+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T20:42:15.066188+00:00",
+      "created_at": "2026-11-26T21:37:44.209138+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T20:42:14.668233+00:00",
+      "created_at": "2026-11-26T21:37:43.981515+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T20:42:14.665925+00:00",
+      "created_at": "2026-11-26T21:37:43.979193+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T20:42:08.937183+00:00",
+      "created_at": "2026-11-26T21:37:38.410466+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T20:42:08.934810+00:00",
+      "created_at": "2026-11-26T21:37:38.408253+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T20:42:08.731233+00:00",
+      "created_at": "2026-11-26T21:37:38.182435+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T20:42:08.728805+00:00",
+      "created_at": "2026-11-26T21:37:38.180153+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-26T20:42:06.290894+00:00",
+      "message": "photo candidate: 'Live Updates: Iran accused of deadly drone attack in Kuwait ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T21:37:34.381190+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-26T20:42:06.289949+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T21:37:34.380039+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://cdn.abcotvs.com/dip/images/20008673_reflecting-pool-trump-podium.png (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://abc7.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Trump spends the day  - matches 2 key entities (midterm, trump))",
-      "created_at": "2026-11-26T20:42:06.288711+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Live Updates: Iran accused of deadly drone attack in Kuwait ': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - page names the entity (Iran))",
+      "created_at": "2026-11-26T21:37:34.378736+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T20:42:06.287186+00:00",
+      "message": "vision: YES - photo matches 'Live Updates: Iran accused of deadly drone attack ' (The photo shows the national flag of Iran, which is directly relevant to the headline regarding Iran's actions and the call for pressure on Tehran.)",
+      "created_at": "2026-11-26T21:37:34.377163+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://www.eastbaytimes.com/wp-content/uploads/2026/11/Trump_28345-1.jpg?w=810 (page: https://abc7news.com/story/trump-deliver-remarks-front-revamped-reflecting-pool/20008630/ | Trump ca - only 1 of 11 key entities in the source page)",
-      "created_at": "2026-11-26T20:42:05.967340+00:00",
+      "message": "photo: rejected (vision NO): https://live.staticflickr.com/3164/3063189829_17b63b86da_b.jpg",
+      "created_at": "2026-11-26T21:37:28.656090+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T20:42:05.965028+00:00",
+      "message": "vision: NO - photo rejected for 'Live Updates: Iran accused of deadly drone attack ' (The photo shows the Quran Gate in Shiraz, Iran, which is unrelated to the reported drone attack in Kuwait.)",
+      "created_at": "2026-11-26T21:37:28.654558+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T20:42:05.769223+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1701/26028309594_b402f61d29_b.jpg",
+      "created_at": "2026-11-26T21:37:17.154992+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T20:42:05.641251+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg",
+      "created_at": "2026-11-26T21:37:17.067973+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-      "created_at": "2026-11-26T20:42:05.581074+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
+      "created_at": "2026-11-26T21:37:16.983215+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T20:42:04.400476+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
+      "created_at": "2026-11-26T21:37:16.883347+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T20:42:04.399458+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Iran'",
+      "created_at": "2026-11-26T21:37:16.797388+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
-      "created_at": "2026-11-26T20:42:04.398260+00:00",
+      "message": "google-images: 0 candidate(s) for 'Iran'",
+      "created_at": "2026-11-26T21:37:16.619289+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-26T20:42:04.395904+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Iran'",
+      "created_at": "2026-11-26T21:37:16.482378+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 3/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T20:42:04.028528+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T20:42:04.027127+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (5 download(s) tried)",
-      "created_at": "2026-11-26T20:42:04.026071+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.usmagazine.com/wp-content/uploads/julianne-hough-shape-e3d7856a-4cd0-43f0-b70d-ef66bd4f7 (page: https://www.newsbreak.com/primetimer-520995/4372785744212-julianne-hough-reveals-how-dancing-with-th - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T20:42:04.025101+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://people.com/thmb/lKTELSTkKxBBPTp5xEM_jhnGmcU=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://www.usmagazine.com/celebrity-body/news/julianne-hough-i-was-killing-myself-to-stay-thin-as-a - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T20:42:04.024052+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.pinimg.com/736x/ce/17/5d/ce175d7aa17c62dfeb1b4e2d6c331a8e.jpg (page: https://people.com/julianne-hough-weird-lifelong-dream-dramatic-hair-change-11807195 | Dancer/TV per - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T20:42:04.022952+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://wegotthiscovered.com/wp-content/uploads/2023/10/Julianne-Hough-Dancing-With-The-Stars-2.png? (page: https://www.pinterest.com/pin/dancertv-personality-julianne-hough-attends-dancing-with-the-stars--47 - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T20:42:04.021805+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
-      "created_at": "2026-11-26T20:42:04.020193+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
-      "created_at": "2026-11-26T20:42:03.960622+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-      "created_at": "2026-11-26T20:42:03.914182+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-      "created_at": "2026-11-26T20:42:03.866373+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-      "created_at": "2026-11-26T20:42:03.817038+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T20:42:03.769335+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T20:42:03.597512+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Tracking'",
-      "created_at": "2026-11-26T20:42:03.449693+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-26T20:42:03.389332+00:00",
+      "message": "openverse: 5 result(s) for 'Iran'",
+      "created_at": "2026-11-26T21:37:16.461601+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T20:42:03.338314+00:00",
+      "created_at": "2026-11-26T21:37:12.916524+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T20:42:03.336794+00:00",
+      "created_at": "2026-11-26T21:37:12.915341+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: topical search found nothing for 'Live Updates: Iran accused of deadly drone attack ' - trying entity search 'Iran'",
+      "created_at": "2026-11-26T21:37:12.913736+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://static.vecteezy.com/system/resources/previews/000/298/987/original/happy-thanksgiving-card-c (page: https://clipart-library.com/happy-thanksgiving-clipart-images.html | Happy thanksgiving card concept - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:12.912485+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://scottsdalelivingmagazine.com/wp-content/uploads/2025/06/thanksgiving-clip-art-13-free-pdf-pr (page: https://www.vecteezy.com/vector-art/298987-happy-thanksgiving-card-concept | Free Printable Happy Th - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:12.910596+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://clipart-library.com/8300/1931/Happy_Thanksgiving_Day_PNG_Clipart.png (page: https://scottsdalelivingmagazine.com/free-printable-happy-thanksgiving-clip-art/ | free happy thanks - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:12.909409+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://static.vecteezy.com/system/resources/previews/011/171/138/large_2x/happy-thanksgiving-letter (page: https://clipart-library.com/clipart/free-happy-thanksgiving-clipart_25.html | Happy Thanksgiving let - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:12.908149+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Live Updates Iran accused deadly'",
+      "created_at": "2026-11-26T21:37:12.905845+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Live Updates Iran accused deadly'",
+      "created_at": "2026-11-26T21:37:12.794933+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Live Updates Iran accused deadly'",
+      "created_at": "2026-11-26T21:37:12.624062+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Live Updates Iran accused deadly'",
+      "created_at": "2026-11-26T21:37:12.603863+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T21:37:11.782587+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T21:37:11.781476+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://calendarsrus.co.uk/cdn/shop/files/CRU512MileyCyrus.jpg?v=1742991283&width=713 (page: https://www.yahoo.com/entertainment/celebrity/articles/miley-cyrus-arrives-2026-golden-004800209.htm - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:11.780371+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://c8.alamy.com/comp/3DFD04D/beverly-hills-usa-11th-jan-2026-miley-cyrus-arriving-at-the-83rd-a (page: https://calendarsrus.co.uk/products/miley-cyrus-calendar-2026 | Beverly Hills, USA. 11th Jan, 2026.  - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:11.779039+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://tecolotito.elsiglodetorreon.com.mx/g/2026/02/27465468.jpeg?v=2",
+      "created_at": "2026-11-26T21:37:11.777476+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://cdn.amomama.com/32de2ef75c32ab6577b8a48783cc34bb3a6a7bbce85e96e659fbc0ef3fd01c04.jpg (page: https://www.elsiglodetorreon.com.mx/galerias/foto/27465468 | Miley Cyrus Stuns in Sequined Black Gow - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:11.699794+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
+      "created_at": "2026-11-26T21:37:11.697671+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
+      "created_at": "2026-11-26T21:37:11.593284+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
+      "created_at": "2026-11-26T21:37:11.422982+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
+      "created_at": "2026-11-26T21:37:11.402675+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T21:37:10.450847+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T21:37:10.449651+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://www.lavanguardia.com/peliculas-series/images/movie/poster/1959/11/w300/vmdNQQvruPsDq9nj3WlJD (page: https://www.themoviedb.org/tv/226285-elsbeth/images/posters | Elspeth March - Biografía, mejores pel - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:10.448274+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://images.justwatch.com/poster/321356564/s332/picket-fences.jpg (page: https://www.mtggoldfish.com/price/foundations/493/elspeths-smite | Elsbeth - watch tv series streami - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:10.446621+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://images.justwatch.com/poster/258190561/s332/claws.jpg (page: https://www.justwatch.com/uk/tv-series/elsbeth | Elsbeth Season 2 - watch full episodes streaming on - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-26T21:37:10.445389+00:00",
       "card": ""
     }
   ]
