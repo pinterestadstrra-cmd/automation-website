@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T23:50:30.230196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Describe a film without its name', 'King tides threaten Bay Area flooding', 'Aaron Rodgers reportedly out', \"Duran Duran's Andy Taylor dies\", \"Macy's parade turns 100\"]",
-    "created_at": "2026-11-25T23:50:30.225392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-25T23:50:30.062329+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-25T23:50:30.060640+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-25T23:50:29.832793+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-25T23:50:26.797774+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-25T23:50:26.796687+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-25T23:50:26.795507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #112 started (--only blogger)",
-    "created_at": "2026-11-25T23:50:26.793860+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-25T23:36:21.400059+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Describe a film without its name', \"Denny's restores Jensen Huang plaque\", 'New Avengers: Doomsday poster', 'Aaron Rodgers reportedly out', \"Duran Duran's Andy Taylor dies\"]",
-    "created_at": "2026-11-25T23:36:21.395084+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-25T23:36:21.295802+00:00",
+    "created_at": "2026-11-26T00:34:58.899426+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T23:36:21.295044+00:00",
+    "created_at": "2026-11-26T00:34:58.898254+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679704079019250",
-    "created_at": "2026-11-25T23:36:21.293992+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679934600938964",
+    "created_at": "2026-11-26T00:34:58.896830+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117679704079019250",
-    "created_at": "2026-11-25T23:36:21.291855+00:00",
+    "message": "mastodon: posted to mastodon.social: 117679934600938964",
+    "created_at": "2026-11-26T00:34:58.894159+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-25T23:36:14.803503+00:00",
+    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+    "created_at": "2026-11-26T00:34:50.708802+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-26T00:34:49.944079+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-25T23:36:14.802830+00:00",
+    "message": "promo: photo search done - 22 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
+    "created_at": "2026-11-26T00:34:49.943023+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'How the War Turned Sudan Into a Country Without a Newspaper ': https://www.economist.com/content-assets/images/20230708_SRP054.jpg (from bing-images, query 'War Turned Sudan Into Country', page: https://global.espreso.tv/russia-ukraine-war-no-easy-path-ahead-ukrainian-reservists-council-head-ty - matches 2 key entities (how, war))",
-    "created_at": "2026-11-25T23:36:14.801896+00:00",
+    "message": "promo: story 5/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T00:34:49.941877+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:14.800612+00:00",
+    "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T00:34:49.940789+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 - source page title names only 0 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:36:14.492524+00:00",
+    "message": "photo: no real photo found for 'DOW Launches Automated SI Solution for Classification Management - U.S. Department of War (.gov)' (9 download(s) tried)",
+    "created_at": "2026-11-26T00:34:49.939645+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:14.491619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | Cinematic Depiction of War i - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.467128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.freepik.com/premium-ai-image/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-int - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.466436+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Person_taking_photograph.jpg/1280px-Person_ (page: https://commons.wikimedia.org/wiki/File:Person_taking_photograph.jpg | File:Person taking photograph - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.465547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Fire_and_sword_in_the_Sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.464757+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Fire_and_sword_in_the_Sudan%3B_a_personal_n (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan;_a_personal_narrative_of_fightin - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.464030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Fire_and_Sword_in_the_sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_Sword_in_the_sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.463237+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Asia_%28late_19th_century-_early_20th_centu (page: https://commons.wikimedia.org/wiki/File:Asia_(late_19th_century-_early_20th_century).jpg | File:Asia - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.462286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://live.staticflickr.com/1884/44632251721_448453f5c5.jpg (page: https://www.flickr.com/photos/139494057@N07/44632251721 | A stranger in Olondria : being the complet - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:14.461387+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'War Turned Sudan Into Country'",
-    "created_at": "2026-11-25T23:36:14.458920+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'War Turned Sudan Into Country'",
-    "created_at": "2026-11-25T23:36:14.332444+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'War Turned Sudan Into Country'",
-    "created_at": "2026-11-25T23:36:14.206471+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'War Turned Sudan Into Country'",
-    "created_at": "2026-11-25T23:36:13.903933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:13.874583+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:13.873962+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.873297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.872581+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.871854+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.870966+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-    "created_at": "2026-11-25T23:36:13.868019+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-    "created_at": "2026-11-25T23:36:13.756221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-    "created_at": "2026-11-25T23:36:13.652108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-    "created_at": "2026-11-25T23:36:13.468732+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:13.433548+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:13.432892+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.432147+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.431156+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.430262+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:13.429395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-    "created_at": "2026-11-25T23:36:13.426778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-    "created_at": "2026-11-25T23:36:13.315495+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-    "created_at": "2026-11-25T23:36:13.199410+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-    "created_at": "2026-11-25T23:36:13.015509+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:12.974715+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:12.974012+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - rejected (no og:image)",
-    "created_at": "2026-11-25T23:36:12.973182+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxQOUw3TjdCalhKUW9naVRaY2t1bG91NjlqVG5jYnRUNHlMVG5RX1hfcFJDZVNnTHBQWHc) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T23:36:12.971197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T23:36:12.811833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T23:36:12.811218+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'What Is Childhood to Gaza's Generation Raised in War? - Haaretz' (6 download(s) tried)",
-    "created_at": "2026-11-25T23:36:12.810638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://image2.slideserve.com/5360615/figure-23-2b-the-respiratory-epithelium-of-the-nasal-cavity-an (page: http://www.earthslab.com/anatomy/nasal-cavity/ | PPT - 23 The Respiratory System PowerPoint Presenta - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.810019+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://thumbs.dreamstime.com/z/nasal-mucosa-anatomy-mucous-membrane-lining-respiratory-tract-ciliat (page: https://www.slideserve.com/orsen/23-the-respiratory-system | Nasal Mucosa Anatomy. Nasal Mucous Memb - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.809339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://www.getbodysmart.com/wp-content/uploads/2017/10/Featured-Image-Respiratory-Mucosa.png (page: https://www.dreamstime.com/nasal-mucosa-anatomy-mucous-membrane-lining-respiratory-tract-ciliated-ba - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.808694+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://images.squarespace-cdn.com/content/v1/6441530b67c4707c9cdae725/1682275907055-4YNCVOGW7QAVSMN (page: https://www.getbodysmart.com/nasal-cavity/respiratory-mucosa-anatomy/ | Nasal cavity — AnatomyLove - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.807862+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Seated_goddess_with_a_child_MET_DT873.jpg/1 (page: https://commons.wikimedia.org/wiki/File:Seated_goddess_with_a_child_MET_DT873.jpg | File:Seated godd - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.807189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Little_girl_of_Don_Som.jpg/1280px-Little_gi (page: https://commons.wikimedia.org/wiki/File:Little_girl_of_Don_Som.jpg | File:Little girl of Don Som.jpg - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.806478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Childhood_Joy.jpg/1280px-Childhood_Joy.jpg? - source page title names only 1 of 7 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:36:12.805750+00:00",
+    "message": "photo: rejected (vision down, strict check): https://wallpaperaccess.com/full/13422728.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:49.938439+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:12.804674+00:00",
+    "created_at": "2026-11-26T00:34:49.936953+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Child_with_Smallpox_Bangladesh.jpg/1280px-C (page: https://commons.wikimedia.org/wiki/File:Child_with_Smallpox_Bangladesh.jpg | File:Child with Smallpo - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.734316+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image.",
+    "created_at": "2026-11-26T00:34:49.634163+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Child_laborer.jpg/1280px-Child_laborer.jpg? (page: https://commons.wikimedia.org/wiki/File:Child_laborer.jpg | File:Child laborer.jpg - page does not name the entity (Childhood))",
-    "created_at": "2026-11-25T23:36:12.733583+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi",
+    "created_at": "2026-11-26T00:34:49.546277+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2479/4068890662_cd52846e58.jpg",
-    "created_at": "2026-11-25T23:36:12.732466+00:00",
+    "message": "photo: rejected (vision down, strict check): https://logos.stocktwits-cdn.com/DOW.png - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:49.290604+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2884/10285791956_2d55d7012d_b.jpg",
-    "created_at": "2026-11-25T23:36:12.711200+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:49.289128+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2747/4252378646_329f6867c4_b.jpg",
-    "created_at": "2026-11-25T23:36:12.679333+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5213/5538883692_05fa7d1112_b.jpg",
+    "created_at": "2026-11-26T00:34:49.179698+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3760/9009270396_2e679625c8_b.jpg",
-    "created_at": "2026-11-25T23:36:12.655944+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2850/9725249858_0998732c71_b.jpg",
+    "created_at": "2026-11-26T00:34:49.123358+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5545/11135713114_e00e926c20_b.jpg",
-    "created_at": "2026-11-25T23:36:12.628342+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/50/129209518_4b292bacbd_b.jpg",
+    "created_at": "2026-11-26T00:34:49.077281+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Childhood'",
-    "created_at": "2026-11-25T23:36:12.604966+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8568/16236662916_6331356e5c_b.jpg",
+    "created_at": "2026-11-26T00:34:49.025479+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Childhood'",
-    "created_at": "2026-11-25T23:36:12.511411+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3192/2899705638_2efe9044e6.jpg",
+    "created_at": "2026-11-26T00:34:48.973124+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Childhood'",
-    "created_at": "2026-11-25T23:36:12.407779+00:00",
+    "message": "bing-images: 4 candidate(s) for 'DOW'",
+    "created_at": "2026-11-26T00:34:48.919978+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 5 result(s) for 'Childhood'",
-    "created_at": "2026-11-25T23:36:11.971628+00:00",
+    "message": "google-images: 0 candidate(s) for 'DOW'",
+    "created_at": "2026-11-26T00:34:48.700301+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:11.937018+00:00",
+    "message": "wikimedia: search HTTP 429 for 'DOW'",
+    "created_at": "2026-11-26T00:34:48.570390+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:11.936339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'What Is Childhood to Gaza's Generation Raised in W' - trying entity search 'Childhood'",
-    "created_at": "2026-11-25T23:36:11.935644+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://happybirthdayblessings.com/wp-content/uploads/2024/11/Thanksgiving-image-with-pumpkin-and-tu (page: Best Happy Thanksgiving Images with beautiful messages wishes and quotes - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:11.934707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Childhood Gaza s Generation Raised'",
-    "created_at": "2026-11-25T23:36:11.932652+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Childhood Gaza s Generation Raised'",
-    "created_at": "2026-11-25T23:36:11.836405+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Childhood Gaza s Generation Raised'",
-    "created_at": "2026-11-25T23:36:11.708542+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Childhood Gaza s Generation Raised'",
-    "created_at": "2026-11-25T23:36:11.476334+00:00",
+    "message": "openverse: 5 result(s) for 'DOW'",
+    "created_at": "2026-11-26T00:34:48.505152+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:11.445088+00:00",
+    "created_at": "2026-11-26T00:34:48.301374+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:11.444382+00:00",
+    "created_at": "2026-11-26T00:34:48.300367+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://image.slidesharecdn.com/estheticsinrpd-240208073855-9aa03e8c/85/esthetics-in-RPD-ppt-11-320. (page: esthetics in RPD.ppt - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:11.443648+00:00",
+    "message": "photo: topical search found nothing for 'DOW Launches Automated SI Solution for Classificat' - trying entity search 'DOW'",
+    "created_at": "2026-11-26T00:34:48.299266+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'What Is Childhood to Gaza's Generation Raised in War?'",
-    "created_at": "2026-11-25T23:36:11.441835+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:48.298145+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'What Is Childhood to Gaza's Generation Raised in War?'",
-    "created_at": "2026-11-25T23:36:11.350959+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:48.297018+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'What Is Childhood to Gaza's Generation Raised in War?'",
-    "created_at": "2026-11-25T23:36:11.244593+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:48.295831+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'What Is Childhood to Gaza's Generation Raised in War?'",
-    "created_at": "2026-11-25T23:36:10.945173+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:48.294590+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution'",
+    "created_at": "2026-11-26T00:34:48.292091+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution'",
+    "created_at": "2026-11-26T00:34:48.104837+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'DOW Launches Automated SI Solution'",
+    "created_at": "2026-11-26T00:34:47.966965+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution'",
+    "created_at": "2026-11-26T00:34:47.905204+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:10.905730+00:00",
+    "created_at": "2026-11-26T00:34:47.809974+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:10.905076+00:00",
+    "created_at": "2026-11-26T00:34:47.808813+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'What Is Childhood to Gaza's Generation Raised in W'): https://static.vecteezy.com/system/resources/previews/028/546/890/original/happy-thanksgiving-pumpki (page: Happy Thanksgiving. Pumpkins and autumn leaves. Family traditions ... - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-25T23:36:10.904330+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:47.807682+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'What Is Childhood to Gaza's Generation Raised in War? - Haar'",
-    "created_at": "2026-11-25T23:36:10.902354+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:47.806366+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'What Is Childhood to Gaza's Generation Raised in War? - Haar'",
-    "created_at": "2026-11-25T23:36:10.781220+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:47.805045+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'What Is Childhood to Gaza's Generation Raised in War? - Haar'",
-    "created_at": "2026-11-25T23:36:10.651618+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:47.803882+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'What Is Childhood to Gaza's Generation Raised in War? - Haar'",
-    "created_at": "2026-11-25T23:36:10.533337+00:00",
+    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:47.801387+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:47.678511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:47.558658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:46.902458+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:10.494581+00:00",
+    "created_at": "2026-11-26T00:34:46.716379+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:36:10.493953+00:00",
+    "created_at": "2026-11-26T00:34:46.715105+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'What Is Childhood to Gaza's Generation Raised in War? - Haar' - rejected (no og:image)",
-    "created_at": "2026-11-25T23:36:10.493147+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:46.713989+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi7gFBVV95cUxPdWdXZFI4TUwyOTZFZFNjVGE4VEJvV2N4V3NHMC1rYkY0OElPRV8xVWJWYWVWaV9JVDF) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T23:36:10.491251+00:00",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:46.712698+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:46.711348+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:46.710113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:46.707701+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:46.589917+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:46.430531+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+    "created_at": "2026-11-26T00:34:46.005306+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:45.760138+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:45.758997+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no og:image)",
+    "created_at": "2026-11-26T00:34:45.757868+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMixgFBVV95cUxQOWpJaE5MaTR4RHc4NUdUN0ZZLWJubU5fTFM2SDFxaWdOb2EzUzRkQ2t6VVg5ZjdKRVh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T00:34:45.755321+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
-    "created_at": "2026-11-25T23:36:10.341613+00:00",
+    "created_at": "2026-11-26T00:34:45.445243+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Will Netanyahu lead Israel into another war with Iran before' - skipped (same event used within 24h, event key 'another forward iran israel lead leader netanyahu take war')",
-    "created_at": "2026-11-25T23:36:10.340716+00:00",
+    "created_at": "2026-11-26T00:34:45.443806+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: European troops should be in Ukraine, ex' - skipped (same event used within 24h, event key 'argue behaviour call european latest news putrid sky troop t')",
-    "created_at": "2026-11-25T23:36:10.339627+00:00",
+    "message": "promo: story 4/6 tried: 'UK nuclear test veterans win 40-year battle for inquiry into' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T00:34:45.442119+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T00:34:45.440869+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'UK nuclear test veterans win 40-year battle for inquiry into Cold War tests they say damaged health - AP News' (12 download(s) tried)",
+    "created_at": "2026-11-26T00:34:45.439711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://scitechdaily.com/images/Nuclear-Bomb-Explosion-in-City.jpg (page: https://pngimg.com/image/99509 | Study Shows More Than 100 Million Dead If India and Pakistan Wage . - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T00:34:45.438537+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://pngimg.com/uploads/radiation/radiation_PNG99511.png - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:45.437385+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:45.435910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): http://www.idom.com/wp-content/uploads/2016/06/IDOM_Nuclear_Services_News_OIEA_Copyright_hxdyl.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:45.299435+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:45.297890+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://cursoparalaunam.com/wp-content/uploads/2020/03/PLANTA-NUCLEAR2.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:43.994495+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:43.993020+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6% (page: https://commons.wikimedia.org/wiki/File:%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7 - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T00:34:43.853356+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/c/cf/Nuclear_Reaction_In_the_Sun.jpg?utm_source=commo",
+    "created_at": "2026-11-26T00:34:43.851926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Nuclear_Power_Plant_Cattenom.jpg/1280px-Nuc - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:43.793168+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:43.791811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/McMurdo_Nuclear_Power.jpg/1280px-McMurdo_Nu - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:43.653359+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:43.651957+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Koeberg_Nuclear_Powerplant_-_Entry_Prohibit - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:43.496338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:43.494790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2578/4165048616_ae3bb76265_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:43.322284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:43.320943+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg",
+    "created_at": "2026-11-26T00:34:43.299165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4/5003022_fbe68de5aa_b.jpg",
+    "created_at": "2026-11-26T00:34:43.253547+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5025/5606183129_9695c06f9e_b.jpg",
+    "created_at": "2026-11-26T00:34:43.208885+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2599/3686680582_c4e2a0c7fa.jpg",
+    "created_at": "2026-11-26T00:34:43.126806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'nuclear'",
+    "created_at": "2026-11-26T00:34:43.072836+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'nuclear'",
+    "created_at": "2026-11-26T00:34:42.929408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'nuclear'",
+    "created_at": "2026-11-26T00:34:42.791369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'nuclear'",
+    "created_at": "2026-11-26T00:34:42.403325+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:42.023893+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:42.022612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'UK nuclear test veterans win 40-year battle for in' - trying entity search 'nuclear'",
+    "created_at": "2026-11-26T00:34:42.021340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:42.020139+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:42.018866+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:42.017586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:42.016244+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win'",
+    "created_at": "2026-11-26T00:34:42.013814+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win'",
+    "created_at": "2026-11-26T00:34:41.866798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win'",
+    "created_at": "2026-11-26T00:34:41.727754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win'",
+    "created_at": "2026-11-26T00:34:41.293809+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:41.123550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:41.122344+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:41.121195+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:41.120030+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:41.118701+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:41.116700+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:41.114274+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:40.989707+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:40.788201+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:40.327935+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:39.975800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:39.974562+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:39.973415+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://adm.dookinternational.com/dook/images/country/XYwKYrjh1656324286.jpg (page: https://en.wikipedia.org/wiki/File:Flag-map_of_the_United_Kingdom.svg | 70+ Top United Kingdom Touri - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:39.972173+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://4kwallpapers.com/images/wallpapers/british-flag-union-3840x2160-9445.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | British flag Wallpaper 4K, Union Jack - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:39.970844+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://4kwallpapers.com/world/british-flag-union-9445.html | United Kingdom Geographic Region Count - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:39.969706+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:39.967144+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:39.850734+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:39.665585+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'UK nuclear test veterans win 40-year battle for inquiry into'",
+    "created_at": "2026-11-26T00:34:39.112501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:38.856713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:38.855699+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no og:image)",
+    "created_at": "2026-11-26T00:34:38.854554+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZUMwTHBUX2xURVd1Y3hvcEdZdXp2ZENFQ2RlMUwyeGotdXQ0dzBQV2JiWWl1ZlRkN29) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T00:34:38.852223+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - skipped (same event used within 24h, event key 'african drone insurgent off reuter shelf skie take war')",
-    "created_at": "2026-11-25T23:36:10.338791+00:00",
+    "created_at": "2026-11-26T00:34:38.299248+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
-    "created_at": "2026-11-25T23:36:10.337885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - skipped (same event used within 24h, event key 'accuse action cnbc estonia hostile member nato open russia u')",
-    "created_at": "2026-11-25T23:36:10.336911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: 'Five Russian military jets hit in airfield strike, says Ukra' - no usable photo, trying the next story",
-    "created_at": "2026-11-25T23:36:10.335940+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-25T23:36:10.335314+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Five Russian military jets hit in airfield strike, says Ukraine - BBC' (12 download(s) tried)",
-    "created_at": "2026-11-25T23:36:10.334720+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:36:10.334057+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:10.332651+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://c8.alamy.com/comp/FECPME/the-number-five-as-a-polished-golden-object-FECPME.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:36:10.268854+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:10.268044+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-25T23:36:10.250587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:36:10.249343+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://storage.needpix.com/rsynced_images/five-706893_1280.jpg",
-    "created_at": "2026-11-25T23:36:10.169409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Street_number_5.jpg/1280px-Street_number_5. (page: https://commons.wikimedia.org/wiki/File:Street_number_5.jpg | File:Street number 5.jpg - page does not name the entity (Five))",
-    "created_at": "2026-11-25T23:36:10.124533+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/OL_ONAL_DIGIT_FIVE.jpg/1280px-OL_ONAL_DIGIT",
-    "created_at": "2026-11-25T23:36:10.123748+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Five Russian military jets hit in airfield strike,' (. The image is an abstract symbol resembling a dollar sign, which is completely unrelated to the military strike mentioned in the headline.)",
-    "created_at": "2026-11-25T23:36:10.122594+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Hausnummer_5_in_Frankreich.jpg/1280px-Hausn (page: https://commons.wikimedia.org/wiki/File:Hausnummer_5_in_Frankreich.jpg | File:Hausnummer 5 in Frankr - page does not name the entity (Five))",
-    "created_at": "2026-11-25T23:36:06.683071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Five_children_on_a_motorcycle.jpg/1280px-Fi",
-    "created_at": "2026-11-25T23:36:06.682176+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Five Russian military jets hit in airfield strike,' (. The photo shows five children riding a motorbike in a rural area, which is completely unrelated to Russian military jets or an airfield strike.)",
-    "created_at": "2026-11-25T23:36:06.681022+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://upload.wikimedia.org/wikipedia/commons/1/14/Five_%281951_film%29_trailer_1.jpg?utm_source=co",
-    "created_at": "2026-11-25T23:35:32.584745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Five Russian military jets hit in airfield strike,' (The image is a black-and-white still from an)",
-    "created_at": "2026-11-25T23:35:32.583690+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7422/10751725234_ef1a50fd02_b.jpg",
-    "created_at": "2026-11-25T23:35:23.211670+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7138/7668859772_6d89c1b10a_b.jpg",
-    "created_at": "2026-11-25T23:35:23.188472+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7350/13023077404_81c3b206f1_b.jpg",
-    "created_at": "2026-11-25T23:35:23.166145+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1481/24300258539_06bfec3842_b.jpg",
-    "created_at": "2026-11-25T23:35:23.143144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8105/8560235748_9d83412309_b.jpg",
-    "created_at": "2026-11-25T23:35:23.121220+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five'",
-    "created_at": "2026-11-25T23:35:23.088380+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five'",
-    "created_at": "2026-11-25T23:35:22.940364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Five'",
-    "created_at": "2026-11-25T23:35:22.822033+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Five'",
-    "created_at": "2026-11-25T23:35:22.806996+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.769380+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.768818+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Five Russian military jets hit in airfield strike,' - trying entity search 'Five'",
-    "created_at": "2026-11-25T23:35:22.768221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://www.freepnglogos.com/pics/number-5 | Number Five Symbol Design Stock Illustration 28605901 | - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.767619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://c8.alamy.com/comp/FECPME/the-number-five-as-a-polished-golden-object-FECPME.jpg (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Five Year Strat - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.766951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://prntbl.concejomunicipaldechinu.gov.co/five-year-strategic-plan-template/ | Number Five Stock - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.766276+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://storage.needpix.com/rsynced_images/five-706893_1280.jpg (page: https://www.dreamstime.com/illustration/number-five.html | Five,5,number,design,collection - free im - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.765571+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-7 (page: https://commons.wikimedia.org/wiki/File:SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-75_%22%D0%94%D0%B2 - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.764654+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-25T23:35:22.762859+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-25T23:35:22.620990+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 1 result(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-25T23:35:22.512044+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit'",
-    "created_at": "2026-11-25T23:35:22.497114+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.452714+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.451889+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://www.freepnglogos.com/pics/number-5 | Number Five Symbol Design Stock Illustration 28605901 | - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.451165+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://c8.alamy.com/comp/FECPME/the-number-five-as-a-polished-golden-object-FECPME.jpg (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Five Year Strat - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.450366+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://prntbl.concejomunicipaldechinu.gov.co/five-year-strategic-plan-template/ | Number Five Stock - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.449511+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://storage.needpix.com/rsynced_images/five-706893_1280.jpg (page: https://www.dreamstime.com/illustration/number-five.html | Five,5,number,design,collection - free im - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.448679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.446738+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.337292+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.202587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.188089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.144928+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:22.144302+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://www.freepnglogos.com/pics/number-5 | Number Five Symbol Design Stock Illustration 28605901 | - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.143633+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://c8.alamy.com/comp/FECPME/the-number-five-as-a-polished-golden-object-FECPME.jpg (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Five Year Strat - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.142891+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://prntbl.concejomunicipaldechinu.gov.co/five-year-strategic-plan-template/ | Number Five Stock - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.141993+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://storage.needpix.com/rsynced_images/five-706893_1280.jpg (page: https://www.dreamstime.com/illustration/number-five.html | Five,5,number,design,collection - free im - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-25T23:35:22.141189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.139064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:22.031241+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:21.928175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
-    "created_at": "2026-11-25T23:35:21.913893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:21.880168+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:21.879506+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no og:image)",
-    "created_at": "2026-11-25T23:35:21.878697+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vbjRXZHVvMFBra2FoR20zdnY0MUlXdTZMNy11dGpJeEtNdUM1dXkwMllYa1RvbWdZelg) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T23:35:21.876839+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - skipped (same event used within 24h, event key '000 490 cbs data died leak news russian soldier suggest than')",
-    "created_at": "2026-11-25T23:35:21.597714+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
-    "created_at": "2026-11-25T23:35:21.596735+00:00",
+    "created_at": "2026-11-26T00:34:38.297671+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-    "created_at": "2026-11-25T23:35:21.595576+00:00",
+    "created_at": "2026-11-26T00:34:38.296057+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T23:35:21.543062+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-25T23:35:21.542118+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-25T23:35:21.541317+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-25T23:35:21.540629+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'another forward iran israel lead leader netanyahu take war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-25T23:35:21.539536+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 830x553 (ratio 1.50) - unchanged",
-    "created_at": "2026-11-25T23:35:10.468932+00:00",
+    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (same event used within 24h, event key 'cbs chemical defense develop iran israeli minister news weap')",
+    "created_at": "2026-11-26T00:34:38.294415+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "prepare_bsky_image: original 830x553 (ratio 1.50) - kept, no crop",
-    "created_at": "2026-11-25T23:35:10.468166+00:00",
+    "message": "promo: story 3/6 tried: 'Five Russian military jets hit in airfield strike, says Ukra' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T00:34:38.292976+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Will Netanyahu lead Israel into another war with Iran before' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-25T23:35:10.466812+00:00",
+    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T00:34:38.291943+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-25T23:35:10.466197+00:00",
+    "message": "photo: no real photo found for 'Five Russian military jets hit in airfield strike, says Ukraine - BBC' (12 download(s) tried)",
+    "created_at": "2026-11-26T00:34:38.290836+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Will Netanyahu lead Israel into another war with Iran before': https://d.hngn.com/en/full/307985/netanyahu-arrives-new-knesset-opening.jpg?w=830&f=0243dd75978557f2 (from bing-images, query 'Will Netanyahu lead Israel into another war with Iran before a new leader takes over? - The Forward', page: https://news.antiwar.com/2026/11/23/netanyahus-push-for-renewed-us-israeli-attacks-on-iran-faces-int - matches 2 key entities (iran, netanyahu))",
-    "created_at": "2026-11-25T23:35:10.465531+00:00",
+    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:38.289697+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-25T23:35:10.464361+00:00",
+    "created_at": "2026-11-26T00:34:38.288301+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://embassies.gov.il/sites/default/files/styles/ckeditor_landscape_image/public/2026-11/prime_mi",
-    "created_at": "2026-11-25T23:35:10.423608+00:00",
+    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:38.172354+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Will Netanyahu lead Israel into another war with Iran before'",
-    "created_at": "2026-11-25T23:35:09.640905+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:38.170860+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Will Netanyahu lead Israel into another war with Iran before'",
-    "created_at": "2026-11-25T23:35:09.507439+00:00",
+    "message": "photo: rejected (vision down, strict check): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:38.020963+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Will Netanyahu lead Israel into another war with Iran before'",
-    "created_at": "2026-11-25T23:35:09.399806+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:38.019302+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Will Netanyahu lead Israel into another war with Iran before'",
-    "created_at": "2026-11-25T23:35:08.988976+00:00",
+    "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:37.402261+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:37.400942+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Street_number_5.jpg/1280px-Street_number_5. (page: https://commons.wikimedia.org/wiki/File:Street_number_5.jpg | File:Street number 5.jpg - page does not name the entity (Five))",
+    "created_at": "2026-11-26T00:34:37.269449+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/OL_ONAL_DIGIT_FIVE.jpg/1280px-OL_ONAL_DIGIT - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:37.268312+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:37.267009+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Hausnummer_5_in_Frankreich.jpg/1280px-Hausn (page: https://commons.wikimedia.org/wiki/File:Hausnummer_5_in_Frankreich.jpg | File:Hausnummer 5 in Frankr - page does not name the entity (Five))",
+    "created_at": "2026-11-26T00:34:37.165800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Five_children_on_a_motorcycle.jpg/1280px-Fi - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:37.164473+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:37.163102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://upload.wikimedia.org/wikipedia/commons/1/14/Five_%281951_film%29_trailer_1.jpg?utm_source=co - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T00:34:37.044538+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T00:34:37.043030+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7422/10751725234_ef1a50fd02_b.jpg",
+    "created_at": "2026-11-26T00:34:36.931824+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7138/7668859772_6d89c1b10a_b.jpg",
+    "created_at": "2026-11-26T00:34:36.878861+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7350/13023077404_81c3b206f1_b.jpg",
+    "created_at": "2026-11-26T00:34:36.834270+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1481/24300258539_06bfec3842_b.jpg",
+    "created_at": "2026-11-26T00:34:36.784927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8105/8560235748_9d83412309_b.jpg",
+    "created_at": "2026-11-26T00:34:36.703695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Five'",
+    "created_at": "2026-11-26T00:34:36.655149+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Five'",
+    "created_at": "2026-11-26T00:34:36.483337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Five'",
+    "created_at": "2026-11-26T00:34:36.314283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Five'",
+    "created_at": "2026-11-26T00:34:35.748568+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:08.770273+00:00",
+    "created_at": "2026-11-26T00:34:35.411149+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-25T23:35:08.769568+00:00",
+    "created_at": "2026-11-26T00:34:35.410067+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Will Netanyahu lead Israel into another war with Iran before' - rejected (no og:image)",
-    "created_at": "2026-11-25T23:35:08.768772+00:00",
+    "message": "photo: topical search found nothing for 'Five Russian military jets hit in airfield strike,' - trying entity search 'Five'",
+    "created_at": "2026-11-26T00:34:35.408970+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiekFVX3lxTFB0OWNjX051TVhaNHlkSTlod2xmWUFUUHVwRFE2Y1ZHcjlmZ3oyTEVDOXY0MEcyMXQ1anV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-25T23:35:08.766878+00:00",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:35.407783+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: European troops should be in Ukraine, ex' - skipped (same event used within 24h, event key 'argue behaviour call european latest news putrid sky troop t')",
-    "created_at": "2026-11-25T23:35:08.629622+00:00",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:35.406575+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'African insurgents take war to the skies with off-the-shelf ' - skipped (same event used within 24h, event key 'african drone insurgent off reuter shelf skie take war')",
-    "created_at": "2026-11-25T23:35:08.628635+00:00",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:35.405327+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
-    "created_at": "2026-11-25T23:35:08.627579+00:00",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:35.404061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-7 (page: https://commons.wikimedia.org/wiki/File:SAM_S-75_Dvina._%D0%97%D0%A0%D0%9A_%D0%A1-75_%22%D0%94%D0%B2 - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:35.402824+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit'",
+    "created_at": "2026-11-26T00:34:35.400316+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit'",
+    "created_at": "2026-11-26T00:34:35.275684+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 1 result(s) for 'Five Russian military jets hit'",
+    "created_at": "2026-11-26T00:34:35.121058+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Five Russian military jets hit'",
+    "created_at": "2026-11-26T00:34:34.821350+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:34.591315+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:34.590178+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:34.589055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:34.587783+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:34.586491+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:34.585258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:34.582877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:34.463662+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:34.319904+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:34.141550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:33.969108+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:33.968072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28271155/display_1500/stock-photo-number-five-ill (page: https://www.alamy.com/number-five-icon-sign-set-of-coloured-buttons-vector-illustration-image1812471 - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:33.967091+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://i.pinimg.com/736x/16/fa/da/16fada717a2df1eee35af5584a8b50f4.jpg (page: https://www.shutterstock.com/image-illustration/number-five-illustration-28271155 | Download premium - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:33.966045+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://image.shutterstock.com/shutterstock/photos/28605901/display_1500/stock-photo-number-five-sym (page: https://in.pinterest.com/pin/download-premium-psd-image-of-number-five-sign-symbol-icon-transparent- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:33.964938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Five Russian military jets hit in airfield strike,'): https://thumbs.dreamstime.com/z/kid-s-hand-showing-number-five-sign-fingers-icon-counting-education- (page: https://www.shutterstock.com/image-illustration/number-five-symbol-design-28605901 | Number Five Sto - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T00:34:33.962901+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:33.960682+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:33.840580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:33.716772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Five Russian military jets hit in airfield strike, says Ukra'",
+    "created_at": "2026-11-26T00:34:33.487592+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:33.255042+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T00:34:33.254046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no og:image)",
+    "created_at": "2026-11-26T00:34:33.252825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vbjRXZHVvMFBra2FoR20zdnY0MUlXdTZMNy11dGpJeEtNdUM1dXkwMllYa1RvbWdZelg) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T00:34:33.250461+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - skipped (same event used within 24h, event key 'accuse action cnbc estonia hostile member nato open russia u')",
+    "created_at": "2026-11-26T00:34:32.365807+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - skipped (same event used within 24h, event key '000 700 estimate kill nbc news russian soldier suggest than ')",
+    "created_at": "2026-11-26T00:34:32.364225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-26T00:34:32.362326+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+    "created_at": "2026-11-26T00:34:31.846250+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-26T00:34:31.844965+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T00:34:31.843047+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T00:34:31.842009+00:00",
     "card": ""
   }
 ]

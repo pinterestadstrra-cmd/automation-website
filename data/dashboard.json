@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-25T23:50:30.228237+00:00",
-  "last_run": "2026-11-25T23:50:26.793832+00:00",
-  "runs": 112,
+  "generated_at": "2026-11-26T00:34:59.069365+00:00",
+  "last_run": "2026-11-26T00:32:00.582666+00:00",
+  "runs": 113,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 3,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 3,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-25T23:35:21.541300+00:00",
-    "mastodon.social": "2026-11-25T23:36:21.295785+00:00"
+    "Adsterra Blogger": "2026-11-26T00:34:04.047530+00:00",
+    "mastodon.social": "2026-11-26T00:34:58.899402+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 46,
+      "success": 47,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T23:35:21.541298+00:00"
+      "last_run": "2026-11-26T00:34:04.047526+00:00"
     },
     "mastodon.social": {
-      "success": 10,
+      "success": 11,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-25T23:36:21.295783+00:00"
+      "last_run": "2026-11-26T00:34:58.899398+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T23:35:21.541300+00:00",
-      "runs_today": 20,
-      "posts_today": 6,
+      "last_run": "2026-11-26T00:34:04.047530+00:00",
+      "runs_today": 1,
+      "posts_today": 7,
       "next_runs": [
-        "2026-11-26T06:05:21.541300+06:00",
-        "2026-11-26T06:20:21.541300+06:00",
-        "2026-11-26T06:35:21.541300+06:00",
-        "2026-11-26T06:50:21.541300+06:00",
-        "2026-11-26T07:05:21.541300+06:00"
+        "2026-11-26T06:49:04.047530+06:00",
+        "2026-11-26T07:04:04.047530+06:00",
+        "2026-11-26T07:19:04.047530+06:00",
+        "2026-11-26T07:34:04.047530+06:00",
+        "2026-11-26T07:49:04.047530+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T05:53:00+06:00",
         "2026-11-26T07:09:00+06:00",
         "2026-11-26T08:05:00+06:00",
         "2026-11-26T09:00:00+06:00",
-        "2026-11-26T09:59:00+06:00"
+        "2026-11-26T09:59:00+06:00",
+        "2026-11-26T11:04:00+06:00"
       ],
-      "success": 46,
+      "success": 47,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-25T23:36:21.295785+00:00",
-      "runs_today": 10,
-      "posts_today": 6,
+      "last_run": "2026-11-26T00:34:58.899402+00:00",
+      "runs_today": 1,
+      "posts_today": 7,
       "next_runs": [
-        "2026-11-26T05:51:21.295785+06:00",
-        "2026-11-26T06:06:21.295785+06:00",
-        "2026-11-26T06:21:21.295785+06:00",
-        "2026-11-26T06:36:21.295785+06:00",
-        "2026-11-26T06:51:21.295785+06:00"
+        "2026-11-26T06:49:58.899402+06:00",
+        "2026-11-26T07:04:58.899402+06:00",
+        "2026-11-26T07:19:58.899402+06:00",
+        "2026-11-26T07:34:58.899402+06:00",
+        "2026-11-26T07:49:58.899402+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T06:10:00+06:00",
         "2026-11-26T07:05:00+06:00",
         "2026-11-26T08:03:00+06:00",
         "2026-11-26T08:58:00+06:00",
-        "2026-11-26T10:00:00+06:00"
+        "2026-11-26T10:00:00+06:00",
+        "2026-11-26T11:05:00+06:00"
       ],
-      "success": 10,
+      "success": 11,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-25T23:50:26.795499+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-25T23:50:26.796680+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T00:32:00.584258+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Describe a film without its name",
+    "New Avengers: Doomsday poster",
+    "Thanksgiving Day celebrations",
     "King tides threaten Bay Area flooding",
-    "Aaron Rodgers reportedly out",
-    "Duran Duran's Andy Taylor dies",
-    "Macy's parade turns 100",
-    "FEMA hotline unanswered in Iowa",
-    "Huang reinstated as Nvidia CEO",
     "Denny's restores Jensen Huang plaque",
-    "Abrego Garcia leaves for Spain",
-    "New Avengers: Doomsday poster"
+    "Huang reinstated as Nvidia CEO",
+    "Duran Duran's Andy Taylor dies",
+    "FEMA hotline unanswered in Iowa",
+    "Macy's parade turns 100",
+    "Nvidia chip exports to China"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-25T23:50:30.062329+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-25T23:50:30.060640+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-25T23:50:29.832793+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-25T23:50:26.797774+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-25T23:50:26.796687+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-25T23:50:26.795507+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #112 started (--only blogger)",
-      "created_at": "2026-11-25T23:50:26.793860+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-25T23:36:21.400059+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Describe a film without its name', \"Denny's restores Jensen Huang plaque\", 'New Avengers: Doomsday poster', 'Aaron Rodgers reportedly out', \"Duran Duran's Andy Taylor dies\"]",
-      "created_at": "2026-11-25T23:36:21.395084+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-25T23:36:21.295802+00:00",
+      "created_at": "2026-11-26T00:34:58.899426+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-25T23:36:21.295044+00:00",
+      "created_at": "2026-11-26T00:34:58.898254+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679704079019250",
-      "created_at": "2026-11-25T23:36:21.293992+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117679934600938964",
+      "created_at": "2026-11-26T00:34:58.896830+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117679704079019250",
-      "created_at": "2026-11-25T23:36:21.291855+00:00",
+      "message": "mastodon: posted to mastodon.social: 117679934600938964",
+      "created_at": "2026-11-26T00:34:58.894159+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'How the War Turned Sudan Into a Country Without a Newspaper ' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-25T23:36:14.803503+00:00",
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-26T00:34:50.708802+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-26T00:34:49.944079+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-25T23:36:14.802830+00:00",
+      "message": "promo: photo search done - 22 candidate(s) tried, 5 fresh stories with a photo attempt, 5 real-photo search(es), no usable photo",
+      "created_at": "2026-11-26T00:34:49.943023+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'How the War Turned Sudan Into a Country Without a Newspaper ': https://www.economist.com/content-assets/images/20230708_SRP054.jpg (from bing-images, query 'War Turned Sudan Into Country', page: https://global.espreso.tv/russia-ukraine-war-no-easy-path-ahead-ukrainian-reservists-council-head-ty - matches 2 key entities (how, war))",
-      "created_at": "2026-11-25T23:36:14.801896+00:00",
+      "message": "promo: story 5/6 tried: 'DOW Launches Automated SI Solution for Classification Manage' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T00:34:49.941877+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'DOW Launches Automated SI Solution for Classification Manage' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T00:34:49.940789+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'DOW Launches Automated SI Solution for Classification Management - U.S. Department of War (.gov)' (9 download(s) tried)",
+      "created_at": "2026-11-26T00:34:49.939645+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://wallpaperaccess.com/full/13422728.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-26T00:34:49.938439+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T23:36:14.800612+00:00",
+      "created_at": "2026-11-26T00:34:49.936953+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 - source page title names only 0 of 9 key entities - not a news article about the story",
-      "created_at": "2026-11-25T23:36:14.492524+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image.",
+      "created_at": "2026-11-26T00:34:49.634163+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi",
+      "created_at": "2026-11-26T00:34:49.546277+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://logos.stocktwits-cdn.com/DOW.png - source page title names only 1 of 9 key entities - not a news article about the story",
+      "created_at": "2026-11-26T00:34:49.290604+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-25T23:36:14.491619+00:00",
+      "created_at": "2026-11-26T00:34:49.289128+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://img.freepik.com/premium-photo/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-intens (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | Cinematic Depiction of War i - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.467128+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5213/5538883692_05fa7d1112_b.jpg",
+      "created_at": "2026-11-26T00:34:49.179698+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.freepik.com/premium-ai-image/cinematic-depiction-war-ukraine-with-ukrainian-soldiers-int - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.466436+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2850/9725249858_0998732c71_b.jpg",
+      "created_at": "2026-11-26T00:34:49.123358+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Person_taking_photograph.jpg/1280px-Person_ (page: https://commons.wikimedia.org/wiki/File:Person_taking_photograph.jpg | File:Person taking photograph - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.465547+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/50/129209518_4b292bacbd_b.jpg",
+      "created_at": "2026-11-26T00:34:49.077281+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Fire_and_sword_in_the_Sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.464757+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8568/16236662916_6331356e5c_b.jpg",
+      "created_at": "2026-11-26T00:34:49.025479+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Fire_and_sword_in_the_Sudan%3B_a_personal_n (page: https://commons.wikimedia.org/wiki/File:Fire_and_sword_in_the_Sudan;_a_personal_narrative_of_fightin - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.464030+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3192/2899705638_2efe9044e6.jpg",
+      "created_at": "2026-11-26T00:34:48.973124+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Fire_and_Sword_in_the_sudan_-_a_personal_na (page: https://commons.wikimedia.org/wiki/File:Fire_and_Sword_in_the_sudan_-_a_personal_narrative_of_fighti - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.463237+00:00",
+      "message": "bing-images: 4 candidate(s) for 'DOW'",
+      "created_at": "2026-11-26T00:34:48.919978+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Asia_%28late_19th_century-_early_20th_centu (page: https://commons.wikimedia.org/wiki/File:Asia_(late_19th_century-_early_20th_century).jpg | File:Asia - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.462286+00:00",
+      "message": "google-images: 0 candidate(s) for 'DOW'",
+      "created_at": "2026-11-26T00:34:48.700301+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://live.staticflickr.com/1884/44632251721_448453f5c5.jpg (page: https://www.flickr.com/photos/139494057@N07/44632251721 | A stranger in Olondria : being the complet - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:14.461387+00:00",
+      "message": "wikimedia: search HTTP 429 for 'DOW'",
+      "created_at": "2026-11-26T00:34:48.570390+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'War Turned Sudan Into Country'",
-      "created_at": "2026-11-25T23:36:14.458920+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'War Turned Sudan Into Country'",
-      "created_at": "2026-11-25T23:36:14.332444+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'War Turned Sudan Into Country'",
-      "created_at": "2026-11-25T23:36:14.206471+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 1 result(s) for 'War Turned Sudan Into Country'",
-      "created_at": "2026-11-25T23:36:13.903933+00:00",
+      "message": "openverse: 5 result(s) for 'DOW'",
+      "created_at": "2026-11-26T00:34:48.505152+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:13.874583+00:00",
+      "created_at": "2026-11-26T00:34:48.301374+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:13.873962+00:00",
+      "created_at": "2026-11-26T00:34:48.300367+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.873297+00:00",
+      "message": "photo: topical search found nothing for 'DOW Launches Automated SI Solution for Classificat' - trying entity search 'DOW'",
+      "created_at": "2026-11-26T00:34:48.299266+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.872581+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:48.298145+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.871854+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:48.297018+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.870966+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:48.295831+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-      "created_at": "2026-11-25T23:36:13.868019+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:48.294590+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-      "created_at": "2026-11-25T23:36:13.756221+00:00",
+      "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution'",
+      "created_at": "2026-11-26T00:34:48.292091+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-      "created_at": "2026-11-25T23:36:13.652108+00:00",
+      "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution'",
+      "created_at": "2026-11-26T00:34:48.104837+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper'",
-      "created_at": "2026-11-25T23:36:13.468732+00:00",
+      "message": "wikimedia: search HTTP 429 for 'DOW Launches Automated SI Solution'",
+      "created_at": "2026-11-26T00:34:47.966965+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution'",
+      "created_at": "2026-11-26T00:34:47.905204+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:13.433548+00:00",
+      "created_at": "2026-11-26T00:34:47.809974+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-25T23:36:13.432892+00:00",
+      "created_at": "2026-11-26T00:34:47.808813+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://cdn.britannica.com/60/11360-050-B2D9DDAD/marines-Guadalcanal-land-offensive-theater-World-Wa (page: https://www.publicdomainpictures.net/se/view-image.php?image=240453&picture=krig | World War II - Hu - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.432147+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:47.807682+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static01.nyt.com/images/2022/06/21/world/21ukraine-briefing-carousel14/merlin_208878513_f312 (page: https://www.britannica.com/event/World-War-II/Human-and-material-cost | Russian Invasion of Ukraine: - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.431156+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:47.806366+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://static.vecteezy.com/system/resources/previews/024/571/657/large_2x/war-concept-military-man- (page: https://www.nytimes.com/live/2022/06/21/world/russia-ukraine-war-news | War Concept. Military man in - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.430262+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/content/dam/images/public-images/corporate/2024/dow_63398687201-dow-buildi (page: https://faroldacciss.org/dow-corporate-headquarters-office-locations-and-addresses/ | Dow achieves 2 - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:47.805045+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the War Turned Sudan Into a Country Without a '): https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg. (page: https://www.vecteezy.com/photo/24571657-war-concept-military-man-in-uniform-of-world-war-ii-against- - only 1 of 9 key entities in the source page)",
-      "created_at": "2026-11-25T23:36:13.429395+00:00",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://logos.stocktwits-cdn.com/DOW.png (page: https://corporate.dow.com/en-us/news/press-releases/dow-achieves-24th-year-on-the-dow-jones-sustaina - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:47.803882+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-      "created_at": "2026-11-25T23:36:13.426778+00:00",
+      "message": "bing-images: 4 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+      "created_at": "2026-11-26T00:34:47.801387+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-      "created_at": "2026-11-25T23:36:13.315495+00:00",
+      "message": "google-images: 0 candidate(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+      "created_at": "2026-11-26T00:34:47.678511+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'How the War Turned Sudan Into a Country Without a Newspaper '",
-      "created_at": "2026-11-25T23:36:13.199410+00:00",
+      "message": "wikimedia: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+      "created_at": "2026-11-26T00:34:47.558658+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'DOW Launches Automated SI Solution for Classification Manage'",
+      "created_at": "2026-11-26T00:34:46.902458+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T00:34:46.716379+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T00:34:46.715105+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://wallpaperaccess.com/full/13422728.jpg (page: https://www.gettyimages.in/photos/dow-jones-industrial-average | What is the Dow? Why This 130-Year- - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:46.713989+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'DOW Launches Automated SI Solution for Classificat'): https://corporate.dow.com/en-us/about-dow/_jcr_content/root/container/columnband_v2_572692933/image. (page: https://militarybudget.org/what-is-the-dow-why-this-130-year-old-number-still-rules-your-401k-x76 |  - only 1 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T00:34:46.712698+00:00",
       "card": ""
     }
   ]
