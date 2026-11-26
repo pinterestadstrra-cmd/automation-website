@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T22:57:08.539944+00:00",
-  "last_run": "2026-11-26T22:57:01.965217+00:00",
-  "runs": 151,
+  "generated_at": "2026-11-26T23:41:14.552795+00:00",
+  "last_run": "2026-11-26T23:34:32.041313+00:00",
+  "runs": 152,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 8,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 8,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T22:36:43.012155+00:00",
-    "mastodon.social": "2026-11-26T22:37:36.736172+00:00"
+    "Adsterra Blogger": "2026-11-26T23:38:22.960642+00:00",
+    "mastodon.social": "2026-11-26T23:41:14.446650+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 67,
+      "success": 68,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T22:36:43.012153+00:00"
+      "last_run": "2026-11-26T23:38:22.960640+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 14,
+      "fail": 15,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T22:37:36.736169+00:00"
+      "last_run": "2026-11-26T23:41:14.446648+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T22:36:43.012155+00:00",
-      "runs_today": 20,
-      "posts_today": 4,
+      "last_run": "2026-11-26T23:38:22.960642+00:00",
+      "runs_today": 21,
+      "posts_today": 5,
       "next_runs": [
-        "2026-11-27T05:06:43.012155+06:00",
-        "2026-11-27T05:21:43.012155+06:00",
-        "2026-11-27T05:36:43.012155+06:00",
-        "2026-11-27T05:51:43.012155+06:00",
-        "2026-11-27T06:06:43.012155+06:00"
+        "2026-11-27T05:53:22.960642+06:00",
+        "2026-11-27T06:08:22.960642+06:00",
+        "2026-11-27T06:23:22.960642+06:00",
+        "2026-11-27T06:38:22.960642+06:00",
+        "2026-11-27T06:53:22.960642+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
         "2026-11-27T07:08:00+06:00",
         "2026-11-27T07:50:00+06:00",
-        "2026-11-27T08:55:00+06:00"
+        "2026-11-27T08:55:00+06:00",
+        "2026-11-27T10:00:00+06:00"
       ],
-      "success": 67,
+      "success": 68,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T22:37:36.736172+00:00",
-      "runs_today": 20,
+      "last_run": "2026-11-26T23:41:14.446650+00:00",
+      "runs_today": 21,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T05:07:36.736172+06:00",
-        "2026-11-27T05:22:36.736172+06:00",
-        "2026-11-27T05:37:36.736172+06:00",
-        "2026-11-27T05:52:36.736172+06:00",
-        "2026-11-27T06:07:36.736172+06:00"
+        "2026-11-27T05:56:14.446650+06:00",
+        "2026-11-27T06:11:14.446650+06:00",
+        "2026-11-27T06:26:14.446650+06:00",
+        "2026-11-27T06:41:14.446650+06:00",
+        "2026-11-27T06:56:14.446650+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
         "2026-11-27T07:08:00+06:00",
         "2026-11-27T07:52:00+06:00",
-        "2026-11-27T08:57:00+06:00"
+        "2026-11-27T08:57:00+06:00",
+        "2026-11-27T09:58:00+06:00"
       ],
       "success": 17,
-      "fail": 14,
+      "fail": 15,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 19
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T22:57:01.966756+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T22:57:01.968033+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T23:34:32.042370+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Birthday twin spectrum prompt",
-    "Thanksgiving Day celebrations",
-    "Macy's parade postponed to Saturday",
-    "Grand Theft Auto VI",
-    "UK net migration falls to 77,000",
-    "Vance blames Obama for detonation",
-    "Aaron Rodgers reportedly out",
     "Thanksgiving storm knocks out power",
+    "Doug Ford urges fighting home invaders",
+    "Victoria votes in state election",
+    "Thanksgiving Day celebrations",
+    "Birthday twin spectrum prompt",
+    "Grand Theft Auto VI",
     "Musk pledges kids SpaceX shares",
-    "Nvidia chip exports to China"
+    "Macy's parade postponed to Saturday",
+    "FCC approves SpaceX Starmind satellites",
+    "Describe a film without its name"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T22:57:08.426979+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T22:57:08.423975+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-26T22:57:08.204558+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T22:57:01.969250+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T22:57:01.968068+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T22:57:01.966765+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #151 started (--only blogger)",
-      "created_at": "2026-11-26T22:57:01.965238+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T22:37:36.763447+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Thanksgiving storm knocks out power', 'Musk pledges kids SpaceX shares', 'Birthday twin spectrum prompt', 'Vance blames Obama for detonation']",
-      "created_at": "2026-11-26T22:37:36.759300+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T22:37:36.736204+00:00",
+      "created_at": "2026-11-26T23:41:14.446681+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-26T22:37:36.735506+00:00",
+      "created_at": "2026-11-26T23:41:14.445980+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T22:37:36.734243+00:00",
+      "created_at": "2026-11-26T23:41:14.444605+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T22:37:26.731821+00:00",
+      "created_at": "2026-11-26T23:41:04.442584+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T23:41:04.238152+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T23:41:04.236445+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T22:37:21.440072+00:00",
+      "created_at": "2026-11-26T23:40:59.064649+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T22:37:21.438218+00:00",
+      "created_at": "2026-11-26T23:40:59.062682+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-26T22:37:14.562437+00:00",
-      "card": "mastodon.social"
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T23:40:58.873574+00:00",
+      "card": ""
     },
     {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-26T22:37:14.183169+00:00",
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T23:40:58.871687+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 13 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-26T22:37:14.182493+00:00",
+      "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T23:39:57.852580+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-26T22:37:14.181820+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T23:39:57.851942+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T22:37:14.181169+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (from bing-images, query 'Democrats', page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - page names the entity (Democrats))",
+      "created_at": "2026-11-26T23:39:57.851245+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T22:37:14.180489+00:00",
+      "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (, this is the official logo of the Democratic Party, which is the subject of the headline regarding their political plans.)",
+      "created_at": "2026-11-26T23:39:57.850147+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Lured by High Salaries, Some Brazilians Were Duped Into Fighting for Russia - The New York Times' (0 download(s) tried)",
-      "created_at": "2026-11-26T22:37:14.179783+00:00",
+      "message": "photo: rejected (vision NO): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png",
+      "created_at": "2026-11-26T23:39:12.713635+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://img.swifdoo.com/image/happy-thanksgiving-wishes-01_1.png (page: https://pdf.afirstsoft.com/templates/happy-thanksgiving-message.html | 35 Thanksgiving Messages to E - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.179081+00:00",
+      "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (\n\nReason: The image is simply the logo for the Democratic Party, not a photo of the people, place, or event related to the headline about the Iran war)",
+      "created_at": "2026-11-26T23:39:12.712587+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.lovethispic.com/uploaded_images/143308-Wishing-You-A-Happy-Thanksgiving.jpg (page: https://www.swifdoo.com/templates/thanksgiving-messages-to-employees | Wishing You A Happy Thanksgiv - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.178171+00:00",
+      "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
+      "created_at": "2026-11-26T23:39:09.277070+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.greetingswishes.com/wp-content/uploads/2022/11/Happy-Thanksgiving-Day-Greetings.jpg (page: https://www.lovethispic.com/image/143308/wishing-you-a-happy-thanksgiving | Thanksgiving Day Wishes  - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.177429+00:00",
+      "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (The photo shows campaign buttons rather than the people, places, or events related to a political news story about Iran war funding.)",
+      "created_at": "2026-11-26T23:39:09.275781+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://static.vecteezy.com/system/resources/previews/000/298/987/original/happy-thanksgiving-card-c (page: https://www.greetingswishes.com/thanksgiving-day-wishes-messages/ | Happy thanksgiving card concept  - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.176705+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
+      "created_at": "2026-11-26T23:38:25.135249+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/199/491889175_a900f6e272.jpg (page: https://www.flickr.com/photos/66742614@N00/491889175 | Old lure - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.175969+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
+      "created_at": "2026-11-26T23:38:25.134358+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/130/411453602_49363adf71_b.jpg (page: https://www.flickr.com/photos/28548387@N00/411453602 | The Lure Of Gold - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.175201+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
+      "created_at": "2026-11-26T23:38:25.096536+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/2/22/Blason_ville_fr_Lure_%28Haute-Sa%C3%B4ne%29.svg (page: https://commons.wikimedia.org/w/index.php?curid=5169949 | Blason ville fr Lure (Haute-Saône) - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.174421+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
+      "created_at": "2026-11-26T23:38:25.095808+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/6/67/2015-08_-_Sous-pr%C3%A9fecture_de_Lure_-_02.JPG (page: https://commons.wikimedia.org/w/index.php?curid=42154056 | 2015-08 - Sous-préfecture de Lure - 02 - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.173595+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
+      "created_at": "2026-11-26T23:38:25.095094+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/3210/3290077881_a8b841c34e_b.jpg (page: https://www.flickr.com/photos/91198056@N00/3290077881 | Small ABU Spoon Lures - page does not name the entity (Lured))",
-      "created_at": "2026-11-26T22:37:14.172648+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats'",
+      "created_at": "2026-11-26T23:38:25.093734+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Lured'",
-      "created_at": "2026-11-26T22:37:14.170638+00:00",
+      "message": "google-images: 0 candidate(s) for 'Democrats'",
+      "created_at": "2026-11-26T23:38:24.961244+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Lured'",
-      "created_at": "2026-11-26T22:37:13.149104+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Democrats'",
+      "created_at": "2026-11-26T23:38:24.852190+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Lured'",
-      "created_at": "2026-11-26T22:37:13.035934+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Lured'",
-      "created_at": "2026-11-26T22:37:13.021574+00:00",
+      "message": "openverse: 5 result(s) for 'Democrats'",
+      "created_at": "2026-11-26T23:38:24.839401+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T22:37:12.860921+00:00",
+      "created_at": "2026-11-26T23:38:24.812378+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T22:37:12.860206+00:00",
+      "created_at": "2026-11-26T23:38:24.811719+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Lured by High Salaries, Some Brazilians Were Duped' - trying entity search 'Lured'",
-      "created_at": "2026-11-26T22:37:12.859408+00:00",
+      "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
+      "created_at": "2026-11-26T23:38:24.811053+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d247c55c-2d2b-4020-8d95-b9084c424c01/d50hm (page: Tonge. by Noah-Muffin on DeviantArt - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-26T22:37:12.858498+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party-768x765.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.810324+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Lured High Salaries Some Brazilians'",
-      "created_at": "2026-11-26T22:37:12.857025+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.809476+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Lured High Salaries Some Brazilians'",
-      "created_at": "2026-11-26T22:37:12.733955+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.808720+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Lured High Salaries Some Brazilians'",
-      "created_at": "2026-11-26T22:37:12.631703+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.807970+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Lured High Salaries Some Brazilians'",
-      "created_at": "2026-11-26T22:37:12.616507+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+      "created_at": "2026-11-26T23:38:24.806447+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
+      "created_at": "2026-11-26T23:38:24.594463+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
+      "created_at": "2026-11-26T23:38:24.471262+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
+      "created_at": "2026-11-26T23:38:24.458315+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T22:37:12.490842+00:00",
+      "created_at": "2026-11-26T23:38:24.424902+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T22:37:12.490038+00:00",
+      "created_at": "2026-11-26T23:38:24.424254+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://surgerystudent.com/wp-content/uploads/2024/04/Inguinal-Hernias.png (page: https://fj.cnfservices.com/bladder-in-inguinal-hernia-sliding-inguinal-hernias/ | Inguinal Hernia –  - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-26T22:37:12.489356+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party-768x765.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.423569+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.drvpareek.com/wp-content/uploads/2021/02/image5-1.png (page: https://surgerystudent.com/inguinal-hernia/ | Inguinal hernia -Diagnosis and treatment - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-26T22:37:12.488540+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.422802+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://image.slidesharecdn.com/groinanatomy-240313025617-68534ad7/75/Groin-anatomy-inguinal-hernia- (page: https://www.drvpareek.com/inguinal-hernia-diagnosis-and-treatment/ | Groin anatomy inguinal hernia c - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-26T22:37:12.487685+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.422035+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://betterkids.com.au/wp-content/uploads/2024/10/hernia-male-bowel-within-scaled.jpg (page: https://www.slideshare.net/slideshow/groin-anatomy-inguinal-hernia-clinical-anatomy/266758359 | Ingu - only 0 of 10 key entities in the source page)",
-      "created_at": "2026-11-26T22:37:12.486887+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-26T23:38:24.421252+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-      "created_at": "2026-11-26T22:37:12.485250+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+      "created_at": "2026-11-26T23:38:24.419571+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+      "created_at": "2026-11-26T23:38:24.217165+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+      "created_at": "2026-11-26T23:38:24.117652+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+      "created_at": "2026-11-26T23:38:24.103924+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T23:38:24.077829+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T23:38:24.077174+00:00",
       "card": ""
     }
   ]

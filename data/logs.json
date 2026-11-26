@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-26T22:57:08.543484+00:00",
+    "created_at": "2026-11-26T23:41:14.554779+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', \"Macy's parade postponed to Saturday\", 'Grand Theft Auto VI', 'UK net migration falls to 77,000']",
-    "created_at": "2026-11-26T22:57:08.536475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T22:57:08.426979+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T22:57:08.423975+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-26T22:57:08.204558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T22:57:01.969250+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T22:57:01.968068+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T22:57:01.966765+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #151 started (--only blogger)",
-    "created_at": "2026-11-26T22:57:01.965238+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T22:37:36.763447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Thanksgiving storm knocks out power', 'Musk pledges kids SpaceX shares', 'Birthday twin spectrum prompt', 'Vance blames Obama for detonation']",
-    "created_at": "2026-11-26T22:37:36.759300+00:00",
+    "message": "trending (bluesky): ['Thanksgiving storm knocks out power', 'Doug Ford urges fighting home invaders', 'Victoria votes in state election', 'Thanksgiving Day celebrations', 'Birthday twin spectrum prompt']",
+    "created_at": "2026-11-26T23:41:14.550201+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-26T22:37:36.736204+00:00",
+    "created_at": "2026-11-26T23:41:14.446681+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-26T22:37:36.735506+00:00",
+    "created_at": "2026-11-26T23:41:14.445980+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-26T22:37:36.734243+00:00",
+    "created_at": "2026-11-26T23:41:14.444605+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T22:37:26.731821+00:00",
+    "created_at": "2026-11-26T23:41:04.442584+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T23:41:04.238152+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T23:41:04.236445+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-26T22:37:21.440072+00:00",
+    "created_at": "2026-11-26T23:40:59.064649+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T22:37:21.438218+00:00",
+    "created_at": "2026-11-26T23:40:59.062682+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T22:37:14.562437+00:00",
-    "card": "mastodon.social"
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T23:40:58.873574+00:00",
+    "card": ""
   },
   {
-    "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T22:37:14.183169+00:00",
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T23:40:58.871687+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 13 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T22:37:14.182493+00:00",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-26T23:39:57.852580+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-    "created_at": "2026-11-26T22:37:14.181820+00:00",
+    "message": "promo category: war news",
+    "created_at": "2026-11-26T23:39:57.851942+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 6/6 tried: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T22:37:14.181169+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (from bing-images, query 'Democrats', page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - page names the entity (Democrats))",
+    "created_at": "2026-11-26T23:39:57.851245+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T22:37:14.180489+00:00",
+    "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (, this is the official logo of the Democratic Party, which is the subject of the headline regarding their political plans.)",
+    "created_at": "2026-11-26T23:39:57.850147+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Lured by High Salaries, Some Brazilians Were Duped Into Fighting for Russia - The New York Times' (0 download(s) tried)",
-    "created_at": "2026-11-26T22:37:14.179783+00:00",
+    "message": "photo: rejected (vision NO): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png",
+    "created_at": "2026-11-26T23:39:12.713635+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://img.swifdoo.com/image/happy-thanksgiving-wishes-01_1.png (page: https://pdf.afirstsoft.com/templates/happy-thanksgiving-message.html | 35 Thanksgiving Messages to E - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.179081+00:00",
+    "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (\n\nReason: The image is simply the logo for the Democratic Party, not a photo of the people, place, or event related to the headline about the Iran war)",
+    "created_at": "2026-11-26T23:39:12.712587+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.lovethispic.com/uploaded_images/143308-Wishing-You-A-Happy-Thanksgiving.jpg (page: https://www.swifdoo.com/templates/thanksgiving-messages-to-employees | Wishing You A Happy Thanksgiv - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.178171+00:00",
+    "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
+    "created_at": "2026-11-26T23:39:09.277070+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.greetingswishes.com/wp-content/uploads/2022/11/Happy-Thanksgiving-Day-Greetings.jpg (page: https://www.lovethispic.com/image/143308/wishing-you-a-happy-thanksgiving | Thanksgiving Day Wishes  - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.177429+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://static.vecteezy.com/system/resources/previews/000/298/987/original/happy-thanksgiving-card-c (page: https://www.greetingswishes.com/thanksgiving-day-wishes-messages/ | Happy thanksgiving card concept  - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.176705+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/199/491889175_a900f6e272.jpg (page: https://www.flickr.com/photos/66742614@N00/491889175 | Old lure - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.175969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/130/411453602_49363adf71_b.jpg (page: https://www.flickr.com/photos/28548387@N00/411453602 | The Lure Of Gold - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.175201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/2/22/Blason_ville_fr_Lure_%28Haute-Sa%C3%B4ne%29.svg (page: https://commons.wikimedia.org/w/index.php?curid=5169949 | Blason ville fr Lure (Haute-Saône) - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.174421+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/6/67/2015-08_-_Sous-pr%C3%A9fecture_de_Lure_-_02.JPG (page: https://commons.wikimedia.org/w/index.php?curid=42154056 | 2015-08 - Sous-préfecture de Lure - 02 - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.173595+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/3210/3290077881_a8b841c34e_b.jpg (page: https://www.flickr.com/photos/91198056@N00/3290077881 | Small ABU Spoon Lures - page does not name the entity (Lured))",
-    "created_at": "2026-11-26T22:37:14.172648+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Lured'",
-    "created_at": "2026-11-26T22:37:14.170638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Lured'",
-    "created_at": "2026-11-26T22:37:13.149104+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Lured'",
-    "created_at": "2026-11-26T22:37:13.035934+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Lured'",
-    "created_at": "2026-11-26T22:37:13.021574+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:12.860921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:12.860206+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Lured by High Salaries, Some Brazilians Were Duped' - trying entity search 'Lured'",
-    "created_at": "2026-11-26T22:37:12.859408+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d247c55c-2d2b-4020-8d95-b9084c424c01/d50hm (page: Tonge. by Noah-Muffin on DeviantArt - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:12.858498+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-26T22:37:12.857025+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-26T22:37:12.733955+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-26T22:37:12.631703+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-26T22:37:12.616507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:12.490842+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:12.490038+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://surgerystudent.com/wp-content/uploads/2024/04/Inguinal-Hernias.png (page: https://fj.cnfservices.com/bladder-in-inguinal-hernia-sliding-inguinal-hernias/ | Inguinal Hernia –  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:12.489356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.drvpareek.com/wp-content/uploads/2021/02/image5-1.png (page: https://surgerystudent.com/inguinal-hernia/ | Inguinal hernia -Diagnosis and treatment - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:12.488540+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://image.slidesharecdn.com/groinanatomy-240313025617-68534ad7/75/Groin-anatomy-inguinal-hernia- (page: https://www.drvpareek.com/inguinal-hernia-diagnosis-and-treatment/ | Groin anatomy inguinal hernia c - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:12.487685+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://betterkids.com.au/wp-content/uploads/2024/10/hernia-male-bowel-within-scaled.jpg (page: https://www.slideshare.net/slideshow/groin-anatomy-inguinal-hernia-clinical-anatomy/266758359 | Ingu - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:12.486887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:12.485250+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:12.378989+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:12.269353+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:12.254379+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:11.942097+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:11.941392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://worksheets.clipart-library.com/images2/kanji-worksheet/kanji-worksheet-34.jpg (page: https://worksheets.clipart-library.com/worksheet/kanji-worksheet-33.html | Printable Kanji Practice  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:11.940667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/736x/6f/49/63/6f49635da0cb52fac6f96edf049a2fcf.jpg (page: https://www.scribd.com/document/397859287/Kanji-writing-practice-pdf | Japanese 120 Kanji Practice W - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:11.939845+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.etsystatic.com/28434690/r/il/119538/5114794951/il_794xN.5114794951_gp0w.jpg (page: https://in.pinterest.com/pin/japanese-120-kanji-practice-workbook-jlpt-n5-learn-kanji-study-kanji-di - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:11.939097+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://worksheets.clipart-library.com/images2/kanji-worksheet/kanji-worksheet-19.png (page: https://www.etsy.com/listing/1518206929/japanese-kanji-han-zi-learning | Learning Languages — N5 Kan - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:11.938356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:11.936478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:11.824633+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:11.713627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-26T22:37:11.698897+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:11.331583+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:11.330936+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - rejected (no og:image)",
-    "created_at": "2026-11-26T22:37:11.330090+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijAFBVV95cUxOVC01QXZKYmVBMGVqT0s0TExPOWFKWGkxNTVqZHE1STJhNUZZUmFBNWs2eG1Ca3BNQ0Y) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T22:37:11.328224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: Trump calls on Putin to pull back all mi' - skipped (same event used within 24h, event key 'aggression all back call europe latest military news pull pu')",
-    "created_at": "2026-11-26T22:37:11.018673+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 5/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T22:37:11.017698+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T22:37:11.017096+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (1 download(s) tried)",
-    "created_at": "2026-11-26T22:37:11.016480+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://img.colorxs.com/paletteimage/nature/21-sunset-palm-trees-silhouettes.jpg (page: https://tierschutz-muenstereifel.de/25-best-sunset-color-palettes-with-names-and-hex-codes/ | Sunset - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:11.015835+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://i.pinimg.com/originals/01/d7/b7/01d7b7df1feab73b2e5a8b03f06b6891.png (page: https://www.colorxs.com/palette/sunset | Sunset Color Code - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:11.015157+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://i.pinimg.com/originals/22/fe/f6/22fef6d26733e92eb4a50a577060fe7c.png (page: https://storage.googleapis.com/jgpejnkdwpuotwyxzblog/sunset-color-code.html | What Color Is Sunset O - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:11.014419+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://wallpaperaccess.com/full/2861779.jpg (page: https://sarahrenaeclark.com/27-sunset-inspired-color-palettes/ | Colorful Sunset Wallpapers - Top Fr - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:11.013598+00:00",
+    "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (The photo shows campaign buttons rather than the people, places, or events related to a political news story about Iran war funding.)",
+    "created_at": "2026-11-26T23:39:09.275781+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:11.012927+00:00",
+    "created_at": "2026-11-26T23:38:25.135249+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-    "created_at": "2026-11-26T22:37:11.011852+00:00",
+    "created_at": "2026-11-26T23:38:25.134358+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:10.986295+00:00",
+    "created_at": "2026-11-26T23:38:25.096536+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:10.985573+00:00",
+    "created_at": "2026-11-26T23:38:25.095808+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-26T22:37:10.984633+00:00",
+    "created_at": "2026-11-26T23:38:25.095094+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-26T22:37:10.982944+00:00",
+    "created_at": "2026-11-26T23:38:25.093734+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-26T22:37:10.864685+00:00",
+    "created_at": "2026-11-26T23:38:24.961244+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Democrats'",
-    "created_at": "2026-11-26T22:37:10.763793+00:00",
+    "created_at": "2026-11-26T23:38:24.852190+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-26T22:37:10.748859+00:00",
+    "created_at": "2026-11-26T23:38:24.839401+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:10.106436+00:00",
+    "created_at": "2026-11-26T23:38:24.812378+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:10.105681+00:00",
+    "created_at": "2026-11-26T23:38:24.811719+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-    "created_at": "2026-11-26T22:37:10.104962+00:00",
+    "created_at": "2026-11-26T23:38:24.811053+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://as2.ftcdn.net/jpg/06/44/41/67/1000_F_644416745_TbrGvnzUrLIpcMbdhIARHC6ZWCqbOmna.jpg (page: Horizontal illustration of beautiful female cyborg on a dark background ... - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:10.103807+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party-768x765.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.810324+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-26T22:37:10.101872+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.809476+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.808720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.807970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-26T23:38:24.806447+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-26T22:37:09.381221+00:00",
+    "created_at": "2026-11-26T23:38:24.594463+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-26T22:37:09.292704+00:00",
+    "created_at": "2026-11-26T23:38:24.471262+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-26T22:37:09.278167+00:00",
+    "created_at": "2026-11-26T23:38:24.458315+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:09.167787+00:00",
+    "created_at": "2026-11-26T23:38:24.424902+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:09.167130+00:00",
+    "created_at": "2026-11-26T23:38:24.424254+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://i0.wp.com/thehistoryjunkie.com/wp-content/uploads/2023/07/sacagawea-1.png?resize=768%2C1152& (page: https://study.com/academy/lesson/video/sacagawea-lesson-for-kids-biography-facts.html | Sacagawea Fa - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:09.166463+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party-768x765.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.423569+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.wixstatic.com/media/af014f_f5634992fe20483098e8f35365cdfb11~mv2.jpg/v1/fill/w_512,h_3 (page: https://thehistoryjunkie.com/sacagawea-family-tree-and-descendants/ | The Incredible Saga of Sacagaw - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:09.165687+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.422802+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://image.slidesharecdn.com/sacagawealewisclarkss-210524124247/75/Sacagawea-Lewis-Clark-western- (page: https://www.notesfromthefrontier.com/post/the-incredible-saga-of-sacagawea | Sacagawea, Lewis, Clark - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:09.164862+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.422035+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-cdn.bridgemanimages.com/api/1.0/image/600wm.PNP.2739420.7055475/246193.jpg (page: https://www.slideshare.net/slideshow/sacagawea-lewis-clark-western-exploration/248492030 | Image of  - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:09.163771+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.421252+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:09.162131+00:00",
+    "created_at": "2026-11-26T23:38:24.419571+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:09.052663+00:00",
+    "created_at": "2026-11-26T23:38:24.217165+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.935694+00:00",
+    "created_at": "2026-11-26T23:38:24.117652+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.921079+00:00",
+    "created_at": "2026-11-26T23:38:24.103924+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:08.510230+00:00",
+    "created_at": "2026-11-26T23:38:24.077829+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:08.509676+00:00",
+    "created_at": "2026-11-26T23:38:24.077174+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://hips.hearstapps.com/hmg-prod/images/ett-2131001-bronzed-tabletop-turkey-lifestyle-20-1668659 (page: https://westpearinteriors.com/thanksgiving-room-decor-upgrade-spac/ | 51 Undeniably Chic Thanksgivin - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:08.509108+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party-768x765.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.076471+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.homedecorfull.com/wp-content/uploads/2024/11/Thanksgiving-Decorating-Ideas.jpg (page: https://www.elledecor.com/life-culture/entertaining/g2766/thanksgiving-decoration-ideas/ | Thanksgiv - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:08.508498+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.075719+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://media-cldnry.s-nbcnews.com/image/upload/t_fit-720w,f_auto,q_auto:best/newscms/2023_18/179688 (page: https://storage.googleapis.com/fsgqcasszqlublog/thanksgiving-house-decor-ideas.html | 28 Thanksgivin - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:08.507799+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://americanbazaaronline.com/wp-content/uploads/2026/11/Democratic-Party-.png (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.074995+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://i5.walmartimages.com/seo/Gzhgfqoyut-Thanksgiving-Decorations-Autumn-Decorations-Fall-Thanksg (page: https://www.today.com/shop/thanksgiving-decor-home-table-t236764 | Gzhgfqoyut Thanksgiving Decoratio - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:08.507026+00:00",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:38:24.074032+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.505524+00:00",
+    "created_at": "2026-11-26T23:38:24.072686+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.396624+00:00",
+    "created_at": "2026-11-26T23:38:23.880151+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.288780+00:00",
+    "created_at": "2026-11-26T23:38:23.769344+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-26T22:37:08.273608+00:00",
+    "created_at": "2026-11-26T23:38:23.757089+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:07.993610+00:00",
+    "created_at": "2026-11-26T23:38:23.713403+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:07.992969+00:00",
+    "created_at": "2026-11-26T23:38:23.712813+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
-    "created_at": "2026-11-26T22:37:07.992180+00:00",
+    "created_at": "2026-11-26T23:38:23.712072+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T22:37:07.990386+00:00",
+    "created_at": "2026-11-26T23:38:23.710532+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran war live: Tehran denies carrying out drone attack that ' - skipped (same event used within 24h, event key 'attack carry denie drone iran jazeera kill live out tehran w')",
-    "created_at": "2026-11-26T22:37:07.710606+00:00",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T23:38:22.962307+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T23:38:22.961458+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+    "created_at": "2026-11-26T23:38:22.960658+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T23:38:22.959855+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': promo posted - event 'accus attack call cbs deadly drone iran kuwait live news pre' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T23:38:22.958412+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1080x720 (ratio 1.50) - unchanged",
+    "created_at": "2026-11-26T23:38:21.693801+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
-    "created_at": "2026-11-26T22:37:07.187822+00:00",
+    "message": "prepare_bsky_image: original 1080x720 (ratio 1.50) - kept, no crop",
+    "created_at": "2026-11-26T23:38:21.693165+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 4/6 tried: 'Trump says Democrats 'did a good job,' blames Republican can' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T22:37:07.187024+00:00",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
+    "created_at": "2026-11-26T23:38:21.691691+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T23:38:21.627375+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 8 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-26T23:38:21.625984+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T23:38:21.624824+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to kissmytiara.bsky.social (hot post by jonathanslater.bsky.social, comment: 'Someone’s had a great day! 🥰') as primonewstoday.bsky.social: 'Sounds like the turkey’s got nothing on your vibe! Hope the rest of the day is j'",
+    "created_at": "2026-11-26T23:38:16.148641+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to fifilapew.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Bon appetit from stormy New England.  Keep your chin up 💪') as primonewstoday.bsky.social: 'Thanks! Sending warm vibes back to you—stay safe and enjoy the feast despite the'",
+    "created_at": "2026-11-26T23:38:12.922944+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to pierrebezuhov.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Spatchcock of course, the man knows what's up!') as primonewstoday.bsky.social: 'Spatchcock is the way to go—nothing like a perfectly crisp bird to bring everyon'",
+    "created_at": "2026-11-26T23:38:10.002786+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to smishy61.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Grateful for you.') as primonewstoday.bsky.social: 'Thanks! Hope your Thanksgiving is filled with love and good food. 🌟\n\nhttps://sho'",
+    "created_at": "2026-11-26T23:38:07.123937+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to mr-jackson.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'I'm not from Michigan, but I need an invite next year.') as primonewstoday.bsky.social: 'Totally get it—would love to have you join us! 🎉 Let’s make next year unforgetta'",
+    "created_at": "2026-11-26T23:38:04.386281+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to v-ron.bsky.social (hot post by abdulelsayed.bsky.social, comment: '🫶') as primonewstoday.bsky.social: 'Thanks! Wishing you a warm, happy Thanksgiving with family and friends. 🙏\n\nhttps'",
+    "created_at": "2026-11-26T23:38:01.570143+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to mrbigchi.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'Ha! My husband is also cooking spatchcock turkey! 😍') as primonewstoday.bsky.social: 'Sounds like a tasty duo! Hope your turkey turns out perfectly juicy. 🦃✨\n\nhttps:/'",
+    "created_at": "2026-11-26T23:37:58.648311+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to marg1e43.bsky.social (hot post by abdulelsayed.bsky.social, comment: 'That's the face of a man who did NOT do the cooking but inte') as primonewstoday.bsky.social: 'Haha, love that classic “I’m just here for the feast” vibe! 😂\n\nhttps://shorturl.'",
+    "created_at": "2026-11-26T23:37:55.793367+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T23:37:54.669763+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Democrats usher in a new era with their resounding sweep of ' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-26T23:37:54.668681+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T22:37:07.186396+00:00",
+    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-26T23:36:54.114765+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS' (12 download(s) tried)",
-    "created_at": "2026-11-26T22:37:07.185724+00:00",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-26T23:36:54.114064+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.floridatoday.com/gcdn/authoring/authoring-images/2026/11/07/PBRE/92659546007-trump-at-ks",
-    "created_at": "2026-11-26T22:37:07.184935+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T22:37:07.170819+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T22:37:07.170043+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-26T22:37:07.150080+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T22:37:07.149229+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho",
-    "created_at": "2026-11-26T22:37:07.111728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5581/14235998518_fc8fd1a27d_b.jpg",
-    "created_at": "2026-11-26T22:37:07.072325+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8789/17215465351_cc1e377890_b.jpg",
-    "created_at": "2026-11-26T22:37:07.053826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T22:37:07.028278+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "download_image: rejected (not a valid photo >=400px): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T22:37:07.027150+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3906/14422616255_e43468d43d_b.jpg",
-    "created_at": "2026-11-26T22:37:07.011273+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg",
-    "created_at": "2026-11-26T22:37:06.984313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T22:37:06.961001+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T22:37:06.844575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump'",
-    "created_at": "2026-11-26T22:37:06.736171+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-26T22:37:06.722683+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:06.671553+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:06.670895+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Trump says Democrats 'did a good job,' blames Repu' - trying entity search 'Trump'",
-    "created_at": "2026-11-26T22:37:06.670225+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://www.floridatoday.com/gcdn/authoring/authoring-images/2026/11/07/PBRE/92659546007-trump-at-ks (page: https://abc7news.com/story/trump-deliver-remarks-front-revamped-reflecting-pool/20008630/ | Trump's  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.669403+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.floridatoday.com/story/tech/science/space/2026/11/09/trump-nasa-themed-speech-nasa-max-p - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.668626+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Trump  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.667837+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho",
-    "created_at": "2026-11-26T22:37:06.666926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://live.staticflickr.com/65535/53108230677_9ca8b8ceba_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53108230677 | 52024571123_6159f6d0f5_o - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.611018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump says Democrats did good'",
-    "created_at": "2026-11-26T22:37:06.609124+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump says Democrats did good'",
-    "created_at": "2026-11-26T22:37:06.485430+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump says Democrats did good'",
-    "created_at": "2026-11-26T22:37:06.366974+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'Trump says Democrats did good'",
-    "created_at": "2026-11-26T22:37:06.352452+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:06.163551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:06.162868+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://www.floridatoday.com/gcdn/authoring/authoring-images/2026/11/07/PBRE/92659546007-trump-at-ks (page: https://abc7news.com/story/trump-deliver-remarks-front-revamped-reflecting-pool/20008630/ | Trump's  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.162177+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.floridatoday.com/story/tech/science/space/2026/11/09/trump-nasa-themed-speech-nasa-max-p - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.161422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Trump  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:06.160655+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho",
-    "created_at": "2026-11-26T22:37:06.159745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:06.114260+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:05.644247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:05.541014+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:05.526062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:05.256990+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:05.256273+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://www.floridatoday.com/gcdn/authoring/authoring-images/2026/11/07/PBRE/92659546007-trump-at-ks (page: https://abc7news.com/story/trump-deliver-remarks-front-revamped-reflecting-pool/20008630/ | Trump's  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:05.255572+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.floridatoday.com/story/tech/science/space/2026/11/09/trump-nasa-themed-speech-nasa-max-p - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:05.254792+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Trump  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:05.253767+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho",
-    "created_at": "2026-11-26T22:37:05.252860+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:05.198508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:05.083401+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:04.998460+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
-    "created_at": "2026-11-26T22:37:04.983474+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:04.579788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:04.579179+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
-    "created_at": "2026-11-26T22:37:04.578425+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T22:37:04.576766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T22:37:04.431719+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T22:37:04.431125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (9 download(s) tried)",
-    "created_at": "2026-11-26T22:37:04.430519+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://blog-cdn.route4me.com/2019/05/861109a3-route4me-vehicle-tracking-system.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T22:37:04.429885+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Democrats usher in a new era with their resounding sweep of ': https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (from bing-images, query 'Democrats usher in a new era with their resounding sweep of the House and the Senate - PBS', page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - matches 2 key entities (democrat, house))",
+    "created_at": "2026-11-26T23:36:54.113093+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T22:37:04.429127+00:00",
+    "created_at": "2026-11-26T23:36:54.111738+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T22:37:04.362742+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+    "created_at": "2026-11-26T23:36:53.907094+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T22:37:04.361872+00:00",
+    "message": "google-images: 0 candidate(s) for 'Democrats usher in a new era with their resounding sweep of '",
+    "created_at": "2026-11-26T23:36:53.730044+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T22:37:04.329726+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Democrats usher in a new era with their resounding sweep of '",
+    "created_at": "2026-11-26T23:36:53.621244+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T22:37:04.328808+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://e-tracking.net/app/img/how-its-works.png",
-    "created_at": "2026-11-26T22:37:04.281887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
-    "created_at": "2026-11-26T22:37:04.226590+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
-    "created_at": "2026-11-26T22:37:04.198270+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-    "created_at": "2026-11-26T22:37:04.172766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-    "created_at": "2026-11-26T22:37:04.131486+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-    "created_at": "2026-11-26T22:37:04.104185+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking'",
-    "created_at": "2026-11-26T22:37:04.059777+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking'",
-    "created_at": "2026-11-26T22:37:03.937227+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Tracking'",
-    "created_at": "2026-11-26T22:37:03.825939+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Tracking'",
-    "created_at": "2026-11-26T22:37:03.811435+00:00",
+    "message": "openverse: 0 result(s) for 'Democrats usher in a new era with their resounding sweep of '",
+    "created_at": "2026-11-26T23:36:53.606108+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:03.777308+00:00",
+    "created_at": "2026-11-26T23:36:53.578378+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T22:37:03.776725+00:00",
+    "created_at": "2026-11-26T23:36:53.577818+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
-    "created_at": "2026-11-26T22:37:03.776163+00:00",
+    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - rejected (no og:image)",
+    "created_at": "2026-11-26T23:36:53.577114+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://blog-cdn.route4me.com/2019/05/861109a3-route4me-vehicle-tracking-system.jpg (page: https://www.trackingmore.com/blog/magento-shipping-tracking/ | Route4Me's Vehicle Tracking System |  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.775521+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxPblFTeDZOTlFNZ0hzLTJnczQ0dWk0TlVTTUhUY2dHbExHRXY3RkQtNGtkdTFrM000Nkh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T23:36:53.575819+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://blog.route4me.com/route4me-vehicle-tracking-system/ | Logistics Shipment Tracking Dashboard  - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.774786+00:00",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T23:36:53.437240+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Employee Tracking vs. Mo - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T22:37:03.774108+00:00",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T23:36:53.436685+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 5/6 tried: 'WATCH: House returns to Washington after blowout election fo' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T23:36:53.436061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'WATCH: House returns to Washington after blowout election fo' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T23:36:53.435471+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'WATCH: House returns to Washington after blowout election for Democrats - PBS' (9 download(s) tried)",
+    "created_at": "2026-11-26T23:36:53.434886+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp3049325.jpg",
+    "created_at": "2026-11-26T23:36:53.434205+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp3049325.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-26T23:36:53.433545+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/originals/8f/bf/e8/8fbfe8514d5644636d247847ca2ed14b.png - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T23:36:53.431351+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T23:36:53.430128+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp3049340.jpg",
+    "created_at": "2026-11-26T23:36:53.375668+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp3049340.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-26T23:36:53.374983+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T23:36:53.353040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T23:36:53.352282+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2217/2157559108_2b60a28951_b.jpg",
+    "created_at": "2026-11-26T23:36:53.314004+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5131/5538714380_2d4b615bae_b.jpg",
+    "created_at": "2026-11-26T23:36:53.291896+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5612/15643202368_815a9fd101_b.jpg",
+    "created_at": "2026-11-26T23:36:53.256965+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7011/6633086133_e505ca0004_b.jpg",
+    "created_at": "2026-11-26T23:36:53.232866+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3007/2789240957_691d22963e_b.jpg",
+    "created_at": "2026-11-26T23:36:53.199032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'House'",
+    "created_at": "2026-11-26T23:36:53.177252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'House'",
+    "created_at": "2026-11-26T23:36:53.008138+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'House'",
+    "created_at": "2026-11-26T23:36:52.898113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'House'",
+    "created_at": "2026-11-26T23:36:52.883823+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:51.172991+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:51.172362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'WATCH: House returns to Washington after blowout e' - trying entity search 'House'",
+    "created_at": "2026-11-26T23:36:51.171752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2025/09/introducing-apple-watch-ultra-3/article/Apple-Watch-Ul (page: https://www.notebookcheck.org/Apple-Watch-Ultra-2-arrives-with-new-S9-SiP-on-device-Siri-double-tap- - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:51.171058+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2024/09/introducing-apple-watch-series-10/article/Apple-Watch- (page: https://www.apple.com/jp/newsroom/2025/09/introducing-apple-watch-ultra-3/ | Introducing Apple Watch - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:51.170314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6519/6519486_sd.jpg (page: https://www.apple.com/in/newsroom/2024/09/introducing-apple-watch-series-10/ | Questions and Answers - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:51.169567+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://lmt-web.mstatic.lv/eshop/35810/1-apple-watch-series-11-gps-cellular-42mm-gold-titanium-case- (page: https://www.bestbuy.com/site/questions/apple-watch-se-2nd-generation-gps-cellular-40mm-aluminum-case - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:51.168822+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'WATCH House returns Washington blowout'",
+    "created_at": "2026-11-26T23:36:51.167078+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'WATCH House returns Washington blowout'",
+    "created_at": "2026-11-26T23:36:51.013032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'WATCH House returns Washington blowout'",
+    "created_at": "2026-11-26T23:36:50.911161+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'WATCH House returns Washington blowout'",
+    "created_at": "2026-11-26T23:36:50.895730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:50.669877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:50.669319+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2025/09/introducing-apple-watch-ultra-3/article/Apple-Watch-Ul (page: https://www.notebookcheck.org/Apple-Watch-Ultra-2-arrives-with-new-S9-SiP-on-device-Siri-double-tap- - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.668723+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2024/09/introducing-apple-watch-series-10/article/Apple-Watch- (page: https://www.apple.com/jp/newsroom/2025/09/introducing-apple-watch-ultra-3/ | Introducing Apple Watch - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.667913+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6519/6519486_sd.jpg (page: https://www.apple.com/in/newsroom/2024/09/introducing-apple-watch-series-10/ | Questions and Answers - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.667270+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://lmt-web.mstatic.lv/eshop/35810/1-apple-watch-series-11-gps-cellular-42mm-gold-titanium-case- (page: https://www.bestbuy.com/site/questions/apple-watch-se-2nd-generation-gps-cellular-40mm-aluminum-case - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.666520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:50.664662+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:50.437042+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:50.317843+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:50.303703+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:50.058358+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:50.057776+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2025/09/introducing-apple-watch-ultra-3/article/Apple-Watch-Ul (page: https://www.notebookcheck.org/Apple-Watch-Ultra-2-arrives-with-new-S9-SiP-on-device-Siri-double-tap- - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.057124+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://www.apple.com/newsroom/images/2024/09/introducing-apple-watch-series-10/article/Apple-Watch- (page: https://www.apple.com/jp/newsroom/2025/09/introducing-apple-watch-ultra-3/ | Introducing Apple Watch - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.056396+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6519/6519486_sd.jpg (page: https://www.apple.com/in/newsroom/2024/09/introducing-apple-watch-series-10/ | Questions and Answers - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.055675+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'WATCH: House returns to Washington after blowout e'): https://lmt-web.mstatic.lv/eshop/35810/1-apple-watch-series-11-gps-cellular-42mm-gold-titanium-case- (page: https://www.bestbuy.com/site/questions/apple-watch-se-2nd-generation-gps-cellular-40mm-aluminum-case - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:50.054938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:50.053198+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:49.903318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:49.811413+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'WATCH: House returns to Washington after blowout election fo'",
+    "created_at": "2026-11-26T23:36:49.798042+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:49.355754+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:49.355106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'WATCH: House returns to Washington after blowout election fo' - rejected (no og:image)",
+    "created_at": "2026-11-26T23:36:49.354204+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiswFBVV95cUxQTTNlZ1ZRTWhsdXQ5Y21CTzN0UVQ2dFB4WmJKbUY1S3B2dG8zYWZoZU05RzI0ajRWMDl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T23:36:49.352655+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T23:36:49.175991+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-26T23:36:49.175363+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-26T23:36:49.174569+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 4/6 tried: 'Healthcare, tariffs – but not Trump impeachment: Democrats c' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T23:36:49.173784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Healthcare, tariffs – but not Trump impeachment: Democrats c' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T23:36:49.173148+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Healthcare, tariffs – but not Trump impeachment: Democrats chart next two years of power - The Guardian' (5 download(s) tried)",
+    "created_at": "2026-11-26T23:36:49.172526+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://images.plex.tv/photo?size=large-1280&scale=1&url=https:%2F%2Fmetadata-static.plex.tv%2Fb%2Fg (page: https://www.imdb.com/title/tt1051265/ | Watch Surf's Up (2007) Full Movie Online - Plex - page does not name the entity (Healthcare))",
+    "created_at": "2026-11-26T23:36:49.171894+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://i.ebayimg.com/images/g/tZwAAOSwJN1lqAOB/s-l1600.png (page: https://watch.plex.tv/movie/surfs-up | Surf's Up 2007 DVD Full Screen Special Edition New Sealed wit - page does not name the entity (Healthcare))",
+    "created_at": "2026-11-26T23:36:49.171205+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://i.ebayimg.com/images/g/jmQAAOSwytRh8-7D/s-l1600.jpg (page: https://www.ebay.com/itm/355388072115 | Surf's Up [DVD] [2007], , DVD Shia LeBeouf, Jeff Bridges, Zo - page does not name the entity (Healthcare))",
+    "created_at": "2026-11-26T23:36:49.170451+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://www.dvdsreleasedates.com/covers/surfs-up-dvd-cover-15.jpg (page: https://www.ebay.co.uk/itm/144388923824 | Surf's Up DVD Release Date October 9, 2007 - page does not name the entity (Healthcare))",
+    "created_at": "2026-11-26T23:36:49.169785+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3064/2631276531_ac02e0a3b2_b.jpg",
+    "created_at": "2026-11-26T23:36:49.168773+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3263/2631275709_61d2832b4a_b.jpg",
+    "created_at": "2026-11-26T23:36:49.143726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3260/2631279279_e0fbd9fcfb_b.jpg",
+    "created_at": "2026-11-26T23:36:49.115779+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2316/2632098444_95194b4ed6_b.jpg",
+    "created_at": "2026-11-26T23:36:49.085994+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4037/4213773220_a37baa0bfc.jpg",
+    "created_at": "2026-11-26T23:36:49.063321+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Healthcare'",
+    "created_at": "2026-11-26T23:36:49.029854+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Healthcare'",
+    "created_at": "2026-11-26T23:36:48.869277+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Healthcare'",
+    "created_at": "2026-11-26T23:36:48.762542+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Healthcare'",
+    "created_at": "2026-11-26T23:36:48.748256+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:48.383363+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:48.382810+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Healthcare, tariffs – but not Trump impeachment: D' - trying entity search 'Healthcare'",
+    "created_at": "2026-11-26T23:36:48.382174+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://plecom.imgix.net/iit-473273-685105.png?fit=fillmax&fill=solid&fill-color=ffffff&auto=format& (page: https://www.wilsonamplifiers.com/teltonika-rut951-industrial-cellular-router/ | Teltonika RUT951 Ind - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:48.381435+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://www.telcoantennas.com.au/assets/alt_2/RUT951.png?20230517121317 (page: https://www.ple.com.au/products/685105/teltonika-rut951-industrial-cellular-router | Teltonika RUT95 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:48.380684+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://cdn11.bigcommerce.com/s-bf3bb/images/stencil/1280x1280/products/1367/9426/wa-RUT951__28157__ (page: https://www.telcoantennas.com.au/teltonika-rut951 | Order Teltonika RUT951 Industrial Cellular Route - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:48.380076+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://cdn11.bigcommerce.com/s-bf3bb/images/stencil/1280x1280/products/1367/9422/wa-Teltonika_Netwo (page: https://www.wilsonamplifiers.com/teltonika-rut951-industrial-cellular-router/ | Order Teltonika RUT9 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:48.379357+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Healthcare tariffs but not Trump'",
+    "created_at": "2026-11-26T23:36:48.377795+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Healthcare tariffs but not Trump'",
+    "created_at": "2026-11-26T23:36:48.230651+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Healthcare tariffs but not Trump'",
+    "created_at": "2026-11-26T23:36:48.116790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Healthcare tariffs but not Trump'",
+    "created_at": "2026-11-26T23:36:48.103661+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:47.987149+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:47.986614+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://pokecardex-scans.b-cdn.net/sets_chn/SPP/222.jpg?class=hd (page: https://www.ebay.com/itm/225529841906 | Great Ball (Sword & Shield Promotional S-P) | PokéCardex - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:47.986031+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://pokecardex-scans.b-cdn.net/sets_jp/SH/42.jpg?class=hd (page: https://www.pokecardex.com/en/carte/chn/7713 | Great Ball (Sword & Shield Family Pokémon Card Game 0 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:47.985299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://i.ebayimg.com/images/g/UBUAAeSwnrprAD4k/s-l1600.jpg (page: https://www.pokecardex.com/es/carte/jp/16210 | Great Ball 164/202 Sword & Shield Regular Uncommon Po - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:47.984437+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://i.ebayimg.com/images/g/U58AAeSwi7NrAD4i/s-l1600.jpg (page: https://www.ebay.co.uk/itm/128206674423 | Great Ball 164/202 Sword & Shield Regular Uncommon Pokémon - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:47.983664+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.981221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.764359+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.666720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.650581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:47.529605+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T23:36:47.529005+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Healthcare, tariffs – but not Trump impeachment: D'): https://getdailyblessings.com/wp-content/uploads/2026/11/thanksgiving-greetings-1.jpg (page: Happy Thanksgiving Blessings 2026: Wishes, Images, and Quotes ... - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-26T23:36:47.528246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.526332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.325618+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Healthcare, tariffs – but not Trump impeachment: Democrats c'",
+    "created_at": "2026-11-26T23:36:47.215611+00:00",
     "card": ""
   }
 ]
