@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-26T16:52:21.819827+00:00",
-  "last_run": "2026-11-26T16:45:35.559386+00:00",
-  "runs": 139,
+  "generated_at": "2026-11-26T17:47:27.675958+00:00",
+  "last_run": "2026-11-26T17:42:05.617094+00:00",
+  "runs": 140,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 3,
+    "replies_today": 1,
     "total_posts": 0,
-    "total_replies": 3,
+    "total_replies": 1,
     "accounts": 1
   },
   "settings": {
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T16:50:34.557690+00:00",
-    "mastodon.social": "2026-11-26T16:52:21.665994+00:00"
+    "Adsterra Blogger": "2026-11-26T17:46:02.441110+00:00",
+    "mastodon.social": "2026-11-26T17:47:27.525268+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 61,
+      "success": 62,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T16:50:34.557687+00:00"
+      "last_run": "2026-11-26T17:46:02.441105+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 9,
+      "fail": 10,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T16:52:21.665989+00:00"
+      "last_run": "2026-11-26T17:47:27.525265+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T16:50:34.557690+00:00",
-      "runs_today": 14,
-      "posts_today": 19,
+      "last_run": "2026-11-26T17:46:02.441110+00:00",
+      "runs_today": 15,
+      "posts_today": 20,
       "next_runs": [
-        "2026-11-26T23:05:34.557690+06:00",
-        "2026-11-26T23:20:34.557690+06:00",
-        "2026-11-26T23:35:34.557690+06:00",
-        "2026-11-26T23:50:34.557690+06:00",
-        "2026-11-27T00:05:34.557690+06:00"
+        "2026-11-27T00:01:02.441110+06:00",
+        "2026-11-27T00:16:02.441110+06:00",
+        "2026-11-27T00:31:02.441110+06:00",
+        "2026-11-27T00:46:02.441110+06:00",
+        "2026-11-27T01:01:02.441110+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T23:01:00+06:00",
         "2026-11-26T23:52:00+06:00",
         "2026-11-27T00:57:00+06:00",
         "2026-11-27T02:02:00+06:00",
-        "2026-11-27T03:07:00+06:00"
+        "2026-11-27T03:07:00+06:00",
+        "2026-11-27T03:53:00+06:00"
       ],
-      "success": 61,
+      "success": 62,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T16:52:21.665994+00:00",
-      "runs_today": 14,
+      "last_run": "2026-11-26T17:47:27.525268+00:00",
+      "runs_today": 15,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T23:07:21.665994+06:00",
-        "2026-11-26T23:22:21.665994+06:00",
-        "2026-11-26T23:37:21.665994+06:00",
-        "2026-11-26T23:52:21.665994+06:00",
-        "2026-11-27T00:07:21.665994+06:00"
+        "2026-11-27T00:02:27.525268+06:00",
+        "2026-11-27T00:17:27.525268+06:00",
+        "2026-11-27T00:32:27.525268+06:00",
+        "2026-11-27T00:47:27.525268+06:00",
+        "2026-11-27T01:02:27.525268+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T22:59:00+06:00",
         "2026-11-26T23:54:00+06:00",
         "2026-11-27T00:59:00+06:00",
         "2026-11-27T02:04:00+06:00",
-        "2026-11-27T03:09:00+06:00"
+        "2026-11-27T03:09:00+06:00",
+        "2026-11-27T03:53:00+06:00"
       ],
       "success": 16,
-      "fail": 9,
+      "fail": 10,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -222,7 +222,7 @@
       "handle": "primonewstoday.bsky.social",
       "enabled": true,
       "posts_limit": 0,
-      "posts_today": 13
+      "posts_today": 14
     }
   ],
   "reddit_accounts_detail": [],
@@ -297,7 +297,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T16:45:35.560951+00:00"
+      "time": "2026-11-26T17:42:05.618696+00:00"
     }
   ],
   "dry_run": false,
@@ -307,316 +307,316 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
-    "Trump calls GDP revision fake",
     "Birthday twin spectrum prompt",
-    "Musk pledges kids SpaceX shares",
     "Macy's parade postponed to Saturday",
-    "Aaron Rodgers reportedly out",
-    "Rockstar UK union vote",
+    "Mike McCarthy's ice cream sandwich assistant",
+    "Trump calls GDP revision fake",
+    "Nvidia chip exports to China",
     "Grand Theft Auto VI",
-    "Describe a film without its name",
-    "Vance blames Obama for detonation"
+    "Vance blames Obama for detonation",
+    "Aaron Rodgers reportedly out",
+    "Musk pledges kids SpaceX shares"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T16:52:21.666030+00:00",
+      "created_at": "2026-11-26T17:47:27.525293+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-26T16:52:21.664847+00:00",
+      "created_at": "2026-11-26T17:47:27.523856+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T16:52:21.663223+00:00",
+      "created_at": "2026-11-26T17:47:27.522310+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T16:52:11.660576+00:00",
+      "created_at": "2026-11-26T17:47:17.520233+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T17:47:17.286054+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T17:47:17.283641+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T16:52:06.459410+00:00",
+      "created_at": "2026-11-26T17:47:11.770193+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T16:52:06.456856+00:00",
+      "created_at": "2026-11-26T17:47:11.768266+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-26T16:51:55.348080+00:00",
-      "card": "mastodon.social"
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-26T17:47:11.493490+00:00",
+      "card": ""
     },
     {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-26T16:51:55.284066+00:00",
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-26T17:47:11.491335+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 12 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-26T16:51:55.283078+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T17:47:06.819299+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-26T16:51:55.282088+00:00",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-26T17:47:06.818113+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'Estimates of Russians killed in Ukraine surpass all combined' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T16:51:55.280885+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://www.realclearpolitics.com/republican-party/articles/was-i-wrong-about-trump-hell-no-2026-11- - matches 2 key entities (republican, trump))",
+      "created_at": "2026-11-26T17:47:06.816976+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Estimates of Russians killed in Ukraine surpass all combined' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T16:51:55.279888+00:00",
+      "message": "vision: YES - photo matches 'Trump says Democrats 'did a good job,' blames Repu' (. The photo shows Donald Trump, the subject mentioned in the headline, speaking during an event.)",
+      "created_at": "2026-11-26T17:47:06.815363+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Estimates of Russians killed in Ukraine surpass all combined US war deaths since WWI - Military Times' (2 download(s) tried)",
-      "created_at": "2026-11-26T16:51:55.278896+00:00",
+      "message": "photo: rejected (vision NO): https://cdn.abcotvs.com/dip/images/20014040_110326-cc-ap-hinson-trump-img.jpg",
+      "created_at": "2026-11-26T17:46:57.640758+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/201709450-space-phone-dark-phone-space-oled-hd-phone-wallpaper.jpg (page: https://wallpaperbat.com/4k-oled-galaxy-wallpapers | 4K OLED Space Wallpapers - 4k, HD Backgrounds o - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.277764+00:00",
+      "message": "vision: NO - photo rejected for 'Trump says Democrats 'did a good job,' blames Repu' (, the photo shows Donald Trump and a woman applauding in front of an \"Iowa\" banner, which does not depict his comments on Democratic performance or mi)",
+      "created_at": "2026-11-26T17:46:57.639158+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/30205778-phone-oled-space-wallpaper.png (page: https://wallpaperbat.com/4k-oled-space-wallpapers | OLED Space Wallpapers - 4k, HD Backgrounds on Wa - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.276640+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T17:46:43.474555+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/29158217-amoled-black-space-wallpaper.jpg (page: https://wallpaperbat.com/oled-space | 4K OLED Space Wallpapers - 4k, HD Backgrounds on WallpaperBat - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.275393+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T17:46:43.349420+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpapercave.com/wp/wp7091599.jpg (page: https://wallpaperbat.com/4k-oled-space-wallpapers | Oled Space Wallpapers - Wallpaper Cave - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.274244+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T17:46:43.197285+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/5166/5222953275_5b1ea294e3_b.jpg (page: https://www.flickr.com/photos/71401718@N00/5222953275 | Computer laptop information station for writ - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.273100+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2865/13873744025_421692cec7_b.jpg",
-      "created_at": "2026-11-26T16:51:55.271623+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_Embryo_-_Approximately_8_weeks_estimated_g (page: https://commons.wikimedia.org/w/index.php?curid=5840564 | File:Human Embryo - Approximately 8 weeks  - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.226460+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/2675/3794906215_02d0be6285_b.jpg (page: https://www.flickr.com/photos/36913103@N03/3794906215 | Gold from eastern Congo. The war in Congo is - page does not name the entity (Estimates))",
-      "created_at": "2026-11-26T16:51:55.225286+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/48412616647_d2ea108f07_b.jpg",
-      "created_at": "2026-11-26T16:51:55.223629+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Estimates'",
-      "created_at": "2026-11-26T16:51:55.176631+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Estimates'",
-      "created_at": "2026-11-26T16:51:55.031849+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Estimates'",
-      "created_at": "2026-11-26T16:51:54.900007+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Estimates'",
-      "created_at": "2026-11-26T16:51:54.839797+00:00",
+      "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T17:46:43.112428+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.806076+00:00",
+      "created_at": "2026-11-26T17:46:35.319771+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.804986+00:00",
+      "created_at": "2026-11-26T17:46:35.318644+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Estimates of Russians killed in Ukraine surpass al' - trying entity search 'Estimates'",
-      "created_at": "2026-11-26T16:51:54.803017+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
+      "created_at": "2026-11-26T17:46:35.317487+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://clip.cafe/img16x9/crixus-s5.jpg (page: https://www.pinterest.com/pin/spartacus-naevia-and-crixus--417568196682451669/ | Crixus. Gannicus an - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.801859+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T17:46:35.315516+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/9f/f8/29/9ff829b3a8fc765f94141979c7f984e8.jpg (page: https://clip.cafe/spartacus-2010/crixus-s5/ | Spartacus - Naevia and Crixus - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.800469+00:00",
+      "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
+      "created_at": "2026-11-26T17:46:35.153857+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.wallpapersafari.com/32/12/N3sQDu.jpg (page: https://it.pinterest.com/pin/334955291018992113/ | 🔥 Free Download Crixus Naevia Spartacus Blood San - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.799152+00:00",
+      "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T17:46:35.152208+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): http://www.postavy.cz/obrazky/crixus-90456.jpg (page: https://wallpapersafari.com/w/N3sQDu | Crixus - Spartacus - POSTAVY.cz - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.797794+00:00",
+      "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T17:46:35.151065+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
-      "created_at": "2026-11-26T16:51:54.795248+00:00",
+      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (6 download(s) tried)",
+      "created_at": "2026-11-26T17:46:35.149723+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
-      "created_at": "2026-11-26T16:51:54.696594+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.rehabmypatient.com/media/uploads/articles/diaphragm.jpg (page: Diaphragm | Rehab My Patient - page does not name the entity (Tracking))",
+      "created_at": "2026-11-26T17:46:35.148545+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Estimates Russians killed Ukraine surpass'",
-      "created_at": "2026-11-26T16:51:54.560174+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
+      "created_at": "2026-11-26T17:46:35.146968+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Estimates Russians killed Ukraine surpass'",
-      "created_at": "2026-11-26T16:51:54.501048+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
+      "created_at": "2026-11-26T17:46:35.032636+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
+      "created_at": "2026-11-26T17:46:34.923587+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
+      "created_at": "2026-11-26T17:46:34.804791+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
+      "created_at": "2026-11-26T17:46:34.689177+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-26T17:46:34.494644+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-26T17:46:34.291396+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Tracking'",
+      "created_at": "2026-11-26T17:46:34.122709+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Tracking'",
+      "created_at": "2026-11-26T17:46:34.038233+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.465137+00:00",
+      "created_at": "2026-11-26T17:46:33.987658+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.464045+00:00",
+      "created_at": "2026-11-26T17:46:33.986462+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://www.celebritystyleguide.com/wp-content/uploads/2021/07/Emma-Watson-Floral-Dress.jpg (page: https://www.pinterest.com/pin/856880266595577262/ | Emma Watson's Floral Dress - Celebrity Style Gui - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.462983+00:00",
+      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
+      "created_at": "2026-11-26T17:46:33.985332+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://1.bp.blogspot.com/-0nnY_W3U0pM/VyY0zTXHlyI/AAAAAAACAGI/07KbM2lD1CY7Up5_6MAalUqKUmFWSusYACLcB (page: https://www.celebritystyleguide.com/celebrity-style-post/j-mendel-floral-dress/ | Emma Watson wears  - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.460934+00:00",
+      "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F534/production/_92427726_baa32723-0642-4210-8f6",
+      "created_at": "2026-11-26T17:46:33.984157+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/0d/f0/a3/0df0a36357cee074cb0a0ef29651f2e9.jpg (page: https://www.myfacehunter.com/2016/05/emma-watson-wears-strapless-floral-look.html | Emma Watson atte - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.459668+00:00",
+      "message": "vision: NO - photo rejected for 'Tracking Trump's Crackdown on Higher Education - U' (. The photo shows Joe Biden and Barack Obama, which is unrelated to the news headline about Trump's crackdown on higher education.)",
+      "created_at": "2026-11-26T17:46:33.982604+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.justjared.com/wp-content/uploads/2014/03/watson-nycafter/emma-watson-floral-fierce-noah- (page: https://www.pinterest.com/pin/emma-watson-attended-the-premiere-of-the-circle-at-ugc-normandie-in-pa - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.458388+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/lifestyle-images/celebrity/58c7d2fbb24ce97c4c47d3d3/joebama-m (page: https://www.bbc.co.uk/news/election-us-2016-37972626 | Joe Biden Finally Reveals His Favourite Barac - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T17:46:25.012372+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-      "created_at": "2026-11-26T16:51:54.455854+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://s.hdnux.com/photos/55/01/42/11802754/10/1920x0.jpg (page: https://graziadaily.co.uk/celebrity/news/joe-biden-barack-obama-meme/ | Joe Biden memes are giving A - only 1 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T17:46:25.011010+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-      "created_at": "2026-11-26T16:51:54.357350+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/media/6006/d529/5a3f/fa4a/dd23/3233/Screen-Shot-2016-11-19-at (page: https://www.mysanantonio.com/entertainment/article/Joe-Biden-memes-are-giving-America-a-much-needed- - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T17:46:25.009789+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Estimates of Russians killed in Ukraine surpass all combined'",
-      "created_at": "2026-11-26T16:51:54.165656+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T17:46:25.007850+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-      "created_at": "2026-11-26T16:51:54.091637+00:00",
+      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T17:46:24.864106+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.037545+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T17:46:24.721348+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T16:51:54.036150+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/173045-download-neon-city-4k-5k-wallpapers-free-download-hd-wallpapers. (page: https://wallpaperbat.com/neon-landscape-wallpapers | Neon City Wallpapers - 4k, HD Backgrounds on Wa - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T16:51:54.034766+00:00",
+      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T17:46:24.637201+00:00",
       "card": ""
     }
   ]

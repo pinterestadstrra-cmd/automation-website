@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-26T17:47:27.679332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', \"Macy's parade postponed to Saturday\", \"Mike McCarthy's ice cream sandwich assistant\", 'Trump calls GDP revision fake']",
+    "created_at": "2026-11-26T17:47:27.673005+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-26T16:52:21.666030+00:00",
+    "created_at": "2026-11-26T17:47:27.525293+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-26T16:52:21.664847+00:00",
+    "created_at": "2026-11-26T17:47:27.523856+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-26T16:52:21.663223+00:00",
+    "created_at": "2026-11-26T17:47:27.522310+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T16:52:11.660576+00:00",
+    "created_at": "2026-11-26T17:47:17.520233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T17:47:17.286054+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T17:47:17.283641+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-26T16:52:06.459410+00:00",
+    "created_at": "2026-11-26T17:47:11.770193+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T16:52:06.456856+00:00",
+    "created_at": "2026-11-26T17:47:11.768266+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-26T16:51:55.348080+00:00",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T17:47:11.493490+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T17:47:11.491335+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-26T17:47:06.819299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-26T17:47:06.818113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://www.realclearpolitics.com/republican-party/articles/was-i-wrong-about-trump-hell-no-2026-11- - matches 2 key entities (republican, trump))",
+    "created_at": "2026-11-26T17:47:06.816976+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Trump says Democrats 'did a good job,' blames Repu' (. The photo shows Donald Trump, the subject mentioned in the headline, speaking during an event.)",
+    "created_at": "2026-11-26T17:47:06.815363+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://cdn.abcotvs.com/dip/images/20014040_110326-cc-ap-hinson-trump-img.jpg",
+    "created_at": "2026-11-26T17:46:57.640758+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Trump says Democrats 'did a good job,' blames Repu' (, the photo shows Donald Trump and a woman applauding in front of an \"Iowa\" banner, which does not depict his comments on Democratic performance or mi)",
+    "created_at": "2026-11-26T17:46:57.639158+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+    "created_at": "2026-11-26T17:46:43.474555+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+    "created_at": "2026-11-26T17:46:43.349420+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
+    "created_at": "2026-11-26T17:46:43.197285+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+    "created_at": "2026-11-26T17:46:43.112428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:35.319771+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:35.318644+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
+    "created_at": "2026-11-26T17:46:35.317487+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T17:46:35.315516+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
+    "created_at": "2026-11-26T17:46:35.153857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T17:46:35.152208+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T17:46:35.151065+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (6 download(s) tried)",
+    "created_at": "2026-11-26T17:46:35.149723+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.rehabmypatient.com/media/uploads/articles/diaphragm.jpg (page: Diaphragm | Rehab My Patient - page does not name the entity (Tracking))",
+    "created_at": "2026-11-26T17:46:35.148545+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
+    "created_at": "2026-11-26T17:46:35.146968+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
+    "created_at": "2026-11-26T17:46:35.032636+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
+    "created_at": "2026-11-26T17:46:34.923587+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
+    "created_at": "2026-11-26T17:46:34.804791+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
+    "created_at": "2026-11-26T17:46:34.689177+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Tracking'",
+    "created_at": "2026-11-26T17:46:34.494644+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking'",
+    "created_at": "2026-11-26T17:46:34.291396+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Tracking'",
+    "created_at": "2026-11-26T17:46:34.122709+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Tracking'",
+    "created_at": "2026-11-26T17:46:34.038233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:33.987658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:33.986462+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
+    "created_at": "2026-11-26T17:46:33.985332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/F534/production/_92427726_baa32723-0642-4210-8f6",
+    "created_at": "2026-11-26T17:46:33.984157+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Tracking Trump's Crackdown on Higher Education - U' (. The photo shows Joe Biden and Barack Obama, which is unrelated to the news headline about Trump's crackdown on higher education.)",
+    "created_at": "2026-11-26T17:46:33.982604+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/lifestyle-images/celebrity/58c7d2fbb24ce97c4c47d3d3/joebama-m (page: https://www.bbc.co.uk/news/election-us-2016-37972626 | Joe Biden Finally Reveals His Favourite Barac - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:25.012372+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://s.hdnux.com/photos/55/01/42/11802754/10/1920x0.jpg (page: https://graziadaily.co.uk/celebrity/news/joe-biden-barack-obama-meme/ | Joe Biden memes are giving A - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:25.011010+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images.bauerhosting.com/legacy/media/6006/d529/5a3f/fa4a/dd23/3233/Screen-Shot-2016-11-19-at (page: https://www.mysanantonio.com/entertainment/article/Joe-Biden-memes-are-giving-America-a-much-needed- - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:25.009789+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T17:46:25.007850+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T17:46:24.864106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T17:46:24.721348+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+    "created_at": "2026-11-26T17:46:24.637201+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:24.586288+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:24.585048+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.boredpanda.com/blog/wp-content/uploads/2023/09/hilarious-cat-jokes-memes-650d7976a820e__ (page: https://sg.style.yahoo.com/34-cat-memes-cats-funny-141500422.html | Cat Memes Hilarious at Alan Darl - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.583657+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.boredpanda.com/blog/wp-content/uploads/2023/07/funny-cat-pics-and-memes-12-64a807e524530 (page: https://storage.googleapis.com/diqcneexthhwge/cat-memes-hilarious.html | 3/8 Inch Alloy Steel Npt Fi - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.582406+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.boredpanda.com/blog/wp-content/uploads/2023/07/funny-cat-pics-and-memes-64a6cb54d0575__7 (page: https://stadiongucker.de/38-inch-alloy-steel-npt-fitting-thread-types/ | 50 Funny And Relatable Cat  - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.581135+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.pinimg.com/originals/b9/be/5e/b9be5e96da65a2e07a22fc2cfe3fa99e.png (page: https://www.boredpanda.com/funny-cat-pics-and-memes/ | Funny Cat Expressions Images at Gary Roof blo - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.579748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T17:46:24.577564+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T17:46:24.448639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T17:46:24.282354+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
+    "created_at": "2026-11-26T17:46:24.197036+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:24.146833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:24.145800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://media.gettyimages.com/id/95187382/de/foto/nobel-peace-prize-laureate-us-president-barack-oba (page: https://ausmalbilderfurkinder.de/interstellar-explained/ | Nobel Peace Prize laureate, US President  - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.144778+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://media.gettyimages.com/id/95572382/photo/nobel-peace-prize-laureate-and-us-president-barack-o (page: https://www.gettyimages.de/detail/nachrichtenfoto/nobel-peace-prize-laureate-us-president-barack-oba - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.143554+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.thenation.com/wp-content/uploads/2015/03/obamanobel_rtr.jpg (page: https://www.gettyimages.co.uk/photos/nobel-peace-laureate-barak-obama | How Barack Obama Finally Ear - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.142288+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://media.gettyimages.com/id/95187394/photo/nobel-peace-prize-laureate-us-president-barack-obama (page: https://www.thenation.com/article/archive/how-barack-obama-finally-earned-peace-prize/ | 517 Nobel P - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:24.141007+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T17:46:24.139191+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T17:46:24.009061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T17:46:23.856029+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
+    "created_at": "2026-11-26T17:46:23.771942+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:23.710227+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:23.709033+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no og:image)",
+    "created_at": "2026-11-26T17:46:23.707831+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTUZubnNDTkxCZmFWbDRoSVY1SFhVblZ2Y3RRNThYS0tSTzg1VDVMWEctd2VaMzA0M2F) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T17:46:23.705874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+    "created_at": "2026-11-26T17:46:23.492611+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - skipped (same event used within 24h, event key 'corruption gallup government high news record widespread')",
+    "created_at": "2026-11-26T17:46:23.491368+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T17:46:23.488447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T17:46:23.487288+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Anthony Zurcher: Democrats push deep into Trump heartland on' - skipped (same event used within 24h, event key 'anthony bbc deep democrat heartland historic night push trum')",
+    "created_at": "2026-11-26T17:46:23.486132+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: ''Hopefully things get done': Americans react to historic pol' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T17:46:23.484715+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T17:46:23.483540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for ''Hopefully things get done': Americans react to historic political shift - BBC' (0 download(s) tried)",
+    "created_at": "2026-11-26T17:46:23.482386+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://i.pinimg.com/474x/96/8b/e9/968be9641ad25e67874381677a032479.jpg?nii=t (page: Pin by byAidaLegrand on References | Face reference, Face drawing reference, Male face - page does not name the entity (Americans))",
+    "created_at": "2026-11-26T17:46:23.481299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Americans'",
+    "created_at": "2026-11-26T17:46:23.479497+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Americans'",
+    "created_at": "2026-11-26T17:46:23.328029+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Americans'",
+    "created_at": "2026-11-26T17:46:23.172617+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: search HTTP 504 for 'Americans'",
+    "created_at": "2026-11-26T17:46:23.087545+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:14.922299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:14.921068+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for ''Hopefully things get done': Americans react to hi' - trying entity search 'Americans'",
+    "created_at": "2026-11-26T17:46:14.919814+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84e7ed30-1097-4556-9c94-e25d29b3b2df/dfojm (page: Spy Peril: Girl captured by Starlight-Damsel on DeviantArt - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:14.918686+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Hopefully things get done Americans'",
+    "created_at": "2026-11-26T17:46:14.916801+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Hopefully things get done Americans'",
+    "created_at": "2026-11-26T17:46:14.763934+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Hopefully things get done Americans'",
+    "created_at": "2026-11-26T17:46:14.601509+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Hopefully things get done Americans'",
+    "created_at": "2026-11-26T17:46:14.516922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:10.375101+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:10.373694+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://logos-world.net/wp-content/uploads/2020/05/Los-Angeles-Rams-logo-2016.png (page: https://www.fanatics.com/nfl/los-angeles-rams/los-angeles-rams-new-era-logo-main-59fifty-fitted-hat- - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:10.372521+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://images.footballfanatics.com/los-angeles-rams/mens-nike-puka-nacua-royal-los-angeles-rams-tea (page: https://drehmoment-musik.de/los-angeles-ram-logo-the-history-of-los-angeles-rams-logos-ranked-from-w - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:10.371244+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://cdn.sportfeeds.io/sdl/images/sports/american-football/team/crest/medium/tM2PrNsfTr1C8Ln5yFYa (page: https://www.nflshop.ca/en/los-angeles-rams/mens-nike-puka-nacua-royal-los-angeles-rams-team-game-jer - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:10.369992+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://propickai.com/assets/entity/clubs/111620.png (page: https://athlonsports.com/nfl/rams-record-check-yardage-close-losses-bye-week-11 | Los Angeles Rams v - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:10.368749+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:10.366916+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:10.210134+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:10.056512+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:09.946203+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:03.588834+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:03.587765+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://static.vecteezy.com/system/resources/previews/000/473/528/original/cat-breed-set-vector.jpg (page: https://www.walmart.com/ip/Asdg12s-poster-Breeds-of-Cat-Poster-Types-of-Cat-Poster-Cat-of-The-World- - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:03.586695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://i.pinimg.com/originals/ed/2b/75/ed2b75f632bfd764e5affef0ed2f042d.png (page: https://www.vecteezy.com/vector-art/473528-cat-breed-set | Cat Breeds | Cats breeds list, Tiger look - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:03.585529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://modkat.com/cdn/shop/articles/breeds_1600x.jpg?v=1720608712 (page: https://www.pinterest.com/pin/cat-breeds--5066618329164911/ | How Many Different Cat Breeds are Ther - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:03.584366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to ''Hopefully things get done': Americans react to hi'): https://i.pinimg.com/736x/23/39/f1/2339f16dce0d0d340eebf03a69dfd33a.jpg (page: https://catcomfortshop.com/how-many-different-cat-breeds-are-there/ | Cat Breeds | Cat breeds, Cute  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-26T17:46:03.583055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:03.581009+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:03.373466+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:03.239533+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for ''Hopefully things get done': Americans react to historic pol'",
+    "created_at": "2026-11-26T17:46:03.155612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:03.096580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T17:46:03.095420+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - rejected (no og:image)",
+    "created_at": "2026-11-26T17:46:03.094193+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWMXBDS1dTdW5YajBqcDNMakJZWThjaWRZRXc1WlpyUDJCVUlBeTBZZ1F3T09JaUtjVEZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T17:46:03.091589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+    "created_at": "2026-11-26T17:46:02.779571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T17:46:02.444375+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-26T16:51:55.284066+00:00",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T17:46:02.442660+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+    "created_at": "2026-11-26T17:46:02.441129+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T17:46:02.440063+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': promo posted - event 'attack caution chief cnbc energy infrastructure intensify na' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T17:46:02.438458+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1880x1160 (ratio 1.62) - unchanged",
+    "created_at": "2026-11-26T17:46:00.444002+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 12 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-26T16:51:55.283078+00:00",
+    "message": "prepare_bsky_image: original 1880x1160 (ratio 1.62) - kept, no crop",
+    "created_at": "2026-11-26T17:46:00.442859+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene'",
+    "created_at": "2026-11-26T17:46:00.440453+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T17:46:00.269446+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 1 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-26T17:46:00.266420+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to hough-transform.bsky.social on your post (comment: 'In short, the personalities ARE the issues. The US is infest') as primonewstoday.bsky.social: 'I hear you—it's tough when negativity spreads. Thanks for sharing your thoughts;'",
+    "created_at": "2026-11-26T17:45:58.265166+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 4 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T17:45:57.858461+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T17:45:54.153512+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-26T17:45:54.152365+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: photo search done - 11 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+    "created_at": "2026-11-26T17:45:54.150987+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-    "created_at": "2026-11-26T16:51:55.282088+00:00",
+    "created_at": "2026-11-26T17:45:54.149975+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 6/6 tried: 'Estimates of Russians killed in Ukraine surpass all combined' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T16:51:55.280885+00:00",
+    "message": "promo: story 6/6 tried: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T17:45:54.148993+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Estimates of Russians killed in Ukraine surpass all combined' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T16:51:55.279888+00:00",
+    "message": "photo candidate: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T17:45:54.147985+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Estimates of Russians killed in Ukraine surpass all combined US war deaths since WWI - Military Times' (2 download(s) tried)",
-    "created_at": "2026-11-26T16:51:55.278896+00:00",
+    "message": "photo: no real photo found for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - The New York Times' (0 download(s) tried)",
+    "created_at": "2026-11-26T17:45:54.146848+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/201709450-space-phone-dark-phone-space-oled-hd-phone-wallpaper.jpg (page: https://wallpaperbat.com/4k-oled-galaxy-wallpapers | 4K OLED Space Wallpapers - 4k, HD Backgrounds o - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.277764+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://m.media-amazon.com/images/I/51POjUjE9yL._UXNaN_FMjpg_QL85_.jpg (page: Play Ultrakill: Infinite Hyperdeath (Original Game Soundtrack) by Heaven Pierce Her on Amazon Music - page does not name the entity (War))",
+    "created_at": "2026-11-26T17:45:54.145783+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/30205778-phone-oled-space-wallpaper.png (page: https://wallpaperbat.com/4k-oled-space-wallpapers | OLED Space Wallpapers - 4k, HD Backgrounds on Wa - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.276640+00:00",
+    "message": "bing-images: 1 candidate(s) for 'War'",
+    "created_at": "2026-11-26T17:45:54.143917+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/29158217-amoled-black-space-wallpaper.jpg (page: https://wallpaperbat.com/oled-space | 4K OLED Space Wallpapers - 4k, HD Backgrounds on WallpaperBat - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.275393+00:00",
+    "message": "google-images: 0 candidate(s) for 'War'",
+    "created_at": "2026-11-26T17:45:53.995513+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpapercave.com/wp/wp7091599.jpg (page: https://wallpaperbat.com/4k-oled-space-wallpapers | Oled Space Wallpapers - Wallpaper Cave - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.274244+00:00",
+    "message": "wikimedia: search HTTP 429 for 'War'",
+    "created_at": "2026-11-26T17:45:53.840386+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/5166/5222953275_5b1ea294e3_b.jpg (page: https://www.flickr.com/photos/71401718@N00/5222953275 | Computer laptop information station for writ - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.273100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2865/13873744025_421692cec7_b.jpg",
-    "created_at": "2026-11-26T16:51:55.271623+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://upload.wikimedia.org/wikipedia/commons/0/0b/Human_Embryo_-_Approximately_8_weeks_estimated_g (page: https://commons.wikimedia.org/w/index.php?curid=5840564 | File:Human Embryo - Approximately 8 weeks  - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.226460+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://live.staticflickr.com/2675/3794906215_02d0be6285_b.jpg (page: https://www.flickr.com/photos/36913103@N03/3794906215 | Gold from eastern Congo. The war in Congo is - page does not name the entity (Estimates))",
-    "created_at": "2026-11-26T16:51:55.225286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/48412616647_d2ea108f07_b.jpg",
-    "created_at": "2026-11-26T16:51:55.223629+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Estimates'",
-    "created_at": "2026-11-26T16:51:55.176631+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Estimates'",
-    "created_at": "2026-11-26T16:51:55.031849+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Estimates'",
-    "created_at": "2026-11-26T16:51:54.900007+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Estimates'",
-    "created_at": "2026-11-26T16:51:54.839797+00:00",
+    "message": "openverse: search HTTP 504 for 'War'",
+    "created_at": "2026-11-26T17:45:53.755522+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.806076+00:00",
+    "created_at": "2026-11-26T17:45:45.399401+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.804986+00:00",
+    "created_at": "2026-11-26T17:45:45.398287+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Estimates of Russians killed in Ukraine surpass al' - trying entity search 'Estimates'",
-    "created_at": "2026-11-26T16:51:54.803017+00:00",
+    "message": "photo: topical search found nothing for '‘War Is Hell’: A Foreign Soldier Writes Home From ' - trying entity search 'War'",
+    "created_at": "2026-11-26T17:45:45.397114+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://clip.cafe/img16x9/crixus-s5.jpg (page: https://www.pinterest.com/pin/spartacus-naevia-and-crixus--417568196682451669/ | Crixus. Gannicus an - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.801859+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://s.abcnews.com/images/Politics/AP-sasha-malia-obama-2010-hb-170113_14x11_1600.jpg?w=1600 (page: https://wallpaperaccess.com/president-barack-obama | Malia and Sasha Obama Through the Years - ABC N - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:45.395937+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/9f/f8/29/9ff829b3a8fc765f94141979c7f984e8.jpg (page: https://clip.cafe/spartacus-2010/crixus-s5/ | Spartacus - Naevia and Crixus - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.800469+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://www.usmagazine.com/wp-content/uploads/2019/05/Obama-Family-Gallery-11.jpg?w=1000&quality=40& (page: https://abcnews.com/Politics/photos/malia-sasha-obama-vacation-biking-16716893 | Obama Family Photos - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:45.394571+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.wallpapersafari.com/32/12/N3sQDu.jpg (page: https://it.pinterest.com/pin/334955291018992113/ | 🔥 Free Download Crixus Naevia Spartacus Blood San - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.799152+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://www.usmagazine.com/wp-content/uploads/2019/05/Obama-Family-Gallery-12.jpg?quality=78&strip=a (page: https://www.usmagazine.com/celebrity-moms/pictures/obama-family-album-20091812/ | Obama Family Photo - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:45.393254+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): http://www.postavy.cz/obrazky/crixus-90456.jpg (page: https://wallpapersafari.com/w/N3sQDu | Crixus - Spartacus - POSTAVY.cz - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.797794+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://cloudfront-us-east-2.images.arcpublishing.com/reuters/GH463AFQ5FMCLOFREX3HL2QGNI.jpg (page: https://www.usmagazine.com/celebrity-moms/pictures/obama-family-album-20091812/ | Family photos from - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:45.392047+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
-    "created_at": "2026-11-26T16:51:54.795248+00:00",
+    "message": "bing-images: 4 candidate(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T17:45:45.390202+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Estimates Russians killed Ukraine surpass'",
-    "created_at": "2026-11-26T16:51:54.696594+00:00",
+    "message": "google-images: 0 candidate(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T17:45:45.241762+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Estimates Russians killed Ukraine surpass'",
-    "created_at": "2026-11-26T16:51:54.560174+00:00",
+    "message": "wikimedia: search HTTP 429 for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T17:45:45.098747+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Estimates Russians killed Ukraine surpass'",
-    "created_at": "2026-11-26T16:51:54.501048+00:00",
+    "message": "openverse: 0 result(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T17:45:45.013510+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.465137+00:00",
+    "created_at": "2026-11-26T17:45:39.283752+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.464045+00:00",
+    "created_at": "2026-11-26T17:45:39.282633+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://www.celebritystyleguide.com/wp-content/uploads/2021/07/Emma-Watson-Floral-Dress.jpg (page: https://www.pinterest.com/pin/856880266595577262/ | Emma Watson's Floral Dress - Celebrity Style Gui - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.462983+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/originals/25/a7/16/25a716538ee66280cd4d0feab4871aea.jpg (page: https://www.dreamstime.com/orc-warlord-leading-his-troops-battle-sci-fi-battlefield-fantasy-concept- - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:39.281539+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://1.bp.blogspot.com/-0nnY_W3U0pM/VyY0zTXHlyI/AAAAAAACAGI/07KbM2lD1CY7Up5_6MAalUqKUmFWSusYACLcB (page: https://www.celebritystyleguide.com/celebrity-style-post/j-mendel-floral-dress/ | Emma Watson wears  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.460934+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/14/6f/db/146fdb87fff3353f9462eb1e2f4bdc95.jpg (page: https://www.pinterest.com/pin/554224297908737072/ | Orc leader dnd | Dnd orc warlord, Dnd orc army,  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:39.279994+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://i.pinimg.com/736x/0d/f0/a3/0df0a36357cee074cb0a0ef29651f2e9.jpg (page: https://www.myfacehunter.com/2016/05/emma-watson-wears-strapless-floral-look.html | Emma Watson atte - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.459668+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://images.nightcafe.studio/jobs/4nEWkeOQcgVhtcNtoFf8/4nEWkeOQcgVhtcNtoFf8--1--kmey5.jpg?tr=w-16 (page: https://www.pinterest.com/pin/1056375656324483738/ | Orc leader - AI Generated Artwork - NightCafe C - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:39.278813+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://cdn.justjared.com/wp-content/uploads/2014/03/watson-nycafter/emma-watson-floral-fierce-noah- (page: https://www.pinterest.com/pin/emma-watson-attended-the-premiere-of-the-circle-at-ugc-normandie-in-pa - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.458388+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://cdnb.artstation.com/p/assets/images/images/000/847/919/large/alejandro-koi-ipinza-orc.jpg?14 (page: https://creator.nightcafe.studio/creation/4nEWkeOQcgVhtcNtoFf8 | ArtStation - Orc Leader - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:39.277638+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:54.455854+00:00",
+    "message": "bing-images: 4 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T17:45:39.275823+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:54.357350+00:00",
+    "message": "google-images: 0 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T17:45:39.142976+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:54.165656+00:00",
+    "message": "wikimedia: search HTTP 429 for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T17:45:38.979999+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:54.091637+00:00",
+    "message": "openverse: 0 result(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T17:45:38.894627+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.037545+00:00",
+    "created_at": "2026-11-26T17:45:32.186602+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:54.036150+00:00",
+    "created_at": "2026-11-26T17:45:32.185294+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/173045-download-neon-city-4k-5k-wallpapers-free-download-hd-wallpapers. (page: https://wallpaperbat.com/neon-landscape-wallpapers | Neon City Wallpapers - 4k, HD Backgrounds on Wa - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.034766+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/9c/4a/c5/9c4ac5dfe44c9ecc03c539ea3dd60257.jpg (page: https://cheezburger.com/8940805/14-dumb-cat-memes-for-your-very-dumb-caturday-enjoyment | Pin by Isa - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:32.184041+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperbat.com/img/4472-download-wallpaper-3840x2160-cat-roof-city-neon-lights.jpg (page: https://wallpaperbat.com/neon-city-wallpapers | Cyberpunk Neon City Wallpapers - 4k, HD Backgrounds  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.033270+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/02/02/5d/02025dd86050c999f1d5be767e0c27e2.jpg (page: https://www.pinterest.com/pin/324751823129589782/ | Funny Cat Memes | Lucu - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:32.182788+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpaperaccess.com/full/5819903.jpg (page: https://wallpaperbat.com/cyberpunk-neon-city-wallpapers | Cyberpunk Neon City Wallpapers - Top Free  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.031899+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/736x/75/c7/ea/75c7ea09a87acabc2d8f1943d5eecf34.jpg (page: https://www.pinterest.com/pin/funny-cat-memes--598767712969812867/ | Pin by ☆ on Pins by you | Cat m - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:32.181537+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Estimates of Russians killed in Ukraine surpass al'): https://wallpapercave.com/wp/wp11968653.jpg (page: https://wallpaperaccess.com/cyberpunk-neon-city | Cyberpunk Neon City 4k Wallpapers - Wallpaper Cave - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:54.030531+00:00",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell’: A Foreign Soldier Writes Home From '): https://i.pinimg.com/originals/30/e1/a9/30e1a9847a51776b46806d622f04a99f.jpg (page: https://www.pinterest.com/pin/789255903462460958/ - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:32.180266+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:54.027694+00:00",
+    "message": "bing-images: 4 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T17:45:32.178405+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:53.898967+00:00",
+    "message": "google-images: 0 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T17:45:31.978429+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:53.759503+00:00",
+    "message": "wikimedia: search HTTP 429 for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T17:45:31.831219+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Estimates of Russians killed in Ukraine surpass all combined'",
-    "created_at": "2026-11-26T16:51:53.686697+00:00",
+    "message": "openverse: 0 result(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T17:45:31.746346+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:53.648907+00:00",
+    "created_at": "2026-11-26T17:45:25.355647+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:53.647553+00:00",
+    "created_at": "2026-11-26T17:45:25.354526+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Estimates of Russians killed in Ukraine surpass all combined' - rejected (no og:image)",
-    "created_at": "2026-11-26T16:51:53.646053+00:00",
+    "message": "photo candidate: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - rejected (no og:image)",
+    "created_at": "2026-11-26T17:45:25.353466+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi3wFBVV95cUxOczZnamVNSnRZWkw4VGxyOVhCclg0Qm1nRUxobFoya3JfLWlRTm80VTMwb3Y3YTVzSzh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T16:51:53.643391+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTUtzUk9TS1EtOENIeS1WOUVKS21xTTA5MFNRa1lmTmtHbnN3cDloV0JLbklJeGlnNDl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T17:45:25.351661+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 5/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T16:51:53.469771+00:00",
+    "message": "promo: story 5/6 tried: 'UK nuclear test veterans win 40-year battle for inquiry into' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T17:45:25.036440+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T16:51:53.467330+00:00",
+    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T17:45:25.035302+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ' (10 download(s) tried)",
-    "created_at": "2026-11-26T16:51:53.466148+00:00",
+    "message": "photo: no real photo found for 'UK nuclear test veterans win 40-year battle for inquiry into Cold War tests they say damaged health - ABC News - Breaking News, Latest News and Videos' (0 download(s) tried)",
+    "created_at": "2026-11-26T17:45:25.034182+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://jolielaidewines.com/wp-content/uploads/2023/01/fedex_manage_delivery-1024x641.png (page: https://jem-products.com/what-is-fedex-tracking-and-how-does-it-work/ | Shipping FAQ - Jolie-Laide - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T16:51:53.464892+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): http://www.marionettes.com/images/ckits.jpg (page: https://www.etsy.com/listing/1141900014/unicorn-marionette-puppet-craft-along | Marionette Kit - DIY - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T17:45:25.032936+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/4024621564/original/ (page: https://jolielaidewines.com/shipping-faq/ | Fedex Tracking Us | Fedex Track And Trace – ZPFQL - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T16:51:53.463635+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.pinimg.com/736x/95/24/1a/95241a85f42709667b4f44a81e5d58d6.jpg (page: https://marionettes.com/html/character_marionette_kit.html | Kit Lady Bug e Marinette - Sunny | Subm - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T17:45:25.031487+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.fedex.com/content/dam/fedex/us-united-states/shipping/images/POD-727x463_Tool_FullScreen (page: https://hero.bintrash.org/fedex-tracking-us-fedex-track-and-trace/ | Advanced Shipment Tracking | Fe - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T16:51:53.462508+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): http://www.marionety.com/wp-content/uploads/2014/04/DSC_D-999x1024.jpg (page: https://br.pinterest.com/pin/766034217849876606/ | DIY MARIONETTE KIT – Marionety Truhlář - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T17:45:25.030237+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://parcelpath.com/wp-content/uploads/2024/10/FedEx-Tracking-Status.jpg (page: https://www.fedex.com/en-us/tracking/advanced.html | FedEx Tracking: 7 Ways To Track Your Package 20 - page does not name the entity (Silent))",
-    "created_at": "2026-11-26T16:51:53.461350+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.etsystatic.com/6201635/r/il/839a60/2260319280/il_1588xN.2260319280_q2em.jpg (page: https://produto.mercadolivre.com.br/MLB-844174209-kit-ladybug-marinette-original-miraculous-bandai-3 - page does not name the entity (nuclear))",
+    "created_at": "2026-11-26T17:45:25.029171+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Vanessa_indica-Silent_Valley-2016-08-14-001 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:53.460159+00:00",
+    "message": "bing-images: 4 candidate(s) for 'nuclear'",
+    "created_at": "2026-11-26T17:45:25.027336+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:53.458769+00:00",
+    "message": "google-images: 0 candidate(s) for 'nuclear'",
+    "created_at": "2026-11-26T17:45:24.806547+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Poster_for_Quo_Vadis_%281913_silent_film%29 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:53.338283+00:00",
+    "message": "wikimedia: search HTTP 429 for 'nuclear'",
+    "created_at": "2026-11-26T17:45:24.646058+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:53.336763+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Poster_for_Quo_Vadis_%281913_silent_film%29 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:53.180521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:53.179057+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pareronia_hippia-Silent_Valley-2016-08-15-0 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:53.020765+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:53.019171+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Aularches_miliaris-Silent_Valley-2016-08-13 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:52.902236+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:52.900641+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/36/121704670_1b7a489603_b.jpg",
-    "created_at": "2026-11-26T16:51:52.781740+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4031/4635122384_1be7d7b323_b.jpg",
-    "created_at": "2026-11-26T16:51:52.736870+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8212/8269563681_a2ebe006d8.jpg",
-    "created_at": "2026-11-26T16:51:52.693631+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7711/16897629490_52b11534d8_b.jpg",
-    "created_at": "2026-11-26T16:51:52.652324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6227/6308048699_3490fa07b3_b.jpg",
-    "created_at": "2026-11-26T16:51:52.610421+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Silent'",
-    "created_at": "2026-11-26T16:51:52.565847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Silent'",
-    "created_at": "2026-11-26T16:51:52.434557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Silent'",
-    "created_at": "2026-11-26T16:51:52.295449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Silent'",
-    "created_at": "2026-11-26T16:51:52.235942+00:00",
+    "message": "openverse: search HTTP 504 for 'nuclear'",
+    "created_at": "2026-11-26T17:45:24.560707+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:52.193439+00:00",
+    "created_at": "2026-11-26T17:45:12.232963+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:52.192219+00:00",
+    "created_at": "2026-11-26T17:45:12.231887+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' - trying entity search 'Silent'",
-    "created_at": "2026-11-26T16:51:52.191018+00:00",
+    "message": "photo: topical search found nothing for 'UK nuclear test veterans win 40-year battle for in' - trying entity search 'nuclear'",
+    "created_at": "2026-11-26T17:45:12.230914+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.apzomedia.com/wp-content/uploads/2025/06/aaron-rodgers-mallory-edens-010923-tout-ddf325b (page: Who is Aaron Rodgers Wife? Meet Brittani Rodgers | The Truth - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:52.189914+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.pinimg.com/736x/5e/bc/37/5ebc372919881c9f99a868eb6a0578f1.jpg (page: https://br.freepik.com/vetores-premium/conjunto-de-cartas-de-baralho-as-de-quatro-naipes-vetor_22767 - only 0 of 16 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:12.229687+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T16:51:52.187231+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://media.istockphoto.com/id/1383772594/pt/vetorial/karta-as-pik-ikona.jpg?s=1024x1024&w=is&k=20 (page: https://ar.pinterest.com/pin/327566572914435743/ | Vetores de Cartão Ou Ícone Pic e mais imagens de  - only 0 of 16 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:12.228493+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T16:51:52.094628+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://w7.pngwing.com/pngs/902/280/png-transparent-ace-of-spades-playing-card-ace-of-hearts-spades- (page: https://www.istockphoto.com/br/vetor/cartão-ou-ícone-pic-gm1383772594-443482293 | Ás de espadas Bara - only 0 of 16 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:12.227322+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T16:51:51.960243+00:00",
+    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://1.bp.blogspot.com/-yUA4YNvsgKw/V0PysmOBTDI/AAAAAAAAIng/0VkJ0KNftOESps1ZAKoSvixxuG2v0m6VgCLcB (page: https://www.pngwing.com/pt/free-png-bknvj | Conversas Cartomânticas: Um pouco sobre o Ás de Espadas. - only 0 of 16 key entities in the source page)",
+    "created_at": "2026-11-26T17:45:12.226120+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Silent War Grips Iran Economy'",
-    "created_at": "2026-11-26T16:51:51.901034+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.866830+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.865692+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i5.walmartimages.com/seo/Baasha-Comfortable-Shampoo-Bowl-Chair-Set-Salon-Black-Shampoo-Chair (page: https://www.pinterest.com/pin/shampoo-bowls--1407443620610980/ | Baasha Comfortable Shampoo Bowl and - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.864346+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/736x/52/76/4f/52764f225df04021d4f835feaddd7929.jpg (page: https://www.walmart.com/ip/Baasha-Comfortable-Shampoo-Bowl-Chair-Set-Salon-Black-Shampoo-Chairs-Adju - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.863154+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://s.alicdn.com/@sc04/kf/Hfc8941b057a841cdaaa4001b53e84c47Q.jpg_720x720q50.jpg (page: https://www.pinterest.com/pin/140806222180312/ | Luxury Beauty Salon - Head Spa Shampoo Bowl Chair M - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.861916+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://m.media-amazon.com/images/I/71lfvjNquuL._AC_SL1500_.jpg (page: https://www.alibaba.com/product-detail/Luxury-beauty-salon-head-spa-shampoo_1601062329197.html | Ama - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.860677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.858129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.746108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.621279+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.561036+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.516838+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.515694+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://coloringus.com/gallery/pages/elf-on-the-shelf-coloring-book.jpg (page: https://fannyprintable.com/elf-on-the-shelf-color-by-number-printable/ | Elf On The Shelf Coloring P - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.514569+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://soeasybeinggreen-blog.com/wp-content/uploads/2022/04/Elf-on-the-shelf-Coloring-Pages-4-1187x (page: https://coloringus.com/elf-on-the-shelf-coloring-pages | 30 Elf on the Shelf Coloring Pages to Print - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.513365+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://mondaymandala.com/wp-content/uploads/Elf-on-the-Shelf-Coloring-Pages-Featured-Image.jpg (page: https://soeasybeinggreen-blog.com/elf-shelf-coloring-pages/ | Elf On The Shelf Ideas Coloring Pages - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.512145+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://simplylovecoloring.com/wp-content/uploads/2024/11/Easy-to-color-elf-on-the-shelf-coloring-pa (page: https://storage.googleapis.com/morixavelt/elf-on-the-shelf-ideas-coloring-pages.html | Elf On The Sh - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:51.510788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.508415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.386888+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.257756+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-    "created_at": "2026-11-26T16:51:51.198392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.149343+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:51.148199+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no og:image)",
-    "created_at": "2026-11-26T16:51:51.146978+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPQUZoNE5qVlVJSWdVTHRMY1R0bFBac204aUVreDhOR3NtUE4yWjBESlJMUHZoLVo0Njd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T16:51:51.144455+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'Russia's own figures show it has lost nearly 500,000 people ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T16:51:50.967393+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T16:51:50.966290+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Russia's own figures show it has lost nearly 500,000 people in Ukraine war - BBC' (9 download(s) tried)",
-    "created_at": "2026-11-26T16:51:50.965180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://davaitrip.com/photos/moscou.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:50.964040+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:50.962559+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.crowdfundinsider.com/wp-content/uploads/2016/11/Russia.jpg",
-    "created_at": "2026-11-26T16:51:50.810796+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:50.775390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:50.773879+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.budgetyourtrip.com/images/photos/headerphotos/large/russia_moscow.jpg - source page title names only 0 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-26T16:51:50.548841+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T16:51:50.547347+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7312/10096297923_e8773368cf_b.jpg",
-    "created_at": "2026-11-26T16:51:50.502591+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4339/36366522401_0fdb4c9ab9_b.jpg",
-    "created_at": "2026-11-26T16:51:50.455934+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5698/30062345825_3715964625_b.jpg",
-    "created_at": "2026-11-26T16:51:50.407961+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7498/29580038603_815e0c7f87_b.jpg",
-    "created_at": "2026-11-26T16:51:50.364367+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2759/4458162935_766967c5f9_b.jpg",
-    "created_at": "2026-11-26T16:51:50.325660+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia'",
-    "created_at": "2026-11-26T16:51:50.284121+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia'",
-    "created_at": "2026-11-26T16:51:50.146161+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Russia'",
-    "created_at": "2026-11-26T16:51:50.030549+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Russia'",
-    "created_at": "2026-11-26T16:51:49.970129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.923403+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.922070+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Russia's own figures show it has lost nearly 500,0' - trying entity search 'Russia'",
-    "created_at": "2026-11-26T16:51:49.920999+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://davaitrip.com/photos/moscou.jpg (page: https://www.msn.com/en-us/news/other/russia-allegedly-attempts-to-assassinate-ukrainian-american-rap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.919737+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.crowdfundinsider.com/wp-content/uploads/2016/11/Russia.jpg (page: https://davaitrip.com/guides/can-you-travel-to-russia | Russia Sanctions Tighten As Crypto And Finte - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.918558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg (page: https://www.crowdfundinsider.com/2026/11/323419-russia-sanctions-tighten-as-crypto-and-fintech-fuel- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.917277+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://cdn.budgetyourtrip.com/images/photos/headerphotos/large/russia_moscow.jpg (page: https://informat.ro/en/international/russia-invests-more-than-eur500-million-in-two-ferries-149718 | - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.916002+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia s own figures show'",
-    "created_at": "2026-11-26T16:51:49.913534+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia s own figures show'",
-    "created_at": "2026-11-26T16:51:49.801801+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Russia s own figures show'",
-    "created_at": "2026-11-26T16:51:49.640451+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia s own figures show'",
-    "created_at": "2026-11-26T16:51:49.566064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.523763+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.522647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://davaitrip.com/photos/moscou.jpg (page: https://www.msn.com/en-us/news/other/russia-allegedly-attempts-to-assassinate-ukrainian-american-rap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.521441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.crowdfundinsider.com/wp-content/uploads/2016/11/Russia.jpg (page: https://davaitrip.com/guides/can-you-travel-to-russia | Russia Sanctions Tighten As Crypto And Finte - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.520158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg (page: https://www.crowdfundinsider.com/2026/11/323419-russia-sanctions-tighten-as-crypto-and-fintech-fuel- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.518906+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://cdn.budgetyourtrip.com/images/photos/headerphotos/large/russia_moscow.jpg (page: https://informat.ro/en/international/russia-invests-more-than-eur500-million-in-two-ferries-149718 | - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.517622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.515224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.400620+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.251553+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.191320+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.146177+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:49.144992+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://davaitrip.com/photos/moscou.jpg (page: https://www.msn.com/en-us/news/other/russia-allegedly-attempts-to-assassinate-ukrainian-american-rap - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.143688+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://www.crowdfundinsider.com/wp-content/uploads/2016/11/Russia.jpg (page: https://davaitrip.com/guides/can-you-travel-to-russia | Russia Sanctions Tighten As Crypto And Finte - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.142211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://media-storage.informat.ro/6b045a863b03f_shutterstock_2835040969.jpg (page: https://www.crowdfundinsider.com/2026/11/323419-russia-sanctions-tighten-as-crypto-and-fintech-fuel- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.140861+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russia's own figures show it has lost nearly 500,0'): https://cdn.budgetyourtrip.com/images/photos/headerphotos/large/russia_moscow.jpg (page: https://informat.ro/en/international/russia-invests-more-than-eur500-million-in-two-ferries-149718 | - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:49.139547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.137015+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:49.029873+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:48.889785+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Russia's own figures show it has lost nearly 500,000 people '",
-    "created_at": "2026-11-26T16:51:48.830481+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:48.797265+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:48.796165+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - rejected (no og:image)",
-    "created_at": "2026-11-26T16:51:48.795001+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE52ekxuU3VuendQQVpId1BlX21DeXpnMW9teFNfV1A3Nng0ODhEblNKSmRVd0dHcjFpY2x) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T16:51:48.792621+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - skipped (same event used within 24h, event key '000 700 estimate kill nbc news russian soldier suggest than ')",
-    "created_at": "2026-11-26T16:51:48.476029+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
-    "created_at": "2026-11-26T16:51:48.474707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief push Russia to avoid any actions that woul' - skipped (same event used within 24h, event key 'action any avoid chief expand fox nato news push russia trum')",
-    "created_at": "2026-11-26T16:51:48.473058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-26T16:51:48.471504+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Recruiters Lured Brazilians to Fight Russia’s War, Then Stol' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T16:51:48.469400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Recruiters Lured Brazilians to Fight Russia’s War, Then Stol' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T16:51:48.468330+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Recruiters Lured Brazilians to Fight Russia’s War, Then Stole Their Money - The New York Times' (0 download(s) tried)",
-    "created_at": "2026-11-26T16:51:48.467292+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://i.pinimg.com/736x/d2/77/ed/d277edd3bcc7f0fd18cbcd2fd7471b2e.jpg (page: Ariana Grande | Ariana grande vogue 2018, Ariana grande summertime ball ... - page does not name the entity (Recruiters))",
-    "created_at": "2026-11-26T16:51:48.466238+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Recruiters'",
-    "created_at": "2026-11-26T16:51:48.463587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Recruiters'",
-    "created_at": "2026-11-26T16:51:48.291607+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Recruiters'",
-    "created_at": "2026-11-26T16:51:48.157175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: search HTTP 504 for 'Recruiters'",
-    "created_at": "2026-11-26T16:51:48.083963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:34.628469+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:34.627439+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Recruiters Lured Brazilians to Fight Russia’s War,' - trying entity search 'Recruiters'",
-    "created_at": "2026-11-26T16:51:34.626341+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://cdn.freebiesupply.com/logos/large/2x/bank-of-america-4-logo-png-transparent.png (page: https://wallpapers.com/bank-of-america-background | Bank of America Placement Papers 2026 - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:34.625286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://cdn.financebuzz.com/images/2023/03/09/bank-of-america-stacked-logo-cj.png (page: https://logos-world.net/popular-bank-logos-banking-logos-and-names/ | Bank of America Advantage Bank - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:34.624180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://logos-world.net/wp-content/uploads/2020/11/Bank-of-America-Emblem.png (page: https://financebuzz.com/bank-of-america-advantage-banking-review | Bank of America Bullish on U.S. D - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:34.623054+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://washingtonindependent.org/wp-content/uploads/2024/02/0fce256e8ab0ca12/corporate-structure-an (page: https://www.memesita.com/bank-of-america-bullish-on-u-s-dollar-amid-fed-rate-hikes/ | Bank Of Americ - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:34.621687+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Recruiters Lured Brazilians Fight Russia'",
-    "created_at": "2026-11-26T16:51:34.619356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Recruiters Lured Brazilians Fight Russia'",
-    "created_at": "2026-11-26T16:51:34.508172+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Recruiters Lured Brazilians Fight Russia'",
-    "created_at": "2026-11-26T16:51:34.391427+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Recruiters Lured Brazilians Fight Russia'",
-    "created_at": "2026-11-26T16:51:34.331917+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:34.269351+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T16:51:34.268202+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Recruiters Lured Brazilians to Fight Russia’s War,'): https://tlcs.org/wp-content/uploads/Thanksgiving-Day_Social.jpg (page: Thanksgiving Day Worship Service - Trinity Lutheran Church & School - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T16:51:34.267058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Recruiters Lured Brazilians to Fight Russia’s War, Then Stol'",
-    "created_at": "2026-11-26T16:51:34.264699+00:00",
+    "message": "bing-images: 4 candidate(s) for 'UK nuclear test veterans win'",
+    "created_at": "2026-11-26T17:45:12.224232+00:00",
     "card": ""
   }
 ]
