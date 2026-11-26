@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T12:35:46.949583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'FEMA hotline unanswered in Iowa', 'UK net migration falls to 77,000', \"Macy's parade turns 100\", 'Grand Theft Auto VI']",
+    "created_at": "2026-11-26T12:35:46.933016+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T12:35:46.760507+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T12:35:46.757554+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T12:35:46.311986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T12:35:23.566207+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T12:35:23.564659+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T12:35:23.563194+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #132 started (--only blogger)",
+    "created_at": "2026-11-26T12:35:23.561268+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T12:01:06.114216+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "bing-images: 1 candidate(s) for 'unpopular Donald Trump'",
     "created_at": "2026-11-26T10:56:15.213100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T10:56:15.066300+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T10:56:14.931524+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 3 result(s) for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T10:56:14.858459+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T10:56:14.425041+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T10:56:14.424460+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://motocrossactionmag.com/wp-content/uploads/2025/08/07-MY26_DESMO450_MX_STATICS_ON_LOCATION-_2 (page: 2026 DUCATI DESMO450 MX HEADED TO USA DEALERSHIPS NOW! - Motocross Action Magazine - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T10:56:14.423847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T10:56:14.423046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T10:56:14.420751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T10:56:14.300828+00:00",
     "card": ""
   }
 ]
