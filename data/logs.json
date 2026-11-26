@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T09:03:26.015579+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', 'Describe a film without its name', \"Burnham's UK-EU deal\", \"Duran Duran's Andy Taylor dies\"]",
+    "created_at": "2026-11-26T09:03:26.007954+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T09:03:25.812986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T09:03:25.811451+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T09:03:25.524493+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T09:02:42.040817+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T09:02:42.039784+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T09:02:42.038626+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #126 started (--only blogger)",
+    "created_at": "2026-11-26T09:02:42.037226+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T08:47:39.380743+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPQUZoNE5qVlVJSWdVTHRMY1R0bFBac204aUVreDhOR3NtUE4yWjBESlJMUHZoLVo0Njd) - skipping, og:image would be the logo",
     "created_at": "2026-11-26T07:29:07.918742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T07:29:07.779052+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T07:29:07.778042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Russian Offensive Campaign Assessment, November 25, 2026 - Institute for the Study of War' (9 download(s) tried)",
-    "created_at": "2026-11-26T07:29:07.776942+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp1903287.jpg",
-    "created_at": "2026-11-26T07:29:07.775915+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp1903287.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
-    "created_at": "2026-11-26T07:29:07.774673+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.britannica.com/83/84883-050-053834E9/Red-Square-Moscow.jpg - source page title names only 0 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-26T07:29:07.742962+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T07:29:07.741508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://www.thecourier.co.uk/wp-content/uploads/sites/12/2016/08/Russia-flag.jpg (page: https://www.britannica.com/place/Moscow/The-Kremlin | From Russia with love - remarkable tales of ea - page does not name the entity (Russian))",
-    "created_at": "2026-11-26T07:29:07.640586+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): http://wallpapercave.com/wp/wp1903232.jpg",
-    "created_at": "2026-11-26T07:29:07.639320+00:00",
     "card": ""
   }
 ]
