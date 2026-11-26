@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T07:57:25.155816+00:00",
-  "last_run": "2026-11-26T07:57:21.609725+00:00",
-  "runs": 124,
+  "generated_at": "2026-11-26T08:47:39.377961+00:00",
+  "last_run": "2026-11-26T08:45:31.978060+00:00",
+  "runs": 125,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T07:28:29.454352+00:00",
-    "mastodon.social": "2026-11-26T07:31:11.775826+00:00"
+    "Adsterra Blogger": "2026-11-26T08:46:03.980629+00:00",
+    "mastodon.social": "2026-11-26T08:47:39.179306+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 53,
+      "success": 54,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T07:28:29.454345+00:00"
+      "last_run": "2026-11-26T08:46:03.980626+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 1,
+      "fail": 2,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T07:31:11.775823+00:00"
+      "last_run": "2026-11-26T08:47:39.179303+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T07:28:29.454352+00:00",
-      "runs_today": 6,
-      "posts_today": 12,
+      "last_run": "2026-11-26T08:46:03.980629+00:00",
+      "runs_today": 7,
+      "posts_today": 13,
       "next_runs": [
-        "2026-11-26T13:58:29.454352+06:00",
-        "2026-11-26T14:13:29.454352+06:00",
-        "2026-11-26T14:28:29.454352+06:00",
-        "2026-11-26T14:43:29.454352+06:00",
-        "2026-11-26T14:58:29.454352+06:00"
+        "2026-11-26T15:01:03.980629+06:00",
+        "2026-11-26T15:16:03.980629+06:00",
+        "2026-11-26T15:31:03.980629+06:00",
+        "2026-11-26T15:46:03.980629+06:00",
+        "2026-11-26T16:01:03.980629+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T14:00:00+06:00",
         "2026-11-26T15:05:00+06:00",
         "2026-11-26T16:10:00+06:00",
         "2026-11-26T16:54:00+06:00",
-        "2026-11-26T17:57:00+06:00"
+        "2026-11-26T17:57:00+06:00",
+        "2026-11-26T19:02:00+06:00"
       ],
-      "success": 53,
+      "success": 54,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T07:31:11.775826+00:00",
-      "runs_today": 6,
+      "last_run": "2026-11-26T08:47:39.179306+00:00",
+      "runs_today": 7,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T14:01:11.775826+06:00",
-        "2026-11-26T14:16:11.775826+06:00",
-        "2026-11-26T14:31:11.775826+06:00",
-        "2026-11-26T14:46:11.775826+06:00",
-        "2026-11-26T15:01:11.775826+06:00"
+        "2026-11-26T15:02:39.179306+06:00",
+        "2026-11-26T15:17:39.179306+06:00",
+        "2026-11-26T15:32:39.179306+06:00",
+        "2026-11-26T15:47:39.179306+06:00",
+        "2026-11-26T16:02:39.179306+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T13:59:00+06:00",
         "2026-11-26T15:04:00+06:00",
         "2026-11-26T16:09:00+06:00",
         "2026-11-26T16:53:00+06:00",
-        "2026-11-26T18:02:00+06:00"
+        "2026-11-26T18:02:00+06:00",
+        "2026-11-26T19:07:00+06:00"
       ],
       "success": 16,
-      "fail": 1,
+      "fail": 2,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 7
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T07:57:21.611172+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T07:57:21.612320+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T08:45:31.979406+00:00"
     }
   ],
   "dry_run": false,
@@ -296,315 +308,315 @@
   "trending": [
     "Thanksgiving Day celebrations",
     "Boreen daily trivia scores",
+    "Grand Theft Auto VI",
+    "Burnham's UK-EU deal",
     "Duran Duran's Andy Taylor dies",
-    "FCC approves SpaceX Starmind satellites",
-    "Describe a film without its name",
-    "Victorian Coalition plans sewage privatization",
-    "FEMA hotline unanswered in Iowa",
-    "Nvidia chip exports to China",
     "UK energy price cap to rise",
-    "Aaron Rodgers criticizes Mike McCarthy"
+    "FEMA hotline unanswered in Iowa",
+    "World tops 2C for six straight days",
+    "Day to end violence against women",
+    "FCC approves SpaceX Starmind satellites"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T07:57:24.916871+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T07:57:24.915319+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-26T07:57:24.525961+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T07:57:21.613349+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T07:57:21.612325+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T07:57:21.611180+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #124 started (--only blogger)",
-      "created_at": "2026-11-26T07:57:21.609749+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T07:31:11.921072+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['FEMA hotline unanswered in Iowa', \"Duran Duran's Andy Taylor dies\", 'Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Victorian Coalition plans sewage privatization']",
-      "created_at": "2026-11-26T07:31:11.914657+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T07:31:11.775843+00:00",
+      "created_at": "2026-11-26T08:47:39.179325+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': run failed (1/2 retries) - next retry at 14:01 Dhaka",
-      "created_at": "2026-11-26T07:31:11.774677+00:00",
+      "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 15:17 Dhaka",
+      "created_at": "2026-11-26T08:47:39.178222+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T07:31:11.772714+00:00",
+      "created_at": "2026-11-26T08:47:39.176555+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T07:31:01.769901+00:00",
+      "created_at": "2026-11-26T08:47:29.174354+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T07:31:01.585134+00:00",
+      "created_at": "2026-11-26T08:47:28.949793+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T07:31:01.582813+00:00",
+      "created_at": "2026-11-26T08:47:28.947492+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T07:30:56.247808+00:00",
+      "created_at": "2026-11-26T08:47:22.278239+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T07:30:56.245369+00:00",
+      "created_at": "2026-11-26T08:47:22.276153+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T07:30:56.073884+00:00",
+      "created_at": "2026-11-26T08:47:22.046796+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T07:30:56.071275+00:00",
+      "created_at": "2026-11-26T08:47:22.044307+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Elon Musk says record $446m spending on US midterms was 'pre' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-26T07:29:55.974328+00:00",
+      "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T08:46:18.820030+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: USA political news",
-      "created_at": "2026-11-26T07:29:55.973240+00:00",
+      "created_at": "2026-11-26T08:46:18.818947+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Elon Musk says record $446m spending on US midterms was 'pre': https://live.staticflickr.com/4172/33486317334_185fc13b3c_b.jpg (from openverse, query 'Elon Musk', page: https://www.flickr.com/photos/44124348109@N01/33486317334 | Elon Musk at TED 2017 - page names the entity (Elon Musk))",
-      "created_at": "2026-11-26T07:29:55.972078+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Democrats win control of the House of Representatives with a': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats win control of the House of Representatives with a vow to combat Trump - NBC News', page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - matches 3 key entities (democrat, house, news))",
+      "created_at": "2026-11-26T08:46:18.817948+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T07:29:55.970685+00:00",
+      "message": "vision: YES - photo matches 'Democrats win control of the House of Representati' (The photo shows House Democratic Leader Hakeem Jeffries, who represents the Democratic leadership in the House of Representatives mentioned in the hea)",
+      "created_at": "2026-11-26T08:46:18.816493+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Elon Musk'",
-      "created_at": "2026-11-26T07:29:55.936494+00:00",
+      "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
+      "created_at": "2026-11-26T08:46:10.555422+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Elon Musk'",
-      "created_at": "2026-11-26T07:29:55.699654+00:00",
+      "message": "vision: NO - photo rejected for 'Democrats win control of the House of Representati' (; the photo shows campaign buttons rather than the people, places, or events involved in the headline.)",
+      "created_at": "2026-11-26T08:46:10.542093+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Elon Musk'",
-      "created_at": "2026-11-26T07:29:55.561489+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Democrats win control of the House of Representatives with a'",
+      "created_at": "2026-11-26T08:46:05.670959+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Elon Musk'",
-      "created_at": "2026-11-26T07:29:55.225091+00:00",
+      "message": "google-images: 0 candidate(s) for 'Democrats win control of the House of Representatives with a'",
+      "created_at": "2026-11-26T08:46:05.541470+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:45.552333+00:00",
+      "message": "wikimedia: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
+      "created_at": "2026-11-26T08:46:05.416328+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:45.551302+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Elon Musk says record $446m spending on US midterm' - trying entity search 'Elon Musk'",
-      "created_at": "2026-11-26T07:29:45.550219+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://i.pinimg.com/originals/3b/3b/4b/3b3b4bd8e9f629b5e66944e29765b5ad.jpg (page: https://storage.googleapis.com/drabugewncpire/facebook-instagram.html | Cara Login Instagram Melalui - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:45.549146+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://upleap.com/wp-content/uploads/2023/08/image-4.jpeg (page: https://punyatemaku.blogspot.com/2023/01/cara-login-instagram-melalui-facebook.html | How to Create  - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:45.547910+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://thepreviewapp.com/wp-content/uploads/2018/09/cant-login-facebook-instagram-username-password (page: https://upleap.com/blog/how-to-create-instagram-login/ | Instagram Log In Via Facebook – Instagram C - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:45.546549+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://about.fb.com/wp-content/uploads/2022/09/02_Logging-in.jpg?resize=890%2C775 (page: https://youthopp.org/instagram-log-in-via-facebook-instagram-connect-to-facebook/ | Making it Easier - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:45.545225+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Elon Musk says record 446m'",
-      "created_at": "2026-11-26T07:29:45.542838+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Elon Musk says record 446m'",
-      "created_at": "2026-11-26T07:29:45.429781+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Elon Musk says record 446m'",
-      "created_at": "2026-11-26T07:29:45.299800+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Elon Musk says record 446m'",
-      "created_at": "2026-11-26T07:29:44.832109+00:00",
+      "message": "openverse: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
+      "created_at": "2026-11-26T08:46:05.003450+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:40.301364+00:00",
+      "created_at": "2026-11-26T08:46:04.941447+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:40.300311+00:00",
+      "created_at": "2026-11-26T08:46:04.940447+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36452/skodakaroq.jpg?anchor=center&mode=crop&width=644&height=362&rn (page: https://www.carkeys.co.uk/guides?%3bpage&%3bpaid+social&%3bamp%3bpage&page=1 | Car Buyers Guides and - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:40.299205+00:00",
+      "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - rejected (no og:image)",
+      "created_at": "2026-11-26T08:46:04.939391+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36267/image-6.jpeg?center=0.57961783439490444 (page: https://www.carkeys.co.uk/guides?%3bpage=5&%3bpaid%2bsocial=142&amp%3bfbclid=IwAR29sDlaSF4V2tN8bQUqf - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:40.298062+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitgFBVV95cUxOa1ZqY0FVeG9ya00wNFNpdktGOHd0b1RiZko5ZVNUdWNZX25IR29NNC16NnhMbVBUbWN) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T08:46:04.936404+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://www.carkeys.co.uk/media/36225/embedded7719349.jpg?anchor=center&mode=crop&width=644&height=3 (page: https://www.basilfordofniagarafalls.com/used/Chevrolet/2023-Chevrolet-Suburban-15327339ac18150fc7e84 - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:40.296902+00:00",
+      "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+      "created_at": "2026-11-26T08:46:04.579532+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Elon Musk says record $446m spending on US midterm'): https://static.cargurus.com/images/forsale/2026/11/17/23/36/2023_tesla_model_3-pic-86297897281765086 (page: https://www.carkeys.co.uk/car-reviews?%3b%3bfbclid=iwar00zlmo1g4p1xmt-cofznu6jzxtv8-acpbjrxrs1aslbng - the named person is not in the source page (elon, musk))",
-      "created_at": "2026-11-26T07:29:40.295323+00:00",
+      "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+      "created_at": "2026-11-26T08:46:04.578390+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
-      "created_at": "2026-11-26T07:29:40.293190+00:00",
+      "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+      "created_at": "2026-11-26T08:46:04.576932+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
-      "created_at": "2026-11-26T07:29:40.096707+00:00",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-26T08:46:03.984276+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-26T08:46:03.982904+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': retry 1/2 after failure - due now",
+      "created_at": "2026-11-26T08:46:03.981631+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+      "created_at": "2026-11-26T08:46:03.980646+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-26T08:46:03.979587+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': promo posted - event 'ally civil democrat due newsweek potential strategy trump wa' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+      "created_at": "2026-11-26T08:46:03.977934+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1344x854 (ratio 1.57) - unchanged",
+      "created_at": "2026-11-26T08:46:01.895847+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
-      "created_at": "2026-11-26T07:29:39.948714+00:00",
+      "message": "prepare_bsky_image: original 1344x854 (ratio 1.57) - kept, no crop",
+      "created_at": "2026-11-26T08:46:01.883214+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Elon Musk says record $446m spending on US midterms was 'pre'",
-      "created_at": "2026-11-26T07:29:39.544720+00:00",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump Ally Warns of Potential ‘Civil War’ Due to Democrats’ '",
+      "created_at": "2026-11-26T08:46:01.820892+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-26T08:46:01.694394+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-26T08:46:01.571128+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+      "created_at": "2026-11-26T08:46:01.495407+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-26T08:45:56.273560+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Trump administration officials debating targeting Iran’s lea' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-26T08:45:56.272087+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T08:45:47.731279+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T08:45:47.730315+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Trump administration officials debating targeting Iran’s lea': https://bloximages.chicago2.vip.townnews.com/timesargus.com/content/tncms/assets/v3/editorial/1/d8/1 (from bing-images, query 'Trump administration officials debating targeting Iran’s leaders, sources say - NBC News', page: https://www.timesargus.com/news/national/trump/image_183eec76-a536-58e6-8a70-950f1fcc9030.html | Tru - matches 2 key entities (news, trump))",
+      "created_at": "2026-11-26T08:45:47.728565+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Trump administration officials debating targeting ' (The photo depicts Donald Trump, the namesake of the administration referenced in the headline.)",
+      "created_at": "2026-11-26T08:45:47.726962+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-26T08:45:37.635080+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-26T08:45:37.452968+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-26T08:45:37.344112+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
+      "created_at": "2026-11-26T08:45:36.922258+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:36.337832+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T07:29:36.336617+00:00",
+      "created_at": "2026-11-26T08:45:36.725443+00:00",
       "card": ""
     }
   ]
