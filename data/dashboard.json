@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T15:43:11.178404+00:00",
-  "last_run": "2026-11-26T15:38:56.287922+00:00",
-  "runs": 137,
+  "generated_at": "2026-11-26T16:40:51.137328+00:00",
+  "last_run": "2026-11-26T16:40:36.335287+00:00",
+  "runs": 138,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 3,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 3,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 13,
       "posts_today": 19,
       "next_runs": [
-        "2026-11-26T21:56:51.891274+06:00",
-        "2026-11-26T22:11:51.891274+06:00",
-        "2026-11-26T22:26:51.891274+06:00",
         "2026-11-26T22:41:51.891274+06:00",
-        "2026-11-26T22:56:51.891274+06:00"
+        "2026-11-26T22:56:51.891274+06:00",
+        "2026-11-26T23:11:51.891274+06:00",
+        "2026-11-26T23:26:51.891274+06:00",
+        "2026-11-26T23:41:51.891274+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T22:06:00+06:00",
         "2026-11-26T23:01:00+06:00",
         "2026-11-26T23:52:00+06:00",
         "2026-11-27T00:57:00+06:00",
-        "2026-11-27T02:02:00+06:00"
+        "2026-11-27T02:02:00+06:00",
+        "2026-11-27T03:07:00+06:00"
       ],
       "success": 60,
       "fail": 4,
@@ -158,18 +158,18 @@
       "runs_today": 13,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T21:58:11.021123+06:00",
-        "2026-11-26T22:13:11.021123+06:00",
-        "2026-11-26T22:28:11.021123+06:00",
         "2026-11-26T22:43:11.021123+06:00",
-        "2026-11-26T22:58:11.021123+06:00"
+        "2026-11-26T22:58:11.021123+06:00",
+        "2026-11-26T23:13:11.021123+06:00",
+        "2026-11-26T23:28:11.021123+06:00",
+        "2026-11-26T23:43:11.021123+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T22:04:00+06:00",
         "2026-11-26T22:59:00+06:00",
         "2026-11-26T23:54:00+06:00",
         "2026-11-27T00:59:00+06:00",
-        "2026-11-27T02:04:00+06:00"
+        "2026-11-27T02:04:00+06:00",
+        "2026-11-27T03:09:00+06:00"
       ],
       "success": 16,
       "fail": 8,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 13
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T15:38:56.289415+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T16:40:36.336761+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T16:40:36.338047+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,72 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
-    "Kushner praises Putin's restraint",
+    "Musk pledges kids SpaceX shares",
+    "Macy's parade postponed to Saturday",
     "Aaron Rodgers reportedly out",
+    "Kushner praises Putin's restraint",
+    "Rockstar UK union vote",
     "UK net migration falls to 77,000",
     "Grand Theft Auto VI",
-    "New Avengers: Doomsday poster",
-    "Thanksgiving storm threatens travel",
-    "Jason Arday plagiarism claims",
-    "Duran Duran's Andy Taylor dies",
-    "Nvidia chip exports to China"
+    "Birthday twin spectrum prompt",
+    "Duran Duran's Andy Taylor dies"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T16:40:50.897014+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T16:40:50.894578+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-26T16:40:50.601657+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T16:40:36.339243+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T16:40:36.338055+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T16:40:36.336770+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #138 started (--only blogger)",
+      "created_at": "2026-11-26T16:40:36.335306+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T15:43:11.181163+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Kushner praises Putin's restraint\", 'Aaron Rodgers reportedly out', 'UK net migration falls to 77,000', 'Grand Theft Auto VI']",
+      "created_at": "2026-11-26T15:43:11.175324+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://i.dailymail.co.uk/1s/2025/04/17/17/97396947-14622937-Gillis_pictured_with_girlfriend_Grace_B (page: https://www.red94.net/news/63280-shane-gillis-splits-from-girlfriend-grace-brassel-after-11-month-re - only 1 of 13 key entities in the source page)",
       "created_at": "2026-11-26T15:42:11.254990+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://statico.soapcentral.com/editor/2025/07/49410-17527409467758-1920.jpg (page: https://marriedceleb.com/grace-brassel | Who is Shane Gillis' girlfriend Grace Brassel? Age and all  - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:11.253867+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-768x519.jpeg (page: https://www.soapcentral.com/entertainment/who-shane-gillis-girlfriend-grace-brassel-age-2025-espy-ho - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:11.252835+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war latest: Kremlin responds after Trump a'): https://socialstarage.com/wp-content/uploads/2024/09/Grace-Brassel-Bio-768x524.jpeg (page: https://socialstarage.com/grace-brassel/ | Grace Brassel – Age, Bio, Height, Weight, Boyfriend, Net  - only 0 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T15:42:11.251586+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:11.249337+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:11.112847+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:10.971318+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war latest: Kremlin responds after Trump and NATO wa'",
-      "created_at": "2026-11-26T15:42:10.887457+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:10.290213+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T15:42:10.289141+00:00",
       "card": ""
     }
   ]
