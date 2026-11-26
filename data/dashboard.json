@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-26T03:59:19.964374+00:00",
-  "last_run": "2026-11-26T03:56:31.393068+00:00",
-  "runs": 118,
+  "generated_at": "2026-11-26T05:06:00.190582+00:00",
+  "last_run": "2026-11-26T05:04:27.237434+00:00",
+  "runs": 119,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 1,
+    "replies_today": 4,
     "total_posts": 0,
-    "total_replies": 1,
+    "total_replies": 4,
     "accounts": 1
   },
   "settings": {
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T03:58:29.701255+00:00",
-    "mastodon.social": "2026-11-26T03:59:19.692449+00:00"
+    "Adsterra Blogger": "2026-11-26T05:05:12.262768+00:00",
+    "mastodon.social": "2026-11-26T05:06:00.065304+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 50,
+      "success": 51,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T03:58:29.701251+00:00"
+      "last_run": "2026-11-26T05:05:12.262765+00:00"
     },
     "mastodon.social": {
-      "success": 14,
+      "success": 15,
       "fail": 0,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T03:59:19.692441+00:00"
+      "last_run": "2026-11-26T05:06:00.065301+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T03:58:29.701255+00:00",
+      "last_run": "2026-11-26T05:05:12.262768+00:00",
       "runs_today": 4,
       "posts_today": 10,
       "next_runs": [
-        "2026-11-26T10:13:29.701255+06:00",
-        "2026-11-26T10:28:29.701255+06:00",
-        "2026-11-26T10:43:29.701255+06:00",
-        "2026-11-26T10:58:29.701255+06:00",
-        "2026-11-26T11:13:29.701255+06:00"
+        "2026-11-26T11:20:12.262768+06:00",
+        "2026-11-26T11:35:12.262768+06:00",
+        "2026-11-26T11:50:12.262768+06:00",
+        "2026-11-26T12:05:12.262768+06:00",
+        "2026-11-26T12:20:12.262768+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T11:04:00+06:00",
         "2026-11-26T12:09:00+06:00",
         "2026-11-26T12:53:00+06:00",
         "2026-11-26T14:00:00+06:00",
-        "2026-11-26T15:05:00+06:00"
+        "2026-11-26T15:05:00+06:00",
+        "2026-11-26T16:10:00+06:00"
       ],
-      "success": 50,
+      "success": 51,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,24 +154,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T03:59:19.692449+00:00",
+      "last_run": "2026-11-26T05:06:00.065304+00:00",
       "runs_today": 4,
       "posts_today": 10,
       "next_runs": [
-        "2026-11-26T10:14:19.692449+06:00",
-        "2026-11-26T10:29:19.692449+06:00",
-        "2026-11-26T10:44:19.692449+06:00",
-        "2026-11-26T10:59:19.692449+06:00",
-        "2026-11-26T11:14:19.692449+06:00"
+        "2026-11-26T11:21:00.065304+06:00",
+        "2026-11-26T11:36:00.065304+06:00",
+        "2026-11-26T11:51:00.065304+06:00",
+        "2026-11-26T12:06:00.065304+06:00",
+        "2026-11-26T12:21:00.065304+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T10:00:00+06:00",
-        "2026-11-26T11:05:00+06:00",
         "2026-11-26T12:10:00+06:00",
         "2026-11-26T12:54:00+06:00",
-        "2026-11-26T13:59:00+06:00"
+        "2026-11-26T13:59:00+06:00",
+        "2026-11-26T15:04:00+06:00",
+        "2026-11-26T16:09:00+06:00"
       ],
-      "success": 14,
+      "success": 15,
       "fail": 0,
       "last_error": "",
       "color": "",
@@ -235,7 +235,7 @@
       "username": "",
       "enabled": true,
       "posts_limit": 0,
-      "posts_today": 4
+      "posts_today": 5
     }
   ],
   "telegram_accounts_detail": [],
@@ -297,7 +297,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T03:56:31.394613+00:00"
+      "time": "2026-11-26T05:04:27.238457+00:00"
     }
   ],
   "dry_run": false,
@@ -306,317 +306,317 @@
     "open": false
   },
   "trending": [
+    "Describe a film without its name",
+    "Grand Theft Auto VI",
     "FEMA hotline unanswered in Iowa",
     "Aaron Rodgers reportedly out",
-    "Thanksgiving Day celebrations",
+    "Victorian Coalition plans sewage privatization",
     "Macy's parade turns 100",
-    "Grand Theft Auto VI",
-    "Describe a film without its name",
-    "FCC approves SpaceX Starmind satellites",
-    "ABC licenses FCC court case",
     "New Avengers: Doomsday poster",
-    "Nvidia chip exports to China"
+    "Thanksgiving Day celebrations",
+    "Nvidia chip exports to China",
+    "Denny's restores Jensen Huang plaque"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (ok - posted 1)",
-      "created_at": "2026-11-26T03:59:19.692470+00:00",
+      "created_at": "2026-11-26T05:06:00.065321+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-26T03:59:19.691251+00:00",
+      "created_at": "2026-11-26T05:06:00.064316+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117680738094933146",
-      "created_at": "2026-11-26T03:59:19.689885+00:00",
+      "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117681000258694470",
+      "created_at": "2026-11-26T05:06:00.063366+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "mastodon: posted to mastodon.social: 117680738094933146",
-      "created_at": "2026-11-26T03:59:19.687047+00:00",
+      "message": "mastodon: posted to mastodon.social: 117681000258694470",
+      "created_at": "2026-11-26T05:06:00.061256+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Stop using tear gas on battlefield, do' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-26T03:59:07.047727+00:00",
+      "message": "photo candidate: 'Melania Trump announces reunion of 9 children with families ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T05:05:52.021007+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-26T03:59:07.046597+00:00",
+      "created_at": "2026-11-26T05:05:52.020345+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Stop using tear gas on battlefield, do': https://e3.365dm.com/26/11/1600x900/skynews-ukraine-russia-zaporizhzhia_7415114.jpg?20261124100930 (from bing-images, query 'Ukraine war briefing: Stop using tear gas on battlefield, dozens of countries tell Russia - The Guardian', page: https://www.youtube.com/watch?v=n_2yMlmPcQI | Ukraine war latest: Russia turns to power restrictions - matches 3 key entities (russia, ukraine, war))",
-      "created_at": "2026-11-26T03:59:07.045405+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Melania Trump announces reunion of 9 children with families ': https://img.theepochtimes.com/assets/uploads/2026/11/21/id6127754-Melania-Trump-GettyImages-23060069 (from bing-images, query 'Melania Trump announces reunion of 9 children with families amid Ukraine war - The Washington Post', page: https://www.breitbart.com/entertainment/2026/11/20/fashion-notes-melania-trump-dons-signature-dolce- - matches 2 key entities (melania, trump))",
+      "created_at": "2026-11-26T05:05:52.019602+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T03:59:07.043750+00:00",
+      "created_at": "2026-11-26T05:05:52.018561+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Stop using tear gas on battl'): https://www.reporterworldnews.com/storage/gallery/2026/11/02/ukraine.jpg (page: https://news.sky.com/story/ukraine-news-live-turkey-will-not-approve-finland-and-swedens-nato-bids-u - only 1 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T03:59:06.625815+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Melania Trump announces reunion of 9 children with families '",
+      "created_at": "2026-11-26T05:05:51.981000+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Stop using tear gas on battl'): https://cryptopotato.com/wp-content/uploads/2022/03/Ukraine.jpg (page: https://www.reporterworldnews.com/news/world/2026/11/22/russian-missile-drone-attack-lviv-ukraine-da - only 1 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T03:59:06.624551+00:00",
+      "message": "google-images: 0 candidate(s) for 'Melania Trump announces reunion of 9 children with families '",
+      "created_at": "2026-11-26T05:05:51.866626+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Stop using tear gas on battl'): https://www.ukrainianworldcongress.org/wp-content/uploads/2026/11/kyiv-ukraine-january-2014-ukrainia (page: https://cryptorank.io/news/feed/380c5-ukraine-passes-bill-to-legalize-bitcoin-and-crypto-sets-18-tax - only 1 of 13 key entities in the source page)",
-      "created_at": "2026-11-26T03:59:06.622927+00:00",
+      "message": "wikimedia: 0 result(s) for 'Melania Trump announces reunion of 9 children with families '",
+      "created_at": "2026-11-26T05:05:51.773971+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Stop using tear gas on battlefield, do'",
-      "created_at": "2026-11-26T03:59:06.620391+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Stop using tear gas on battlefield, do'",
-      "created_at": "2026-11-26T03:59:06.428262+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 0 result(s) for 'Ukraine war briefing: Stop using tear gas on battlefield, do'",
-      "created_at": "2026-11-26T03:59:06.245084+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Stop using tear gas on battlefield, do'",
-      "created_at": "2026-11-26T03:59:05.938588+00:00",
+      "message": "openverse: 0 result(s) for 'Melania Trump announces reunion of 9 children with families '",
+      "created_at": "2026-11-26T05:05:51.325847+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T03:59:05.600906+00:00",
+      "created_at": "2026-11-26T05:05:51.137074+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T03:59:05.599751+00:00",
+      "created_at": "2026-11-26T05:05:51.136375+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Stop using tear gas on battlefield, do' - rejected (no og:image)",
-      "created_at": "2026-11-26T03:59:05.597812+00:00",
+      "message": "photo candidate: 'Melania Trump announces reunion of 9 children with families ' - rejected (no og:image)",
+      "created_at": "2026-11-26T05:05:51.135476+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizgFBVV95cUxPN3JxOXQ3SWhCN1U4OENUcVh1TmZLYXdLS2lHa1FIa01PR0JyaDctdHF6NjJVWmhPbWZ) - skipping, og:image would be the logo",
-      "created_at": "2026-11-26T03:59:05.595344+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwwFBVV95cUxONFNkS0JnTlMybWNvUmpBQ2ZlSlpBWXQwb0tkM25MTTFZSGVKMU1ESDRlUmVvcEhmc0V) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T05:05:51.132827+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-      "created_at": "2026-11-26T03:59:05.155958+00:00",
+      "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
+      "created_at": "2026-11-26T05:05:50.858363+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (same event used within 24h, event key 'explosion intercept iran jazeera live missile riyadh rock sa')",
+      "created_at": "2026-11-26T05:05:50.857329+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-26T03:59:05.153709+00:00",
+      "created_at": "2026-11-26T05:05:50.855941+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
-      "created_at": "2026-11-26T03:59:04.657085+00:00",
+      "created_at": "2026-11-26T05:05:50.788899+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
-      "created_at": "2026-11-26T03:59:04.655701+00:00",
+      "created_at": "2026-11-26T05:05:50.788050+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-      "created_at": "2026-11-26T03:59:04.654058+00:00",
+      "created_at": "2026-11-26T05:05:50.786934+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-26T03:59:04.652904+00:00",
+      "created_at": "2026-11-26T05:05:50.786309+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (8 download(s) tried)",
-      "created_at": "2026-11-26T03:59:04.651737+00:00",
+      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (12 download(s) tried)",
+      "created_at": "2026-11-26T05:05:50.785683+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://imagescdn.homes.com/i2/X683Xi_zSfXjvpYX5SaJv4EZYmN6aZtyqIhKVBzQTnY/117/burkburnett-tx.jpg?p= (page: https://www.landsat.com/burkburnett-texas-aerial-photography-map.html | Burkburnett, TX City Guide | - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.650681+00:00",
+      "message": "photo: rejected (vision down, strict check): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-26T05:05:50.784971+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://images1.loopnet.com/i2/mo3_nfOe1wadxKFB8ocWO7-hsPlF0MlVed-HIkhb0uc/110/Parliament-Street-Bur (page: https://www.homes.com/local-guide/burkburnett-tx/ | Parliament Street, Burkburnett, TX 76354 | LoopN - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.649498+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T05:05:50.783760+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://assets.website-files.com/5a2719df5f89cb0001ea0d06/5a958119b010650001ba495d_history.jpg (page: https://nextdoor.com/resources/things-to-do-with-kids/burkburnett--tx/ | City of Burkburnett, Texas - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.648295+00:00",
+      "message": "photo: rejected (vision down, strict check): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-26T05:05:50.748790+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://assets.website-files.com/5a2719df5f89cb0001ea0d06/5a958160fff1bf00015f900a_downtown_burk.jpg (page: https://www.burkburnett.org/ | City of Burkburnett, Texas - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.647078+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T05:05:50.747630+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png - source page title names only 1 of 8 key entities - not a news article about the story",
+      "created_at": "2026-11-26T05:05:49.787006+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T05:05:49.785921+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://e-tracking.net/app/img/how-its-works.png",
+      "created_at": "2026-11-26T05:05:49.749096+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Parapente_-_158.jpg/1280px-Parapente_-_158. (page: https://commons.wikimedia.org/wiki/File:Parapente_-_158.jpg | File:Parapente - 158.jpg - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.645963+00:00",
+      "created_at": "2026-11-26T05:05:49.703629+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Global_tropical_cyclone_tracks-edit2.jpg/12 - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-26T03:59:04.644663+00:00",
+      "created_at": "2026-11-26T05:05:49.702941+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T03:59:04.643318+00:00",
+      "created_at": "2026-11-26T05:05:49.702174+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://upload.wikimedia.org/wikipedia/commons/b/ba/Eye_Gaze_Autism_1.png?utm_source=commons.wikimed (page: https://commons.wikimedia.org/wiki/File:Eye_Gaze_Autism_1.png | File:Eye Gaze Autism 1.png - page does not name the entity (Tracking))",
-      "created_at": "2026-11-26T03:59:04.506937+00:00",
+      "created_at": "2026-11-26T05:05:49.679551+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Avalanche_of_snow_across_railroad_tracks_in - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-26T03:59:04.505664+00:00",
+      "created_at": "2026-11-26T05:05:49.678831+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T03:59:04.503536+00:00",
+      "created_at": "2026-11-26T05:05:49.677544+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Animal_tracking_in_fiji.JPG/1280px-Animal_t - source page title names only 1 of 8 key entities - not a news article about the story",
-      "created_at": "2026-11-26T03:59:04.358296+00:00",
+      "created_at": "2026-11-26T05:05:49.625827+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-26T03:59:04.356804+00:00",
+      "created_at": "2026-11-26T05:05:49.624787+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
-      "created_at": "2026-11-26T03:59:04.190184+00:00",
+      "created_at": "2026-11-26T05:05:49.565934+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
-      "created_at": "2026-11-26T03:59:04.115940+00:00",
+      "created_at": "2026-11-26T05:05:49.532726+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-      "created_at": "2026-11-26T03:59:04.052305+00:00",
+      "created_at": "2026-11-26T05:05:49.507183+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-      "created_at": "2026-11-26T03:59:03.985074+00:00",
+      "created_at": "2026-11-26T05:05:49.477249+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-      "created_at": "2026-11-26T03:59:03.912838+00:00",
+      "created_at": "2026-11-26T05:05:49.450113+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T03:59:03.843843+00:00",
+      "created_at": "2026-11-26T05:05:49.420880+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Tracking'",
-      "created_at": "2026-11-26T03:59:03.622875+00:00",
+      "created_at": "2026-11-26T05:05:49.300733+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "wikimedia: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-26T03:59:03.445695+00:00",
+      "created_at": "2026-11-26T05:05:49.204627+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 5 result(s) for 'Tracking'",
-      "created_at": "2026-11-26T03:59:02.976925+00:00",
+      "created_at": "2026-11-26T05:05:48.684353+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T03:59:02.936786+00:00",
+      "created_at": "2026-11-26T05:05:48.647277+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T03:59:02.935549+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
-      "created_at": "2026-11-26T03:59:02.934413+00:00",
+      "created_at": "2026-11-26T05:05:48.646675+00:00",
       "card": ""
     }
   ]
