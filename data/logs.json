@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T15:34:54.917649+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', \"Kushner praises Putin's restraint\", 'Aaron Rodgers reportedly out', 'UK net migration falls to 77,000', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-26T15:34:54.911824+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T15:34:54.699103+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T15:34:54.697515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T15:34:54.374858+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T15:34:20.359575+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T15:34:20.358441+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T15:34:20.336551+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #136 started (--only blogger)",
+    "created_at": "2026-11-26T15:34:20.335105+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T14:38:27.724360+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-26T14:35:19.571610+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T14:35:19.570310+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Beyond Red vs. Blue: The Political Typology - Pew ' - trying entity search 'Beyond'",
-    "created_at": "2026-11-26T14:35:19.569137+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://eleccircs.com/wp-content/img/motorcycle_electrical_system_diagram_gkaq.jpg (page: https://www.motorcycledb.com/yamaha/vmax/1999/parts/ | The Ultimate Guide to Understanding Motorcycl - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:35:19.567708+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://pbs.twimg.com/media/HH9GpTUbMAAQoag.jpg (page: https://www.facebook.com/61553111605055/photos/understanding-a-motorcycle-wiring-diagram-is-essentia - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:35:19.566229+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://parts.motorcycledb.com/d/07c3e00e25d97195bbd2f4838a460893.png (page: https://www.facebook.com/photo/?fbid=898530079779605 | 1999 Kawasaki ER-5 Parts Diagrams & Part Numb - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:35:19.564932+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Beyond Red vs. Blue: The Political Typology - Pew '): https://pbs.twimg.com/media/HH62FS5bgAAXa0h.jpg (page: https://www.motorcycledb.com/kawasaki/er5/1999/parts/ | Motorcycle Electrical Wiring Diagram. Comple - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T14:35:19.563596+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/4/4e/Beyond_Red_vs._Blue-_Millennial_Perspectives_on_",
-    "created_at": "2026-11-26T14:35:19.561643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5486/30534179601_39275c14f3_b.jpg",
-    "created_at": "2026-11-26T14:35:19.469901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5820/30534175901_6ae0aa3d3e_b.jpg",
-    "created_at": "2026-11-26T14:35:19.387504+00:00",
     "card": ""
   }
 ]
