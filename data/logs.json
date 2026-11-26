@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T11:29:00.691996+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'UK net migration falls to 77,000', 'Grand Theft Auto VI', 'UK energy price cap to rise', 'New Avengers: Doomsday poster']",
+    "created_at": "2026-11-26T11:29:00.684979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T11:29:00.431285+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T11:29:00.428936+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-26T11:29:00.049924+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T11:28:45.428407+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T11:28:45.426978+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T11:28:45.425606+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #130 started (--only blogger)",
+    "created_at": "2026-11-26T11:28:45.423780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T10:59:39.393500+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: topical search found nothing for 'How unpopular is Donald Trump? - The Economist' - trying entity search 'Donald Trump'",
     "created_at": "2026-11-26T09:53:33.395744+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://1000logos.net/wp-content/uploads/2021/02/Shopee-Logo-2015.png (page: https://www.channelnewsasia.com/today/brand-spotlight/shopee-e-commerce-platform-knows-just-what-sin - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.394710+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://www.seiv.co.id/template/seiv/assets/img/seiv-shopee.png (page: https://shopee.co.id/list/Printers | automotive-product - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.393642+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://logos-world.net/wp-content/uploads/2023/01/Shopee-Logo-2015.png (page: https://www.seiv.co.id/product/automotive-product | Shopee Logo, symbol, meaning, history, PNG, bran - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.392520+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://freelogopng.com/images/all_img/1656180674shopee-logo-transparent.png (page: https://logos-world.net/shopee-logo/ | Kawangis Publishing Co. - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.391446+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://upload.wikimedia.org/wikipedia/commons/6/63/Louse_of_Barbs_%2826978448202%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=72064356 | Louse of Barbs (26978448202) - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.390389+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.389164+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/7560/26978448202_4af39b0705_b.jpg (page: https://www.flickr.com/photos/47422005@N04/26978448202 | Louse of Barbs - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:33.388197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T09:53:33.386076+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T09:53:33.278510+00:00",
     "card": ""
   }
 ]

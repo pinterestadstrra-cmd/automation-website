@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T10:59:39.391483+00:00",
-  "last_run": "2026-11-26T10:56:07.623101+00:00",
-  "runs": 129,
+  "generated_at": "2026-11-26T11:29:00.688577+00:00",
+  "last_run": "2026-11-26T11:28:45.423758+00:00",
+  "runs": 130,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 2,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 2,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 9,
       "posts_today": 15,
       "next_runs": [
-        "2026-11-26T17:14:00.745770+06:00",
         "2026-11-26T17:29:00.745770+06:00",
         "2026-11-26T17:44:00.745770+06:00",
         "2026-11-26T17:59:00.745770+06:00",
-        "2026-11-26T18:14:00.745770+06:00"
+        "2026-11-26T18:14:00.745770+06:00",
+        "2026-11-26T18:29:00.745770+06:00"
       ],
       "next_post_times": [
         "2026-11-26T17:57:00+06:00",
@@ -158,11 +158,11 @@
       "runs_today": 9,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T17:14:39.270994+06:00",
         "2026-11-26T17:29:39.270994+06:00",
         "2026-11-26T17:44:39.270994+06:00",
         "2026-11-26T17:59:39.270994+06:00",
-        "2026-11-26T18:14:39.270994+06:00"
+        "2026-11-26T18:14:39.270994+06:00",
+        "2026-11-26T18:29:39.270994+06:00"
       ],
       "next_post_times": [
         "2026-11-26T18:02:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 9
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T10:56:07.624123+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T11:28:45.425596+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T11:28:45.426971+00:00"
     }
   ],
   "dry_run": false,
@@ -308,17 +296,71 @@
   "trending": [
     "Thanksgiving Day celebrations",
     "UK net migration falls to 77,000",
-    "FEMA hotline unanswered in Iowa",
-    "FCC approves SpaceX Starmind satellites",
-    "Day to end violence against women",
     "Grand Theft Auto VI",
+    "UK energy price cap to rise",
     "New Avengers: Doomsday poster",
-    "Describe a film without its name",
-    "Joyce Carol Oates on trans literature",
-    "Holiday food bank donations"
+    "Duran Duran's Andy Taylor dies",
+    "Nvidia chip exports to China",
+    "King tides flood West Coast",
+    "PCE inflation hits three-year high",
+    "Burnham's UK-EU deal"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T11:29:00.431285+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T11:29:00.428936+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-26T11:29:00.049924+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T11:28:45.428407+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T11:28:45.426978+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T11:28:45.425606+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #130 started (--only blogger)",
+      "created_at": "2026-11-26T11:28:45.423780+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T10:59:39.393500+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'UK net migration falls to 77,000', 'FEMA hotline unanswered in Iowa', 'FCC approves SpaceX Starmind satellites', 'Day to end violence against women']",
+      "created_at": "2026-11-26T10:59:39.388581+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
       "created_at": "2026-11-26T10:59:04.816684+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T10:59:04.815933+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for '‘War Is Hell:’ A Foreign Soldier Writes Home From ' - trying entity search 'War'",
-      "created_at": "2026-11-26T10:59:04.815287+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/2003045-Pablo-Picasso-Quote-The-meaning-of-life-is- (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Pablo - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T10:59:04.814577+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://emilysquotes.com/wp-content/uploads/2018/12/The-purpose-of-life-is-to-live-it-to-taste-exper (page: https://quotefancy.com/quote/34224/Pablo-Picasso-The-meaning-of-life-is-to-find-your-gift-The-purpos - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T10:59:04.813826+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/1705578-Robin-S-Sharma-Quote-The-purpose-of-life-is (page: http://emilysquotes.com/the-purpose-of-life-is-to-live-it-to-taste-experience-to-the-utmost-to-reach - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T10:59:04.813041+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/13786-Robin-S-Sharma-Quote-The-purpose-of-life-is-t (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Robin - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-26T10:59:04.812183+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'War Hell Foreign Soldier Writes'",
-      "created_at": "2026-11-26T10:59:04.809757+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'War Hell Foreign Soldier Writes'",
-      "created_at": "2026-11-26T10:59:04.675867+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'War Hell Foreign Soldier Writes'",
-      "created_at": "2026-11-26T10:59:04.535243+00:00",
       "card": ""
     }
   ]
