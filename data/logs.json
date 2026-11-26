@@ -2,6 +2,954 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T10:59:39.393500+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'UK net migration falls to 77,000', 'FEMA hotline unanswered in Iowa', 'FCC approves SpaceX Starmind satellites', 'Day to end violence against women']",
+    "created_at": "2026-11-26T10:59:39.388581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-26T10:59:39.271026+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-26T10:59:39.270243+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-26T10:59:39.268776+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-26T10:59:29.266448+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T10:59:28.709090+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T10:59:28.706732+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-26T10:59:23.142764+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-26T10:59:23.140506+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-26T10:59:22.880231+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-26T10:59:22.878384+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Israel says it’s ‘ready to attack’ without th' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-26T10:59:18.262172+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-26T10:59:18.261560+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran war live: Israel says it’s ‘ready to attack’ without th': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Israel says it’s ‘ready to attack’ without the US - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Rules  - matches 2 key entities (iran, war))",
+    "created_at": "2026-11-26T10:59:18.260832+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran war live: Israel says it’s ‘ready to attack’ ' (. The photo shows the national flag of Iran, which is the subject of the news headline regarding Iran and Israel.)",
+    "created_at": "2026-11-26T10:59:18.259613+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg",
+    "created_at": "2026-11-26T10:59:10.999387+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Iran war live: Israel says it’s ‘ready to attack’ ' (The photo shows an Iranian flag in a desert, but it does not depict the live conflict, military actions, or current events referenced in the headline.)",
+    "created_at": "2026-11-26T10:59:10.998295+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+    "created_at": "2026-11-26T10:59:07.064382+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+    "created_at": "2026-11-26T10:59:06.863804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+    "created_at": "2026-11-26T10:59:06.733459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+    "created_at": "2026-11-26T10:59:06.660589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:06.080653+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:06.079939+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Israel says it’s ‘ready to attack’ without th' - rejected (no og:image)",
+    "created_at": "2026-11-26T10:59:06.078897+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUHBLNS01bDVwTEVEWk1ZZktDNEZCc0l6SnJzZklteEZsV1NaLWV2NGFBQUFxT1kyTHJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T10:59:06.076842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T10:59:05.793392+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T10:59:05.792730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - The New York Times' (0 download(s) tried)",
+    "created_at": "2026-11-26T10:59:05.792063+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://static.cinemagia.ro/img/resize/db/movie/33/31/985/the-odyssey-928268l-175x0-w-8a3ec70c.jpg (page: https://fineartamerica.com/featured/1-the-odyssey-2026-minimal-movie-poster-retro-film-poster-vintag - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.791385+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://assets.gadgets360cdn.com/pricee/assets/product/202412/The_Odyssey_Poster_2_1735644942.jpg?do (page: https://www.cinemagia.ro/filme/the-odyssey-3331985/ | The Odyssey Movie (2026) | Release Date, Revie - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.790676+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://media.karousell.com/media/photos/products/2026/11/22/the_odyssey_2026_movie_poster__17953723 (page: https://www.gadgets360.com/entertainment/the-odyssey-movie-130261 | The Odyssey 2026 Movie Poster |  - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.789996+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://cdn.cinematerial.com/p/297x/ccvoqor3/the-odyssey-movie-poster-md.jpg?v=1777959532 (page: https://www.carousell.com.my/p/the-odyssey-2026-movie-poster-christopher-nolan-imax-1475440237/ | Th - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.789300+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7031/6820696609_3362ffec0f_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820696609 | Star Wars Episode 1 - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.788610+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7158/6820694967_7ced40669b_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820694967 | Star Wars Episode 1 - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.787878+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7035/6820698581_dbf036c823_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820698581 | Star Wars Episode 1 - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.787120+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7142/6820695739_51173082d3_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820695739 | Star Wars Episode 1 - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.786436+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7171/6820694305_974f4d4362_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820694305 | Star Wars Episode 1 - page does not name the entity (War))",
+    "created_at": "2026-11-26T10:59:05.785474+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'War'",
+    "created_at": "2026-11-26T10:59:05.783126+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'War'",
+    "created_at": "2026-11-26T10:59:05.623186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'War'",
+    "created_at": "2026-11-26T10:59:05.473557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'War'",
+    "created_at": "2026-11-26T10:59:05.400952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:04.816684+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:04.815933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for '‘War Is Hell:’ A Foreign Soldier Writes Home From ' - trying entity search 'War'",
+    "created_at": "2026-11-26T10:59:04.815287+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/2003045-Pablo-Picasso-Quote-The-meaning-of-life-is- (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Pablo - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:04.814577+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://emilysquotes.com/wp-content/uploads/2018/12/The-purpose-of-life-is-to-live-it-to-taste-exper (page: https://quotefancy.com/quote/34224/Pablo-Picasso-The-meaning-of-life-is-to-find-your-gift-The-purpos - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:04.813826+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/1705578-Robin-S-Sharma-Quote-The-purpose-of-life-is (page: http://emilysquotes.com/the-purpose-of-life-is-to-live-it-to-taste-experience-to-the-utmost-to-reach - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:04.813041+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/13786-Robin-S-Sharma-Quote-The-purpose-of-life-is-t (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Robin - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:04.812183+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T10:59:04.809757+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T10:59:04.675867+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T10:59:04.535243+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'War Hell Foreign Soldier Writes'",
+    "created_at": "2026-11-26T10:59:04.459685+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:03.834956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:03.834390+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://i5.walmartimages.com/seo/Braun-Series-9-Pro-Electric-Razor-for-Men-with-Clean-Station-Rechar (page: https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-power-case-9477cc | Mens Elec - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.833804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://cdn11.bigcommerce.com/s-61qnoipi5/images/stencil/1280x1280/products/189/1130/3_Braun_Series9 (page: https://www.walmart.com/browse/personal-care/mens-electric-shavers/1005862_1007220_133146_5945464 |  - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.833126+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://m.media-amazon.com/images/I/61T3pj51Y+L._SL1100_.jpg (page: https://us.braun.com/en-us/male-grooming/electric-shavers/series-9-pro-power-case-9477cc | Amazon.co - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.832251+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://shavercentre.com/canada/images/braun/large/9677cc-series-9pro-plus-features-800.jpg (page: https://www.amazon.com/Braun-Shave-Preparing-ProComfort-Closeness-9599cc/dp/B0CFC9Y516 | Braun Serie - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.831486+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T10:59:03.829623+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T10:59:03.676117+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T10:59:03.530838+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine'",
+    "created_at": "2026-11-26T10:59:03.457602+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:03.025093+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:03.024493+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://mobileimages.lowes.com/productimages/8ddf376c-751d-4797-a735-e0fcd3c867f1/103766620.jpeg?siz (page: https://www.lowes.com/pd/Design-Living-8-Light-Pewter-Chandelier-With-Clear-Crystals/5024170172 | De - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.023847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://thomler.com/cdn/shop/files/luxury-solar-system-spiral-raindrop-chandelier_040929b6-c702-41f2 (page: https://www.lowes.com/pd/Design-Living-13-Light-Antique-Brass-Chandelier-With-Clear-Crystals/5024172 - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.023110+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://mobileimages.lowes.com/productimages/cb9566f7-5eb7-4c96-82ea-78d51255c91b/104226664.jpeg?siz (page: https://thomler.com/en-au/products/orbital-raindrop-crystal-chandelier-high-ceilings | Design Living - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.022398+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://mobileimages.lowes.com/productimages/1b5e4b2a-3a90-425c-9284-66129333f713/103762331.jpeg?siz (page: https://www.lowes.com/pd/Design-Living-8-Light-Pewter-Chandelier-With-Clear-Crystals/5024172912 | De - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T10:59:03.021594+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T10:59:03.019734+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T10:59:02.897354+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T10:59:02.756214+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - '",
+    "created_at": "2026-11-26T10:59:02.682354+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:01.971248+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:59:01.970667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - ' - rejected (no og:image)",
+    "created_at": "2026-11-26T10:59:01.969879+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTUtzUk9TS1EtOENIeS1WOUVKS21xTTA5MFNRa1lmTmtHbnN3cDloV0JLbklJeGlnNDl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T10:59:01.968011+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump’s Nvidia Push Shows Companies’ Importance in Global Ec' - skipped (same event used within 24h, event key 'companie economic global importance nvidia push show time tr')",
+    "created_at": "2026-11-26T10:59:01.631752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump administration weighs targeting Iran's top regime lead' - skipped (same event used within 24h, event key 'administration bid end fox iran leader news regime report ta')",
+    "created_at": "2026-11-26T10:59:01.630886+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
+    "created_at": "2026-11-26T10:59:01.630105+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-26T10:59:01.628710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
+    "created_at": "2026-11-26T10:59:01.156484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How Trump and Republicans lost the 2026 midterm elections, a' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T10:59:01.155614+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
+    "created_at": "2026-11-26T10:59:01.154907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T10:59:01.154149+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T10:59:01.153499+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats usher in a new era with their resounding sweep of ' - skipped (same event used within 24h, event key 'democrat era house pbs resound senate sweep usher')",
+    "created_at": "2026-11-26T10:59:01.152829+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Majority of Americans Say Social Media Companies, News Outle' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
+    "created_at": "2026-11-26T10:59:01.152094+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How unpopular is Donald Trump? - The Economist' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-26T10:59:01.151459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (same event used within 24h, event key 'combat control democrat house nbc news representative trump ')",
+    "created_at": "2026-11-26T10:59:01.149986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-26T10:59:01.149148+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-26T10:59:01.148362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+    "created_at": "2026-11-26T10:59:01.147133+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T10:59:00.747498+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T10:59:00.746587+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
+    "created_at": "2026-11-26T10:59:00.745786+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T10:59:00.744998+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': promo posted - event 'combat control democrat house nbc news representative trump ' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T10:59:00.743699+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 3250x2169 (ratio 1.50) - shrunk to fit 950KB, ratio preserved",
+    "created_at": "2026-11-26T10:58:59.351324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 6500x4338 (ratio 1.50) - kept, no crop",
+    "created_at": "2026-11-26T10:58:58.982715+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Democrats win control of the House of Representatives with a'",
+    "created_at": "2026-11-26T10:58:58.980660+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T10:58:57.241930+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 2 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-26T10:58:57.241054+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T10:58:57.239347+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to hoedlog.bsky.social (hot post by zackpolanski.bsky.social, comment: '@zackpolanski.bsky.social Political parties come and go. We ') as primonewstoday.bsky.social: 'Totally feel the urgency—climate justice needs bold action, not just talks. Good'",
+    "created_at": "2026-11-26T10:58:52.792216+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to qwark2.bsky.social (hot post by nothoodlum.bsky.social, comment: '3x') as primonewstoday.bsky.social: 'Haha, guess we’re just living the sequel! 🤦‍♂️\n\nhttps://shorturl.at/eZnco'",
+    "created_at": "2026-11-26T10:58:49.736408+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T10:58:48.514310+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'How unpopular is Donald Trump? - The Economist' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-26T10:58:48.512753+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How unpopular is Donald Trump? - The Economist' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-26T10:57:47.775524+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: USA political news",
+    "created_at": "2026-11-26T10:57:47.774952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'How unpopular is Donald Trump? - The Economist': https://live.staticflickr.com/5810/21134663472_c11bc28666_b.jpg (from openverse, query 'Donald Trump', page: https://www.flickr.com/photos/80038275@N00/21134663472 | Donald Trump Signs The Pledge - page names the entity (Donald Trump))",
+    "created_at": "2026-11-26T10:57:47.774289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'How unpopular is Donald Trump? - The Economist' (, Donald Trump is clearly visible in the center of the photo holding a document.)",
+    "created_at": "2026-11-26T10:57:47.772774+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Donald Trump'",
+    "created_at": "2026-11-26T10:56:16.167806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.979739+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.842046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.768679+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:15.220690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:15.220091+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'How unpopular is Donald Trump? - The Economist' - trying entity search 'Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.218463+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://i.pinimg.com/736x/bd/c0/29/bdc029ed2899aaeff3067d597e9e4543.jpg (page: Shanax.08 blasian baddie | Photo de meilleure amie, Belle fille, Cheveux bouclé - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:15.217728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://upload.wikimedia.org/wikipedia/commons/6/63/Louse_of_Barbs_%2826978448202%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=72064356 | Louse of Barbs (26978448202) - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:15.216987+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:15.216284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/7560/26978448202_4af39b0705_b.jpg (page: https://www.flickr.com/photos/47422005@N04/26978448202 | Louse of Barbs - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:15.215516+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'unpopular Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.213100+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'unpopular Donald Trump'",
+    "created_at": "2026-11-26T10:56:15.066300+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'unpopular Donald Trump'",
+    "created_at": "2026-11-26T10:56:14.931524+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 3 result(s) for 'unpopular Donald Trump'",
+    "created_at": "2026-11-26T10:56:14.858459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:14.425041+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:14.424460+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://motocrossactionmag.com/wp-content/uploads/2025/08/07-MY26_DESMO450_MX_STATICS_ON_LOCATION-_2 (page: 2026 DUCATI DESMO450 MX HEADED TO USA DEALERSHIPS NOW! - Motocross Action Magazine - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:14.423847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:14.423046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'How unpopular is Donald Trump?'",
+    "created_at": "2026-11-26T10:56:14.420751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'How unpopular is Donald Trump?'",
+    "created_at": "2026-11-26T10:56:14.300828+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'How unpopular is Donald Trump?'",
+    "created_at": "2026-11-26T10:56:14.119956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 1 result(s) for 'How unpopular is Donald Trump?'",
+    "created_at": "2026-11-26T10:56:14.047438+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:13.598456+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:13.597840+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://c8.alamy.com/comp/2J2KFAY/aerial-view-of-puente-nuevo-the-newest-and-largest-of-three-bridge (page: https://www.alamy.com/amazing-aerial-view-of-puenta-nuevo-bridge-over-the-el-tajo-gorge-in-ronda-spa - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:13.597212+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://c8.alamy.com/comp/3AGKT28/dramatic-aerial-view-of-puente-nuevo-bridge-in-ronda-spain-3AGKT28 (page: https://www.alamy.com/aerial-view-of-puente-nuevo-the-newest-and-largest-of-three-bridges-in-ronda-s - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:13.596511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://blogs-images.forbes.com/geoffreymorrison/files/2015/10/Ronda-Puente-Nuevo-10-by-Geoffrey-Mor (page: https://www.alamy.com/dramatic-aerial-view-of-puente-nuevo-bridge-in-ronda-spain-image664264448.html - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:13.595806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://www.thetrainline.com/cms/media/8872/spain-ronda-bridge.jpg?mode=crop&width=1080&height=1080& (page: https://www.forbes.com/sites/geoffreymorrison/2015/10/14/ronda-puente-nuevo/ | The famous bridge in  - the named person is not in the source page (donald, trump))",
+    "created_at": "2026-11-26T10:56:13.594964+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'How unpopular is Donald Trump? - The Economist'",
+    "created_at": "2026-11-26T10:56:13.592450+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'How unpopular is Donald Trump? - The Economist'",
+    "created_at": "2026-11-26T10:56:13.425137+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'How unpopular is Donald Trump? - The Economist'",
+    "created_at": "2026-11-26T10:56:13.294929+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'How unpopular is Donald Trump? - The Economist'",
+    "created_at": "2026-11-26T10:56:13.219114+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:12.736505+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T10:56:12.735894+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How unpopular is Donald Trump? - The Economist' - rejected (no og:image)",
+    "created_at": "2026-11-26T10:56:12.734953+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5Wa2FQWEl6Q01iTWhxV2M3c1VoTzFnSDR3VEhRTWU3cU5YOUlEckYyTWVORVFGRi1fOUJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T10:56:12.732229+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-26T10:56:12.558613+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
+    "created_at": "2026-11-26T10:56:12.557283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
+    "created_at": "2026-11-26T10:56:12.556544+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
+    "created_at": "2026-11-26T10:56:12.555376+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T10:56:11.961031+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T10:56:10.862802+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T10:56:07.624919+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-26T10:56:07.624131+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #129 started (--only bluesky)",
+    "created_at": "2026-11-26T10:56:07.623124+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T10:13:47.783424+00:00",
     "card": ""
   },
@@ -249,954 +1197,6 @@
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'unpopular Donald Trump'",
     "created_at": "2026-11-26T09:53:33.278510+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T09:53:33.174806+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 3 result(s) for 'unpopular Donald Trump'",
-    "created_at": "2026-11-26T09:53:33.090759+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.960479+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.959502+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://c8.alamy.com/comp/K0TTDM/cr7-wearing-the-captains-braceletcristiano-ronaldo-dos-santos-7-rea (page: https://siempremadrid.com/i-want-to-renew-real-madrid-captain-opens-up-on-his-future-aspirations/ |  - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.958521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://madriduniversal.com/wp-content/uploads/2025/11/liverpool-fc-v-real-madrid-cf-uefa-champions- (page: https://www.alamy.com/cr7-wearing-the-captains-braceletcristiano-ronaldo-dos-santos-7-real-image1554 - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.957231+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://d3nfwcxd527z59.cloudfront.net/content/uploads/2022/08/25143446/sergio-ramos-real-madrid-2021 (page: https://madriduniversal.com/real-madrid-captain-to-undergo-tests-tomorrow-after-finishing-liverpool- - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.956179+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://madriduniversal.com/wp-content/uploads/2026/02/real-madrid-cf-v-as-monaco-uefa-champions-lea (page: https://www.planetfootball.com/quick-reads/real-madrid-captain-ranking-worst-to-best-ramos-casillas- - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.955071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.954093+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T09:53:32.952028+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T09:53:32.846839+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T09:53:32.732889+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'How unpopular is Donald Trump?'",
-    "created_at": "2026-11-26T09:53:32.699167+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.583806+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.582825+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://www.pride.com/media-library/corey-fogelmanis.jpg?id=51794936&width=1245&height=700&quality=6 (page: https://instagrammernews.com/detail/3196106564548443869 | Corey Fogelmanis leaves Disney days behind - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.581953+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://m.media-amazon.com/images/M/MV5BNGQwZTdkYmUtMjA5MS00M2Y5LTk5NjMtZmNiZTZkMmViY2JhXkEyXkFqcGc@ (page: https://www.instagram.com/popular/Corey-Fogelmanis-and-Cole-and-Jackie/ | I Wish You All the Best (2 - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.581022+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): http://bmwsequel.com/wp-content/uploads/2016/12/15034991_367452390258693_1920437786809204736_n.jpg (page: https://www.teenvogue.com/story/corey-fogelmanis-conan-gray-friendship-timeline | Girl Meets World F - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.580056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://www.gethucinema.com/wp-content/uploads/2024/03/CoreyFogelmanis-23.jpg (page: https://www.instagram.com/popular/corey-fogelmanis-boy-meets-world/ | Corey Fogelmanis Instagram – b - the named person is not in the source page (donald, trump))",
-    "created_at": "2026-11-26T09:53:32.578973+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How unpopular is Donald Trump? - The Economist'",
-    "created_at": "2026-11-26T09:53:32.576775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How unpopular is Donald Trump? - The Economist'",
-    "created_at": "2026-11-26T09:53:32.392655+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'How unpopular is Donald Trump? - The Economist'",
-    "created_at": "2026-11-26T09:53:32.289013+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How unpopular is Donald Trump? - The Economist'",
-    "created_at": "2026-11-26T09:53:32.273645+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.171980+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T09:53:32.170826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How unpopular is Donald Trump? - The Economist' - rejected (no og:image)",
-    "created_at": "2026-11-26T09:53:32.169897+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMibEFVX3lxTE5Wa2FQWEl6Q01iTWhxV2M3c1VoTzFnSDR3VEhRTWU3cU5YOUlEckYyTWVORVFGRi1fOUJ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T09:53:32.167796+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-26T09:53:32.027085+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
-    "created_at": "2026-11-26T09:53:32.025198+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-26T09:53:32.023987+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
-    "created_at": "2026-11-26T09:53:32.019357+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T09:53:31.964684+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T09:53:31.963405+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retry 2/2 after failure - due now",
-    "created_at": "2026-11-26T09:53:31.962204+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-26T09:53:31.961264+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T09:53:31.960208+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'administration debat iran leader nbc news official source ta' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-26T09:53:31.945529+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1763x1175 (ratio 1.50) - unchanged",
-    "created_at": "2026-11-26T09:53:30.011295+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1763x1175 (ratio 1.50) - kept, no crop",
-    "created_at": "2026-11-26T09:53:30.010283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-26T09:53:30.008053+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T09:53:29.971528+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-26T09:53:29.970224+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-26T09:53:29.826337+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T09:53:25.200365+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Democrats win control of the House of Representatives with a' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-26T09:53:25.198807+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-26T09:53:12.712659+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-26T09:53:12.711725+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Democrats win control of the House of Representatives with a': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats win control of the House of Representatives with a vow to combat Trump - NBC News', page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - matches 3 key entities (democrat, house, news))",
-    "created_at": "2026-11-26T09:53:12.710556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Democrats win control of the House of Representati' (. The photo shows Democratic politician Hakeem Jeffries, who is associated with House Democratic leadership and the context of the U.S. House of Repre)",
-    "created_at": "2026-11-26T09:53:12.699725+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
-    "created_at": "2026-11-26T09:53:00.576077+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Democrats win control of the House of Representati' (. The photo shows political campaign buttons, not the actual people,)",
-    "created_at": "2026-11-26T09:53:00.540825+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T09:52:54.603668+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T09:52:54.447376+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T09:52:54.332775+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T09:52:54.305387+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T09:52:54.089628+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T09:52:54.088679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - rejected (no og:image)",
-    "created_at": "2026-11-26T09:52:54.087408+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitgFBVV95cUxOa1ZqY0FVeG9ya00wNFNpdktGOHd0b1RiZko5ZVNUdWNZX25IR29NNC16NnhMbVBUbWN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T09:52:54.084736+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
-    "created_at": "2026-11-26T09:52:53.787025+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-26T09:52:53.785926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
-    "created_at": "2026-11-26T09:52:53.784246+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T09:52:53.149916+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T09:52:52.857958+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T09:52:40.929767+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-26T09:52:40.928549+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #127 started (--only bluesky)",
-    "created_at": "2026-11-26T09:52:40.927189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T09:03:26.015579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', 'Describe a film without its name', \"Burnham's UK-EU deal\", \"Duran Duran's Andy Taylor dies\"]",
-    "created_at": "2026-11-26T09:03:26.007954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T09:03:25.812986+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T09:03:25.811451+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-26T09:03:25.524493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T09:02:42.040817+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T09:02:42.039784+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T09:02:42.038626+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #126 started (--only blogger)",
-    "created_at": "2026-11-26T09:02:42.037226+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T08:47:39.380743+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', 'Grand Theft Auto VI', \"Burnham's UK-EU deal\", \"Duran Duran's Andy Taylor dies\"]",
-    "created_at": "2026-11-26T08:47:39.374874+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-26T08:47:39.179325+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 15:17 Dhaka",
-    "created_at": "2026-11-26T08:47:39.178222+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-26T08:47:39.176555+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T08:47:29.174354+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-26T08:47:28.949793+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-26T08:47:28.947492+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-26T08:47:22.278239+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T08:47:22.276153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-26T08:47:22.046796+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-26T08:47:22.044307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-26T08:46:18.820030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-26T08:46:18.818947+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Democrats win control of the House of Representatives with a': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats win control of the House of Representatives with a vow to combat Trump - NBC News', page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - matches 3 key entities (democrat, house, news))",
-    "created_at": "2026-11-26T08:46:18.817948+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Democrats win control of the House of Representati' (The photo shows House Democratic Leader Hakeem Jeffries, who represents the Democratic leadership in the House of Representatives mentioned in the hea)",
-    "created_at": "2026-11-26T08:46:18.816493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
-    "created_at": "2026-11-26T08:46:10.555422+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Democrats win control of the House of Representati' (; the photo shows campaign buttons rather than the people, places, or events involved in the headline.)",
-    "created_at": "2026-11-26T08:46:10.542093+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T08:46:05.670959+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T08:46:05.541470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T08:46:05.416328+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats win control of the House of Representatives with a'",
-    "created_at": "2026-11-26T08:46:05.003450+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T08:46:04.941447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T08:46:04.940447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of the House of Representatives with a' - rejected (no og:image)",
-    "created_at": "2026-11-26T08:46:04.939391+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitgFBVV95cUxOa1ZqY0FVeG9ya00wNFNpdktGOHd0b1RiZko5ZVNUdWNZX25IR29NNC16NnhMbVBUbWN) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T08:46:04.936404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Story of US 2026 midterm elections in maps and charts - BBC' - skipped (same event used within 24h, event key '2026 bbc chart election maps midterm story')",
-    "created_at": "2026-11-26T08:46:04.579532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-26T08:46:04.578390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
-    "created_at": "2026-11-26T08:46:04.576932+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T08:46:03.984276+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T08:46:03.982904+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retry 1/2 after failure - due now",
-    "created_at": "2026-11-26T08:46:03.981631+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-26T08:46:03.980646+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T08:46:03.979587+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'ally civil democrat due newsweek potential strategy trump wa' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-26T08:46:03.977934+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1344x854 (ratio 1.57) - unchanged",
-    "created_at": "2026-11-26T08:46:01.895847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1344x854 (ratio 1.57) - kept, no crop",
-    "created_at": "2026-11-26T08:46:01.883214+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Trump Ally Warns of Potential ‘Civil War’ Due to Democrats’ '",
-    "created_at": "2026-11-26T08:46:01.820892+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T08:46:01.694394+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-26T08:46:01.571128+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': found 2 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-    "created_at": "2026-11-26T08:46:01.495407+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T08:45:56.273560+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Trump administration officials debating targeting Iran’s lea' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-26T08:45:56.272087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-26T08:45:47.731279+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-26T08:45:47.730315+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump administration officials debating targeting Iran’s lea': https://bloximages.chicago2.vip.townnews.com/timesargus.com/content/tncms/assets/v3/editorial/1/d8/1 (from bing-images, query 'Trump administration officials debating targeting Iran’s leaders, sources say - NBC News', page: https://www.timesargus.com/news/national/trump/image_183eec76-a536-58e6-8a70-950f1fcc9030.html | Tru - matches 2 key entities (news, trump))",
-    "created_at": "2026-11-26T08:45:47.728565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Trump administration officials debating targeting ' (The photo depicts Donald Trump, the namesake of the administration referenced in the headline.)",
-    "created_at": "2026-11-26T08:45:47.726962+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-26T08:45:37.635080+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-26T08:45:37.452968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-26T08:45:37.344112+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump administration officials debating targeting Iran’s lea'",
-    "created_at": "2026-11-26T08:45:36.922258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T08:45:36.725443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T08:45:36.724501+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump administration officials debating targeting Iran’s lea' - rejected (no og:image)",
-    "created_at": "2026-11-26T08:45:36.723329+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMizAFBVV95cUxObnRvWmtRUG1ocVlwLWNKNy1DZXd5LV9ldHdqMEdhZXVsVktfYml1RUZOSGpEcFAxS2Q) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T08:45:36.720992+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
-    "created_at": "2026-11-26T08:45:36.355547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (same event used within 24h, event key 'explosion intercept iran jazeera live missile riyadh rock sa')",
-    "created_at": "2026-11-26T08:45:36.353937+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T08:45:35.842183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-26T08:45:35.511030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T08:45:31.980650+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-26T08:45:31.979414+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #125 started (--only bluesky)",
-    "created_at": "2026-11-26T08:45:31.978082+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T07:57:25.158470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', \"Duran Duran's Andy Taylor dies\", 'FCC approves SpaceX Starmind satellites', 'Describe a film without its name']",
-    "created_at": "2026-11-26T07:57:25.086929+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T07:57:24.916871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T07:57:24.915319+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T07:57:24.525961+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T07:57:21.613349+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T07:57:21.612325+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T07:57:21.611180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #124 started (--only blogger)",
-    "created_at": "2026-11-26T07:57:21.609749+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T07:31:11.921072+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['FEMA hotline unanswered in Iowa', \"Duran Duran's Andy Taylor dies\", 'Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Victorian Coalition plans sewage privatization']",
-    "created_at": "2026-11-26T07:31:11.914657+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-26T07:31:11.775843+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': run failed (1/2 retries) - next retry at 14:01 Dhaka",
-    "created_at": "2026-11-26T07:31:11.774677+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-26T07:31:11.772714+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T07:31:01.769901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-26T07:31:01.585134+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-26T07:31:01.582813+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-26T07:30:56.247808+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-26T07:30:56.245369+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-26T07:30:56.073884+00:00",
     "card": ""
   }
 ]

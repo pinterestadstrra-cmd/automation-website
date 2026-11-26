@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T10:13:47.781332+00:00",
-  "last_run": "2026-11-26T10:12:51.674552+00:00",
-  "runs": 128,
+  "generated_at": "2026-11-26T10:59:39.391483+00:00",
+  "last_run": "2026-11-26T10:56:07.623101+00:00",
+  "runs": 129,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 2,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 2,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T09:53:31.961248+00:00",
-    "mastodon.social": "2026-11-26T09:53:56.849631+00:00"
+    "Adsterra Blogger": "2026-11-26T10:59:00.745770+00:00",
+    "mastodon.social": "2026-11-26T10:59:39.270994+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 55,
+      "success": 56,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T09:53:31.961245+00:00"
+      "last_run": "2026-11-26T10:59:00.745768+00:00"
     },
     "mastodon.social": {
       "success": 16,
-      "fail": 3,
+      "fail": 4,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T09:53:56.849627+00:00"
+      "last_run": "2026-11-26T10:59:39.270992+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T09:53:31.961248+00:00",
-      "runs_today": 8,
-      "posts_today": 14,
+      "last_run": "2026-11-26T10:59:00.745770+00:00",
+      "runs_today": 9,
+      "posts_today": 15,
       "next_runs": [
-        "2026-11-26T16:23:31.961248+06:00",
-        "2026-11-26T16:38:31.961248+06:00",
-        "2026-11-26T16:53:31.961248+06:00",
-        "2026-11-26T17:08:31.961248+06:00",
-        "2026-11-26T17:23:31.961248+06:00"
+        "2026-11-26T17:14:00.745770+06:00",
+        "2026-11-26T17:29:00.745770+06:00",
+        "2026-11-26T17:44:00.745770+06:00",
+        "2026-11-26T17:59:00.745770+06:00",
+        "2026-11-26T18:14:00.745770+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T16:54:00+06:00",
         "2026-11-26T17:57:00+06:00",
         "2026-11-26T19:02:00+06:00",
         "2026-11-26T19:56:00+06:00",
-        "2026-11-26T20:51:00+06:00"
+        "2026-11-26T20:51:00+06:00",
+        "2026-11-26T22:06:00+06:00"
       ],
-      "success": 55,
+      "success": 56,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T09:53:56.849631+00:00",
-      "runs_today": 8,
+      "last_run": "2026-11-26T10:59:39.270994+00:00",
+      "runs_today": 9,
       "posts_today": 11,
       "next_runs": [
-        "2026-11-26T16:23:56.849631+06:00",
-        "2026-11-26T16:38:56.849631+06:00",
-        "2026-11-26T16:53:56.849631+06:00",
-        "2026-11-26T17:08:56.849631+06:00",
-        "2026-11-26T17:23:56.849631+06:00"
+        "2026-11-26T17:14:39.270994+06:00",
+        "2026-11-26T17:29:39.270994+06:00",
+        "2026-11-26T17:44:39.270994+06:00",
+        "2026-11-26T17:59:39.270994+06:00",
+        "2026-11-26T18:14:39.270994+06:00"
       ],
       "next_post_times": [
-        "2026-11-26T16:53:00+06:00",
         "2026-11-26T18:02:00+06:00",
         "2026-11-26T19:07:00+06:00",
         "2026-11-26T19:54:00+06:00",
-        "2026-11-26T21:10:00+06:00"
+        "2026-11-26T21:10:00+06:00",
+        "2026-11-26T22:04:00+06:00"
       ],
       "success": 16,
-      "fail": 3,
+      "fail": 4,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 9
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T10:12:51.676011+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T10:12:51.677151+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T10:56:07.624123+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
-    "Grand Theft Auto VI",
-    "Kushner praises Putin's restraint",
+    "UK net migration falls to 77,000",
     "FEMA hotline unanswered in Iowa",
-    "Denny's restores Jensen Huang plaque",
-    "Bird photography",
-    "Macy's parade turns 100",
-    "Nvidia chip exports to China",
-    "Blade Runner 2099 series premiere",
-    "FCC approves SpaceX Starmind satellites"
+    "FCC approves SpaceX Starmind satellites",
+    "Day to end violence against women",
+    "Grand Theft Auto VI",
+    "New Avengers: Doomsday poster",
+    "Describe a film without its name",
+    "Joyce Carol Oates on trans literature",
+    "Holiday food bank donations"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T10:13:47.452284+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T10:13:47.449948+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-26T10:13:47.039615+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T10:12:51.678188+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T10:12:51.677156+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T10:12:51.676018+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #128 started (--only blogger)",
-      "created_at": "2026-11-26T10:12:51.674578+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T09:53:56.984865+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Grand Theft Auto VI', 'Thanksgiving Day celebrations', 'Israeli strikes in Gaza', \"Duran Duran's Andy Taylor dies\", \"Burnham's UK-EU deal\"]",
-      "created_at": "2026-11-26T09:53:56.964326+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T09:53:56.849666+00:00",
+      "created_at": "2026-11-26T10:59:39.271026+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-26T09:53:56.848168+00:00",
+      "created_at": "2026-11-26T10:59:39.270243+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T09:53:56.813426+00:00",
+      "created_at": "2026-11-26T10:59:39.268776+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T09:53:46.811135+00:00",
+      "created_at": "2026-11-26T10:59:29.266448+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T09:53:46.632936+00:00",
+      "created_at": "2026-11-26T10:59:28.709090+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T09:53:46.630316+00:00",
+      "created_at": "2026-11-26T10:59:28.706732+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T09:53:41.318463+00:00",
+      "created_at": "2026-11-26T10:59:23.142764+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T09:53:41.316059+00:00",
+      "created_at": "2026-11-26T10:59:23.140506+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T09:53:40.955675+00:00",
+      "created_at": "2026-11-26T10:59:22.880231+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T09:53:40.952510+00:00",
+      "created_at": "2026-11-26T10:59:22.878384+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'How unpopular is Donald Trump? - The Economist' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-26T09:53:36.462101+00:00",
+      "message": "photo candidate: 'Iran war live: Israel says it’s ‘ready to attack’ without th' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T10:59:18.262172+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: USA political news",
-      "created_at": "2026-11-26T09:53:36.461090+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-26T10:59:18.261560+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'How unpopular is Donald Trump? - The Economist': https://live.staticflickr.com/625/20958683629_229f177c91_b.jpg (from openverse, query 'Donald Trump', page: https://www.flickr.com/photos/80038275@N00/20958683629 | Donald Trump Signs The Pledge - page names the entity (Donald Trump))",
-      "created_at": "2026-11-26T09:53:36.455672+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Israel says it’s ‘ready to attack’ without th': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Israel says it’s ‘ready to attack’ without the US - Al Jazeera', page: https://www.mnnonline.org/news/iran-doubles-down-on-nuclear-demands-as-war-costs-soar/ | Iran Rules  - matches 2 key entities (iran, war))",
+      "created_at": "2026-11-26T10:59:18.260832+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'How unpopular is Donald Trump? - The Economist' (. The photo clearly shows Donald Trump speaking at a podium.)",
-      "created_at": "2026-11-26T09:53:36.454065+00:00",
+      "message": "vision: YES - photo matches 'Iran war live: Israel says it’s ‘ready to attack’ ' (. The photo shows the national flag of Iran, which is the subject of the news headline regarding Iran and Israel.)",
+      "created_at": "2026-11-26T10:59:18.259613+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5810/21134663472_c11bc28666_b.jpg",
-      "created_at": "2026-11-26T09:53:33.987753+00:00",
+      "message": "photo: rejected (vision NO): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg",
+      "created_at": "2026-11-26T10:59:10.999387+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.813010+00:00",
+      "message": "vision: NO - photo rejected for 'Iran war live: Israel says it’s ‘ready to attack’ ' (The photo shows an Iranian flag in a desert, but it does not depict the live conflict, military actions, or current events referenced in the headline.)",
+      "created_at": "2026-11-26T10:59:10.998295+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.690126+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+      "created_at": "2026-11-26T10:59:07.064382+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.581636+00:00",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+      "created_at": "2026-11-26T10:59:06.863804+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.565826+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+      "created_at": "2026-11-26T10:59:06.733459+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T09:53:33.398265+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T09:53:33.397278+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'How unpopular is Donald Trump? - The Economist' - trying entity search 'Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.395744+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://1000logos.net/wp-content/uploads/2021/02/Shopee-Logo-2015.png (page: https://www.channelnewsasia.com/today/brand-spotlight/shopee-e-commerce-platform-knows-just-what-sin - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.394710+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://www.seiv.co.id/template/seiv/assets/img/seiv-shopee.png (page: https://shopee.co.id/list/Printers | automotive-product - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.393642+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://logos-world.net/wp-content/uploads/2023/01/Shopee-Logo-2015.png (page: https://www.seiv.co.id/product/automotive-product | Shopee Logo, symbol, meaning, history, PNG, bran - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.392520+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://freelogopng.com/images/all_img/1656180674shopee-logo-transparent.png (page: https://logos-world.net/shopee-logo/ | Kawangis Publishing Co. - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.391446+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://upload.wikimedia.org/wikipedia/commons/6/63/Louse_of_Barbs_%2826978448202%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=72064356 | Louse of Barbs (26978448202) - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.390389+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.389164+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/7560/26978448202_4af39b0705_b.jpg (page: https://www.flickr.com/photos/47422005@N04/26978448202 | Louse of Barbs - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:33.388197+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'unpopular Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.386076+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'unpopular Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.278510+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'unpopular Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.174806+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 3 result(s) for 'unpopular Donald Trump'",
-      "created_at": "2026-11-26T09:53:33.090759+00:00",
+      "message": "openverse: 0 result(s) for 'Iran war live: Israel says it’s ‘ready to attack’ without th'",
+      "created_at": "2026-11-26T10:59:06.660589+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T09:53:32.960479+00:00",
+      "created_at": "2026-11-26T10:59:06.080653+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T09:53:32.959502+00:00",
+      "created_at": "2026-11-26T10:59:06.079939+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://c8.alamy.com/comp/K0TTDM/cr7-wearing-the-captains-braceletcristiano-ronaldo-dos-santos-7-rea (page: https://siempremadrid.com/i-want-to-renew-real-madrid-captain-opens-up-on-his-future-aspirations/ |  - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:32.958521+00:00",
+      "message": "photo candidate: 'Iran war live: Israel says it’s ‘ready to attack’ without th' - rejected (no og:image)",
+      "created_at": "2026-11-26T10:59:06.078897+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://madriduniversal.com/wp-content/uploads/2025/11/liverpool-fc-v-real-madrid-cf-uefa-champions- (page: https://www.alamy.com/cr7-wearing-the-captains-braceletcristiano-ronaldo-dos-santos-7-real-image1554 - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:32.957231+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUHBLNS01bDVwTEVEWk1ZZktDNEZCc0l6SnJzZklteEZsV1NaLWV2NGFBQUFxT1kyTHJ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T10:59:06.076842+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://d3nfwcxd527z59.cloudfront.net/content/uploads/2022/08/25143446/sergio-ramos-real-madrid-2021 (page: https://madriduniversal.com/real-madrid-captain-to-undergo-tests-tomorrow-after-finishing-liverpool- - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:32.956179+00:00",
+      "message": "promo: story 1/6 tried: '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - ' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T10:59:05.793392+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://madriduniversal.com/wp-content/uploads/2026/02/real-madrid-cf-v-as-monaco-uefa-champions-lea (page: https://www.planetfootball.com/quick-reads/real-madrid-captain-ranking-worst-to-best-ramos-casillas- - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:32.955071+00:00",
+      "message": "photo candidate: '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - ' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T10:59:05.792730+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'How unpopular is Donald Trump? - The Economist'): https://live.staticflickr.com/65535/53929729808_c5e3e4ef56_m.jpg (page: https://www.flickr.com/photos/28435100@N00/53929729808 | Heather Cox Richardson - the named person is not in the source page (donald, trump))",
-      "created_at": "2026-11-26T09:53:32.954093+00:00",
+      "message": "photo: no real photo found for '‘War Is Hell:’ A Foreign Soldier Writes Home From Ukraine - The New York Times' (0 download(s) tried)",
+      "created_at": "2026-11-26T10:59:05.792063+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'How unpopular is Donald Trump?'",
-      "created_at": "2026-11-26T09:53:32.952028+00:00",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://static.cinemagia.ro/img/resize/db/movie/33/31/985/the-odyssey-928268l-175x0-w-8a3ec70c.jpg (page: https://fineartamerica.com/featured/1-the-odyssey-2026-minimal-movie-poster-retro-film-poster-vintag - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.791385+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://assets.gadgets360cdn.com/pricee/assets/product/202412/The_Odyssey_Poster_2_1735644942.jpg?do (page: https://www.cinemagia.ro/filme/the-odyssey-3331985/ | The Odyssey Movie (2026) | Release Date, Revie - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.790676+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://media.karousell.com/media/photos/products/2026/11/22/the_odyssey_2026_movie_poster__17953723 (page: https://www.gadgets360.com/entertainment/the-odyssey-movie-130261 | The Odyssey 2026 Movie Poster |  - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.789996+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://cdn.cinematerial.com/p/297x/ccvoqor3/the-odyssey-movie-poster-md.jpg?v=1777959532 (page: https://www.carousell.com.my/p/the-odyssey-2026-movie-poster-christopher-nolan-imax-1475440237/ | Th - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.789300+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7031/6820696609_3362ffec0f_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820696609 | Star Wars Episode 1 - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.788610+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7158/6820694967_7ced40669b_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820694967 | Star Wars Episode 1 - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.787878+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7035/6820698581_dbf036c823_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820698581 | Star Wars Episode 1 - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.787120+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7142/6820695739_51173082d3_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820695739 | Star Wars Episode 1 - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.786436+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://live.staticflickr.com/7171/6820694305_974f4d4362_b.jpg (page: https://www.flickr.com/photos/58820009@N05/6820694305 | Star Wars Episode 1 - page does not name the entity (War))",
+      "created_at": "2026-11-26T10:59:05.785474+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'War'",
+      "created_at": "2026-11-26T10:59:05.783126+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'War'",
+      "created_at": "2026-11-26T10:59:05.623186+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'War'",
+      "created_at": "2026-11-26T10:59:05.473557+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'War'",
+      "created_at": "2026-11-26T10:59:05.400952+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T10:59:04.816684+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T10:59:04.815933+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: topical search found nothing for '‘War Is Hell:’ A Foreign Soldier Writes Home From ' - trying entity search 'War'",
+      "created_at": "2026-11-26T10:59:04.815287+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/2003045-Pablo-Picasso-Quote-The-meaning-of-life-is- (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Pablo - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T10:59:04.814577+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://emilysquotes.com/wp-content/uploads/2018/12/The-purpose-of-life-is-to-live-it-to-taste-exper (page: https://quotefancy.com/quote/34224/Pablo-Picasso-The-meaning-of-life-is-to-find-your-gift-The-purpos - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T10:59:04.813826+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/1705578-Robin-S-Sharma-Quote-The-purpose-of-life-is (page: http://emilysquotes.com/the-purpose-of-life-is-to-live-it-to-taste-experience-to-the-utmost-to-reach - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T10:59:04.813041+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to '‘War Is Hell:’ A Foreign Soldier Writes Home From '): https://quotefancy.com/media/wallpaper/3840x2160/13786-Robin-S-Sharma-Quote-The-purpose-of-life-is-t (page: https://quotefancy.com/quote/51632/Robin-S-Sharma-The-purpose-of-life-is-the-life-of-purpose | Robin - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-26T10:59:04.812183+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'War Hell Foreign Soldier Writes'",
+      "created_at": "2026-11-26T10:59:04.809757+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'War Hell Foreign Soldier Writes'",
+      "created_at": "2026-11-26T10:59:04.675867+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'War Hell Foreign Soldier Writes'",
+      "created_at": "2026-11-26T10:59:04.535243+00:00",
       "card": ""
     }
   ]
