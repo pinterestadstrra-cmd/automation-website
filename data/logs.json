@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T05:07:34.697129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Describe a film without its name', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa', 'Aaron Rodgers reportedly out', 'Victorian Coalition plans sewage privatization']",
-    "created_at": "2026-11-26T05:07:34.691777+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-26T05:07:34.461413+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-26T05:07:34.459899+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-26T05:07:34.170175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-26T05:07:23.531708+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-26T05:07:23.530720+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-26T05:07:23.529718+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #120 started (--only blogger)",
-    "created_at": "2026-11-26T05:07:23.528407+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-26T05:06:00.192560+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Describe a film without its name', 'Grand Theft Auto VI', 'FEMA hotline unanswered in Iowa', 'Aaron Rodgers reportedly out', 'Victorian Coalition plans sewage privatization']",
-    "created_at": "2026-11-26T05:06:00.188009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
-    "created_at": "2026-11-26T05:06:00.065321+00:00",
+    "created_at": "2026-11-26T06:07:38.579305+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T05:06:00.064316+00:00",
+    "created_at": "2026-11-26T06:07:38.577923+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117681000258694470",
-    "created_at": "2026-11-26T05:06:00.063366+00:00",
+    "message": "card 'mastodon.social': posted to Mastodon (mastodon.social): 117681242690220696",
+    "created_at": "2026-11-26T06:07:38.576437+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "mastodon: posted to mastodon.social: 117681000258694470",
-    "created_at": "2026-11-26T05:06:00.061256+00:00",
+    "message": "mastodon: posted to mastodon.social: 117681242690220696",
+    "created_at": "2026-11-26T06:07:38.573864+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Melania Trump announces reunion of 9 children with families ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-26T05:05:52.021007+00:00",
+    "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+    "created_at": "2026-11-26T06:07:33.148242+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "promo: fresh news exists but no real image could be fetched - skipping",
+    "created_at": "2026-11-26T06:07:33.090287+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-26T05:05:52.020345+00:00",
+    "message": "promo: photo search done - 21 candidate(s) tried, 4 fresh stories with a photo attempt, 4 real-photo search(es), no usable photo",
+    "created_at": "2026-11-26T06:07:33.089158+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Melania Trump announces reunion of 9 children with families ': https://img.theepochtimes.com/assets/uploads/2026/11/21/id6127754-Melania-Trump-GettyImages-23060069 (from bing-images, query 'Melania Trump announces reunion of 9 children with families amid Ukraine war - The Washington Post', page: https://www.breitbart.com/entertainment/2026/11/20/fashion-notes-melania-trump-dons-signature-dolce- - matches 2 key entities (melania, trump))",
-    "created_at": "2026-11-26T05:05:52.019602+00:00",
+    "message": "promo: story 4/6 tried: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T06:07:33.087879+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T06:07:33.086719+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, report says - Iran International' (12 download(s) tried)",
+    "created_at": "2026-11-26T06:07:33.085261+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: download budget reached (12) - stopping",
+    "created_at": "2026-11-26T06:07:33.083926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5534/9247175523_8e08d9fba7_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:33.082694+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:52.018561+00:00",
+    "created_at": "2026-11-26T06:07:33.081203+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Melania Trump announces reunion of 9 children with families '",
-    "created_at": "2026-11-26T05:05:51.981000+00:00",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/2119/2181893427_4c145c1bf4_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:33.057458+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Melania Trump announces reunion of 9 children with families '",
-    "created_at": "2026-11-26T05:05:51.866626+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:33.055976+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Melania Trump announces reunion of 9 children with families '",
-    "created_at": "2026-11-26T05:05:51.773971+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2530/3902305653_1bef23a8f2.jpg",
+    "created_at": "2026-11-26T06:07:33.027323+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Melania Trump announces reunion of 9 children with families '",
-    "created_at": "2026-11-26T05:05:51.325847+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T06:07:32.995833+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran'",
+    "created_at": "2026-11-26T06:07:32.882085+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Iran'",
+    "created_at": "2026-11-26T06:07:32.772115+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Iran'",
+    "created_at": "2026-11-26T06:07:32.755270+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:51.137074+00:00",
+    "created_at": "2026-11-26T06:07:32.720123+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:51.136375+00:00",
+    "created_at": "2026-11-26T06:07:32.718862+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Melania Trump announces reunion of 9 children with families ' - rejected (no og:image)",
-    "created_at": "2026-11-26T05:05:51.135476+00:00",
+    "message": "photo: topical search found nothing for 'Iran-backed Iraqi militia prepares for renewed US-' - trying entity search 'Iran'",
+    "created_at": "2026-11-26T06:07:32.717593+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwwFBVV95cUxONFNkS0JnTlMybWNvUmpBQ2ZlSlpBWXQwb0tkM25MTTFZSGVKMU1ESDRlUmVvcEhmc0V) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T05:05:51.132827+00:00",
+    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:32.716151+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:32.714645+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T06:07:32.664118+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:32.638037+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:32.636751+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:32.611185+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/100_ARW_supports_Airstrikes_%288231116%29.j (page: https://commons.wikimedia.org/wiki/File:100_ARW_supports_Airstrikes_(8231116).jpg | File:100 ARW sup - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:32.609926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/100_ARW_supports_Airstrikes_%288231115%29.j (page: https://commons.wikimedia.org/wiki/File:100_ARW_supports_Airstrikes_(8231115).jpg | File:100 ARW sup - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:32.608568+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran backed Iraqi militia prepares'",
+    "created_at": "2026-11-26T06:07:32.606067+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran backed Iraqi militia prepares'",
+    "created_at": "2026-11-26T06:07:32.492402+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 2 result(s) for 'Iran backed Iraqi militia prepares'",
+    "created_at": "2026-11-26T06:07:32.383775+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran backed Iraqi militia prepares'",
+    "created_at": "2026-11-26T06:07:32.365427+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:32.325386+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:32.324230+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:32.323029+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:32.321464+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T06:07:32.280376+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:32.247314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:32.245761+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:32.222847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:32.220302+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:32.036774+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.903204+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.885825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:31.859844+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:31.858581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://imgy.pro/jordannews/993x560/10202631154352527854169.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:31.857192+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:31.855765+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://www.mnnonline.org/wp-content/uploads/2024/05/mohammad-amirahmadi-ShZzflXymPI-unsplash-1.jpg",
+    "created_at": "2026-11-26T06:07:31.811008+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:31.779526+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:31.777916+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Iran-backed Iraqi militia prepares for renewed US-'): https://www.reporterworldnews.com/storage/gallery/2026/11/04/iran.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:31.630113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.627381+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.475532+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.362885+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran-backed Iraqi militia prepares for renewed US-Iran war, '",
+    "created_at": "2026-11-26T06:07:31.345524+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:31.315772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:31.314158+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran-backed Iraqi militia prepares for renewed US-Iran war, ' - rejected (no og:image)",
+    "created_at": "2026-11-26T06:07:31.312872+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nbnlBSmI3TzRsT0NlQ0RKNDJta0Z3MVIxclNKTFFEX1IyRlN1MW9VRUZTbVN6d0dOVnN) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T06:07:31.310422+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Pope: We must break 'ideological, economic chains that ensla' - skipped (same event used within 24h, event key 'break chain economic enslave ideological must news pope vati')",
+    "created_at": "2026-11-26T06:07:31.146527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T06:07:31.145006+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T06:07:31.143713+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Russian Offensive Campaign Assessment, November 25, 2026 - Institute for the Study of War' (12 download(s) tried)",
+    "created_at": "2026-11-26T06:07:31.141436+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: download budget reached (12) - stopping",
+    "created_at": "2026-11-26T06:07:31.140287+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:31.139064+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:31.137460+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:31.033202+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:31.031411+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:30.986489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:30.984917+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1 (page: https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%87%D0%B5%D1%82%D1%8C_%D0%A1%D0%B0%D0%BD%D0%B - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T06:07:30.949346+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Russian_peasant_girls_in_front_of_a_traditi - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:30.948100+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:30.946532+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Olkhon_Island%2C_Capes%2C_cliffs_at_sunset% (page: https://commons.wikimedia.org/wiki/File:Olkhon_Island,_Capes,_cliffs_at_sunset,_Lake_Baikal,_Russia. - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T06:07:30.913029+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Ergaki%2C_Buiba_Valley%2C_Western_Sayan_Mou (page: https://commons.wikimedia.org/wiki/File:Ergaki,_Buiba_Valley,_Western_Sayan_Mountains,_Krasnoyarsk_K - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T06:07:30.911820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Baikal%2C_Cape_Burhan%2C_Olkhon_Island%2C_L (page: https://commons.wikimedia.org/wiki/File:Baikal,_Cape_Burhan,_Olkhon_Island,_Lake_Baikal,_Russia.jpg  - page does not name the entity (Russian))",
+    "created_at": "2026-11-26T06:07:30.910552+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4108/4962605183_d425c55d39_b.jpg",
+    "created_at": "2026-11-26T06:07:30.909050+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/65535/52322248381_14743ba564_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:30.881944+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:30.880514+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3868/14809341570_8df42937ff_b.jpg",
+    "created_at": "2026-11-26T06:07:30.850438+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3149/3011275416_8312c708cc_b.jpg",
+    "created_at": "2026-11-26T06:07:30.814449+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6064/6148619952_83d4e49fb8_b.jpg",
+    "created_at": "2026-11-26T06:07:30.789194+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian'",
+    "created_at": "2026-11-26T06:07:30.722676+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian'",
+    "created_at": "2026-11-26T06:07:30.605296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Russian'",
+    "created_at": "2026-11-26T06:07:30.512364+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Russian'",
+    "created_at": "2026-11-26T06:07:30.493571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:30.460327+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:30.459187+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Russian Offensive Campaign Assessment, November 25' - trying entity search 'Russian'",
+    "created_at": "2026-11-26T06:07:30.458066+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.456943+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.455616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.454194+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:30.452726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:30.450922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T06:07:30.417186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T06:07:30.312323+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T06:07:30.202888+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment November'",
+    "created_at": "2026-11-26T06:07:30.185374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:30.152473+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:30.150813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.149388+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.147995+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:30.146553+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:30.143342+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:30.141520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T06:07:30.106075+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T06:07:30.000727+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T06:07:29.878078+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026'",
+    "created_at": "2026-11-26T06:07:29.859441+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:29.825452+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:29.824213+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://i.ibb.co/0y1Sjdx/IK27kbqql2-A.jpg (page: https://www.pinterest.com/pin/350154939759370530/ | Do any Russian units still wear 6b23 armour unde - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:29.823017+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://nypost.com/wp-content/uploads/sites/2/2022/09/russian-soldiers-01.jpg (page: https://www.reddit.com/r/Rusfor/comments/zgiafn/do_any_russian_units_still_wear_6b23_armour/ | Zelen - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:29.821550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russian Offensive Campaign Assessment, November 25'): https://assets.grokipedia.com/wiki/images/451c6eb821cc.jpg (page: https://nypost.com/2022/09/25/zelensky-russian-deserters-will-be-treated-in-civilized-manner/ | Russ - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-26T06:07:29.820282+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://moderndiplomacy.eu/wp-content/uploads/2023/06/russian-army-1024x652.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:29.818735+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:29.817094+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T06:07:29.779690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T06:07:29.592463+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T06:07:29.491872+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russian Offensive Campaign Assessment, November 25, 2026 - I'",
+    "created_at": "2026-11-26T06:07:29.474100+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:29.419865+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:07:29.418720+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russian Offensive Campaign Assessment, November 25, 2026 - I' - rejected (no og:image)",
+    "created_at": "2026-11-26T06:07:29.417407+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirAFBVV95cUxPUkpYNWJheFpTc3l5ZjdodEktRGpjcDVVZVo5ZDA1cW9DLVJ5X2wwMFJPZzhBcnhTUHJ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T06:07:29.414638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T06:07:29.251842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T06:07:29.250707+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ' (10 download(s) tried)",
+    "created_at": "2026-11-26T06:07:29.249462+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://thumbs.dreamstime.com/b/group-cute-pastel-animal-figurines-smiling-faces-adorable-kawaii-toy (page: https://discordpfp.gg/pfp/cute-blueberry-waffle-plush | Kawaii Figurines Stock Illustrations – 606 K - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T06:07:29.248247+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/5d/61/2b/5d612bc7a492968b85f2b57097bdbec7.jpg (page: https://www.dreamstime.com/illustration/kawaii-figurines.html | Hình vẽ 3D đáng yêu | Đang yêu, Dễ t - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T06:07:29.246877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/736x/63/01/03/6301032f464dbfbc4e69c5fbff933e07.jpg (page: https://www.pinterest.com/pin/76068681199399057/ | Adorable Kawaii Plushies on a Bed | Korilakkuma p - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T06:07:29.245577+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/a6/5b/9c/a65b9c98bc0506a595efabf66a9a0510.jpg?nii=t (page: https://www.pinterest.com/pin/789959590912972737/ | Cute Pink Pfp - page does not name the entity (Silent))",
+    "created_at": "2026-11-26T06:07:29.244305+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Vanessa_indica-Silent_Valley-2016-08-14-001 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:29.242938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:29.241336+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Poster_for_Quo_Vadis_%281913_silent_film%29 - source page title names only 1 of 8 key entities - not a news article about the story",
+    "created_at": "2026-11-26T06:07:29.214905+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-26T06:07:29.213059+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Poster_for_Quo_Vadis_%281913_silent_film%29",
+    "created_at": "2026-11-26T06:07:29.156724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (The image is a vintage poster for the 1913 silent film *Quo Vadis*, depicting Emperor Nero playing a lyre while Rome burns, which is unrelated to the )",
+    "created_at": "2026-11-26T06:07:29.154985+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pareronia_hippia-Silent_Valley-2016-08-15-0",
+    "created_at": "2026-11-26T06:07:25.706483+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (. The photo shows a butterfly resting on a red flower, which is completely unrelated to the headline about Iran's economy and a U.S. blockade.)",
+    "created_at": "2026-11-26T06:07:25.704910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Aularches_miliaris-Silent_Valley-2016-08-13",
+    "created_at": "2026-11-26T06:07:13.483400+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' (. The photo shows a grasshopper on a twig, which is completely unrelated to Iran's economy or a U.S. blockade.)",
+    "created_at": "2026-11-26T06:07:13.481606+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/36/121704670_1b7a489603_b.jpg",
+    "created_at": "2026-11-26T06:06:48.270079+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4031/4635122384_1be7d7b323_b.jpg",
+    "created_at": "2026-11-26T06:06:48.178956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8212/8269563681_a2ebe006d8.jpg",
+    "created_at": "2026-11-26T06:06:48.080290+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7711/16897629490_52b11534d8_b.jpg",
+    "created_at": "2026-11-26T06:06:47.983116+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6227/6308048699_3490fa07b3_b.jpg",
+    "created_at": "2026-11-26T06:06:47.893006+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Silent'",
+    "created_at": "2026-11-26T06:06:47.803769+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Silent'",
+    "created_at": "2026-11-26T06:06:47.641527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 5 result(s) for 'Silent'",
+    "created_at": "2026-11-26T06:06:47.464183+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Silent'",
+    "created_at": "2026-11-26T06:06:47.445874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:47.412808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:47.411685+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' - trying entity search 'Silent'",
+    "created_at": "2026-11-26T06:06:47.410393+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://static1.srcdn.com/wordpress/wp-content/uploads/2016/11/Monica-and-Chandler-in-Friends-Thanks (page: https://www.pinterest.ph/pin/friends-iconic-moments-in-2023--32862272274510229/ | Friends: 10 Bigges - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T06:06:47.409016+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/a9/49/d0/a949d03e8bdcbcd17a2284c5bd2d58a4.jpg (page: https://screenrant.com/friends-monica-character-growth/ | Monica gellar aesthetic || friends | Monic - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T06:06:47.407509+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.themarysue.com/wp-content/uploads/2023/11/Thanksgiving-Leftovers-Eat-Now.jpg?w=1200&resi (page: https://www.pinterest.com/pin/84090718039736338/ | 10 best 'Friends' episodes, ranked | The Mary Sue - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T06:06:47.405967+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://static1.srcdn.com/wordpress/wp-content/uploads/2021/01/Friends-Turkey-On-Head.jpg (page: https://www.themarysue.com/20-years-after-it-ended-we-still-love-friends-and-here-are-the-ten-episod - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T06:06:47.404444+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Silent War Grips Iran Economy'",
+    "created_at": "2026-11-26T06:06:47.401657+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Silent War Grips Iran Economy'",
+    "created_at": "2026-11-26T06:06:47.240473+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'Silent War Grips Iran Economy'",
+    "created_at": "2026-11-26T06:06:47.129103+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Silent War Grips Iran Economy'",
+    "created_at": "2026-11-26T06:06:47.110050+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:47.080823+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:47.079578+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/the-finals-screenshot-file-a087d224.jpg (page:  - no source page to verify relevance)",
+    "created_at": "2026-11-26T06:06:47.078314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:47.075721+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.985281+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.885298+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.867054+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:46.838259+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:46.836908+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn3.localdatacdn.com/ks/overland-park/2431105/original/f27VUAfBfc.jpg (page: PAN-ASIA SUPERMARKET - Overland Park KS - Hours, Directions, Reviews ... - only 0 of 8 key entities in the source page)",
+    "created_at": "2026-11-26T06:06:46.835606+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.832970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.749758+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.648574+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+    "created_at": "2026-11-26T06:06:46.630345+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:46.601855+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-26T06:06:46.600601+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no og:image)",
+    "created_at": "2026-11-26T06:06:46.599274+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPQUZoNE5qVlVJSWdVTHRMY1R0bFBac204aUVreDhOR3NtUE4yWjBESlJMUHZoLVo0Njd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-26T06:06:46.596562+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - skipped (same event used within 24h, event key '000 700 estimate kill nbc news russian soldier suggest than ')",
+    "created_at": "2026-11-26T06:06:46.439412+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How an Iranian Ally Gained the Upper Hand in Yemen’s War - T' - skipped (same event used within 24h, event key 'ally gain hand how iranian time upper war yemen york')",
+    "created_at": "2026-11-26T06:06:46.437428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - skipped (same event used within 24h, event key '000 500 bbc figure lost nearly own people russia show ukrain')",
+    "created_at": "2026-11-26T06:06:46.435765+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Stop using tear gas on battlefield, do' - skipped (same event used within 24h, event key 'battlefield brief countrie dozen gas guardian russia stop te')",
+    "created_at": "2026-11-26T06:06:46.434277+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
-    "created_at": "2026-11-26T05:05:50.858363+00:00",
+    "created_at": "2026-11-26T06:06:46.432318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran live updates: Trump says war 'funded' through January, ' - skipped (same event used within 24h, event key 'abc attack break claim fund houthis iran january latest live')",
+    "created_at": "2026-11-26T06:06:46.430476+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
+    "created_at": "2026-11-26T06:06:46.428800+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Iran war live: Explosion rocks Sanaa; missiles intercepted o' - skipped (same event used within 24h, event key 'explosion intercept iran jazeera live missile riyadh rock sa')",
-    "created_at": "2026-11-26T05:05:50.857329+00:00",
+    "created_at": "2026-11-26T06:06:46.426826+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran developing chemical weapons, Israeli defense minister s' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-26T05:05:50.855941+00:00",
+    "message": "promo: story 1/6 tried: '4 takeaways from election night - PBS' - no usable photo, trying the next story",
+    "created_at": "2026-11-26T06:06:46.367053+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
-    "created_at": "2026-11-26T05:05:50.788899+00:00",
+    "message": "photo candidate: '4 takeaways from election night - PBS' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-26T06:06:46.365844+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (same event used within 24h, event key 'center fact media news pew research sheet social')",
-    "created_at": "2026-11-26T05:05:50.788050+00:00",
+    "message": "photo: no real photo found for '4 takeaways from election night - PBS' (5 download(s) tried)",
+    "created_at": "2026-11-26T06:06:46.364532+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T05:05:50.786934+00:00",
+    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.etsystatic.com/16431976/r/il/5e8ae6/5604552750/il_fullxfull.5604552750_644m.jpg (page: https://www.pinterest.com/lydiakahn/tattoo-ideas/ | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
+    "created_at": "2026-11-26T06:06:46.363206+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T05:05:50.786309+00:00",
+    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.pinimg.com/736x/98/93/e4/9893e4086e2a5fe50deb864dc4736431.jpg (page: https://bronctattooaus.com/inspiration/baobab-tree-tattoo | Africa & baobab finished | Africa roots  - page does not name the entity (takeaways))",
+    "created_at": "2026-11-26T06:06:46.361791+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (12 download(s) tried)",
-    "created_at": "2026-11-26T05:05:50.785683+00:00",
+    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://d1kq2dqeox7x40.cloudfront.net/images/posts/20191223_QqzRWJpFpGYJr9K.png (page: https://www.pinterest.com/pin/135811744987557859/ | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
+    "created_at": "2026-11-26T06:06:46.360407+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:50.784971+00:00",
+    "message": "photo: rejected (irrelevant to '4 takeaways from election night - PBS'): https://i.pinimg.com/736x/50/93/72/509372f30b8ff9d14e01da443bfc2917.jpg (page: https://orangetattooshop.com/styles/baobab-tree-tattoo | Baobab tree tattoo - Bronctattooaus.com - page does not name the entity (takeaways))",
+    "created_at": "2026-11-26T06:06:46.358774+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:50.783760+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2715/4231023911_08f087a135_b.jpg",
+    "created_at": "2026-11-26T06:06:46.357153+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:50.748790+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:50.747630+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:49.787006+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:49.785921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://e-tracking.net/app/img/how-its-works.png",
-    "created_at": "2026-11-26T05:05:49.749096+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Parapente_-_158.jpg/1280px-Parapente_-_158. (page: https://commons.wikimedia.org/wiki/File:Parapente_-_158.jpg | File:Parapente - 158.jpg - page does not name the entity (Tracking))",
-    "created_at": "2026-11-26T05:05:49.703629+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Global_tropical_cyclone_tracks-edit2.jpg/12 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:49.702941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:49.702174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://upload.wikimedia.org/wikipedia/commons/b/ba/Eye_Gaze_Autism_1.png?utm_source=commons.wikimed (page: https://commons.wikimedia.org/wiki/File:Eye_Gaze_Autism_1.png | File:Eye Gaze Autism 1.png - page does not name the entity (Tracking))",
-    "created_at": "2026-11-26T05:05:49.679551+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Avalanche_of_snow_across_railroad_tracks_in - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:49.678831+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:49.677544+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Animal_tracking_in_fiji.JPG/1280px-Animal_t - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:49.625827+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:49.624787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
-    "created_at": "2026-11-26T05:05:49.565934+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
-    "created_at": "2026-11-26T05:05:49.532726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
-    "created_at": "2026-11-26T05:05:49.507183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
-    "created_at": "2026-11-26T05:05:49.477249+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
-    "created_at": "2026-11-26T05:05:49.450113+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking'",
-    "created_at": "2026-11-26T05:05:49.420880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking'",
-    "created_at": "2026-11-26T05:05:49.300733+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Tracking'",
-    "created_at": "2026-11-26T05:05:49.204627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Tracking'",
-    "created_at": "2026-11-26T05:05:48.684353+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:48.647277+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:48.646675+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
-    "created_at": "2026-11-26T05:05:48.646078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:48.645344+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:48.644666+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:48.643859+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:48.643052+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T05:05:48.640736+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T05:05:48.415277+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T05:05:48.309589+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
-    "created_at": "2026-11-26T05:05:48.042897+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:47.987403+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:47.986753+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.986107+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.985212+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.984507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.983709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
-    "created_at": "2026-11-26T05:05:47.981374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education'",
-    "created_at": "2026-11-26T05:05:47.861319+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
-    "created_at": "2026-11-26T05:05:47.743709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education'",
-    "created_at": "2026-11-26T05:05:47.404233+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:47.375851+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:47.375222+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdn.dribbble.com/userupload/44081974/file/original-226dc2a1a13eda8a3f924da1f6888762.png?resi (page: https://elements.envato.com/shipment-tracking-dashboard-shippick-CU7TFMH | Logistics Shipment Tracki - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.374578+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.trackingmore.com/blog/wp-content/uploads/2024/02/A-tablet-displaying-a-shipment-tracking (page: https://dribbble.com/shots/26268661-Logistics-Shipment-Tracking-Dashboard | Dropship Tracking 101 - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.373867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://apploye.com/blog/content/images/size/w600/2025/02/tracking-vs-monitoring.png (page: https://www.trackingmore.com/blog/dropship-tracking/ | Employee Tracking vs. Monitoring: Key Differe - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.373105+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://e-tracking.net/app/img/how-its-works.png (page: https://apploye.com/blog/employee-tracking-vs-monitoring/ | TOLL Package Tracking - E-tracking - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:47.372234+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
-    "created_at": "2026-11-26T05:05:47.369953+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
-    "created_at": "2026-11-26T05:05:47.200703+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
-    "created_at": "2026-11-26T05:05:47.089147+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tracking Trump's Crackdown on Higher Education - U.S. News &'",
-    "created_at": "2026-11-26T05:05:46.944490+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:46.901027+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:46.900340+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no og:image)",
-    "created_at": "2026-11-26T05:05:46.899543+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTUZubnNDTkxCZmFWbDRoSVY1SFhVblZ2Y3RRNThYS0tSTzg1VDVMWEctd2VaMzA0M2F) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T05:05:46.897404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Record-High 89% in U.S. Say Government Corruption Widespread' - skipped (same event used within 24h, event key 'corruption gallup government high news record widespread')",
-    "created_at": "2026-11-26T05:05:46.759945+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats win control of U.S. House, in major rebuke to Trum' - skipped (same event used within 24h, event key 'control democrat house major pbs rebuke trump win')",
-    "created_at": "2026-11-26T05:05:46.758884+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Americans’ Trust in Information From News Organizations Has ' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-26T05:05:46.758053+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'The U.S. political map? Anyone's guess after Democratic wave' - skipped (non-visual story: survey/poll/analysis/opinion - no photo expected)",
-    "created_at": "2026-11-26T05:05:46.757375+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Anthony Zurcher: Democrats push deep into Trump heartland on' - skipped (same event used within 24h, event key 'anthony bbc deep democrat heartland historic night push trum')",
-    "created_at": "2026-11-26T05:05:46.756710+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: 'Tucker Carlson floats idea of new political party in the US ' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T05:05:46.755788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Tucker Carlson floats idea of new political party in the US ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T05:05:46.755089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Tucker Carlson floats idea of new political party in the US in interview - The Guardian' (10 download(s) tried)",
-    "created_at": "2026-11-26T05:05:46.754429+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tucker Carlson floats idea of new political party '): https://hi-static.z-dn.net/files/d26/c5e227eac49256ff8f9e42d79fc56e93.jpg (page: Make a comic strip on importance of nutritious food in our day to day ... - page does not name the entity (Tucker))",
-    "created_at": "2026-11-26T05:05:46.753709+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/a/a3/USGU_Tucker%2C_Georgia_Map.jpg?utm_source=common",
-    "created_at": "2026-11-26T05:05:46.752842+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/9/97/Tucker_Georgia_Creeks_and_Streams.jpg?utm_source",
-    "created_at": "2026-11-26T05:05:46.741120+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Tucker%2C_Georgia..jpg/1280px-Tucker%2C_Geo - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-26T05:05:46.726813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-26T05:05:46.725375+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Independence_Day_Celebration_on_Main_Street",
-    "created_at": "2026-11-26T05:05:46.663988+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Tucker Carlson floats idea of new political party ' (. The photo)",
-    "created_at": "2026-11-26T05:05:46.662475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Brownings_Courthouse_Tucker%2C_Georgia.jpg/",
-    "created_at": "2026-11-26T05:05:36.331310+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Tucker Carlson floats idea of new political party ' (The photo shows the historic Browning Courthouse, unrelated to Tucker Carlson or a political party.)",
-    "created_at": "2026-11-26T05:05:36.330216+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://live.staticflickr.com/6142/5952893410_26c2b23150_b.jpg",
-    "created_at": "2026-11-26T05:05:20.326406+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Tucker Carlson floats idea of new political party ' (, the photo shows a sleeping pug, which has nothing to do with Tucker Carlson or a political party.)",
-    "created_at": "2026-11-26T05:05:20.325333+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3762/11356711406_8952cdc995_b.jpg",
-    "created_at": "2026-11-26T05:05:16.681602+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7926/32512489167_b0fcdc7b16_b.jpg",
-    "created_at": "2026-11-26T05:05:16.627249+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5557/14575205227_d88b432237_b.jpg",
-    "created_at": "2026-11-26T05:05:16.596505+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52586540749_12da2cbbca_b.jpg",
-    "created_at": "2026-11-26T05:05:16.568198+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Tucker'",
-    "created_at": "2026-11-26T05:05:16.537989+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tucker'",
-    "created_at": "2026-11-26T05:05:16.194565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Tucker'",
-    "created_at": "2026-11-26T05:05:16.104848+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Tucker'",
-    "created_at": "2026-11-26T05:05:15.641362+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:15.479436+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:15.478767+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Tucker Carlson floats idea of new political party ' - trying entity search 'Tucker'",
-    "created_at": "2026-11-26T05:05:15.478073+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tucker Carlson floats idea of new political party '): https://blessvero.com/wp-content/uploads/2026/11/95heartfelt-happy-thanksgiving-blessings-gif-messag (page: https://gifdb.com/it/thanksgiving-week | 95+Heartfelt Happy Thanksgiving Blessings GIF Messages to S - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:15.477305+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Tucker Carlson floats idea political'",
-    "created_at": "2026-11-26T05:05:15.475011+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tucker Carlson floats idea political'",
-    "created_at": "2026-11-26T05:05:15.247056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tucker Carlson floats idea political'",
-    "created_at": "2026-11-26T05:05:15.150658+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tucker Carlson floats idea political'",
-    "created_at": "2026-11-26T05:05:14.594834+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:14.439260+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:14.438484+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Tucker Carlson floats idea of new political party '): https://c8.alamy.com/comp/2SCDMB5/a-peaceful-view-of-a-louisiana-swamp-with-moss-covered-cypress-tre (page: A peaceful view of a Louisiana swamp, with moss-covered cypress trees ... - only 0 of 8 key entities in the source page)",
-    "created_at": "2026-11-26T05:05:14.437644+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:14.435944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:14.249903+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:14.152800+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:13.757546+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:13.664188+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:13.663477+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 0 candidate(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:13.661456+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:13.516169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:13.430858+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Tucker Carlson floats idea of new political party in the US '",
-    "created_at": "2026-11-26T05:05:13.136763+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:12.929825+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:05:12.928968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Tucker Carlson floats idea of new political party in the US ' - rejected (no og:image)",
-    "created_at": "2026-11-26T05:05:12.928236+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMingFBVV95cUxOQmVnTnd2QTFEektzSHRnVlhfZGpJbHZFeFhnNXZxOUlRMWhiWHVVM0kxd0I0V1h1UWc) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T05:05:12.926336+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: ''Hopefully things get done': Americans react to historic pol' - skipped (same event used within 24h, event key 'american bbc done get historic hopefully political react shi')",
-    "created_at": "2026-11-26T05:05:12.602342+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Here's a list of the individuals, including James Comey, tar' - skipped (same event used within 24h, event key 'abc administration break comey here includ individual jame l')",
-    "created_at": "2026-11-26T05:05:12.601626+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump's rescue of Nvidia's Huang brings political risks - BB' - skipped (same event used within 24h, event key 'bbc bring huang nvidia political rescue risk trump')",
-    "created_at": "2026-11-26T05:05:12.600406+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T05:05:12.264652+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-26T05:05:12.263688+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-    "created_at": "2026-11-26T05:05:12.262786+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-26T05:05:12.262074+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': promo posted - event 'action avoid chief nato reuter russia trump ukraine urge war' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-    "created_at": "2026-11-26T05:05:12.260762+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1280x1621 (ratio 0.79) - unchanged",
-    "created_at": "2026-11-26T05:05:07.744942+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1280x1621 (ratio 0.79) - kept, no crop",
-    "created_at": "2026-11-26T05:05:07.744326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - ACCEPTED real photo (from wikimedia)",
-    "created_at": "2026-11-26T05:05:07.742798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-26T05:05:07.742213+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump and NATO chief urge Russia to avoid actions that widen': https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/1280px-D (from wikimedia, query 'Trump', page: https://commons.wikimedia.org/wiki/File:Donald_Trump_official_portrait.jpg | File:Donald Trump offic - page names the entity (Trump))",
-    "created_at": "2026-11-26T05:05:07.741566+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Trump and NATO chief urge Russia to avoid actions ' (The photo shows Donald Trump, who is mentioned in the headline regarding discussions on the Ukraine war with the NATO chief.)",
-    "created_at": "2026-11-26T05:05:07.738637+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5581/14235998518_fc8fd1a27d_b.jpg",
-    "created_at": "2026-11-26T05:04:50.245911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8789/17215465351_cc1e377890_b.jpg",
-    "created_at": "2026-11-26T05:04:50.211358+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T05:04:50.183855+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "download_image: rejected (not a valid photo >=400px): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-26T05:04:50.182446+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3906/14422616255_e43468d43d_b.jpg",
-    "created_at": "2026-11-26T05:04:50.150481+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg",
-    "created_at": "2026-11-26T05:04:50.123564+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T05:04:50.086725+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-26T05:04:49.901887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-26T05:04:49.800924+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-26T05:04:49.429748+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:49.006515+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:49.005872+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Trump and NATO chief urge Russia to avoid actions ' - trying entity search 'Trump'",
-    "created_at": "2026-11-26T05:04:49.005272+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://www.freep.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956869007-20261125-t-000549- (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:49.004621+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.freep.com/story/news/trump/2026/11/25/follow-president-donald-trump-during-his-thanksgiv - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:49.003921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.dagens.com/news/trump-scores-massive-court-victory-in-tax-fraud-investigation | Judge Me - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:49.003178+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Someth - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:49.002444+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://upload.wikimedia.org/wikipedia/commons/3/3b/Senators_Call_for_National_Intelligence_Estimate (page: https://commons.wikimedia.org/wiki/File:Senators_Call_for_National_Intelligence_Estimate_of_Russian_ - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:49.001575+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-26T05:04:48.999330+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-26T05:04:48.858571+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 1 result(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-26T05:04:48.754400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-26T05:04:48.270140+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:48.179486+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:48.178867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://www.freep.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956869007-20261125-t-000549- (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:48.178010+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.freep.com/story/news/trump/2026/11/25/follow-president-donald-trump-during-his-thanksgiv - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:48.177309+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.dagens.com/news/trump-scores-massive-court-victory-in-tax-fraud-investigation | Judge Me - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:48.176443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Someth - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:48.175561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:48.173738+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:48.007953+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:47.905856+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:47.513163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:47.295727+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T05:04:47.295108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://www.freep.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956869007-20261125-t-000549- (page: https://www.dailycorinthian.com/news/national/trump/image_1269382e-da54-53be-a15f-dcc8a37f22ab.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:47.294470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.freep.com/story/news/trump/2026/11/25/follow-president-donald-trump-during-his-thanksgiv - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:47.293683+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.dagens.com/news/trump-scores-massive-court-victory-in-tax-fraud-investigation | Judge Me - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:47.292957+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Someth - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-26T05:04:47.292162+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:47.290059+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-26T05:04:47.171828+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4009/4231022007_c1b25be1a6_b.jpg",
+    "created_at": "2026-11-26T06:06:46.264217+00:00",
     "card": ""
   }
 ]
