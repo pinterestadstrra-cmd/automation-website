@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-26T01:10:32.136569+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Grand Theft Auto VI', 'New Avengers: Doomsday poster', 'Describe a film without its name', 'Aaron Rodgers reportedly out', 'FEMA hotline unanswered in Iowa']",
+    "created_at": "2026-11-26T01:10:32.130049+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T01:10:32.012570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T01:10:32.010769+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T01:10:31.809189+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T01:10:28.352462+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T01:10:28.351220+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T01:10:28.349893+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #114 started (--only blogger)",
+    "created_at": "2026-11-26T01:10:28.348324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (ok - posted 1)",
     "created_at": "2026-11-26T00:34:58.899426+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-26T00:34:33.254046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Five Russian military jets hit in airfield strike, says Ukra' - rejected (no og:image)",
-    "created_at": "2026-11-26T00:34:33.252825+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vbjRXZHVvMFBra2FoR20zdnY0MUlXdTZMNy11dGpJeEtNdUM1dXkwMllYa1RvbWdZelg) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T00:34:33.250461+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Russia accuses NATO member Estonia of hostile actions ‘on th' - skipped (same event used within 24h, event key 'accuse action cnbc estonia hostile member nato open russia u')",
-    "created_at": "2026-11-26T00:34:32.365807+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'More than 700,000 Russian soldiers have been killed in the U' - skipped (same event used within 24h, event key '000 700 estimate kill nbc news russian soldier suggest than ')",
-    "created_at": "2026-11-26T00:34:32.364225+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Tehran denounces U.S. for using AI in stri' - skipped (same event used within 24h, event key 'cbs claim denounce international iran law news strike tehran')",
-    "created_at": "2026-11-26T00:34:32.362326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - skipped (same event used within 24h, event key 'blame candidate democrat did good job losse midterm pbs repu')",
-    "created_at": "2026-11-26T00:34:31.846250+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Social Media and News Fact Sheet - Pew Research Center' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-26T00:34:31.844965+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T00:34:31.843047+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T00:34:31.842009+00:00",
     "card": ""
   }
 ]
