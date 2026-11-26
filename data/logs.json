@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T21:56:32.422005+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Chicago Bears Thanksgiving game', 'Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Describe a film without its name', \"Macy's parade postponed to Saturday\"]",
+    "created_at": "2026-11-26T21:56:32.417762+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-26T21:56:32.310606+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T21:56:32.309393+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T21:56:31.996031+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T21:55:07.994995+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-26T21:55:07.994332+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-26T21:55:07.993628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #149 started (--only blogger)",
+    "created_at": "2026-11-26T21:55:07.992683+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T21:37:54.284229+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'WWE'",
     "created_at": "2026-11-26T21:35:42.581089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'WWE'",
-    "created_at": "2026-11-26T21:35:42.403640+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'WWE'",
-    "created_at": "2026-11-26T21:35:42.263077+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'WWE'",
-    "created_at": "2026-11-26T21:35:42.242820+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T21:35:40.531169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T21:35:40.530048+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'WWE's CM Punk leaving politics out of the ring for' - trying entity search 'WWE'",
-    "created_at": "2026-11-26T21:35:40.528817+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1be721a3-1fc9-48bd-ac9a-6a94905e0dc2/dbs7e (page: https://www.pngitem.com/middle/iRTJxhi_aj-styles-wwe-champion-by-nib-aj-styles/ | Aj Styles Wwe Cham - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-26T21:35:40.527668+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5a7ece76-3c69-4bf4-8a5c-0cf2f10f854d/dcwhz (page: https://www.deviantart.com/hamidpunk/art/Aj-Styles-Wwe-Champion-712501952 | AJ Styles 'Run the Place - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-26T21:35:40.526448+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ece37722-a9a0-40f2-a589-9456662a7d7e/dby0i (page: https://www.deviantart.com/brunoradkephotoshop/art/AJ-Styles-Run-the-Place-Attire-WWE-Champion-78018 - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-26T21:35:40.525274+00:00",
     "card": ""
   }
 ]

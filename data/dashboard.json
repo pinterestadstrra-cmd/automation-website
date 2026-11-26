@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T21:37:54.280683+00:00",
-  "last_run": "2026-11-26T21:35:04.531428+00:00",
-  "runs": 148,
+  "generated_at": "2026-11-26T21:56:32.420120+00:00",
+  "last_run": "2026-11-26T21:55:07.992663+00:00",
+  "runs": 149,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 19,
       "posts_today": 3,
       "next_runs": [
-        "2026-11-27T03:52:08.244895+06:00",
         "2026-11-27T04:07:08.244895+06:00",
         "2026-11-27T04:22:08.244895+06:00",
         "2026-11-27T04:37:08.244895+06:00",
-        "2026-11-27T04:52:08.244895+06:00"
+        "2026-11-27T04:52:08.244895+06:00",
+        "2026-11-27T05:07:08.244895+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T03:53:00+06:00",
         "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
         "2026-11-27T07:08:00+06:00",
-        "2026-11-27T07:50:00+06:00"
+        "2026-11-27T07:50:00+06:00",
+        "2026-11-27T08:55:00+06:00"
       ],
       "success": 66,
       "fail": 4,
@@ -158,18 +158,18 @@
       "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T03:52:54.215094+06:00",
         "2026-11-27T04:07:54.215094+06:00",
         "2026-11-27T04:22:54.215094+06:00",
         "2026-11-27T04:37:54.215094+06:00",
-        "2026-11-27T04:52:54.215094+06:00"
+        "2026-11-27T04:52:54.215094+06:00",
+        "2026-11-27T05:07:54.215094+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T03:53:00+06:00",
         "2026-11-27T04:58:00+06:00",
         "2026-11-27T06:03:00+06:00",
         "2026-11-27T07:08:00+06:00",
-        "2026-11-27T07:52:00+06:00"
+        "2026-11-27T07:52:00+06:00",
+        "2026-11-27T08:57:00+06:00"
       ],
       "success": 17,
       "fail": 13,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 17
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 6
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-26T21:35:04.532962+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-26T21:55:07.993621+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-26T21:55:07.994326+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
-    "Birthday twin spectrum prompt",
-    "Musk pledges kids SpaceX shares",
-    "Katie Miller car seat claim",
+    "Chicago Bears Thanksgiving game",
     "Thanksgiving Day celebrations",
+    "Birthday twin spectrum prompt",
     "Describe a film without its name",
-    "Trump calls GDP revision fake",
-    "Nvidia chip exports to China",
     "Macy's parade postponed to Saturday",
+    "Musk pledges kids SpaceX shares",
     "Grand Theft Auto VI",
+    "Katie Miller car seat claim",
+    "UK net migration falls to 77,000",
     "Thanksgiving storm knocks out power"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-26T21:56:32.310606+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-26T21:56:32.309393+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-26T21:56:31.996031+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-26T21:55:07.994995+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-26T21:55:07.994332+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-26T21:55:07.993628+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #149 started (--only blogger)",
+      "created_at": "2026-11-26T21:55:07.992683+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-26T21:37:54.284229+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Musk pledges kids SpaceX shares', 'Katie Miller car seat claim', 'Thanksgiving Day celebrations', 'Describe a film without its name']",
+      "created_at": "2026-11-26T21:37:54.278003+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://cdn.amomama.com/32de2ef75c32ab6577b8a48783cc34bb3a6a7bbce85e96e659fbc0ef3fd01c04.jpg (page: https://www.elsiglodetorreon.com.mx/galerias/foto/27465468 | Miley Cyrus Stuns in Sequined Black Gow - only 0 of 15 key entities in the source page)",
       "created_at": "2026-11-26T21:37:11.699794+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
-      "created_at": "2026-11-26T21:37:11.697671+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
-      "created_at": "2026-11-26T21:37:11.593284+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
-      "created_at": "2026-11-26T21:37:11.422982+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Live Updates: Iran accused of deadly drone attack in Kuwait '",
-      "created_at": "2026-11-26T21:37:11.402675+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T21:37:10.450847+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T21:37:10.449651+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://www.lavanguardia.com/peliculas-series/images/movie/poster/1959/11/w300/vmdNQQvruPsDq9nj3WlJD (page: https://www.themoviedb.org/tv/226285-elsbeth/images/posters | Elspeth March - Biografía, mejores pel - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-26T21:37:10.448274+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://images.justwatch.com/poster/321356564/s332/picket-fences.jpg (page: https://www.mtggoldfish.com/price/foundations/493/elspeths-smite | Elsbeth - watch tv series streami - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-26T21:37:10.446621+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Live Updates: Iran accused of deadly drone attack '): https://images.justwatch.com/poster/258190561/s332/claws.jpg (page: https://www.justwatch.com/uk/tv-series/elsbeth | Elsbeth Season 2 - watch full episodes streaming on - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-26T21:37:10.445389+00:00",
       "card": ""
     }
   ]
