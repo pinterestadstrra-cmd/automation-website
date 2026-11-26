@@ -2,6 +2,102 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-26T18:39:01.960887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Medicare for All and universal healthcare', \"Macy's parade postponed to Saturday\", 'Trump calls GDP revision fake']",
+    "created_at": "2026-11-26T18:39:01.954538+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: not a posting time)",
+    "created_at": "2026-11-26T18:39:01.808115+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': not a posting time - nothing posted this run",
+    "created_at": "2026-11-26T18:39:01.806954+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-26T18:39:01.805643+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (ok - 1 reply sent)",
+    "created_at": "2026-11-26T18:39:01.804259+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': not a posting time - replies only, nothing posted this run",
+    "created_at": "2026-11-26T18:39:01.803160+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-26T18:39:01.801841+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': found 4 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
+    "created_at": "2026-11-26T18:39:01.799927+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': replied to bandidiot.bsky.social (hot post by iwillnotbesilenced.bsky.social, comment: 'Love it! Looks like the best version of our country, one tha') as primonewstoday.bsky.social: 'Totally feel you—nothing beats a turkey sandwich on the train! 🦃🚇\n\nhttps://short'",
+    "created_at": "2026-11-26T18:38:55.757496+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-26T18:38:54.118898+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-26T18:38:54.115699+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-26T18:38:53.680852+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-26T18:38:50.821781+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-26T18:38:50.818701+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #142 started (--only bluesky)",
+    "created_at": "2026-11-26T18:38:50.817260+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-26T17:55:15.273463+00:00",
     "card": ""
   },
@@ -1101,102 +1197,6 @@
     "level": "info",
     "message": "google-images: 0 candidate(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
     "created_at": "2026-11-26T17:45:31.978429+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
-    "created_at": "2026-11-26T17:45:31.831219+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - '",
-    "created_at": "2026-11-26T17:45:31.746346+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:25.355647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-26T17:45:25.354526+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - rejected (no og:image)",
-    "created_at": "2026-11-26T17:45:25.353466+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTUtzUk9TS1EtOENIeS1WOUVKS21xTTA5MFNRa1lmTmtHbnN3cDloV0JLbklJeGlnNDl) - skipping, og:image would be the logo",
-    "created_at": "2026-11-26T17:45:25.351661+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 5/6 tried: 'UK nuclear test veterans win 40-year battle for inquiry into' - no usable photo, trying the next story",
-    "created_at": "2026-11-26T17:45:25.036440+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'UK nuclear test veterans win 40-year battle for inquiry into' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-26T17:45:25.035302+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'UK nuclear test veterans win 40-year battle for inquiry into Cold War tests they say damaged health - ABC News - Breaking News, Latest News and Videos' (0 download(s) tried)",
-    "created_at": "2026-11-26T17:45:25.034182+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): http://www.marionettes.com/images/ckits.jpg (page: https://www.etsy.com/listing/1141900014/unicorn-marionette-puppet-craft-along | Marionette Kit - DIY - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T17:45:25.032936+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.pinimg.com/736x/95/24/1a/95241a85f42709667b4f44a81e5d58d6.jpg (page: https://marionettes.com/html/character_marionette_kit.html | Kit Lady Bug e Marinette - Sunny | Subm - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T17:45:25.031487+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): http://www.marionety.com/wp-content/uploads/2014/04/DSC_D-999x1024.jpg (page: https://br.pinterest.com/pin/766034217849876606/ | DIY MARIONETTE KIT – Marionety Truhlář - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T17:45:25.030237+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK nuclear test veterans win 40-year battle for in'): https://i.etsystatic.com/6201635/r/il/839a60/2260319280/il_1588xN.2260319280_q2em.jpg (page: https://produto.mercadolivre.com.br/MLB-844174209-kit-ladybug-marinette-original-miraculous-bandai-3 - page does not name the entity (nuclear))",
-    "created_at": "2026-11-26T17:45:25.029171+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'nuclear'",
-    "created_at": "2026-11-26T17:45:25.027336+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'nuclear'",
-    "created_at": "2026-11-26T17:45:24.806547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'nuclear'",
-    "created_at": "2026-11-26T17:45:24.646058+00:00",
     "card": ""
   }
 ]
