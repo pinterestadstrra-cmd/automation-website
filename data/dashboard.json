@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-26T20:04:14.496602+00:00",
-  "last_run": "2026-11-26T20:04:11.618874+00:00",
-  "runs": 145,
+  "generated_at": "2026-11-26T20:42:25.282307+00:00",
+  "last_run": "2026-11-26T20:38:46.783601+00:00",
+  "runs": 146,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 0,
+    "replies_today": 2,
     "total_posts": 0,
-    "total_replies": 0,
-    "accounts": 0
+    "total_replies": 2,
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-26T19:53:44.137287+00:00",
-    "mastodon.social": "2026-11-26T19:54:30.195872+00:00"
+    "Adsterra Blogger": "2026-11-26T20:41:15.127631+00:00",
+    "mastodon.social": "2026-11-26T20:42:25.071881+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 64,
+      "success": 65,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-26T19:53:44.137282+00:00"
+      "last_run": "2026-11-26T20:41:15.127627+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 11,
+      "fail": 12,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-26T19:54:30.195868+00:00"
+      "last_run": "2026-11-26T20:42:25.071878+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T19:53:44.137287+00:00",
-      "runs_today": 17,
-      "posts_today": 1,
+      "last_run": "2026-11-26T20:41:15.127631+00:00",
+      "runs_today": 18,
+      "posts_today": 2,
       "next_runs": [
-        "2026-11-27T02:08:44.137287+06:00",
-        "2026-11-27T02:23:44.137287+06:00",
-        "2026-11-27T02:38:44.137287+06:00",
-        "2026-11-27T02:53:44.137287+06:00",
-        "2026-11-27T03:08:44.137287+06:00"
+        "2026-11-27T02:56:15.127631+06:00",
+        "2026-11-27T03:11:15.127631+06:00",
+        "2026-11-27T03:26:15.127631+06:00",
+        "2026-11-27T03:41:15.127631+06:00",
+        "2026-11-27T03:56:15.127631+06:00"
       ],
       "next_post_times": [
         "2026-11-27T03:07:00+06:00",
@@ -99,7 +99,7 @@
         "2026-11-27T06:03:00+06:00",
         "2026-11-27T07:08:00+06:00"
       ],
-      "success": 64,
+      "success": 65,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-26T19:54:30.195872+00:00",
-      "runs_today": 17,
+      "last_run": "2026-11-26T20:42:25.071881+00:00",
+      "runs_today": 18,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T02:09:30.195872+06:00",
-        "2026-11-27T02:24:30.195872+06:00",
-        "2026-11-27T02:39:30.195872+06:00",
-        "2026-11-27T02:54:30.195872+06:00",
-        "2026-11-27T03:09:30.195872+06:00"
+        "2026-11-27T02:57:25.071881+06:00",
+        "2026-11-27T03:12:25.071881+06:00",
+        "2026-11-27T03:27:25.071881+06:00",
+        "2026-11-27T03:42:25.071881+06:00",
+        "2026-11-27T03:57:25.071881+06:00"
       ],
       "next_post_times": [
         "2026-11-27T03:09:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T07:08:00+06:00"
       ],
       "success": 17,
-      "fail": 11,
+      "fail": 12,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 16
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 6
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-26T20:04:11.620243+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-26T20:04:11.621404+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-26T20:38:46.785149+00:00"
     }
   ],
   "dry_run": false,
@@ -295,317 +307,317 @@
   },
   "trending": [
     "Birthday twin spectrum prompt",
-    "Wu-Tang Clan Thanksgiving halftime show",
-    "Grand Theft Auto VI",
-    "Israeli strikes in Gaza",
     "Thanksgiving Day celebrations",
-    "Lions vs. Bears",
+    "Tornado warning in Hampton Roads",
+    "Thanksgiving storm threatens travel",
+    "Nvidia chip exports to China",
     "Trump calls GDP revision fake",
-    "Describe a film without its name",
-    "Musk pledges kids SpaceX shares",
-    "Macy's parade postponed to Saturday"
+    "Kushner praises Putin's restraint",
+    "Grand Theft Auto VI",
+    "Lions vs. Bears",
+    "Describe a film without its name"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-26T20:04:14.239368+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-26T20:04:14.234658+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-26T20:04:13.836617+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-26T20:04:11.622629+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-26T20:04:11.621408+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-26T20:04:11.620249+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #145 started (--only blogger)",
-      "created_at": "2026-11-26T20:04:11.618901+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-26T19:54:30.377858+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Birthday twin spectrum prompt', 'Thanksgiving Day celebrations', \"Macy's parade postponed to Saturday\", 'FCC approves SpaceX Starmind satellites', 'Describe a film without its name']",
-      "created_at": "2026-11-26T19:54:30.370942+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-26T19:54:30.195889+00:00",
+      "created_at": "2026-11-26T20:42:25.071903+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': run failed (1/2 retries) - next retry at 02:24 Dhaka",
-      "created_at": "2026-11-26T19:54:30.194512+00:00",
+      "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 03:12 Dhaka",
+      "created_at": "2026-11-26T20:42:25.070750+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-26T19:54:30.192652+00:00",
+      "created_at": "2026-11-26T20:42:25.068993+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T19:54:20.189906+00:00",
+      "created_at": "2026-11-26T20:42:15.066188+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T19:54:19.995630+00:00",
+      "created_at": "2026-11-26T20:42:14.668233+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T19:54:19.993268+00:00",
+      "created_at": "2026-11-26T20:42:14.665925+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-26T19:54:14.624542+00:00",
+      "created_at": "2026-11-26T20:42:08.937183+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-26T19:54:14.622233+00:00",
+      "created_at": "2026-11-26T20:42:08.934810+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-26T19:54:14.448075+00:00",
+      "created_at": "2026-11-26T20:42:08.731233+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-26T19:54:14.445607+00:00",
+      "created_at": "2026-11-26T20:42:08.728805+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'The Guardian view on Russia’s war dead: the toll won’t stop ' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-26T19:54:06.638382+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-26T20:42:06.290894+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-26T19:54:06.637171+00:00",
+      "message": "promo category: USA political news",
+      "created_at": "2026-11-26T20:42:06.289949+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'The Guardian view on Russia’s war dead: the toll won’t stop ': https://files.coverscdn.com/covers/276539/mid/0000.jpg (from bing-images, query 'The Guardian view on Russia’s war dead: the toll won’t stop Putin. Resolve in backing Ukraine remains essential - The Guardian', page: https://pocketmags.com/eu/the-guardian-newspaper/monday-17-march-2025 | The Guardian Newspaper - Fri - matches 2 key entities (back, guardian))",
-      "created_at": "2026-11-26T19:54:06.635945+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Trump says Democrats 'did a good job,' blames Republican can': https://cdn.abcotvs.com/dip/images/20008673_reflecting-pool-trump-podium.png (from bing-images, query 'Trump says Democrats 'did a good job,' blames Republican candidates for midterm losses - PBS', page: https://abc7.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Trump spends the day  - matches 2 key entities (midterm, trump))",
+      "created_at": "2026-11-26T20:42:06.288711+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'The Guardian view on Russia’s war dead: the toll w' (, the photo shows Vladimir Putin, one of the key figures mentioned in the headline about Russia's war and Putin.)",
-      "created_at": "2026-11-26T19:54:06.634254+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-26T20:42:06.287186+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The Guardian view on Russia’s war dead: the toll w'): https://files.coverscdn.com/covers/288545/mid/0000.jpg (page: https://pocketmags.com/au/the-guardian-newspaper/friday-14-march-2025 | The Guardian Newspaper - Wed - only 1 of 14 key entities in the source page)",
-      "created_at": "2026-11-26T19:53:48.722152+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump says Democrats 'did a good job,' blames Repu'): https://www.eastbaytimes.com/wp-content/uploads/2026/11/Trump_28345-1.jpg?w=810 (page: https://abc7news.com/story/trump-deliver-remarks-front-revamped-reflecting-pool/20008630/ | Trump ca - only 1 of 11 key entities in the source page)",
+      "created_at": "2026-11-26T20:42:05.967340+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The Guardian view on Russia’s war dead: the toll w'): https://images.ctfassets.net/gau1nv66ynug/4G4yKkkzRvWlbfhsdkg3dU/09c93961c970bfffc5e3c79b16c34f70/Gu (page: https://www.daniellecitron.com/hate-crimes-in-cyberspace/the-guardian-logo/ | Annuity Rates - only 1 of 14 key entities in the source page)",
-      "created_at": "2026-11-26T19:53:48.720883+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T20:42:05.965028+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'The Guardian view on Russia’s war dead: the toll w'): https://ipoh.parade.com.my/wp-content/uploads/2017/09/Guardian-scaled.jpg (page: https://www.localcircles.com/a/ | GUARDIAN - Ipoh Parade Mall - only 1 of 14 key entities in the source page)",
-      "created_at": "2026-11-26T19:53:48.719633+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T20:42:05.769223+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'The Guardian view on Russia’s war dead: the toll won’t stop '",
-      "created_at": "2026-11-26T19:53:48.717093+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T20:42:05.641251+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'The Guardian view on Russia’s war dead: the toll won’t stop '",
-      "created_at": "2026-11-26T19:53:48.582448+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'The Guardian view on Russia’s war dead: the toll won’t stop '",
-      "created_at": "2026-11-26T19:53:48.486245+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'The Guardian view on Russia’s war dead: the toll won’t stop '",
-      "created_at": "2026-11-26T19:53:48.463945+00:00",
+      "message": "openverse: 0 result(s) for 'Trump says Democrats 'did a good job,' blames Republican can'",
+      "created_at": "2026-11-26T20:42:05.581074+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-26T19:53:44.967472+00:00",
+      "created_at": "2026-11-26T20:42:04.400476+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-26T19:53:44.966325+00:00",
+      "created_at": "2026-11-26T20:42:04.399458+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'The Guardian view on Russia’s war dead: the toll won’t stop ' - rejected (no og:image)",
-      "created_at": "2026-11-26T19:53:44.964996+00:00",
+      "message": "photo candidate: 'Trump says Democrats 'did a good job,' blames Republican can' - rejected (no og:image)",
+      "created_at": "2026-11-26T20:42:04.398260+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi8wFBVV95cUxQWEdiemswRjA4aENUb0tBQWZvUW1sRXpCaXJpV2ppeHhBRW51MDFsbGszVHdJcmwzaVN) - skipping, og:image would be the logo",
-      "created_at": "2026-11-26T19:53:44.962804+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivgFBVV95cUxQMUVwQ2o3NU9vaHBzWmd5UTZ4aURWYzNPcURhbDhtNG0xSHd1NVRZQzFnamhhcks0WXZ) - skipping, og:image would be the logo",
+      "created_at": "2026-11-26T20:42:04.395904+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Russia's own figures show it has lost nearly 500,000 people ' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-26T19:53:44.614745+00:00",
+      "message": "promo: story 3/6 tried: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - no usable photo, trying the next story",
+      "created_at": "2026-11-26T20:42:04.028528+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Live Updates: Oil prices inch back up as Iran and its Houthi' - skipped (same event used within 24h, event key 'allie attack back cbs escalate houthi inch iran live news oi')",
-      "created_at": "2026-11-26T19:53:44.612658+00:00",
+      "message": "photo candidate: 'Tracking Trump's Crackdown on Higher Education - U.S. News &' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-26T20:42:04.027127+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Tehran denies carrying out drone attack that ' - skipped (same event used within 24h, event key 'attack carry denie drone iran jazeera kill live out tehran w')",
-      "created_at": "2026-11-26T19:53:44.610713+00:00",
+      "message": "photo: no real photo found for 'Tracking Trump's Crackdown on Higher Education - U.S. News & World Report' (5 download(s) tried)",
+      "created_at": "2026-11-26T20:42:04.026071+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-26T19:53:44.140527+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-26T19:53:44.138944+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (ok - posted 1)",
-      "created_at": "2026-11-26T19:53:44.137308+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-26T19:53:44.134934+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': promo posted - event 'attack carry denie drone iran jazeera kill live out tehran w' on 24h cooldown (topic + link+event recorded, account primonewstoday.bsky.social)",
-      "created_at": "2026-11-26T19:53:44.133168+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "prepare_bsky_image: published 1080x720 (ratio 1.50) - unchanged",
-      "created_at": "2026-11-26T19:53:42.742068+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://www.usmagazine.com/wp-content/uploads/julianne-hough-shape-e3d7856a-4cd0-43f0-b70d-ef66bd4f7 (page: https://www.newsbreak.com/primetimer-520995/4372785744212-julianne-hough-reveals-how-dancing-with-th - page does not name the entity (Tracking))",
+      "created_at": "2026-11-26T20:42:04.025101+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1080x720 (ratio 1.50) - kept, no crop",
-      "created_at": "2026-11-26T19:53:42.740775+00:00",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://people.com/thmb/lKTELSTkKxBBPTp5xEM_jhnGmcU=/4000x0/filters:no_upscale():max_bytes(150000):s (page: https://www.usmagazine.com/celebrity-body/news/julianne-hough-i-was-killing-myself-to-stay-thin-as-a - page does not name the entity (Tracking))",
+      "created_at": "2026-11-26T20:42:04.024052+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: Tehran denies carrying out drone attack that '",
-      "created_at": "2026-11-26T19:53:42.738487+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.pinimg.com/736x/ce/17/5d/ce175d7aa17c62dfeb1b4e2d6c331a8e.jpg (page: https://people.com/julianne-hough-weird-lifelong-dream-dramatic-hair-change-11807195 | Dancer/TV per - page does not name the entity (Tracking))",
+      "created_at": "2026-11-26T20:42:04.022952+00:00",
+      "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-26T19:53:42.683730+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://wegotthiscovered.com/wp-content/uploads/2023/10/Julianne-Hough-Dancing-With-The-Stars-2.png? (page: https://www.pinterest.com/pin/dancertv-personality-julianne-hough-attends-dancing-with-the-stars--47 - page does not name the entity (Tracking))",
+      "created_at": "2026-11-26T20:42:04.021805+00:00",
+      "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 1 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-26T19:53:42.682254+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8562/15784682529_be393f61d6_b.jpg",
+      "created_at": "2026-11-26T20:42:04.020193+00:00",
+      "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': found 4 un-replied comment(s) on 25 own post(s) from the last 7 day(s) (primonewstoday.bsky.social)",
-      "created_at": "2026-11-26T19:53:42.678999+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8289/7858486230_9b710251ab_b.jpg",
+      "created_at": "2026-11-26T20:42:03.960622+00:00",
+      "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': replied to realjohnfkennedy.bsky.social (hot post by joycomes.bsky.social, comment: 'Thank you for all the bird photos and information.') as primonewstoday.bsky.social: 'Glad you enjoy them! There's always more feathered friends to share.  \n\nhttps://'",
-      "created_at": "2026-11-26T19:53:36.851424+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8110/8648949145_99c4e4586d_b.jpg",
+      "created_at": "2026-11-26T20:42:03.914182+00:00",
+      "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-26T19:53:35.123404+00:00",
-      "card": "Adsterra Blogger"
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8464/8138936582_0361e02d84_b.jpg",
+      "created_at": "2026-11-26T20:42:03.866373+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8122/8648949913_a4143c1be7_b.jpg",
+      "created_at": "2026-11-26T20:42:03.817038+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-26T20:42:03.769335+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Tracking'",
+      "created_at": "2026-11-26T20:42:03.597512+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Tracking'",
+      "created_at": "2026-11-26T20:42:03.449693+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Tracking'",
+      "created_at": "2026-11-26T20:42:03.389332+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-26T20:42:03.338314+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-26T20:42:03.336794+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: topical search found nothing for 'Tracking Trump's Crackdown on Higher Education - U' - trying entity search 'Tracking'",
+      "created_at": "2026-11-26T20:42:03.335678+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://cdna.artstation.com/p/assets/covers/images/020/217/242/large/lee-grimes-lee-grimes-screensho (page: https://www.youtube.com/watch?v=y3F4yxBtihM | ArtStation - Plants Vs Zombies Garden Warfare 2 Boss M - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T20:42:03.334453+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/lpVG0Wwz6fQ/maxresdefault.jpg (page: https://www.artstation.com/artwork/oOmDXw | Playing as bosses! | PvZ GW2 modded - YouTube - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T20:42:03.332718+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/38atyJjiE44/maxresdefault.jpg (page: https://www.youtube.com/watch?v=lpVG0Wwz6fQ | Plants vs Zombies Garden Warfare 2 Boss Gargantuar Gam - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T20:42:03.331327+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Tracking Trump's Crackdown on Higher Education - U'): https://i.ytimg.com/vi/jI9NNtEvNfk/maxresdefault.jpg (page: https://www.youtube.com/watch?v=38atyJjiE44 | Plants Vs Zombies GW2 Mod - Playing as Yeti boss (PC)  - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-26T20:42:03.330029+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T20:42:03.327022+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T20:42:03.200234+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T20:42:03.063575+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Tracking Trump s Crackdown Higher'",
+      "created_at": "2026-11-26T20:42:03.002953+00:00",
+      "card": ""
     }
   ]
 }
