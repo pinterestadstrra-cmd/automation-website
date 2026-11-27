@@ -2,1201 +2,1201 @@
   {
     "level": "info",
     "message": "worker run finished",
-    "created_at": "2026-11-27T04:01:20.024947+00:00",
+    "created_at": "2026-11-27T04:12:40.717570+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Victoria votes in state election', 'Grand Theft Auto VI', \"Zelenskyy's Thanksgiving message to America\"]",
-    "created_at": "2026-11-27T04:01:20.003244+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-27T04:01:19.940195+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T04:01:18.874723+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T04:01:18.058746+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T04:01:16.864134+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-27T04:01:16.848227+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-27T04:01:16.830418+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #159 started (--only blogger)",
-    "created_at": "2026-11-27T04:01:16.816954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T03:06:02.093262+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', 'Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Katie Miller car seat claim', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-27T03:06:02.088491+00:00",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Grand Theft Auto VI', 'Victoria votes in state election', \"Zelenskyy's Thanksgiving message to America\"]",
+    "created_at": "2026-11-27T04:12:40.712637+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T03:06:01.822727+00:00",
+    "created_at": "2026-11-27T04:12:40.544406+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T03:06:01.821639+00:00",
+    "created_at": "2026-11-27T04:12:40.543646+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T03:06:01.819974+00:00",
+    "created_at": "2026-11-27T04:12:40.541937+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T03:05:51.817739+00:00",
+    "created_at": "2026-11-27T04:12:30.539458+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T03:05:51.627966+00:00",
+    "created_at": "2026-11-27T04:12:30.300529+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T03:05:51.620257+00:00",
+    "created_at": "2026-11-27T04:12:30.298289+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-27T03:05:46.201658+00:00",
+    "created_at": "2026-11-27T04:12:24.840988+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T03:05:46.199167+00:00",
+    "created_at": "2026-11-27T04:12:24.839000+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T03:05:46.010084+00:00",
+    "created_at": "2026-11-27T04:12:24.600141+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T03:05:46.007749+00:00",
+    "created_at": "2026-11-27T04:12:24.597934+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from openverse)",
-    "created_at": "2026-11-27T03:05:39.730105+00:00",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-27T04:12:16.003026+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "promo category: war news",
-    "created_at": "2026-11-27T03:05:39.729038+00:00",
+    "created_at": "2026-11-27T04:12:16.002416+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg (from openverse, query 'Trump', page: https://www.flickr.com/photos/80038275@N00/14421324712 | Donald Trump - page names the entity (Trump))",
-    "created_at": "2026-11-27T03:05:39.727816+00:00",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+    "created_at": "2026-11-27T04:12:16.001745+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (, it features Donald Trump, who is mentioned in the headline, speaking at a podium.)",
-    "created_at": "2026-11-27T03:05:39.726352+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T04:12:16.000808+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-27T03:05:27.549823+00:00",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
+    "created_at": "2026-11-27T04:12:15.956766+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-27T03:05:27.333263+00:00",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T04:12:15.955637+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump'",
-    "created_at": "2026-11-27T03:05:27.082867+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T04:12:15.901135+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-27T03:05:27.020378+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T04:12:15.780170+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:26.968757+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-27T04:12:15.636679+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:26.967818+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Trump: Iran war will be over ‘sort of whenever I w' - trying entity search 'Trump'",
-    "created_at": "2026-11-27T03:05:26.966806+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.965195+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
-    "created_at": "2026-11-27T03:05:26.963614+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
-    "created_at": "2026-11-27T03:05:26.891337+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.814921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.813960+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.812943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.811941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.810908+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:26.809838+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T03:05:26.807423+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T03:05:26.584386+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T03:05:26.410355+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T03:05:26.346824+00:00",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-27T04:12:15.563006+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:24.176336+00:00",
+    "created_at": "2026-11-27T04:12:15.524966+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:24.175358+00:00",
+    "created_at": "2026-11-27T04:12:15.524371+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:24.174351+00:00",
+    "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-27T04:12:15.523771+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
-    "created_at": "2026-11-27T03:05:24.172821+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/yT3XeS-15Wo/mqdefault.jpg (page: https://kidvideo.org/video/abc-song-more-kids-songs-baby-big-cheese-nursery-rhymes-i149677.html | Ye - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:15.523129+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
-    "created_at": "2026-11-27T03:05:24.082842+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/YXqlc3fuF64/sddefault.jpg (page: https://music.youtube.com/channel/UCVd8sHiijL9nO_57uJAUV6g | Five Little Monkeys Nursery Rhymes And  - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:15.522403+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:24.025155+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/vBMUkgqhOsM/maxresdefault.jpg (page: https://kidvideo.org/video/five-little-monkeys-nursery-rhymes-and-baby-songs-by-baby-big-cheese-i106 - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:15.521673+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:24.022917+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/jkWOnBLt4v8/maxresdefault.jpg (page: https://music.youtube.com/watch?v=vBMUkgqhOsM | Humpty Dumpty Sat On A Wall Popular Nursery Rhyme fo - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:15.520813+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:23.758497+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T04:12:15.518796+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:23.558179+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T04:12:15.265214+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:23.482132+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T04:12:15.106365+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T04:12:15.028266+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:20.118065+00:00",
+    "created_at": "2026-11-27T04:12:14.991220+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:20.117135+00:00",
+    "created_at": "2026-11-27T04:12:14.990560+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:20.116015+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://images.sidearmdev.com/crop?url=https:%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.si (page:  - no source page to verify relevance)",
+    "created_at": "2026-11-27T04:12:14.989668+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
-    "created_at": "2026-11-27T03:05:20.114488+00:00",
+    "message": "bing-images: 1 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.987078+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
-    "created_at": "2026-11-27T03:05:20.042812+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.867772+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:19.895803+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.705802+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:19.893640+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:19.600793+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:19.399557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T03:05:19.338561+00:00",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.634713+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:15.558151+00:00",
+    "created_at": "2026-11-27T04:12:14.596715+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:15.557090+00:00",
+    "created_at": "2026-11-27T04:12:14.596109+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
-    "created_at": "2026-11-27T03:05:15.555776+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/originals/c1/5a/7b/c15a7b6f8c458fe4198ef33b74c50fe0.jpg (page: https://englishilm.com/dog-breeds-with-pictures/ | Hayal panosu için 640 fikir, 2025 | hayvan, köpek - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:14.595378+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T03:05:15.553574+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/originals/60/4f/33/604f3385f901c951ea364ae1a94d03de.jpg?nii=t (page: https://www.pinterest.com/metinbingol65eh/hayal-panosu/ | Dog Names | A List of Names Ideas For Male - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:14.594664+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Can Trump continue with Iran war despite funding restriction' - skipped (same event used within 24h, event key 'continue despite fund iran jazeera restriction trump war')",
-    "created_at": "2026-11-27T03:05:15.052012+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/736x/5d/30/64/5d3064e1042590e0a8d48b8ca54646c2.jpg (page: https://www.pinterest.com/pin/dog-names--563018698274924/ | 100+ female dog cute names To help you c - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:14.593967+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T03:05:15.050821+00:00",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://tractive.com/blog/wp-content/uploads/2023/03/top_dog_names_worldwide_tractive.jpg (page: https://xaydungso.vn/blog/100-female-dog-cute-names-to-help-you-choose-the-perfect-name-en-in.html | - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:14.593115+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 1/6 tried: 'Zelenskyy warns of major Russian attack as Trump urges Putin' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T03:05:15.049306+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.590898+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Zelenskyy warns of major Russian attack as Trump urges Putin' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T03:05:15.048181+00:00",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.474267+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Zelenskyy warns of major Russian attack as Trump urges Putin to ‘pull back’ - Al Jazeera' (5 download(s) tried)",
-    "created_at": "2026-11-27T03:05:15.047325+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.323101+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2b5c13ce-c8f7-4b5d-8988-2e0355bb780a/dk8im (page: Dumbo Casey Jr El Tren PNG by TobisitoM on DeviantArt - page does not name the entity (Zelenskyy))",
-    "created_at": "2026-11-27T03:05:15.046414+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048815445_985312eb55_b.jpg",
-    "created_at": "2026-11-27T03:05:15.044565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048815685_df5bc85d0b_b.jpg",
-    "created_at": "2026-11-27T03:05:14.983109+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048356133_9f872b190b_b.jpg",
-    "created_at": "2026-11-27T03:05:14.905707+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501582141_948f2def16_b.jpg",
-    "created_at": "2026-11-27T03:05:14.844578+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52502133853_b461935a71_b.jpg",
-    "created_at": "2026-11-27T03:05:14.765201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:05:14.693858+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:05:14.486408+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:05:14.234763+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:05:14.163062+00:00",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T04:12:14.250143+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:14.126021+00:00",
+    "created_at": "2026-11-27T04:12:14.204721+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:14.124998+00:00",
+    "created_at": "2026-11-27T04:12:14.204085+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Zelenskyy warns of major Russian attack as Trump u' - trying entity search 'Zelenskyy'",
-    "created_at": "2026-11-27T03:05:14.123980+00:00",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no og:image)",
+    "created_at": "2026-11-27T04:12:14.203249+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 0 candidate(s) for 'Zelenskyy warns major Russian attack'",
-    "created_at": "2026-11-27T03:05:14.121661+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOEVienFUcEhQaDhycjBhVEhBWmNKLWpIVXF2SmtKMnBHd1VhOTViamZ2eFRfQlR5YTV) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T04:12:14.200941+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Zelenskyy warns major Russian attack'",
-    "created_at": "2026-11-27T03:05:13.780578+00:00",
+    "message": "promo: story 3/6 tried: 'UK shields fighter jets, contacts reservists in Cold War-sca' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T04:12:13.912382+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Zelenskyy warns major Russian attack'",
-    "created_at": "2026-11-27T03:05:13.584650+00:00",
+    "message": "photo candidate: 'UK shields fighter jets, contacts reservists in Cold War-sca' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T04:12:13.911739+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Zelenskyy warns major Russian attack'",
-    "created_at": "2026-11-27T03:05:13.524321+00:00",
+    "message": "photo: no real photo found for 'UK shields fighter jets, contacts reservists in Cold War-scale push amid Russia threat - Fox News' (5 download(s) tried)",
+    "created_at": "2026-11-27T04:12:13.911123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://dermnetnz.org/assets/Uploads/dermatitis/s/nummular-eczema69__FillWzEyMDAsNjI4XQ.jpg (page: Nummular dermatitis discoid eczema image - page does not name the entity (shields))",
+    "created_at": "2026-11-27T04:12:13.910457+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/0/05/Royal_Coat_and_Shield_of_Majorca_c.1276-14th_Cen",
+    "created_at": "2026-11-27T04:12:13.909599+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "download_image: rejected (not a valid photo >=400px): https://upload.wikimedia.org/wikipedia/commons/0/05/Royal_Coat_and_Shield_of_Majorca_c.1276-14th_Century.svg",
+    "created_at": "2026-11-27T04:12:13.907698+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/2/29/Shield_of_Saxe-Coburg_and_Gotha.svg",
+    "created_at": "2026-11-27T04:12:13.833746+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4150/5000494134_cac151d1f1.jpg",
+    "created_at": "2026-11-27T04:12:13.758375+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3162/2997189347_c54bd23ef4_b.jpg",
+    "created_at": "2026-11-27T04:12:13.650686+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5050/5379365295_d2227343b1_b.jpg",
+    "created_at": "2026-11-27T04:12:13.545285+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'shields'",
+    "created_at": "2026-11-27T04:12:13.429476+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'shields'",
+    "created_at": "2026-11-27T04:12:13.266731+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'shields'",
+    "created_at": "2026-11-27T04:12:13.122106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'shields'",
+    "created_at": "2026-11-27T04:12:13.048590+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:13.472263+00:00",
+    "created_at": "2026-11-27T04:12:13.012091+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:13.471308+00:00",
+    "created_at": "2026-11-27T04:12:13.011390+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b75f3a3b-4f27-4032-aa68-82c8aeec6af0/dc579 (page: https://www.deviantart.com/mademoiselle-ilo/art/Mademoiselle-Ilo-Secretary-latex-top-and-skirt-67207 - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:13.470322+00:00",
+    "message": "photo: topical search found nothing for 'UK shields fighter jets, contacts reservists in Co' - trying entity search 'shields'",
+    "created_at": "2026-11-27T04:12:13.010700+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac244b80-2992-4858-8cfe-2cadf33b9da9/dk614 (page: https://www.deviantart.com/mademoiselle-ilo/art/Mademoiselle-Ilo-Custom-latex-top-and-legging-734331 - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:13.469312+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://mrwallpaper.com/images/thumbnail/atlas-and-p-body-hugging-portal-2-dual-screen-x53fyft7pq86a (page: Portal 2 HD Wallpapers (100++) - MrWallpaper.com - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:13.009802+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://1.prplcdn.com/i/p/2861/286148-a1757433179450.jpg?1757433325 (page: https://www.deviantart.com/mademoiselle-juliska/art/Help-Me-Out-Of-This-Pvc-I-Feel-Like-Latex-121945 - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:13.468194+00:00",
+    "message": "bing-images: 1 candidate(s) for 'UK shields fighter jets contacts'",
+    "created_at": "2026-11-27T04:12:13.007113+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://live.staticflickr.com/4154/5011878780_c041da6358_z.jpg (page: https://purpleport.com/portfolio/mrsmiller/image/9027487/model?type=front | Miss-adventures of latex - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:13.467132+00:00",
+    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets contacts'",
+    "created_at": "2026-11-27T04:12:12.900401+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:13.464868+00:00",
+    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets contacts'",
+    "created_at": "2026-11-27T04:12:12.763372+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:13.177961+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.988212+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.922623+00:00",
+    "message": "openverse: 0 result(s) for 'UK shields fighter jets contacts'",
+    "created_at": "2026-11-27T04:12:12.692717+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:12.877687+00:00",
+    "created_at": "2026-11-27T04:12:12.656488+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:12.874335+00:00",
+    "created_at": "2026-11-27T04:12:12.655896+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://screen.pocket.watch/a/pw/Lanas-Life-V5.2-1024x576.png (page: pocket.watch Screening Room - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:05:12.870595+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://i.ytimg.com/vi/htEIhbSUbkI/hqdefault.jpg (page: https://gandhiashramtiruchengode.org/ | House for sale in గాంధీ నగర్ l Gandhi Nagar l Hyderabad, nea - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.655284+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.868469+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://i.ytimg.com/vi/V54WNqNq_Tg/maxresdefault.jpg (page: https://www.youtube.com/watch?v=htEIhbSUbkI | Watch: Truck At Rahul Gandhi's House As Disqualified M - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.654589+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.658422+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://i.ytimg.com/vi/UYClMQTE1Fg/maxresdefault.jpg (page: https://www.youtube.com/watch?v=V54WNqNq_Tg | Rahul Gandhi May Shift To Former Delhi CM's House |Rah - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.653887+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.423979+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://static.langimg.com/nbt/thumb/102532883/rahul-gandhi-delhi-bunglow.jpg?imgsize=62758&width=16 (page: https://www.youtube.com/watch?v=UYClMQTE1Fg | rahul gandhi gets his official house at delhi 12 tughl - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.653035+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Zelenskyy warns of major Russian attack as Trump urges Putin'",
-    "created_at": "2026-11-27T03:05:12.324635+00:00",
+    "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.650656+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.503632+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.362285+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.289495+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:12.275780+00:00",
+    "created_at": "2026-11-27T04:12:12.253597+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:05:12.274793+00:00",
+    "created_at": "2026-11-27T04:12:12.252721+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Zelenskyy warns of major Russian attack as Trump urges Putin' - rejected (no og:image)",
-    "created_at": "2026-11-27T03:05:12.273681+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://eleven.se/storage/161D64588A4BDB7C113B3E9A8A028F8236929198532D468819124173A5E45484/3c6e5873f (page: https://www.sephora.com.au/brands/peter-thomas-roth | Peter Thomas Roth Firmx Collagen Eye Cream 15  - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.252101+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMitgFBVV95cUxNUWhTZEtvSHh2TnVxc2VyZHdvaTFta0F0WGI4TTc3aHhIZzk0dV9iZXJSSGk0VEFDd3J) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T03:05:12.271553+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://www.adorebeauty.com.au/pim_media/000/420/975/Peter_Thomas_Roth_FirmX™_Collagen_Eye_Cream_15m (page: https://eleven.se/product/peter-thomas-roth-firmx-collagen-eye-cream-89970 | Shop Peter Thomas Roth  - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.251419+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran accused of deadly drone attack in Kuwait ' - skipped (same event used within 24h, event key 'accus attack call cbs deadly drone iran kuwait live news pre')",
-    "created_at": "2026-11-27T03:05:11.758836+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://co.nice-cdn.com/upload/image/product/large/default/peter-thomas-roth-firmx-collagen-eye-crea (page: https://www.adorebeauty.com.au/p/peter-thomas-roth/peter-thomas-roth-firmx-collagen-eye-cream-15ml.h - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.250727+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Iran war live: Iran’s Araghchi calls deadly Kuwait attack ‘s' - skipped (same event used within 24h, event key 'araghchi attack call deadly iran jazeera kuwait live suspici')",
-    "created_at": "2026-11-27T03:05:11.757205+00:00",
+    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://co.nice-cdn.com/upload/image/product/large/default/peter-thomas-roth-firmx-collagen-eye-crea (page: https://www.cosmeterie.at/peter-thomas-roth/firmx-collagen-eye-cream | Peter Thomas Roth FirmX® Coll - only 0 of 14 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:12.249936+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T03:05:11.564488+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T03:05:11.563153+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T03:05:11.561978+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': run failed (1/2 retries) - next retry at 09:35 Dhaka",
-    "created_at": "2026-11-27T03:05:11.560937+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T03:05:11.559094+00:00",
+    "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.247968+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "prepare_bsky_image: published 900x600 (ratio 1.50) - shrunk to fit 950KB, ratio preserved",
-    "created_at": "2026-11-27T03:05:11.432010+00:00",
+    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:12.116050+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "prepare_bsky_image: original 1800x1200 (ratio 1.50) - kept, no crop",
-    "created_at": "2026-11-27T03:05:11.401437+00:00",
+    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:11.954270+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
-    "created_at": "2026-11-27T03:05:11.399426+00:00",
-    "card": "Adsterra Blogger"
+    "message": "openverse: 0 result(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
+    "created_at": "2026-11-27T04:12:11.879040+00:00",
+    "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T03:05:11.323093+00:00",
-    "card": "Adsterra Blogger"
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T04:12:11.839717+00:00",
+    "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-27T03:05:11.322003+00:00",
-    "card": "Adsterra Blogger"
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T04:12:11.839013+00:00",
+    "card": ""
   },
   {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T03:05:11.320608+00:00",
+    "level": "info",
+    "message": "photo candidate: 'UK shields fighter jets, contacts reservists in Cold War-sca' - rejected (no og:image)",
+    "created_at": "2026-11-27T04:12:11.838165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPX3UwOXNyb0NoQkd5dWprbW5CZjhYU09lT0I3UFQxRnQ1QUtNemg2T2k2RzFvU0FodTl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T04:12:11.836232+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war latest: Trump calls on Putin to pull back all mi' - skipped (same event used within 24h, event key 'aggression all back call europe latest military news pull pu')",
+    "created_at": "2026-11-27T04:12:11.593302+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'How the Black Sea front in the Russia-Ukraine war is threate' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T04:12:11.592230+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T04:12:11.591374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict - CBS News' (9 download(s) tried)",
+    "created_at": "2026-11-27T04:12:11.590501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://wallpapers.com/images/hd/pure-black-color-background-1w91gtcbpeq412pg.jpg",
+    "created_at": "2026-11-27T04:12:11.589800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'How the Black Sea front in the Russia-Ukraine war ' (. The image is completely black and does not depict anything related to the headline.)",
+    "created_at": "2026-11-27T04:12:11.588297+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png",
+    "created_at": "2026-11-27T04:12:08.443463+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'How the Black Sea front in the Russia-Ukraine war ' (\n\nReason: The image is completely black and does not show any people, places, or events related to the headline.)",
+    "created_at": "2026-11-27T04:12:08.442223+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp4063159.jpg",
+    "created_at": "2026-11-27T04:12:05.065827+00:00",
     "card": ""
   },
   {
     "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T03:05:10.206123+00:00",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp4063159.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-27T04:12:05.065102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp2553315.jpg",
+    "created_at": "2026-11-27T04:12:05.062689+00:00",
     "card": ""
   },
   {
     "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T03:05:10.078874+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T03:05:09.962592+00:00",
+    "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp2553315.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+    "created_at": "2026-11-27T04:12:05.061697+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T03:05:09.377450+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Democrats’ plan to end funding for Iran war leaves open what' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-27T03:05:09.375871+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/4258566925_5ef4948e9c_b.jpg",
+    "created_at": "2026-11-27T04:12:05.057396+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T03:05:06.535025+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8054/8399644719_82a05837a7_b.jpg",
+    "created_at": "2026-11-27T04:12:04.938402+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T03:05:06.534046+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2129/2094032782_8f075ed396_b.jpg",
+    "created_at": "2026-11-27T04:12:04.834452+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats', page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - page names the entity (Democrats))",
-    "created_at": "2026-11-27T03:05:06.532811+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3866/14893785171_d40fe9591b_b.jpg",
+    "created_at": "2026-11-27T04:12:04.589584+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (, the photo shows Hakeem Jeffries, a prominent Democratic lawmaker who often speaks on such legislative policies.)",
-    "created_at": "2026-11-27T03:05:06.531372+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6217/6342662124_a376bb43f6.jpg",
+    "created_at": "2026-11-27T04:12:04.479775+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
-    "created_at": "2026-11-27T03:04:50.613453+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Black'",
+    "created_at": "2026-11-27T04:12:04.373523+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (\n\nReason: The image shows political campaign buttons, not the people, places, or events related to the headline about a plan to end funding for the Ir)",
-    "created_at": "2026-11-27T03:04:50.611836+00:00",
+    "message": "google-images: 0 candidate(s) for 'Black'",
+    "created_at": "2026-11-27T04:12:04.191919+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/8/89/Richmond_County_Democratic_Party.png?utm_source= (page: https://commons.wikimedia.org/wiki/File:Richmond_County_Democratic_Party.png | File:Richmond County  - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.867316+00:00",
+    "message": "wikimedia: search HTTP 429 for 'Black'",
+    "created_at": "2026-11-27T04:12:04.050060+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Democratic_presidential_ticket_1864b.jpg/12 (page: https://commons.wikimedia.org/wiki/File:Democratic_presidential_ticket_1864b.jpg | File:Democratic p - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.866147+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/5/55/Chicago_Democratic_Convention_1968.png?utm_sourc (page: https://commons.wikimedia.org/wiki/File:Chicago_Democratic_Convention_1968.png | File:Chicago Democr - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.865071+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.863969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-    "created_at": "2026-11-27T03:04:36.862530+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.787898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.786863+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T03:04:36.785886+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T03:04:36.783692+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T03:04:36.550047+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (width 205px < 400): https://upload.wikimedia.org/wikipedia/commons/9/94/Logo_of_the_Democratic_Party_of_Guam.png?utm_sou",
-    "created_at": "2026-11-27T03:04:36.356227+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: rejected candidate (width 210px < 400): https://upload.wikimedia.org/wikipedia/commons/7/79/American_Samoa_Democratic_Party_logo.png?utm_sou",
-    "created_at": "2026-11-27T03:04:36.355248+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-27T03:04:36.353700+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-27T03:04:35.939251+00:00",
+    "message": "openverse: 5 result(s) for 'Black'",
+    "created_at": "2026-11-27T04:12:03.975219+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:35.887231+00:00",
+    "created_at": "2026-11-27T04:12:03.937071+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:35.886208+00:00",
+    "created_at": "2026-11-27T04:12:03.936407+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-    "created_at": "2026-11-27T03:04:35.885298+00:00",
+    "message": "photo: topical search found nothing for 'How the Black Sea front in the Russia-Ukraine war ' - trying entity search 'Black'",
+    "created_at": "2026-11-27T04:12:03.935708+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.884348+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pure-black-color-background-1w91gtcbpeq412pg.jpg (page: https://wallpapers.com/total-black | [200+] Black Color Backgrounds | Wallpapers.com - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.934989+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.883330+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/black-color-background | The Data Dude – Wednesday Watch: the Black | Nebrask - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.934270+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.882267+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Plain Bl - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.933532+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.881271+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://wallpapercave.com/plain-black-wallpapers | Black HD Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.932649+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T03:04:35.878963+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://upload.wikimedia.org/wikipedia/commons/2/28/Tear_of_the_Sunflower_%2852100762838%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=134822761 | Tear of the Sunflower (52100762838) - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.931919+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T03:04:35.664031+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://live.staticflickr.com/5519/31086629415_e459771cd2_b.jpg (page: https://www.flickr.com/photos/77612281@N05/31086629415 | The War of the Nations_WW1_069 - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.931122+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T03:04:35.486915+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Black Sea front Russia Ukraine'",
+    "created_at": "2026-11-27T04:12:03.929118+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T03:04:35.427090+00:00",
+    "message": "google-images: 0 candidate(s) for 'Black Sea front Russia Ukraine'",
+    "created_at": "2026-11-27T04:12:03.733691+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Black Sea front Russia Ukraine'",
+    "created_at": "2026-11-27T04:12:03.582690+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 2 result(s) for 'Black Sea front Russia Ukraine'",
+    "created_at": "2026-11-27T04:12:03.508327+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:35.361857+00:00",
+    "created_at": "2026-11-27T04:12:03.469449+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:35.360836+00:00",
+    "created_at": "2026-11-27T04:12:03.468768+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.359535+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pure-black-color-background-1w91gtcbpeq412pg.jpg (page: https://wallpapers.com/total-black | [200+] Black Color Backgrounds | Wallpapers.com - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.468075+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.358541+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/black-color-background | The Data Dude – Wednesday Watch: the Black | Nebrask - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.467245+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.357383+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Plain Bl - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.466347+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:35.356033+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://wallpapercave.com/plain-black-wallpapers | Black HD Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.465544+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:35.353602+00:00",
+    "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:03.463721+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:35.178478+00:00",
+    "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:03.260063+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:35.014755+00:00",
+    "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:03.124910+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:34.951189+00:00",
+    "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:03.050939+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:34.900014+00:00",
+    "created_at": "2026-11-27T04:12:03.007307+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:34.899021+00:00",
+    "created_at": "2026-11-27T04:12:03.006656+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:34.897918+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pure-black-color-background-1w91gtcbpeq412pg.jpg (page: https://wallpapers.com/total-black | [200+] Black Color Backgrounds | Wallpapers.com - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.005888+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:34.896809+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/black-color-background | The Data Dude – Wednesday Watch: the Black | Nebrask - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.005134+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:34.895691+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Plain Bl - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.004369+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:34.894561+00:00",
+    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://wallpapercave.com/plain-black-wallpapers | Black HD Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T04:12:03.003537+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:34.892010+00:00",
+    "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:03.001323+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:34.684610+00:00",
+    "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:02.813401+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:34.491543+00:00",
+    "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:02.641910+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T03:04:34.428045+00:00",
+    "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
+    "created_at": "2026-11-27T04:12:02.566399+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:34.376779+00:00",
+    "created_at": "2026-11-27T04:12:02.522561+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:34.375657+00:00",
+    "created_at": "2026-11-27T04:12:02.521772+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
-    "created_at": "2026-11-27T03:04:34.374368+00:00",
+    "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no og:image)",
+    "created_at": "2026-11-27T04:12:02.520356+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T03:04:34.371872+00:00",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifkFVX3lxTE1XSG11OFNDMy1CT0lldVd0S21WUVE4SERyVUFSRWpqZUw1LXo0MEdVWmJWNWpjaWcxUGV) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T04:12:02.518414+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 1/6 tried: 'Zelenskyy warns of major Russian attack as Trump urges Putin' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T03:04:33.913628+00:00",
+    "message": "promo: story 1/6 tried: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T04:12:02.240986+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Zelenskyy warns of major Russian attack as Trump urges Putin' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T03:04:33.912344+00:00",
+    "message": "photo candidate: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T04:12:02.240209+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: no real photo found for 'Zelenskyy warns of major Russian attack as Trump urges Putin to ‘pull back’ - Al Jazeera' (5 download(s) tried)",
-    "created_at": "2026-11-27T03:04:33.911392+00:00",
+    "message": "photo: no real photo found for 'Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’ - CNBC' (5 download(s) tried)",
+    "created_at": "2026-11-27T04:12:02.239347+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://img.freepik.com/premium-vector/thanksgiving-coloring-page-thanks-giving-vector-thanks-giving (page: https://www.teacherspayteachers.com/Product/Thanksgiving-Gratitude-Coloring-Pages-Posters-Set-Color- - page does not name the entity (Zelenskyy))",
-    "created_at": "2026-11-27T03:04:33.910355+00:00",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://is1-ssl.mzstatic.com/image/thumb/Music18/v4/eb/68/aa/eb68aa0f-bf3b-78d1-e9a1-c2db2996b545/CO (page: https://music.apple.com/vn/album/uncontrollably-fond-original-television-soundtrack/1140697146 | ‎Un - page does not name the entity (Two))",
+    "created_at": "2026-11-27T04:12:02.238542+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://www.printablee.com/postpic/2024/11/6.-gratitude-coloring-page-thanksgiving-01n_16449.jpg (page: https://www.freepik.com/premium-vector/thanksgiving-coloring-page-thanks-giving-vector-thanks-giving - page does not name the entity (Zelenskyy))",
-    "created_at": "2026-11-27T03:04:33.909182+00:00",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://is1-ssl.mzstatic.com/image/thumb/Music18/v4/ec/4c/de/ec4cdeac-b64c-f2f0-45cb-9b104b0ebc81/CO (page: https://music.apple.com/vn/album/uncontrollably-fond-original-television-soundtrack/1132422136 | ‎Un - page does not name the entity (Two))",
+    "created_at": "2026-11-27T04:12:02.237716+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://ecdn.teacherspayteachers.com/cdn-cgi/image/format=avif,quality=70,onerror=redirect/thumbitem (page: https://www.printablee.com/post_thanksgiving-printables-thankful-for_235443/ | Thankful Turkey Color - page does not name the entity (Zelenskyy))",
-    "created_at": "2026-11-27T03:04:33.908092+00:00",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/7a/85/23/7a852360-5069-7ea8-1bb6-bad4d8fd87e4/CO (page: https://music.apple.com/tr/album/uncontrollably-fond-original-television-soundtrack/1131936876 | ‎Un - page does not name the entity (Two))",
+    "created_at": "2026-11-27T04:12:02.236817+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://www.craftprofessional.com/images/give-thanks-coloring-page.png (page: https://shraddha.mountmadonna.org/printable-free-thanksgiving-coloring-pages | Thanksgiving Coloring - page does not name the entity (Zelenskyy))",
-    "created_at": "2026-11-27T03:04:33.906820+00:00",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/e3/47/02/e34702ce-5efa-231f-97e9-c82e05ff24f9/CO (page: https://music.apple.com/vn/album/uncontrollably-fond-original-television-soundtrack/1147429609 | 함부로 - page does not name the entity (Two))",
+    "created_at": "2026-11-27T04:12:02.235952+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048815445_985312eb55_b.jpg",
-    "created_at": "2026-11-27T03:04:33.905176+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6072/6045665103_49762f304a_b.jpg",
+    "created_at": "2026-11-27T04:12:02.234344+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048815685_df5bc85d0b_b.jpg",
-    "created_at": "2026-11-27T03:04:33.829580+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2908/14223350131_387ee3a75b_b.jpg",
+    "created_at": "2026-11-27T04:12:02.127865+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52048356133_9f872b190b_b.jpg",
-    "created_at": "2026-11-27T03:04:33.747935+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3078/2332468377_9ee8734076_b.jpg",
+    "created_at": "2026-11-27T04:12:01.999675+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501582141_948f2def16_b.jpg",
-    "created_at": "2026-11-27T03:04:33.670752+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1306/4679199010_29e9b08a14.jpg",
+    "created_at": "2026-11-27T04:12:01.885478+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52502133853_b461935a71_b.jpg",
-    "created_at": "2026-11-27T03:04:33.590436+00:00",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/2029/2340979049_78f0187534.jpg",
+    "created_at": "2026-11-27T04:12:01.643018+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:04:33.379544+00:00",
+    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The photo shows fishing boats in the water, which is unrelated to the news headline about a drone attack and political statements.)",
+    "created_at": "2026-11-27T04:12:01.641875+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:04:33.217643+00:00",
+    "message": "bing-images: 4 candidate(s) for 'Two'",
+    "created_at": "2026-11-27T04:11:57.056398+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:04:33.038762+00:00",
+    "message": "google-images: 0 candidate(s) for 'Two'",
+    "created_at": "2026-11-27T04:11:56.952446+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two'",
+    "created_at": "2026-11-27T04:11:56.813208+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Two'",
+    "created_at": "2026-11-27T04:11:56.738236+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:56.702790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:56.702125+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Two Italians killed in Kuwait drone attack; Trump ' - trying entity search 'Two'",
+    "created_at": "2026-11-27T04:11:56.701461+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://ca-times.brightspotcdn.com/dims4/default/5f3acb6/2147483647/strip/true/crop/2400x1600+0+0/re (page: https://jeulli.com/blogs/kids/8-tips-for-throwing-a-virtual-birthday-party-fun-ideas-for-celebrating - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.700722+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://funnightgames.com/wp-content/uploads/sites/7/2024/01/feature.jpg (page: https://www.latimes.com/lifestyle/story/2020-04-20/zoom-party-tips-etiquette-virtual-hangout-ideas-f - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.699960+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-photo/virtual-team-celebration-online-parties-collaboration_1090500- (page: https://www.kumospace.com/blog/virtual-office-party-ideas | Premium Photo | Virtual Team Celebration - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.699197+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://escapely.com/wp-content/uploads/2024/10/How-to-Host-a-Virtual-Holiday-Party-in-6-Steps.jpg (page: https://www.freepik.com/premium-ai-image/virtual-team-celebration-online-parties-collaboration_13495 - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.698369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T04:11:56.696390+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T04:11:56.523399+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T04:11:56.362256+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T04:11:56.289237+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:56.253830+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:56.253184+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://www.goworldtravel.com/wp-content/uploads/2023/05/Snorkeling-in-Hawaii-Ultimate-Guide-to-the- (page: https://www.hawaiiactivities.com/travelguide/best-beaches-for-snorkeling-in-oahu/ | The Ultimate Gui - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.252474+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://livingoceantours.com/wp-content/uploads/2026/02/snorkeling-in-waikiki-hawaii-snorkeling-turt (page: https://www.goworldtravel.com/best-places-snorkle-hawaii/ | Snorkeling In Waikiki Hawaii A Guide To  - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.251707+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://livingoceantours.com/wp-content/uploads/2026/01/oahu-snorkeling-reef-life.jpg (page: https://livingoceantours.com/snorkeling-in-waikiki-hawaii-5/ | Your Ultimate Guide To Oahu Snorkelin - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.250970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdnimg.co/7496e09b-3edc-4156-b33a-4c6f331ce8b9/10ddc298-6823-412a-87cb-8e2eee6d99f4/hawaii-b (page: https://livingoceantours.com/oahu-snorkeling-2/ | 8 Unforgettable Spots For Hawaii Big Island Best S - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:56.250165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T04:11:56.247930+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T04:11:56.118762+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T04:11:55.979986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T04:11:55.907374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:55.866473+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T04:11:55.865780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://logos-world.net/wp-content/uploads/2023/01/xHamster-Logo-2007-500x281.png (page: https://www.vecteezy.com/photo/31236205-homepage-of-xhamster-website-on-the-display-of-pc-url-xhamst - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:55.865023+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdn.1min30.com/wp-content/uploads/2018/12/Le-logo-xHamster.jpg (page: https://logos-world.net/xhamster-logo/ | xHamster logo : histoire, signification et évolution, symbo - only 0 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T04:11:55.864222+00:00",
     "card": ""
   }
 ]

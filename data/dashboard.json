@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T04:01:20.021995+00:00",
-  "last_run": "2026-11-27T04:01:16.816929+00:00",
-  "runs": 159,
+  "generated_at": "2026-11-27T04:12:40.715597+00:00",
+  "last_run": "2026-11-27T04:10:38.663948+00:00",
+  "runs": 160,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T03:05:11.561961+00:00",
-    "mastodon.social": "2026-11-27T03:06:01.822695+00:00"
+    "Adsterra Blogger": "2026-11-27T04:11:55.107413+00:00",
+    "mastodon.social": "2026-11-27T04:12:40.544380+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 5,
+      "fail": 6,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T03:05:11.561959+00:00"
+      "last_run": "2026-11-27T04:11:55.107410+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 18,
+      "fail": 19,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T03:06:01.822691+00:00"
+      "last_run": "2026-11-27T04:12:40.544378+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T03:05:11.561961+00:00",
-      "runs_today": 3,
+      "last_run": "2026-11-27T04:11:55.107413+00:00",
+      "runs_today": 4,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T10:05:11.561961+06:00",
-        "2026-11-27T10:20:11.561961+06:00",
-        "2026-11-27T10:35:11.561961+06:00",
-        "2026-11-27T10:50:11.561961+06:00",
-        "2026-11-27T11:05:11.561961+06:00"
+        "2026-11-27T10:26:55.107413+06:00",
+        "2026-11-27T10:41:55.107413+06:00",
+        "2026-11-27T10:56:55.107413+06:00",
+        "2026-11-27T11:11:55.107413+06:00",
+        "2026-11-27T11:26:55.107413+06:00"
       ],
       "next_post_times": [
         "2026-11-27T10:59:00+06:00",
@@ -100,7 +100,7 @@
         "2026-11-27T15:00:00+06:00"
       ],
       "success": 70,
-      "fail": 5,
+      "fail": 6,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T03:06:01.822695+00:00",
-      "runs_today": 3,
+      "last_run": "2026-11-27T04:12:40.544380+00:00",
+      "runs_today": 4,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T10:06:01.822695+06:00",
-        "2026-11-27T10:21:01.822695+06:00",
-        "2026-11-27T10:36:01.822695+06:00",
-        "2026-11-27T10:51:01.822695+06:00",
-        "2026-11-27T11:06:01.822695+06:00"
+        "2026-11-27T10:27:40.544380+06:00",
+        "2026-11-27T10:42:40.544380+06:00",
+        "2026-11-27T10:57:40.544380+06:00",
+        "2026-11-27T11:12:40.544380+06:00",
+        "2026-11-27T11:27:40.544380+06:00"
       ],
       "next_post_times": [
         "2026-11-27T10:53:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T14:52:00+06:00"
       ],
       "success": 17,
-      "fail": 18,
+      "fail": 19,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T04:01:16.830409+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T04:01:16.848217+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T04:10:38.665120+00:00"
     }
   ],
   "dry_run": false,
@@ -296,315 +308,315 @@
   "trending": [
     "Thanksgiving Day celebrations",
     "Birthday twin spectrum prompt",
-    "Victoria votes in state election",
     "Grand Theft Auto VI",
+    "Victoria votes in state election",
     "Zelenskyy's Thanksgiving message to America",
-    "Musk pledges kids SpaceX shares",
-    "Eagles vs. Cowboys",
+    "Aaron Rodgers reportedly out",
     "Macy's parade postponed to Saturday",
-    "Cowboys throwback uniforms",
-    "Boreen daily trivia scores"
+    "Duran Duran's Andy Taylor dies",
+    "National Dog Show on Thanksgiving",
+    "Thanksgiving storm knocks out power"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T04:01:19.940195+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T04:01:18.874723+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T04:01:18.058746+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T04:01:16.864134+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T04:01:16.848227+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T04:01:16.830418+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #159 started (--only blogger)",
-      "created_at": "2026-11-27T04:01:16.816954+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T03:06:02.093262+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Victoria votes in state election', 'Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Katie Miller car seat claim', 'Grand Theft Auto VI']",
-      "created_at": "2026-11-27T03:06:02.088491+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T03:06:01.822727+00:00",
+      "created_at": "2026-11-27T04:12:40.544406+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T03:06:01.821639+00:00",
+      "created_at": "2026-11-27T04:12:40.543646+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T03:06:01.819974+00:00",
+      "created_at": "2026-11-27T04:12:40.541937+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T03:05:51.817739+00:00",
+      "created_at": "2026-11-27T04:12:30.539458+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T03:05:51.627966+00:00",
+      "created_at": "2026-11-27T04:12:30.300529+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T03:05:51.620257+00:00",
+      "created_at": "2026-11-27T04:12:30.298289+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T03:05:46.201658+00:00",
+      "created_at": "2026-11-27T04:12:24.840988+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T03:05:46.199167+00:00",
+      "created_at": "2026-11-27T04:12:24.839000+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T03:05:46.010084+00:00",
+      "created_at": "2026-11-27T04:12:24.600141+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T03:05:46.007749+00:00",
+      "created_at": "2026-11-27T04:12:24.597934+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-27T03:05:39.730105+00:00",
+      "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-27T04:12:16.003026+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-27T03:05:39.729038+00:00",
+      "created_at": "2026-11-27T04:12:16.002416+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg (from openverse, query 'Trump', page: https://www.flickr.com/photos/80038275@N00/14421324712 | Donald Trump - page names the entity (Trump))",
-      "created_at": "2026-11-27T03:05:39.727816+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+      "created_at": "2026-11-27T04:12:16.001745+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (, it features Donald Trump, who is mentioned in the headline, speaking at a podium.)",
-      "created_at": "2026-11-27T03:05:39.726352+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-27T04:12:16.000808+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump'",
-      "created_at": "2026-11-27T03:05:27.549823+00:00",
+      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
+      "created_at": "2026-11-27T04:12:15.956766+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump'",
-      "created_at": "2026-11-27T03:05:27.333263+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-27T04:12:15.955637+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump'",
-      "created_at": "2026-11-27T03:05:27.082867+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-27T04:12:15.901135+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Trump'",
-      "created_at": "2026-11-27T03:05:27.020378+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-27T04:12:15.780170+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T03:05:26.968757+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+      "created_at": "2026-11-27T04:12:15.636679+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T03:05:26.967818+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Trump: Iran war will be over ‘sort of whenever I w' - trying entity search 'Trump'",
-      "created_at": "2026-11-27T03:05:26.966806+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.965195+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
-      "created_at": "2026-11-27T03:05:26.963614+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
-      "created_at": "2026-11-27T03:05:26.891337+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.814921+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.813960+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.812943+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.811941+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.810908+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:26.809838+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T03:05:26.807423+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T03:05:26.584386+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T03:05:26.410355+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T03:05:26.346824+00:00",
+      "message": "openverse: 5 result(s) for 'Ukraine'",
+      "created_at": "2026-11-27T04:12:15.563006+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T03:05:24.176336+00:00",
+      "created_at": "2026-11-27T04:12:15.524966+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T03:05:24.175358+00:00",
+      "created_at": "2026-11-27T04:12:15.524371+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:24.174351+00:00",
+      "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
+      "created_at": "2026-11-27T04:12:15.523771+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
-      "created_at": "2026-11-27T03:05:24.172821+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/yT3XeS-15Wo/mqdefault.jpg (page: https://kidvideo.org/video/abc-song-more-kids-songs-baby-big-cheese-nursery-rhymes-i149677.html | Ye - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:15.523129+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
-      "created_at": "2026-11-27T03:05:24.082842+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/YXqlc3fuF64/sddefault.jpg (page: https://music.youtube.com/channel/UCVd8sHiijL9nO_57uJAUV6g | Five Little Monkeys Nursery Rhymes And  - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:15.522403+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T03:05:24.025155+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/vBMUkgqhOsM/maxresdefault.jpg (page: https://kidvideo.org/video/five-little-monkeys-nursery-rhymes-and-baby-songs-by-baby-big-cheese-i106 - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:15.521673+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-      "created_at": "2026-11-27T03:05:24.022917+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/jkWOnBLt4v8/maxresdefault.jpg (page: https://music.youtube.com/watch?v=vBMUkgqhOsM | Humpty Dumpty Sat On A Wall Popular Nursery Rhyme fo - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:15.520813+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+      "created_at": "2026-11-27T04:12:15.518796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+      "created_at": "2026-11-27T04:12:15.265214+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
+      "created_at": "2026-11-27T04:12:15.106365+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
+      "created_at": "2026-11-27T04:12:15.028266+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.991220+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.990560+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://images.sidearmdev.com/crop?url=https:%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.si (page:  - no source page to verify relevance)",
+      "created_at": "2026-11-27T04:12:14.989668+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.987078+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.867772+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.705802+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.634713+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.596715+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.596109+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/originals/c1/5a/7b/c15a7b6f8c458fe4198ef33b74c50fe0.jpg (page: https://englishilm.com/dog-breeds-with-pictures/ | Hayal panosu için 640 fikir, 2025 | hayvan, köpek - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:14.595378+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/originals/60/4f/33/604f3385f901c951ea364ae1a94d03de.jpg?nii=t (page: https://www.pinterest.com/metinbingol65eh/hayal-panosu/ | Dog Names | A List of Names Ideas For Male - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:14.594664+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/736x/5d/30/64/5d3064e1042590e0a8d48b8ca54646c2.jpg (page: https://www.pinterest.com/pin/dog-names--563018698274924/ | 100+ female dog cute names To help you c - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:14.593967+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://tractive.com/blog/wp-content/uploads/2023/03/top_dog_names_worldwide_tractive.jpg (page: https://xaydungso.vn/blog/100-female-dog-cute-names-to-help-you-choose-the-perfect-name-en-in.html | - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T04:12:14.593115+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.590898+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.474267+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.323101+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T04:12:14.250143+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.204721+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T04:12:14.204085+00:00",
       "card": ""
     }
   ]

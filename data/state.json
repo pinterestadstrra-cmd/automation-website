@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 159,
-  "last_run": "2026-11-27T04:01:16.816929+00:00",
+  "runs": 160,
+  "last_run": "2026-11-27T04:10:38.663948+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 5,
+      "fail": 6,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T03:05:11.561959+00:00"
+      "last_run": "2026-11-27T04:11:55.107410+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 18,
+      "fail": 19,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T03:06:01.822691+00:00"
+      "last_run": "2026-11-27T04:12:40.544378+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T03:05:11.561961+00:00",
-    "mastodon.social": "2026-11-27T03:06:01.822695+00:00"
+    "Adsterra Blogger": "2026-11-27T04:11:55.107413+00:00",
+    "mastodon.social": "2026-11-27T04:12:40.544380+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 3
+      "count": 4
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 3
+      "count": 4
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T04:01:16.830409+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T04:01:16.848217+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T04:10:38.665120+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,12 +534,12 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 8,
+      "fails": 9,
       "next_retry": ""
     },
     "Adsterra Blogger": {
-      "fails": 1,
-      "next_retry": "2026-11-27T03:35:11.560893+00:00"
+      "fails": 2,
+      "next_retry": "2026-11-27T04:41:55.106541+00:00"
     }
   },
   "posted_promo_accounts": {
@@ -625,16 +619,6 @@
   },
   "ready_queue": {
     "Adsterra Blogger": [
-      {
-        "topic": "USA political news",
-        "headline": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
-        "photo_url": "https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg",
-        "photo_source": "bing-images",
-        "photo_alt": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
-        "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeWhqeTV0TXZ0T1dJZFJvakpvbTRMUlR5QW9XMTYya0QxaTRpMldzN1hfcG9DSWtwbXphaXNKQW50V0dQdnRCM1ozNHRLYXBoXzNNWFJpUjhpTjBCSm9ZVk95a0xXc0k3SHdHWE5DYmRuSWdCeTZ4NFdYckpQOXIza1RPWWlhcjlKMmFXU0RQUlJIR3dvTkE?oc=5",
-        "hook": "$366 MILLION?! Elon Musk just shattered records to become the biggest donor of the US midterm cycle. I did NOT see this coming.",
-        "prepared_at": "2026-11-27T03:04:09.891537+00:00"
-      },
       {
         "topic": "war news",
         "headline": "Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill",
