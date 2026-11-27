@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T17:06:14.160045+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Cybersecurity breach reported at CIA', 'Van Hollen challenges Schumer', 'Grand Theft Auto VI', 'Silksong Sea of Sorrow release date']",
+    "created_at": "2026-11-27T17:06:14.156235+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T17:06:14.048711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T17:06:14.047676+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T17:06:13.842749+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T17:06:10.187140+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T17:06:10.186461+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T17:06:10.185736+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #180 started (--only blogger)",
+    "created_at": "2026-11-27T17:06:10.184773+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T17:03:04.009657+00:00",
     "card": ""
   },
@@ -1144,59 +1198,5 @@
     "message": "ai health: gemini ok (gemini-4-hydrogen)",
     "created_at": "2026-11-27T16:00:36.888989+00:00",
     "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T16:00:14.487372+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-27T16:00:14.483868+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-27T16:00:14.480448+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #178 started (--only blogger)",
-    "created_at": "2026-11-27T16:00:14.478974+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T15:56:51.280521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): [\"Influencers' Downing Street visit\", 'Cybersecurity breach reported at CIA', 'Silksong Sea of Sorrow release date', 'Thanksgiving Day celebrations', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-27T15:56:51.274409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T15:56:51.104162+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T15:56:51.102916+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T15:56:51.100723+00:00",
-    "card": "mastodon.social"
   }
 ]
