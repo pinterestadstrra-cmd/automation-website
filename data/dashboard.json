@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T02:04:43.686689+00:00",
-  "last_run": "2026-11-27T02:00:49.444791+00:00",
-  "runs": 156,
+  "generated_at": "2026-11-27T02:39:57.923118+00:00",
+  "last_run": "2026-11-27T02:39:04.089184+00:00",
+  "runs": 157,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 2,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T08:18:22.006405+06:00",
-        "2026-11-27T08:33:22.006405+06:00",
         "2026-11-27T08:48:22.006405+06:00",
         "2026-11-27T09:03:22.006405+06:00",
-        "2026-11-27T09:18:22.006405+06:00"
+        "2026-11-27T09:18:22.006405+06:00",
+        "2026-11-27T09:33:22.006405+06:00",
+        "2026-11-27T09:48:22.006405+06:00"
       ],
       "next_post_times": [
         "2026-11-27T08:55:00+06:00",
@@ -158,11 +158,11 @@
       "runs_today": 2,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T08:19:43.458579+06:00",
-        "2026-11-27T08:34:43.458579+06:00",
         "2026-11-27T08:49:43.458579+06:00",
         "2026-11-27T09:04:43.458579+06:00",
-        "2026-11-27T09:19:43.458579+06:00"
+        "2026-11-27T09:19:43.458579+06:00",
+        "2026-11-27T09:34:43.458579+06:00",
+        "2026-11-27T09:49:43.458579+06:00"
       ],
       "next_post_times": [
         "2026-11-27T08:57:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T02:00:49.446912+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T02:39:04.090229+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T02:39:04.090995+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,61 @@
     "open": false
   },
   "trending": [
+    "Katie Miller car seat claim",
     "Victoria votes in state election",
     "Thanksgiving Day celebrations",
-    "Eagles vs. Cowboys inactives",
-    "Cowboys throwback uniforms",
+    "Eagles vs. Cowboys",
     "Joe Milton plays quarterback for Eagles",
-    "Grand Theft Auto VI",
-    "Katie Miller car seat claim",
+    "Tom Brady's on-air scream",
     "Birthday twin spectrum prompt",
-    "Musk pledges kids SpaceX shares",
-    "Describe a film without its name"
+    "FCC approves SpaceX Starmind satellites",
+    "Macy's parade postponed to Saturday",
+    "November full supermoon"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T02:39:57.755112+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T02:39:57.753530+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-27T02:39:57.455509+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T02:39:04.091684+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T02:39:04.091003+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T02:39:04.090238+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #157 started (--only blogger)",
+      "created_at": "2026-11-27T02:39:04.089203+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -575,48 +605,6 @@
       "level": "info",
       "message": "wikimedia: search HTTP 429 for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
       "created_at": "2026-11-27T02:04:13.124201+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-      "created_at": "2026-11-27T02:04:13.059469+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:13.002916+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:13.001219+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://media.swncdn.com/via/images/2023/11/06/33407/33407-thanksgivingbibleversesandprayerscombo13_ (page: https://www.pinterest.com/pin/213850682303719455/ | 25 Best Short Thanksgiving Prayers - Family Dinn - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:12.999649+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://garmentsofsplendor.com/wp-content/uploads/2024/10/a-thanksgiving-prayer-683x1024.png (page: https://www.biblestudytools.com/bible-study/topical-studies/25-short-thanksgiving-prayers-and-blessi - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:12.998029+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.ctsbooks.org/wp-content/uploads/2025/09/PC113-P-Grace-Before-and-After-Meals-Prayer-Card (page: https://garmentsofsplendor.com/thanksgiving-prayer-for-dinner/ | Free Printable Catholic Dinner Pray - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:12.996374+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/2c/2b/14/2c2b1497a2db84f7ded5cc11627b34ab.png (page: https://community-staging.topazlabs.com/simple-prayer-before-meal/dinner-prayer-free-printable-catho - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:12.994490+00:00",
       "card": ""
     }
   ]
