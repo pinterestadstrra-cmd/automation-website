@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T01:16:15.776682+00:00",
-  "last_run": "2026-11-27T01:16:12.294028+00:00",
-  "runs": 155,
+  "generated_at": "2026-11-27T02:04:43.686689+00:00",
+  "last_run": "2026-11-27T02:00:49.444791+00:00",
+  "runs": 156,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T00:38:57.038960+00:00",
-    "mastodon.social": "2026-11-27T00:42:03.033743+00:00"
+    "Adsterra Blogger": "2026-11-27T02:03:22.006405+00:00",
+    "mastodon.social": "2026-11-27T02:04:43.458579+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -54,18 +54,18 @@
       "last_run": "2026-11-24T01:08:50.238064+00:00"
     },
     "Adsterra Blogger": {
-      "success": 69,
+      "success": 70,
       "fail": 4,
       "last_ok": true,
       "last_error": "",
-      "last_run": "2026-11-27T00:38:57.038956+00:00"
+      "last_run": "2026-11-27T02:03:22.006400+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 16,
+      "fail": 17,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T00:42:03.033739+00:00"
+      "last_run": "2026-11-27T02:04:43.458576+00:00"
     }
   },
   "file_cards": [
@@ -82,24 +82,24 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T00:38:57.038960+00:00",
-      "runs_today": 1,
+      "last_run": "2026-11-27T02:03:22.006405+00:00",
+      "runs_today": 2,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T07:23:57.038960+06:00",
-        "2026-11-27T07:38:57.038960+06:00",
-        "2026-11-27T07:53:57.038960+06:00",
-        "2026-11-27T08:08:57.038960+06:00",
-        "2026-11-27T08:23:57.038960+06:00"
+        "2026-11-27T08:18:22.006405+06:00",
+        "2026-11-27T08:33:22.006405+06:00",
+        "2026-11-27T08:48:22.006405+06:00",
+        "2026-11-27T09:03:22.006405+06:00",
+        "2026-11-27T09:18:22.006405+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T07:50:00+06:00",
         "2026-11-27T08:55:00+06:00",
         "2026-11-27T10:00:00+06:00",
         "2026-11-27T10:59:00+06:00",
-        "2026-11-27T11:54:00+06:00"
+        "2026-11-27T11:54:00+06:00",
+        "2026-11-27T13:10:00+06:00"
       ],
-      "success": 69,
+      "success": 70,
       "fail": 4,
       "last_error": "",
       "color": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T00:42:03.033743+00:00",
-      "runs_today": 1,
+      "last_run": "2026-11-27T02:04:43.458579+00:00",
+      "runs_today": 2,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T07:27:03.033743+06:00",
-        "2026-11-27T07:42:03.033743+06:00",
-        "2026-11-27T07:57:03.033743+06:00",
-        "2026-11-27T08:12:03.033743+06:00",
-        "2026-11-27T08:27:03.033743+06:00"
+        "2026-11-27T08:19:43.458579+06:00",
+        "2026-11-27T08:34:43.458579+06:00",
+        "2026-11-27T08:49:43.458579+06:00",
+        "2026-11-27T09:04:43.458579+06:00",
+        "2026-11-27T09:19:43.458579+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T07:52:00+06:00",
         "2026-11-27T08:57:00+06:00",
         "2026-11-27T09:58:00+06:00",
         "2026-11-27T10:53:00+06:00",
-        "2026-11-27T12:09:00+06:00"
+        "2026-11-27T12:09:00+06:00",
+        "2026-11-27T13:04:00+06:00"
       ],
       "success": 17,
-      "fail": 16,
+      "fail": 17,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T01:16:12.295745+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T01:16:12.297149+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T02:00:49.446912+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Thanksgiving Day celebrations",
-    "Joe Milton plays quarterback for Eagles",
-    "Birthday twin spectrum prompt",
-    "Grand Theft Auto VI",
     "Victoria votes in state election",
+    "Thanksgiving Day celebrations",
+    "Eagles vs. Cowboys inactives",
+    "Cowboys throwback uniforms",
+    "Joe Milton plays quarterback for Eagles",
+    "Grand Theft Auto VI",
     "Katie Miller car seat claim",
-    "Macy's parade postponed to Saturday",
+    "Birthday twin spectrum prompt",
     "Musk pledges kids SpaceX shares",
-    "Nvidia reinstates Jensen Huang",
-    "Nvidia chip exports to China"
+    "Describe a film without its name"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T01:16:15.722275+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T01:16:15.720394+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T01:16:15.370662+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T01:16:12.298427+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T01:16:12.297157+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T01:16:12.295755+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #155 started (--only blogger)",
-      "created_at": "2026-11-27T01:16:12.294052+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T00:42:03.249131+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Katie Miller car seat claim', 'Musk pledges kids SpaceX shares', 'Thanksgiving Day celebrations', 'Joe Milton plays quarterback for Eagles', 'Aaron Rodgers reportedly out']",
-      "created_at": "2026-11-27T00:42:03.242358+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T00:42:03.033791+00:00",
+      "created_at": "2026-11-27T02:04:43.458632+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T00:42:03.032050+00:00",
+      "created_at": "2026-11-27T02:04:43.456815+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T00:42:03.029666+00:00",
+      "created_at": "2026-11-27T02:04:43.454401+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T00:41:53.026655+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T00:41:52.822444+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T00:41:52.819534+00:00",
+      "created_at": "2026-11-27T02:04:33.451003+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T00:41:46.739619+00:00",
+      "created_at": "2026-11-27T02:04:28.245485+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T00:41:46.736794+00:00",
+      "created_at": "2026-11-27T02:04:28.242331+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T00:41:46.523083+00:00",
-      "card": ""
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-27T02:04:15.529916+00:00",
+      "card": "mastodon.social"
     },
     {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T00:41:46.520133+00:00",
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-27T02:04:15.370009+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-27T00:40:44.504952+00:00",
+      "message": "promo: photo search done - 11 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-27T02:04:15.368482+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-27T00:40:44.503320+00:00",
+      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+      "created_at": "2026-11-27T02:04:15.366812+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats', page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - page names the entity (Democrats))",
-      "created_at": "2026-11-27T00:40:44.501545+00:00",
+      "message": "promo: story 6/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
+      "created_at": "2026-11-27T02:04:15.365315+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (\n\nThe photo shows U.S. Representative Hakeem Jeffries, a prominent Democratic leader in Congress, who is frequently involved in such policy discussion)",
-      "created_at": "2026-11-27T00:40:44.498900+00:00",
+      "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-27T02:04:15.363637+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg",
-      "created_at": "2026-11-27T00:40:35.824993+00:00",
+      "message": "photo: no real photo found for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ' (5 download(s) tried)",
+      "created_at": "2026-11-27T02:04:15.361962+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (. The photo shows political campaign buttons, not the people, places, or events related to the specific news headline about an Iran war funding plan.)",
-      "created_at": "2026-11-27T00:40:35.822622+00:00",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c2afd31-952c-4088-a7bf-b2ed8da3116a/df7js (page: Stunning legs in stockings heels and dress by IreneWhite23 on DeviantArt - page does not name the entity (Silent))",
+      "created_at": "2026-11-27T02:04:15.360167+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T00:39:04.638877+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/36/121704670_1b7a489603_b.jpg",
+      "created_at": "2026-11-27T02:04:15.357971+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-      "created_at": "2026-11-27T00:39:04.636901+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4031/4635122384_1be7d7b323_b.jpg",
+      "created_at": "2026-11-27T02:04:15.282377+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T00:39:04.568986+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8212/8269563681_a2ebe006d8.jpg",
+      "created_at": "2026-11-27T02:04:15.188182+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T00:39:04.567504+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7711/16897629490_52b11534d8_b.jpg",
+      "created_at": "2026-11-27T02:04:15.093043+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T00:39:04.565436+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6227/6308048699_3490fa07b3_b.jpg",
+      "created_at": "2026-11-27T02:04:15.016747+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T00:39:04.562570+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Silent'",
+      "created_at": "2026-11-27T02:04:14.941290+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T00:39:04.282962+00:00",
+      "message": "google-images: 0 candidate(s) for 'Silent'",
+      "created_at": "2026-11-27T02:04:14.779828+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats'",
-      "created_at": "2026-11-27T00:39:04.080194+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Silent'",
+      "created_at": "2026-11-27T02:04:14.568467+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-27T00:39:04.013957+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T00:39:02.142157+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T00:39:02.140465+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-      "created_at": "2026-11-27T00:39:02.138961+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:02.137465+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:02.135822+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:02.133941+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:02.132127+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T00:39:02.129031+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T00:39:01.947400+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T00:39:01.756125+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T00:39:01.695548+00:00",
+      "message": "openverse: 5 result(s) for 'Silent'",
+      "created_at": "2026-11-27T02:04:14.508021+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T00:39:00.816994+00:00",
+      "created_at": "2026-11-27T02:04:14.461286+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T00:39:00.815416+00:00",
+      "created_at": "2026-11-27T02:04:14.459768+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:00.813873+00:00",
+      "message": "photo: topical search found nothing for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' - trying entity search 'Silent'",
+      "created_at": "2026-11-27T02:04:14.458237+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:00.812091+00:00",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn.wallpapersafari.com/87/37/Z5mAsk.jpg (page: https://wallpapercave.com/kate-beckinsale-van-helsing-wallpaper | 🔥 [60+] Kate Beckinsale Van Helsin - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:14.456455+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:00.810374+00:00",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/20/3e/bf/203ebfebc357f17e96ff771ed8b78ca4.jpg (page: https://wallpapersafari.com/kate-beckinsale-van-helsing-wallpaper/ | Van Helsing Photo: Anna Valeriu - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:14.454822+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://c8.alamy.com/comp/E5MWW3/van-helsing-hugh-jackman-kate-beckinsale-2004-c-universalcourtesy-E (page: https://www.pinterest.com/pin/151363237445706008/ | Van helsing 2004 kate beckinsale hi-res stock ph - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:14.453188+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://c8.alamy.com/comp/HCNF64/van-helsing-kate-beckinsale-2004-universalcourtesy-everett-collecti (page: https://www.alamy.com/stock-photo/van-helsing-2004-kate-beckinsale.html | VAN HELSING, Kate Beckinsa - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:14.451310+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Silent War Grips Iran Economy'",
+      "created_at": "2026-11-27T02:04:14.448094+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Silent War Grips Iran Economy'",
+      "created_at": "2026-11-27T02:04:13.840355+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Silent War Grips Iran Economy'",
+      "created_at": "2026-11-27T02:04:13.638326+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Silent War Grips Iran Economy'",
+      "created_at": "2026-11-27T02:04:13.572022+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T02:04:13.524559+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T02:04:13.522940+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.chovzvirat.cz/images/zvirata/cane-corso_ebb13cf.jpg (page: https://happydogbreeds.com/cane-corso-colors-and-markings/ | Cane corso (Cane corso) - ChovZvířat.cz - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:13.521335+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/82/db/6b/82db6bb1ace2e14c6e8245a7748686e4.jpg (page: https://www.chovzvirat.cz/zvire/4100-cane-corso/ - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:13.519502+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1291949432.jpg?w=1024 (page: https://www.pinterest.com/pin/365706432257020070/ | Cane Corso Dog Breed Information & Characteristi - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:13.517387+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.k9web.com/wp-content/uploads/2022/08/black-mask-cane-corso.jpg (page: https://dogtime.com/dog-breeds/cane-corso | Cane Corso Colors: The Standard & Rarest Coat Colors - K - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:13.515390+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+      "created_at": "2026-11-27T02:04:13.511944+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+      "created_at": "2026-11-27T02:04:13.330389+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+      "created_at": "2026-11-27T02:04:13.124201+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
+      "created_at": "2026-11-27T02:04:13.059469+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T02:04:13.002916+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T02:04:13.001219+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://media.swncdn.com/via/images/2023/11/06/33407/33407-thanksgivingbibleversesandprayerscombo13_ (page: https://www.pinterest.com/pin/213850682303719455/ | 25 Best Short Thanksgiving Prayers - Family Dinn - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:12.999649+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://garmentsofsplendor.com/wp-content/uploads/2024/10/a-thanksgiving-prayer-683x1024.png (page: https://www.biblestudytools.com/bible-study/topical-studies/25-short-thanksgiving-prayers-and-blessi - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:12.998029+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.ctsbooks.org/wp-content/uploads/2025/09/PC113-P-Grace-Before-and-After-Meals-Prayer-Card (page: https://garmentsofsplendor.com/thanksgiving-prayer-for-dinner/ | Free Printable Catholic Dinner Pray - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:12.996374+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/2c/2b/14/2c2b1497a2db84f7ded5cc11627b34ab.png (page: https://community-staging.topazlabs.com/simple-prayer-before-meal/dinner-prayer-free-printable-catho - only 0 of 8 key entities in the source page)",
+      "created_at": "2026-11-27T02:04:12.994490+00:00",
       "card": ""
     }
   ]
