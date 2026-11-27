@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T18:00:16.564521+00:00",
-  "last_run": "2026-11-27T17:59:11.856870+00:00",
-  "runs": 181,
+  "generated_at": "2026-11-27T18:20:44.620861+00:00",
+  "last_run": "2026-11-27T18:20:22.447514+00:00",
+  "runs": 182,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 14,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T00:15:16.438458+06:00",
         "2026-11-28T00:30:16.438458+06:00",
         "2026-11-28T00:45:16.438458+06:00",
         "2026-11-28T01:00:16.438458+06:00",
-        "2026-11-28T01:15:16.438458+06:00"
+        "2026-11-28T01:15:16.438458+06:00",
+        "2026-11-28T01:30:16.438458+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T00:09:00+06:00",
         "2026-11-28T01:04:00+06:00",
         "2026-11-28T01:59:00+06:00",
         "2026-11-28T02:54:00+06:00",
-        "2026-11-28T04:08:00+06:00"
+        "2026-11-28T04:08:00+06:00",
+        "2026-11-28T05:03:00+06:00"
       ],
       "success": 71,
       "fail": 17,
@@ -158,11 +158,11 @@
       "runs_today": 14,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T00:15:16.442005+06:00",
         "2026-11-28T00:30:16.442005+06:00",
         "2026-11-28T00:45:16.442005+06:00",
         "2026-11-28T01:00:16.442005+06:00",
-        "2026-11-28T01:15:16.442005+06:00"
+        "2026-11-28T01:15:16.442005+06:00",
+        "2026-11-28T01:30:16.442005+06:00"
       ],
       "next_post_times": [
         "2026-11-28T00:54:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T17:59:11.858148+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T18:20:22.448946+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T18:20:22.450172+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
+    "Most famous person you're related to",
     "Medicare for All and universal healthcare",
-    "Israeli strikes in Gaza",
-    "Nvidia reinstates Jensen Huang",
-    "Grand Theft Auto VI",
+    "Cybersecurity breach reported at CIA",
     "Thanksgiving Day celebrations",
+    "Nvidia reinstates Jensen Huang",
     "FCC approves SpaceX Starmind satellites",
-    "Silksong Sea of Sorrow release date",
+    "Grand Theft Auto VI",
     "Thanksgiving storm knocks out power",
-    "Birthday twin spectrum prompt",
-    "Bird photography"
+    "Bird photography",
+    "Ocarina of Time remake"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T18:20:44.358310+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T18:20:44.356183+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+      "created_at": "2026-11-27T18:20:43.940364+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T18:20:22.451287+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T18:20:22.450180+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T18:20:22.448954+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #182 started (--only blogger)",
+      "created_at": "2026-11-27T18:20:22.447536+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T18:00:16.567197+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Medicare for All and universal healthcare', 'Israeli strikes in Gaza', 'Nvidia reinstates Jensen Huang', 'Grand Theft Auto VI', 'Thanksgiving Day celebrations']",
+      "created_at": "2026-11-27T18:00:16.561618+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: not a posting time)",
@@ -564,60 +606,6 @@
       "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
       "created_at": "2026-11-27T17:02:40.813403+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-      "created_at": "2026-11-27T17:02:40.683711+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-      "created_at": "2026-11-27T17:02:40.657306+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T17:02:40.608003+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T17:02:40.606931+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
-      "created_at": "2026-11-27T17:02:40.605749+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-      "created_at": "2026-11-27T17:02:40.603320+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-27T17:02:40.258141+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-27T17:02:40.185832+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-27T17:02:40.184499+00:00",
-      "card": "mastodon.social"
     }
   ]
 }
