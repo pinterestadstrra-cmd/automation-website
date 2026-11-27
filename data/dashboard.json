@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T16:00:37.485291+00:00",
-  "last_run": "2026-11-27T16:00:14.478955+00:00",
-  "runs": 178,
+  "generated_at": "2026-11-27T17:03:04.006919+00:00",
+  "last_run": "2026-11-27T17:01:13.450529+00:00",
+  "runs": 179,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T15:56:20.438518+00:00",
-    "mastodon.social": "2026-11-27T15:56:51.104129+00:00"
+    "Adsterra Blogger": "2026-11-27T17:02:40.183272+00:00",
+    "mastodon.social": "2026-11-27T17:03:03.798242+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 16,
+      "fail": 17,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T15:56:20.438515+00:00"
+      "last_run": "2026-11-27T17:02:40.183269+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 29,
+      "fail": 30,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T15:56:51.104127+00:00"
+      "last_run": "2026-11-27T17:03:03.798238+00:00"
     }
   },
   "file_cards": [
@@ -82,25 +82,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T15:56:20.438518+00:00",
-      "runs_today": 12,
+      "last_run": "2026-11-27T17:02:40.183272+00:00",
+      "runs_today": 13,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T22:11:20.438518+06:00",
-        "2026-11-27T22:26:20.438518+06:00",
-        "2026-11-27T22:41:20.438518+06:00",
-        "2026-11-27T22:56:20.438518+06:00",
-        "2026-11-27T23:11:20.438518+06:00"
+        "2026-11-27T23:17:40.183272+06:00",
+        "2026-11-27T23:32:40.183272+06:00",
+        "2026-11-27T23:47:40.183272+06:00",
+        "2026-11-28T00:02:40.183272+06:00",
+        "2026-11-28T00:17:40.183272+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T22:07:00+06:00",
-        "2026-11-27T22:51:00+06:00",
         "2026-11-28T00:09:00+06:00",
         "2026-11-28T01:04:00+06:00",
-        "2026-11-28T01:59:00+06:00"
+        "2026-11-28T01:59:00+06:00",
+        "2026-11-28T02:54:00+06:00",
+        "2026-11-28T04:08:00+06:00"
       ],
       "success": 70,
-      "fail": 16,
+      "fail": 17,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T15:56:51.104129+00:00",
-      "runs_today": 12,
+      "last_run": "2026-11-27T17:03:03.798242+00:00",
+      "runs_today": 13,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T22:11:51.104129+06:00",
-        "2026-11-27T22:26:51.104129+06:00",
-        "2026-11-27T22:41:51.104129+06:00",
-        "2026-11-27T22:56:51.104129+06:00",
-        "2026-11-27T23:11:51.104129+06:00"
+        "2026-11-27T23:18:03.798242+06:00",
+        "2026-11-27T23:33:03.798242+06:00",
+        "2026-11-27T23:48:03.798242+06:00",
+        "2026-11-28T00:03:03.798242+06:00",
+        "2026-11-28T00:18:03.798242+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T22:08:00+06:00",
-        "2026-11-27T22:52:00+06:00",
         "2026-11-27T23:59:00+06:00",
         "2026-11-28T00:54:00+06:00",
-        "2026-11-28T02:10:00+06:00"
+        "2026-11-28T02:10:00+06:00",
+        "2026-11-28T03:05:00+06:00",
+        "2026-11-28T04:00:00+06:00"
       ],
       "success": 17,
-      "fail": 29,
+      "fail": 30,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T16:00:14.480441+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T16:00:14.483862+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T17:01:13.452041+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Influencers' Downing Street visit",
-    "Cybersecurity breach reported at CIA",
-    "Silksong Sea of Sorrow release date",
     "Thanksgiving Day celebrations",
+    "Cybersecurity breach reported at CIA",
+    "Van Hollen challenges Schumer",
     "Grand Theft Auto VI",
+    "Silksong Sea of Sorrow release date",
+    "Nvidia reinstates Jensen Huang",
+    "Aaron Rodgers reportedly out",
     "Nvidia chip exports to China",
-    "Bird photography",
-    "Thanksgiving storm knocks out power",
-    "King tides flood West Coast",
-    "Joe Milton plays quarterback for Eagles"
+    "Original characters as nameless NPCs",
+    "St. Louis airport divorce ad feud"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T16:00:37.242257+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T16:00:37.239749+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T16:00:36.888989+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T16:00:14.487372+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T16:00:14.483868+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T16:00:14.480448+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #178 started (--only blogger)",
-      "created_at": "2026-11-27T16:00:14.478974+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T15:56:51.280521+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Influencers' Downing Street visit\", 'Cybersecurity breach reported at CIA', 'Silksong Sea of Sorrow release date', 'Thanksgiving Day celebrations', 'Grand Theft Auto VI']",
-      "created_at": "2026-11-27T15:56:51.274409+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T15:56:51.104162+00:00",
+      "created_at": "2026-11-27T17:03:03.798275+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T15:56:51.102916+00:00",
+      "created_at": "2026-11-27T17:03:03.797259+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T15:56:51.100723+00:00",
+      "created_at": "2026-11-27T17:03:03.795722+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T15:56:41.098268+00:00",
+      "created_at": "2026-11-27T17:02:53.793120+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T15:56:40.856242+00:00",
+      "created_at": "2026-11-27T17:02:53.598395+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T15:56:40.854041+00:00",
+      "created_at": "2026-11-27T17:02:53.596028+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T15:56:35.498502+00:00",
+      "created_at": "2026-11-27T17:02:48.166161+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T15:56:35.496072+00:00",
+      "created_at": "2026-11-27T17:02:48.163766+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T15:56:35.145970+00:00",
+      "created_at": "2026-11-27T17:02:47.904599+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T15:56:35.143695+00:00",
+      "created_at": "2026-11-27T17:02:47.902119+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-27T15:56:32.654950+00:00",
+      "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-27T17:02:45.560839+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-27T15:56:32.653733+00:00",
+      "created_at": "2026-11-27T17:02:45.559941+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg (from openverse, query 'Trump', page: https://www.flickr.com/photos/80038275@N00/14421324712 | Donald Trump - page names the entity (Trump))",
-      "created_at": "2026-11-27T15:56:32.652072+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+      "created_at": "2026-11-27T17:02:45.558712+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (, the photo shows Donald Trump, who is the subject of the headline.)",
-      "created_at": "2026-11-27T15:56:32.650318+00:00",
+      "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (. The photo shows the flag of Iran, which is directly relevant to the subject of the news headline concerning Iran.)",
+      "created_at": "2026-11-27T17:02:45.557205+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump'",
-      "created_at": "2026-11-27T15:56:23.536768+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+      "created_at": "2026-11-27T17:02:41.030833+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump'",
-      "created_at": "2026-11-27T15:56:23.379324+00:00",
+      "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+      "created_at": "2026-11-27T17:02:40.813403+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump'",
-      "created_at": "2026-11-27T15:56:23.197291+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+      "created_at": "2026-11-27T17:02:40.683711+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 5 result(s) for 'Trump'",
-      "created_at": "2026-11-27T15:56:23.135900+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T15:56:23.090302+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T15:56:23.089313+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Trump: Iran war will be over ‘sort of whenever I w' - trying entity search 'Trump'",
-      "created_at": "2026-11-27T15:56:23.088271+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.inkl.com/news/trump-calls-for-somalis-receiving-government-assistance-to-be-thrown-out-o - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.087249+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.086352+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump to  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.085367+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://abc7news.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Something Strange - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.084327+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.083310+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.082233+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.081177+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.080041+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:23.078933+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T15:56:23.076501+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T15:56:22.876360+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T15:56:22.695933+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T15:56:22.639453+00:00",
+      "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+      "created_at": "2026-11-27T17:02:40.657306+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T15:56:22.580486+00:00",
+      "created_at": "2026-11-27T17:02:40.608003+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T15:56:22.579589+00:00",
+      "created_at": "2026-11-27T17:02:40.606931+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.inkl.com/news/trump-calls-for-somalis-receiving-government-assistance-to-be-thrown-out-o - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:22.578615+00:00",
+      "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
+      "created_at": "2026-11-27T17:02:40.605749+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:22.577615+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+      "created_at": "2026-11-27T17:02:40.603320+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump to  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:22.576477+00:00",
+      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-27T17:02:40.258141+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://abc7news.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Something Strange - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T15:56:22.575297+00:00",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-27T17:02:40.185832+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-27T17:02:40.184499+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+      "created_at": "2026-11-27T17:02:40.183309+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+      "created_at": "2026-11-27T17:02:40.182224+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "warning",
+      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+      "created_at": "2026-11-27T17:02:40.180840+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 900x600 (ratio 1.50) - shrunk to fit 950KB, ratio preserved",
+      "created_at": "2026-11-27T17:02:40.088497+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1800x1200 (ratio 1.50) - kept, no crop",
+      "created_at": "2026-11-27T17:02:40.048441+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
+      "created_at": "2026-11-27T17:02:40.046474+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-27T17:02:39.948314+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-27T17:02:39.947096+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "warning",
+      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+      "created_at": "2026-11-27T17:02:39.945334+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-27T17:02:38.191875+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "prepared ready post: 'Trump: Iran war will be over ‘sort of whenever I want it to ' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-27T17:02:38.190174+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-27T17:02:25.486805+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-27T17:02:25.485770+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://media.cnn.com/api/v1/images/stellar/prod/still-22502621-3045094-347-still-crop.jpg?c=16x9&q= (from bing-images, query 'Trump: Iran war will be over ‘sort of whenever I want it to be’', page: https://www.msn.com/en-in/news/world/trump-says-iran-war-could-be-over-soon-reveals-big-strait-of-ho - matches 3 key entities (iran, trump, war))",
+      "created_at": "2026-11-27T17:02:25.484590+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (. The photo shows Donald Trump speaking at a podium with the Seal of the President of the United States, which is the person referred to in the headli)",
+      "created_at": "2026-11-27T17:02:25.483027+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-      "created_at": "2026-11-27T15:56:22.572988+00:00",
+      "created_at": "2026-11-27T17:02:16.896406+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T17:02:16.748573+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T17:02:16.611873+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T17:02:16.582328+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T17:02:16.430827+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T17:02:16.429804+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.cincinnati.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956869007-20261125-t-00 (page: https://www.inkl.com/news/trump-shares-veto-corleone-meme-as-democrats-prepare-to-take-control-of-co - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T17:02:16.428751+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.cincinnati.com/picture-gallery/news/trump/2026/11/25/trump-in-florida-for-thanksgiving-h - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T17:02:16.427597+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.pottsmerc.com/wp-content/uploads/2026/11/Trump_28345-1.jpg (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump cal - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T17:02:16.426234+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.pottsmerc.com/2026/11/27/trump-gdp-figures-commerce-department/ | Something Strange Is H - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T17:02:16.424983+00:00",
       "card": ""
     }
   ]
