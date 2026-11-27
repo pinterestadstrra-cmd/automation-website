@@ -2,6 +2,558 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T21:55:41.207637+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Aaron Rodgers reportedly out', 'Hackers breach Air Force cloud platform', 'Grand Theft Auto VI', 'Israeli strikes in Gaza']",
+    "created_at": "2026-11-27T21:55:41.202529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T21:55:41.185186+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T21:55:41.184074+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T21:55:41.178187+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T21:55:31.175902+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T21:55:30.935834+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T21:55:30.933149+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T21:55:25.477664+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T21:55:25.475085+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T21:55:25.168385+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T21:55:25.165776+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T21:55:21.995552+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T21:55:21.994564+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+    "created_at": "2026-11-27T21:55:21.993534+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (The photo depicts the national flag of Iran, which relates to the subject matter of the headline concerning Iranian ports and a blockade.)",
+    "created_at": "2026-11-27T21:55:21.992041+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-27T21:55:18.559329+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-27T21:55:18.387887+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-27T21:55:18.278605+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-27T21:55:18.263035+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:18.037275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:18.036296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - rejected (no og:image)",
+    "created_at": "2026-11-27T21:55:18.035145+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T21:55:18.033018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T21:55:17.770489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T21:55:17.769532+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (1 download(s) tried)",
+    "created_at": "2026-11-27T21:55:17.768552+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.767490+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.766431+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.764883+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.763907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.762752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
+    "created_at": "2026-11-27T21:55:17.760486+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.612643+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.611522+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T21:55:17.610471+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T21:55:17.608206+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T21:55:17.475311+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats'",
+    "created_at": "2026-11-27T21:55:17.364600+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Democrats'",
+    "created_at": "2026-11-27T21:55:17.340878+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:17.284241+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:17.283189+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
+    "created_at": "2026-11-27T21:55:17.280032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b2ae02f3-b9bd-454e-b8a3-61f2a8fa1e40/df7tl (page: https://www.deviantart.com/arielariaspetzoldt/art/Seth-Rogen-meets-his-Variants-Keegan-Michael-Key-9 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:17.276970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29ab81a8-486a-41af-bef0-3876c9f911a7/dg3o8 (page: https://www.deviantart.com/saucerofperil/art/CNDRR-Seth-Rogen-meets-his-Variants-My-Version-92013050 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:17.275941+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29ab81a8-486a-41af-bef0-3876c9f911a7/dgaom (page: https://www.deviantart.com/arielariaspetzoldt/art/Kevin-Michael-Richardson-meets-his-Variants-V3-973 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:17.274739+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ebfe7d5-8929-4bb2-a0da-79a5afa99b55/dggkn (page: https://www.deviantart.com/arielariaspetzoldt/art/Greg-Cipes-Meets-His-Variants-985404252 | JDF meet - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:17.273662+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T21:55:17.262572+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T21:55:17.131943+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T21:55:17.038817+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T21:55:17.025782+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:16.999930+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:16.998847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_N (page: African bush elephant - Wikipedia - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:16.997478+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.995253+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.749806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.630271+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.615804+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:16.571820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:16.570283+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.wixstatic.com/media/190ac7_217a8dcda1244cbebe0f362578089cdc~mv2.jpg/v1/fill/w_1000,h_ (page: https://xrtechgroup.com/google-maps-satellite-view/ | Google Maps Satellite View Explained: Features - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:16.569148+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://xrtechgroup.com/wp-content/uploads/2026/06/Screenshot-2026-06-03-182139.png (page: https://www.geowgs84.ai/post/google-maps-satellite-view-explained-features-tips-and-tricks | Google  - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:16.568079+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://cdn.prod.website-files.com/64bde7f9e4373e7e7304a677/66a9ce215c37cd3e48b35746_66a9ce02cf097ed (page: https://xrtechgroup.com/google-maps-satellite-view/ | Where to Get Free Satellite Imagery in 2025 - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:16.566907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.howtogeek.com/wp-content/uploads/2021/01/google-maps-satellite.png?width=1198&trim=1 (page: https://spacefromspace.com/blog/get-free-satellite-imagery-2025 | How to Start Google Maps in Satell - only 0 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T21:55:16.565801+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.563410+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.275249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.165032+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T21:55:16.056780+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:15.834377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T21:55:15.817424+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
+    "created_at": "2026-11-27T21:55:15.816231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T21:55:15.814047+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T21:55:14.963574+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T21:55:14.962290+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T21:55:14.960982+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T21:55:14.960025+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T21:55:14.958761+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T21:55:14.879440+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T21:55:14.878375+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T21:55:14.876311+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T21:55:14.730298+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T21:55:14.729208+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T21:55:14.727855+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T21:55:14.042202+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T21:55:13.902238+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T21:55:13.824481+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T21:55:13.419108+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T21:55:13.417492+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T21:55:13.099298+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T21:55:08.689348+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T21:55:08.688221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #189 started (--only bluesky)",
+    "created_at": "2026-11-27T21:55:08.686899+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T21:28:42.183545+00:00",
     "card": ""
   },
@@ -645,558 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://images.inkl.com/s3/article/lead_image/24110628/donald-trump.jpg (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
     "created_at": "2026-11-27T20:57:48.765961+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.inkl.com/news/trump-shares-veto-corleone-meme-as-democrats-prepare-to-take-control-of-co - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:48.725787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.pottsmerc.com/wp-content/uploads/2026/11/Trump_28345-1.jpg (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump cal - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:48.685830+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.pottsmerc.com/2026/11/27/trump-gdp-figures-commerce-department/ | Something Strange Is H - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:48.565641+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Yorkies_Against_Trump_%21_%2829575006938%29 (page: https://commons.wikimedia.org/wiki/File:Yorkies_Against_Trump_!_(29575006938).jpg | File:Yorkies Aga - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:48.445647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/US_President_Donald_Trump_has_announced_pla",
-    "created_at": "2026-11-27T20:57:48.392395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Trump: Iran war will be over ‘sort of whenever I w' (The photo shows Donald Trump speaking in front of soldiers and military vehicles in Poland, which is unrelated to the headline about an Iran war.)",
-    "created_at": "2026-11-27T20:57:48.367875+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Trump_is_Full_of_...._%2841638443800%29.jpg (page: https://commons.wikimedia.org/wiki/File:Trump_is_Full_of_...._(41638443800).jpg | File:Trump is Full - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.934939+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Dump_Trump_%2843445377751%29.jpg/1280px-Dum (page: https://commons.wikimedia.org/wiki/File:Dump_Trump_(43445377751).jpg | File:Dump Trump (43445377751) - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.933992+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Dump_Trump_%21_%2842730120094%29.jpg/1280px (page: https://commons.wikimedia.org/wiki/File:Dump_Trump_!_(42730120094).jpg | File:Dump Trump ! (42730120 - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.932973+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.931956+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.931008+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.930105+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.929102+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:40.927893+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T20:57:40.905778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T20:57:40.745282+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 5 result(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T20:57:40.599822+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
-    "created_at": "2026-11-27T20:57:40.167556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:39.499139+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:39.493507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://images.inkl.com/s3/article/lead_image/24110628/donald-trump.jpg (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:39.492636+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.inkl.com/news/trump-shares-veto-corleone-meme-as-democrats-prepare-to-take-control-of-co - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:39.491674+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.pottsmerc.com/wp-content/uploads/2026/11/Trump_28345-1.jpg (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump cal - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:39.490688+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.pottsmerc.com/2026/11/27/trump-gdp-figures-commerce-department/ | Something Strange Is H - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:39.489609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:39.486102+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:39.325955+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:39.137004+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:38.807876+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:38.462470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:38.461550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://images.inkl.com/s3/article/lead_image/24110628/donald-trump.jpg (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:38.457211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.inkl.com/news/trump-shares-veto-corleone-meme-as-democrats-prepare-to-take-control-of-co - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:38.456160+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.pottsmerc.com/wp-content/uploads/2026/11/Trump_28345-1.jpg (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump cal - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:38.455099+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.pottsmerc.com/2026/11/27/trump-gdp-figures-commerce-department/ | Something Strange Is H - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T20:57:38.453830+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:38.451651+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:38.285705+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:38.142093+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T20:57:37.883546+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:37.384176+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:37.383292+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
-    "created_at": "2026-11-27T20:57:37.382287+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T20:57:37.380219+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T20:57:36.845951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' for card 'Adsterra Blogger' (queue now 1)",
-    "created_at": "2026-11-27T20:57:36.735681+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T20:57:32.550885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T20:57:32.549869+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
-    "created_at": "2026-11-27T20:57:32.548804+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (, the photo shows the national flag of Iran, which is directly referenced in the headline about US-Iran relations.)",
-    "created_at": "2026-11-27T20:57:32.547183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T20:57:26.358234+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T20:57:26.212686+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T20:57:26.063049+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T20:57:25.389470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:24.415507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T20:57:24.414631+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
-    "created_at": "2026-11-27T20:57:24.413443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T20:57:24.411754+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T20:57:23.261404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T20:57:22.947108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T20:57:21.690388+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-27T20:57:21.689378+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #187 started (--only bluesky)",
-    "created_at": "2026-11-27T20:57:21.688282+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T20:29:32.235675+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai']",
-    "created_at": "2026-11-27T20:29:32.229371+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-27T20:29:32.004726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T20:29:32.002452+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T20:29:31.616446+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T20:29:23.663134+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-27T20:29:23.661479+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-27T20:29:23.659742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #186 started (--only blogger)",
-    "created_at": "2026-11-27T20:29:23.657828+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T19:59:48.567006+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai', 'Cybersecurity breach reported at CIA', 'Army detonates lead azide in Iowa']",
-    "created_at": "2026-11-27T19:59:48.560429+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T19:59:48.362076+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 02:29 Dhaka",
-    "created_at": "2026-11-27T19:59:48.360793+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T19:59:48.357140+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T19:59:38.354637+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T19:59:38.189959+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T19:59:38.187180+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-27T19:59:32.761902+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T19:59:32.759628+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T19:59:32.544280+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T19:59:32.541999+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T19:59:25.659643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T19:59:25.657153+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
-    "created_at": "2026-11-27T19:59:25.656043+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (, the photo shows the national flag of Iran, which relates to the subject of the news headline.)",
-    "created_at": "2026-11-27T19:59:25.654500+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T19:59:21.809742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T19:59:21.698963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T19:59:21.566728+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T19:59:21.507424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T19:59:21.466885+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T19:59:21.465557+00:00",
     "card": ""
   }
 ]
