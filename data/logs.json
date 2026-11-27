@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T20:29:32.235675+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai']",
+    "created_at": "2026-11-27T20:29:32.229371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T20:29:32.004726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T20:29:32.002452+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T20:29:31.616446+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T20:29:23.663134+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T20:29:23.661479+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T20:29:23.659742+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #186 started (--only blogger)",
+    "created_at": "2026-11-27T20:29:23.657828+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T19:59:48.567006+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-27T17:02:16.430827+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:02:16.429804+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.cincinnati.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956869007-20261125-t-00 (page: https://www.inkl.com/news/trump-shares-veto-corleone-meme-as-democrats-prepare-to-take-control-of-co - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T17:02:16.428751+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.cincinnati.com/picture-gallery/news/trump/2026/11/25/trump-in-florida-for-thanksgiving-h - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T17:02:16.427597+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.pottsmerc.com/wp-content/uploads/2026/11/Trump_28345-1.jpg (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump cal - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T17:02:16.426234+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.pottsmerc.com/2026/11/27/trump-gdp-figures-commerce-department/ | Something Strange Is H - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T17:02:16.424983+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T17:02:16.422561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T17:02:16.288704+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T17:02:16.159538+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-27T17:02:16.132946+00:00",
     "card": ""
   }
 ]

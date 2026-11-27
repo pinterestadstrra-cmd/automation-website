@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T19:59:48.563519+00:00",
-  "last_run": "2026-11-27T19:59:09.516544+00:00",
-  "runs": 185,
+  "generated_at": "2026-11-27T20:29:32.233231+00:00",
+  "last_run": "2026-11-27T20:29:23.657802+00:00",
+  "runs": 186,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,11 +86,11 @@
       "runs_today": 16,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T02:14:21.100357+06:00",
-        "2026-11-28T02:29:21.100357+06:00",
         "2026-11-28T02:44:21.100357+06:00",
         "2026-11-28T02:59:21.100357+06:00",
-        "2026-11-28T03:14:21.100357+06:00"
+        "2026-11-28T03:14:21.100357+06:00",
+        "2026-11-28T03:29:21.100357+06:00",
+        "2026-11-28T03:44:21.100357+06:00"
       ],
       "next_post_times": [
         "2026-11-28T02:54:00+06:00",
@@ -158,18 +158,18 @@
       "runs_today": 16,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T02:14:48.362052+06:00",
         "2026-11-28T02:29:48.362052+06:00",
         "2026-11-28T02:44:48.362052+06:00",
         "2026-11-28T02:59:48.362052+06:00",
-        "2026-11-28T03:14:48.362052+06:00"
+        "2026-11-28T03:14:48.362052+06:00",
+        "2026-11-28T03:29:48.362052+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T02:10:00+06:00",
         "2026-11-28T03:05:00+06:00",
         "2026-11-28T04:00:00+06:00",
         "2026-11-28T04:55:00+06:00",
-        "2026-11-28T05:50:00+06:00"
+        "2026-11-28T05:50:00+06:00",
+        "2026-11-28T07:06:00+06:00"
       ],
       "success": 18,
       "fail": 32,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T19:59:09.518459+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T20:29:23.659731+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T20:29:23.661470+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
+    "Victoria votes in state election",
     "Most famous person you're related to",
+    "Cybersecurity breach reported at CIA",
     "Thanksgiving Day celebrations",
     "Banned Nvidia chips reported in Shanghai",
-    "Cybersecurity breach reported at CIA",
-    "Army detonates lead azide in Iowa",
-    "Grand Theft Auto VI",
     "Aaron Rodgers reportedly out",
-    "Bird photography",
-    "Silksong Sea of Sorrow release date",
-    "Original characters as nameless NPCs"
+    "Grand Theft Auto VI",
+    "King tides flood West Coast",
+    "Thanksgiving storm knocks out power",
+    "Sunrise on the Reaping's $225M debut"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T20:29:32.004726+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T20:29:32.002452+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T20:29:31.616446+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T20:29:23.663134+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T20:29:23.661479+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T20:29:23.659742+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #186 started (--only blogger)",
+      "created_at": "2026-11-27T20:29:23.657828+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T19:59:48.567006+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai', 'Cybersecurity breach reported at CIA', 'Army detonates lead azide in Iowa']",
+      "created_at": "2026-11-27T19:59:48.560429+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -564,60 +606,6 @@
       "message": "pexels: API key not configured - skipping",
       "created_at": "2026-11-27T19:59:14.536771+00:00",
       "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
-      "created_at": "2026-11-27T19:59:14.535319+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-      "created_at": "2026-11-27T19:59:14.532888+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-27T19:59:14.234888+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ready queue: discarding 'Elon Musk becomes biggest donor of US midterms cycle with $3' for card 'Adsterra Blogger' - stored photo URL no longer downloads/verifies",
-      "created_at": "2026-11-27T19:59:13.690964+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "download_image: rejected (not a valid photo >=400px): https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg",
-      "created_at": "2026-11-27T19:59:13.688273+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-27T19:59:13.417940+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-27T19:59:13.416517+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-      "created_at": "2026-11-27T19:59:13.414437+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-27T19:59:12.101781+00:00",
-      "card": "Adsterra Blogger"
     }
   ]
 }
