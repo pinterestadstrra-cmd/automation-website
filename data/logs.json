@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T05:06:26.592816+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', 'Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Katie Miller car seat claim', 'Original characters as nameless NPCs']",
+    "created_at": "2026-11-27T05:06:26.586289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T05:06:26.329823+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T05:06:26.326730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T05:06:26.041040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T05:06:24.129935+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T05:06:24.128398+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T05:06:24.126760+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #161 started (--only blogger)",
+    "created_at": "2026-11-27T05:06:24.124895+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T04:12:40.717570+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://livingoceantours.com/wp-content/uploads/2026/01/oahu-snorkeling-reef-life.jpg (page: https://livingoceantours.com/snorkeling-in-waikiki-hawaii-5/ | Your Ultimate Guide To Oahu Snorkelin - only 0 of 13 key entities in the source page)",
     "created_at": "2026-11-27T04:11:56.250970+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdnimg.co/7496e09b-3edc-4156-b33a-4c6f331ce8b9/10ddc298-6823-412a-87cb-8e2eee6d99f4/hawaii-b (page: https://livingoceantours.com/oahu-snorkeling-2/ | 8 Unforgettable Spots For Hawaii Big Island Best S - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T04:11:56.250165+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T04:11:56.247930+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T04:11:56.118762+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T04:11:55.979986+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T04:11:55.907374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T04:11:55.866473+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T04:11:55.865780+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://logos-world.net/wp-content/uploads/2023/01/xHamster-Logo-2007-500x281.png (page: https://www.vecteezy.com/photo/31236205-homepage-of-xhamster-website-on-the-display-of-pc-url-xhamst - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T04:11:55.865023+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdn.1min30.com/wp-content/uploads/2018/12/Le-logo-xHamster.jpg (page: https://logos-world.net/xhamster-logo/ | xHamster logo : histoire, signification et évolution, symbo - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T04:11:55.864222+00:00",
     "card": ""
   }
 ]
