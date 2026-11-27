@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 171,
-  "last_run": "2026-11-27T11:23:58.731159+00:00",
+  "runs": 172,
+  "last_run": "2026-11-27T12:28:25.169987+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 12,
+      "fail": 13,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T11:24:20.522134+00:00"
+      "last_run": "2026-11-27T12:28:32.161236+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 25,
+      "fail": 26,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T11:26:53.666621+00:00"
+      "last_run": "2026-11-27T12:29:21.743795+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T11:24:20.522138+00:00",
-    "mastodon.social": "2026-11-27T11:26:53.666625+00:00"
+    "Adsterra Blogger": "2026-11-27T12:28:32.161239+00:00",
+    "mastodon.social": "2026-11-27T12:29:21.743797+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,11 +411,11 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 9
+      "count": 10
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 9
+      "count": 10
     }
   },
   "consecutive_failures": 0,
@@ -424,7 +424,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T11:23:58.732546+00:00"
+      "time": "2026-11-27T12:28:25.171302+00:00"
     }
   ],
   "posted_urls": [],
@@ -534,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 15,
+      "fails": 16,
       "next_retry": ""
     },
     "Adsterra Blogger": {
-      "fails": 8,
+      "fails": 9,
       "next_retry": ""
     }
   },
