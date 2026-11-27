@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T19:33:24.674875+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Cybersecurity breach reported at CIA', 'Army detonates lead azide in Iowa', 'Aaron Rodgers reportedly out', 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-27T19:33:24.670979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T19:33:24.436829+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T19:33:24.435307+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T19:33:24.017763+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T19:33:16.188028+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T19:33:16.186943+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T19:33:16.184730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #184 started (--only blogger)",
+    "created_at": "2026-11-27T19:33:16.183366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T18:59:26.324591+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
     "created_at": "2026-11-27T17:01:43.411823+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:43.410776+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://image.api.playstation.com/vulcan/ap/rnd/202501/1623/068123d291265a61f85713615aa2f255077fbf16 (page: https://www.wrestleview.com/wwe-raw-results/256904-live-wwe-raw-results-january-2-2023-birmingham/ | - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.409737+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://ewrestling.com/wp-content/uploads/2026/03/wwe-logo-6-e1774000513326.jpg (page: https://store.playstation.com/en-in/pages/latest/?gad_source=1 | WWE SmackDown Results - May 1st, 20 - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.408568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://wallpapers.com/images/hd/cool-wwe-3ny74nus835twbrs.jpg (page: https://ewrestling.com/article/wwe-smackdown-results-may-1st-2026-tulsa-ok/ | [2400+] Wwe Background - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.407475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/11/netflix.jpg (page: https://wallpapers.com/wwe-background | 9 Best British Wrestlers in WWE History (Ranked) - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.402523+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.398730+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.119910+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:42.993257+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:42.966719+00:00",
     "card": ""
   }
 ]

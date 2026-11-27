@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T18:59:26.321824+00:00",
-  "last_run": "2026-11-27T18:58:42.752501+00:00",
-  "runs": 183,
+  "generated_at": "2026-11-27T19:33:24.673116+00:00",
+  "last_run": "2026-11-27T19:33:16.183346+00:00",
+  "runs": 184,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 15,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T01:13:50.883057+06:00",
-        "2026-11-28T01:28:50.883057+06:00",
         "2026-11-28T01:43:50.883057+06:00",
         "2026-11-28T01:58:50.883057+06:00",
-        "2026-11-28T02:13:50.883057+06:00"
+        "2026-11-28T02:13:50.883057+06:00",
+        "2026-11-28T02:28:50.883057+06:00",
+        "2026-11-28T02:43:50.883057+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T01:04:00+06:00",
         "2026-11-28T01:59:00+06:00",
         "2026-11-28T02:54:00+06:00",
         "2026-11-28T04:08:00+06:00",
-        "2026-11-28T05:03:00+06:00"
+        "2026-11-28T05:03:00+06:00",
+        "2026-11-28T05:58:00+06:00"
       ],
       "success": 71,
       "fail": 18,
@@ -158,11 +158,11 @@
       "runs_today": 15,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T01:14:26.099209+06:00",
-        "2026-11-28T01:29:26.099209+06:00",
         "2026-11-28T01:44:26.099209+06:00",
         "2026-11-28T01:59:26.099209+06:00",
-        "2026-11-28T02:14:26.099209+06:00"
+        "2026-11-28T02:14:26.099209+06:00",
+        "2026-11-28T02:29:26.099209+06:00",
+        "2026-11-28T02:44:26.099209+06:00"
       ],
       "next_post_times": [
         "2026-11-28T02:10:00+06:00",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T18:58:42.772702+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T19:33:16.184724+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T19:33:16.186937+00:00"
     }
   ],
   "dry_run": false,
@@ -308,17 +296,71 @@
   "trending": [
     "Most famous person you're related to",
     "Cybersecurity breach reported at CIA",
+    "Army detonates lead azide in Iowa",
+    "Aaron Rodgers reportedly out",
     "Thanksgiving Day celebrations",
     "Grand Theft Auto VI",
-    "Nvidia chip exports to China",
-    "Quebec oath to the King",
+    "Banned Nvidia chips reported in Shanghai",
+    "Silksong Sea of Sorrow release date",
     "Blade Runner 2099 series premiere",
-    "Boreen daily trivia scores",
-    "Aaron Rodgers reportedly out",
-    "Day to end violence against women"
+    "Canned cranberry sauce"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T19:33:24.436829+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T19:33:24.435307+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T19:33:24.017763+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T19:33:16.188028+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T19:33:16.186943+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T19:33:16.184730+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #184 started (--only blogger)",
+      "created_at": "2026-11-27T19:33:16.183366+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T18:59:26.324591+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Nvidia chip exports to China']",
+      "created_at": "2026-11-27T18:59:26.317843+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "worker run #183 started (--only bluesky)",
       "created_at": "2026-11-27T18:58:42.752525+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T18:20:44.623501+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Medicare for All and universal healthcare', 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Nvidia reinstates Jensen Huang']",
-      "created_at": "2026-11-27T18:20:44.617953+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T18:20:44.358310+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T18:20:44.356183+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-27T18:20:43.940364+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T18:20:22.451287+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T18:20:22.450180+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T18:20:22.448954+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #182 started (--only blogger)",
-      "created_at": "2026-11-27T18:20:22.447536+00:00",
       "card": ""
     }
   ]
