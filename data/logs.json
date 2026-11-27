@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T09:03:40.873103+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Victoria votes in state election', \"Burnham's UK-EU deal\", 'Grand Theft Auto VI', 'Nvidia reinstates Jensen Huang']",
+    "created_at": "2026-11-27T09:03:40.865436+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T09:03:40.634629+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T09:03:40.626722+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T09:03:40.201811+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T09:03:33.018961+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T09:03:33.017600+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T09:03:33.016094+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #167 started (--only blogger)",
+    "created_at": "2026-11-27T09:03:33.014344+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T08:07:00.453507+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdn.quotesgram.com/img/33/13/1389689687-Barack-Obama-Motivational-And-Inspirational-Quotes-I (page: https://www.etsy.com/listing/641359338/barack-obama-quote-classroom-poster | Famous Inspirational Qu - only 0 of 13 key entities in the source page)",
     "created_at": "2026-11-27T08:03:42.633794+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:42.631570+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:42.415954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:42.293663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:42.210693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:41.689457+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:41.688365+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/736x/bd/6f/f0/bd6ff07c761a2e8cc46f270b327d7acb.jpg (page: Tawny Owl talons,leather and cord.- David Robson | Bone crafts, Owl talons, Vulture culture - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:41.687269+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:41.684255+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
-    "created_at": "2026-11-27T08:03:41.553408+00:00",
     "card": ""
   }
 ]
