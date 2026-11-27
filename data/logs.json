@@ -1,1202 +1,1202 @@
 [
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T06:31:28.074710+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Victoria votes in state election', 'Thanksgiving storm knocks out power', 'Katie Miller car seat claim']",
-    "created_at": "2026-11-27T06:31:28.066754+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-27T06:31:27.979706+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T06:31:27.976803+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T06:31:27.434359+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T06:31:07.221888+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-27T06:31:07.220430+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-27T06:31:07.218911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #163 started (--only blogger)",
-    "created_at": "2026-11-27T06:31:07.216755+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T05:31:51.732815+00:00",
+    "created_at": "2026-11-27T06:39:07.653451+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T05:31:51.731176+00:00",
+    "created_at": "2026-11-27T06:39:07.652050+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T05:31:51.729066+00:00",
+    "created_at": "2026-11-27T06:39:07.649768+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T05:31:41.725971+00:00",
+    "created_at": "2026-11-27T06:38:57.647261+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-27T05:31:36.546902+00:00",
+    "created_at": "2026-11-27T06:38:52.172024+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T05:31:36.544165+00:00",
+    "created_at": "2026-11-27T06:38:52.169554+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-    "created_at": "2026-11-27T05:31:33.203128+00:00",
+    "created_at": "2026-11-27T06:38:42.471618+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
     "message": "promo: fresh news exists but no real image could be fetched - skipping",
-    "created_at": "2026-11-27T05:31:32.304085+00:00",
+    "created_at": "2026-11-27T06:38:42.392698+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: photo search done - 8 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-    "created_at": "2026-11-27T05:31:32.302780+00:00",
+    "message": "promo: photo search done - 9 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+    "created_at": "2026-11-27T06:38:42.391353+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-    "created_at": "2026-11-27T05:31:32.301417+00:00",
+    "created_at": "2026-11-27T06:38:42.390160+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 6/6 tried: 'How the Black Sea front in the Russia-Ukraine war is threate' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T05:31:32.300182+00:00",
+    "message": "promo: story 6/6 tried: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T06:38:42.388882+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T06:38:42.387719+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Ukraine war briefing: Kyiv launched more long-range strikes in 2026 than rest of war combined, data shows - The Guardian' (5 download(s) tried)",
+    "created_at": "2026-11-27T06:38:42.386352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/32382810/c/1666/1666/220/192/il/f2d177/3494213371/il_600x600.3494213371_c6k (page: https://www.etsy.com/listing/1889756334/sheer-lingerie-mesh-lingerie-lingerie | Sexy Sheer Lingerie  - page does not name the entity (Ukraine))",
+    "created_at": "2026-11-27T06:38:42.385123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.ohlalacheri.com/cdn/shop/articles/70-12100_BWH_ED.jpg?v=1757447191&width=1500 (page: https://www.etsy.com/market/sexy_sheer_lingerie | The Do’s & Don’ts of Wearing Sheer Lingerie – Oh L - page does not name the entity (Ukraine))",
+    "created_at": "2026-11-27T06:38:42.383703+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/9985109/r/il/65dcf5/1780282113/il_1588xN.1780282113_7qxh.jpg (page: https://www.ohlalacheri.com/blogs/the-cheri-edit/how-to-wear-sheer-lingerie | Light-blue lace linger - page does not name the entity (Ukraine))",
+    "created_at": "2026-11-27T06:38:42.382227+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/32377070/r/il/ca6a93/6596656544/il_800x800.6596656544_7ona.jpg (page: https://www.etsy.com/listing/658231792/light-blue-lace-lingerie-sheer-lingerie?frs=1 | Sheer Panties - page does not name the entity (Ukraine))",
+    "created_at": "2026-11-27T06:38:42.380766+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682221_5726e524d0_b.jpg",
+    "created_at": "2026-11-27T06:38:42.378725+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682461_c4b974bc74_b.jpg",
+    "created_at": "2026-11-27T06:38:42.333630+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682341_025d20604d_b.jpg",
+    "created_at": "2026-11-27T06:38:42.292603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
+    "created_at": "2026-11-27T06:38:42.254340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
+    "created_at": "2026-11-27T06:38:42.205800+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T06:38:42.204223+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T06:38:42.149874+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T06:38:41.984356+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-27T06:38:41.861571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-27T06:38:41.831255+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.794189+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.793039+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-27T06:38:41.791748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://lotusarise.com/wp-content/uploads/2023/09/India-Map-Free-Map-of-India-With-States-UTs-Capita (page: https://www.mapsofworld.com/india/ | India Map - Free Map of India With States, UTs & Capital - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.790513+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://static.vecteezy.com/system/resources/previews/023/022/032/original/india-map-with-city-names (page: https://lotusarise.com/maps/india-map/ | India Map with City Names 23022032 Vector Art at Vecteezy - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.789088+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.nationsonline.org/gallery/India/map_of_india50-L.jpg (page: https://www.vecteezy.com/vector-art/23022032-india-map-with-city-names | India map of India's States - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.787826+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.guideoftheworld.com/wp-content/uploads/map/colorful_india_political_map.jpg (page: https://www.nationsonline.org/oneworld/india_map.htm | India Map - Guide of the World - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.786376+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T06:38:41.783581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T06:38:41.603004+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T06:38:41.486186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T06:38:41.457455+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.419907+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.418571+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://m.media-amazon.com/images/I/91PAcMmndTL.png (page: https://play.google.com/store/apps/details?id=an.FilipTranslate&hl=en | Filipino English Translator  - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.417414+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/140174320/original/03cd431d83fddcfec3701 (page: https://www.amazon.co.uk/AllFreeGames-Dev-Filipino-English-Translator/dp/B011N38ME8 | Translate Engl - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.416076+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://cdn.shopify.com/s/files/1/0509/0538/3085/products/770X_tagalog_sample_1600x.jpg?v=1607544116 (page: https://www.canoeracing.org.uk/translate-english-word-to-tagalog-or-vise-versa-ww-27531480 | English - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.414649+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129065190/original/6831ae4c445100f2040b9 (page: https://www.facebook.com/reel/728931149903538/ | Dictionaries In Tagalog Tagalog To English, Tagalog - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.413258+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:41.410604+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:41.231451+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:41.107056+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:41.078972+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.035949+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:41.034528+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/736x/88/9b/6d/889b6d1f1f97281466ae93b6ee0505f7.jpg (page: Makeup looks natural light skin | Light skin girl make up, Hair makeup ... - only 0 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:41.033302+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:41.030818+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:40.908018+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:40.790940+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T06:38:40.761801+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:40.718489+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T06:38:40.717302+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no og:image)",
+    "created_at": "2026-11-27T06:38:40.716039+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOEVienFUcEhQaDhycjBhVEhBWmNKLWpIVXF2SmtKMnBHd1VhOTViamZ2eFRfQlR5YTV) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T06:38:40.713511+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 5/6 tried: 'How the Black Sea front in the Russia-Ukraine war is threate' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T06:38:40.396840+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T05:31:32.298936+00:00",
+    "created_at": "2026-11-27T06:38:40.395613+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: no real photo found for 'How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict - CBS News' (9 download(s) tried)",
-    "created_at": "2026-11-27T05:31:32.297511+00:00",
+    "created_at": "2026-11-27T06:38:40.394493+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:32.296262+00:00",
+    "created_at": "2026-11-27T06:38:40.393241+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:32.294684+00:00",
+    "created_at": "2026-11-27T06:38:40.391635+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:32.243290+00:00",
+    "created_at": "2026-11-27T06:38:40.316795+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:32.241531+00:00",
+    "created_at": "2026-11-27T06:38:40.314617+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp2553315.jpg",
-    "created_at": "2026-11-27T05:31:31.870310+00:00",
+    "created_at": "2026-11-27T06:38:39.945950+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp2553315.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
-    "created_at": "2026-11-27T05:31:31.869083+00:00",
+    "created_at": "2026-11-27T06:38:39.944130+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp4063159.jpg",
-    "created_at": "2026-11-27T05:31:31.855253+00:00",
+    "created_at": "2026-11-27T06:38:39.894469+00:00",
     "card": ""
   },
   {
     "level": "warning",
     "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp4063159.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
-    "created_at": "2026-11-27T05:31:31.853605+00:00",
+    "created_at": "2026-11-27T06:38:39.892862+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/4258566925_5ef4948e9c_b.jpg",
-    "created_at": "2026-11-27T05:31:31.822503+00:00",
+    "created_at": "2026-11-27T06:38:39.853024+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8054/8399644719_82a05837a7_b.jpg",
-    "created_at": "2026-11-27T05:31:31.776227+00:00",
+    "created_at": "2026-11-27T06:38:39.812069+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2129/2094032782_8f075ed396_b.jpg",
-    "created_at": "2026-11-27T05:31:31.735669+00:00",
+    "created_at": "2026-11-27T06:38:39.770545+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3866/14893785171_d40fe9591b_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:31.698863+00:00",
+    "created_at": "2026-11-27T06:38:39.721158+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:31.697181+00:00",
+    "created_at": "2026-11-27T06:38:39.719493+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6217/6342662124_a376bb43f6.jpg",
-    "created_at": "2026-11-27T05:31:31.648783+00:00",
+    "created_at": "2026-11-27T06:38:39.668429+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Black'",
-    "created_at": "2026-11-27T05:31:31.599583+00:00",
+    "created_at": "2026-11-27T06:38:39.624443+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Black'",
-    "created_at": "2026-11-27T05:31:31.460145+00:00",
+    "created_at": "2026-11-27T06:38:39.418868+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Black'",
-    "created_at": "2026-11-27T05:31:31.344922+00:00",
+    "created_at": "2026-11-27T06:38:39.313262+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'Black'",
-    "created_at": "2026-11-27T05:31:31.315378+00:00",
+    "created_at": "2026-11-27T06:38:39.283512+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:31.273382+00:00",
+    "created_at": "2026-11-27T06:38:39.237447+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:31.272198+00:00",
+    "created_at": "2026-11-27T06:38:39.236239+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'How the Black Sea front in the Russia-Ukraine war ' - trying entity search 'Black'",
-    "created_at": "2026-11-27T05:31:31.271018+00:00",
+    "created_at": "2026-11-27T06:38:39.235011+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.269572+00:00",
+    "created_at": "2026-11-27T06:38:39.233765+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.268232+00:00",
+    "created_at": "2026-11-27T06:38:39.232301+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.266699+00:00",
+    "created_at": "2026-11-27T06:38:39.231029+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.265221+00:00",
+    "created_at": "2026-11-27T06:38:39.229454+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://upload.wikimedia.org/wikipedia/commons/2/28/Tear_of_the_Sunflower_%2852100762838%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=134822761 | Tear of the Sunflower (52100762838) - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.263953+00:00",
+    "created_at": "2026-11-27T06:38:39.228214+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://live.staticflickr.com/5519/31086629415_e459771cd2_b.jpg (page: https://www.flickr.com/photos/77612281@N05/31086629415 | The War of the Nations_WW1_069 - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:31.262519+00:00",
+    "created_at": "2026-11-27T06:38:39.226862+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T05:31:31.259772+00:00",
+    "created_at": "2026-11-27T06:38:39.224245+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T05:31:31.136818+00:00",
+    "created_at": "2026-11-27T06:38:39.104428+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T05:31:31.020059+00:00",
+    "created_at": "2026-11-27T06:38:38.976204+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 2 result(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T05:31:30.990192+00:00",
+    "created_at": "2026-11-27T06:38:38.946664+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.948395+00:00",
+    "created_at": "2026-11-27T06:38:38.908635+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.947128+00:00",
+    "created_at": "2026-11-27T06:38:38.906915+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.945677+00:00",
+    "created_at": "2026-11-27T06:38:38.905175+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.944198+00:00",
+    "created_at": "2026-11-27T06:38:38.903581+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.942827+00:00",
+    "created_at": "2026-11-27T06:38:38.902022+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.941475+00:00",
+    "created_at": "2026-11-27T06:38:38.898986+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.938939+00:00",
+    "created_at": "2026-11-27T06:38:38.896307+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.816470+00:00",
+    "created_at": "2026-11-27T06:38:38.775779+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.693781+00:00",
+    "created_at": "2026-11-27T06:38:38.655862+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.663960+00:00",
+    "created_at": "2026-11-27T06:38:38.624307+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.625091+00:00",
+    "created_at": "2026-11-27T06:38:38.584450+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.623927+00:00",
+    "created_at": "2026-11-27T06:38:38.583149+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.622548+00:00",
+    "created_at": "2026-11-27T06:38:38.581727+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.621079+00:00",
+    "created_at": "2026-11-27T06:38:38.580371+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.619811+00:00",
+    "created_at": "2026-11-27T06:38:38.579074+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:30.618530+00:00",
+    "created_at": "2026-11-27T06:38:38.577813+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.616012+00:00",
+    "created_at": "2026-11-27T06:38:38.575340+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.477914+00:00",
+    "created_at": "2026-11-27T06:38:38.408220+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.351050+00:00",
+    "created_at": "2026-11-27T06:38:38.293534+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T05:31:30.322579+00:00",
+    "created_at": "2026-11-27T06:38:38.263854+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.284720+00:00",
+    "created_at": "2026-11-27T06:38:38.225892+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:30.283507+00:00",
+    "created_at": "2026-11-27T06:38:38.224649+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no og:image)",
-    "created_at": "2026-11-27T05:31:30.282123+00:00",
+    "created_at": "2026-11-27T06:38:38.222970+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifkFVX3lxTE1XSG11OFNDMy1CT0lldVd0S21WUVE4SERyVUFSRWpqZUw1LXo0MEdVWmJWNWpjaWcxUGV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T05:31:30.279692+00:00",
+    "created_at": "2026-11-27T06:38:38.220258+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: Trump calls on Putin to pull back all mi' - skipped (same event used within 24h, event key 'aggression all back call europe latest military news pull pu')",
-    "created_at": "2026-11-27T05:31:29.973923+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 5/6 tried: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T05:31:29.972210+00:00",
+    "message": "promo: story 4/6 tried: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T06:38:37.933059+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T05:31:29.971022+00:00",
+    "created_at": "2026-11-27T06:38:37.931660+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: no real photo found for 'Lured by High Salaries, Some Brazilians Were Duped Into Fighting for Russia - The New York Times' (0 download(s) tried)",
-    "created_at": "2026-11-27T05:31:29.969840+00:00",
+    "created_at": "2026-11-27T06:38:37.930282+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.the-sun.com/wp-content/uploads/sites/6/2020/10/NINTCHDBPICT000611373171.png?w=1024 (page: https://www.the-sun.com/news/5493758/is-boris-sanchez-married/ | Wendy Williams' fans flood handsome - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.968479+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/200x150/e5/d9/a0/e5d9a0d6da04768355359ff5b2f51490.jpg (page: https://www.pinterest.com/halpin1221/funny-cat-memes/ | 9 Grumpy cat humor ideas | grumpy cat humor, - page does not name the entity (Lured))",
+    "created_at": "2026-11-27T06:38:37.928748+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.the-sun.com/wp-content/uploads/sites/6/2020/10/NINTCHDBPICT000611372783.png?strip=all&w= (page: https://www.thecityceleb.com/biography/public-figure/journalist/cnn-boris-sanchez-biography-wife-wik - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.967298+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/150x150/3a/5f/30/3a5f306fe8383c5e21e795eb4b39ef5e.jpg (page: https://www.pinterest.com/johnw09/grumpy-cat-humor/ | Cat memes, Animal memes, Funny animal jokes - page does not name the entity (Lured))",
+    "created_at": "2026-11-27T06:38:37.926896+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://media.pagina7.cl/2025/03/boris-sanchez-el-fenomeno-1024x538.jpg (page: https://www.instagram.com/borissancheztv/ | Boris Sánchez, ganador de El Fenómeno, regresa a los rea - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.966027+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/200x150/48/de/7a/48de7ac064045d89354b2d3b871f8578.jpg (page: https://www.pinterest.com/pin/571464640201135594/ | Funny cat memes - page does not name the entity (Lured))",
+    "created_at": "2026-11-27T06:38:37.924779+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://lookaside.fbsbx.com/lookaside/crawler/instagram/borissancheztv/profile_pic.jpg (page: https://www.instagram.com/boris_bsanm/ | Boris Sanchez (@borissancheztv) • Instagram photos and vide - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.964856+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.dreamsquote.com/wp-content/uploads/2024/02/i-hate-cat-memes-121x150.jpg (page: https://tenor.com/search/talking-cat-funny-gifs | 300 Cat Memes and Funny Images - Dreams Quote - page does not name the entity (Lured))",
+    "created_at": "2026-11-27T06:38:37.922650+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/199/491889175_a900f6e272.jpg (page: https://www.flickr.com/photos/66742614@N00/491889175 | Old lure - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.963714+00:00",
+    "created_at": "2026-11-27T06:38:37.921297+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/130/411453602_49363adf71_b.jpg (page: https://www.flickr.com/photos/28548387@N00/411453602 | The Lure Of Gold - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.962548+00:00",
+    "created_at": "2026-11-27T06:38:37.919934+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/2/22/Blason_ville_fr_Lure_%28Haute-Sa%C3%B4ne%29.svg (page: https://commons.wikimedia.org/w/index.php?curid=5169949 | Blason ville fr Lure (Haute-Saône) - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.961235+00:00",
+    "created_at": "2026-11-27T06:38:37.918525+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/6/67/2015-08_-_Sous-pr%C3%A9fecture_de_Lure_-_02.JPG (page: https://commons.wikimedia.org/w/index.php?curid=42154056 | 2015-08 - Sous-préfecture de Lure - 02 - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.960047+00:00",
+    "created_at": "2026-11-27T06:38:37.917085+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://live.staticflickr.com/3210/3290077881_a8b841c34e_b.jpg (page: https://www.flickr.com/photos/91198056@N00/3290077881 | Small ABU Spoon Lures - page does not name the entity (Lured))",
-    "created_at": "2026-11-27T05:31:29.958724+00:00",
+    "created_at": "2026-11-27T06:38:37.915769+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Lured'",
-    "created_at": "2026-11-27T05:31:29.955762+00:00",
+    "created_at": "2026-11-27T06:38:37.912981+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Lured'",
-    "created_at": "2026-11-27T05:31:29.828179+00:00",
+    "created_at": "2026-11-27T06:38:37.784153+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Lured'",
-    "created_at": "2026-11-27T05:31:29.702710+00:00",
+    "created_at": "2026-11-27T06:38:37.669604+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'Lured'",
-    "created_at": "2026-11-27T05:31:29.674166+00:00",
+    "created_at": "2026-11-27T06:38:37.638102+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:29.634611+00:00",
+    "created_at": "2026-11-27T06:38:37.600914+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:29.633416+00:00",
+    "created_at": "2026-11-27T06:38:37.599644+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'Lured by High Salaries, Some Brazilians Were Duped' - trying entity search 'Lured'",
-    "created_at": "2026-11-27T05:31:29.632135+00:00",
+    "created_at": "2026-11-27T06:38:37.598175+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://images.hdqwalls.com/download/cute-pikachu-6o-2560x1600.jpg (page: https://pixabay.com/images/search/pikachu chibi/ | 2560x1600 Cute Pikachu Wallpaper,2560x1600 Resolu - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.630926+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/736x/75/5d/56/755d56891f029f05316ac45d15559e07.jpg (page: https://nexuspointnews.com/review-yellowjackets-season-4/ | Sophie nélisse as shauna shipman in yell - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:37.596949+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://i.pinimg.com/736x/18/f9/54/18f954afed395cb408b088ce59734aab.jpg (page: https://hdqwalls.com/wallpaper/2560x1600/cute-pikachu | Pin oleh Leon Strong di Pikachu Forever Desi - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.629590+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://static0.cbrimages.com/wordpress/wp-content/uploads/2026/11/sophie-n-lisse.png?w=1200&h=675&f (page: https://www.pinterest.com/pin/657033033185160500/ | Yellowjackets: Sophie Nélisse Explains Shauna's  - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:37.595613+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.desicomments.com/wp-content/uploads/Image-Of-Pikachu-600x600.png (page: https://www.pinterest.com/pin/477733472989626415/ | Image Of Pikachu - Desi Comments - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.628230+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://cdn.sortiraparis.com/images/80/69688/1226131-yellowjackets-steven-krueger-sophie-nelisse.jpg (page: https://www.cbr.com/video/yellowjackets-sophie-nlisse-explains-shauna-s-pain/ | Yellowjackets sesong - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:37.594200+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://wallpapercave.com/wp/wp2403373.jpg (page: https://www.desicomments.com/cartoons/image-of-pikachu/ | Pikachu HD Wallpapers - Wallpaper Cave - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.626784+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://telltaletv.com/wp-content/uploads/2026/11/Yellowjackets_401_KS_0302_0461_RT.jpg (page: https://www.sortiraparis.com/no/hobbyer/kino-serie-festival/articles/337612-yellowjackets-sesong-4-d - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:37.592762+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-27T05:31:29.624154+00:00",
+    "created_at": "2026-11-27T06:38:37.590072+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-27T05:31:29.432407+00:00",
+    "created_at": "2026-11-27T06:38:37.378901+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-27T05:31:29.308950+00:00",
+    "message": "wikimedia: 0 result(s) for 'Lured High Salaries Some Brazilians'",
+    "created_at": "2026-11-27T06:38:37.258072+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Lured High Salaries Some Brazilians'",
-    "created_at": "2026-11-27T05:31:29.279869+00:00",
+    "created_at": "2026-11-27T06:38:36.725454+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:29.232101+00:00",
+    "created_at": "2026-11-27T06:38:36.657660+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:29.230863+00:00",
+    "created_at": "2026-11-27T06:38:36.656469+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://tb-static.uber.com/prod/image-proc/processed_images/c8c5465b725fd57fbf3ef7be6a434b89/c9252e6 (page: https://www.ubereats.com/za/near-me/24-hours | Closest Chinese Restaurant Delivery – ULJAA - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.229584+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://flashbak.com/wp-content/uploads/2022/03/guernica-bombing-1280x965.jpeg (page: https://www.alamy.com/stock-photo/guernica-1937.html | Spanish Civil War Guernica 1937 - Flashbak - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:36.655327+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://tb-static.uber.com/prod/image-proc/processed_images/253ab747abdbd23c2f48a92b137f7d11/fb86662 (page: https://singleparentfoodbank.org/closest-chinese-restaurant-delivery/ | 24 Hours Food Delivery Near  - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.228344+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://www.re-thinkingthefuture.com/wp-content/uploads/2022/12/A8663-Story-behind-the-Art-Guernica- (page: https://flashbak.com/picasso-guernica-spanish-civil-war-nazis-art-450868/spanish-civil-war-guernica- - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:36.653989+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://tb-static.uber.com/prod/image-proc/processed_images/b42141a154c755200fb4eeb5c630cb55/3ac2b39 (page: https://www.ubereats.com/ca/near-me/24-hours | Comfort Food Delivery Near Me | Uber Eats - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.227042+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Bundesarchiv_Bild_183-H25224%2C_Guernica%2 (page: https://desastresaereosnews.blogspot.com/2026/04/hoje-na-historia-26-de-abril-de-1937-o.html | Bombi - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:36.652775+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://tb-static.uber.com/prod/image-proc/processed_images/191eb88427245cdfd66ec72407035a30/fb86662 (page: https://www.ubereats.com/near-me/comfort-food | 24 Hours Food Delivery Near Me | Uber Eats - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:29.225346+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://content-historia.nationalgeographic.com.es/medio/2018/06/21/vista-aerea-de-guernica-tras-el- (page: https://en.wikipedia.org/wiki/Bombing_of_Guernica | El bombardeo de Guernica en 1937, la masacre que - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:36.651473+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:29.222850+00:00",
+    "created_at": "2026-11-27T06:38:36.648929+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:29.088656+00:00",
+    "created_at": "2026-11-27T06:38:36.448234+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.949960+00:00",
+    "created_at": "2026-11-27T06:38:36.334566+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.920528+00:00",
+    "created_at": "2026-11-27T06:38:36.305658+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:28.880244+00:00",
+    "created_at": "2026-11-27T06:38:36.259514+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:28.879032+00:00",
+    "created_at": "2026-11-27T06:38:36.258294+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://static.vecteezy.com/system/resources/previews/088/742/734/large_2x/cemetery-outline-icon-thi (page: Cemetery outline icon. Thin line style from halloween icons collection ... - only 0 of 10 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:28.877271+00:00",
+    "message": "photo: rejected (irrelevant to 'Lured by High Salaries, Some Brazilians Were Duped'): https://image.tensorartassets.com/cdn-cgi/image/w=600/posts/images/702432817677671138/edf2bd8c-3c00- (page: CUTE Art by G - Free | Tensor.Art - only 0 of 10 key entities in the source page)",
+    "created_at": "2026-11-27T06:38:36.257024+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 1 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.874870+00:00",
+    "created_at": "2026-11-27T06:38:36.254261+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.756297+00:00",
+    "created_at": "2026-11-27T06:38:36.132189+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.634338+00:00",
+    "created_at": "2026-11-27T06:38:36.004841+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'Lured by High Salaries, Some Brazilians Were Duped Into Figh'",
-    "created_at": "2026-11-27T05:31:28.605699+00:00",
+    "created_at": "2026-11-27T06:38:35.976264+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:28.563723+00:00",
+    "created_at": "2026-11-27T06:38:35.936550+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:28.561851+00:00",
+    "created_at": "2026-11-27T06:38:35.935350+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'Lured by High Salaries, Some Brazilians Were Duped Into Figh' - rejected (no og:image)",
-    "created_at": "2026-11-27T05:31:28.560479+00:00",
+    "created_at": "2026-11-27T06:38:35.933956+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijAFBVV95cUxOVC01QXZKYmVBMGVqT0s0TExPOWFKWGkxNTVqZHE1STJhNUZZUmFBNWs2eG1Ca3BNQ0Y) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T05:31:28.558032+00:00",
+    "created_at": "2026-11-27T06:38:35.931399+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "promo: story 4/6 tried: 'UK shields fighter jets, contacts reservists in Cold War-sca' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T05:31:28.213281+00:00",
+    "message": "promo: story 3/6 tried: 'UK shields fighter jets, contacts reservists in Cold War-sca' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T06:38:35.611771+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo candidate: 'UK shields fighter jets, contacts reservists in Cold War-sca' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T05:31:28.212136+00:00",
+    "created_at": "2026-11-27T06:38:35.610702+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: no real photo found for 'UK shields fighter jets, contacts reservists in Cold War-scale push amid Russia threat - Fox News' (9 download(s) tried)",
-    "created_at": "2026-11-27T05:31:28.210978+00:00",
+    "created_at": "2026-11-27T06:38:35.609592+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://knightstemplar.co/wp-content/uploads/2023/07/medieval-shield-styles-600x300.jpg - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:28.209770+00:00",
+    "created_at": "2026-11-27T06:38:35.608363+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:28.208252+00:00",
+    "created_at": "2026-11-27T06:38:35.606936+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://knightstemplar.co/wp-content/uploads/2023/08/galileus_medieval_Norman_kite_shields_9a55b9c2- - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:28.158885+00:00",
+    "created_at": "2026-11-27T06:38:35.551033+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:28.157273+00:00",
+    "created_at": "2026-11-27T06:38:35.549619+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://knightstemplar.co/wp-content/uploads/2023/07/types-of-shields-1024x512.jpg - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:28.090546+00:00",
+    "created_at": "2026-11-27T06:38:35.484377+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:28.088919+00:00",
+    "created_at": "2026-11-27T06:38:35.482934+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (vision down, strict check): https://thumbs.dreamstime.com/z/big-set-medieval-knight-shields-isolated-d-illustration-white-710658 - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T05:31:28.018136+00:00",
+    "created_at": "2026-11-27T06:38:35.362469+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T05:31:28.016451+00:00",
+    "created_at": "2026-11-27T06:38:35.360923+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/0/05/Royal_Coat_and_Shield_of_Majorca_c.1276-14th_Cen",
-    "created_at": "2026-11-27T05:31:27.968509+00:00",
+    "created_at": "2026-11-27T06:38:35.260043+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://upload.wikimedia.org/wikipedia/commons/2/29/Shield_of_Saxe-Coburg_and_Gotha.svg",
-    "created_at": "2026-11-27T05:31:27.940346+00:00",
+    "created_at": "2026-11-27T06:38:35.231773+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4150/5000494134_cac151d1f1.jpg",
-    "created_at": "2026-11-27T05:31:27.903732+00:00",
+    "created_at": "2026-11-27T06:38:35.194558+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3162/2997189347_c54bd23ef4_b.jpg",
-    "created_at": "2026-11-27T05:31:27.860077+00:00",
+    "created_at": "2026-11-27T06:38:35.152188+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5050/5379365295_d2227343b1_b.jpg",
-    "created_at": "2026-11-27T05:31:27.811810+00:00",
+    "created_at": "2026-11-27T06:38:35.100337+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'shields'",
-    "created_at": "2026-11-27T05:31:27.769396+00:00",
+    "created_at": "2026-11-27T06:38:35.057557+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'shields'",
-    "created_at": "2026-11-27T05:31:27.605409+00:00",
+    "created_at": "2026-11-27T06:38:34.905174+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'shields'",
-    "created_at": "2026-11-27T05:31:27.483169+00:00",
+    "created_at": "2026-11-27T06:38:34.783294+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 5 result(s) for 'shields'",
-    "created_at": "2026-11-27T05:31:27.453904+00:00",
+    "created_at": "2026-11-27T06:38:34.716158+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:27.417801+00:00",
+    "created_at": "2026-11-27T06:38:34.674880+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:27.416617+00:00",
+    "created_at": "2026-11-27T06:38:34.673814+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: topical search found nothing for 'UK shields fighter jets, contacts reservists in Co' - trying entity search 'shields'",
-    "created_at": "2026-11-27T05:31:27.415458+00:00",
+    "created_at": "2026-11-27T06:38:34.672637+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://www.shutterstock.com/image-vector/united-kingdom-map-england-scotland-260nw-1370149397.jpg (page: https://facts.net/celebrity/13-astonishing-facts-about-manu-chao/ | 117,924 Uk Map Royalty-Free Imag - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.414200+00:00",
+    "created_at": "2026-11-27T06:38:34.671394+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.412950+00:00",
+    "created_at": "2026-11-27T06:38:34.670132+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | 15 Places To Visit In United Kingdom For A Grand H - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.411738+00:00",
+    "created_at": "2026-11-27T06:38:34.668730+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://traveltriangle.com/blog/places-to-visit-in-united-kingdom/ | United Kingdom Geographic Regio - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.410323+00:00",
+    "created_at": "2026-11-27T06:38:34.667458+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T05:31:27.406954+00:00",
+    "created_at": "2026-11-27T06:38:34.664913+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T05:31:27.266102+00:00",
+    "created_at": "2026-11-27T06:38:34.523964+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T05:31:27.141969+00:00",
+    "created_at": "2026-11-27T06:38:34.402600+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "openverse: 0 result(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T05:31:27.114002+00:00",
+    "created_at": "2026-11-27T06:38:34.356605+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:27.075837+00:00",
+    "created_at": "2026-11-27T06:38:34.312991+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:27.074523+00:00",
+    "created_at": "2026-11-27T06:38:34.311921+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://www.shutterstock.com/image-vector/united-kingdom-map-england-scotland-260nw-1370149397.jpg (page: https://facts.net/celebrity/13-astonishing-facts-about-manu-chao/ | 117,924 Uk Map Royalty-Free Imag - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.073125+00:00",
+    "created_at": "2026-11-27T06:38:34.310850+00:00",
     "card": ""
   },
   {
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.071795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | 15 Places To Visit In United Kingdom For A Grand H - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.070251+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://traveltriangle.com/blog/places-to-visit-in-united-kingdom/ | United Kingdom Geographic Regio - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:27.068548+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:27.066317+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.937433+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.821717+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.794344+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:26.752374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:26.751065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://www.shutterstock.com/image-vector/united-kingdom-map-england-scotland-260nw-1370149397.jpg (page: https://facts.net/celebrity/13-astonishing-facts-about-manu-chao/ | 117,924 Uk Map Royalty-Free Imag - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:26.749827+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:26.748461+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | 15 Places To Visit In United Kingdom For A Grand H - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:26.747102+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://traveltriangle.com/blog/places-to-visit-in-united-kingdom/ | United Kingdom Geographic Regio - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:26.745356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.742839+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.622504+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.505271+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK shields fighter jets, contacts reservists in Cold War-sca'",
-    "created_at": "2026-11-27T05:31:26.475913+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:26.436053+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:26.434886+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'UK shields fighter jets, contacts reservists in Cold War-sca' - rejected (no og:image)",
-    "created_at": "2026-11-27T05:31:26.433572+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxPX3UwOXNyb0NoQkd5dWprbW5CZjhYU09lT0I3UFQxRnQ1QUtNemg2T2k2RzFvU0FodTl) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T05:31:26.431159+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'UK reservists contacted as 'threat environment' rises, Stree' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T05:31:25.778058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'UK reservists contacted as 'threat environment' rises, Stree' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T05:31:25.776834+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'UK reservists contacted as 'threat environment' rises, Streeting says - BBC' (5 download(s) tried)",
-    "created_at": "2026-11-27T05:31:25.775403+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK reservists contacted as 'threat environment' ri'): https://cdn.mos.cms.futurecdn.net/aRiE8RmGCusxQJjxVXvzuW-2000-80.jpg (page: The New York bathing club boom | Wallpaper* - page does not name the entity (reservists))",
-    "created_at": "2026-11-27T05:31:25.774131+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6195/6035544890_acc946a6ae_b.jpg",
-    "created_at": "2026-11-27T05:31:25.772526+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8451/7979875162_1bd2b1669a_b.jpg",
-    "created_at": "2026-11-27T05:31:25.732595+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8039/7979874033_1bf40cf6b4_b.jpg",
-    "created_at": "2026-11-27T05:31:25.694839+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8567/15650778334_9c03729575_b.jpg",
-    "created_at": "2026-11-27T05:31:25.655195+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7489/15653314883_2d7531e171_b.jpg",
-    "created_at": "2026-11-27T05:31:25.609008+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'reservists'",
-    "created_at": "2026-11-27T05:31:25.572677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'reservists'",
-    "created_at": "2026-11-27T05:31:25.436541+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'reservists'",
-    "created_at": "2026-11-27T05:31:25.310356+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'reservists'",
-    "created_at": "2026-11-27T05:31:25.276299+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:25.236063+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T05:31:25.234899+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'UK reservists contacted as 'threat environment' ri' - trying entity search 'reservists'",
-    "created_at": "2026-11-27T05:31:25.233671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK reservists contacted as 'threat environment' ri'): https://www.shutterstock.com/image-vector/united-kingdom-map-england-scotland-260nw-1370149397.jpg (page: https://facts.net/celebrity/13-astonishing-facts-about-manu-chao/ | 117,924 Uk Map Royalty-Free Imag - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:25.232297+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK reservists contacted as 'threat environment' ri'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:25.231024+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK reservists contacted as 'threat environment' ri'): https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | 15 Places To Visit In United Kingdom For A Grand H - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-27T05:31:25.229615+00:00",
+    "created_at": "2026-11-27T06:38:34.309610+00:00",
     "card": ""
   }
 ]
