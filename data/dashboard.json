@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T00:42:03.246237+00:00",
-  "last_run": "2026-11-27T00:35:44.283201+00:00",
-  "runs": 154,
+  "generated_at": "2026-11-27T01:16:15.776682+00:00",
+  "last_run": "2026-11-27T01:16:12.294028+00:00",
+  "runs": 155,
   "stats": {
     "blogger_today": 0,
-    "replies_today": 6,
+    "replies_today": 0,
     "total_posts": 0,
-    "total_replies": 6,
-    "accounts": 1
+    "total_replies": 0,
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 1,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T06:53:57.038960+06:00",
-        "2026-11-27T07:08:57.038960+06:00",
         "2026-11-27T07:23:57.038960+06:00",
         "2026-11-27T07:38:57.038960+06:00",
-        "2026-11-27T07:53:57.038960+06:00"
+        "2026-11-27T07:53:57.038960+06:00",
+        "2026-11-27T08:08:57.038960+06:00",
+        "2026-11-27T08:23:57.038960+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T07:08:00+06:00",
         "2026-11-27T07:50:00+06:00",
         "2026-11-27T08:55:00+06:00",
         "2026-11-27T10:00:00+06:00",
-        "2026-11-27T10:59:00+06:00"
+        "2026-11-27T10:59:00+06:00",
+        "2026-11-27T11:54:00+06:00"
       ],
       "success": 69,
       "fail": 4,
@@ -158,18 +158,18 @@
       "runs_today": 1,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T06:57:03.033743+06:00",
-        "2026-11-27T07:12:03.033743+06:00",
         "2026-11-27T07:27:03.033743+06:00",
         "2026-11-27T07:42:03.033743+06:00",
-        "2026-11-27T07:57:03.033743+06:00"
+        "2026-11-27T07:57:03.033743+06:00",
+        "2026-11-27T08:12:03.033743+06:00",
+        "2026-11-27T08:27:03.033743+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T07:08:00+06:00",
         "2026-11-27T07:52:00+06:00",
         "2026-11-27T08:57:00+06:00",
         "2026-11-27T09:58:00+06:00",
-        "2026-11-27T10:53:00+06:00"
+        "2026-11-27T10:53:00+06:00",
+        "2026-11-27T12:09:00+06:00"
       ],
       "success": 17,
       "fail": 16,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T00:35:44.285301+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T01:16:12.295745+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T01:16:12.297149+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
-    "Katie Miller car seat claim",
-    "Musk pledges kids SpaceX shares",
     "Thanksgiving Day celebrations",
     "Joe Milton plays quarterback for Eagles",
-    "Aaron Rodgers reportedly out",
     "Birthday twin spectrum prompt",
     "Grand Theft Auto VI",
-    "Vance blames Obama for detonation",
-    "Nvidia chip exports to China",
-    "Duran Duran's Andy Taylor dies"
+    "Victoria votes in state election",
+    "Katie Miller car seat claim",
+    "Macy's parade postponed to Saturday",
+    "Musk pledges kids SpaceX shares",
+    "Nvidia reinstates Jensen Huang",
+    "Nvidia chip exports to China"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T01:16:15.722275+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T01:16:15.720394+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T01:16:15.370662+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T01:16:12.298427+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T01:16:12.297157+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T01:16:12.295755+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #155 started (--only blogger)",
+      "created_at": "2026-11-27T01:16:12.294052+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T00:42:03.249131+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Katie Miller car seat claim', 'Musk pledges kids SpaceX shares', 'Thanksgiving Day celebrations', 'Joe Milton plays quarterback for Eagles', 'Aaron Rodgers reportedly out']",
+      "created_at": "2026-11-27T00:42:03.242358+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
       "created_at": "2026-11-27T00:39:00.810374+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:39:00.808629+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-      "created_at": "2026-11-27T00:39:00.805476+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-      "created_at": "2026-11-27T00:39:00.513484+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-      "created_at": "2026-11-27T00:39:00.316063+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-      "created_at": "2026-11-27T00:39:00.248039+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T00:38:59.339427+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T00:38:59.337833+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:38:59.336136+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T00:38:59.334174+00:00",
       "card": ""
     }
   ]

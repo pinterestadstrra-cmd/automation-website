@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T01:16:15.780052+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Joe Milton plays quarterback for Eagles', 'Birthday twin spectrum prompt', 'Grand Theft Auto VI', 'Victoria votes in state election']",
+    "created_at": "2026-11-27T01:16:15.773788+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T01:16:15.722275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T01:16:15.720394+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T01:16:15.370662+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T01:16:12.298427+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T01:16:12.297157+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T01:16:12.295755+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #155 started (--only blogger)",
+    "created_at": "2026-11-27T01:16:12.294052+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T00:42:03.249131+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'Trump, NATO chief push Russia to avoid any actions that woul' - skipped (same event used within 24h, event key 'action any avoid chief expand fox nato news push russia trum')",
     "created_at": "2026-11-27T00:38:09.862247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - skipped (same event used within 24h, event key 'action avoid chief nato reuter russia trump ukraine urge war')",
-    "created_at": "2026-11-27T00:38:09.860378+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: Trump calls on Putin to pull back all mi' - skipped (same event used within 24h, event key 'aggression all back call europe latest military news pull pu')",
-    "created_at": "2026-11-27T00:38:09.858585+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'UK veterans win 40-year battle for inquiry into Cold War nuc' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T00:38:09.856591+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'UK veterans win 40-year battle for inquiry into Cold War nuc' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T00:38:09.855042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'UK veterans win 40-year battle for inquiry into Cold War nuclear tests they say damaged health - ABC News - Breaking News, Latest News and Videos' (5 download(s) tried)",
-    "created_at": "2026-11-27T00:38:09.853558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK veterans win 40-year battle for inquiry into Co'): https://i.pinimg.com/originals/25/90/f0/2590f0c974aba90b1e65f696c6cf43bc.jpg (page: https://www.pinterest.com/pin/563018698692094/ | Hunger Games Fan Art | Hunger games fan art ideas,  - page does not name the entity (veterans))",
-    "created_at": "2026-11-27T00:38:09.852035+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK veterans win 40-year battle for inquiry into Co'): https://i.pinimg.com/originals/ff/1d/2f/ff1d2f67cd8e73957bd380dece1f934b.jpg (page: https://www.pinterest.com/pin/hunger-games-fan-art--34340015883076597/ | The Hunger Games | Hunger g - page does not name the entity (veterans))",
-    "created_at": "2026-11-27T00:38:09.850373+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK veterans win 40-year battle for inquiry into Co'): https://i.pinimg.com/736x/dd/b6/81/ddb68146a77b1c5f7d8b976afbe0d903.jpg (page: https://in.pinterest.com/pin/the-hunger-games--74239093850769099/ | Reaping ceremony | Hunger games  - page does not name the entity (veterans))",
-    "created_at": "2026-11-27T00:38:09.848677+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK veterans win 40-year battle for inquiry into Co'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/602dec21-4871-4477-ac57-67938c134bc3/d4b0c (page: https://www.pinterest.com/pin/the-hunger-games--6544361952373611/ | Hunger Games Fan Art Poster by C - page does not name the entity (veterans))",
-    "created_at": "2026-11-27T00:38:09.846943+00:00",
     "card": ""
   }
 ]
