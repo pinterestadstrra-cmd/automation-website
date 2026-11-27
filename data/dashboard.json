@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T02:39:57.923118+00:00",
-  "last_run": "2026-11-27T02:39:04.089184+00:00",
-  "runs": 157,
+  "generated_at": "2026-11-27T03:06:02.091212+00:00",
+  "last_run": "2026-11-27T03:01:59.005625+00:00",
+  "runs": 158,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T02:03:22.006405+00:00",
-    "mastodon.social": "2026-11-27T02:04:43.458579+00:00"
+    "Adsterra Blogger": "2026-11-27T03:05:11.561961+00:00",
+    "mastodon.social": "2026-11-27T03:06:01.822695+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 4,
-      "last_ok": true,
-      "last_error": "",
-      "last_run": "2026-11-27T02:03:22.006400+00:00"
+      "fail": 5,
+      "last_ok": false,
+      "last_error": "post failed or skipped",
+      "last_run": "2026-11-27T03:05:11.561959+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 17,
+      "fail": 18,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T02:04:43.458576+00:00"
+      "last_run": "2026-11-27T03:06:01.822691+00:00"
     }
   },
   "file_cards": [
@@ -73,7 +73,7 @@
       "name": "Adsterra Blogger",
       "type": "bluesky_post",
       "status": "active",
-      "computed_status": "active",
+      "computed_status": "error",
       "link": "https://shorturl.at/eZnco",
       "subreddit": "",
       "community": "",
@@ -82,26 +82,26 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T02:03:22.006405+00:00",
-      "runs_today": 2,
+      "last_run": "2026-11-27T03:05:11.561961+00:00",
+      "runs_today": 3,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T08:48:22.006405+06:00",
-        "2026-11-27T09:03:22.006405+06:00",
-        "2026-11-27T09:18:22.006405+06:00",
-        "2026-11-27T09:33:22.006405+06:00",
-        "2026-11-27T09:48:22.006405+06:00"
+        "2026-11-27T09:20:11.561961+06:00",
+        "2026-11-27T09:35:11.561961+06:00",
+        "2026-11-27T09:50:11.561961+06:00",
+        "2026-11-27T10:05:11.561961+06:00",
+        "2026-11-27T10:20:11.561961+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T08:55:00+06:00",
         "2026-11-27T10:00:00+06:00",
         "2026-11-27T10:59:00+06:00",
         "2026-11-27T11:54:00+06:00",
-        "2026-11-27T13:10:00+06:00"
+        "2026-11-27T13:10:00+06:00",
+        "2026-11-27T14:05:00+06:00"
       ],
       "success": 70,
-      "fail": 4,
-      "last_error": "",
+      "fail": 5,
+      "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
       "source": "trending",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T02:04:43.458579+00:00",
-      "runs_today": 2,
+      "last_run": "2026-11-27T03:06:01.822695+00:00",
+      "runs_today": 3,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T08:49:43.458579+06:00",
-        "2026-11-27T09:04:43.458579+06:00",
-        "2026-11-27T09:19:43.458579+06:00",
-        "2026-11-27T09:34:43.458579+06:00",
-        "2026-11-27T09:49:43.458579+06:00"
+        "2026-11-27T09:21:01.822695+06:00",
+        "2026-11-27T09:36:01.822695+06:00",
+        "2026-11-27T09:51:01.822695+06:00",
+        "2026-11-27T10:06:01.822695+06:00",
+        "2026-11-27T10:21:01.822695+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T08:57:00+06:00",
         "2026-11-27T09:58:00+06:00",
         "2026-11-27T10:53:00+06:00",
         "2026-11-27T12:09:00+06:00",
-        "2026-11-27T13:04:00+06:00"
+        "2026-11-27T13:04:00+06:00",
+        "2026-11-27T13:57:00+06:00"
       ],
       "success": 17,
-      "fail": 17,
+      "fail": 18,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T02:39:04.090229+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T02:39:04.090995+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T03:01:59.007005+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Katie Miller car seat claim",
     "Victoria votes in state election",
     "Thanksgiving Day celebrations",
-    "Eagles vs. Cowboys",
-    "Joe Milton plays quarterback for Eagles",
-    "Tom Brady's on-air scream",
     "Birthday twin spectrum prompt",
-    "FCC approves SpaceX Starmind satellites",
-    "Macy's parade postponed to Saturday",
-    "November full supermoon"
+    "Katie Miller car seat claim",
+    "Grand Theft Auto VI",
+    "Joe Milton plays quarterback for Eagles",
+    "Musk pledges kids SpaceX shares",
+    "Tom Brady's on-air scream",
+    "Ocarina of Time remake",
+    "SoftBank shares fall in AI sell-off"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T02:39:57.755112+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T02:39:57.753530+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-27T02:39:57.455509+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T02:39:04.091684+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T02:39:04.091003+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T02:39:04.090238+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #157 started (--only blogger)",
-      "created_at": "2026-11-27T02:39:04.089203+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T02:04:43.458632+00:00",
+      "created_at": "2026-11-27T03:06:01.822727+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T02:04:43.456815+00:00",
+      "created_at": "2026-11-27T03:06:01.821639+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T02:04:43.454401+00:00",
+      "created_at": "2026-11-27T03:06:01.819974+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T02:04:33.451003+00:00",
+      "created_at": "2026-11-27T03:05:51.817739+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-27T03:05:51.627966+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-27T03:05:51.620257+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T02:04:28.245485+00:00",
+      "created_at": "2026-11-27T03:05:46.201658+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T02:04:28.242331+00:00",
+      "created_at": "2026-11-27T03:05:46.199167+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-27T02:04:15.529916+00:00",
-      "card": "mastodon.social"
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-27T03:05:46.010084+00:00",
+      "card": ""
     },
     {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-27T02:04:15.370009+00:00",
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-27T03:05:46.007749+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 11 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-27T02:04:15.368482+00:00",
+      "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-27T03:05:39.730105+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-27T02:04:15.366812+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-27T03:05:39.729038+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - no usable photo, trying the next story",
-      "created_at": "2026-11-27T02:04:15.365315+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg (from openverse, query 'Trump', page: https://www.flickr.com/photos/80038275@N00/14421324712 | Donald Trump - page names the entity (Trump))",
+      "created_at": "2026-11-27T03:05:39.727816+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. ' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-27T02:04:15.363637+00:00",
+      "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (, it features Donald Trump, who is mentioned in the headline, speaking at a podium.)",
+      "created_at": "2026-11-27T03:05:39.726352+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: no real photo found for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. Blockade - WSJ' (5 download(s) tried)",
-      "created_at": "2026-11-27T02:04:15.361962+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump'",
+      "created_at": "2026-11-27T03:05:27.549823+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c2afd31-952c-4088-a7bf-b2ed8da3116a/df7js (page: Stunning legs in stockings heels and dress by IreneWhite23 on DeviantArt - page does not name the entity (Silent))",
-      "created_at": "2026-11-27T02:04:15.360167+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump'",
+      "created_at": "2026-11-27T03:05:27.333263+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/36/121704670_1b7a489603_b.jpg",
-      "created_at": "2026-11-27T02:04:15.357971+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Trump'",
+      "created_at": "2026-11-27T03:05:27.082867+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4031/4635122384_1be7d7b323_b.jpg",
-      "created_at": "2026-11-27T02:04:15.282377+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8212/8269563681_a2ebe006d8.jpg",
-      "created_at": "2026-11-27T02:04:15.188182+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7711/16897629490_52b11534d8_b.jpg",
-      "created_at": "2026-11-27T02:04:15.093043+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6227/6308048699_3490fa07b3_b.jpg",
-      "created_at": "2026-11-27T02:04:15.016747+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Silent'",
-      "created_at": "2026-11-27T02:04:14.941290+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Silent'",
-      "created_at": "2026-11-27T02:04:14.779828+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Silent'",
-      "created_at": "2026-11-27T02:04:14.568467+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Silent'",
-      "created_at": "2026-11-27T02:04:14.508021+00:00",
+      "message": "openverse: 5 result(s) for 'Trump'",
+      "created_at": "2026-11-27T03:05:27.020378+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:14.461286+00:00",
+      "created_at": "2026-11-27T03:05:26.968757+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:14.459768+00:00",
+      "created_at": "2026-11-27T03:05:26.967818+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'A ‘Silent War’ Grips Iran as Its Economy Strains U' - trying entity search 'Silent'",
-      "created_at": "2026-11-27T02:04:14.458237+00:00",
+      "message": "photo: topical search found nothing for 'Trump: Iran war will be over ‘sort of whenever I w' - trying entity search 'Trump'",
+      "created_at": "2026-11-27T03:05:26.966806+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://cdn.wallpapersafari.com/87/37/Z5mAsk.jpg (page: https://wallpapercave.com/kate-beckinsale-van-helsing-wallpaper | 🔥 [60+] Kate Beckinsale Van Helsin - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:14.456455+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.965195+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/20/3e/bf/203ebfebc357f17e96ff771ed8b78ca4.jpg (page: https://wallpapersafari.com/kate-beckinsale-van-helsing-wallpaper/ | Van Helsing Photo: Anna Valeriu - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:14.454822+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
+      "created_at": "2026-11-27T03:05:26.963614+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://c8.alamy.com/comp/E5MWW3/van-helsing-hugh-jackman-kate-beckinsale-2004-c-universalcourtesy-E (page: https://www.pinterest.com/pin/151363237445706008/ | Van helsing 2004 kate beckinsale hi-res stock ph - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:14.453188+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
+      "created_at": "2026-11-27T03:05:26.891337+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://c8.alamy.com/comp/HCNF64/van-helsing-kate-beckinsale-2004-universalcourtesy-everett-collecti (page: https://www.alamy.com/stock-photo/van-helsing-2004-kate-beckinsale.html | VAN HELSING, Kate Beckinsa - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:14.451310+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.814921+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Silent War Grips Iran Economy'",
-      "created_at": "2026-11-27T02:04:14.448094+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.813960+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Silent War Grips Iran Economy'",
-      "created_at": "2026-11-27T02:04:13.840355+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.812943+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Silent War Grips Iran Economy'",
-      "created_at": "2026-11-27T02:04:13.638326+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.811941+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Silent War Grips Iran Economy'",
-      "created_at": "2026-11-27T02:04:13.572022+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.810908+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:26.809838+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
+      "created_at": "2026-11-27T03:05:26.807423+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
+      "created_at": "2026-11-27T03:05:26.584386+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
+      "created_at": "2026-11-27T03:05:26.410355+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
+      "created_at": "2026-11-27T03:05:26.346824+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:13.524559+00:00",
+      "created_at": "2026-11-27T03:05:24.176336+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T02:04:13.522940+00:00",
+      "created_at": "2026-11-27T03:05:24.175358+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.chovzvirat.cz/images/zvirata/cane-corso_ebb13cf.jpg (page: https://happydogbreeds.com/cane-corso-colors-and-markings/ | Cane corso (Cane corso) - ChovZvířat.cz - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:13.521335+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:24.174351+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://i.pinimg.com/originals/82/db/6b/82db6bb1ace2e14c6e8245a7748686e4.jpg (page: https://www.chovzvirat.cz/zvire/4100-cane-corso/ - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:13.519502+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
+      "created_at": "2026-11-27T03:05:24.172821+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://dogtime.com/wp-content/uploads/sites/12/2023/07/GettyImages-1291949432.jpg?w=1024 (page: https://www.pinterest.com/pin/365706432257020070/ | Cane Corso Dog Breed Information & Characteristi - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:13.517387+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
+      "created_at": "2026-11-27T03:05:24.082842+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'A ‘Silent War’ Grips Iran as Its Economy Strains U'): https://www.k9web.com/wp-content/uploads/2022/08/black-mask-cane-corso.jpg (page: https://dogtime.com/dog-breeds/cane-corso | Cane Corso Colors: The Standard & Rarest Coat Colors - K - only 0 of 8 key entities in the source page)",
-      "created_at": "2026-11-27T02:04:13.515390+00:00",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:24.025155+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-      "created_at": "2026-11-27T02:04:13.511944+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T03:05:24.022917+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-      "created_at": "2026-11-27T02:04:13.330389+00:00",
+      "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T03:05:23.758497+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'A ‘Silent War’ Grips Iran as Its Economy Strains Under U.S. '",
-      "created_at": "2026-11-27T02:04:13.124201+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T03:05:23.558179+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+      "created_at": "2026-11-27T03:05:23.482132+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T03:05:20.118065+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T03:05:20.117135+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://www.alternet.org/media-library/us-president-donald-trump-gestures-at-a-midterm-election-camp (page: https://theprint.in/world/trump-uses-thanksgiving-message-to-lash-out-at-political-foes-immigrants-f - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:20.116015+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/25/NPPP/92956877007-20261125-t-0014",
+      "created_at": "2026-11-27T03:05:20.114488+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://www.usatoday.com/gcdn/authoring/authoring-images/2026/11/26/PDTN/92973785007-20261126-t-1756",
+      "created_at": "2026-11-27T03:05:20.042812+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://d.latintimes.com/en/full/595165/us-politics-trump.jpg?w=736&f=6844eed78aef889347d61cfa6186b9 (page: https://www.usatoday.com/story/news/politics/2026/11/26/trump-thanksgiving-message-lash-out-at-polit - only 1 of 7 key entities in the source page)",
+      "created_at": "2026-11-27T03:05:19.895803+00:00",
       "card": ""
     }
   ]

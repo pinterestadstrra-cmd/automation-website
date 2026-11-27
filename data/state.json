@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 157,
-  "last_run": "2026-11-27T02:39:04.089184+00:00",
+  "runs": 158,
+  "last_run": "2026-11-27T03:01:59.005625+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 4,
-      "last_ok": true,
-      "last_error": "",
-      "last_run": "2026-11-27T02:03:22.006400+00:00"
+      "fail": 5,
+      "last_ok": false,
+      "last_error": "post failed or skipped",
+      "last_run": "2026-11-27T03:05:11.561959+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 17,
+      "fail": 18,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T02:04:43.458576+00:00"
+      "last_run": "2026-11-27T03:06:01.822691+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T02:03:22.006405+00:00",
-    "mastodon.social": "2026-11-27T02:04:43.458579+00:00"
+    "Adsterra Blogger": "2026-11-27T03:05:11.561961+00:00",
+    "mastodon.social": "2026-11-27T03:06:01.822695+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 2
+      "count": 3
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 2
+      "count": 3
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T02:39:04.090229+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T02:39:04.090995+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T03:01:59.007005+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,8 +534,12 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 7,
+      "fails": 8,
       "next_retry": ""
+    },
+    "Adsterra Blogger": {
+      "fails": 1,
+      "next_retry": "2026-11-27T03:35:11.560893+00:00"
     }
   },
   "posted_promo_accounts": {
@@ -619,13 +617,36 @@
       "n": 18
     }
   },
-  "ready_queue": {},
+  "ready_queue": {
+    "Adsterra Blogger": [
+      {
+        "topic": "USA political news",
+        "headline": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
+        "photo_url": "https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg",
+        "photo_source": "bing-images",
+        "photo_alt": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
+        "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeWhqeTV0TXZ0T1dJZFJvakpvbTRMUlR5QW9XMTYya0QxaTRpMldzN1hfcG9DSWtwbXphaXNKQW50V0dQdnRCM1ozNHRLYXBoXzNNWFJpUjhpTjBCSm9ZVk95a0xXc0k3SHdHWE5DYmRuSWdCeTZ4NFdYckpQOXIza1RPWWlhcjlKMmFXU0RQUlJIR3dvTkE?oc=5",
+        "hook": "$366 MILLION?! Elon Musk just shattered records to become the biggest donor of the US midterm cycle. I did NOT see this coming.",
+        "prepared_at": "2026-11-27T03:04:09.891537+00:00"
+      },
+      {
+        "topic": "war news",
+        "headline": "Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill",
+        "photo_url": "https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T172429Z_1609942054_RC2GQOA5SV1T_RTRMADP_3_USA-CONGRESS-DEMOCRATS.JPG",
+        "photo_source": "bing-images",
+        "photo_alt": "Democrats",
+        "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4SzhiRkZscDcxQjR6Uzd5STlFVFFOUmlEME0zc1AzdERzaFBFeVhMdm80ZE0xbHFsN3pqcnFIcVBNaHA5d0VwTzlkcjZZNVRDSVFOUVQzTnZUUW9UYUtFMULSAZYBQVVfeXFMT3lENlZLYzFTVHFmdWJUSHBibnRCQlR0eUg4bER2QU5IS1E2WnhuVHRXLW1HV0ZoZ1AwdlVaaEcxUE1pUDBuY3Z5Vm5YY21WT0dQcHoycjdRd2liWXQ3T1lmVzItcVBEVVVtOW4xLVg5NVE1R3ZNOFl0dFc4MS1ISmZQZUM3YndRM01UZlFBam5jWDY3ckNn?oc=5",
+        "hook": "Democrats are moving to finally cut off funding for the Iran war—but what happens the day after? 😳 The plan leaves a massive blank space, and nobody knows what's next.",
+        "prepared_at": "2026-11-27T03:05:09.375855+00:00"
+      }
+    ]
+  },
   "mastodon_post_counts": {
-    "2026-11-26": {
-      "mastodon.social": 6
-    },
     "2026-11-25": {
       "mastodon.social": 9
+    },
+    "2026-11-26": {
+      "mastodon.social": 6
     }
   },
   "last_mastodon_post_at": {
