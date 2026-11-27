@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T13:52:24.456036+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Bird photography', 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Katie Miller car seat claim', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-27T13:52:24.331951+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T13:52:24.210888+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T13:52:24.024307+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T13:52:23.600403+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T13:52:17.958389+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T13:52:17.957402+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T13:52:17.956324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #174 started (--only blogger)",
+    "created_at": "2026-11-27T13:52:17.955003+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T12:31:46.777884+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The image is a graphic illustration of the number two, not a photo of the people, place, or event described in the headline.)",
     "created_at": "2026-11-27T12:28:44.959211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6072/6045665103_49762f304a_b.jpg",
-    "created_at": "2026-11-27T12:28:38.457394+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2908/14223350131_387ee3a75b_b.jpg",
-    "created_at": "2026-11-27T12:28:38.417339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3078/2332468377_9ee8734076_b.jpg",
-    "created_at": "2026-11-27T12:28:38.278834+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The photo shows two young girls swimming in water, which is completely unrelated to a drone attack in Kuwait or statements by Donald Trump.)",
-    "created_at": "2026-11-27T12:28:38.217952+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1306/4679199010_29e9b08a14.jpg",
-    "created_at": "2026-11-27T12:28:34.957950+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2029/2340979049_78f0187534.jpg",
-    "created_at": "2026-11-27T12:28:34.916898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two'",
-    "created_at": "2026-11-27T12:28:34.767711+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two'",
-    "created_at": "2026-11-27T12:28:34.463496+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Two'",
-    "created_at": "2026-11-27T12:28:34.330982+00:00",
     "card": ""
   }
 ]
