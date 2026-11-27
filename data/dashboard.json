@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T05:06:26.590336+00:00",
-  "last_run": "2026-11-27T05:06:24.124868+00:00",
-  "runs": 161,
+  "generated_at": "2026-11-27T05:31:51.962385+00:00",
+  "last_run": "2026-11-27T05:29:51.556434+00:00",
+  "runs": 162,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T04:11:55.107413+00:00",
-    "mastodon.social": "2026-11-27T04:12:40.544380+00:00"
+    "Adsterra Blogger": "2026-11-27T05:31:03.672777+00:00",
+    "mastodon.social": "2026-11-27T05:31:51.732778+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 6,
+      "fail": 7,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T04:11:55.107410+00:00"
+      "last_run": "2026-11-27T05:31:03.672773+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 19,
+      "fail": 20,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T04:12:40.544378+00:00"
+      "last_run": "2026-11-27T05:31:51.732775+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T04:11:55.107413+00:00",
-      "runs_today": 4,
+      "last_run": "2026-11-27T05:31:03.672777+00:00",
+      "runs_today": 5,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T11:11:55.107413+06:00",
-        "2026-11-27T11:26:55.107413+06:00",
-        "2026-11-27T11:41:55.107413+06:00",
-        "2026-11-27T11:56:55.107413+06:00",
-        "2026-11-27T12:11:55.107413+06:00"
+        "2026-11-27T11:46:03.672777+06:00",
+        "2026-11-27T12:01:03.672777+06:00",
+        "2026-11-27T12:16:03.672777+06:00",
+        "2026-11-27T12:31:03.672777+06:00",
+        "2026-11-27T12:46:03.672777+06:00"
       ],
       "next_post_times": [
         "2026-11-27T11:54:00+06:00",
@@ -100,7 +100,7 @@
         "2026-11-27T15:55:00+06:00"
       ],
       "success": 70,
-      "fail": 6,
+      "fail": 7,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T04:12:40.544380+00:00",
-      "runs_today": 4,
+      "last_run": "2026-11-27T05:31:51.732778+00:00",
+      "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T11:12:40.544380+06:00",
-        "2026-11-27T11:27:40.544380+06:00",
-        "2026-11-27T11:42:40.544380+06:00",
-        "2026-11-27T11:57:40.544380+06:00",
-        "2026-11-27T12:12:40.544380+06:00"
+        "2026-11-27T11:46:51.732778+06:00",
+        "2026-11-27T12:01:51.732778+06:00",
+        "2026-11-27T12:16:51.732778+06:00",
+        "2026-11-27T12:31:51.732778+06:00",
+        "2026-11-27T12:46:51.732778+06:00"
       ],
       "next_post_times": [
         "2026-11-27T12:09:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T16:08:00+06:00"
       ],
       "success": 17,
-      "fail": 19,
+      "fail": 20,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T05:06:24.126749+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T05:06:24.128390+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T05:29:51.558066+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Victoria votes in state election",
     "Thanksgiving Day celebrations",
+    "Original characters as nameless NPCs",
+    "Victoria votes in state election",
     "Birthday twin spectrum prompt",
     "Katie Miller car seat claim",
-    "Original characters as nameless NPCs",
-    "Nvidia chip exports to China",
-    "Fuel tanker fire near Cairo",
-    "Sunrise on the Reaping's $225M debut",
-    "King tides flood West Coast",
-    "FCC approves SpaceX Starmind satellites"
+    "Tomlin segment bumps Goo Goo Dolls",
+    "Macy's parade postponed to Saturday",
+    "Steven Universe actor comes out",
+    "Describe a film without its name",
+    "Thanksgiving storm knocks out power"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T05:06:26.329823+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T05:06:26.326730+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T05:06:26.041040+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T05:06:24.129935+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T05:06:24.128398+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T05:06:24.126760+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #161 started (--only blogger)",
-      "created_at": "2026-11-27T05:06:24.124895+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T04:12:40.717570+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Grand Theft Auto VI', 'Victoria votes in state election', \"Zelenskyy's Thanksgiving message to America\"]",
-      "created_at": "2026-11-27T04:12:40.712637+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T04:12:40.544406+00:00",
+      "created_at": "2026-11-27T05:31:51.732815+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T04:12:40.543646+00:00",
+      "created_at": "2026-11-27T05:31:51.731176+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T04:12:40.541937+00:00",
+      "created_at": "2026-11-27T05:31:51.729066+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T04:12:30.539458+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T04:12:30.300529+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T04:12:30.298289+00:00",
+      "created_at": "2026-11-27T05:31:41.725971+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T04:12:24.840988+00:00",
+      "created_at": "2026-11-27T05:31:36.546902+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T04:12:24.839000+00:00",
+      "created_at": "2026-11-27T05:31:36.544165+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T04:12:24.600141+00:00",
+      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
+      "created_at": "2026-11-27T05:31:33.203128+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "promo: fresh news exists but no real image could be fetched - skipping",
+      "created_at": "2026-11-27T05:31:32.304085+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: photo search done - 8 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
+      "created_at": "2026-11-27T05:31:32.302780+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
+      "created_at": "2026-11-27T05:31:32.301417+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo: story 6/6 tried: 'How the Black Sea front in the Russia-Ukraine war is threate' - no usable photo, trying the next story",
+      "created_at": "2026-11-27T05:31:32.300182+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no real photo found for this story)",
+      "created_at": "2026-11-27T05:31:32.298936+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: no real photo found for 'How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict - CBS News' (9 download(s) tried)",
+      "created_at": "2026-11-27T05:31:32.297511+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-27T05:31:32.296262+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-27T05:31:32.294684+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-27T05:31:32.243290+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-27T05:31:32.241531+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp2553315.jpg",
+      "created_at": "2026-11-27T05:31:31.870310+00:00",
       "card": ""
     },
     {
       "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T04:12:24.597934+00:00",
+      "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp2553315.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+      "created_at": "2026-11-27T05:31:31.869083+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-27T04:12:16.003026+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://wallpapercave.com/wp/wp4063159.jpg",
+      "created_at": "2026-11-27T05:31:31.855253+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "download_image error: HTTPSConnectionPool(host='wallpapercave.com', port=443): Max retries exceeded with url: /wp/wp4063159.jpg (Caused by NameResolutionError(\"HTTPSConnection(host='wallpapercave.com', port=443): Failed to resolve 'wallpapercave.com' ([Errno -2] Name or service not known)\"))",
+      "created_at": "2026-11-27T05:31:31.853605+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-27T04:12:16.002416+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/4258566925_5ef4948e9c_b.jpg",
+      "created_at": "2026-11-27T05:31:31.822503+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-      "created_at": "2026-11-27T04:12:16.001745+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8054/8399644719_82a05837a7_b.jpg",
+      "created_at": "2026-11-27T05:31:31.776227+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2129/2094032782_8f075ed396_b.jpg",
+      "created_at": "2026-11-27T05:31:31.735669+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3866/14893785171_d40fe9591b_b.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+      "created_at": "2026-11-27T05:31:31.698863+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-27T04:12:16.000808+00:00",
+      "created_at": "2026-11-27T05:31:31.697181+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
-      "created_at": "2026-11-27T04:12:15.956766+00:00",
+      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6217/6342662124_a376bb43f6.jpg",
+      "created_at": "2026-11-27T05:31:31.648783+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-27T04:12:15.955637+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Black'",
+      "created_at": "2026-11-27T05:31:31.599583+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-27T04:12:15.901135+00:00",
+      "message": "google-images: 0 candidate(s) for 'Black'",
+      "created_at": "2026-11-27T05:31:31.460145+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-27T04:12:15.780170+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Black'",
+      "created_at": "2026-11-27T05:31:31.344922+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
-      "created_at": "2026-11-27T04:12:15.636679+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-27T04:12:15.563006+00:00",
+      "message": "openverse: 5 result(s) for 'Black'",
+      "created_at": "2026-11-27T05:31:31.315378+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:15.524966+00:00",
+      "created_at": "2026-11-27T05:31:31.273382+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:15.524371+00:00",
+      "created_at": "2026-11-27T05:31:31.272198+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-27T04:12:15.523771+00:00",
+      "message": "photo: topical search found nothing for 'How the Black Sea front in the Russia-Ukraine war ' - trying entity search 'Black'",
+      "created_at": "2026-11-27T05:31:31.271018+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/yT3XeS-15Wo/mqdefault.jpg (page: https://kidvideo.org/video/abc-song-more-kids-songs-baby-big-cheese-nursery-rhymes-i149677.html | Ye - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T04:12:15.523129+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.269572+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/YXqlc3fuF64/sddefault.jpg (page: https://music.youtube.com/channel/UCVd8sHiijL9nO_57uJAUV6g | Five Little Monkeys Nursery Rhymes And  - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T04:12:15.522403+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.268232+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/vBMUkgqhOsM/maxresdefault.jpg (page: https://kidvideo.org/video/five-little-monkeys-nursery-rhymes-and-baby-songs-by-baby-big-cheese-i106 - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T04:12:15.521673+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.266699+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.ytimg.com/vi/jkWOnBLt4v8/maxresdefault.jpg (page: https://music.youtube.com/watch?v=vBMUkgqhOsM | Humpty Dumpty Sat On A Wall Popular Nursery Rhyme fo - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T04:12:15.520813+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.265221+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T04:12:15.518796+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://upload.wikimedia.org/wikipedia/commons/2/28/Tear_of_the_Sunflower_%2852100762838%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=134822761 | Tear of the Sunflower (52100762838) - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.263953+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T04:12:15.265214+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://live.staticflickr.com/5519/31086629415_e459771cd2_b.jpg (page: https://www.flickr.com/photos/77612281@N05/31086629415 | The War of the Nations_WW1_069 - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:31.262519+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T04:12:15.106365+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Black Sea front Russia Ukraine'",
+      "created_at": "2026-11-27T05:31:31.259772+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T04:12:15.028266+00:00",
+      "message": "google-images: 0 candidate(s) for 'Black Sea front Russia Ukraine'",
+      "created_at": "2026-11-27T05:31:31.136818+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Black Sea front Russia Ukraine'",
+      "created_at": "2026-11-27T05:31:31.020059+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 2 result(s) for 'Black Sea front Russia Ukraine'",
+      "created_at": "2026-11-27T05:31:30.990192+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:14.991220+00:00",
+      "created_at": "2026-11-27T05:31:30.948395+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:14.990560+00:00",
+      "created_at": "2026-11-27T05:31:30.947128+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://images.sidearmdev.com/crop?url=https:%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.si (page:  - no source page to verify relevance)",
-      "created_at": "2026-11-27T04:12:14.989668+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:30.945677+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T04:12:14.987078+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:30.944198+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T04:12:14.867772+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:30.942827+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T04:12:14.705802+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T04:12:14.634713+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:14.596715+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T04:12:14.596109+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.pinimg.com/originals/c1/5a/7b/c15a7b6f8c458fe4198ef33b74c50fe0.jpg (page: https://englishilm.com/dog-breeds-with-pictures/ | Hayal panosu için 640 fikir, 2025 | hayvan, köpek - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T04:12:14.595378+00:00",
+      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T05:31:30.941475+00:00",
       "card": ""
     }
   ]
