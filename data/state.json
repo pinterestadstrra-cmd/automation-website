@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 169,
-  "last_run": "2026-11-27T10:10:46.690210+00:00",
+  "runs": 170,
+  "last_run": "2026-11-27T10:26:28.389476+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 10,
+      "fail": 11,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T09:14:56.396211+00:00"
+      "last_run": "2026-11-27T10:27:44.533568+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 23,
+      "fail": 24,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T09:15:27.018886+00:00"
+      "last_run": "2026-11-27T10:28:51.435863+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T09:14:56.396213+00:00",
-    "mastodon.social": "2026-11-27T09:15:27.018889+00:00"
+    "Adsterra Blogger": "2026-11-27T10:27:44.533571+00:00",
+    "mastodon.social": "2026-11-27T10:28:51.435866+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 8
+      "count": 9
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 8
+      "count": 9
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T10:10:46.691297+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T10:10:46.692056+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T10:26:28.391152+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 13,
+      "fails": 14,
       "next_retry": ""
     },
     "Adsterra Blogger": {
-      "fails": 6,
+      "fails": 7,
       "next_retry": ""
     }
   },
@@ -626,24 +620,24 @@
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "USA political news",
-        "headline": "WWE's CM Punk leaving politics out of the ring for USA vs Mexico match at Survivor Series: WarGames - Fox News",
-        "photo_url": "https://cdn.wrestletalk.com/wp-content/uploads/2024/05/wwe-logo-crowd-1-1024x576.jpg",
+        "topic": "war news",
+        "headline": "Iran war live: Iran’s navy says it recovered 2 tankers stolen by US forces - Al Jazeera",
+        "photo_url": "https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg",
         "photo_source": "bing-images",
-        "photo_alt": "WWE",
-        "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSDFSUy0td1ZNYU1aMDFyVVFicGxDVWtMU19NUnVOVmJadWI3NmJreDJMVGduWkxmUlhrRTQ2ckk4U3VYUS1XeGNCdXgwQ2dFeVZ5TFFCUVRBendfOVhQRVRjS3RrUzlzd052cXBFX2wxUmVqWW5CamtkN0l1cXVUb0JoenduZjJGTlNmUm96Z21tLVJkR0ZCa2Q3bTBXdFJiRDYxOEdpZkVSOEczRGpEdndUcjJxWUN6?oc=5",
-        "hook": "CM Punk is officially drawing a hard line before Survivor Series! 🚨 No politics, just pure chaos inside the ring for USA vs. Mexico. You will NOT believe what he just said about keeping the squared circle sacred. 😱",
-        "prepared_at": "2026-11-27T06:33:38.763035+00:00"
+        "photo_alt": "Iran war live: Iran’s navy says it recovered 2 tankers stolen by US forces - Al Jazeera",
+        "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzBTalBNX1R1QW01ai1IWFBTQkdKa0dGVTgwaTVaRDR5ZWVHOWlKWkdxN21qa3JzclhuTlJUUjA3NnhwN1pDQXVOLUh4Q203dmhVaFR1VzVHTGNmaVFUSDN1UUNrem5ITzFlbTg5ekpsTjlBYk1kckFOSkJQdS00YllVTnNPbWU20gG-AUFVX3lxTE5EdzdTTDR0WkNDT0hEeDZHenktRk9fWjIzVl91WFo1RUxCWFZHUHVtS3F4SkVRWU8tTE9EeHFlZ3VLdHg3MnlNSlVrVktUV0FwTy1WOV9TY1JWaDUwRF9aQThHbTZZS0o0RlljdTJuV05DOHhSSkZaTDNJZEl1WEpvMWVDdFlnSnBPb2JTOXFpb2lvR0hfMFV0M1VmeFFmZl80UEotdWhzSHh6TWtwU2FxeE1BZENfRndsdlFhQ2c?oc=5",
+        "hook": "Wait, WHAT?! Iran's navy just seized back two oil tankers that were allegedly stolen by US forces. This is escalating FAST. 🤯",
+        "prepared_at": "2026-11-27T10:26:53.414380+00:00"
       },
       {
         "topic": "war news",
-        "headline": "Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill",
-        "photo_url": "https://cdn.zonebourse.com/static/resize/0/0/images/reuters/2026-11/2026-11-21T142210Z_1_LYNXNPEMAK0B7_RTROPTP_4_USA-CONGRESS-DEMOCRATS.JPG",
+        "headline": "‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - The New York Times",
+        "photo_url": "https://now.tufts.edu/sites/default/files/uploaded-assets/images/2023-03/230302_ukraine_overview_lg.jpg",
         "photo_source": "bing-images",
-        "photo_alt": "Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill",
-        "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4SzhiRkZscDcxQjR6Uzd5STlFVFFOUmlEME0zc1AzdERzaFBFeVhMdm80ZE0xbHFsN3pqcnFIcVBNaHA5d0VwTzlkcjZZNVRDSVFOUVQzTnZUUW9UYUtFMULSAZYBQVVfeXFMT3lENlZLYzFTVHFmdWJUSHBibnRCQlR0eUg4bER2QU5IS1E2WnhuVHRXLW1HV0ZoZ1AwdlVaaEcxUE1pUDBuY3Z5Vm5YY21WT0dQcHoycjdRd2liWXQ3T1lmVzItcVBEVVVtOW4xLVg5NVE1R3ZNOFl0dFc4MS1ISmZQZUM3YndRM01UZlFBam5jWDY3ckNn?oc=5",
-        "hook": "Wait, Democrats actually have a plan to pull the plug on Iran war funding?! 🤯 But the catch about what comes next is wild...",
-        "prepared_at": "2026-11-27T06:37:58.294155+00:00"
+        "photo_alt": "‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - The New York Times",
+        "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTUtzUk9TS1EtOENIeS1WOUVKS21xTTA5MFNRa1lmTmtHbnN3cDloV0JLbklJeGlnNDlCWGxBdmpnVGZ1QVVPNTNHR2NZNFU0Z0FTOW9ZZHF5dS10VGRWZnZFS3BRbGtleGo4T21CMmxGX0pIV1EyLVdFVkY4VkNjWEgzN2pPZkJE?oc=5",
+        "hook": "“War is hell.” 💀 Raw, unfiltered letters from a foreign fighter on the frontlines in Ukraine just dropped. You have to read this.",
+        "prepared_at": "2026-11-27T10:27:42.968552+00:00"
       }
     ]
   },
