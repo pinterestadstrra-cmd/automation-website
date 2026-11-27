@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T07:57:12.859661+00:00",
-  "last_run": "2026-11-27T07:56:29.499819+00:00",
-  "runs": 165,
+  "generated_at": "2026-11-27T08:07:00.451476+00:00",
+  "last_run": "2026-11-27T08:03:32.599740+00:00",
+  "runs": 166,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T06:38:00.324109+00:00",
-    "mastodon.social": "2026-11-27T06:39:07.653410+00:00"
+    "Adsterra Blogger": "2026-11-27T08:03:39.901487+00:00",
+    "mastodon.social": "2026-11-27T08:07:00.301007+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 8,
+      "fail": 9,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T06:38:00.324105+00:00"
+      "last_run": "2026-11-27T08:03:39.901483+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 21,
+      "fail": 22,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T06:39:07.653403+00:00"
+      "last_run": "2026-11-27T08:07:00.301003+00:00"
     }
   },
   "file_cards": [
@@ -82,25 +82,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T06:38:00.324109+00:00",
-      "runs_today": 6,
+      "last_run": "2026-11-27T08:03:39.901487+00:00",
+      "runs_today": 7,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T14:08:00.324109+06:00",
-        "2026-11-27T14:23:00.324109+06:00",
-        "2026-11-27T14:38:00.324109+06:00",
-        "2026-11-27T14:53:00.324109+06:00",
-        "2026-11-27T15:08:00.324109+06:00"
+        "2026-11-27T14:18:39.901487+06:00",
+        "2026-11-27T14:33:39.901487+06:00",
+        "2026-11-27T14:48:39.901487+06:00",
+        "2026-11-27T15:03:39.901487+06:00",
+        "2026-11-27T15:18:39.901487+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T14:05:00+06:00",
         "2026-11-27T15:00:00+06:00",
         "2026-11-27T15:55:00+06:00",
         "2026-11-27T16:50:00+06:00",
-        "2026-11-27T18:06:00+06:00"
+        "2026-11-27T18:06:00+06:00",
+        "2026-11-27T19:01:00+06:00"
       ],
       "success": 70,
-      "fail": 8,
+      "fail": 9,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T06:39:07.653410+00:00",
-      "runs_today": 6,
+      "last_run": "2026-11-27T08:07:00.301007+00:00",
+      "runs_today": 7,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T14:09:07.653410+06:00",
-        "2026-11-27T14:24:07.653410+06:00",
-        "2026-11-27T14:39:07.653410+06:00",
-        "2026-11-27T14:54:07.653410+06:00",
-        "2026-11-27T15:09:07.653410+06:00"
+        "2026-11-27T14:22:00.301007+06:00",
+        "2026-11-27T14:37:00.301007+06:00",
+        "2026-11-27T14:52:00.301007+06:00",
+        "2026-11-27T15:07:00.301007+06:00",
+        "2026-11-27T15:22:00.301007+06:00"
       ],
       "next_post_times": [
         "2026-11-27T14:52:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-27T18:51:00+06:00"
       ],
       "success": 17,
-      "fail": 21,
+      "fail": 22,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T07:56:29.501668+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T07:56:29.503328+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T08:03:32.601138+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
+    "Burnham's UK-EU deal",
     "Boreen daily trivia scores",
-    "Victoria votes in state election",
     "Grand Theft Auto VI",
-    "Bird photography",
     "Ukraine claims Libya warship sinking",
+    "FCC approves SpaceX Starmind satellites",
     "King tides flood West Coast",
+    "Day to end violence against women",
     "Birthday twin spectrum prompt",
-    "Blade Runner 2099 series premiere",
-    "Holiday food bank donations"
+    "Riemann hypothesis proof claimed"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T07:57:12.675280+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T07:57:12.673089+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T07:57:12.281601+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T07:56:29.504689+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T07:56:29.503337+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T07:56:29.501676+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #165 started (--only blogger)",
-      "created_at": "2026-11-27T07:56:29.499839+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T06:39:07.653451+00:00",
+      "created_at": "2026-11-27T08:07:00.301042+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T06:39:07.652050+00:00",
+      "created_at": "2026-11-27T08:07:00.299905+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T06:39:07.649768+00:00",
+      "created_at": "2026-11-27T08:07:00.298215+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T06:38:57.647261+00:00",
+      "created_at": "2026-11-27T08:06:50.295842+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-27T08:06:50.066620+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-27T08:06:50.064463+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T06:38:52.172024+00:00",
+      "created_at": "2026-11-27T08:06:44.638598+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T06:38:52.169554+00:00",
+      "created_at": "2026-11-27T08:06:44.637137+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': no verified photo - posting text-only to Mastodon",
-      "created_at": "2026-11-27T06:38:42.471618+00:00",
-      "card": "mastodon.social"
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-27T08:06:44.397917+00:00",
+      "card": ""
     },
     {
-      "level": "info",
-      "message": "promo: fresh news exists but no real image could be fetched - skipping",
-      "created_at": "2026-11-27T06:38:42.392698+00:00",
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-27T08:06:44.396080+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: photo search done - 9 candidate(s) tried, 6 fresh stories with a photo attempt, 6 real-photo search(es), no usable photo",
-      "created_at": "2026-11-27T06:38:42.391353+00:00",
+      "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-27T08:06:38.246036+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story budget reached (6 fresh stories) - stopping the search",
-      "created_at": "2026-11-27T06:38:42.390160+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-27T08:06:38.245134+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "promo: story 6/6 tried: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - no usable photo, trying the next story",
-      "created_at": "2026-11-27T06:38:42.388882+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-27T06:38:42.387719+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: no real photo found for 'Ukraine war briefing: Kyiv launched more long-range strikes in 2026 than rest of war combined, data shows - The Guardian' (5 download(s) tried)",
-      "created_at": "2026-11-27T06:38:42.386352+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/32382810/c/1666/1666/220/192/il/f2d177/3494213371/il_600x600.3494213371_c6k (page: https://www.etsy.com/listing/1889756334/sheer-lingerie-mesh-lingerie-lingerie | Sexy Sheer Lingerie  - page does not name the entity (Ukraine))",
-      "created_at": "2026-11-27T06:38:42.385123+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.ohlalacheri.com/cdn/shop/articles/70-12100_BWH_ED.jpg?v=1757447191&width=1500 (page: https://www.etsy.com/market/sexy_sheer_lingerie | The Do’s & Don’ts of Wearing Sheer Lingerie – Oh L - page does not name the entity (Ukraine))",
-      "created_at": "2026-11-27T06:38:42.383703+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/9985109/r/il/65dcf5/1780282113/il_1588xN.1780282113_7qxh.jpg (page: https://www.ohlalacheri.com/blogs/the-cheri-edit/how-to-wear-sheer-lingerie | Light-blue lace linger - page does not name the entity (Ukraine))",
-      "created_at": "2026-11-27T06:38:42.382227+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://i.etsystatic.com/32377070/r/il/ca6a93/6596656544/il_800x800.6596656544_7ona.jpg (page: https://www.etsy.com/listing/658231792/light-blue-lace-lingerie-sheer-lingerie?frs=1 | Sheer Panties - page does not name the entity (Ukraine))",
-      "created_at": "2026-11-27T06:38:42.380766+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682221_5726e524d0_b.jpg",
-      "created_at": "2026-11-27T06:38:42.378725+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682461_c4b974bc74_b.jpg",
-      "created_at": "2026-11-27T06:38:42.333630+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682341_025d20604d_b.jpg",
-      "created_at": "2026-11-27T06:38:42.292603+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
-      "created_at": "2026-11-27T06:38:42.254340+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
-      "created_at": "2026-11-27T06:38:42.205800+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+      "created_at": "2026-11-27T08:06:38.244116+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-      "created_at": "2026-11-27T06:38:42.204223+00:00",
+      "created_at": "2026-11-27T08:06:38.242898+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg - source page title names only 1 of 15 key entities - not a news article about the story",
+      "created_at": "2026-11-27T08:06:38.186673+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-27T08:06:38.185479+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-27T06:38:42.149874+00:00",
+      "created_at": "2026-11-27T08:06:38.119955+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-27T06:38:41.984356+00:00",
+      "created_at": "2026-11-27T08:06:37.981663+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "wikimedia: search HTTP 429 for 'Ukraine'",
-      "created_at": "2026-11-27T06:38:41.861571+00:00",
+      "created_at": "2026-11-27T08:06:37.835420+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-27T06:38:41.831255+00:00",
+      "created_at": "2026-11-27T08:06:37.750089+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.794189+00:00",
+      "created_at": "2026-11-27T08:06:37.707320+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.793039+00:00",
+      "created_at": "2026-11-27T08:06:37.703597+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-27T06:38:41.791748+00:00",
+      "created_at": "2026-11-27T08:06:37.702547+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://lotusarise.com/wp-content/uploads/2023/09/India-Map-Free-Map-of-India-With-States-UTs-Capita (page: https://www.mapsofworld.com/india/ | India Map - Free Map of India With States, UTs & Capital - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.790513+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://clipart.com/images/5002459/happy-thanksgiving-text-with-a-pumpkin-clipart-600.jpg (page: https://www.dreamstime.com/happy-thanksgiving-greeting-cute-turkey-cornucopia-pumpkins-leaves-holida - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:37.701551+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://static.vecteezy.com/system/resources/previews/023/022/032/original/india-map-with-city-names (page: https://lotusarise.com/maps/india-map/ | India Map with City Names 23022032 Vector Art at Vecteezy - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.789088+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://clipart.free/static/clipfiles/gold-happy-thanksgiving-typography-variation-2-no-background-2 (page: https://clipart.com/collection/thanksgiving-holiday-clipart/happy-thanksgiving?page=4 | Gold Happy T - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:37.700594+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.nationsonline.org/gallery/India/map_of_india50-L.jpg (page: https://www.vecteezy.com/vector-art/23022032-india-map-with-city-names | India map of India's States - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.787826+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://clipart-library.com/8300/1931/fd196852177f199f0a863e270ab06d1825467bbb258083615ced6d3a3210e1 (page: https://clipart.free/clipart/gold-happy-thanksgiving-typography-variation-2-no-background-266696/ |  - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:37.699571+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.guideoftheworld.com/wp-content/uploads/map/colorful_india_political_map.jpg (page: https://www.nationsonline.org/oneworld/india_map.htm | India Map - Guide of the World - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.786376+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://clipart-library.com/8300/1931/1.happy-thanksgiving-pumpkins-clipart_1500x1500.png (page: https://clipart-library.com/clipart/happy-thanksgiving-clipart-images_32.html | thanksgiving clipart - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:37.698533+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T06:38:41.783581+00:00",
+      "created_at": "2026-11-27T08:06:37.696826+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T06:38:41.603004+00:00",
+      "created_at": "2026-11-27T08:06:37.568918+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T06:38:41.486186+00:00",
+      "created_at": "2026-11-27T08:06:37.441277+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
-      "created_at": "2026-11-27T06:38:41.457455+00:00",
+      "created_at": "2026-11-27T08:06:37.358589+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.419907+00:00",
+      "created_at": "2026-11-27T08:06:36.859894+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.418571+00:00",
+      "created_at": "2026-11-27T08:06:36.858933+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://m.media-amazon.com/images/I/91PAcMmndTL.png (page: https://play.google.com/store/apps/details?id=an.FilipTranslate&hl=en | Filipino English Translator  - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.417414+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.bbc.co.uk/staticarchive/4c2a88967dae9d56d3a707294492bb256e1188a1.png (page: https://www.bbc.co.uk/iplayer/help/questions/signing-in/sign-in-tv/ | BBC - Research and Development - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:36.857643+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/140174320/original/03cd431d83fddcfec3701 (page: https://www.amazon.co.uk/AllFreeGames-Dev-Filipino-English-Translator/dp/B011N38ME8 | Translate Engl - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.416076+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://ichef.bbci.co.uk/images/ic/400xn/p0j6krbb.png (page: https://trippnology.com/what-are-qr-codes-and-how-to-use-them/ | BBC Connect: Support Guidance - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:36.856634+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://cdn.shopify.com/s/files/1/0509/0538/3085/products/770X_tagalog_sample_1600x.jpg?v=1607544116 (page: https://www.canoeracing.org.uk/translate-english-word-to-tagalog-or-vise-versa-ww-27531480 | English - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.414649+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.bbc.co.uk/iplayer/help/sites/default/files/inline-images/SignInTV4_5.png (page: https://www.bbc.co.uk/partnersandsuppliers/bbcconnect | How do I sign in to BBC iPlayer on my TV? |  - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:36.855629+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://ichef.bbci.co.uk/images/ic/1200x675/p0jsjg0j.jpg (page: https://www.bbc.co.uk/iplayer/help/questions/signing-in/sign-in-tv/ | BBC World Service - Witness Hi - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:36.854541+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:36.852696+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:36.712038+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:36.544465+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:36.463651+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T08:06:35.957642+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T08:06:35.956653+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://images-na.ssl-images-amazon.com/images/I/71Rh0xS2-CL._AC_SL1132_.jpg (page: Free Printable Shower Visual Schedule - Printable Ilunion - only 0 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T08:06:35.955709+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 1 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:35.953995+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:35.754607+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:35.616373+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+      "created_at": "2026-11-27T08:06:35.531898+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-27T08:06:34.981716+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-27T08:06:34.980621+00:00",
       "card": ""
     }
   ]
