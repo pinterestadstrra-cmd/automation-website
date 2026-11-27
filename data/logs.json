@@ -2,6 +2,660 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T13:53:54.198743+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Bird photography', 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Katie Miller car seat claim', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-27T13:53:54.191221+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T13:53:53.875282+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T13:53:53.873096+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T13:53:53.870249+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T13:53:43.866781+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T13:53:43.679845+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T13:53:43.676528+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T13:53:38.134496+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T13:53:38.130980+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T13:53:37.948335+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T13:53:37.945279+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war latest: Trump appears to change joint NATO state' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T13:53:32.294743+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T13:53:32.292396+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: Trump appears to change joint NATO state': http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (from bing-images, query 'Ukraine', page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - page names the entity (Ukraine))",
+    "created_at": "2026-11-27T13:53:32.290629+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Ukraine war latest: Trump appears to change joint ' (, the photo shows a famous landmark in Ukraine (Kyiv Pechersk Lavra), which relates to the Ukraine war mentioned in the headline.)",
+    "created_at": "2026-11-27T13:53:32.288171+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg",
+    "created_at": "2026-11-27T13:53:28.464628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Ukraine war latest: Trump appears to change joint ' (, because the image shows a view of the Kyiv Pechersk Lavra in Ukraine, which is unrelated to the content of the news headline about Donald Trump and )",
+    "created_at": "2026-11-27T13:53:28.462254+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682221_5726e524d0_b.jpg",
+    "created_at": "2026-11-27T13:53:24.362424+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682461_c4b974bc74_b.jpg",
+    "created_at": "2026-11-27T13:53:24.323479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682341_025d20604d_b.jpg",
+    "created_at": "2026-11-27T13:53:24.283352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
+    "created_at": "2026-11-27T13:53:24.222583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+    "created_at": "2026-11-27T13:53:24.178993+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Ukraine war latest: Trump appears to change joint ' (\n\nReason: The photo shows two women in traditional dress in a forest, which is unrelated to a political news headline about Donald Trump and NATO.)",
+    "created_at": "2026-11-27T13:53:24.176612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T13:53:14.799860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T13:53:14.617985+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-27T13:53:14.486819+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-27T13:53:14.457494+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:14.413128+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:14.410447+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Ukraine war latest: Trump appears to change joint ' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-27T13:53:14.408852+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:14.407235+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:14.405543+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:14.403892+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:14.402011+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest Trump appears'",
+    "created_at": "2026-11-27T13:53:14.398810+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest Trump appears'",
+    "created_at": "2026-11-27T13:53:14.090115+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest Trump appears'",
+    "created_at": "2026-11-27T13:53:13.961374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest Trump appears'",
+    "created_at": "2026-11-27T13:53:13.930745+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:13.805891+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:13.804294+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.802669+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.800558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.798859+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.797012+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.785079+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.646146+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.499517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.463826+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:13.296200+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:13.294661+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.293208+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.291505+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.289719+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T13:53:13.287916+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.284005+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:13.115286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:12.983326+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T13:53:12.942734+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:12.656580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:12.654951+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war latest: Trump appears to change joint NATO state' - rejected (no og:image)",
+    "created_at": "2026-11-27T13:53:12.653132+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxQZXFfdnlza0JfdVgyQS13Rml1WXR6dFpLVUxoUk11VHRhOTVmRzhOMlpfUXJ6WHpxNjZ) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T13:53:12.649479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T13:53:12.298963+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T13:53:12.296017+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T13:53:12.215419+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T13:53:12.213230+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T13:53:12.211339+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T13:53:12.209579+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T13:53:12.207252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T13:53:12.099553+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T13:53:12.097898+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T13:53:12.095082+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T13:53:12.030787+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T13:53:12.028445+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T13:53:12.025991+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T13:53:10.466430+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-27T13:53:10.463813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T13:53:09.229724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T13:53:09.228102+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+    "created_at": "2026-11-27T13:53:09.226129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (, the photo shows the national flag of Iran, which is directly related to the country mentioned in the headline about Iran war updates.)",
+    "created_at": "2026-11-27T13:53:09.212829+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T13:53:00.734735+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T13:53:00.578046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T13:53:00.442762+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T13:53:00.408693+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:00.331972+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:53:00.330333+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
+    "created_at": "2026-11-27T13:53:00.325622+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T13:53:00.322177+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T13:52:59.994362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' for card 'Adsterra Blogger' (queue now 1)",
+    "created_at": "2026-11-27T13:52:59.916106+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T13:52:49.681954+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T13:52:49.679972+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 5 key entities (down, drone, hit, iran))",
+    "created_at": "2026-11-27T13:52:49.678252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran war live: IRGC says tanker hit in Hormuz, dro' (. The image shows the national flag of Iran, which is the country featured in the news headline about military events involving Iran.)",
+    "created_at": "2026-11-27T13:52:49.675798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T13:52:46.805583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T13:52:46.668594+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T13:52:46.529609+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T13:52:46.464336+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T13:52:45.995573+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T13:52:45.993877+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - rejected (no og:image)",
+    "created_at": "2026-11-27T13:52:45.991680+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzB) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T13:52:45.985409+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T13:52:45.068404+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-27T13:52:44.685520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T13:52:36.574141+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T13:52:36.572374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #174 started (--only bluesky)",
+    "created_at": "2026-11-27T13:52:36.570306+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T13:52:24.456036+00:00",
     "card": ""
   },
@@ -543,660 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262151266 | Republican vs. Democrat 2012 - page does not name the entity (Democratic))",
     "created_at": "2026-11-27T12:28:55.725184+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg",
-    "created_at": "2026-11-27T12:28:55.723640+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:55.677065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:55.675431+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg",
-    "created_at": "2026-11-27T12:28:55.630525+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democratic'",
-    "created_at": "2026-11-27T12:28:55.574065+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democratic'",
-    "created_at": "2026-11-27T12:28:55.397766+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democratic'",
-    "created_at": "2026-11-27T12:28:55.278933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Democratic'",
-    "created_at": "2026-11-27T12:28:55.247323+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:55.059370+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:55.058444+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'A Democratic war over healthcare shows signs of an' - trying entity search 'Democratic'",
-    "created_at": "2026-11-27T12:28:55.057459+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://www.tasteofhome.com/wp-content/uploads/2020/12/taco-bell-nacho-fries-QT-1200x800.jpg?resize= (page: https://www.forbes.com/sites/teresafinney/2019/01/29/taco-bell-brings-back-nacho-fries-embraces-the- - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:55.056197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://cdn.cheapism.com/images/image_2024-11-14_103336128.max-825x550.png (page: https://www.tasteofhome.com/article/taco-bell-nacho-fries/ | Taco Bell Offers 30-Days of Nacho Fries - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:55.055179+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://tacobells-deliver.com/assets/food/images/products/23963_chicken_fajita_nacho_fries_640x650.j (page: https://blog.cheapism.com/30-days-of-taco-bell-nacho-fries/ | Specialties at Taco Bell | Taco Bell® - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:55.054133+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://www.qsrmagazine.com/wp-content/uploads/2024/07/TacoBellNacho-1.jpg (page: https://taccobellmenu.us/2026/11/12/how-to-get-free-taco-bell-nacho-fries-with-apple-pay/ | Taco Bel - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:55.053046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://live.staticflickr.com/65535/52283288689_afa13c15bf_m.jpg (page: https://www.flickr.com/photos/28435100@N00/52283288689 | Heather Cox Richardson - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:55.052020+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democratic war over healthcare shows'",
-    "created_at": "2026-11-27T12:28:55.049762+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democratic war over healthcare shows'",
-    "created_at": "2026-11-27T12:28:54.922604+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democratic war over healthcare shows'",
-    "created_at": "2026-11-27T12:28:54.816428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 1 result(s) for 'Democratic war over healthcare shows'",
-    "created_at": "2026-11-27T12:28:54.787872+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:54.621115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:54.620215+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://5.imimg.com/data5/ANDROID/Default/2025/12/565733685/GB/NE/SM/28084901/product-jpeg-1000x1000 (page: https://www.amazon.com/Agarwood-Essential-Oils-For-Diffusers/dp/B0CPKXTTBW | 100% Pure & Natural Aga - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.619273+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://5.imimg.com/data5/SELLER/Default/2024/4/410735927/FI/LW/WX/2241791/pure-agarwood-oil-1000x10 (page: https://www.indiamart.com/proddetail/agarwood-oil-2858001420033.html | Pure Agarwood Oil at ₹ 220000 - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.618256+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://kironascent.com/cdn/shop/products/100mlAgarwoodPureEssentialOil_1800x1800.jpg?v=1749718882 (page: https://www.indiamart.com/proddetail/pure-agarwood-oil-2853904596230.html | 100ML Pure Essential Oil - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.617313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://5.imimg.com/data5/SELLER/Default/2025/7/530560082/WK/CZ/XF/38171123/pure-agarwood-oil-1000x1 (page: https://kironascent.com/products/100ml-pure-essential-oil-agarwood-sg | Pure Agarwood Oil at ₹ 15500 - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.616275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.614093+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.470275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.337288+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.310087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:54.182311+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:54.181402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://i.redd.it/gpwg3e2zyny81.jpg (page: https://www.visualizingeconomics.com/blog/2006/05/10/graphing-historical-data-djia | Best Dow Jones  - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.180505+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://i.pinimg.com/originals/71/6b/80/716b80330c1738d5215e4b8949357095.png (page: https://www.reddit.com/t/dow_jones_industrial_average/ | Dow Jones 1960 To Present _ Dow Jones Histo - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.179478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://d3f7q2msm2165u.cloudfront.net/wp-content/uploads/2017/03/history_of_market_corrections2-hire (page: https://apps.fribot.org/dow-jones-1960-to-present-dow-jones-historical-chart/ | History: The Dow Jon - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.178437+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://enlightenedstocktrading.com/wp-content/uploads/2023/11/Don-Jones-Industrial-Average.jpg (page: https://dev2.ngpf.org/blog/investing/history-lesson-dow-jones-industrial-average-since-1896-one-char - only 1 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:54.170039+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.160440+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:54.002053+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:53.893725+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'A Democratic war over healthcare shows signs of an emerging '",
-    "created_at": "2026-11-27T12:28:53.865687+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:53.590795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:53.589928+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'A Democratic war over healthcare shows signs of an emerging ' - rejected (no og:image)",
-    "created_at": "2026-11-27T12:28:53.588882+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxOSTNrVW95S2dpVnZCdy1ZSTNmUzRUVllVU2c2bzhDaDFHWjJZZHltbjBjNi01ZDdwLUd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T12:28:53.586701+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Italians killed in Kuwait: Why is Iran denying responsibilit' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T12:28:53.279694+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Italians killed in Kuwait: Why is Iran denying responsibilit' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T12:28:53.278711+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Italians killed in Kuwait: Why is Iran denying responsibility? - Al Jazeera' (8 download(s) tried)",
-    "created_at": "2026-11-27T12:28:53.277630+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://img.freepik.com/premium-photo/group-italians-national-costumes_433905-18457.jpg?w=2000 - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:53.276625+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:53.274947+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://italystart.com/wp-content/uploads/2022/09/traditional-italian-clothing-costume-Sardinia.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:52.254493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:52.253135+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://civilisable.com/wp-content/uploads/2024/04/Italian-clothing08.04.2024-1080x810.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:52.133396+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:52.131924+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.travelintelligence.net/wp-content/uploads/2024/12/traditional-italian-clothing.jpg - source page title names only 1 of 8 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:52.028789+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:52.027264+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4144/5071569826_c8a9d36496.jpg",
-    "created_at": "2026-11-27T12:28:51.814716+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://live.staticflickr.com/65535/51298609045_814bb65f90_b.jpg (page: https://www.flickr.com/photos/82134796@N03/51298609045 | Ballina. The original Courthouse burnt down - page does not name the entity (Italians))",
-    "created_at": "2026-11-27T12:28:51.760125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3057/2704086693_bf9845de63_b.jpg",
-    "created_at": "2026-11-27T12:28:51.755393+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2805/33704323561_190dab8f10_b.jpg",
-    "created_at": "2026-11-27T12:28:51.709520+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6042/6309091252_a91bf83d0b_b.jpg",
-    "created_at": "2026-11-27T12:28:51.668279+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Italians'",
-    "created_at": "2026-11-27T12:28:51.621642+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Italians'",
-    "created_at": "2026-11-27T12:28:51.499865+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Italians'",
-    "created_at": "2026-11-27T12:28:51.369319+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Italians'",
-    "created_at": "2026-11-27T12:28:51.343541+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:50.585559+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:50.584619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Italians killed in Kuwait: Why is Iran denying res' - trying entity search 'Italians'",
-    "created_at": "2026-11-27T12:28:50.583686+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://img.freepik.com/premium-photo/group-italians-national-costumes_433905-18457.jpg?w=2000 (page: https://www.pinterest.com/pin/41939840259154401/ | Premium Photo | A group of italians in national c - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.582740+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://italystart.com/wp-content/uploads/2022/09/traditional-italian-clothing-costume-Sardinia.jpg (page: https://www.freepik.com/premium-ai-image/group-italians-national-costumes_141331888.htm | Traditiona - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.581688+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://civilisable.com/wp-content/uploads/2024/04/Italian-clothing08.04.2024-1080x810.jpg (page: https://italystart.com/traditional-italian-clothing/ | Italian Culture: 9 Unique Traditions And Life - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.580415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://www.travelintelligence.net/wp-content/uploads/2024/12/traditional-italian-clothing.jpg (page: https://civilisable.com/italian-culture/ | Traditional Italian ClothingTravel Intelligence - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.579410+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Italians killed Kuwait Iran denying'",
-    "created_at": "2026-11-27T12:28:50.577162+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Italians killed Kuwait Iran denying'",
-    "created_at": "2026-11-27T12:28:50.444061+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Italians killed Kuwait Iran denying'",
-    "created_at": "2026-11-27T12:28:50.325010+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Italians killed Kuwait Iran denying'",
-    "created_at": "2026-11-27T12:28:50.289577+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:50.203278+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:50.202370+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://img.freepik.com/premium-photo/group-italians-national-costumes_433905-18457.jpg?w=2000 (page: https://www.pinterest.com/pin/41939840259154401/ | Premium Photo | A group of italians in national c - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.201412+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://italystart.com/wp-content/uploads/2022/09/traditional-italian-clothing-costume-Sardinia.jpg (page: https://www.freepik.com/premium-ai-image/group-italians-national-costumes_141331888.htm | Traditiona - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.200449+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://civilisable.com/wp-content/uploads/2024/04/Italian-clothing08.04.2024-1080x810.jpg (page: https://italystart.com/traditional-italian-clothing/ | Italian Culture: 9 Unique Traditions And Life - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.199427+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://www.travelintelligence.net/wp-content/uploads/2024/12/traditional-italian-clothing.jpg (page: https://civilisable.com/italian-culture/ | Traditional Italian ClothingTravel Intelligence - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:50.198368+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:50.196063+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:50.068948+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.938304+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.909669+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:49.779161+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:49.777432+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://img.freepik.com/premium-photo/group-italians-national-costumes_433905-18457.jpg?w=2000 (page: https://www.pinterest.com/pin/41939840259154401/ | Premium Photo | A group of italians in national c - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:49.776506+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://italystart.com/wp-content/uploads/2022/09/traditional-italian-clothing-costume-Sardinia.jpg (page: https://www.freepik.com/premium-ai-image/group-italians-national-costumes_141331888.htm | Traditiona - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:49.775326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://civilisable.com/wp-content/uploads/2024/04/Italian-clothing08.04.2024-1080x810.jpg (page: https://italystart.com/traditional-italian-clothing/ | Italian Culture: 9 Unique Traditions And Life - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:49.774378+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Italians killed in Kuwait: Why is Iran denying res'): https://www.travelintelligence.net/wp-content/uploads/2024/12/traditional-italian-clothing.jpg (page: https://civilisable.com/italian-culture/ | Traditional Italian ClothingTravel Intelligence - only 1 of 8 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:49.773372+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.771193+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.615724+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.456919+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Italians killed in Kuwait: Why is Iran denying responsibilit'",
-    "created_at": "2026-11-27T12:28:49.429046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:49.249802+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:49.245982+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Italians killed in Kuwait: Why is Iran denying responsibilit' - rejected (no og:image)",
-    "created_at": "2026-11-27T12:28:49.243010+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMipAFBVV95cUxQM3JrUmVYMExlMzNxaTY5VU1YWXctcThoZUJmU2FBN1lhbElJVGFrcTBnQWZUTVBtVUp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T12:28:49.227748+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T12:28:48.882997+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T12:28:48.882072+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’ - CNBC' (9 download(s) tried)",
-    "created_at": "2026-11-27T12:28:48.881123+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://png.pngtree.com/png-clipart/20230613/original/pngtree-two-coloring-pages-with-two-kids-stand",
-    "created_at": "2026-11-27T12:28:48.879808+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.transparentpng.com/download/numbers/medal-with-number-two-numbers-2-png-icon--X5yrFc.png - source page title names only 1 of 13 key entities - not a news article about the story",
-    "created_at": "2026-11-27T12:28:48.821500+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T12:28:48.820108+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://i.pinimg.com/originals/b6/7d/db/b67ddb76de105bafa5d89d359d3f6a00.png",
-    "created_at": "2026-11-27T12:28:47.961252+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The image shows a cartoon character (Numberblock Two), not anything related to the news event in the headline.)",
-    "created_at": "2026-11-27T12:28:47.957645+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://clipground.com/images/clipart-number-two-9.png",
-    "created_at": "2026-11-27T12:28:44.960724+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The image is a graphic illustration of the number two, not a photo of the people, place, or event described in the headline.)",
-    "created_at": "2026-11-27T12:28:44.959211+00:00",
     "card": ""
   }
 ]
