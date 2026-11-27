@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T05:31:51.962385+00:00",
-  "last_run": "2026-11-27T05:29:51.556434+00:00",
-  "runs": 162,
+  "generated_at": "2026-11-27T06:31:28.070965+00:00",
+  "last_run": "2026-11-27T06:31:07.216730+00:00",
+  "runs": 163,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 5,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T11:46:03.672777+06:00",
-        "2026-11-27T12:01:03.672777+06:00",
-        "2026-11-27T12:16:03.672777+06:00",
-        "2026-11-27T12:31:03.672777+06:00",
-        "2026-11-27T12:46:03.672777+06:00"
+        "2026-11-27T12:46:03.672777+06:00",
+        "2026-11-27T13:01:03.672777+06:00",
+        "2026-11-27T13:16:03.672777+06:00",
+        "2026-11-27T13:31:03.672777+06:00",
+        "2026-11-27T13:46:03.672777+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T11:54:00+06:00",
         "2026-11-27T13:10:00+06:00",
         "2026-11-27T14:05:00+06:00",
         "2026-11-27T15:00:00+06:00",
-        "2026-11-27T15:55:00+06:00"
+        "2026-11-27T15:55:00+06:00",
+        "2026-11-27T16:50:00+06:00"
       ],
       "success": 70,
       "fail": 7,
@@ -158,18 +158,18 @@
       "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T11:46:51.732778+06:00",
-        "2026-11-27T12:01:51.732778+06:00",
-        "2026-11-27T12:16:51.732778+06:00",
         "2026-11-27T12:31:51.732778+06:00",
-        "2026-11-27T12:46:51.732778+06:00"
+        "2026-11-27T12:46:51.732778+06:00",
+        "2026-11-27T13:01:51.732778+06:00",
+        "2026-11-27T13:16:51.732778+06:00",
+        "2026-11-27T13:31:51.732778+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T12:09:00+06:00",
         "2026-11-27T13:04:00+06:00",
         "2026-11-27T13:57:00+06:00",
         "2026-11-27T14:52:00+06:00",
-        "2026-11-27T16:08:00+06:00"
+        "2026-11-27T16:08:00+06:00",
+        "2026-11-27T17:03:00+06:00"
       ],
       "success": 17,
       "fail": 20,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T05:29:51.558066+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T06:31:07.218899+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T06:31:07.220420+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,60 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
-    "Original characters as nameless NPCs",
+    "Grand Theft Auto VI",
     "Victoria votes in state election",
-    "Birthday twin spectrum prompt",
+    "Thanksgiving storm knocks out power",
     "Katie Miller car seat claim",
-    "Tomlin segment bumps Goo Goo Dolls",
-    "Macy's parade postponed to Saturday",
-    "Steven Universe actor comes out",
-    "Describe a film without its name",
-    "Thanksgiving storm knocks out power"
+    "Nvidia reinstates Jensen Huang",
+    "Riemann hypothesis proof claimed",
+    "Wave of software vulnerability disclosures",
+    "Birthday twin spectrum prompt",
+    "Musk pledges kids SpaceX shares"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T06:31:27.979706+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T06:31:27.976803+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T06:31:27.434359+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T06:31:07.221888+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T06:31:07.220430+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T06:31:07.218911+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #163 started (--only blogger)",
+      "created_at": "2026-11-27T06:31:07.216755+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -575,48 +605,6 @@
       "level": "info",
       "message": "wikimedia: search HTTP 429 for 'Black Sea front Russia Ukraine'",
       "created_at": "2026-11-27T05:31:31.020059+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 2 result(s) for 'Black Sea front Russia Ukraine'",
-      "created_at": "2026-11-27T05:31:30.990192+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T05:31:30.948395+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T05:31:30.947128+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/black-color-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T05:31:30.945677+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T05:31:30.944198+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Black HD - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T05:31:30.942827+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://wallpapercave.com/black-hd-wallpaper | Plain Black Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T05:31:30.941475+00:00",
       "card": ""
     }
   ]
