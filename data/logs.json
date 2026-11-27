@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T21:28:42.183545+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', 'Thanksgiving Day celebrations', 'Aaron Rodgers reportedly out', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-27T21:28:42.178813+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T21:28:41.958944+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T21:28:41.957744+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T21:28:41.625570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T21:28:32.527511+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T21:28:32.526795+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T21:28:32.526026+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #188 started (--only blogger)",
+    "created_at": "2026-11-27T21:28:32.525057+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T20:58:31.842305+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-27T19:59:21.465557+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
-    "created_at": "2026-11-27T19:59:21.464171+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T19:59:21.461933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T19:59:21.169798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T19:59:21.104603+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T19:59:21.103035+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retry 1/2 after failure - due now",
-    "created_at": "2026-11-27T19:59:21.101522+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T19:59:21.100373+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': run failed (2/2 retries) - next retry at 02:29 Dhaka",
-    "created_at": "2026-11-27T19:59:21.099129+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T19:59:21.097740+00:00",
     "card": ""
   }
 ]
