@@ -2,6 +2,354 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T19:59:48.567006+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai', 'Cybersecurity breach reported at CIA', 'Army detonates lead azide in Iowa']",
+    "created_at": "2026-11-27T19:59:48.560429+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T19:59:48.362076+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': run failed (2/2 retries) - next retry at 02:29 Dhaka",
+    "created_at": "2026-11-27T19:59:48.360793+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T19:59:48.357140+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T19:59:38.354637+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T19:59:38.189959+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T19:59:38.187180+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T19:59:32.761902+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T19:59:32.759628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T19:59:32.544280+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T19:59:32.541999+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T19:59:25.659643+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T19:59:25.657153+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+    "created_at": "2026-11-27T19:59:25.656043+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (, the photo shows the national flag of Iran, which relates to the subject of the news headline.)",
+    "created_at": "2026-11-27T19:59:25.654500+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:21.809742+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:21.698963+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:21.566728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:21.507424+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T19:59:21.466885+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T19:59:21.465557+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
+    "created_at": "2026-11-27T19:59:21.464171+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T19:59:21.461933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T19:59:21.169798+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T19:59:21.104603+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T19:59:21.103035+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retry 1/2 after failure - due now",
+    "created_at": "2026-11-27T19:59:21.101522+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T19:59:21.100373+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': run failed (2/2 retries) - next retry at 02:29 Dhaka",
+    "created_at": "2026-11-27T19:59:21.099129+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T19:59:21.097740+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T19:59:21.034195+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T19:59:21.032528+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T19:59:21.030508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T19:59:21.029279+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+    "created_at": "2026-11-27T19:59:21.027468+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (. The photo shows the national flag of Iran, which directly relates to the subject of the headline about Iran.)",
+    "created_at": "2026-11-27T19:59:21.025806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:15.621621+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:15.476372+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:15.335388+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T19:59:15.240502+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T19:59:14.537857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T19:59:14.536771+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
+    "created_at": "2026-11-27T19:59:14.535319+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T19:59:14.532888+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T19:59:14.234888+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ready queue: discarding 'Elon Musk becomes biggest donor of US midterms cycle with $3' for card 'Adsterra Blogger' - stored photo URL no longer downloads/verifies",
+    "created_at": "2026-11-27T19:59:13.690964+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "download_image: rejected (not a valid photo >=400px): https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg",
+    "created_at": "2026-11-27T19:59:13.688273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T19:59:13.417940+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T19:59:13.416517+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T19:59:13.414437+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T19:59:12.101781+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retry 1/2 after failure - due now",
+    "created_at": "2026-11-27T19:59:12.100533+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T19:59:12.098757+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T19:59:11.869540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T19:59:09.519807+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T19:59:09.518468+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #185 started (--only bluesky)",
+    "created_at": "2026-11-27T19:59:09.516563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T19:33:24.674875+00:00",
     "card": ""
   },
@@ -849,354 +1197,6 @@
     "level": "info",
     "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
     "created_at": "2026-11-27T17:02:16.132946+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T17:02:15.857774+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:02:15.856742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
-    "created_at": "2026-11-27T17:02:15.855497+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T17:02:15.852877+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Elon Musk becomes biggest donor of US midterms cycle with $3' for card 'Adsterra Blogger' (queue now 1)",
-    "created_at": "2026-11-27T17:02:15.051642+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Elon Musk becomes biggest donor of US midterms cycle with $3' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T17:01:47.308627+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: USA political news",
-    "created_at": "2026-11-27T17:01:47.307567+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Elon Musk becomes biggest donor of US midterms cycle with $3': https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg (from bing-images, query 'Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian', page: https://www.inkl.com/news/tesla-is-investing-2-billion-in-xai-is-that-bad-news-or-good-news-for-tsla - matches 2 key entities (elon, musk))",
-    "created_at": "2026-11-27T17:01:47.306424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T17:01:47.304716+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
-    "created_at": "2026-11-27T17:01:46.934305+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
-    "created_at": "2026-11-27T17:01:46.713021+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
-    "created_at": "2026-11-27T17:01:46.553733+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Elon Musk becomes biggest donor of US midterms cycle with $3'",
-    "created_at": "2026-11-27T17:01:46.499874+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:46.306796+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:46.305716+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Elon Musk becomes biggest donor of US midterms cycle with $3' - rejected (no og:image)",
-    "created_at": "2026-11-27T17:01:46.304106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'WWE's CM Punk leaving politics out of the ring for USA vs Me' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T17:01:45.567736+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'WWE's CM Punk leaving politics out of the ring for USA vs Me' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T17:01:45.566714+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'WWE's CM Punk leaving politics out of the ring for USA vs Mexico match at Survivor Series: WarGames - Fox News' (9 download(s) tried)",
-    "created_at": "2026-11-27T17:01:45.565699+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://image.api.playstation.com/vulcan/ap/rnd/202501/1623/068123d291265a61f85713615aa2f255077fbf16 - source page title names only 0 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T17:01:45.564556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T17:01:45.563000+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://ewrestling.com/wp-content/uploads/2026/03/wwe-logo-6-e1774000513326.jpg - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T17:01:45.340971+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T17:01:45.339684+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://wallpapers.com/images/hd/cool-wwe-3ny74nus835twbrs.jpg - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T17:01:45.151578+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T17:01:45.142603+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/11/netflix.jpg - source page title names only 1 of 14 key entities - not a news article about the story",
-    "created_at": "2026-11-27T17:01:45.045470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T17:01:45.043991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7008/6777137961_35e146d1d1_b.jpg",
-    "created_at": "2026-11-27T17:01:44.862797+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7026/6777117693_84e64d98f3_b.jpg",
-    "created_at": "2026-11-27T17:01:44.819991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7006/6777152285_a5e500b390_b.jpg",
-    "created_at": "2026-11-27T17:01:44.769335+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7032/6777102653_9d3c731beb_b.jpg",
-    "created_at": "2026-11-27T17:01:44.726547+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/7003/6777156259_8940df6bf5_b.jpg",
-    "created_at": "2026-11-27T17:01:44.689545+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'WWE'",
-    "created_at": "2026-11-27T17:01:44.608842+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'WWE'",
-    "created_at": "2026-11-27T17:01:44.410001+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'WWE'",
-    "created_at": "2026-11-27T17:01:44.271258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'WWE'",
-    "created_at": "2026-11-27T17:01:44.244313+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:44.191182+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:44.190216+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'WWE's CM Punk leaving politics out of the ring for' - trying entity search 'WWE'",
-    "created_at": "2026-11-27T17:01:44.189247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://image.api.playstation.com/vulcan/ap/rnd/202501/1623/068123d291265a61f85713615aa2f255077fbf16 (page: https://www.wrestleview.com/wwe-raw-results/256904-live-wwe-raw-results-january-2-2023-birmingham/ | - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:44.188246+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://ewrestling.com/wp-content/uploads/2026/03/wwe-logo-6-e1774000513326.jpg (page: https://store.playstation.com/en-in/pages/latest/?gad_source=1 | WWE SmackDown Results - May 1st, 20 - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:44.187242+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://wallpapers.com/images/hd/cool-wwe-3ny74nus835twbrs.jpg (page: https://ewrestling.com/article/wwe-smackdown-results-may-1st-2026-tulsa-ok/ | [2400+] Wwe Background - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:44.186177+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/11/netflix.jpg (page: https://wallpapers.com/wwe-background | 9 Best British Wrestlers in WWE History (Ranked) - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:44.185056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'WWE s CM Punk leaving'",
-    "created_at": "2026-11-27T17:01:44.182656+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'WWE s CM Punk leaving'",
-    "created_at": "2026-11-27T17:01:43.980874+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'WWE s CM Punk leaving'",
-    "created_at": "2026-11-27T17:01:43.856211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'WWE s CM Punk leaving'",
-    "created_at": "2026-11-27T17:01:43.828743+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:43.779031+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:43.778046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://image.api.playstation.com/vulcan/ap/rnd/202501/1623/068123d291265a61f85713615aa2f255077fbf16 (page: https://www.wrestleview.com/wwe-raw-results/256904-live-wwe-raw-results-january-2-2023-birmingham/ | - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.776898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://ewrestling.com/wp-content/uploads/2026/03/wwe-logo-6-e1774000513326.jpg (page: https://store.playstation.com/en-in/pages/latest/?gad_source=1 | WWE SmackDown Results - May 1st, 20 - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.775732+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://wallpapers.com/images/hd/cool-wwe-3ny74nus835twbrs.jpg (page: https://ewrestling.com/article/wwe-smackdown-results-may-1st-2026-tulsa-ok/ | [2400+] Wwe Background - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.774626+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'WWE's CM Punk leaving politics out of the ring for'): https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/11/netflix.jpg (page: https://wallpapers.com/wwe-background | 9 Best British Wrestlers in WWE History (Ranked) - only 1 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T17:01:43.773463+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.771058+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.626182+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.496601+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
-    "created_at": "2026-11-27T17:01:43.468653+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T17:01:43.411823+00:00",
     "card": ""
   }
 ]

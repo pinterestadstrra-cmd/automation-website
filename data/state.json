@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 184,
-  "last_run": "2026-11-27T19:33:16.183346+00:00",
+  "runs": 185,
+  "last_run": "2026-11-27T19:59:09.516544+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 18,
+      "fail": 19,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T18:58:50.883054+00:00"
+      "last_run": "2026-11-27T19:59:21.100354+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 31,
+      "fail": 32,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T18:59:26.099206+00:00"
+      "last_run": "2026-11-27T19:59:48.362049+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T18:58:50.883057+00:00",
-    "mastodon.social": "2026-11-27T18:59:26.099209+00:00"
+    "Adsterra Blogger": "2026-11-27T19:59:21.100357+00:00",
+    "mastodon.social": "2026-11-27T19:59:48.362052+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 15
+      "count": 16
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 15
+      "count": 16
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T19:33:16.184724+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T19:33:16.186937+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T19:59:09.518459+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,12 +534,12 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "Adsterra Blogger": {
-      "fails": 1,
-      "next_retry": "2026-11-27T19:28:50.881337+00:00"
+      "fails": 2,
+      "next_retry": "2026-11-27T20:29:21.099092+00:00"
     },
     "mastodon.social": {
-      "fails": 1,
-      "next_retry": "2026-11-27T19:29:26.097574+00:00"
+      "fails": 2,
+      "next_retry": "2026-11-27T20:29:48.360743+00:00"
     }
   },
   "posted_promo_accounts": {
@@ -626,16 +620,6 @@
   "ready_queue": {
     "Adsterra Blogger": [
       {
-        "topic": "USA political news",
-        "headline": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
-        "photo_url": "https://www.sciencefriday.com/wp-content/uploads/2023/10/elon-musk.jpg",
-        "photo_source": "bing-images",
-        "photo_alt": "Elon Musk becomes biggest donor of US midterms cycle with $366m spent - The Guardian",
-        "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeWhqeTV0TXZ0T1dJZFJvakpvbTRMUlR5QW9XMTYya0QxaTRpMldzN1hfcG9DSWtwbXphaXNKQW50V0dQdnRCM1ozNHRLYXBoXzNNWFJpUjhpTjBCSm9ZVk95a0xXc0k3SHdHWE5DYmRuSWdCeTZ4NFdYckpQOXIza1RPWWlhcjlKMmFXU0RQUlJIR3dvTkE?oc=5",
-        "hook": "Elon Musk just dropped a staggering $366 MILLION into the US midterms—making him the biggest donor of the entire cycle. I cannot believe the numbers on this.",
-        "prepared_at": "2026-11-27T17:02:15.051620+00:00"
-      },
-      {
         "topic": "war news",
         "headline": "Trump: Iran war will be over ‘sort of whenever I want it to be’ - The Hill",
         "photo_url": "https://media.cnn.com/api/v1/images/stellar/prod/still-22502621-3045094-347-still-crop.jpg?c=16x9&q=w_1280,c_fill",
@@ -648,11 +632,11 @@
     ]
   },
   "mastodon_post_counts": {
-    "2026-11-26": {
-      "mastodon.social": 6
-    },
     "2026-11-25": {
       "mastodon.social": 9
+    },
+    "2026-11-26": {
+      "mastodon.social": 6
     }
   },
   "last_mastodon_post_at": {
