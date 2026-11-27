@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T06:39:07.844465+00:00",
-  "last_run": "2026-11-27T06:31:57.107188+00:00",
-  "runs": 164,
+  "generated_at": "2026-11-27T07:57:12.859661+00:00",
+  "last_run": "2026-11-27T07:56:29.499819+00:00",
+  "runs": 165,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 6,
       "posts_today": 6,
       "next_runs": [
-        "2026-11-27T12:53:00.324109+06:00",
-        "2026-11-27T13:08:00.324109+06:00",
-        "2026-11-27T13:23:00.324109+06:00",
-        "2026-11-27T13:38:00.324109+06:00",
-        "2026-11-27T13:53:00.324109+06:00"
+        "2026-11-27T14:08:00.324109+06:00",
+        "2026-11-27T14:23:00.324109+06:00",
+        "2026-11-27T14:38:00.324109+06:00",
+        "2026-11-27T14:53:00.324109+06:00",
+        "2026-11-27T15:08:00.324109+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T13:10:00+06:00",
         "2026-11-27T14:05:00+06:00",
         "2026-11-27T15:00:00+06:00",
         "2026-11-27T15:55:00+06:00",
-        "2026-11-27T16:50:00+06:00"
+        "2026-11-27T16:50:00+06:00",
+        "2026-11-27T18:06:00+06:00"
       ],
       "success": 70,
       "fail": 8,
@@ -158,18 +158,18 @@
       "runs_today": 6,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-27T12:54:07.653410+06:00",
-        "2026-11-27T13:09:07.653410+06:00",
-        "2026-11-27T13:24:07.653410+06:00",
-        "2026-11-27T13:39:07.653410+06:00",
-        "2026-11-27T13:54:07.653410+06:00"
+        "2026-11-27T14:09:07.653410+06:00",
+        "2026-11-27T14:24:07.653410+06:00",
+        "2026-11-27T14:39:07.653410+06:00",
+        "2026-11-27T14:54:07.653410+06:00",
+        "2026-11-27T15:09:07.653410+06:00"
       ],
       "next_post_times": [
-        "2026-11-27T13:04:00+06:00",
-        "2026-11-27T13:57:00+06:00",
         "2026-11-27T14:52:00+06:00",
         "2026-11-27T16:08:00+06:00",
-        "2026-11-27T17:03:00+06:00"
+        "2026-11-27T17:03:00+06:00",
+        "2026-11-27T17:56:00+06:00",
+        "2026-11-27T18:51:00+06:00"
       ],
       "success": 17,
       "fail": 21,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T06:31:57.110902+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T07:56:29.501668+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T07:56:29.503328+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,60 @@
   },
   "trending": [
     "Thanksgiving Day celebrations",
-    "Grand Theft Auto VI",
+    "Boreen daily trivia scores",
     "Victoria votes in state election",
-    "Thanksgiving storm knocks out power",
-    "Katie Miller car seat claim",
-    "Nvidia reinstates Jensen Huang",
-    "Riemann hypothesis proof claimed",
-    "Wave of software vulnerability disclosures",
+    "Grand Theft Auto VI",
+    "Bird photography",
+    "Ukraine claims Libya warship sinking",
+    "King tides flood West Coast",
     "Birthday twin spectrum prompt",
-    "Musk pledges kids SpaceX shares"
+    "Blade Runner 2099 series premiere",
+    "Holiday food bank donations"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T07:57:12.675280+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T07:57:12.673089+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T07:57:12.281601+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T07:56:29.504689+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T07:56:29.503337+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T07:56:29.501676+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #165 started (--only blogger)",
+      "created_at": "2026-11-27T07:56:29.499839+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -575,48 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://cdn.shopify.com/s/files/1/0509/0538/3085/products/770X_tagalog_sample_1600x.jpg?v=1607544116 (page: https://www.canoeracing.org.uk/translate-english-word-to-tagalog-or-vise-versa-ww-27531480 | English - only 0 of 15 key entities in the source page)",
       "created_at": "2026-11-27T06:38:41.414649+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129065190/original/6831ae4c445100f2040b9 (page: https://www.facebook.com/reel/728931149903538/ | Dictionaries In Tagalog Tagalog To English, Tagalog - only 0 of 15 key entities in the source page)",
-      "created_at": "2026-11-27T06:38:41.413258+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T06:38:41.410604+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T06:38:41.231451+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T06:38:41.107056+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-      "created_at": "2026-11-27T06:38:41.078972+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.035949+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T06:38:41.034528+00:00",
       "card": ""
     }
   ]

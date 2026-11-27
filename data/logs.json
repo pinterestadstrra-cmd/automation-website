@@ -1,6 +1,60 @@
 [
   {
     "level": "info",
+    "message": "worker run finished",
+    "created_at": "2026-11-27T07:57:12.862277+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', 'Victoria votes in state election', 'Grand Theft Auto VI', 'Bird photography']",
+    "created_at": "2026-11-27T07:57:12.856597+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T07:57:12.675280+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T07:57:12.673089+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T07:57:12.281601+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T07:56:29.504689+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T07:56:29.503337+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T07:56:29.501676+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #165 started (--only blogger)",
+    "created_at": "2026-11-27T07:56:29.499839+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
     "created_at": "2026-11-27T06:39:07.653451+00:00",
     "card": "mastodon.social"
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg (page: http://www.bbc.co.uk/news/world-europe-18023389 | 15 Places To Visit In United Kingdom For A Grand H - only 1 of 14 key entities in the source page)",
     "created_at": "2026-11-27T06:38:34.668730+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://static.vecteezy.com/system/resources/previews/022/086/721/original/united-kingdom-geographic (page: https://traveltriangle.com/blog/places-to-visit-in-united-kingdom/ | United Kingdom Geographic Regio - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T06:38:34.667458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T06:38:34.664913+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T06:38:34.523964+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T06:38:34.402600+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'UK shields fighter jets contacts'",
-    "created_at": "2026-11-27T06:38:34.356605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T06:38:34.312991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T06:38:34.311921+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://www.shutterstock.com/image-vector/united-kingdom-map-england-scotland-260nw-1370149397.jpg (page: https://facts.net/celebrity/13-astonishing-facts-about-manu-chao/ | 117,924 Uk Map Royalty-Free Imag - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T06:38:34.310850+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'UK shields fighter jets, contacts reservists in Co'): https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag-map_of_the_United_Kingdom.svg/1920px- (page: https://www.shutterstock.com/search/uk-map | File:Flag-map of the United Kingdom.svg - Wikipedia - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-27T06:38:34.309610+00:00",
     "card": ""
   }
 ]
