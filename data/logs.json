@@ -2,6 +2,492 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T09:15:27.040334+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Boreen daily trivia scores', 'Grand Theft Auto VI', 'Victoria votes in state election', 'Day to end violence against women']",
+    "created_at": "2026-11-27T09:15:27.035299+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T09:15:27.018922+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T09:15:27.017767+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T09:15:27.015742+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T09:15:17.013107+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T09:15:16.756416+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T09:15:16.753856+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T09:15:11.158605+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T09:15:11.156150+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T09:15:10.983365+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T09:15:10.980745+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T09:15:06.665330+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T09:15:06.664369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (from bing-images, query 'Ukraine', page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - page names the entity (Ukraine))",
+    "created_at": "2026-11-27T09:15:06.663358+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Ukraine war briefing: Kyiv launched more long-rang' (, the photo shows Kyiv, the location mentioned in the headline, featuring the prominent Kyiv Pechersk Lavra skyline.)",
+    "created_at": "2026-11-27T09:15:06.661862+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682221_5726e524d0_b.jpg",
+    "created_at": "2026-11-27T09:15:01.841588+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682461_c4b974bc74_b.jpg",
+    "created_at": "2026-11-27T09:15:01.809108+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682341_025d20604d_b.jpg",
+    "created_at": "2026-11-27T09:15:01.779006+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
+    "created_at": "2026-11-27T09:15:01.749697+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+    "created_at": "2026-11-27T09:15:01.707655+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Ukraine war briefing: Kyiv launched more long-rang' (. The photo shows two women in traditional white dresses in a sunny forest, which is completely unrelated to the Ukraine war or military strikes.)",
+    "created_at": "2026-11-27T09:15:01.704969+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T09:14:58.364324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-27T09:14:58.252445+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-27T09:14:58.151586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-27T09:14:58.136332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:58.101275+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:58.100374+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Ukraine war briefing: Kyiv launched more long-rang' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-27T09:14:58.099452+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:58.098515+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:58.097506+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:58.096430+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:58.095362+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T09:14:58.092908+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T09:14:57.924491+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T09:14:57.822266+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing Kyiv launched'",
+    "created_at": "2026-11-27T09:14:57.806493+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.769916+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.768926+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.767639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.766563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.765432+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.764323+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.761935+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.631393+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.512263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.497532+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.470487+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.469357+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.468314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.467112+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.465905+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 15 key entities in the source page)",
+    "created_at": "2026-11-27T09:14:57.464672+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.462245+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.334069+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.230719+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
+    "created_at": "2026-11-27T09:14:57.208159+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.170286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T09:14:57.168709+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no og:image)",
+    "created_at": "2026-11-27T09:14:57.167340+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOEVienFUcEhQaDhycjBhVEhBWmNKLWpIVXF2SmtKMnBHd1VhOTViamZ2eFRfQlR5YTV) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T09:14:57.164790+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Live Updates: Iran accused of deadly drone attack in Kuwait ' - skipped (same event used within 24h, event key 'accus attack call cbs deadly drone iran kuwait live news pre')",
+    "created_at": "2026-11-27T09:14:56.849924+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Iran’s Araghchi calls deadly Kuwait attack ‘s' - skipped (same event used within 24h, event key 'araghchi attack call deadly iran jazeera kuwait live suspici')",
+    "created_at": "2026-11-27T09:14:56.848090+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T09:14:56.399621+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T09:14:56.397569+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T09:14:56.396254+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T09:14:56.395105+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T09:14:56.393408+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1024x576 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T09:14:56.105748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 1024x576 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T09:14:56.104580+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'WWE's CM Punk leaving politics out of the ring for USA vs Me'",
+    "created_at": "2026-11-27T09:14:56.102449+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T09:14:55.907566+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T09:14:55.906283+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T09:14:55.904578+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T09:14:55.150655+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T09:14:54.231693+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T09:14:54.228937+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-27T09:14:53.865955+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T09:14:28.900365+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T09:14:28.899273+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #168 started (--only bluesky)",
+    "created_at": "2026-11-27T09:14:28.897922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T09:03:40.873103+00:00",
     "card": ""
   },
@@ -711,492 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no og:image)",
     "created_at": "2026-11-27T08:06:26.424769+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifkFVX3lxTE1XSG11OFNDMy1CT0lldVd0S21WUVE4SERyVUFSRWpqZUw1LXo0MEdVWmJWNWpjaWcxUGV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T08:06:26.422638+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'Can the Mecca pact turn its collective defence promise into ' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T08:06:26.130022+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Can the Mecca pact turn its collective defence promise into ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T08:06:26.129019+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Can the Mecca pact turn its collective defence promise into real support? - Al Jazeera' (5 download(s) tried)",
-    "created_at": "2026-11-27T08:06:26.127136+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://vignette.wikia.nocookie.net/deathnote/images/0/08/Death_Note_title_white.png (page:  - page does not name the entity (Mecca))",
-    "created_at": "2026-11-27T08:06:26.126054+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5497/9759002503_342d1acbff_b.jpg",
-    "created_at": "2026-11-27T08:06:26.124180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2615/4146098099_a7429e9d13_b.jpg",
-    "created_at": "2026-11-27T08:06:26.012768+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1/548240_9518f889ac.jpg",
-    "created_at": "2026-11-27T08:06:25.901175+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3152/3085850464_1b8efa6e80_b.jpg",
-    "created_at": "2026-11-27T08:06:25.786988+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/4087/5205573976_f58bd73f22_b.jpg",
-    "created_at": "2026-11-27T08:06:25.670061+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Mecca'",
-    "created_at": "2026-11-27T08:06:25.459684+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Mecca'",
-    "created_at": "2026-11-27T08:06:25.315257+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Mecca'",
-    "created_at": "2026-11-27T08:06:25.173084+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Mecca'",
-    "created_at": "2026-11-27T08:06:25.090378+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:22.569656+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:22.568635+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Can the Mecca pact turn its collective defence pro' - trying entity search 'Mecca'",
-    "created_at": "2026-11-27T08:06:22.567663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://i.etsystatic.com/7032763/r/il/2c5308/5167910205/il_1080xN.5167910205_3pus.jpg (page: Primitive Snowman Pattern Woody the Woodland Snowman Instant Download Christmas Pattern - Etsy - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:22.566537+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Mecca pact turn collective defence'",
-    "created_at": "2026-11-27T08:06:22.564190+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Mecca pact turn collective defence'",
-    "created_at": "2026-11-27T08:06:22.409011+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Mecca pact turn collective defence'",
-    "created_at": "2026-11-27T08:06:22.274933+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Mecca pact turn collective defence'",
-    "created_at": "2026-11-27T08:06:22.185083+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:20.676371+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:20.675281+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/be02a4e3-e357-4bde-b048-3a8a59e11d49/d2vc4 (page: https://leancrew.com/all-this/2011/01/coke-cans-pull-tabs-and-the-class-struggle/ | empty can transp - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:20.674217+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://thumbs.dreamstime.com/m/can-ring-pull-12839600.jpg (page: https://www.deviantart.com/absurdwordpreferred/art/empty-can-transparent-png-173566396 | Ring pull o - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:20.673125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Can(Easy_Open_Can).JPG/220px-Can(Easy_Open (page: https://www.freefoodphotos.com/imagelibrary/drink/slides/ring_pull.html | can - Wiktionary, the free - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:20.672147+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://upload.wikimedia.org/wikipedia/commons/f/ff/Drinking_can_ring-pull_tab.jpg (page: https://en.wiktionary.org/wiki/can | Drink can - Wikipedia - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:20.671030+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:20.668679+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:20.515031+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:20.367686+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:20.283064+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:17.914734+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:17.913788+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/be02a4e3-e357-4bde-b048-3a8a59e11d49/d2vc4 (page: https://leancrew.com/all-this/2011/01/coke-cans-pull-tabs-and-the-class-struggle/ | empty can transp - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:17.912841+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://thumbs.dreamstime.com/m/can-ring-pull-12839600.jpg (page: https://www.deviantart.com/absurdwordpreferred/art/empty-can-transparent-png-173566396 | Ring pull o - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:17.911888+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Can(Easy_Open_Can).JPG/220px-Can(Easy_Open (page: https://www.freefoodphotos.com/imagelibrary/drink/slides/ring_pull.html | can - Wiktionary, the free - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:17.910855+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Can the Mecca pact turn its collective defence pro'): https://upload.wikimedia.org/wikipedia/commons/f/ff/Drinking_can_ring-pull_tab.jpg (page: https://en.wiktionary.org/wiki/can | Drink can - Wikipedia - only 0 of 9 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:17.909662+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:17.907439+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:17.766764+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:17.618143+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Can the Mecca pact turn its collective defence promise into '",
-    "created_at": "2026-11-27T08:06:17.500056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:16.493667+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:16.492718+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Can the Mecca pact turn its collective defence promise into ' - rejected (no og:image)",
-    "created_at": "2026-11-27T08:06:16.491620+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbkZDZkZudnVZY1pudllWNWQwN3RDbjlKWEFKOC1tV3ltUlpkV21RMmZKMjkyRlNEUTd) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T08:06:16.489351+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T08:06:16.235413+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T08:06:16.234512+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’ - CNBC' (5 download(s) tried)",
-    "created_at": "2026-11-27T08:06:16.233601+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://c8.alamy.com/comp/2A5GK9D/microsoft-sign-and-logo-on-the-facade-of-corporation-campus-in-sil (page: https://srkoeevbpgzvhrzx.blogspot.com/2021/06/helloworld1-microsoft-way-redmond.html | Microsoft 1 M - page does not name the entity (Two))",
-    "created_at": "2026-11-27T08:06:16.232441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://wallpaperaccess.com/full/11363232.jpg (page: https://ezenn.eerstkoffie.org/microsoft-1-microsoft-way-redmond-wa-98052/ | 1 Microsoft Way, Redmond - page does not name the entity (Two))",
-    "created_at": "2026-11-27T08:06:16.231520+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://classic.exame.com/wp-content/uploads/2024/06/GettyImages-1475203706.jpg (page: https://wallpaperaccess.com/1-microsoft-way-redmond | Microsoft encerra produção do HoloLens 2 e mud - page does not name the entity (Two))",
-    "created_at": "2026-11-27T08:06:16.230579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://wallpaperaccess.com/full/11363208.jpg (page: https://exame.com/tecnologia/microsoft-encerra-producao-do-hololens-2-e-muda-estrategia-de-realidade - page does not name the entity (Two))",
-    "created_at": "2026-11-27T08:06:16.229561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://live.staticflickr.com/6072/6045665103_49762f304a_b.jpg",
-    "created_at": "2026-11-27T08:06:16.228310+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The photo shows two young girls standing by a swimming pool, which is completely unrelated to the news headline about a drone attack and political s)",
-    "created_at": "2026-11-27T08:06:16.226887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2908/14223350131_387ee3a75b_b.jpg",
-    "created_at": "2026-11-27T08:05:18.883664+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3078/2332468377_9ee8734076_b.jpg",
-    "created_at": "2026-11-27T08:05:18.775452+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1306/4679199010_29e9b08a14.jpg",
-    "created_at": "2026-11-27T08:05:18.669639+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://live.staticflickr.com/2029/2340979049_78f0187534.jpg",
-    "created_at": "2026-11-27T08:05:18.497530+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The photo shows fishing boats in the water, which is unrelated to a Kuwait drone attack or political news involving Trump and Iran.)",
-    "created_at": "2026-11-27T08:05:18.496089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two'",
-    "created_at": "2026-11-27T08:03:50.142991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two'",
-    "created_at": "2026-11-27T08:03:50.001956+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Two'",
-    "created_at": "2026-11-27T08:03:49.873506+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Two'",
-    "created_at": "2026-11-27T08:03:49.777969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:47.318514+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:47.317506+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Two Italians killed in Kuwait drone attack; Trump ' - trying entity search 'Two'",
-    "created_at": "2026-11-27T08:03:47.316458+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://pbs.twimg.com/media/G3Oq1O7WYAA6dJ5.jpg (page: https://moonagedaydream.film/actors/actor-corbin | Corbin Cunliffe (@corbin_cunliffe) / Posts / X - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:47.315453+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://pbs.twimg.com/media/GTingmDbcAA3lhV.jpg (page: https://www.youtube.com/channel/UClxKKjaU5d-6pL1q6nWZE9A | @_AlexHirsch @_AlexHirsch #TheBookOfBill  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:47.314462+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://pbs.twimg.com/media/GTingmCbUAAl5vY.jpg (page: https://x.com/corbin_cunliffe/status/1817386685614936269 | @_AlexHirsch @_AlexHirsch #TheBookOfBill  - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:47.313125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://pbs.twimg.com/profile_images/1692694621334499328/9UQ85DcD.jpg (page: https://x.com/corbin_cunliffe/status/1817386685614936269 | Corbin Cunliffe (@corbin_cunliffe) / Post - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:47.311896+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two Italians killed Kuwait drone'",
-    "created_at": "2026-11-27T08:03:47.309402+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Two Italians killed Kuwait drone'",
-    "created_at": "2026-11-27T08:03:47.187208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Two Italians killed Kuwait drone'",
-    "created_at": "2026-11-27T08:03:47.025576+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Two Italians killed Kuwait drone'",
-    "created_at": "2026-11-27T08:03:46.943512+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:42.639304+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:03:42.638201+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://s3.amazonaws.com/lightsail-quotezine/wp-content/uploads/2014/01/12223155/what-makes-a-man-ba (page: https://wallpaperaccess.com/barack-obama-quotes | Best Inspirational Political Quotes at Pamela Adki - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:42.637183+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://wallpaperaccess.com/full/5146762.jpg (page: https://storage.googleapis.com/dvuapurdhhlxce/best-inspirational-political-quotes.html | Barack Obam - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:42.636087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.etsystatic.com/17720877/r/il/99ecbf/1668605304/il_fullxfull.1668605304_g1ge.jpg (page: https://wallpaperaccess.com/barack-obama-quotes | Barack Obama Quote Classroom Poster Growth Mindset - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:42.634917+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://cdn.quotesgram.com/img/33/13/1389689687-Barack-Obama-Motivational-And-Inspirational-Quotes-I (page: https://www.etsy.com/listing/641359338/barack-obama-quote-classroom-poster | Famous Inspirational Qu - only 0 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T08:03:42.633794+00:00",
     "card": ""
   }
 ]
