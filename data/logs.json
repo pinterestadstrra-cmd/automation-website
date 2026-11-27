@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T10:10:51.794467+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Boreen daily trivia scores', \"Elon Musk's government subsidies\", 'Thanksgiving Day celebrations', 'Thanksgiving storm knocks out power', \"Burnham's UK-EU deal\"]",
+    "created_at": "2026-11-27T10:10:51.789860+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T10:10:51.642196+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T10:10:51.640895+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T10:10:51.311183+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T10:10:46.692735+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T10:10:46.692062+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T10:10:46.691304+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #169 started (--only blogger)",
+    "created_at": "2026-11-27T10:10:46.690235+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T09:15:27.040334+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/black-color-background | The Data Dude – Wednesday Watch: the Black | Nebrask - only 1 of 12 key entities in the source page)",
     "created_at": "2026-11-27T08:06:26.814086+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp4063159.jpg (page: https://nlcblogs.nebraska.gov/nlcblog/2015/08/12/the-data-dude-wednesday-watch-the-black/ | Plain Bl - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:26.812899+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapercave.com/wp/wp2553315.jpg (page: https://wallpapercave.com/plain-black-wallpapers | Black HD Wallpapers - Wallpaper Cave - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T08:06:26.811741+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T08:06:26.809302+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T08:06:26.686078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T08:06:26.553671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T08:06:26.470853+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:26.426865+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T08:06:26.425864+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no og:image)",
-    "created_at": "2026-11-27T08:06:26.424769+00:00",
     "card": ""
   }
 ]
