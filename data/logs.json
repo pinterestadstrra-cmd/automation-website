@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T11:25:44.313450+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Grand Theft Auto VI', 'Thanksgiving Day celebrations', \"Burnham's UK-EU deal\", 'Victoria votes in state election', 'FCC approves SpaceX Starmind satellites']",
+    "created_at": "2026-11-27T11:25:44.306688+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T11:25:44.076528+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T11:25:44.073975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T11:25:43.640802+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T11:25:40.391597+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T11:25:40.389741+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T11:25:40.387952+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #171 started (--only blogger)",
+    "created_at": "2026-11-27T11:25:40.385730+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T10:28:51.663286+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/dark-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
     "created_at": "2026-11-27T10:28:19.672413+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:19.671162+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.668685+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.494258+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.306261+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.249196+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:19.190795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:19.189805+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no og:image)",
-    "created_at": "2026-11-27T10:28:19.188464+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMifkFVX3lxTE1XSG11OFNDMy1CT0lldVd0S21WUVE4SERyVUFSRWpqZUw1LXo0MEdVWmJWNWpjaWcxUGV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T10:28:19.165544+00:00",
     "card": ""
   }
 ]
