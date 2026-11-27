@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T14:55:47.460415+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['New York Times on Democratic spending plans', \"Elon Musk's government subsidies\", 'Thanksgiving Day celebrations', 'Grand Theft Auto VI', 'Nvidia reinstates Jensen Huang']",
+    "created_at": "2026-11-27T14:55:47.453204+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T14:55:47.219371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T14:55:47.217320+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T14:55:46.964103+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T14:55:42.058075+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T14:55:42.056678+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T14:55:42.054921+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #176 started (--only blogger)",
+    "created_at": "2026-11-27T14:55:42.052920+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T14:52:35.735795+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - rejected (no og:image)",
     "created_at": "2026-11-27T13:52:45.991680+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzB) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T13:52:45.985409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T13:52:45.068404+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-    "created_at": "2026-11-27T13:52:44.685520+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T13:52:36.574141+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-27T13:52:36.572374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #174 started (--only bluesky)",
-    "created_at": "2026-11-27T13:52:36.570306+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T13:52:24.456036+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Bird photography', 'Cybersecurity breach reported at CIA', 'Thanksgiving Day celebrations', 'Katie Miller car seat claim', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-27T13:52:24.331951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-27T13:52:24.210888+00:00",
     "card": ""
   }
 ]

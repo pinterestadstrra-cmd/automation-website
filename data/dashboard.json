@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T14:52:35.733065+00:00",
-  "last_run": "2026-11-27T14:51:50.269758+00:00",
-  "runs": 175,
+  "generated_at": "2026-11-27T14:55:47.457034+00:00",
+  "last_run": "2026-11-27T14:55:42.052895+00:00",
+  "runs": 176,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T14:51:50.271286+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T14:55:42.054911+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T14:55:42.056669+00:00"
     }
   ],
   "dry_run": false,
@@ -308,17 +296,71 @@
   "trending": [
     "New York Times on Democratic spending plans",
     "Elon Musk's government subsidies",
-    "Grand Theft Auto VI",
     "Thanksgiving Day celebrations",
-    "Thanksgiving storm knocks out power",
-    "Nvidia chip exports to China",
-    "Joe Milton plays quarterback for Eagles",
-    "Macy's parade postponed to Saturday",
+    "Grand Theft Auto VI",
+    "Nvidia reinstates Jensen Huang",
     "Aaron Rodgers reportedly out",
-    "New Avengers: Doomsday poster"
+    "Thanksgiving storm knocks out power",
+    "Bird photography",
+    "Macy's parade postponed to Saturday",
+    "November full supermoon"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T14:55:47.219371+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T14:55:47.217320+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T14:55:46.964103+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T14:55:42.058075+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T14:55:42.056678+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T14:55:42.054921+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #176 started (--only blogger)",
+      "created_at": "2026-11-27T14:55:42.052920+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T14:52:35.735795+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['New York Times on Democratic spending plans', \"Elon Musk's government subsidies\", 'Grand Theft Auto VI', 'Thanksgiving Day celebrations', 'Thanksgiving storm knocks out power']",
+      "created_at": "2026-11-27T14:52:35.728108+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
       "created_at": "2026-11-27T14:52:00.454474+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
-      "created_at": "2026-11-27T14:52:00.372702+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T14:51:59.899086+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T14:51:59.898106+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://media-cldnry.s-nbcnews.com/image/upload/c_fill,g_auto,w_1500,h_1000/rockcms/2026-11/261119-t (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T14:51:59.896876+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/1200/675/4eb79b89-pre (page: https://www.nbcnews.com/politics/trump-administration/live-blog/trump-xi-putin-china-apec-congress-2 - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T14:51:59.895902+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.foxnews.com/media/trump-clears-hurdle-15-billion-lawsuit-against-new-york-times | Someth - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T14:51:59.894853+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://nationalsecurityjournal.org/something-strange-is-happening-to-trump-the-democrat-who-prosecu - only 1 of 7 key entities in the source page)",
-      "created_at": "2026-11-27T14:51:59.893672+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-      "created_at": "2026-11-27T14:51:59.891542+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-      "created_at": "2026-11-27T14:51:59.729161+00:00",
       "card": ""
     }
   ]
