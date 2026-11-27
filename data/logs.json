@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T04:01:20.024947+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Birthday twin spectrum prompt', 'Victoria votes in state election', 'Grand Theft Auto VI', \"Zelenskyy's Thanksgiving message to America\"]",
+    "created_at": "2026-11-27T04:01:20.003244+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T04:01:19.940195+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T04:01:18.874723+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T04:01:18.058746+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T04:01:16.864134+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T04:01:16.848227+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T04:01:16.830418+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #159 started (--only blogger)",
+    "created_at": "2026-11-27T04:01:16.816954+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T03:06:02.093262+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Zelenskyy'",
     "created_at": "2026-11-27T03:04:33.038762+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Zelenskyy'",
-    "created_at": "2026-11-27T03:04:32.981813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:26.343037+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T03:04:26.341837+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Zelenskyy warns of major Russian attack as Trump u' - trying entity search 'Zelenskyy'",
-    "created_at": "2026-11-27T03:04:26.340742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://www.lego.com/cdn/cs/set/assets/blt46208f9cf7697208/21368_Prod.png?fit=bounds&format=jpg&qual (page: https://www.kmart.com.au/product/lego-ideas-peanuts:-snoopy's-doghouse-21368-43764921/ | Peanuts: Sn - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:26.339604+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://bricksvalue.com/cdn-cgi/image/width=1920,quality=75,format=auto/https://cdn.bricksvalue.com/ (page: https://www.lego.com/en-us/product/peanuts-snoopys-doghouse-21368 | LEGO Peanuts: Snoopy's Doghouse  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:26.338406+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://www.hothbricks.com/wp-content/uploads/2026/02/21368-lego-ideas-peanuts-snoopy-doghouse-2026_ (page: https://bricksvalue.com/uk/set/21368-peanuts-snoopy-s-doghouse | New for LEGO IDEAS 2026: set 21368  - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:26.337437+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Zelenskyy warns of major Russian attack as Trump u'): https://www.hothbricks.com/wp-content/uploads/2026/02/21368-lego-ideas-peanuts-snoopy-doghouse-2026_ (page: https://en.hothbricks.com/nouveaute-lego-ideas-2026-21368-peanuts-snoopys-doghouse/ | New for LEGO I - only 0 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T03:04:26.336353+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Zelenskyy warns major Russian attack'",
-    "created_at": "2026-11-27T03:04:26.334086+00:00",
     "card": ""
   }
 ]
