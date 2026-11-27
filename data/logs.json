@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T23:26:08.363017+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Israeli strikes in Gaza', 'Victoria votes in state election', \"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Aaron Rodgers reportedly out']",
+    "created_at": "2026-11-27T23:26:08.358127+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T23:26:08.283132+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T23:26:08.281622+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T23:26:07.986388+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T23:26:07.032529+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T23:26:07.031484+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T23:26:07.030344+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #192 started (--only blogger)",
+    "created_at": "2026-11-27T23:26:07.029008+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T22:54:57.801169+00:00",
     "card": ""
   },
@@ -1144,59 +1198,5 @@
     "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
     "created_at": "2026-11-27T21:55:13.419108+00:00",
     "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T21:55:13.417492+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T21:55:13.099298+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T21:55:08.689348+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-27T21:55:08.688221+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #189 started (--only bluesky)",
-    "created_at": "2026-11-27T21:55:08.686899+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T21:28:42.183545+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', 'Thanksgiving Day celebrations', 'Aaron Rodgers reportedly out', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-27T21:28:42.178813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-27T21:28:41.958944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T21:28:41.957744+00:00",
-    "card": ""
   }
 ]

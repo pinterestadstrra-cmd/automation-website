@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T22:54:57.798459+00:00",
-  "last_run": "2026-11-27T22:53:02.784061+00:00",
-  "runs": 191,
+  "generated_at": "2026-11-27T23:26:08.360491+00:00",
+  "last_run": "2026-11-27T23:26:07.028986+00:00",
+  "runs": 192,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T05:09:07.939418+06:00",
-        "2026-11-28T05:24:07.939418+06:00",
         "2026-11-28T05:39:07.939418+06:00",
         "2026-11-28T05:54:07.939418+06:00",
-        "2026-11-28T06:09:07.939418+06:00"
+        "2026-11-28T06:09:07.939418+06:00",
+        "2026-11-28T06:24:07.939418+06:00",
+        "2026-11-28T06:39:07.939418+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T05:03:00+06:00",
         "2026-11-28T05:58:00+06:00",
         "2026-11-28T06:53:00+06:00",
         "2026-11-28T08:07:00+06:00",
-        "2026-11-28T09:02:00+06:00"
+        "2026-11-28T09:02:00+06:00",
+        "2026-11-28T09:51:00+06:00"
       ],
       "success": 71,
       "fail": 22,
@@ -158,18 +158,18 @@
       "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T05:09:57.690362+06:00",
-        "2026-11-28T05:24:57.690362+06:00",
         "2026-11-28T05:39:57.690362+06:00",
         "2026-11-28T05:54:57.690362+06:00",
-        "2026-11-28T06:09:57.690362+06:00"
+        "2026-11-28T06:09:57.690362+06:00",
+        "2026-11-28T06:24:57.690362+06:00",
+        "2026-11-28T06:39:57.690362+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T04:55:00+06:00",
         "2026-11-28T05:50:00+06:00",
         "2026-11-28T07:06:00+06:00",
         "2026-11-28T07:57:00+06:00",
-        "2026-11-28T08:52:00+06:00"
+        "2026-11-28T08:52:00+06:00",
+        "2026-11-28T09:57:00+06:00"
       ],
       "success": 18,
       "fail": 35,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 1
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-27T22:53:02.786848+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-27T23:26:07.030335+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-27T23:26:07.031476+00:00"
     }
   ],
   "dry_run": false,
@@ -306,19 +294,73 @@
     "open": false
   },
   "trending": [
-    "Aaron Rodgers reportedly out",
+    "Israeli strikes in Gaza",
+    "Victoria votes in state election",
     "Most famous person you're related to",
     "Thanksgiving Day celebrations",
-    "Nvidia reinstates Jensen Huang",
-    "Hackers breach Air Force cloud platform",
-    "Van Hollen challenges Schumer",
-    "Jazz Chisholm nears Blue Jays deal",
+    "Aaron Rodgers reportedly out",
+    "McCarthy's ice cream sandwich interview",
     "Grand Theft Auto VI",
-    "Blade Runner 2099 series premiere",
-    "Sunrise on the Reaping's $225M debut"
+    "Nvidia reinstates Jensen Huang",
+    "Jazz Chisholm nears Blue Jays deal",
+    "FCC approves SpaceX Starmind satellites"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-27T23:26:08.283132+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-27T23:26:08.281622+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-27T23:26:07.986388+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-27T23:26:07.032529+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-27T23:26:07.031484+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-27T23:26:07.030344+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #192 started (--only blogger)",
+      "created_at": "2026-11-27T23:26:07.029008+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-27T22:54:57.801169+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Aaron Rodgers reportedly out', \"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Nvidia reinstates Jensen Huang', 'Hackers breach Air Force cloud platform']",
+      "created_at": "2026-11-27T22:54:57.795696+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "wikimedia: 5 result(s) for 'Democrats'",
       "created_at": "2026-11-27T22:54:14.285804+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-27T22:54:13.700231+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T22:54:13.084468+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T22:54:13.083512+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-      "created_at": "2026-11-27T22:54:13.082541+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): http://cache.foreca.net/static/og/forecaweather-1200x630.png (page: https://twoweather.com/ | Mount Biggenden, North Burnett, AU – Hourly Weather Forecast - Forecaweath - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T22:54:13.081451+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.cmnh.org/files/blog/share/blog-weatherradar.jpg (page: https://www.forecaweather.com/102175917/Mount-Biggenden-North-Burnett-Australia/hourly-weather-forec - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T22:54:13.080484+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://data.usatoday.com/media/uploads/weather_wwa.jpg (page: https://media.v2.nationalgeographic.com/5-day-weather-report/weather-forecasts-have-radically-improv - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T22:54:13.079265+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://energyintel.brightspotcdn.com/dims4/default/ce082ed/2147483647/strip/true/crop/800x519+0+0/r (page: https://data.usatoday.com/severe-weather-alerts-warnings-watches/morris-county-nj/34027/ | Today's S - only 0 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T22:54:13.078193+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T22:54:13.075872+00:00",
       "card": ""
     }
   ]
