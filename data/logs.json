@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T12:31:46.777884+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Cybersecurity breach reported at CIA', 'Nvidia chip exports to China', 'Israeli strikes in Gaza', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-27T12:31:46.772446+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-27T12:31:46.565504+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T12:31:46.478067+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T12:31:46.251724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T12:31:29.690136+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-27T12:31:29.689106+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-27T12:31:29.688021+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #173 started (--only blogger)",
+    "created_at": "2026-11-27T12:31:29.686727+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T12:29:21.916909+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Two'",
     "created_at": "2026-11-27T12:28:34.330982+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Two'",
-    "created_at": "2026-11-27T12:28:34.306121+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:34.253001+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T12:28:34.251908+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Two Italians killed in Kuwait drone attack; Trump ' - trying entity search 'Two'",
-    "created_at": "2026-11-27T12:28:34.250915+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://png.pngtree.com/png-clipart/20230613/original/pngtree-two-coloring-pages-with-two-kids-stand (page: https://tvtropes.org/pmwiki/pmwiki.php/Creator/BBCTwo | Two Kids Holding Hands Coloring Page Outline - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:34.249947+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://www.transparentpng.com/download/numbers/medal-with-number-two-numbers-2-png-icon--X5yrFc.png (page: https://upein.edu.pe/pid-51560-0/two-kids-holding-hands-coloring-page-outline-sketch-drawing-vector  - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:34.248729+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/b6/7d/db/b67ddb76de105bafa5d89d359d3f6a00.png (page: https://www.transparentpng.com/details/medal-with-number-two-numbers-2-icon-_31897.html | Numberbloc - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:34.247540+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://clipground.com/images/clipart-number-two-9.png (page: https://www.tumblr.com/character-profiles/721970688227999744 | clipart number two 20 free Cliparts | - only 1 of 13 key entities in the source page)",
-    "created_at": "2026-11-27T12:28:34.246292+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Two Italians killed Kuwait drone'",
-    "created_at": "2026-11-27T12:28:34.244089+00:00",
     "card": ""
   }
 ]
