@@ -2,6 +2,858 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T11:26:53.856549+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Grand Theft Auto VI', 'Thanksgiving Day celebrations', \"Burnham's UK-EU deal\", 'Victoria votes in state election', 'FCC approves SpaceX Starmind satellites']",
+    "created_at": "2026-11-27T11:26:53.850708+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T11:26:53.666660+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T11:26:53.665546+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T11:26:53.663769+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T11:26:43.661186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T11:26:43.428717+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T11:26:43.426445+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T11:26:37.777711+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T11:26:37.775453+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T11:26:37.293288+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T11:26:37.291008+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war latest: Trump appears to change joint NATO state' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T11:25:57.865443+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T11:25:57.864528+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war latest: Trump appears to change joint NATO state': https://as1.ftcdn.net/v2/jpg/08/13/14/12/1000_F_813141283_HuuU5esoeVGBTfNj1BGRWZGRIAXKkhSl.jpg (from bing-images, query 'Ukraine war latest: Trump appears to change joint NATO statement - Sky News', page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | War in Ukr - matches 2 key entities (ukraine, war))",
+    "created_at": "2026-11-27T11:25:57.863609+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:57.862244+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://media.istockphoto.com/id/1428668967/vector/map-of-ukraine.jpg?s=1024x1024&w=is&k=20&c=iX1Wib - source page title names only 1 of 11 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:57.671966+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:57.670602+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Ukraine - Region | Wine-S - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:57.535847+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://uesukraine.com/wp-content/uploads/2016/09/ukraine-city.jpg (page: https://www.wine-searcher.com/regions-ukraine | About Ukraine - UESUkraine - Study in Ukraine - only 1 of 11 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:57.534803+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T11:25:57.532337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T11:25:57.355493+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T11:25:57.155413+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
+    "created_at": "2026-11-27T11:25:57.068411+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:56.641105+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:56.640174+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war latest: Trump appears to change joint NATO state' - rejected (no og:image)",
+    "created_at": "2026-11-27T11:25:56.639171+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQWxqdHBsZ0YwRkFVTk5YN3hzX25wVjBEMUlJLUZVeXdZaXRMaUU4dWdaMjFrWnVpeFl) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T11:25:56.637077+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Iran’s navy says it recovered 2 tankers stole' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T11:25:56.210553+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 3/6 tried: 'A Democratic war over healthcare shows signs of an emerging ' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T11:25:56.209070+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'A Democratic war over healthcare shows signs of an emerging ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T11:25:56.208129+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'A Democratic war over healthcare shows signs of an emerging ceasefire - NBC News' (4 download(s) tried)",
+    "created_at": "2026-11-27T11:25:56.207193+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/silent-hill-3-image-3.jpg (page: Why Silent Hill 3's Heather Mason Is the Franchise's Best Character - page does not name the entity (Democratic))",
+    "created_at": "2026-11-27T11:25:56.206163+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg",
+    "created_at": "2026-11-27T11:25:56.204810+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262151266 | Republican vs. Democrat 2012 - page does not name the entity (Democratic))",
+    "created_at": "2026-11-27T11:25:56.129616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:56.128342+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:56.059542+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg",
+    "created_at": "2026-11-27T11:25:55.987427+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg - source page title names only 1 of 9 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:55.920614+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:55.919309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'Democratic'",
+    "created_at": "2026-11-27T11:25:55.865084+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democratic'",
+    "created_at": "2026-11-27T11:25:55.689146+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democratic'",
+    "created_at": "2026-11-27T11:25:55.511055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Democratic'",
+    "created_at": "2026-11-27T11:25:55.449743+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:54.963697+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:54.962593+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'A Democratic war over healthcare shows signs of an' - trying entity search 'Democratic'",
+    "created_at": "2026-11-27T11:25:54.961660+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://images.indianexpress.com/2026/11/whatsapp-web-1-1.jpg (page: https://www.telegraphindia.com/business/whatsapp-web-users-at-risk-of-account-hijack-on-public-compu - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:54.960749+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://images.gizbot.com/img/2026/11/whatsapp-web-advisory-lead-61601795435777.jpg (page: https://indianexpress.com/article/india/whatsapp-web-log-in-public-computer-account-hijack-warning-i - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:54.959688+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://timelinedaily.com/assets/2026/11/whatsapp-image-2026-11-24-at-10-51-25-am.jpeg (page: https://www.gizbot.com/news/whatsapp-web-users-beware-mha-warns-of-hacking-risk-says-logging-out-is- - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:54.958678+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://images.indianexpress.com/2026/11/whatsappweb.jpg?w=1024 (page: https://timelinedaily.com/technology/leaving-whatsapp-web-logged-in-on-public-computers-can-expose-u - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:54.957680+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://live.staticflickr.com/65535/52283288689_afa13c15bf_m.jpg (page: https://www.flickr.com/photos/28435100@N00/52283288689 | Heather Cox Richardson - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:54.956492+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democratic war over healthcare shows'",
+    "created_at": "2026-11-27T11:25:54.954086+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democratic war over healthcare shows'",
+    "created_at": "2026-11-27T11:25:54.829055+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democratic war over healthcare shows'",
+    "created_at": "2026-11-27T11:25:54.680034+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 1 result(s) for 'Democratic war over healthcare shows'",
+    "created_at": "2026-11-27T11:25:54.619480+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:52.768330+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:52.765968+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://preview.redd.it/dachshund-pitbull-mix-v0-xudq0slb0u0c1.jpg?auto=webp&s=cb1514871b4ba703ce1a5 (page: Dachshund Pitbull Mix : r/Terroriser - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:52.764854+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 1 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.757180+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.635913+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.490485+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.430536+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:52.162508+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:52.161581+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://st4.depositphotos.com/8230070/41783/v/1600/depositphotos_417831628-stock-illustration-happy- (page: https://wishes1234.com/happy-thanksgiving-wishes/ | Happy Thanksgiving Day Greeting Card Funny Carto - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:52.160423+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://img.freepik.com/free-vector/realistic-thanksgiving-day-background_23-2147946470.jpg?semt=ais (page: https://depositphotos.com/vector/happy-thanksgiving-day-greeting-card-funny-cartoon-character-thanks - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:52.159343+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://static.vecteezy.com/system/resources/previews/013/001/631/original/cartoon-thanksgiving-turk (page: https://www.freepik.com/free-photos-vectors/autumn-happy-thanksgiving/24 | Cartoon Thanksgiving turk - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:52.158296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'A Democratic war over healthcare shows signs of an'): https://thumbs.dreamstime.com/b/festive-thanksgiving-greeting-autumn-leaves-pumpkins-vibrant-image-f (page: https://www.vecteezy.com/vector-art/13001631-cartoon-thanksgiving-turkey-vector-illustration-cute-is - only 0 of 9 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:52.157242+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.155167+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:52.032606+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:51.685668+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'A Democratic war over healthcare shows signs of an emerging '",
+    "created_at": "2026-11-27T11:25:51.624248+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:50.941595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:50.940522+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'A Democratic war over healthcare shows signs of an emerging ' - rejected (no og:image)",
+    "created_at": "2026-11-27T11:25:50.939459+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMisgFBVV95cUxOSTNrVW95S2dpVnZCdy1ZSTNmUzRUVllVU2c2bzhDaDFHWjJZZHltbjBjNi01ZDdwLUd) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T11:25:50.937191+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 2/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T11:25:50.478630+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T11:25:50.477468+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (5 download(s) tried)",
+    "created_at": "2026-11-27T11:25:50.476501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:50.475338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:50.473917+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:50.340225+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:50.338899+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:50.209607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:50.208151+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:50.011335+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:49.990999+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T11:25:49.839532+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
+    "created_at": "2026-11-27T11:25:49.838047+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T11:25:49.617298+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T11:25:49.616292+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T11:25:49.615232+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T11:25:49.613065+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T11:25:49.476974+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats'",
+    "created_at": "2026-11-27T11:25:49.300970+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Democrats'",
+    "created_at": "2026-11-27T11:25:49.239959+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:49.196689+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:49.195749+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
+    "created_at": "2026-11-27T11:25:49.194867+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:49.193896+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:49.192832+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:49.191677+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:49.190653+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T11:25:49.183315+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T11:25:49.054917+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T11:25:48.893001+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T11:25:48.832976+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:48.791739+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:48.790737+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.789718+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.788437+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.787436+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.786246+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.784072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.630975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.436992+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.375748+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:48.337352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:48.336440+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.335568+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.334405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.333373+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T11:25:48.332240+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.330000+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:48.160529+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:47.992510+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T11:25:47.930666+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:47.886247+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:25:47.885233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
+    "created_at": "2026-11-27T11:25:47.884154+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T11:25:47.881595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-27T11:25:47.418777+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo: story 1/6 tried: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - no usable photo, trying the next story",
+    "created_at": "2026-11-27T11:25:47.417357+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - rejected (no real photo found for this story)",
+    "created_at": "2026-11-27T11:25:47.416424+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: no real photo found for 'Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’ - CNBC' (9 download(s) tried)",
+    "created_at": "2026-11-27T11:25:47.415477+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/originals/78/d2/5f/78d25fced2a267aefc91cf4673d16f46.jpg - source page title names only 1 of 13 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:47.414472+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:47.413076+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision down, strict check): https://i.pinimg.com/originals/bf/19/83/bf1983996f338b8c665db38ca9cda645.jpg - source page title names only 1 of 13 key entities - not a news article about the story",
+    "created_at": "2026-11-27T11:25:47.247572+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-27T11:25:47.246083+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15554.jpg?w=1480",
+    "created_at": "2026-11-27T11:25:47.161739+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The image is a stylized graphic illustration of the number 2, not a photo of the people, place, or event in the headline.)",
+    "created_at": "2026-11-27T11:25:47.153428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T11:25:44.313450+00:00",
     "card": ""
   },
@@ -55,1148 +907,296 @@
   },
   {
     "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-27T10:28:51.663286+00:00",
+    "message": "photo: rejected (vision NO): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15553.jpg?w=1480",
+    "created_at": "2026-11-27T11:24:27.838795+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "trending (bluesky): ['Thanksgiving Day celebrations', 'Victoria votes in state election', 'Grand Theft Auto VI', 'Ukraine claims Libya warship sinking', \"Macy's parade postponed to Saturday\"]",
-    "created_at": "2026-11-27T10:28:51.656910+00:00",
+    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The image is a colorful cartoon graphic of the number 2, which does not show the people, place, or event in the headline.)",
+    "created_at": "2026-11-27T11:24:27.837057+00:00",
     "card": ""
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T10:28:51.435901+00:00",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6072/6045665103_49762f304a_b.jpg",
+    "created_at": "2026-11-27T11:24:25.681279+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2908/14223350131_387ee3a75b_b.jpg",
+    "created_at": "2026-11-27T11:24:25.600927+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3078/2332468377_9ee8734076_b.jpg",
+    "created_at": "2026-11-27T11:24:25.510954+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Two Italians killed in Kuwait drone attack; Trump ' (. The photo shows two young girls in swimsuits at a beach or lake, which is completely unrelated to the news headline about a drone attack in Kuwait a)",
+    "created_at": "2026-11-27T11:24:25.499587+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/1306/4679199010_29e9b08a14.jpg",
+    "created_at": "2026-11-27T11:24:23.803770+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2029/2340979049_78f0187534.jpg",
+    "created_at": "2026-11-27T11:24:23.732795+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two'",
+    "created_at": "2026-11-27T11:24:23.585696+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two'",
+    "created_at": "2026-11-27T11:24:23.407361+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two'",
+    "created_at": "2026-11-27T11:24:23.236164+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Two'",
+    "created_at": "2026-11-27T11:24:23.175015+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:23.124612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:23.123604+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Two Italians killed in Kuwait drone attack; Trump ' - trying entity search 'Two'",
+    "created_at": "2026-11-27T11:24:23.122639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/78/d2/5f/78d25fced2a267aefc91cf4673d16f46.jpg (page: https://www.freepik.com/premium-photo/numerical-number-two-creative-digital-art-style_212511130.htm  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:23.121641+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/bf/19/83/bf1983996f338b8c665db38ca9cda645.jpg (page: https://in.pinterest.com/pin/numerical-number-two-in-creative-digital-art-style--15973773673908822/  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:23.120589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15554.jpg?w=1480 (page: https://in.pinterest.com/pin/colorful-number-two-typography-design--907053181169573199/ | A vector o - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:23.119475+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15553.jpg?w=1480 (page: https://www.freepik.com/premium-vector/vector-number-two-template-design_358892278.htm | A vector of - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:23.118315+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T11:24:23.115964+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T11:24:22.962774+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T11:24:22.740755+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Two Italians killed Kuwait drone'",
+    "created_at": "2026-11-27T11:24:22.680252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:22.632417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:22.631520+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/78/d2/5f/78d25fced2a267aefc91cf4673d16f46.jpg (page: https://www.freepik.com/premium-photo/numerical-number-two-creative-digital-art-style_212511130.htm  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.630633+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/bf/19/83/bf1983996f338b8c665db38ca9cda645.jpg (page: https://in.pinterest.com/pin/numerical-number-two-in-creative-digital-art-style--15973773673908822/  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.629583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15554.jpg?w=1480 (page: https://in.pinterest.com/pin/colorful-number-two-typography-design--907053181169573199/ | A vector o - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.628570+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15553.jpg?w=1480 (page: https://www.freepik.com/premium-vector/vector-number-two-template-design_358892278.htm | A vector of - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.627492+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:22.624776+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:22.497411+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:22.318706+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:22.258381+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:22.209206+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:22.208301+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/78/d2/5f/78d25fced2a267aefc91cf4673d16f46.jpg (page: https://www.freepik.com/premium-photo/numerical-number-two-creative-digital-art-style_212511130.htm  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.207344+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://i.pinimg.com/originals/bf/19/83/bf1983996f338b8c665db38ca9cda645.jpg (page: https://in.pinterest.com/pin/numerical-number-two-in-creative-digital-art-style--15973773673908822/  - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.206432+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15554.jpg?w=1480 (page: https://in.pinterest.com/pin/colorful-number-two-typography-design--907053181169573199/ | A vector o - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.205377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Two Italians killed in Kuwait drone attack; Trump '): https://img.freepik.com/premium-vector/vector-number-two-template-design_926306-15553.jpg?w=1480 (page: https://www.freepik.com/premium-vector/vector-number-two-template-design_358892278.htm | A vector of - only 1 of 13 key entities in the source page)",
+    "created_at": "2026-11-27T11:24:22.204074+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:22.201729+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:21.913856+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:21.732243+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Two Italians killed in Kuwait drone attack; Trump says Iran '",
+    "created_at": "2026-11-27T11:24:21.627981+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:21.540746+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T11:24:21.539763+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Two Italians killed in Kuwait drone attack; Trump says Iran ' - rejected (no og:image)",
+    "created_at": "2026-11-27T11:24:21.538577+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiigFBVV95cUxOWXdZWk9aY1VrSmlEbExnWV93RnFxTDFwV3RLdjhtYW1SaXU0aXJCbGJBRUVOS0FramR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T11:24:21.536110+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T11:24:20.524628+00:00",
     "card": "mastodon.social"
   },
   {
     "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T10:28:51.434708+00:00",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T11:24:20.523318+00:00",
     "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T10:28:51.433035+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T10:28:41.430566+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T10:28:41.224667+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T10:28:41.222189+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-27T10:28:35.575035+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T10:28:35.572569+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T10:28:35.225157+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T10:28:35.222717+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T10:28:31.489168+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T10:28:31.488092+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Kyiv launched more long-range strikes ': https://as1.ftcdn.net/v2/jpg/08/13/14/12/1000_F_813141283_HuuU5esoeVGBTfNj1BGRWZGRIAXKkhSl.jpg (from bing-images, query 'Ukraine war briefing: Kyiv launched more long-range strikes in 2026 than rest of war combined, data shows - The Guardian', page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | War in Ukr - matches 2 key entities (ukraine, war))",
-    "created_at": "2026-11-27T10:28:31.486961+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:31.485488+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media.istockphoto.com/id/1428668967/vector/map-of-ukraine.jpg?s=1024x1024&w=is&k=20&c=iX1Wib - source page title names only 1 of 15 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:31.320565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:31.319144+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Ukraine - Region | Wine-S - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:31.207870+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Kyiv launched more long-rang'): https://uesukraine.com/wp-content/uploads/2016/09/ukraine-city.jpg (page: https://www.wine-searcher.com/regions-ukraine | About Ukraine - UESUkraine - Study in Ukraine - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:31.206619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-    "created_at": "2026-11-27T10:28:31.204013+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-    "created_at": "2026-11-27T10:28:30.937951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-    "created_at": "2026-11-27T10:28:30.769085+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Kyiv launched more long-range strikes '",
-    "created_at": "2026-11-27T10:28:30.711654+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:30.280877+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:30.279671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Kyiv launched more long-range strikes ' - rejected (no og:image)",
-    "created_at": "2026-11-27T10:28:30.278445+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOEVienFUcEhQaDhycjBhVEhBWmNKLWpIVXF2SmtKMnBHd1VhOTViamZ2eFRfQlR5YTV) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T10:28:30.276109+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 4/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T10:28:29.821098+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T10:28:29.820088+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (5 download(s) tried)",
-    "created_at": "2026-11-27T10:28:29.818743+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:29.817618+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:29.816114+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:29.674136+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:29.672741+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:29.518527+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:29.500774+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:29.269130+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:29.267565+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T10:28:29.039614+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-    "created_at": "2026-11-27T10:28:29.037994+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T10:28:28.973945+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T10:28:28.972588+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T10:28:28.971197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T10:28:28.968570+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T10:28:28.636832+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats'",
-    "created_at": "2026-11-27T10:28:28.443217+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-27T10:28:28.374438+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:28.335089+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:28.334073+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-    "created_at": "2026-11-27T10:28:28.333042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:28.331949+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:28.330814+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:28.329640+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:28.328352+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T10:28:28.325960+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T10:28:28.155031+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T10:28:27.987532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T10:28:27.925158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.874021+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.854916+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.853764+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.852606+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.851275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.850009+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.847431+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.719571+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.549097+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.491475+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.451818+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.450622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://news.ballotpedia.org/wp-content/uploads/2026/03/Democratic-Party.jpg (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.449478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://news.ballotpedia.org/2026/11/16/democrats-won-a-majority-of-triplex-offices-up-for-election- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.448190+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://www.timesnownews.com/world/us/us-news/us-midterm-election-results-democrats-win-biggest-majo - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.446878+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:27.443746+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.441224+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.305765+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.156904+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T10:28:27.093991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.038761+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:27.037587+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
-    "created_at": "2026-11-27T10:28:27.036374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T10:28:27.033960+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: '‘War Is Hell’: A Foreign Soldier Writes Home From Ukraine - ' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T10:28:26.608676+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Live Updates: Iran accused of deadly drone attack in Kuwait ' - skipped (same event used within 24h, event key 'accus attack call cbs deadly drone iran kuwait live news pre')",
-    "created_at": "2026-11-27T10:28:26.607174+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 3/6 tried: 'Trump and NATO chief urge Russia to avoid actions that widen' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T10:28:26.605892+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T10:28:26.604901+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Trump and NATO chief urge Russia to avoid actions that widen Ukraine war - Reuters' (9 download(s) tried)",
-    "created_at": "2026-11-27T10:28:26.603871+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://i0.wp.com/obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg?resize=768%2C556& - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:26.602605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:26.601267+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://media-cldnry.s-nbcnews.com/image/upload/c_fill,g_auto,w_2500,h_1315/rockcms/2026-11/261102-t - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:26.387037+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:26.385552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://news24cobalt.24.co.za/resources/02ab-21f999393543-e119297f10c7-1000/format/inline/afp_202611 - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:25.939509+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:25.938124+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:25.893145+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:25.891647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/5581/14235998518_fc8fd1a27d_b.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:25.608434+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:25.606979+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8789/17215465351_cc1e377890_b.jpg",
-    "created_at": "2026-11-27T10:28:25.535095+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/5272/14399466276_ce21711087_b.jpg",
-    "created_at": "2026-11-27T10:28:25.455107+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3906/14422616255_e43468d43d_b.jpg",
-    "created_at": "2026-11-27T10:28:25.354197+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg - source page title names only 1 of 11 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:25.295090+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:25.293589+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump'",
-    "created_at": "2026-11-27T10:28:25.235062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump'",
-    "created_at": "2026-11-27T10:28:24.900414+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump'",
-    "created_at": "2026-11-27T10:28:24.738014+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Trump'",
-    "created_at": "2026-11-27T10:28:24.675158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:24.618362+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:24.617357+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Trump and NATO chief urge Russia to avoid actions ' - trying entity search 'Trump'",
-    "created_at": "2026-11-27T10:28:24.616302+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://i0.wp.com/obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg?resize=768%2C556& (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.615176+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://media-cldnry.s-nbcnews.com/image/upload/c_fill,g_auto,w_2500,h_1315/rockcms/2026-11/261102-t (page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | Trump gives final push for GOP ma - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.614019+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://news24cobalt.24.co.za/resources/02ab-21f999393543-e119297f10c7-1000/format/inline/afp_202611 (page: https://www.nbcnews.com/politics/2026-election/live-blog/trump-vance-2026-midterm-election-congress- - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.612836+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.news24.com/world/trump-makes-last-ditch-push-as-democrats-eye-historic-midterm-sweep-202 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.611651+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-27T10:28:24.608969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-27T10:28:24.481957+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-27T10:28:24.153381+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump NATO chief urge Russia'",
-    "created_at": "2026-11-27T10:28:24.091142+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:24.029968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:24.028964+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://i0.wp.com/obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg?resize=768%2C556& (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.027991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://media-cldnry.s-nbcnews.com/image/upload/c_fill,g_auto,w_2500,h_1315/rockcms/2026-11/261102-t (page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | Trump gives final push for GOP ma - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.026790+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://news24cobalt.24.co.za/resources/02ab-21f999393543-e119297f10c7-1000/format/inline/afp_202611 (page: https://www.nbcnews.com/politics/2026-election/live-blog/trump-vance-2026-midterm-election-congress- - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.025579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.news24.com/world/trump-makes-last-ditch-push-as-democrats-eye-historic-midterm-sweep-202 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:24.024208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:24.021497+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.853838+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.681286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.620685+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:23.433732+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:23.432514+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://i0.wp.com/obrag.org/wp-content/uploads/2026/11/trump-putin-xi-11-19-26.jpg?resize=768%2C556& (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:23.430647+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://media-cldnry.s-nbcnews.com/image/upload/c_fill,g_auto,w_2500,h_1315/rockcms/2026-11/261102-t (page: https://obrag.org/2026/11/trump-hands-world-leadership-to-china/ | Trump gives final push for GOP ma - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:23.429421+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://news24cobalt.24.co.za/resources/02ab-21f999393543-e119297f10c7-1000/format/inline/afp_202611 (page: https://www.nbcnews.com/politics/2026-election/live-blog/trump-vance-2026-midterm-election-congress- - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:23.428180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump and NATO chief urge Russia to avoid actions '): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.news24.com/world/trump-makes-last-ditch-push-as-democrats-eye-historic-midterm-sweep-202 - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:23.426837+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.424210+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.270062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.106955+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump and NATO chief urge Russia to avoid actions that widen'",
-    "created_at": "2026-11-27T10:28:23.049779+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:23.011834+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:23.010795+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump and NATO chief urge Russia to avoid actions that widen' - rejected (no og:image)",
-    "created_at": "2026-11-27T10:28:23.009594+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiswFBVV95cUxOcVE1ZllSR0xRNHFVUjR0WWJjQXF2MllxbUV3WUQ2Vno2WFFCbzkyODBvWjE1WmtscC1) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T10:28:23.007046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump, NATO chief caution Russia as attacks on Ukraine’s ene' - skipped (same event used within 24h, event key 'attack caution chief cnbc energy infrastructure intensify na')",
-    "created_at": "2026-11-27T10:28:22.565155+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 2/6 tried: 'How the Black Sea front in the Russia-Ukraine war is threate' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T10:28:22.563977+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'How the Black Sea front in the Russia-Ukraine war is threate' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T10:28:22.562809+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict - CBS News' (9 download(s) tried)",
-    "created_at": "2026-11-27T10:28:22.561833+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:22.560769+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:22.559386+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://wallpapers.com/images/hd/pitch-black-backdrop-for-desktop-ih7d4vohirjuvb3d.jpg - source page title names only 0 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:22.272973+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:22.271597+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:22.166431+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:22.064616+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png - source page title names only 1 of 12 key entities - not a news article about the story",
-    "created_at": "2026-11-27T10:28:21.848507+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-27T10:28:21.846815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/4258566925_5ef4948e9c_b.jpg",
-    "created_at": "2026-11-27T10:28:21.486972+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/8054/8399644719_82a05837a7_b.jpg",
-    "created_at": "2026-11-27T10:28:21.417594+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/2129/2094032782_8f075ed396_b.jpg",
-    "created_at": "2026-11-27T10:28:21.337078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/3866/14893785171_d40fe9591b_b.jpg",
-    "created_at": "2026-11-27T10:28:21.252038+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6217/6342662124_a376bb43f6.jpg",
-    "created_at": "2026-11-27T10:28:21.170954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Black'",
-    "created_at": "2026-11-27T10:28:21.086484+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Black'",
-    "created_at": "2026-11-27T10:28:20.911100+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Black'",
-    "created_at": "2026-11-27T10:28:20.737083+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Black'",
-    "created_at": "2026-11-27T10:28:20.673252+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:20.614942+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:20.613920+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'How the Black Sea front in the Russia-Ukraine war ' - trying entity search 'Black'",
-    "created_at": "2026-11-27T10:28:20.612660+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg (page: https://www.colorsexplained.com/shades-of-black-color-names/ | 3840x2160 Black Solid Color Backgroun - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.611548+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pitch-black-backdrop-for-desktop-ih7d4vohirjuvb3d.jpg (page: https://www.solidbackgrounds.com/3840x2160-black-solid-color-background.html | [3100+] Dark Backgrou - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.609926+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/dark-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.608786+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.607599+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://upload.wikimedia.org/wikipedia/commons/2/28/Tear_of_the_Sunflower_%2852100762838%29.jpg (page: https://commons.wikimedia.org/w/index.php?curid=134822761 | Tear of the Sunflower (52100762838) - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.606419+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://live.staticflickr.com/5519/31086629415_e459771cd2_b.jpg (page: https://www.flickr.com/photos/77612281@N05/31086629415 | The War of the Nations_WW1_069 - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.605186+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T10:28:20.602441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T10:28:20.375290+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T10:28:20.200341+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 2 result(s) for 'Black Sea front Russia Ukraine'",
-    "created_at": "2026-11-27T10:28:20.137015+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:20.097780+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:20.096780+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg (page: https://www.colorsexplained.com/shades-of-black-color-names/ | 3840x2160 Black Solid Color Backgroun - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.095778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pitch-black-backdrop-for-desktop-ih7d4vohirjuvb3d.jpg (page: https://www.solidbackgrounds.com/3840x2160-black-solid-color-background.html | [3100+] Dark Backgrou - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.094671+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/dark-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.093596+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): http://nlcblogs.nebraska.gov/nlcblog/files/2015/08/black.png (page: https://wallpapers.com/total-black | The Data Dude – Wednesday Watch: the Black | Nebraska Library . - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:20.092392+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:20.088556+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.955854+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.777015+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'How the Black Sea front in the Russia-Ukraine war is threate'",
-    "created_at": "2026-11-27T10:28:19.715388+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:19.676777+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T10:28:19.675642+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg (page: https://www.colorsexplained.com/shades-of-black-color-names/ | 3840x2160 Black Solid Color Backgroun - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:19.674508+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/pitch-black-backdrop-for-desktop-ih7d4vohirjuvb3d.jpg (page: https://www.solidbackgrounds.com/3840x2160-black-solid-color-background.html | [3100+] Dark Backgrou - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:19.673485+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'How the Black Sea front in the Russia-Ukraine war '): https://wallpapers.com/images/hd/total-black-solid-color-deskop-otljrvlhh4rl1zy9.jpg (page: https://wallpapers.com/dark-background | [100+] Total Black Wallpapers | Wallpapers.com - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T10:28:19.672413+00:00",
-    "card": ""
   }
 ]
