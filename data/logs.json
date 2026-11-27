@@ -2,6 +2,468 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T15:56:51.280521+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Influencers' Downing Street visit\", 'Cybersecurity breach reported at CIA', 'Silksong Sea of Sorrow release date', 'Thanksgiving Day celebrations', 'Grand Theft Auto VI']",
+    "created_at": "2026-11-27T15:56:51.274409+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T15:56:51.104162+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T15:56:51.102916+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T15:56:51.100723+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T15:56:41.098268+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T15:56:40.856242+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T15:56:40.854041+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T15:56:35.498502+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T15:56:35.496072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T15:56:35.145970+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T15:56:35.143695+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from openverse)",
+    "created_at": "2026-11-27T15:56:32.654950+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T15:56:32.653733+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://live.staticflickr.com/3910/14421324712_028de27e50_b.jpg (from openverse, query 'Trump', page: https://www.flickr.com/photos/80038275@N00/14421324712 | Donald Trump - page names the entity (Trump))",
+    "created_at": "2026-11-27T15:56:32.652072+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (, the photo shows Donald Trump, who is the subject of the headline.)",
+    "created_at": "2026-11-27T15:56:32.650318+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump'",
+    "created_at": "2026-11-27T15:56:23.536768+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump'",
+    "created_at": "2026-11-27T15:56:23.379324+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump'",
+    "created_at": "2026-11-27T15:56:23.197291+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Trump'",
+    "created_at": "2026-11-27T15:56:23.135900+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:23.090302+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:23.089313+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Trump: Iran war will be over ‘sort of whenever I w' - trying entity search 'Trump'",
+    "created_at": "2026-11-27T15:56:23.088271+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.inkl.com/news/trump-calls-for-somalis-receiving-government-assistance-to-be-thrown-out-o - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.087249+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.086352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump to  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.085367+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://abc7news.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Something Strange - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.084327+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352472193_a9d7f5ec85_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352472193 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.083310+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136227_2fd5bca404_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136227 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.082233+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353136157_45c5c820d6_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353136157 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.081177+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49352471828_50189b332b_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49352471828 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.080041+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://live.staticflickr.com/65535/49353134877_6552318cf7_b.jpg (page: https://www.flickr.com/photos/16086041@N00/49353134877 | Vigil for Peace (2020 Jan) - only 0 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:23.078933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump Iran war will over'",
+    "created_at": "2026-11-27T15:56:23.076501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump Iran war will over'",
+    "created_at": "2026-11-27T15:56:22.876360+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump Iran war will over'",
+    "created_at": "2026-11-27T15:56:22.695933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Trump Iran war will over'",
+    "created_at": "2026-11-27T15:56:22.639453+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:22.580486+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:22.579589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.inkl.com/news/trump-calls-for-somalis-receiving-government-assistance-to-be-thrown-out-o - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.578615+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.577615+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump to  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.576477+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://abc7news.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Something Strange - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.575297+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:22.572988+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:22.382354+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:22.172205+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:22.110758+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:22.024772+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:22.023825+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.newyork1.vip.townnews.com/dailycorinthian.com/content/tncms/assets/v3/editorial/4 (page: https://www.inkl.com/news/trump-calls-for-somalis-receiving-government-assistance-to-be-thrown-out-o - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.022783+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.021752+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://cdn.abcotvs.com/dip/images/20059888_112026-cc-ap-trump-speaks-friday-img.jpg?w=1600 (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Trump to  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.020647+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://abc7news.com/story/trump-hold-news-conference-friday-asia-trip/20058838/ | Something Strange - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-27T15:56:22.019400+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:22.017077+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:21.823097+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:21.637600+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-27T15:56:21.525252+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:21.427449+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T15:56:21.426235+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
+    "created_at": "2026-11-27T15:56:21.425088+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T15:56:21.422939+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T15:56:20.441166+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T15:56:20.439782+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T15:56:20.438557+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T15:56:20.437543+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T15:56:20.436147+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T15:56:20.085360+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T15:56:20.084228+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
+    "created_at": "2026-11-27T15:56:20.082126+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T15:56:19.853582+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T15:56:19.852029+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T15:56:19.850371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T15:56:18.097979+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T15:56:18.087834+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T15:56:17.689517+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T15:55:49.747456+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T15:55:49.746312+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #177 started (--only bluesky)",
+    "created_at": "2026-11-27T15:55:49.744889+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T14:55:47.460415+00:00",
     "card": ""
   },
@@ -735,468 +1197,6 @@
     "level": "info",
     "message": "google-images: 0 candidate(s) for 'Ukraine'",
     "created_at": "2026-11-27T13:53:14.617985+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
-    "created_at": "2026-11-27T13:53:14.486819+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Ukraine'",
-    "created_at": "2026-11-27T13:53:14.457494+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:14.413128+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:14.410447+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Ukraine war latest: Trump appears to change joint ' - trying entity search 'Ukraine'",
-    "created_at": "2026-11-27T13:53:14.408852+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:14.407235+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:14.405543+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:14.403892+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:14.402011+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest Trump appears'",
-    "created_at": "2026-11-27T13:53:14.398810+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war latest Trump appears'",
-    "created_at": "2026-11-27T13:53:14.090115+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest Trump appears'",
-    "created_at": "2026-11-27T13:53:13.961374+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war latest Trump appears'",
-    "created_at": "2026-11-27T13:53:13.930745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:13.805891+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:13.804294+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.802669+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.800558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.798859+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.797012+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.785079+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.646146+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.499517+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.463826+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:13.296200+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:13.294661+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://www.istockphoto.com/vector/map-of-ukraine-gm1428668967-472076262 | Russian invasion of Ukrai - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.293208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/0e/90/a0/shutterstock-796737793.jpg (page: https://stock.adobe.com/images/russian-invasion-of-ukraine-map-vector-map-with-occupied-territory-ci - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.291505+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine: Refl - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.289719+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war latest: Trump appears to change joint '): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | Ukraine -  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-27T13:53:13.287916+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.284005+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:13.115286+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:12.983326+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war latest: Trump appears to change joint NATO state'",
-    "created_at": "2026-11-27T13:53:12.942734+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:12.656580+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:12.654951+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war latest: Trump appears to change joint NATO state' - rejected (no og:image)",
-    "created_at": "2026-11-27T13:53:12.653132+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMimgFBVV95cUxQZXFfdnlza0JfdVgyQS13Rml1WXR6dFpLVUxoUk11VHRhOTVmRzhOMlpfUXJ6WHpxNjZ) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T13:53:12.649479+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T13:53:12.298963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T13:53:12.296017+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T13:53:12.215419+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T13:53:12.213230+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T13:53:12.211339+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T13:53:12.209579+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T13:53:12.207252+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-27T13:53:12.099553+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-27T13:53:12.097898+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
-    "created_at": "2026-11-27T13:53:12.095082+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T13:53:12.030787+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-27T13:53:12.028445+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T13:53:12.025991+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T13:53:10.466430+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-27T13:53:10.463813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T13:53:09.229724+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T13:53:09.228102+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: Trump says he's giving Iran \"a chance to b': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: Trump says he's giving Iran \"a chance to be smart\" - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
-    "created_at": "2026-11-27T13:53:09.226129+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran War Updates: Trump says he's giving Iran \"a c' (, the photo shows the national flag of Iran, which is directly related to the country mentioned in the headline about Iran war updates.)",
-    "created_at": "2026-11-27T13:53:09.212829+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T13:53:00.734735+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T13:53:00.578046+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T13:53:00.442762+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T13:53:00.408693+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:00.331972+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:53:00.330333+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: Trump says he's giving Iran \"a chance to b' - rejected (no og:image)",
-    "created_at": "2026-11-27T13:53:00.325622+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T13:53:00.322177+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-27T13:52:59.994362+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' for card 'Adsterra Blogger' (queue now 1)",
-    "created_at": "2026-11-27T13:52:59.916106+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T13:52:49.681954+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T13:52:49.679972+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 5 key entities (down, drone, hit, iran))",
-    "created_at": "2026-11-27T13:52:49.678252+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran war live: IRGC says tanker hit in Hormuz, dro' (. The image shows the national flag of Iran, which is the country featured in the news headline about military events involving Iran.)",
-    "created_at": "2026-11-27T13:52:49.675798+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
-    "created_at": "2026-11-27T13:52:46.805583+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
-    "created_at": "2026-11-27T13:52:46.668594+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
-    "created_at": "2026-11-27T13:52:46.529609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran war live: IRGC says tanker hit in Hormuz, drone downed '",
-    "created_at": "2026-11-27T13:52:46.464336+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T13:52:45.995573+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T13:52:45.993877+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: IRGC says tanker hit in Hormuz, drone downed ' - rejected (no og:image)",
-    "created_at": "2026-11-27T13:52:45.991680+00:00",
     "card": ""
   }
 ]

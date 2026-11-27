@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 176,
-  "last_run": "2026-11-27T14:55:42.052895+00:00",
+  "runs": 177,
+  "last_run": "2026-11-27T15:55:49.744867+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 70,
-      "fail": 15,
+      "fail": 16,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T14:51:56.360560+00:00"
+      "last_run": "2026-11-27T15:56:20.438515+00:00"
     },
     "mastodon.social": {
       "success": 17,
-      "fail": 28,
+      "fail": 29,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T14:52:35.614478+00:00"
+      "last_run": "2026-11-27T15:56:51.104127+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T14:51:56.360563+00:00",
-    "mastodon.social": "2026-11-27T14:52:35.614482+00:00"
+    "Adsterra Blogger": "2026-11-27T15:56:20.438518+00:00",
+    "mastodon.social": "2026-11-27T15:56:51.104129+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-27",
-      "count": 11
+      "count": 12
     },
     "mastodon.social": {
       "date": "2026-11-27",
-      "count": 11
+      "count": 12
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T14:55:42.054911+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T14:55:42.056669+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T15:55:49.746304+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "mastodon.social": {
-      "fails": 18,
+      "fails": 19,
       "next_retry": ""
     },
     "Adsterra Blogger": {
-      "fails": 11,
+      "fails": 12,
       "next_retry": ""
     }
   },
