@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-27T22:28:58.343296+00:00",
-  "last_run": "2026-11-27T22:28:49.100908+00:00",
-  "runs": 190,
+  "generated_at": "2026-11-27T22:54:57.798459+00:00",
+  "last_run": "2026-11-27T22:53:02.784061+00:00",
+  "runs": 191,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T21:55:14.960950+00:00",
-    "mastodon.social": "2026-11-27T21:55:41.185152+00:00"
+    "Adsterra Blogger": "2026-11-27T22:54:07.939418+00:00",
+    "mastodon.social": "2026-11-27T22:54:57.690362+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 21,
+      "fail": 22,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T21:55:14.960947+00:00"
+      "last_run": "2026-11-27T22:54:07.939415+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 34,
+      "fail": 35,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T21:55:41.185148+00:00"
+      "last_run": "2026-11-27T22:54:57.690359+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T21:55:14.960950+00:00",
-      "runs_today": 18,
+      "last_run": "2026-11-27T22:54:07.939418+00:00",
+      "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T04:40:14.960950+06:00",
-        "2026-11-28T04:55:14.960950+06:00",
-        "2026-11-28T05:10:14.960950+06:00",
-        "2026-11-28T05:25:14.960950+06:00",
-        "2026-11-28T05:40:14.960950+06:00"
+        "2026-11-28T05:09:07.939418+06:00",
+        "2026-11-28T05:24:07.939418+06:00",
+        "2026-11-28T05:39:07.939418+06:00",
+        "2026-11-28T05:54:07.939418+06:00",
+        "2026-11-28T06:09:07.939418+06:00"
       ],
       "next_post_times": [
         "2026-11-28T05:03:00+06:00",
@@ -100,7 +100,7 @@
         "2026-11-28T09:02:00+06:00"
       ],
       "success": 71,
-      "fail": 21,
+      "fail": 22,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T21:55:41.185152+00:00",
-      "runs_today": 18,
+      "last_run": "2026-11-27T22:54:57.690362+00:00",
+      "runs_today": 19,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T04:40:41.185152+06:00",
-        "2026-11-28T04:55:41.185152+06:00",
-        "2026-11-28T05:10:41.185152+06:00",
-        "2026-11-28T05:25:41.185152+06:00",
-        "2026-11-28T05:40:41.185152+06:00"
+        "2026-11-28T05:09:57.690362+06:00",
+        "2026-11-28T05:24:57.690362+06:00",
+        "2026-11-28T05:39:57.690362+06:00",
+        "2026-11-28T05:54:57.690362+06:00",
+        "2026-11-28T06:09:57.690362+06:00"
       ],
       "next_post_times": [
         "2026-11-28T04:55:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-28T08:52:00+06:00"
       ],
       "success": 18,
-      "fail": 34,
+      "fail": 35,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 1
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-27T22:28:49.101919+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-27T22:28:49.102706+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-27T22:53:02.786848+00:00"
     }
   ],
   "dry_run": false,
@@ -294,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "Victoria votes in state election",
-    "Most famous person you're related to",
-    "Hackers breach Air Force cloud platform",
-    "Thanksgiving Day celebrations",
     "Aaron Rodgers reportedly out",
-    "Banned Nvidia chips reported in Shanghai",
+    "Most famous person you're related to",
+    "Thanksgiving Day celebrations",
+    "Nvidia reinstates Jensen Huang",
+    "Hackers breach Air Force cloud platform",
+    "Van Hollen challenges Schumer",
     "Jazz Chisholm nears Blue Jays deal",
     "Grand Theft Auto VI",
-    "Nvidia reinstates Jensen Huang",
-    "Birthday twin spectrum prompt"
+    "Blade Runner 2099 series premiere",
+    "Sunrise on the Reaping's $225M debut"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-27T22:28:58.266327+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-27T22:28:58.265133+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-27T22:28:57.981282+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-27T22:28:49.103437+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-27T22:28:49.102713+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-27T22:28:49.101926+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #190 started (--only blogger)",
-      "created_at": "2026-11-27T22:28:49.100927+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T21:55:41.207637+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Aaron Rodgers reportedly out', 'Hackers breach Air Force cloud platform', 'Grand Theft Auto VI', 'Israeli strikes in Gaza']",
-      "created_at": "2026-11-27T21:55:41.202529+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T21:55:41.185186+00:00",
+      "created_at": "2026-11-27T22:54:57.690394+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T21:55:41.184074+00:00",
+      "created_at": "2026-11-27T22:54:57.689331+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T21:55:41.178187+00:00",
+      "created_at": "2026-11-27T22:54:57.687419+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T21:55:31.175902+00:00",
+      "created_at": "2026-11-27T22:54:47.684846+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T21:55:30.935834+00:00",
+      "created_at": "2026-11-27T22:54:47.452251+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T21:55:30.933149+00:00",
+      "created_at": "2026-11-27T22:54:47.448589+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T21:55:25.477664+00:00",
+      "created_at": "2026-11-27T22:54:42.019626+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T21:55:25.475085+00:00",
+      "created_at": "2026-11-27T22:54:42.017344+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T21:55:25.168385+00:00",
+      "created_at": "2026-11-27T22:54:41.493983+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T21:55:25.165776+00:00",
+      "created_at": "2026-11-27T22:54:41.491795+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-27T21:55:21.995552+00:00",
+      "created_at": "2026-11-27T22:54:37.724779+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-27T21:55:21.994564+00:00",
+      "created_at": "2026-11-27T22:54:37.723537+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
-      "created_at": "2026-11-27T21:55:21.993534+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://cebudailynews.inquirer.net/files/2026/11/Iran-map-stock-04192024.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.reporterworldnews.com/news/world/2026/11/25/iran-accuses-us-ai-powered-attacks-calls-for - matches 2 key entities (iran, news))",
+      "created_at": "2026-11-27T22:54:37.722374+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (The photo depicts the national flag of Iran, which relates to the subject matter of the headline concerning Iranian ports and a blockade.)",
-      "created_at": "2026-11-27T21:55:21.992041+00:00",
+      "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (, the photo is a geographical map showing Iran and its surrounding region, which is the location relevant to the news headline about a blockade on Ira)",
+      "created_at": "2026-11-27T22:54:37.720954+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Iran War Updates: U.S. forces disable commercial s'): https://insiderpaper.com/wp-content/uploads/2023/12/iran-1151139_1280.jpg (page: https://cebudailynews.inquirer.net/787919/singer-parastoo-ahmadi-flogged-by-iran-authorities-over-co - only 1 of 15 key entities in the source page)",
+      "created_at": "2026-11-27T22:54:34.322942+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg",
+      "created_at": "2026-11-27T22:54:34.321758+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Iran War Updates: U.S. forces disable commercial s' (\n\nReason: The image shows the national flag of Iran, not the specific commercial ship, U.S. forces, or the event mentioned in the headline.)",
+      "created_at": "2026-11-27T22:54:34.320302+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-27T21:55:18.559329+00:00",
+      "created_at": "2026-11-27T22:54:16.646399+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-27T21:55:18.387887+00:00",
+      "created_at": "2026-11-27T22:54:16.436163+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-27T21:55:18.278605+00:00",
+      "message": "wikimedia: 0 result(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+      "created_at": "2026-11-27T22:54:16.296593+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 0 result(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-27T21:55:18.263035+00:00",
+      "created_at": "2026-11-27T22:54:15.714048+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T21:55:18.037275+00:00",
+      "created_at": "2026-11-27T22:54:15.207629+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T21:55:18.036296+00:00",
+      "created_at": "2026-11-27T22:54:15.206650+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - rejected (no og:image)",
-      "created_at": "2026-11-27T21:55:18.035145+00:00",
+      "created_at": "2026-11-27T22:54:15.205539+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-      "created_at": "2026-11-27T21:55:18.033018+00:00",
+      "created_at": "2026-11-27T22:54:15.203411+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo: story 1/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
-      "created_at": "2026-11-27T21:55:17.770489+00:00",
+      "created_at": "2026-11-27T22:54:14.911853+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
-      "created_at": "2026-11-27T21:55:17.769532+00:00",
+      "created_at": "2026-11-27T22:54:14.910786+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (1 download(s) tried)",
-      "created_at": "2026-11-27T21:55:17.768552+00:00",
+      "created_at": "2026-11-27T22:54:14.909702+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.767490+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/8/89/Richmond_County_Democratic_Party.png?utm_source= (page: https://commons.wikimedia.org/wiki/File:Richmond_County_Democratic_Party.png | File:Richmond County  - page does not name the entity (Democrats))",
+      "created_at": "2026-11-27T22:54:14.908618+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.766431+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Democratic_presidential_ticket_1864b.jpg/12 (page: https://commons.wikimedia.org/wiki/File:Democratic_presidential_ticket_1864b.jpg | File:Democratic p - page does not name the entity (Democrats))",
+      "created_at": "2026-11-27T22:54:14.907296+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.764883+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.763907+00:00",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/5/55/Chicago_Democratic_Convention_1968.png?utm_sourc (page: https://commons.wikimedia.org/wiki/File:Chicago_Democratic_Convention_1968.png | File:Chicago Democr - page does not name the entity (Democrats))",
+      "created_at": "2026-11-27T22:54:14.906259+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.762752+00:00",
+      "created_at": "2026-11-27T22:54:14.904946+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-      "created_at": "2026-11-27T21:55:17.760486+00:00",
+      "created_at": "2026-11-27T22:54:14.836230+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.612643+00:00",
+      "created_at": "2026-11-27T22:54:14.586482+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.611522+00:00",
+      "created_at": "2026-11-27T22:54:14.585352+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T21:55:17.610471+00:00",
+      "created_at": "2026-11-27T22:54:14.584246+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T21:55:17.608206+00:00",
+      "message": "bing-images: 0 candidate(s) for 'Democrats'",
+      "created_at": "2026-11-27T22:54:14.580122+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T21:55:17.475311+00:00",
+      "created_at": "2026-11-27T22:54:14.460682+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats'",
-      "created_at": "2026-11-27T21:55:17.364600+00:00",
+      "message": "wikimedia: rejected candidate (width 205px < 400): https://upload.wikimedia.org/wikipedia/commons/9/94/Logo_of_the_Democratic_Party_of_Guam.png?utm_sou",
+      "created_at": "2026-11-27T22:54:14.288567+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: rejected candidate (width 210px < 400): https://upload.wikimedia.org/wikipedia/commons/7/79/American_Samoa_Democratic_Party_logo.png?utm_sou",
+      "created_at": "2026-11-27T22:54:14.287402+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: 5 result(s) for 'Democrats'",
+      "created_at": "2026-11-27T22:54:14.285804+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-27T21:55:17.340878+00:00",
+      "created_at": "2026-11-27T22:54:13.700231+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T21:55:17.284241+00:00",
+      "created_at": "2026-11-27T22:54:13.084468+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T21:55:17.283189+00:00",
+      "created_at": "2026-11-27T22:54:13.083512+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-      "created_at": "2026-11-27T21:55:17.280032+00:00",
+      "created_at": "2026-11-27T22:54:13.082541+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): http://cache.foreca.net/static/og/forecaweather-1200x630.png (page: https://twoweather.com/ | Mount Biggenden, North Burnett, AU – Hourly Weather Forecast - Forecaweath - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T22:54:13.081451+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.cmnh.org/files/blog/share/blog-weatherradar.jpg (page: https://www.forecaweather.com/102175917/Mount-Biggenden-North-Burnett-Australia/hourly-weather-forec - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T22:54:13.080484+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://data.usatoday.com/media/uploads/weather_wwa.jpg (page: https://media.v2.nationalgeographic.com/5-day-weather-report/weather-forecasts-have-radically-improv - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T22:54:13.079265+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://energyintel.brightspotcdn.com/dims4/default/ce082ed/2147483647/strip/true/crop/800x519+0+0/r (page: https://data.usatoday.com/severe-weather-alerts-warnings-watches/morris-county-nj/34027/ | Today's S - only 0 of 12 key entities in the source page)",
+      "created_at": "2026-11-27T22:54:13.078193+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+      "created_at": "2026-11-27T22:54:13.075872+00:00",
       "card": ""
     }
   ]
