@@ -2,6 +2,510 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-27T23:49:32.056937+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Israeli strikes in Gaza', 'Victoria votes in state election', \"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai']",
+    "created_at": "2026-11-27T23:49:32.049714+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T23:49:31.824868+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T23:49:31.823693+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-27T23:49:31.822004+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T23:49:21.819483+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T23:49:21.660902+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T23:49:21.658369+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-27T23:49:15.900040+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-27T23:49:15.897533+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-27T23:49:15.700840+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-27T23:49:15.698296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-27T23:49:11.925123+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-27T23:49:11.923704+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats', page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - page names the entity (Democrats))",
+    "created_at": "2026-11-27T23:49:11.922546+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (, the photo shows Hakeem Jeffries, a prominent Democratic lawmaker who often speaks on such legislative matters.)",
+    "created_at": "2026-11-27T23:49:11.918501+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem",
+    "created_at": "2026-11-27T23:49:03.951165+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (The photo shows a Democratic Party flag overlaid on an American flag, not the actual people, places, or events associated with a specific policy plan )",
+    "created_at": "2026-11-27T23:49:03.949284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo",
+    "created_at": "2026-11-27T23:49:01.182220+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (, the photo shows political figures (Donald Trump and Hakeem Jeffries) and a graphic about the House of Representatives, which is unrelated to a news )",
+    "created_at": "2026-11-27T23:49:01.180307+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T23:48:49.869546+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
+    "created_at": "2026-11-27T23:48:49.867975+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T23:48:49.710710+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T23:48:49.709255+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
+    "created_at": "2026-11-27T23:48:49.707626+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T23:48:49.704846+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats'",
+    "created_at": "2026-11-27T23:48:49.520289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats'",
+    "created_at": "2026-11-27T23:48:49.420661+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Democrats'",
+    "created_at": "2026-11-27T23:48:49.403986+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:49.371084+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:49.369949+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
+    "created_at": "2026-11-27T23:48:49.368837+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.367793+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.366558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.365186+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.363742+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T23:48:49.361213+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T23:48:49.190309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T23:48:49.082619+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
+    "created_at": "2026-11-27T23:48:49.065895+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:49.032314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:49.031051+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.023337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.022061+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.020666+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:49.019478+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:49.017125+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.897558+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.777881+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.761367+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:48.727603+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:48.726467+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:48.725390+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:48.724113+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:48.722814+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
+    "created_at": "2026-11-27T23:48:48.721549+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.719163+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.580222+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.473922+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
+    "created_at": "2026-11-27T23:48:48.451256+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:48.223369+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-27T23:48:48.222212+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
+    "created_at": "2026-11-27T23:48:48.220696+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
+    "created_at": "2026-11-27T23:48:48.218375+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T23:48:47.435065+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-27T23:48:47.433641+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-27T23:48:47.432233+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-27T23:48:47.430899+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T23:48:47.429643+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-27T23:48:47.377454+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-27T23:48:47.376371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
+    "created_at": "2026-11-27T23:48:47.374252+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T23:48:47.161638+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-27T23:48:47.160229+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T23:48:47.158569+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T23:48:46.546437+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T23:48:46.468500+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-27T23:48:46.399896+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-27T23:48:45.848777+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-27T23:48:45.846819+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-27T23:48:45.434726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-27T23:48:38.655558+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-27T23:48:38.654195+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #193 started (--only bluesky)",
+    "created_at": "2026-11-27T23:48:38.652638+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-27T23:26:08.363017+00:00",
     "card": ""
   },
@@ -694,509 +1198,5 @@
     "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
     "created_at": "2026-11-27T21:55:41.185186+00:00",
     "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T21:55:41.184074+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-27T21:55:41.178187+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T21:55:31.175902+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T21:55:30.935834+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T21:55:30.933149+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-27T21:55:25.477664+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-27T21:55:25.475085+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-27T21:55:25.168385+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-27T21:55:25.165776+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-27T21:55:21.995552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-27T21:55:21.994564+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
-    "created_at": "2026-11-27T21:55:21.993534+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (The photo depicts the national flag of Iran, which relates to the subject matter of the headline concerning Iranian ports and a blockade.)",
-    "created_at": "2026-11-27T21:55:21.992041+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-27T21:55:18.559329+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-27T21:55:18.387887+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-27T21:55:18.278605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-27T21:55:18.263035+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:18.037275+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:18.036296+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - rejected (no og:image)",
-    "created_at": "2026-11-27T21:55:18.035145+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T21:55:18.033018+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo: story 1/6 tried: 'Democrats’ plan to end funding for Iran war leaves open what' - no usable photo, trying the next story",
-    "created_at": "2026-11-27T21:55:17.770489+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no real photo found for this story)",
-    "created_at": "2026-11-27T21:55:17.769532+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: no real photo found for 'Democrats’ plan to end funding for Iran war leaves open what comes next - The Hill' (1 download(s) tried)",
-    "created_at": "2026-11-27T21:55:17.768552+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.thesprucepets.com/thmb/0vKXtwRwIQxOAxQ0I27Fr6f72Pk=/2121x0/filters:no_upscale():strip_ic (page: https://www.freepik.com/premium-photo/cute-ginger-cat-sitting-looking-camera-isolated-white-backgrou - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.767490+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?cs=srgb&dl=pexels-tomas-andreopoulo (page: https://primanyc.net/best-nature-luxury-interior-tips-in-switzerland/ | Adult Brown Tabby Cat · Free - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.766431+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://betterwithcats.net/wp-content/uploads/2022/08/cat-is-laying-on-a-old-wooden-table.jpg (page: https://www.pexels.com/photo/adult-brown-tabby-cat-747795/ | Cat Pictures Printable - UK Printable H - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.764883+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg (page: http://printables.uk.com/cat-pictures-printable/ | 60,000+ Free Cat Profil & Cat Images - Pixabay - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.763907+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.762752+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-    "created_at": "2026-11-27T21:55:17.760486+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.612643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.611522+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-    "created_at": "2026-11-27T21:55:17.610471+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T21:55:17.608206+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats'",
-    "created_at": "2026-11-27T21:55:17.475311+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats'",
-    "created_at": "2026-11-27T21:55:17.364600+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 5 result(s) for 'Democrats'",
-    "created_at": "2026-11-27T21:55:17.340878+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:17.284241+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:17.283189+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-    "created_at": "2026-11-27T21:55:17.280032+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b2ae02f3-b9bd-454e-b8a3-61f2a8fa1e40/df7tl (page: https://www.deviantart.com/arielariaspetzoldt/art/Seth-Rogen-meets-his-Variants-Keegan-Michael-Key-9 - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:17.276970+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29ab81a8-486a-41af-bef0-3876c9f911a7/dg3o8 (page: https://www.deviantart.com/saucerofperil/art/CNDRR-Seth-Rogen-meets-his-Variants-My-Version-92013050 - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:17.275941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/29ab81a8-486a-41af-bef0-3876c9f911a7/dgaom (page: https://www.deviantart.com/arielariaspetzoldt/art/Kevin-Michael-Richardson-meets-his-Variants-V3-973 - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:17.274739+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2ebfe7d5-8929-4bb2-a0da-79a5afa99b55/dggkn (page: https://www.deviantart.com/arielariaspetzoldt/art/Greg-Cipes-Meets-His-Variants-985404252 | JDF meet - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:17.273662+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T21:55:17.262572+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T21:55:17.131943+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T21:55:17.038817+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T21:55:17.025782+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:16.999930+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:16.998847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_N (page: African bush elephant - Wikipedia - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:16.997478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 1 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.995253+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.749806+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.630271+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.615804+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:16.571820+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:16.570283+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.wixstatic.com/media/190ac7_217a8dcda1244cbebe0f362578089cdc~mv2.jpg/v1/fill/w_1000,h_ (page: https://xrtechgroup.com/google-maps-satellite-view/ | Google Maps Satellite View Explained: Features - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:16.569148+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://xrtechgroup.com/wp-content/uploads/2026/06/Screenshot-2026-06-03-182139.png (page: https://www.geowgs84.ai/post/google-maps-satellite-view-explained-features-tips-and-tricks | Google  - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:16.568079+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://cdn.prod.website-files.com/64bde7f9e4373e7e7304a677/66a9ce215c37cd3e48b35746_66a9ce02cf097ed (page: https://xrtechgroup.com/google-maps-satellite-view/ | Where to Get Free Satellite Imagery in 2025 - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:16.566907+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://www.howtogeek.com/wp-content/uploads/2021/01/google-maps-satellite.png?width=1198&trim=1 (page: https://spacefromspace.com/blog/get-free-satellite-imagery-2025 | How to Start Google Maps in Satell - only 0 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T21:55:16.565801+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.563410+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.275249+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.165032+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T21:55:16.056780+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:15.834377+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T21:55:15.817424+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
-    "created_at": "2026-11-27T21:55:15.816231+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T21:55:15.814047+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T21:55:14.963574+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T21:55:14.962290+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T21:55:14.960982+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T21:55:14.960025+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T21:55:14.958761+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-27T21:55:14.879440+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-27T21:55:14.878375+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T21:55:14.876311+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T21:55:14.730298+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-27T21:55:14.729208+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T21:55:14.727855+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T21:55:14.042202+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T21:55:13.902238+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T21:55:13.824481+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T21:55:13.419108+00:00",
-    "card": "Adsterra Blogger"
   }
 ]
