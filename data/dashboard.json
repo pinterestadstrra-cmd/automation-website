@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T02:06:06.408808+00:00",
-  "last_run": "2026-11-28T02:05:28.630459+00:00",
-  "runs": 197,
+  "generated_at": "2026-11-28T02:52:32.428513+00:00",
+  "last_run": "2026-11-28T02:52:30.088584+00:00",
+  "runs": 198,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -86,18 +86,18 @@
       "runs_today": 2,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T08:20:33.420234+06:00",
-        "2026-11-28T08:35:33.420234+06:00",
-        "2026-11-28T08:50:33.420234+06:00",
         "2026-11-28T09:05:33.420234+06:00",
-        "2026-11-28T09:20:33.420234+06:00"
+        "2026-11-28T09:20:33.420234+06:00",
+        "2026-11-28T09:35:33.420234+06:00",
+        "2026-11-28T09:50:33.420234+06:00",
+        "2026-11-28T10:05:33.420234+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T08:07:00+06:00",
         "2026-11-28T09:02:00+06:00",
         "2026-11-28T09:51:00+06:00",
         "2026-11-28T10:56:00+06:00",
-        "2026-11-28T12:02:00+06:00"
+        "2026-11-28T12:02:00+06:00",
+        "2026-11-28T13:07:00+06:00"
       ],
       "success": 71,
       "fail": 25,
@@ -158,18 +158,18 @@
       "runs_today": 2,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T08:21:06.385032+06:00",
-        "2026-11-28T08:36:06.385032+06:00",
-        "2026-11-28T08:51:06.385032+06:00",
         "2026-11-28T09:06:06.385032+06:00",
-        "2026-11-28T09:21:06.385032+06:00"
+        "2026-11-28T09:21:06.385032+06:00",
+        "2026-11-28T09:36:06.385032+06:00",
+        "2026-11-28T09:51:06.385032+06:00",
+        "2026-11-28T10:06:06.385032+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T08:52:00+06:00",
         "2026-11-28T09:57:00+06:00",
         "2026-11-28T11:02:00+06:00",
         "2026-11-28T12:08:00+06:00",
-        "2026-11-28T12:52:00+06:00"
+        "2026-11-28T12:52:00+06:00",
+        "2026-11-28T13:56:00+06:00"
       ],
       "success": 18,
       "fail": 38,
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-28T02:05:28.632126+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-28T02:52:30.090032+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-28T02:52:30.091141+00:00"
     }
   ],
   "dry_run": false,
@@ -307,18 +295,72 @@
   },
   "trending": [
     "Gates Foundation funds AI school tools",
-    "Bronson Reed dies at 38",
-    "Most famous person you're related to",
-    "Hackers breach Air Force cloud platform",
-    "Army detonates lead azide in Iowa",
-    "Aaron Rodgers reportedly out",
-    "Grand Theft Auto VI",
+    "Victoria votes in state election",
     "Thanksgiving Day celebrations",
-    "Banned Nvidia chips reported in Shanghai",
-    "Macy's parade postponed to Saturday"
+    "WWE's AI-voiced Bronson Reed tribute",
+    "Most famous person you're related to",
+    "ICE reportedly called on lawyer's clients",
+    "Grand Theft Auto VI",
+    "Aaron Rodgers reportedly out",
+    "Sunrise on the Reaping's $225M debut",
+    "Disney's Hexed hits theaters"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-28T02:52:32.374941+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-28T02:52:32.371796+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-28T02:52:32.008093+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-28T02:52:30.092423+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-28T02:52:30.091147+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-28T02:52:30.090042+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #198 started (--only blogger)",
+      "created_at": "2026-11-28T02:52:30.088613+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-28T02:06:06.412502+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Gates Foundation funds AI school tools', 'Bronson Reed dies at 38', \"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', 'Army detonates lead azide in Iowa']",
+      "created_at": "2026-11-28T02:06:06.405588+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -564,60 +606,6 @@
       "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
       "created_at": "2026-11-28T02:05:33.285635+00:00",
       "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-28T02:05:33.115379+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-28T02:05:33.114061+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-      "created_at": "2026-11-28T02:05:33.112349+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-28T02:05:31.843511+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T02:05:31.841585+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-28T02:05:31.395136+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T02:05:28.633548+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-28T02:05:28.632136+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #197 started (--only bluesky)",
-      "created_at": "2026-11-28T02:05:28.630483+00:00",
-      "card": ""
     }
   ]
 }
