@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 209,
-  "last_run": "2026-11-28T09:23:14.319408+00:00",
+  "runs": 210,
+  "last_run": "2026-11-28T10:13:42.425367+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 32,
+      "fail": 33,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T09:16:02.342088+00:00"
+      "last_run": "2026-11-28T10:16:14.102802+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 45,
+      "fail": 46,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T09:17:30.892748+00:00"
+      "last_run": "2026-11-28T10:18:34.451558+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T09:16:02.342095+00:00",
-    "mastodon.social": "2026-11-28T09:17:30.892750+00:00"
+    "Adsterra Blogger": "2026-11-28T10:16:14.102808+00:00",
+    "mastodon.social": "2026-11-28T10:18:34.451561+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,26 +411,20 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-28",
-      "count": 7
+      "count": 8
     },
     "mastodon.social": {
       "date": "2026-11-28",
-      "count": 7
+      "count": 8
     }
   },
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T09:23:14.323600+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T09:23:14.325164+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T10:13:42.427003+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "Adsterra Blogger": {
-      "fails": 15,
+      "fails": 16,
       "next_retry": ""
     },
     "mastodon.social": {
-      "fails": 15,
+      "fails": 16,
       "next_retry": ""
     }
   },
@@ -627,32 +621,32 @@
     "Adsterra Blogger": [
       {
         "topic": "war news",
-        "headline": "Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News",
-        "photo_url": "https://cebudailynews.inquirer.net/files/2026/11/Iran-map-stock-04192024.jpg",
+        "headline": "Iran war live: Iran’s army ready to respond to any attack ‘from anywhere’ - Al Jazeera",
+        "photo_url": "https://www.aljazeera.com/wp-content/uploads/2026/10/AFP__20261003__D26F2TZ__v1__MidRes__IranUsIsraelWar-1791100875.jpg?resize=1200%2C630",
         "photo_source": "bing-images",
-        "photo_alt": "Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News",
-        "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2hfZGl0MVZmV1ZQZTFoUkpFNDVMM3E5bVhpZTRWdWZ5SVQtTEx6UFBGRWRkNjM0b0hvbnRpNzJscmVLMG95Mk1vUGt0YW1DQmxxbTZzUEVVOFJWdTVGNThiLU9G?oc=5",
-        "hook": "THIS JUST IN: U.S. forces just intercepted and disabled a commercial ship trying to breach the Iran blockade! Things are escalating fast. 🚨👀",
-        "prepared_at": "2026-11-28T07:08:00.534594+00:00"
+        "photo_alt": "Iran war live: Iran’s army ready to respond to any attack ‘from anywhere’ - Al Jazeera",
+        "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQYzBBRkZMZURBWnVObzlNUWJSQ2RMMmRtSUdWN1QwMVpaZExyRVNwOFBHRXRnTDhvaG1mR3dITTdJSUdVclFUcEwtQkx3RDYtVjA1LXpjZkFJcDdaTVR3RUQxZWZWTzRmSUdYRUNyWHNoc1dnM0JhQVhnM0NOaHNRa0hJLWQtSUJzalFCVUNRNWxDaVhYemRoYjV5MnZGSUw1ODY2ZE5NNkU5dHBSTFdFcGdhaUZjcFB5YXIyZ3dzc9IBxAFBVV95cUxPX0I3SFpIUU1YREVJdEV3MjFZd2VtcjRlQmFTd3lBYUxub295Qk5WX25vbEdMNlQ3clhNZmdRUjZOUGJab0Z3b1IwTlRuSEM4NmRyajJteUFWQnBQWTZrbWRPOW8wU2Eyb0Fxc0ZFNVVkV0Iwd3RXbkxtWEZjdGZRcEZUR1BveHg4RkF1MjNIMnE2Mkg2Si1vVnBaUTVqWkdFaUtJUUhXMmRSUFhMMTZjZllDQTRHa1ZSTE44WVJJMUZnX05F?oc=5",
+        "hook": "Iran’s army just issued a chilling warning: they are locked, loaded, and ready to strike back against ANY attack, from anywhere. Things are escalating FAST.",
+        "prepared_at": "2026-11-28T10:14:08.723618+00:00"
       },
       {
         "topic": "war news",
-        "headline": "Ukraine war briefing: Zelenskyy criticises Trump for calling Putin his ‘friend’; Kyiv deploys new laser weapon - The Guardian",
-        "photo_url": "https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
-        "photo_source": "openverse",
-        "photo_alt": "Responsibility for war crimes of the Russian military is inevitable - address by the President of Ukraine.",
-        "article_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOcDZrYTlOdTVmYnJEelBReDNXdF9CRXAyZHUyVlhQNjczRTk0Q0RNM0FYdWlHY3RQc3RZTVZPQ0MwOWZLSExFczk2cGlhMXMyNk81dVVVNGZfUHozUDhCV2xaaEZlNGh1ZmtkeFlsTE94dGhzVEp1UGJKOEg4Si1WdnhqVUNKcFlnTm4wd2NBZDc5TzZDeGh0c1F0OUhEcUxLUjJQSjBVVHp0MFpIay1jZXVUZmNSNXAxb3RJNTU1SkJad3VEWVRwRUhyWUNNRmtXdEJQbmtLWjNMN0NTbWhWdXZhbkUtUzQ?oc=5",
-        "hook": "Zelenskyy just hit back hard at Trump over calling Putin a \"friend\"—and Kyiv is literally deploying a brand new laser weapon on the battlefield. This is a massive turning point.",
-        "prepared_at": "2026-11-28T07:08:16.994452+00:00"
+        "headline": "Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News",
+        "photo_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/cargo-shi-gulf-near-strait-of-hormuz.jpg?ve=1&tl=1",
+        "photo_source": "bing-images",
+        "photo_alt": "Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News",
+        "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2hfZGl0MVZmV1ZQZTFoUkpFNDVMM3E5bVhpZTRWdWZ5SVQtTEx6UFBGRWRkNjM0b0hvbnRpNzJscmVLMG95Mk1vUGt0YW1DQmxxbTZzUEVVOFJWdTVGNThiLU9G?oc=5",
+        "hook": "U.S. forces just took down a commercial ship trying to smash through the Iran blockade! 🚨 Things are escalating fast.",
+        "prepared_at": "2026-11-28T10:16:11.920181+00:00"
       }
     ]
   },
   "mastodon_post_counts": {
-    "2026-11-25": {
-      "mastodon.social": 9
-    },
     "2026-11-26": {
       "mastodon.social": 6
+    },
+    "2026-11-25": {
+      "mastodon.social": 9
     }
   },
   "last_mastodon_post_at": {

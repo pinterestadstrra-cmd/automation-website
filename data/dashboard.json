@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T09:23:18.369860+00:00",
-  "last_run": "2026-11-28T09:23:14.319408+00:00",
-  "runs": 209,
+  "generated_at": "2026-11-28T10:18:34.676964+00:00",
+  "last_run": "2026-11-28T10:13:42.425367+00:00",
+  "runs": 210,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T09:16:02.342095+00:00",
-    "mastodon.social": "2026-11-28T09:17:30.892750+00:00"
+    "Adsterra Blogger": "2026-11-28T10:16:14.102808+00:00",
+    "mastodon.social": "2026-11-28T10:18:34.451561+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 32,
+      "fail": 33,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T09:16:02.342088+00:00"
+      "last_run": "2026-11-28T10:16:14.102802+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 45,
+      "fail": 46,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T09:17:30.892748+00:00"
+      "last_run": "2026-11-28T10:18:34.451558+00:00"
     }
   },
   "file_cards": [
@@ -82,25 +82,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T09:16:02.342095+00:00",
-      "runs_today": 7,
+      "last_run": "2026-11-28T10:16:14.102808+00:00",
+      "runs_today": 8,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T15:31:02.342095+06:00",
-        "2026-11-28T15:46:02.342095+06:00",
-        "2026-11-28T16:01:02.342095+06:00",
-        "2026-11-28T16:16:02.342095+06:00",
-        "2026-11-28T16:31:02.342095+06:00"
+        "2026-11-28T16:31:14.102808+06:00",
+        "2026-11-28T16:46:14.102808+06:00",
+        "2026-11-28T17:01:14.102808+06:00",
+        "2026-11-28T17:16:14.102808+06:00",
+        "2026-11-28T17:31:14.102808+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T16:07:00+06:00",
         "2026-11-28T17:08:00+06:00",
         "2026-11-28T18:10:00+06:00",
         "2026-11-28T18:54:00+06:00",
-        "2026-11-28T20:07:00+06:00"
+        "2026-11-28T20:07:00+06:00",
+        "2026-11-28T21:02:00+06:00"
       ],
       "success": 71,
-      "fail": 32,
+      "fail": 33,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T09:17:30.892750+00:00",
-      "runs_today": 7,
+      "last_run": "2026-11-28T10:18:34.451561+00:00",
+      "runs_today": 8,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T15:32:30.892750+06:00",
-        "2026-11-28T15:47:30.892750+06:00",
-        "2026-11-28T16:02:30.892750+06:00",
-        "2026-11-28T16:17:30.892750+06:00",
-        "2026-11-28T16:32:30.892750+06:00"
+        "2026-11-28T16:33:34.451561+06:00",
+        "2026-11-28T16:48:34.451561+06:00",
+        "2026-11-28T17:03:34.451561+06:00",
+        "2026-11-28T17:18:34.451561+06:00",
+        "2026-11-28T17:33:34.451561+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T16:07:00+06:00",
         "2026-11-28T16:51:00+06:00",
         "2026-11-28T17:55:00+06:00",
         "2026-11-28T19:00:00+06:00",
-        "2026-11-28T19:50:00+06:00"
+        "2026-11-28T19:50:00+06:00",
+        "2026-11-28T21:06:00+06:00"
       ],
       "success": 18,
-      "fail": 45,
+      "fail": 46,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T09:23:14.323600+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T09:23:14.325164+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T10:13:42.427003+00:00"
     }
   ],
   "dry_run": false,
@@ -295,316 +307,316 @@
   },
   "trending": [
     "Victoria votes in state election",
-    "Israeli strikes in Gaza",
+    "Israeli strike hits Gaza clinic",
     "Boreen daily trivia scores",
-    "Thanksgiving Day celebrations",
-    "WWE's AI-voiced Bronson Reed tribute",
-    "Macy's parade postponed to Saturday",
-    "Grand Theft Auto VI",
-    "Avengers: Doomsday fan theories",
     "Most famous person you're related to",
-    "FCC approves SpaceX Starmind satellites"
+    "Grand Theft Auto VI",
+    "Blade Runner 2099 series premiere",
+    "Banned Nvidia chips reported in Shanghai",
+    "Bird photography",
+    "Nottingham Forest vs. Chelsea",
+    "WWE's AI-voiced Bronson Reed tribute"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-28T09:23:18.175325+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T09:23:18.173737+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-28T09:23:17.775487+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T09:23:14.326183+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-28T09:23:14.325169+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-28T09:23:14.323607+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #209 started (--only blogger)",
-      "created_at": "2026-11-28T09:23:14.319443+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-28T09:17:31.136126+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Victoria votes in state election', 'Israeli strikes in Gaza', \"Most famous person you're related to\", \"Macy's parade postponed to Saturday\", 'Grand Theft Auto VI']",
-      "created_at": "2026-11-28T09:17:31.130430+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T09:17:30.892782+00:00",
+      "created_at": "2026-11-28T10:18:34.451594+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T09:17:30.891478+00:00",
+      "created_at": "2026-11-28T10:18:34.450469+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-28T09:17:30.889848+00:00",
+      "created_at": "2026-11-28T10:18:34.448661+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T09:17:20.884416+00:00",
+      "created_at": "2026-11-28T10:18:24.445957+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T09:17:20.699701+00:00",
+      "created_at": "2026-11-28T10:18:24.166599+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T09:17:20.697169+00:00",
+      "created_at": "2026-11-28T10:18:24.163934+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-28T09:17:15.219797+00:00",
+      "created_at": "2026-11-28T10:18:18.615309+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T09:17:15.215780+00:00",
+      "created_at": "2026-11-28T10:18:18.613033+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T09:17:15.038330+00:00",
+      "created_at": "2026-11-28T10:18:18.101172+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T09:17:15.036035+00:00",
+      "created_at": "2026-11-28T10:18:18.098852+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Iran’s army ready to respond to any attack ‘f' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-28T09:16:13.465299+00:00",
+      "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-28T10:18:12.238976+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-28T09:16:13.463539+00:00",
+      "created_at": "2026-11-28T10:18:12.237809+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Iran’s army ready to respond to any attack ‘f': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war live: Iran’s army ready to respond to any attack ‘from anywhere’ - Al Jazeera', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (army, iran))",
-      "created_at": "2026-11-28T09:16:13.462527+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'More than 490,000 Russian soldiers have died during Ukraine ': https://ichef.bbci.co.uk/news/800/cpsprodpb/10798/production/_125708476_russian_military_fatalities- (from bing-images, query 'More than 490,000 Russian soldiers have died during Ukraine war, leaked data suggests - CBS News', page: https://x.com/i/trending/2124913298433097863 | War in Ukraine: Can we say how many people have died? - matches 4 key entities (died, news, ukraine, war))",
+      "created_at": "2026-11-28T10:18:12.236660+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Iran war live: Iran’s army ready to respond to any' (. The photo shows the national flag of Iran, which directly represents the country mentioned in the headline regarding Iran's army and potential attac)",
-      "created_at": "2026-11-28T09:16:13.461051+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-28T10:18:12.235151+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
-      "created_at": "2026-11-28T09:16:03.814070+00:00",
+      "message": "photo: rejected (vision NO): https://news.files.bbci.co.uk/include/newsspec/37057-russian-military-deaths/assets/app-project-asse",
+      "created_at": "2026-11-28T10:18:12.018903+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
-      "created_at": "2026-11-28T09:16:03.680616+00:00",
+      "message": "vision: NO - photo rejected for 'More than 490,000 Russian soldiers have died durin' (, because the image is an informational chart comparing estimates of Russian military deaths from June 2023, not a photograph depicting the events in )",
+      "created_at": "2026-11-28T10:18:12.017235+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
-      "created_at": "2026-11-28T09:16:03.561996+00:00",
+      "message": "photo: rejected (vision NO): https://www.economist.com/content-assets/images/20240713_WOT319.png",
+      "created_at": "2026-11-28T10:18:02.310110+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
-      "created_at": "2026-11-28T09:16:03.530258+00:00",
+      "message": "vision: NO - photo rejected for 'More than 490,000 Russian soldiers have died durin' (\n\nThis is a data chart, not a photograph or depiction of the people, place, or event mentioned in the headline.)",
+      "created_at": "2026-11-28T10:18:02.308689+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/2025",
+      "created_at": "2026-11-28T10:17:54.297894+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'More than 490,000 Russian soldiers have died durin' (, because the image is an abstract chart of estimated fatalities with no depiction of people, places, or events related to the headline.)",
+      "created_at": "2026-11-28T10:17:54.296115+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'More than 490,000 Russian soldiers have died during Ukraine '",
+      "created_at": "2026-11-28T10:16:16.542410+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'More than 490,000 Russian soldiers have died during Ukraine '",
+      "created_at": "2026-11-28T10:16:16.096486+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'More than 490,000 Russian soldiers have died during Ukraine '",
+      "created_at": "2026-11-28T10:16:15.880667+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'More than 490,000 Russian soldiers have died during Ukraine '",
+      "created_at": "2026-11-28T10:16:15.752288+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T09:16:03.163186+00:00",
+      "created_at": "2026-11-28T10:16:15.305209+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T09:16:03.162280+00:00",
+      "created_at": "2026-11-28T10:16:15.303992+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war live: Iran’s army ready to respond to any attack ‘f' - rejected (no og:image)",
-      "created_at": "2026-11-28T09:16:03.161088+00:00",
+      "message": "photo candidate: 'More than 490,000 Russian soldiers have died during Ukraine ' - rejected (no og:image)",
+      "created_at": "2026-11-28T10:16:15.302868+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxQYzBBRkZMZURBWnVObzlNUWJSQ2RMMmRtSUdWN1QwMVpaZExyRVNwOFBHRXRnTDhvaG1) - skipping, og:image would be the logo",
-      "created_at": "2026-11-28T09:16:03.158991+00:00",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijgFBVV95cUxQX2pWcjFHdXEyc0tDU1lnYUFVaDhneEg2eHY4ajVDaG9IemhYNXpJejJ0ekFfRmNQM2x) - skipping, og:image would be the logo",
+      "created_at": "2026-11-28T10:16:15.300617+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-28T10:16:14.697791+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Iran’s army ready to respond to any attack ‘f' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-28T10:16:14.695625+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-28T09:16:02.344683+00:00",
+      "created_at": "2026-11-28T10:16:14.105786+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-28T09:16:02.343315+00:00",
+      "created_at": "2026-11-28T10:16:14.104226+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T09:16:02.342130+00:00",
+      "created_at": "2026-11-28T10:16:14.102850+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T09:16:02.341097+00:00",
+      "created_at": "2026-11-28T10:16:14.101450+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "warning",
       "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-      "created_at": "2026-11-28T09:16:02.339714+00:00",
+      "created_at": "2026-11-28T10:16:14.099775+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 1920x1080 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-28T09:16:02.003950+00:00",
+      "message": "prepare_bsky_image: published 1200x630 (ratio 1.90) - unchanged",
+      "created_at": "2026-11-28T10:16:13.740887+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 1920x1080 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-28T09:16:02.002999+00:00",
+      "message": "prepare_bsky_image: original 1200x630 (ratio 1.90) - kept, no crop",
+      "created_at": "2026-11-28T10:16:13.739814+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-28T09:16:01.992315+00:00",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
+      "created_at": "2026-11-28T10:16:13.737948+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-28T09:16:01.881985+00:00",
+      "created_at": "2026-11-28T10:16:13.503236+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-      "created_at": "2026-11-28T09:16:01.880848+00:00",
+      "created_at": "2026-11-28T10:16:13.501942+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "warning",
       "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-      "created_at": "2026-11-28T09:16:01.879410+00:00",
+      "created_at": "2026-11-28T10:16:13.500316+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-      "created_at": "2026-11-28T09:16:00.408480+00:00",
+      "created_at": "2026-11-28T10:16:11.921837+00:00",
       "card": "Adsterra Blogger"
     },
     {
       "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T09:16:00.385891+00:00",
+      "message": "prepared ready post: 'Iran War Updates: U.S. forces disable commercial ship that a' for card 'Adsterra Blogger' (queue now 2)",
+      "created_at": "2026-11-28T10:16:11.920194+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-28T09:15:59.988958+00:00",
+      "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-28T10:16:01.747707+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T09:15:49.488296+00:00",
-      "card": ""
-    },
-    {
-      "level": "error",
-      "message": "[health] Blogger refresh token missing - cannot publish",
-      "created_at": "2026-11-28T09:15:49.487067+00:00",
+      "message": "promo category: war news",
+      "created_at": "2026-11-28T10:16:01.746567+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run #208 started (--only bluesky)",
-      "created_at": "2026-11-28T09:15:49.485648+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/cargo-shi-gu (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://news.sky.com/story/how-trump-is-blockading-irans-ports-and-ships-in-the-strait-of-hormuz-135 - matches 6 key entities (blockade, iran, iranian, news))",
+      "created_at": "2026-11-28T10:16:01.745322+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-28T08:30:23.744186+00:00",
+      "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (, the photo shows large cargo ships at sea, consistent with the context of a blockade and commercial shipping in the Middle East.)",
+      "created_at": "2026-11-28T10:16:01.743335+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "trending (bluesky): ['Victoria votes in state election', 'Israeli strikes in Gaza', 'Bird photography', \"Most famous person you're related to\", 'Grand Theft Auto VI']",
-      "created_at": "2026-11-28T08:30:23.737687+00:00",
+      "message": "photo: rejected (vision NO): https://static01.nyt.com/images/2025/06/19/us/politics/19DC-MILITARY/19DC-MILITARY-videoSixteenByNin",
+      "created_at": "2026-11-28T10:15:51.695445+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'Iran War Updates: U.S. forces disable commercial s' (The headline refers to U.S. forces disabling a commercial ship, while the photo depicts Iranian naval vessels (specifically a patrol boat and a larger)",
+      "created_at": "2026-11-28T10:15:51.692526+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+      "created_at": "2026-11-28T10:14:10.651101+00:00",
       "card": ""
     }
   ]
