@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T12:22:35.337426+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Grand Theft Auto VI', 'Nvidia reinstates Jensen Huang', \"Anthropic's Claude AI outage and use\"]",
+    "created_at": "2026-11-28T12:22:35.332248+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T12:22:35.163296+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T12:22:35.138286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-28T12:22:34.874064+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T12:22:29.133853+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T12:22:29.132707+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T12:22:29.131585+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #215 started (--only blogger)",
+    "created_at": "2026-11-28T12:22:29.130218+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T12:01:59.181847+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
     "created_at": "2026-11-28T10:13:47.201913+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T10:13:42.428456+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-28T10:13:42.427012+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #210 started (--only bluesky)",
-    "created_at": "2026-11-28T10:13:42.425390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T09:23:18.371880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', 'Israeli strikes in Gaza', 'Boreen daily trivia scores', 'Thanksgiving Day celebrations', \"WWE's AI-voiced Bronson Reed tribute\"]",
-    "created_at": "2026-11-28T09:23:18.366808+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-28T09:23:18.175325+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T09:23:18.173737+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T09:23:17.775487+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T09:23:14.326183+00:00",
     "card": ""
   }
 ]
