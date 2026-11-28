@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T00:23:46.408653+00:00",
-  "last_run": "2026-11-28T00:23:07.237102+00:00",
-  "runs": 194,
+  "generated_at": "2026-11-28T00:42:44.441561+00:00",
+  "last_run": "2026-11-28T00:41:18.409789+00:00",
+  "runs": 195,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-27T23:48:47.432200+00:00",
-    "mastodon.social": "2026-11-27T23:49:31.824834+00:00"
+    "Adsterra Blogger": "2026-11-28T00:42:07.036034+00:00",
+    "mastodon.social": "2026-11-28T00:42:44.264436+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 23,
+      "fail": 24,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T23:48:47.432196+00:00"
+      "last_run": "2026-11-28T00:42:07.036031+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 36,
+      "fail": 37,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-27T23:49:31.824830+00:00"
+      "last_run": "2026-11-28T00:42:44.264430+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T23:48:47.432200+00:00",
-      "runs_today": 0,
+      "last_run": "2026-11-28T00:42:07.036034+00:00",
+      "runs_today": 1,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T06:33:47.432200+06:00",
-        "2026-11-28T06:48:47.432200+06:00",
-        "2026-11-28T07:03:47.432200+06:00",
-        "2026-11-28T07:18:47.432200+06:00",
-        "2026-11-28T07:33:47.432200+06:00"
+        "2026-11-28T06:57:07.036034+06:00",
+        "2026-11-28T07:12:07.036034+06:00",
+        "2026-11-28T07:27:07.036034+06:00",
+        "2026-11-28T07:42:07.036034+06:00",
+        "2026-11-28T07:57:07.036034+06:00"
       ],
       "next_post_times": [
         "2026-11-28T06:53:00+06:00",
@@ -100,7 +100,7 @@
         "2026-11-28T10:56:00+06:00"
       ],
       "success": 71,
-      "fail": 23,
+      "fail": 24,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-27T23:49:31.824834+00:00",
-      "runs_today": 0,
+      "last_run": "2026-11-28T00:42:44.264436+00:00",
+      "runs_today": 1,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T06:34:31.824834+06:00",
-        "2026-11-28T06:49:31.824834+06:00",
-        "2026-11-28T07:04:31.824834+06:00",
-        "2026-11-28T07:19:31.824834+06:00",
-        "2026-11-28T07:34:31.824834+06:00"
+        "2026-11-28T06:57:44.264436+06:00",
+        "2026-11-28T07:12:44.264436+06:00",
+        "2026-11-28T07:27:44.264436+06:00",
+        "2026-11-28T07:42:44.264436+06:00",
+        "2026-11-28T07:57:44.264436+06:00"
       ],
       "next_post_times": [
         "2026-11-28T07:06:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-28T11:02:00+06:00"
       ],
       "success": 18,
-      "fail": 36,
+      "fail": 37,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T00:23:07.238893+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T00:23:07.240417+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T00:41:18.412993+00:00"
     }
   ],
   "dry_run": false,
@@ -294,318 +306,318 @@
     "open": false
   },
   "trending": [
+    "Victoria votes in state election",
     "Most famous person you're related to",
     "Thanksgiving Day celebrations",
-    "Hackers breach Air Force cloud platform",
-    "Poilievre says NDP not for workers",
+    "Banned Nvidia chips reported in Shanghai",
     "Aaron Rodgers reportedly out",
+    "Army detonates lead azide in Iowa",
     "Grand Theft Auto VI",
-    "Macy's parade postponed to Saturday",
     "Thanksgiving storm knocks out power",
     "Anthropic's Claude AI outage and use",
-    "Boreen daily trivia scores"
+    "Blade Runner 2099 series premiere"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-28T00:23:46.347082+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T00:23:46.345225+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-28T00:23:46.000211+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T00:23:07.241728+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-28T00:23:07.240426+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-28T00:23:07.238905+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #194 started (--only blogger)",
-      "created_at": "2026-11-28T00:23:07.237126+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-27T23:49:32.056937+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Israeli strikes in Gaza', 'Victoria votes in state election', \"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai']",
-      "created_at": "2026-11-27T23:49:32.049714+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-27T23:49:31.824868+00:00",
+      "created_at": "2026-11-28T00:42:44.264477+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-27T23:49:31.823693+00:00",
+      "created_at": "2026-11-28T00:42:44.263193+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-27T23:49:31.822004+00:00",
+      "created_at": "2026-11-28T00:42:44.261485+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T23:49:21.819483+00:00",
+      "created_at": "2026-11-28T00:42:34.259328+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T23:49:21.660902+00:00",
+      "created_at": "2026-11-28T00:42:34.085475+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T23:49:21.658369+00:00",
+      "created_at": "2026-11-28T00:42:34.082836+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-27T23:49:15.900040+00:00",
+      "created_at": "2026-11-28T00:42:28.772785+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-27T23:49:15.897533+00:00",
+      "created_at": "2026-11-28T00:42:28.770462+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-27T23:49:15.700840+00:00",
+      "created_at": "2026-11-28T00:42:28.586369+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-27T23:49:15.698296+00:00",
+      "created_at": "2026-11-28T00:42:28.584133+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-27T23:49:11.925123+00:00",
+      "message": "photo candidate: 'From turkey shortages to helicopter deliveries: The extraord' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-28T00:42:24.278488+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-27T23:49:11.923704+00:00",
+      "created_at": "2026-11-28T00:42:24.277279+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Democrats’ plan to end funding for Iran war leaves open what': https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (from bing-images, query 'Democrats', page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - page names the entity (Democrats))",
-      "created_at": "2026-11-27T23:49:11.922546+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'From turkey shortages to helicopter deliveries: The extraord': https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg (from bing-images, query 'turkey shortages helicopter deliveries extraordinary', page: http://www.iabtravel.com/country/turkey/ | Thanksgiving Turkey Recipe - Crunchy Creamy Sweet - matches 2 key entities (thanksgiv, turkey))",
+      "created_at": "2026-11-28T00:42:24.276038+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Democrats’ plan to end funding for Iran war leaves' (, the photo shows Hakeem Jeffries, a prominent Democratic lawmaker who often speaks on such legislative matters.)",
-      "created_at": "2026-11-27T23:49:11.918501+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-28T00:42:24.274713+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem",
-      "created_at": "2026-11-27T23:49:03.951165+00:00",
+      "message": "bing-images: 4 candidate(s) for 'turkey shortages helicopter deliveries extraordinary'",
+      "created_at": "2026-11-28T00:42:24.225493+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (The photo shows a Democratic Party flag overlaid on an American flag, not the actual people, places, or events associated with a specific policy plan )",
-      "created_at": "2026-11-27T23:49:03.949284+00:00",
+      "message": "google-images: 0 candidate(s) for 'turkey shortages helicopter deliveries extraordinary'",
+      "created_at": "2026-11-28T00:42:24.110247+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (vision NO): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo",
-      "created_at": "2026-11-27T23:49:01.182220+00:00",
+      "message": "wikimedia: search HTTP 429 for 'turkey shortages helicopter deliveries extraordinary'",
+      "created_at": "2026-11-28T00:42:23.995978+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for 'Democrats’ plan to end funding for Iran war leaves' (, the photo shows political figures (Donald Trump and Hakeem Jeffries) and a graphic about the House of Representatives, which is unrelated to a news )",
-      "created_at": "2026-11-27T23:49:01.180307+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6043/6262122778_997339a086_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262122778 | Republican Elephant & Democratic Donkey - Ic - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T23:48:49.869546+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/6237/6262151266_4f7648209f_b.jpg",
-      "created_at": "2026-11-27T23:48:49.867975+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6057/6262125702_a086dd49f1_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262125702 | Democratic Donkey - Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T23:48:49.710710+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6240/6261650491_0cd6c701bb_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6261650491 | Republican Elephant & Democratic Donkey - 3D - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T23:48:49.709255+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://live.staticflickr.com/6056/6262191224_6b691b3170_b.jpg (page: https://www.flickr.com/photos/47422005@N04/6262191224 | Democratic Donkey - 3D Icon - page does not name the entity (Democrats))",
-      "created_at": "2026-11-27T23:48:49.707626+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T23:48:49.704846+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats'",
-      "created_at": "2026-11-27T23:48:49.520289+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats'",
-      "created_at": "2026-11-27T23:48:49.420661+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Democrats'",
-      "created_at": "2026-11-27T23:48:49.403986+00:00",
+      "message": "openverse: 0 result(s) for 'turkey shortages helicopter deliveries extraordinary'",
+      "created_at": "2026-11-28T00:42:23.937139+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T23:48:49.371084+00:00",
+      "created_at": "2026-11-28T00:42:23.767179+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T23:48:49.369949+00:00",
+      "created_at": "2026-11-28T00:42:23.765957+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
-      "created_at": "2026-11-27T23:48:49.368837+00:00",
+      "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://wallpaperaccess.com/full/35663.jpg (page: https://www.azernews.az/region/117568.html | Turkey Wallpapers - Top Free Turkey Backgrounds - Wallp - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-28T00:42:23.764799+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T23:48:49.367793+00:00",
+      "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/e09ta7.jpg?itok=nKpCKXNs (page: https://wallpaperaccess.com/turkey | The Wild Blue Turkey That Blew My Mind | Audubon - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-28T00:42:23.763426+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T23:48:49.366558+00:00",
+      "message": "photo: rejected (vision down, strict check): https://www.iabtravel.com/wp-content/uploads/2017/07/TURKEY-COUNTRY-IMAGE.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
+      "created_at": "2026-11-28T00:42:23.761983+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T23:48:49.365186+00:00",
+      "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+      "created_at": "2026-11-28T00:42:23.760570+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T23:48:49.363742+00:00",
+      "message": "photo: rejected (vision NO): https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg",
+      "created_at": "2026-11-28T00:42:23.707585+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T23:48:49.361213+00:00",
+      "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (. The photo shows a cooked Thanksgiving turkey on a platter, not the historical events of Thanksgiving during wartime.)",
+      "created_at": "2026-11-28T00:42:23.705944+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T23:48:49.190309+00:00",
+      "message": "bing-images: 4 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:18.682473+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T23:48:49.082619+00:00",
+      "message": "google-images: 0 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:18.558339+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-      "created_at": "2026-11-27T23:48:49.065895+00:00",
+      "message": "wikimedia: search HTTP 429 for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:18.429706+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:18.369493+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-27T23:48:49.032314+00:00",
+      "created_at": "2026-11-28T00:42:18.091208+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-27T23:48:49.031051+00:00",
+      "created_at": "2026-11-28T00:42:18.090158+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
-      "created_at": "2026-11-27T23:48:49.023337+00:00",
+      "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://wallpaperaccess.com/full/35663.jpg (page: https://www.azernews.az/region/117568.html | Turkey Wallpapers - Top Free Turkey Backgrounds - Wallp - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-28T00:42:18.089062+00:00",
       "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/e09ta7.jpg?itok=nKpCKXNs (page: https://wallpaperaccess.com/turkey | The Wild Blue Turkey That Blew My Mind | Audubon - only 1 of 10 key entities in the source page)",
+      "created_at": "2026-11-28T00:42:18.087880+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://www.iabtravel.com/wp-content/uploads/2017/07/TURKEY-COUNTRY-IMAGE.jpg",
+      "created_at": "2026-11-28T00:42:18.086543+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (. The photo shows the Blue Mosque in Istanbul, Turkey, which is unrelated to the Thanksgiving history headline.)",
+      "created_at": "2026-11-28T00:42:18.085056+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (vision NO): https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg",
+      "created_at": "2026-11-28T00:42:14.856524+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (, the photo shows a roasted turkey on a platter with cranberries and oranges, which does not depict the historical events of Thanksgiving during warti)",
+      "created_at": "2026-11-28T00:42:14.855033+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:08.436867+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:08.237210+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:08.125032+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
+      "created_at": "2026-11-28T00:42:08.064550+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-28T00:42:07.723734+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-28T00:42:07.722591+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'From turkey shortages to helicopter deliveries: The extraord' - rejected (no og:image)",
+      "created_at": "2026-11-28T00:42:07.721466+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxNdE9pdl8xWUpMcHJpN2hCblpsTi1sOHE1RkI3U0dnWFpLUUYtMGpNblpkQjM2bW5QSnB) - skipping, og:image would be the logo",
+      "created_at": "2026-11-28T00:42:07.719277+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-28T00:42:07.176400+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+      "created_at": "2026-11-28T00:42:07.174409+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-28T00:42:07.039458+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-28T00:42:07.037726+00:00",
+      "card": "mastodon.social"
     }
   ]
 }
