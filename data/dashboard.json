@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T07:08:55.053553+00:00",
-  "last_run": "2026-11-28T07:07:27.798281+00:00",
-  "runs": 204,
+  "generated_at": "2026-11-28T07:09:48.230483+00:00",
+  "last_run": "2026-11-28T07:09:44.161409+00:00",
+  "runs": 205,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 1
+    "accounts": 0
   },
   "settings": {
     "paused": "False",
@@ -214,30 +214,12 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [
-    "primonewstoday.bsky.social"
-  ],
-  "accounts_detail": [
-    {
-      "handle": "primonewstoday.bsky.social",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "account_handles": [],
+  "accounts_detail": [],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [
-    {
-      "key": "mastodon.social",
-      "instance": "https://mastodon.social",
-      "username": "",
-      "enabled": true,
-      "posts_limit": 0,
-      "posts_today": 0
-    }
-  ],
+  "mastodon_accounts_detail": [],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -252,12 +234,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": false,
-      "detail": "no BLOGGER_REFRESH_TOKEN secret"
+      "ok": true,
+      "detail": "refresh token present"
     },
     "bluesky": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no BLUESKY_ACCOUNTS secret"
     },
     "reddit": {
       "ok": false,
@@ -272,8 +254,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": true,
-      "detail": "1 account(s)"
+      "ok": false,
+      "detail": "no MASTODON_ACCOUNTS secret"
     },
     "telegram": {
       "ok": false,
@@ -294,10 +276,16 @@
   },
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-28T07:07:27.799725+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-28T07:09:44.163018+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-28T07:09:44.164268+00:00"
     }
   ],
   "dry_run": false,
@@ -319,6 +307,60 @@
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "no card due - nothing published this run",
+      "created_at": "2026-11-28T07:09:47.941522+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-28T07:09:47.939087+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-28T07:09:47.645857+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-28T07:09:44.165475+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "created_at": "2026-11-28T07:09:44.164276+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "[health] No Bluesky accounts - posts and replies are skipped",
+      "created_at": "2026-11-28T07:09:44.163028+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #205 started (--only blogger)",
+      "created_at": "2026-11-28T07:09:44.161428+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-28T07:08:55.056192+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
+      "created_at": "2026-11-28T07:08:55.050657+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
@@ -563,60 +605,6 @@
       "level": "info",
       "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://assets.unsw.press/media/images/9781510756632.original.jpg (page: https://www.roadandtrack.com/car-culture/car-accessories/g37678498/road-trip-books-to-inspire-you-to - only 0 of 9 key entities in the source page)",
       "created_at": "2026-11-28T07:08:19.892949+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://m.media-amazon.com/images/I/81wDOLR48mL._SL1500_.jpg (page: https://newsouthbooks.com.au/books/route-66-ghost-towns-and-roadside-relics/ | Amazon.com: The Ultim - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:19.891810+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://media.s-bol.com/vO5ypL6Y1mM/550x702.jpg (page: https://www.amazon.com/Ultimate-Guide-Historic-Route-Collection-ebook/dp/B0FJV5X3LX | Route 66, Kunt - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:19.888266+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637277306i/59 (page: https://www.bol.com/nl/nl/p/route-66/9200000098052372/ | West on 66 by James H. Cobb | Goodreads - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:19.830792+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:19.801426+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:19.665605+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:19.506745+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:19.423970+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:18.981732+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:18.980776+00:00",
       "card": ""
     }
   ]

@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T07:09:48.233852+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
+    "created_at": "2026-11-28T07:09:48.227521+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T07:09:47.941522+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T07:09:47.939087+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T07:09:47.645857+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T07:09:44.165475+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T07:09:44.164276+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T07:09:44.163028+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #205 started (--only blogger)",
+    "created_at": "2026-11-28T07:09:44.161428+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T07:08:55.056192+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.pinimg.com/originals/ff/91/ee/ff91ee0c1cb98b568577f545edfbddd0.jpg (page: http://www.celebrityendorsementads.com/celebrity-endorsements/celebrities/jared-leto/ | James Franco - only 0 of 14 key entities in the source page)",
     "created_at": "2026-11-28T05:56:47.831208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): http://nitrolicious.com/wp-content/uploads/2011/06/gucci-guilty-pour-homme-ad.jpg (page: https://www.pinterest.com/pin/548594798343642563/ | gucci guilty pour homme ad - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-28T05:56:47.830264+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T05:56:47.828207+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T05:56:47.661010+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T05:56:47.513483+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T05:56:47.439436+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T05:56:46.808443+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T05:56:46.807787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - rejected (no og:image)",
-    "created_at": "2026-11-28T05:56:46.806886+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi5wFBVV95cUxOcDZrYTlOdTVmYnJEelBReDNXdF9CRXAyZHUyVlhQNjczRTk0Q0RNM0FYdWlHY3RQc3R) - skipping, og:image would be the logo",
-    "created_at": "2026-11-28T05:56:46.804556+00:00",
     "card": ""
   }
 ]
