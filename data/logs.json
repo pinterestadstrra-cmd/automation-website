@@ -2,6 +2,342 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T11:11:06.445670+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', 'Boreen daily trivia scores', 'Israeli strike hits Gaza clinic', \"Most famous person you're related to\", 'Bird photography']",
+    "created_at": "2026-11-28T11:11:06.440167+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T11:11:06.286252+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T11:11:06.283206+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-28T11:11:06.281643+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T11:10:56.192338+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T11:10:55.717131+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T11:10:55.715026+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-28T11:10:49.966358+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T11:10:49.964133+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T11:10:49.731253+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T11:10:49.729122+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T11:10:42.078216+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T11:10:42.074405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints ': https://i.ytimg.com/vi/ZbAdB9EQEGE/maxresdefault.jpg (from bing-images, query 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints of War', page: https://lansinginstitute.org/2026/06/23/exhaustion-versus-innovation-russias-economic-constraints-an - matches 4 key entities (ambition, constraint, russia, war))",
+    "created_at": "2026-11-28T11:10:42.072553+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
+    "created_at": "2026-11-28T11:10:42.045711+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:41.827736+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:41.356589+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:41.190366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:41.141763+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T11:10:40.880019+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T11:10:40.872787+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://static01.nyt.com/images/2022/10/05/world/05Russia-Ukraine-briefing-NL-top/05Russia-Ukraine-b",
+    "created_at": "2026-11-28T11:10:40.870728+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia’s Big Ambitions for A.I. Are Undercut by Co' (\n\nReason: The photo shows Vladimir Putin at a rally, which is unrelated to the article's topic about Russia's ambitions for artificial intelligence.)",
+    "created_at": "2026-11-28T11:10:40.844351+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://pbs.twimg.com/media/HHZVOW5W4AA7duj.jpg",
+    "created_at": "2026-11-28T11:10:37.259797+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia’s Big Ambitions for A.I. Are Undercut by Co' (. The photo is a graphic illustration asking whether the USA is learning from Russia regarding military tactics, whereas the headline is a New York Ti)",
+    "created_at": "2026-11-28T11:10:37.258381+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Russia’s Big Ambitions for A.I. Are Undercut by Co'): https://static01.nyt.com/images/2025/03/20/multimedia/20int-russia-attitudes-war-kvgc/20int-russia-a (page: https://x.com/dana916/status/2050921777782550780 | Russian Public Is Ready to End War but Skeptical  - only 1 of 8 key entities in the source page)",
+    "created_at": "2026-11-28T11:10:32.998000+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://i.ytimg.com/vi/ZbAdB9EQEGE/maxresdefault.jpg",
+    "created_at": "2026-11-28T11:10:32.996184+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Russia’s Big Ambitions for A.I. Are Undercut by Co' (; the photo is a digitally created composite featuring a large missile, soldiers, and Vladimir Putin, rather than a direct depiction of the people, pl)",
+    "created_at": "2026-11-28T11:10:32.994639+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:26.368832+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:25.923760+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:25.680217+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints '",
+    "created_at": "2026-11-28T11:10:25.578527+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T11:10:25.187660+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T11:10:25.186608+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Russia’s Big Ambitions for A.I. Are Undercut by Constraints ' - rejected (no og:image)",
+    "created_at": "2026-11-28T11:10:25.185411+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiiAFBVV95cUxORi1McEY4Z0s0WFpoM1JMenFlX1hiejdjbExuMkwyNlI4cWljR0V2V2pkcEV0NDRZYXM) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T11:10:25.183176+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T11:10:24.552535+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war live: Iran’s army ready to respond to any attack ‘f' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T11:10:24.550688+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T11:10:24.062746+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T11:10:24.061383+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T11:10:24.058924+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T11:10:24.057176+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T11:10:24.055789+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 1200x630 (ratio 1.90) - unchanged",
+    "created_at": "2026-11-28T11:10:23.860914+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 1200x630 (ratio 1.90) - kept, no crop",
+    "created_at": "2026-11-28T11:10:23.859894+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran war live: Iran’s army ready to respond to any attack ‘f'",
+    "created_at": "2026-11-28T11:10:23.858100+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T11:10:23.559632+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-28T11:10:23.558501+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T11:10:23.548456+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T11:10:22.260378+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T11:10:22.258744+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
+    "created_at": "2026-11-28T11:10:21.984616+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T11:10:12.069353+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-28T11:10:12.067477+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #212 started (--only bluesky)",
+    "created_at": "2026-11-28T11:10:12.066086+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T10:26:10.546658+00:00",
     "card": ""
   },
@@ -862,341 +1198,5 @@
     "message": "[health] No Bluesky accounts - posts and replies are skipped",
     "created_at": "2026-11-28T08:30:20.851519+00:00",
     "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #207 started (--only blogger)",
-    "created_at": "2026-11-28T08:30:20.850087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T08:20:32.641148+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', 'Israeli strikes in Gaza', \"Most famous person you're related to\", \"WWE's AI-voiced Bronson Reed tribute\", 'Banned Nvidia chips reported in Shanghai']",
-    "created_at": "2026-11-28T08:20:32.636450+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T08:20:32.520096+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T08:20:32.519106+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-28T08:20:32.517493+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T08:20:22.515239+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T08:20:22.365452+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T08:20:22.363189+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-28T08:20:17.057234+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T08:20:17.055033+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T08:20:16.877406+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T08:20:16.875227+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Italy says drone in deadly Kuwait attack was ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-28T08:20:14.463813+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-28T08:20:14.462730+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran war live: Italy says drone in deadly Kuwait attack was ': https://www.aljazeera.com/wp-content/uploads/2026/11/image-1795823699.jpg?resize=1920%2C1080&quality (from bing-images, query 'Iran war live: Italy says drone in deadly Kuwait attack was made in Iran - Al Jazeera', page: https://www.youtube.com/watch?v=B5PLIOefr74 | Iran war live: Italy says drone in deadly Kuwait attac - matches 9 key entities (attack, deadly, drone, iran))",
-    "created_at": "2026-11-28T08:20:14.461619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran war live: Italy says drone in deadly Kuwait a' (. The image is an infrared or thermal-imaging still depicting a military attack or drone strike, which aligns with the news headline regarding a deadl)",
-    "created_at": "2026-11-28T08:20:14.460063+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: candidate rejected (download/verify failed): https://www.theweek.in/content/dam/week/week/news/defence/images/2026/3/16/mq-9a.jpg",
-    "created_at": "2026-11-28T08:20:11.026465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
-    "created_at": "2026-11-28T08:20:10.845143+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
-    "created_at": "2026-11-28T08:20:10.478181+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
-    "created_at": "2026-11-28T08:20:10.358193+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
-    "created_at": "2026-11-28T08:20:10.238666+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T08:20:09.862415+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T08:20:09.861472+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war live: Italy says drone in deadly Kuwait attack was ' - rejected (no og:image)",
-    "created_at": "2026-11-28T08:20:09.860304+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxQYzBBRkZMZURBWnVObzlNUWJSQ2RMMmRtSUdWN1QwMVpaZExyRVNwOFBHRXRnTDhvaG1) - skipping, og:image would be the logo",
-    "created_at": "2026-11-28T08:20:09.849580+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T08:20:09.037282+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T08:20:09.035849+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T08:20:09.034426+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T08:20:09.033465+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T08:20:09.031962+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 1920x1080 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-28T08:20:08.483142+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 1920x1080 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-28T08:20:08.482205+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-28T08:20:08.480492+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T08:20:08.372041+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-28T08:20:08.370537+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T08:20:08.368963+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T08:20:07.196920+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T08:20:07.195324+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T08:20:06.910918+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T08:20:06.063041+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-28T08:20:06.061969+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #206 started (--only bluesky)",
-    "created_at": "2026-11-28T08:20:06.043546+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T07:09:48.233852+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
-    "created_at": "2026-11-28T07:09:48.227521+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-28T07:09:47.941522+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T07:09:47.939087+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T07:09:47.645857+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T07:09:44.165475+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-28T07:09:44.164276+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-28T07:09:44.163028+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #205 started (--only blogger)",
-    "created_at": "2026-11-28T07:09:44.161428+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T07:08:55.056192+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
-    "created_at": "2026-11-28T07:08:55.050657+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T07:08:54.905317+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T07:08:54.904076+00:00",
-    "card": "mastodon.social"
   }
 ]
