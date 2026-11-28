@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T03:56:26.154980+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['NBA Cup group play games', \"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', \"WWE's AI-voiced Bronson Reed tribute\", 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-28T03:56:26.148565+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T03:56:26.084075+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T03:56:26.082306+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T03:56:25.731642+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T03:56:23.034172+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T03:56:23.032866+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T03:56:23.031550+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #200 started (--only blogger)",
+    "created_at": "2026-11-28T03:56:23.030022+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T02:59:12.426247+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "pexels: API key not configured - skipping",
     "created_at": "2026-11-28T00:41:32.886522+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - rejected (no og:image)",
-    "created_at": "2026-11-28T00:41:32.884778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzB) - skipping, og:image would be the logo",
-    "created_at": "2026-11-28T00:41:32.882446+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-28T00:41:32.309561+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Iran War Updates: U.S. forces disable commercial ship that a' for card 'Adsterra Blogger' (queue now 1)",
-    "created_at": "2026-11-28T00:41:32.093364+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-28T00:41:28.066287+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-28T00:41:28.064568+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.reporterworldnews.com/news/world/2026/11/25/iran-accuses-us-ai-powered-attacks-calls-for - matches 2 key entities (iran, news))",
-    "created_at": "2026-11-28T00:41:28.061911+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (, the photo shows the national flag of Iran, which is directly relevant to a news headline concerning a blockade on Iranian ports and conflict involvi)",
-    "created_at": "2026-11-28T00:41:28.059924+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran War Updates: U.S. forces disable commercial s'): https://insiderpaper.com/wp-content/uploads/2023/12/iran-1151139_1280.jpg (page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - only 1 of 15 key entities in the source page)",
-    "created_at": "2026-11-28T00:41:23.480181+00:00",
     "card": ""
   }
 ]
