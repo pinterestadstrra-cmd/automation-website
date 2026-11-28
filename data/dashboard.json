@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-28T05:57:24.243159+00:00",
-  "last_run": "2026-11-28T05:56:42.685611+00:00",
-  "runs": 203,
+  "generated_at": "2026-11-28T07:08:55.053553+00:00",
+  "last_run": "2026-11-28T07:07:27.798281+00:00",
+  "runs": 204,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T05:56:45.849192+00:00",
-    "mastodon.social": "2026-11-28T05:57:24.124311+00:00"
+    "Adsterra Blogger": "2026-11-28T07:08:18.683486+00:00",
+    "mastodon.social": "2026-11-28T07:08:54.905286+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 29,
+      "fail": 30,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T05:56:45.849190+00:00"
+      "last_run": "2026-11-28T07:08:18.683482+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 42,
+      "fail": 43,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T05:57:24.124309+00:00"
+      "last_run": "2026-11-28T07:08:54.905283+00:00"
     }
   },
   "file_cards": [
@@ -82,25 +82,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T05:56:45.849192+00:00",
+      "last_run": "2026-11-28T07:08:18.683486+00:00",
       "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T12:11:45.849192+06:00",
-        "2026-11-28T12:26:45.849192+06:00",
-        "2026-11-28T12:41:45.849192+06:00",
-        "2026-11-28T12:56:45.849192+06:00",
-        "2026-11-28T13:11:45.849192+06:00"
+        "2026-11-28T13:23:18.683486+06:00",
+        "2026-11-28T13:38:18.683486+06:00",
+        "2026-11-28T13:53:18.683486+06:00",
+        "2026-11-28T14:08:18.683486+06:00",
+        "2026-11-28T14:23:18.683486+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T12:02:00+06:00",
-        "2026-11-28T13:07:00+06:00",
         "2026-11-28T13:52:00+06:00",
         "2026-11-28T14:57:00+06:00",
-        "2026-11-28T16:07:00+06:00"
+        "2026-11-28T16:07:00+06:00",
+        "2026-11-28T17:08:00+06:00",
+        "2026-11-28T18:10:00+06:00"
       ],
       "success": 71,
-      "fail": 29,
+      "fail": 30,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T05:57:24.124311+00:00",
+      "last_run": "2026-11-28T07:08:54.905286+00:00",
       "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T12:12:24.124311+06:00",
-        "2026-11-28T12:27:24.124311+06:00",
-        "2026-11-28T12:42:24.124311+06:00",
-        "2026-11-28T12:57:24.124311+06:00",
-        "2026-11-28T13:12:24.124311+06:00"
+        "2026-11-28T13:23:54.905286+06:00",
+        "2026-11-28T13:38:54.905286+06:00",
+        "2026-11-28T13:53:54.905286+06:00",
+        "2026-11-28T14:08:54.905286+06:00",
+        "2026-11-28T14:23:54.905286+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T12:08:00+06:00",
-        "2026-11-28T12:52:00+06:00",
         "2026-11-28T13:56:00+06:00",
         "2026-11-28T15:01:00+06:00",
-        "2026-11-28T16:07:00+06:00"
+        "2026-11-28T16:07:00+06:00",
+        "2026-11-28T16:51:00+06:00",
+        "2026-11-28T17:55:00+06:00"
       ],
       "success": 18,
-      "fail": 42,
+      "fail": 43,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -297,7 +297,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-28T05:56:42.686615+00:00"
+      "time": "2026-11-28T07:07:27.799725+00:00"
     }
   ],
   "dry_run": false,
@@ -306,317 +306,317 @@
     "open": false
   },
   "trending": [
-    "NBA Cup group play games",
+    "Victoria votes in state election",
     "Most famous person you're related to",
-    "Thanksgiving Day celebrations",
     "Israeli strikes in Gaza",
-    "Banned Nvidia chips reported in Shanghai",
-    "Army detonates lead azide in Iowa",
-    "Sunrise on the Reaping's $225M debut",
-    "Disney's Hexed hits theaters",
-    "Gates Foundation funds AI school tools",
-    "Aaron Rodgers reportedly out"
+    "Grand Theft Auto VI",
+    "WWE's AI-voiced Bronson Reed tribute",
+    "Thanksgiving Day celebrations",
+    "Boreen daily trivia scores",
+    "Anthropic's Claude AI outage and use",
+    "NBA Cup group play games",
+    "Banned Nvidia chips reported in Shanghai"
   ],
   "recent_posts": [],
   "logs": [
     {
       "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T05:57:24.124347+00:00",
+      "created_at": "2026-11-28T07:08:54.905317+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T05:57:24.123530+00:00",
+      "created_at": "2026-11-28T07:08:54.904076+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-28T05:57:24.121060+00:00",
+      "created_at": "2026-11-28T07:08:54.902392+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T05:57:14.118957+00:00",
+      "created_at": "2026-11-28T07:08:44.899847+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T05:57:13.708163+00:00",
+      "created_at": "2026-11-28T07:08:44.667647+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T05:57:13.704754+00:00",
+      "created_at": "2026-11-28T07:08:44.665344+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-28T05:57:08.281222+00:00",
+      "created_at": "2026-11-28T07:08:39.230439+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T05:57:08.279200+00:00",
+      "created_at": "2026-11-28T07:08:39.228180+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T05:57:08.038948+00:00",
+      "created_at": "2026-11-28T07:08:38.789814+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T05:57:08.036777+00:00",
+      "created_at": "2026-11-28T07:08:38.787074+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-28T05:57:01.423765+00:00",
+      "message": "photo candidate: 'Ukraine is bowed but still unbroken as freezing weather sets' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-28T07:08:31.417571+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-28T05:57:01.423111+00:00",
+      "created_at": "2026-11-28T07:08:31.416614+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy criticises Trump for calling': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-      "created_at": "2026-11-28T05:57:01.422428+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine is bowed but still unbroken as freezing weather sets': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+      "created_at": "2026-11-28T07:08:31.415516+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Ukraine war briefing: Zelenskyy criticises Trump f' (vision: YES)",
-      "created_at": "2026-11-28T05:57:01.421184+00:00",
+      "message": "vision: YES - photo matches 'Ukraine is bowed but still unbroken as freezing we' (The photo shows Ukrainian President Volodymyr Zelenskyy, who is the central figure representing Ukraine's leadership amidst the ongoing war and condit)",
+      "created_at": "2026-11-28T07:08:31.414058+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
-      "created_at": "2026-11-28T05:56:56.356515+00:00",
+      "created_at": "2026-11-28T07:08:26.151654+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: NO - photo rejected for 'Ukraine war briefing: Zelenskyy criticises Trump f' (\n\nThe photo depicts two women in traditional Slavic dress in a forest, which is unrelated to the political news headline about the Ukraine war, Volody)",
-      "created_at": "2026-11-28T05:56:56.354770+00:00",
+      "message": "vision: NO - photo rejected for 'Ukraine is bowed but still unbroken as freezing we' (, the photo depicts women in traditional attire in a sunny, green forest setting, which does not relate to the headline about freezing weather in Ukra)",
+      "created_at": "2026-11-28T07:08:26.150157+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-28T05:56:49.945846+00:00",
+      "created_at": "2026-11-28T07:08:22.374329+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-28T05:56:49.786466+00:00",
+      "created_at": "2026-11-28T07:08:22.232916+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
-      "created_at": "2026-11-28T05:56:49.660502+00:00",
+      "message": "wikimedia: 5 result(s) for 'Ukraine'",
+      "created_at": "2026-11-28T07:08:22.054331+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-28T05:56:49.589186+00:00",
+      "created_at": "2026-11-28T07:08:21.541901+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:49.549516+00:00",
+      "created_at": "2026-11-28T07:08:21.506752+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:49.548962+00:00",
+      "created_at": "2026-11-28T07:08:21.505714+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: topical search found nothing for 'Ukraine war briefing: Zelenskyy criticises Trump f' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-28T05:56:49.548407+00:00",
+      "message": "photo: topical search found nothing for 'Ukraine is bowed but still unbroken as freezing we' - trying entity search 'Ukraine'",
+      "created_at": "2026-11-28T07:08:21.504682+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://media.gettyimages.com/id/634264431/photo/english-pop-group-the-beatles-from-left-to-right-pa (page: https://www.gettyimages.com/photos/the-beatles | Meet The Beatles Photos and Premium High Res Pictur - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:49.547815+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/59868657/r/il/963d84/7056148439/il_fullxfull.7056148439_ggte.jpg (page: https://www.etsy.com/listing/1744642482/jujutsu-kaisen-cosplay-suguru-geto-and | Jujutsu Kaisen Sugu - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:21.502791+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Beatles_Abbey_Road_album_cover.jpg/128 (page: https://www.gettyimages.ie/photos/meet-the-beatles | The Beatles - Wikiwand - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:49.547180+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/54689242/c/1080/1080/0/389/il/8f799a/6575029756/il_800x800.6575029756_fx4n. (page: https://shopee.ph/Jujutsu-Kaisen-cosplay-costume-Geto-Suguru-cosplay-Set-and-wig-Cassock-Halloween-c - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:21.501594+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://people.com/thmb/WcibMNwXvbWNqR0nS_R57IGsQPU=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://www.wikiwand.com/en/The_Beatles | The Beatles Members: All About Paul, John, George and Ring - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:49.546512+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/59868657/r/il/2bcad0/7008166944/il_1080xN.7008166944_o2gm.jpg (page: https://www.etsy.com/market/jujutsu_kaisen_geto_cosplay | Jujutsu Kaisen Suguru Geto Cosplay Costume - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:21.500470+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://people.com/thmb/CplcKZdXLbtkzkp9qSbgeRyzagQ=/750x0/filters:no_upscale():max_bytes(150000):st (page: https://people.com/all-about-the-beatles-members-legendary-band-7497753 | The Beatles Members: All A - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:49.545779+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/55367214/c/2266/2266/0/83/il/e9870d/6402696266/il_800x800.6402696266_n3zt.j (page: https://www.etsy.com/listing/4333057921/jujutsu-kaisen-suguru-geto-cosplay | Jujutsu Kaisen Geto Cos - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:21.499310+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Zelenskyy criticises'",
-      "created_at": "2026-11-28T05:56:49.543800+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine bowed but still unbroken'",
+      "created_at": "2026-11-28T07:08:21.496930+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Zelenskyy criticises'",
-      "created_at": "2026-11-28T05:56:49.406594+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine bowed but still unbroken'",
+      "created_at": "2026-11-28T07:08:21.366636+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Zelenskyy criticises'",
-      "created_at": "2026-11-28T05:56:49.260620+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine bowed but still unbroken'",
+      "created_at": "2026-11-28T07:08:21.235992+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing Zelenskyy criticises'",
-      "created_at": "2026-11-28T05:56:49.183366+00:00",
+      "message": "openverse: 0 result(s) for 'Ukraine bowed but still unbroken'",
+      "created_at": "2026-11-28T07:08:21.146410+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:48.772908+00:00",
+      "created_at": "2026-11-28T07:08:20.771460+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:48.772111+00:00",
+      "created_at": "2026-11-28T07:08:20.769916+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://cdn.dribbble.com/userupload/17970489/file/original-78e05760798a830718bbfbd7be8ed2e6.jpg?resi (page: https://www.vectorstock.com/royalty-free-vector/abstract-square-vertex-technology-logo-design-vector - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:48.771456+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://wallpapers.com/images/hd/black-screen-background-0hs654ce3dfbthdl.jpg (page: [500+] Black Screen Backgrounds | Wallpapers.com - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:20.754882+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47e68b131171709.618f80cc44303.png (page: https://dribbble.com/shots/25321398-Vertex-Letter-V-Technology-Logo-Design-Company-Logo | Vertex log - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:48.770718+00:00",
+      "message": "bing-images: 1 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:20.731872+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.pinimg.com/originals/2e/e7/4e/2ee74eec0ad21068143f868c46eb08c2.jpg (page: https://www.behance.net/gallery/131171709/Vertex-logo-design | Vertex Logo Design by Milon Mia - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:48.770018+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:20.580979+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://img.freepik.com/premium-vector/modern-letter-vertex-with-luxury-gradient-logo-design-templat (page: https://www.pinterest.com/pin/vertex-logo-design-by-milon-mia--1097893215398025701/ | Premium Vector - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:48.769236+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:20.449106+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:48.766852+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:48.623103+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:48.472270+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:48.396941+00:00",
+      "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:20.366042+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:47.834833+00:00",
+      "created_at": "2026-11-28T07:08:19.895082+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T05:56:47.834231+00:00",
+      "created_at": "2026-11-28T07:08:19.894046+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://media.gucci.com/style/HEXE0E8E5_Center_0_0_2400x2400/1663173108/707848_FAAQY_7141_007_100_00 (page: https://www.fragrantica.com/news/Gucci-Guilty-Pour-Homme-1872.html | Baskets Gazelle adidas x Gucci  - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:47.833589+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://assets.unsw.press/media/images/9781510756632.original.jpg (page: https://www.roadandtrack.com/car-culture/car-accessories/g37678498/road-trip-books-to-inspire-you-to - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:19.892949+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): http://www.celebrityendorsementads.com/celebrity-endorsements/celebrities/jared-leto/images/gucci-gu (page: https://www.gucci.com/be/fr/pr/men/shoes-for-men/sneakers-for-men/low-top-sneakers-for-men/adidas-x- - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:47.832816+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://m.media-amazon.com/images/I/81wDOLR48mL._SL1500_.jpg (page: https://newsouthbooks.com.au/books/route-66-ghost-towns-and-roadside-relics/ | Amazon.com: The Ultim - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:19.891810+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.pinimg.com/originals/ff/91/ee/ff91ee0c1cb98b568577f545edfbddd0.jpg (page: http://www.celebrityendorsementads.com/celebrity-endorsements/celebrities/jared-leto/ | James Franco - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:47.831208+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://media.s-bol.com/vO5ypL6Y1mM/550x702.jpg (page: https://www.amazon.com/Ultimate-Guide-Historic-Route-Collection-ebook/dp/B0FJV5X3LX | Route 66, Kunt - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:19.888266+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): http://nitrolicious.com/wp-content/uploads/2011/06/gucci-guilty-pour-homme-ad.jpg (page: https://www.pinterest.com/pin/548594798343642563/ | gucci guilty pour homme ad - only 0 of 14 key entities in the source page)",
-      "created_at": "2026-11-28T05:56:47.830264+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1637277306i/59 (page: https://www.bol.com/nl/nl/p/route-66/9200000098052372/ | West on 66 by James H. Cobb | Goodreads - only 0 of 9 key entities in the source page)",
+      "created_at": "2026-11-28T07:08:19.830792+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:47.828207+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:19.801426+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:47.661010+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:19.665605+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T05:56:47.513483+00:00",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:19.506745+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+      "created_at": "2026-11-28T07:08:19.423970+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-28T07:08:18.981732+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-28T07:08:18.980776+00:00",
       "card": ""
     }
   ]
