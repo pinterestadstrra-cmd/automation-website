@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T09:23:18.371880+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Victoria votes in state election', 'Israeli strikes in Gaza', 'Boreen daily trivia scores', 'Thanksgiving Day celebrations', \"WWE's AI-voiced Bronson Reed tribute\"]",
+    "created_at": "2026-11-28T09:23:18.366808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T09:23:18.175325+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T09:23:18.173737+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T09:23:17.775487+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T09:23:14.326183+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T09:23:14.325169+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T09:23:14.323607+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #209 started (--only blogger)",
+    "created_at": "2026-11-28T09:23:14.319443+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T09:17:31.136126+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Zelenskyy criticises'",
     "created_at": "2026-11-28T07:08:03.354307+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Ukraine war briefing Zelenskyy criticises'",
-    "created_at": "2026-11-28T07:08:03.216906+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T07:08:02.872815+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T07:08:02.871745+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.etsystatic.com/43152122/r/il/8961c9/5428404280/il_fullxfull.5428404280_g9yd.jpg (page: https://triviacreator.com/quiz/c-OXxDB | Dog Breeds Poster | Popular Dogs Infographic (downloadable) - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-28T07:08:02.869554+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://static.vecteezy.com/system/resources/previews/009/640/097/original/dog-breeds-collection-vec (page: https://www.etsy.com/listing/1593629539/dog-breeds-poster-popular-dogs | Types Of Dog Breeds - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-28T07:08:02.868345+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://doggiebreeds.com/wp-content/uploads/2017/04/Dog-Breeds-Alphabetical-With-Pictures.jpg (page: https://petsanimalsworld.com/types-of-dog-breeds/ | The Most Favorite Dog Breeds A to Z With Dog Bre - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-28T07:08:02.866465+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://englishilm.com/wp-content/uploads/2025/06/Breeds-of-dogs.png (page: https://doggiebreeds.com/dog-breeds-a-to-z/ | Dog Breeds with Pictures | Types of Dogs Names • Engli - only 0 of 14 key entities in the source page)",
-    "created_at": "2026-11-28T07:08:02.865322+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T07:08:02.862822+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-    "created_at": "2026-11-28T07:08:02.729917+00:00",
     "card": ""
   }
 ]
