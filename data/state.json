@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 195,
-  "last_run": "2026-11-28T00:41:18.409789+00:00",
+  "runs": 196,
+  "last_run": "2026-11-28T01:52:43.369362+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -421,10 +421,16 @@
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "error",
+      "level": "warning",
       "code": "health",
-      "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-28T00:41:18.412993+00:00"
+      "message": "No Bluesky accounts - posts and replies are skipped",
+      "time": "2026-11-28T01:52:43.370588+00:00"
+    },
+    {
+      "level": "warning",
+      "code": "health",
+      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+      "time": "2026-11-28T01:52:43.371555+00:00"
     }
   ],
   "posted_urls": [],
