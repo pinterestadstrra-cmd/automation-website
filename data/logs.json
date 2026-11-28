@@ -2,6 +2,318 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T02:06:06.412502+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Gates Foundation funds AI school tools', 'Bronson Reed dies at 38', \"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', 'Army detonates lead azide in Iowa']",
+    "created_at": "2026-11-28T02:06:06.405588+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T02:06:06.385072+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T02:06:06.383667+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-28T02:06:06.378362+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T02:05:56.375609+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T02:05:56.186983+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T02:05:56.183636+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-28T02:05:50.613104+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T02:05:50.610605+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T02:05:50.276840+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T02:05:50.274241+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T02:05:44.136516+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T02:05:44.135417+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://media.cnn.com/api/v1/images/stellar/prod/still-22502621-3045094-347-still-crop.jpg?c=16x9&q= (from bing-images, query 'Trump: Iran war will be over ‘sort of whenever I want it to be’', page: https://www.msn.com/en-in/news/world/trump-says-iran-war-could-be-over-soon-reveals-big-strait-of-ho - matches 3 key entities (iran, trump, war))",
+    "created_at": "2026-11-28T02:05:44.134157+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (\n\nReason: The photo features Donald Trump speaking at a podium with presidential seals, which matches the subject of the news headline.)",
+    "created_at": "2026-11-28T02:05:44.132505+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:35.107073+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.985211+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.876078+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.857979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T02:05:34.810509+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T02:05:34.809308+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thepoliticalprepper.com/wp-content/uploads/2026/10/President_Donald_Trump_Signing_An_Executi (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-28T02:05:34.808078+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://c.ndtvimg.com/2026-11/190s7vhc_trump-bloomberg_625x300_02_November_26.jpeg (page: https://thepoliticalprepper.com/trump-americans-remember-family-god-holiday-season/ | Trump Bets On  - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-28T02:05:34.806842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.ndtv.com/world-news/trump-bets-on-his-rallies-speeches-for-republicans-midterms-win-1226 - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-28T02:05:34.805442+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Something - only 1 of 7 key entities in the source page)",
+    "created_at": "2026-11-28T02:05:34.804216+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.801152+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.651484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.467289+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
+    "created_at": "2026-11-28T02:05:34.446441+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T02:05:34.220968+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T02:05:34.219972+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
+    "created_at": "2026-11-28T02:05:34.218643+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T02:05:34.215920+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T02:05:33.900612+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T02:05:33.423090+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T02:05:33.421622+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T02:05:33.420274+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T02:05:33.418927+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T02:05:33.417438+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-28T02:05:33.288944+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-28T02:05:33.287778+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T02:05:33.285635+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T02:05:33.115379+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-28T02:05:33.114061+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T02:05:33.112349+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T02:05:31.843511+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T02:05:31.841585+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T02:05:31.395136+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T02:05:28.633548+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-28T02:05:28.632136+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #197 started (--only bluesky)",
+    "created_at": "2026-11-28T02:05:28.630483+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T01:52:47.013787+00:00",
     "card": ""
   },
@@ -885,318 +1197,6 @@
     "level": "info",
     "message": "photo: topical search found nothing for 'Democrats’ plan to end funding for Iran war leaves' - trying entity search 'Democrats'",
     "created_at": "2026-11-27T23:48:49.368837+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.367793+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.366558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.365186+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.363742+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T23:48:49.361213+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T23:48:49.190309+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T23:48:49.082619+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats plan end funding Iran'",
-    "created_at": "2026-11-27T23:48:49.065895+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:49.032314+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:49.031051+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.023337+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.022061+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.020666+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:49.019478+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:49.017125+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.897558+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.777881+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.761367+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:48.727603+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:48.726467+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.yournews.com/2026/10/shutterstock_2608888649-scaled.jpg (page: https://americanbazaaronline.com/2026/11/23/democrats-make-history-with-biggest-us-house-majority-si - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:48.725390+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://assets.maestronewsroom.com/media/shared/wires/reuters/20261118/c4fe3cd216d7-2026-11-18T17242 (page: https://yournews.com/2026/11/23/7279254/democrats-secure-largest-house-majority-in-decades-setting-s - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:48.724113+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://static.toiimg.com/thumb/msid-136102488,imgsize-1207913,width-400,height-225,resizemode-4/dem (page: https://www.arabnews.com/world/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the- - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:48.722814+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Democrats’ plan to end funding for Iran war leaves'): https://images.timesnownews.com/thumb/msid-156551615,thumbsize-129973,width-1280,height-720,resizemo (page: https://timesofindia.indiatimes.com/world/us/us-democrats-to-hold-12-presidential-primary-debates-ah - only 1 of 12 key entities in the source page)",
-    "created_at": "2026-11-27T23:48:48.721549+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.719163+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.580222+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.473922+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Democrats’ plan to end funding for Iran war leaves open what'",
-    "created_at": "2026-11-27T23:48:48.451256+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:48.223369+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-27T23:48:48.222212+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Democrats’ plan to end funding for Iran war leaves open what' - rejected (no og:image)",
-    "created_at": "2026-11-27T23:48:48.220696+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMikAFBVV95cUxPUUhrUHE4bV96ODIwUnRhWG9jbS1jUFNOUGc3amdUMWJGX0QyanFoLUhaeDc0Z3M4Szh) - skipping, og:image would be the logo",
-    "created_at": "2026-11-27T23:48:48.218375+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T23:48:47.435065+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-27T23:48:47.433641+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-27T23:48:47.432233+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-27T23:48:47.430899+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T23:48:47.429643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-27T23:48:47.377454+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-27T23:48:47.376371+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: Trump says he's giving Iran \"a chance to b'",
-    "created_at": "2026-11-27T23:48:47.374252+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T23:48:47.161638+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-27T23:48:47.160229+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T23:48:47.158569+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T23:48:46.546437+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T23:48:46.468500+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-27T23:48:46.399896+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-27T23:48:45.848777+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-27T23:48:45.846819+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-27T23:48:45.434726+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-27T23:48:38.655558+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-27T23:48:38.654195+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #193 started (--only bluesky)",
-    "created_at": "2026-11-27T23:48:38.652638+00:00",
     "card": ""
   }
 ]
