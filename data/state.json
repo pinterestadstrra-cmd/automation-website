@@ -2,7 +2,7 @@
   "run_card_now": "",
   "test_card_now": "",
   "runs": 200,
-  "last_run": "2026-11-28T03:56:23.029999+00:00",
+  "last_run": "2026-11-28T03:56:01.919024+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 26,
+      "fail": 27,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T02:58:27.939720+00:00"
+      "last_run": "2026-11-28T03:56:29.678269+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 39,
+      "fail": 40,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T02:59:12.305932+00:00"
+      "last_run": "2026-11-28T03:58:35.614503+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T02:58:27.939723+00:00",
-    "mastodon.social": "2026-11-28T02:59:12.305938+00:00"
+    "Adsterra Blogger": "2026-11-28T03:56:29.678273+00:00",
+    "mastodon.social": "2026-11-28T03:58:35.614509+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -421,16 +421,10 @@
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T03:56:23.031539+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T03:56:23.032857+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T03:56:01.920749+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "Adsterra Blogger": {
-      "fails": 9,
+      "fails": 10,
       "next_retry": ""
     },
     "mastodon.social": {
-      "fails": 9,
+      "fails": 10,
       "next_retry": ""
     }
   },
@@ -632,27 +626,27 @@
         "photo_source": "bing-images",
         "photo_alt": "Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News",
         "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2hfZGl0MVZmV1ZQZTFoUkpFNDVMM3E5bVhpZTRWdWZ5SVQtTEx6UFBGRWRkNjM0b0hvbnRpNzJscmVLMG95Mk1vUGt0YW1DQmxxbTZzUEVVOFJWdTVGNThiLU9G?oc=5",
-        "hook": "Wait, U.S. forces just DID WHAT?! 😳 This is escalating fast.",
-        "prepared_at": "2026-11-28T00:41:32.093345+00:00"
+        "hook": "U.S. forces just disabled a commercial ship trying to breach the Iran blockade! Things are escalating fast.",
+        "prepared_at": "2026-11-28T03:56:18.308031+00:00"
       },
       {
         "topic": "war news",
         "headline": "Iran war updates: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera",
-        "photo_url": "https://insiderpaper.com/wp-content/uploads/2023/12/iran-1151139_1280.jpg",
+        "photo_url": "https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg",
         "photo_source": "bing-images",
         "photo_alt": "Iran war updates: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera",
         "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzBTalBNX1R1QW01ai1IWFBTQkdKa0dGVTgwaTVaRDR5ZWVHOWlKWkdxN21qa3JzclhuTlJUUjA3NnhwN1pDQXVOLUh4Q203dmhVaFR1VzVHTGNmaVFUSDN1UUNrem5ITzFlbTg5ekpsTjlBYk1kckFOSkJQdS00YllVTnNPbWU20gG-AUFVX3lxTE5EdzdTTDR0WkNDT0hEeDZHenktRk9fWjIzVl91WFo1RUxCWFZHUHVtS3F4SkVRWU8tTE9EeHFlZ3VLdHg3MnlNSlVrVktUV0FwTy1WOV9TY1JWaDUwRF9aQThHbTZZS0o0RlljdTJuV05DOHhSSkZaTDNJZEl1WEpvMWVDdFlnSnBPb2JTOXFpb2lvR0hfMFV0M1VmeFFmZl80UEotdWhzSHh6TWtwU2FxeE1BZENfRndsdlFhQ2c?oc=5",
-        "hook": "🚨 HUGE: The IRGC just claimed an oil tanker was hit in the Strait of Hormuz—and a drone was downed in southeast Iran. Things are escalating FAST.",
-        "prepared_at": "2026-11-28T00:42:04.830762+00:00"
+        "hook": "🚨 MAJOR: The IRGC just claimed an oil tanker was hit in the Strait of Hormuz and a drone was downed in southeast Iran. Things are escalating FAST.",
+        "prepared_at": "2026-11-28T03:56:28.081780+00:00"
       }
     ]
   },
   "mastodon_post_counts": {
-    "2026-11-25": {
-      "mastodon.social": 9
-    },
     "2026-11-26": {
       "mastodon.social": 6
+    },
+    "2026-11-25": {
+      "mastodon.social": 9
     }
   },
   "last_mastodon_post_at": {

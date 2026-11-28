@@ -2,6 +2,462 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T03:58:35.781185+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['NBA Cup group play games', \"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', \"WWE's AI-voiced Bronson Reed tribute\", 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-28T03:58:35.774689+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T03:58:35.614543+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T03:58:35.613035+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-28T03:58:35.611130+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T03:58:25.608784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T03:58:25.340587+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T03:58:25.338085+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-28T03:58:19.952338+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T03:58:19.949971+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T03:58:19.597952+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T03:58:19.595615+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine is bowed but still unbroken as freezing weather sets' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T03:58:12.173377+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T03:58:12.171957+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine is bowed but still unbroken as freezing weather sets': https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (from bing-images, query 'Ukraine', page: https://stock.adobe.com/images/war-in-ukraine-2024-russian-invasion-with-key-cities-and-direction-ve - page names the entity (Ukraine))",
+    "created_at": "2026-11-28T03:58:12.170717+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Ukraine is bowed but still unbroken as freezing we' (. This map shows the geographic region of Ukraine referenced in the headline reporting on the ongoing conflict there.)",
+    "created_at": "2026-11-28T03:58:12.169008+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682221_5726e524d0_b.jpg",
+    "created_at": "2026-11-28T03:56:40.571427+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682461_c4b974bc74_b.jpg",
+    "created_at": "2026-11-28T03:56:40.533640+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/52501682341_025d20604d_b.jpg",
+    "created_at": "2026-11-28T03:56:40.490286+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: candidate rejected (download/verify failed): https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg",
+    "created_at": "2026-11-28T03:56:40.435956+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+    "created_at": "2026-11-28T03:56:40.393476+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: NO - photo rejected for 'Ukraine is bowed but still unbroken as freezing we' (, the photo depicts women in traditional attire in a sunny, green forest setting, which does not relate to the headline about freezing weather or the )",
+    "created_at": "2026-11-28T03:56:40.390583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-28T03:56:36.217753+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine'",
+    "created_at": "2026-11-28T03:56:36.094525+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+    "created_at": "2026-11-28T03:56:35.975080+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 5 result(s) for 'Ukraine'",
+    "created_at": "2026-11-28T03:56:35.947850+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:35.904159+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:35.902990+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: topical search found nothing for 'Ukraine is bowed but still unbroken as freezing we' - trying entity search 'Ukraine'",
+    "created_at": "2026-11-28T03:56:35.901946+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine - Reg - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:35.900861+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.wine-searcher.com/regions-ukraine | Ukraine: Reflections on Maidan's Third Year Annivers - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:35.899784+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as1.ftcdn.net/v2/jpg/08/13/14/12/1000_F_813141283_HuuU5esoeVGBTfNj1BGRWZGRIAXKkhSl.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | War in Ukr - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:35.898563+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://stock.adobe.com/images/war-in-ukraine-2024-russian-invasion-with-key-cities-and-direction-ve - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:35.897400+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine bowed but still unbroken'",
+    "created_at": "2026-11-28T03:56:35.895337+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine bowed but still unbroken'",
+    "created_at": "2026-11-28T03:56:35.754293+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine bowed but still unbroken'",
+    "created_at": "2026-11-28T03:56:35.620726+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine bowed but still unbroken'",
+    "created_at": "2026-11-28T03:56:35.591788+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:33.624938+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:33.623670+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine - Reg - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:33.622482+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.wine-searcher.com/regions-ukraine | Ukraine: Reflections on Maidan's Third Year Annivers - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:33.621263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as1.ftcdn.net/v2/jpg/08/13/14/12/1000_F_813141283_HuuU5esoeVGBTfNj1BGRWZGRIAXKkhSl.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | War in Ukr - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:33.619820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://stock.adobe.com/images/war-in-ukraine-2024-russian-invasion-with-key-cities-and-direction-ve - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:33.618583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:33.616434+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:33.448674+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:33.319231+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:33.290367+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:32.011691+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:32.010667+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://www.wine-searcher.com/images/region/ukraine-1507-1-3.jpg (page: https://www.worldatlas.com/articles/the-most-breathtaking-landscapes-of-ukraine.html | Ukraine - Reg - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:32.009559+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): http://i.huffpost.com/gen/4977388/images/o-UKRAINE-facebook.jpg (page: https://www.wine-searcher.com/regions-ukraine | Ukraine: Reflections on Maidan's Third Year Annivers - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:32.008427+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as1.ftcdn.net/v2/jpg/08/13/14/12/1000_F_813141283_HuuU5esoeVGBTfNj1BGRWZGRIAXKkhSl.jpg (page: http://www.huffingtonpost.com/nikolas-kozloff/ukraine-reflections-on-ma_b_14371396.html | War in Ukr - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:32.007332+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://as2.ftcdn.net/v2/jpg/05/93/72/17/1000_F_593721780_ri6Po927Jyni46FX8b2hScsw4s1SZl0a.jpg (page: https://stock.adobe.com/images/war-in-ukraine-2024-russian-invasion-with-key-cities-and-direction-ve - only 1 of 9 key entities in the source page)",
+    "created_at": "2026-11-28T03:56:32.006108+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:32.004101+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:31.864290+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:31.731263+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
+    "created_at": "2026-11-28T03:56:31.702663+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:30.081328+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:30.080242+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine is bowed but still unbroken as freezing weather sets' - rejected (no og:image)",
+    "created_at": "2026-11-28T03:56:30.079100+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiW0FVX3lxTE1rV2U2NF9zQjRpNkpIc0oyU3ZvaU1wMkl0Z0ZPVl85WmdXZmYzeG5zNWZMQmNkUzF3alR) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T03:56:30.076869+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T03:56:29.758494+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T03:56:29.756875+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T03:56:29.681199+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T03:56:29.679740+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T03:56:29.678302+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T03:56:29.677074+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T03:56:29.675721+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-28T03:56:29.587539+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-28T03:56:29.586371+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T03:56:29.584501+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T03:56:29.533684+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-28T03:56:29.532350+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T03:56:29.529366+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T03:56:28.083483+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' for card 'Adsterra Blogger' (queue now 2)",
+    "created_at": "2026-11-28T03:56:28.081793+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T03:56:26.154980+00:00",
     "card": ""
   },
@@ -31,6 +487,30 @@
   },
   {
     "level": "info",
+    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T03:56:25.489198+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T03:56:25.488011+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran war updates: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 5 key entities (down, drone, hit, iran))",
+    "created_at": "2026-11-28T03:56:25.486721+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran war updates: IRGC says tanker hit in Hormuz, ' (, the photo shows the national flag of Iran, which relates to the subject of the news headline concerning Iran and the IRGC.)",
+    "created_at": "2026-11-28T03:56:25.484941+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
     "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
     "created_at": "2026-11-28T03:56:23.034172+00:00",
     "card": ""
@@ -51,6 +531,168 @@
     "level": "info",
     "message": "worker run #200 started (--only blogger)",
     "created_at": "2026-11-28T03:56:23.030022+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
+    "created_at": "2026-11-28T03:56:20.077421+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
+    "created_at": "2026-11-28T03:56:19.803488+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
+    "created_at": "2026-11-28T03:56:19.687949+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
+    "created_at": "2026-11-28T03:56:19.658628+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:18.729199+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:18.728027+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - rejected (no og:image)",
+    "created_at": "2026-11-28T03:56:18.726842+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZ2RxcE5iYnBZYlRaUVlCWlItc3RheVVQaUxibTBva203bG9lVVhCbTFEOFI1bHhrUzB) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T03:56:18.724460+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T03:56:18.394284+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepared ready post: 'Iran War Updates: U.S. forces disable commercial ship that a' for card 'Adsterra Blogger' (queue now 1)",
+    "created_at": "2026-11-28T03:56:18.308046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T03:56:15.674829+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T03:56:15.673820+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Iran War Updates: U.S. forces disable commercial ship that a': https://www.deccanchronicle.com/h-upload/2026/11/20/2115718-iran.jpg (from bing-images, query 'Iran War Updates: U.S. forces disable commercial ship that allegedly tried to breach blockade on Iranian ports - CBS News', page: https://www.kiprinform.com/en/news/irans-army-says-it-shot-down-a-us-lucas-drone-over-the-gulf/ | Ir - matches 2 key entities (iran, news))",
+    "created_at": "2026-11-28T03:56:15.672236+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Iran War Updates: U.S. forces disable commercial s' (, the photo shows the national flag of Iran, which relates to the subject of Iranian ports and the Iranian blockade mentioned in the headline.)",
+    "created_at": "2026-11-28T03:56:15.670433+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T03:56:09.685930+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T03:56:09.527782+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T03:56:09.402484+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T03:56:09.308134+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:09.141040+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T03:56:09.139933+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - rejected (no og:image)",
+    "created_at": "2026-11-28T03:56:09.138724+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2h) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T03:56:09.136540+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T03:56:08.230465+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T03:56:07.852864+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T03:56:01.922008+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-28T03:56:01.920758+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #200 started (--only bluesky)",
+    "created_at": "2026-11-28T03:56:01.919041+00:00",
     "card": ""
   },
   {
@@ -555,648 +1197,6 @@
     "level": "info",
     "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
     "created_at": "2026-11-28T02:05:34.467289+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.446441+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T02:05:34.220968+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T02:05:34.219972+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - rejected (no og:image)",
-    "created_at": "2026-11-28T02:05:34.218643+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMijwFBVV95cUxPYndFMTFFMlRhOElWM09BSS1fQ0FQb3kyVWhpYVZ5ZEJlM2t2UTlKRjlFQTlrekVxaVp) - skipping, og:image would be the logo",
-    "created_at": "2026-11-28T02:05:34.215920+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-28T02:05:33.900612+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T02:05:33.423090+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T02:05:33.421622+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T02:05:33.420274+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T02:05:33.418927+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T02:05:33.417438+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-28T02:05:33.288944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-28T02:05:33.287778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-28T02:05:33.285635+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T02:05:33.115379+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-28T02:05:33.114061+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T02:05:33.112349+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T02:05:31.843511+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T02:05:31.841585+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T02:05:31.395136+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T02:05:28.633548+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-28T02:05:28.632136+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #197 started (--only bluesky)",
-    "created_at": "2026-11-28T02:05:28.630483+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T01:52:47.013787+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Gates Foundation funds AI school tools', 'Victoria votes in state election', \"Most famous person you're related to\", 'Bronson Reed dies at 38', 'Grand Theft Auto VI']",
-    "created_at": "2026-11-28T01:52:47.009950+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-28T01:52:46.573194+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T01:52:46.571832+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T01:52:46.212806+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T01:52:43.372564+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-28T01:52:43.371560+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-28T01:52:43.370595+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #196 started (--only blogger)",
-    "created_at": "2026-11-28T01:52:43.369380+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T00:42:44.444988+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Thanksgiving Day celebrations', 'Banned Nvidia chips reported in Shanghai', 'Aaron Rodgers reportedly out']",
-    "created_at": "2026-11-28T00:42:44.438778+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T00:42:44.264477+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T00:42:44.263193+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-28T00:42:44.261485+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T00:42:34.259328+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T00:42:34.085475+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T00:42:34.082836+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-28T00:42:28.772785+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T00:42:28.770462+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T00:42:28.586369+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T00:42:28.584133+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'From turkey shortages to helicopter deliveries: The extraord' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-28T00:42:24.278488+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-28T00:42:24.277279+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'From turkey shortages to helicopter deliveries: The extraord': https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg (from bing-images, query 'turkey shortages helicopter deliveries extraordinary', page: http://www.iabtravel.com/country/turkey/ | Thanksgiving Turkey Recipe - Crunchy Creamy Sweet - matches 2 key entities (thanksgiv, turkey))",
-    "created_at": "2026-11-28T00:42:24.276038+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-28T00:42:24.274713+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'turkey shortages helicopter deliveries extraordinary'",
-    "created_at": "2026-11-28T00:42:24.225493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'turkey shortages helicopter deliveries extraordinary'",
-    "created_at": "2026-11-28T00:42:24.110247+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'turkey shortages helicopter deliveries extraordinary'",
-    "created_at": "2026-11-28T00:42:23.995978+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'turkey shortages helicopter deliveries extraordinary'",
-    "created_at": "2026-11-28T00:42:23.937139+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:23.767179+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:23.765957+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://wallpaperaccess.com/full/35663.jpg (page: https://www.azernews.az/region/117568.html | Turkey Wallpapers - Top Free Turkey Backgrounds - Wallp - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-28T00:42:23.764799+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/e09ta7.jpg?itok=nKpCKXNs (page: https://wallpaperaccess.com/turkey | The Wild Blue Turkey That Blew My Mind | Audubon - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-28T00:42:23.763426+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision down, strict check): https://www.iabtravel.com/wp-content/uploads/2017/07/TURKEY-COUNTRY-IMAGE.jpg - source page title names only 1 of 10 key entities - not a news article about the story",
-    "created_at": "2026-11-28T00:42:23.761983+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: budget used (3 checks) - keyword check decides this candidate",
-    "created_at": "2026-11-28T00:42:23.760570+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg",
-    "created_at": "2026-11-28T00:42:23.707585+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (. The photo shows a cooked Thanksgiving turkey on a platter, not the historical events of Thanksgiving during wartime.)",
-    "created_at": "2026-11-28T00:42:23.705944+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:18.682473+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:18.558339+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:18.429706+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:18.369493+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:18.091208+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:18.090158+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://wallpaperaccess.com/full/35663.jpg (page: https://www.azernews.az/region/117568.html | Turkey Wallpapers - Top Free Turkey Backgrounds - Wallp - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-28T00:42:18.089062+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'From turkey shortages to helicopter deliveries: Th'): https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/e09ta7.jpg?itok=nKpCKXNs (page: https://wallpaperaccess.com/turkey | The Wild Blue Turkey That Blew My Mind | Audubon - only 1 of 10 key entities in the source page)",
-    "created_at": "2026-11-28T00:42:18.087880+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://www.iabtravel.com/wp-content/uploads/2017/07/TURKEY-COUNTRY-IMAGE.jpg",
-    "created_at": "2026-11-28T00:42:18.086543+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (. The photo shows the Blue Mosque in Istanbul, Turkey, which is unrelated to the Thanksgiving history headline.)",
-    "created_at": "2026-11-28T00:42:18.085056+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (vision NO): https://www.crunchycreamysweet.com/wp-content/uploads/2020/11/Thanksgiving-turkey-D.jpg",
-    "created_at": "2026-11-28T00:42:14.856524+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: NO - photo rejected for 'From turkey shortages to helicopter deliveries: Th' (, the photo shows a roasted turkey on a platter with cranberries and oranges, which does not depict the historical events of Thanksgiving during warti)",
-    "created_at": "2026-11-28T00:42:14.855033+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:08.436867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:08.237210+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:08.125032+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'From turkey shortages to helicopter deliveries: The extraord'",
-    "created_at": "2026-11-28T00:42:08.064550+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:07.723734+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T00:42:07.722591+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'From turkey shortages to helicopter deliveries: The extraord' - rejected (no og:image)",
-    "created_at": "2026-11-28T00:42:07.721466+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMirwFBVV95cUxNdE9pdl8xWUpMcHJpN2hCblpsTi1sOHE1RkI3U0dnWFpLUUYtMGpNblpkQjM2bW5QSnB) - skipping, og:image would be the logo",
-    "created_at": "2026-11-28T00:42:07.719277+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-28T00:42:07.176400+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
-    "created_at": "2026-11-28T00:42:07.174409+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T00:42:07.039458+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-    "created_at": "2026-11-28T00:42:07.037726+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T00:42:07.036080+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T00:42:07.034405+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T00:42:07.033036+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-28T00:42:06.798345+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-28T00:42:06.797169+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-28T00:42:06.795388+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T00:42:06.771005+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-28T00:42:06.769657+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T00:42:06.768095+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T00:42:05.688637+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T00:42:04.834462+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "prepared ready post: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' for card 'Adsterra Blogger' (queue now 2)",
-    "created_at": "2026-11-28T00:42:04.830781+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-28T00:41:38.294370+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-28T00:41:38.293157+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down': https://insiderpaper.com/wp-content/uploads/2023/12/iran-1151139_1280.jpg (from bing-images, query 'Iran war updates: IRGC says tanker hit in Hormuz, drone downed in southeast - Al Jazeera', page: https://www.asianage.com/west-asia/iran-rules-out-us-talks-until-conditions-met-says-3-tankers-hit-m - matches 3 key entities (hit, iran, tanker))",
-    "created_at": "2026-11-28T00:41:38.292028+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Iran war updates: IRGC says tanker hit in Hormuz, ' (. The image is the flag of Iran, which represents the country mentioned in the news headline about Iran and the IRGC.)",
-    "created_at": "2026-11-28T00:41:38.290472+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Iran war updates: IRGC says tanker hit in Hormuz, '): https://cebudailynews.inquirer.net/files/2026/11/Iran-map-stock-04192024.jpg (page: https://insiderpaper.com/iran-seeks-290-billion-in-damages-against-the-us/ | Singer Parastoo Ahmadi  - only 1 of 11 key entities in the source page)",
-    "created_at": "2026-11-28T00:41:33.548708+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
-    "created_at": "2026-11-28T00:41:33.546583+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
-    "created_at": "2026-11-28T00:41:33.421204+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
-    "created_at": "2026-11-28T00:41:33.282652+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Iran war updates: IRGC says tanker hit in Hormuz, drone down'",
-    "created_at": "2026-11-28T00:41:33.223366+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T00:41:32.887903+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T00:41:32.886522+00:00",
     "card": ""
   }
 ]
