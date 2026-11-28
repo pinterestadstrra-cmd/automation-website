@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T10:26:10.546658+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): ['Boreen daily trivia scores', 'Victoria votes in state election', 'Grand Theft Auto VI', 'Israeli strike hits Gaza clinic', 'Bird photography']",
+    "created_at": "2026-11-28T10:26:10.539910+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T10:26:10.365178+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T10:26:10.362353+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T10:26:09.930323+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T10:25:45.870839+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T10:25:45.869152+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T10:25:45.867483+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #211 started (--only blogger)",
+    "created_at": "2026-11-28T10:25:45.865309+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T10:18:34.680439+00:00",
     "card": ""
   },
@@ -1144,59 +1198,5 @@
     "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
     "created_at": "2026-11-28T07:08:54.904076+00:00",
     "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-28T07:08:54.902392+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T07:08:44.899847+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T07:08:44.667647+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T07:08:44.665344+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-28T07:08:39.230439+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T07:08:39.228180+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T07:08:38.789814+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T07:08:38.787074+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Ukraine is bowed but still unbroken as freezing weather sets' - ACCEPTED real photo (from openverse)",
-    "created_at": "2026-11-28T07:08:31.417571+00:00",
-    "card": ""
   }
 ]
