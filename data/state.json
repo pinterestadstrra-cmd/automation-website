@@ -2,7 +2,7 @@
   "run_card_now": "",
   "test_card_now": "",
   "runs": 203,
-  "last_run": "2026-11-28T05:57:23.123223+00:00",
+  "last_run": "2026-11-28T05:56:42.685611+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 28,
+      "fail": 29,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T04:58:07.513517+00:00"
+      "last_run": "2026-11-28T05:56:45.849190+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 41,
+      "fail": 42,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T04:58:45.879297+00:00"
+      "last_run": "2026-11-28T05:57:24.124309+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T04:58:07.513520+00:00",
-    "mastodon.social": "2026-11-28T04:58:45.879300+00:00"
+    "Adsterra Blogger": "2026-11-28T05:56:45.849192+00:00",
+    "mastodon.social": "2026-11-28T05:57:24.124311+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -421,16 +421,10 @@
   "consecutive_failures": 0,
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T05:57:23.124584+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T05:57:23.125793+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T05:56:42.686615+00:00"
     }
   ],
   "posted_urls": [],
@@ -540,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "Adsterra Blogger": {
-      "fails": 11,
+      "fails": 12,
       "next_retry": ""
     },
     "mastodon.social": {
-      "fails": 11,
+      "fails": 12,
       "next_retry": ""
     }
   },

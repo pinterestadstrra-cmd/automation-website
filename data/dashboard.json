@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T05:57:24.874120+00:00",
-  "last_run": "2026-11-28T05:57:23.123223+00:00",
+  "generated_at": "2026-11-28T05:57:24.243159+00:00",
+  "last_run": "2026-11-28T05:56:42.685611+00:00",
   "runs": 203,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T04:58:07.513520+00:00",
-    "mastodon.social": "2026-11-28T04:58:45.879300+00:00"
+    "Adsterra Blogger": "2026-11-28T05:56:45.849192+00:00",
+    "mastodon.social": "2026-11-28T05:57:24.124311+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 28,
+      "fail": 29,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T04:58:07.513517+00:00"
+      "last_run": "2026-11-28T05:56:45.849190+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 41,
+      "fail": 42,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T04:58:45.879297+00:00"
+      "last_run": "2026-11-28T05:57:24.124309+00:00"
     }
   },
   "file_cards": [
@@ -82,15 +82,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T04:58:07.513520+00:00",
-      "runs_today": 4,
+      "last_run": "2026-11-28T05:56:45.849192+00:00",
+      "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T11:58:07.513520+06:00",
-        "2026-11-28T12:13:07.513520+06:00",
-        "2026-11-28T12:28:07.513520+06:00",
-        "2026-11-28T12:43:07.513520+06:00",
-        "2026-11-28T12:58:07.513520+06:00"
+        "2026-11-28T12:11:45.849192+06:00",
+        "2026-11-28T12:26:45.849192+06:00",
+        "2026-11-28T12:41:45.849192+06:00",
+        "2026-11-28T12:56:45.849192+06:00",
+        "2026-11-28T13:11:45.849192+06:00"
       ],
       "next_post_times": [
         "2026-11-28T12:02:00+06:00",
@@ -100,7 +100,7 @@
         "2026-11-28T16:07:00+06:00"
       ],
       "success": 71,
-      "fail": 28,
+      "fail": 29,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,15 +154,15 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T04:58:45.879300+00:00",
-      "runs_today": 4,
+      "last_run": "2026-11-28T05:57:24.124311+00:00",
+      "runs_today": 5,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T11:58:45.879300+06:00",
-        "2026-11-28T12:13:45.879300+06:00",
-        "2026-11-28T12:28:45.879300+06:00",
-        "2026-11-28T12:43:45.879300+06:00",
-        "2026-11-28T12:58:45.879300+06:00"
+        "2026-11-28T12:12:24.124311+06:00",
+        "2026-11-28T12:27:24.124311+06:00",
+        "2026-11-28T12:42:24.124311+06:00",
+        "2026-11-28T12:57:24.124311+06:00",
+        "2026-11-28T13:12:24.124311+06:00"
       ],
       "next_post_times": [
         "2026-11-28T12:08:00+06:00",
@@ -172,7 +172,7 @@
         "2026-11-28T16:07:00+06:00"
       ],
       "success": 18,
-      "fail": 41,
+      "fail": 42,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T05:57:23.124584+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T05:57:23.125793+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T05:56:42.686615+00:00"
     }
   ],
   "dry_run": false,
@@ -309,303 +321,303 @@
   "logs": [
     {
       "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-28T05:57:24.771688+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T05:57:24.770289+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-3.5-flash-lite)",
-      "created_at": "2026-11-28T05:57:24.451175+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T05:57:23.126875+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-28T05:57:23.125800+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-28T05:57:23.124592+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #203 started (--only blogger)",
-      "created_at": "2026-11-28T05:57:23.123247+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-28T04:59:23.868588+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Congress nears ban on Chinese vehicles', 'Israeli strikes in Gaza', 'NBA Cup group play games', 'Thanksgiving Day celebrations']",
-      "created_at": "2026-11-28T04:59:23.863991+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "no card due - nothing published this run",
-      "created_at": "2026-11-28T04:59:23.750586+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: groq ok (openai/gpt-oss-120b)",
-      "created_at": "2026-11-28T04:59:23.749114+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: gemini ok (gemini-4-hydrogen)",
-      "created_at": "2026-11-28T04:59:23.523979+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-      "created_at": "2026-11-28T04:59:20.032480+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "created_at": "2026-11-28T04:59:20.031648+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "[health] No Bluesky accounts - posts and replies are skipped",
-      "created_at": "2026-11-28T04:59:20.030742+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run #202 started (--only blogger)",
-      "created_at": "2026-11-28T04:59:20.029434+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "worker run finished",
-      "created_at": "2026-11-28T04:58:45.997659+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): [\"Most famous person you're related to\", 'Congress nears ban on Chinese vehicles', 'Israeli strikes in Gaza', 'NBA Cup group play games', 'Thanksgiving Day celebrations']",
-      "created_at": "2026-11-28T04:58:45.990654+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
       "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T04:58:45.879332+00:00",
+      "created_at": "2026-11-28T05:57:24.124347+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "info",
       "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T04:58:45.877740+00:00",
+      "created_at": "2026-11-28T05:57:24.123530+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-28T04:58:45.875820+00:00",
+      "created_at": "2026-11-28T05:57:24.121060+00:00",
       "card": "mastodon.social"
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T04:58:35.873405+00:00",
+      "created_at": "2026-11-28T05:57:14.118957+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T04:58:35.714122+00:00",
+      "created_at": "2026-11-28T05:57:13.708163+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T04:58:35.711393+00:00",
+      "created_at": "2026-11-28T05:57:13.704754+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-28T04:58:30.401102+00:00",
+      "created_at": "2026-11-28T05:57:08.281222+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T04:58:30.398714+00:00",
+      "created_at": "2026-11-28T05:57:08.279200+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T04:58:30.223165+00:00",
+      "created_at": "2026-11-28T05:57:08.038948+00:00",
       "card": ""
     },
     {
       "level": "warning",
       "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T04:58:30.220806+00:00",
+      "created_at": "2026-11-28T05:57:08.036777+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - ACCEPTED real photo (from bing-images)",
-      "created_at": "2026-11-28T04:58:23.332220+00:00",
+      "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - ACCEPTED real photo (from openverse)",
+      "created_at": "2026-11-28T05:57:01.423765+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "promo category: war news",
-      "created_at": "2026-11-28T04:58:23.330996+00:00",
+      "created_at": "2026-11-28T05:57:01.423111+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy criticises Trump for calling': https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/09/1200/675/zelenskyy-4. (from bing-images, query 'Ukraine war briefing: Zelenskyy criticises Trump for calling Putin his ‘friend’; Kyiv deploys new laser weapon - The Guardian', page: https://www.foxnews.com/politics/trump-announces-face-face-talks-putin-next-week-three-way-talks-ukr - matches 5 key entities (call, putin, trump, ukraine))",
-      "created_at": "2026-11-28T04:58:23.329678+00:00",
+      "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy criticises Trump for calling': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
+      "created_at": "2026-11-28T05:57:01.422428+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "vision: YES - photo matches 'Ukraine war briefing: Zelenskyy criticises Trump f' (. The photo shows Ukrainian President Volodymyr Zelenskyy, who is the subject of the news headline regarding his comments on Donald Trump and Vladimir)",
-      "created_at": "2026-11-28T04:58:23.327838+00:00",
+      "message": "vision: YES - photo matches 'Ukraine war briefing: Zelenskyy criticises Trump f' (vision: YES)",
+      "created_at": "2026-11-28T05:57:01.421184+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T04:58:08.979773+00:00",
+      "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
+      "created_at": "2026-11-28T05:56:56.356515+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T04:58:08.862595+00:00",
+      "message": "vision: NO - photo rejected for 'Ukraine war briefing: Zelenskyy criticises Trump f' (\n\nThe photo depicts two women in traditional Slavic dress in a forest, which is unrelated to the political news headline about the Ukraine war, Volody)",
+      "created_at": "2026-11-28T05:56:56.354770+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T04:58:08.745808+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-28T05:56:49.945846+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
-      "created_at": "2026-11-28T04:58:08.684685+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine'",
+      "created_at": "2026-11-28T05:56:49.786466+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine'",
+      "created_at": "2026-11-28T05:56:49.660502+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 5 result(s) for 'Ukraine'",
+      "created_at": "2026-11-28T05:56:49.589186+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T04:58:08.326642+00:00",
+      "created_at": "2026-11-28T05:56:49.549516+00:00",
       "card": ""
     },
     {
       "level": "info",
       "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T04:58:08.325625+00:00",
+      "created_at": "2026-11-28T05:56:49.548962+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - rejected (no og:image)",
-      "created_at": "2026-11-28T04:58:08.324352+00:00",
+      "message": "photo: topical search found nothing for 'Ukraine war briefing: Zelenskyy criticises Trump f' - trying entity search 'Ukraine'",
+      "created_at": "2026-11-28T05:56:49.548407+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi5wFBVV95cUxOcDZrYTlOdTVmYnJEelBReDNXdF9CRXAyZHUyVlhQNjczRTk0Q0RNM0FYdWlHY3RQc3R) - skipping, og:image would be the logo",
-      "created_at": "2026-11-28T04:58:08.322046+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://media.gettyimages.com/id/634264431/photo/english-pop-group-the-beatles-from-left-to-right-pa (page: https://www.gettyimages.com/photos/the-beatles | Meet The Beatles Photos and Premium High Res Pictur - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:49.547815+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-28T04:58:08.032314+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/The_Beatles_Abbey_Road_album_cover.jpg/128 (page: https://www.gettyimages.ie/photos/meet-the-beatles | The Beatles - Wikiwand - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:49.547180+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
-      "created_at": "2026-11-28T04:58:08.030405+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://people.com/thmb/WcibMNwXvbWNqR0nS_R57IGsQPU=/1500x0/filters:no_upscale():max_bytes(150000):s (page: https://www.wikiwand.com/en/The_Beatles | The Beatles Members: All About Paul, John, George and Ring - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:49.546512+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-28T04:58:07.517125+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
-      "created_at": "2026-11-28T04:58:07.515551+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T04:58:07.513554+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "info",
-      "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T04:58:07.512320+00:00",
-      "card": "Adsterra Blogger"
-    },
-    {
-      "level": "warning",
-      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-      "created_at": "2026-11-28T04:58:07.510829+00:00",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://people.com/thmb/CplcKZdXLbtkzkp9qSbgeRyzagQ=/750x0/filters:no_upscale():max_bytes(150000):st (page: https://people.com/all-about-the-beatles-members-legendary-band-7497753 | The Beatles Members: All A - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:49.545779+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-      "created_at": "2026-11-28T04:58:07.410316+00:00",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing Zelenskyy criticises'",
+      "created_at": "2026-11-28T05:56:49.543800+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-      "created_at": "2026-11-28T04:58:07.409068+00:00",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing Zelenskyy criticises'",
+      "created_at": "2026-11-28T05:56:49.406594+00:00",
       "card": ""
     },
     {
       "level": "info",
-      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-      "created_at": "2026-11-28T04:58:07.406934+00:00",
-      "card": "Adsterra Blogger"
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing Zelenskyy criticises'",
+      "created_at": "2026-11-28T05:56:49.260620+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing Zelenskyy criticises'",
+      "created_at": "2026-11-28T05:56:49.183366+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-28T05:56:48.772908+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-28T05:56:48.772111+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://cdn.dribbble.com/userupload/17970489/file/original-78e05760798a830718bbfbd7be8ed2e6.jpg?resi (page: https://www.vectorstock.com/royalty-free-vector/abstract-square-vertex-technology-logo-design-vector - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:48.771456+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47e68b131171709.618f80cc44303.png (page: https://dribbble.com/shots/25321398-Vertex-Letter-V-Technology-Logo-Design-Company-Logo | Vertex log - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:48.770718+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.pinimg.com/originals/2e/e7/4e/2ee74eec0ad21068143f868c46eb08c2.jpg (page: https://www.behance.net/gallery/131171709/Vertex-logo-design | Vertex Logo Design by Milon Mia - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:48.770018+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://img.freepik.com/premium-vector/modern-letter-vertex-with-luxury-gradient-logo-design-templat (page: https://www.pinterest.com/pin/vertex-logo-design-by-milon-mia--1097893215398025701/ | Premium Vector - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:48.769236+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:48.766852+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:48.623103+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:48.472270+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:48.396941+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-28T05:56:47.834833+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-28T05:56:47.834231+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://media.gucci.com/style/HEXE0E8E5_Center_0_0_2400x2400/1663173108/707848_FAAQY_7141_007_100_00 (page: https://www.fragrantica.com/news/Gucci-Guilty-Pour-Homme-1872.html | Baskets Gazelle adidas x Gucci  - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:47.833589+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): http://www.celebrityendorsementads.com/celebrity-endorsements/celebrities/jared-leto/images/gucci-gu (page: https://www.gucci.com/be/fr/pr/men/shoes-for-men/sneakers-for-men/low-top-sneakers-for-men/adidas-x- - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:47.832816+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): https://i.pinimg.com/originals/ff/91/ee/ff91ee0c1cb98b568577f545edfbddd0.jpg (page: http://www.celebrityendorsementads.com/celebrity-endorsements/celebrities/jared-leto/ | James Franco - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:47.831208+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: rejected (irrelevant to 'Ukraine war briefing: Zelenskyy criticises Trump f'): http://nitrolicious.com/wp-content/uploads/2011/06/gucci-guilty-pour-homme-ad.jpg (page: https://www.pinterest.com/pin/548594798343642563/ | gucci guilty pour homme ad - only 0 of 14 key entities in the source page)",
+      "created_at": "2026-11-28T05:56:47.830264+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:47.828207+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:47.661010+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+      "created_at": "2026-11-28T05:56:47.513483+00:00",
+      "card": ""
     }
   ]
 }
