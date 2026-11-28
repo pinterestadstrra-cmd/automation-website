@@ -2,6 +2,60 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T04:59:23.868588+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Congress nears ban on Chinese vehicles', 'Israeli strikes in Gaza', 'NBA Cup group play games', 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-28T04:59:23.863991+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "no card due - nothing published this run",
+    "created_at": "2026-11-28T04:59:23.750586+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T04:59:23.749114+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T04:59:23.523979+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T04:59:20.032480+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
+    "created_at": "2026-11-28T04:59:20.031648+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "[health] No Bluesky accounts - posts and replies are skipped",
+    "created_at": "2026-11-28T04:59:20.030742+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #202 started (--only blogger)",
+    "created_at": "2026-11-28T04:59:20.029434+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T04:58:45.997659+00:00",
     "card": ""
   },
@@ -1143,60 +1197,6 @@
     "level": "info",
     "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
     "created_at": "2026-11-28T02:58:27.939751+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T02:58:27.938596+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T02:58:27.936779+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
-    "created_at": "2026-11-28T02:58:27.844663+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
-    "created_at": "2026-11-28T02:58:27.843579+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
-    "created_at": "2026-11-28T02:58:27.841353+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T02:58:27.648984+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
-    "created_at": "2026-11-28T02:58:27.647320+00:00",
-    "card": "Adsterra Blogger"
-  },
-  {
-    "level": "warning",
-    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
-    "created_at": "2026-11-28T02:58:27.644904+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
-    "created_at": "2026-11-28T02:58:26.340955+00:00",
     "card": "Adsterra Blogger"
   }
 ]
