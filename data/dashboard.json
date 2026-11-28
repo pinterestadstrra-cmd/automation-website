@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-28T07:09:48.230483+00:00",
-  "last_run": "2026-11-28T07:09:44.161409+00:00",
-  "runs": 205,
+  "generated_at": "2026-11-28T08:20:32.639198+00:00",
+  "last_run": "2026-11-28T08:20:06.043524+00:00",
+  "runs": 206,
   "stats": {
     "blogger_today": 0,
     "replies_today": 0,
     "total_posts": 0,
     "total_replies": 0,
-    "accounts": 0
+    "accounts": 1
   },
   "settings": {
     "paused": "False",
@@ -42,8 +42,8 @@
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T07:08:18.683486+00:00",
-    "mastodon.social": "2026-11-28T07:08:54.905286+00:00"
+    "Adsterra Blogger": "2026-11-28T08:20:09.034389+00:00",
+    "mastodon.social": "2026-11-28T08:20:32.520050+00:00"
   },
   "file_card_stats": {
     "BlueSky Trend": {
@@ -55,17 +55,17 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 30,
+      "fail": 31,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T07:08:18.683482+00:00"
+      "last_run": "2026-11-28T08:20:09.034385+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 43,
+      "fail": 44,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T07:08:54.905283+00:00"
+      "last_run": "2026-11-28T08:20:32.520047+00:00"
     }
   },
   "file_cards": [
@@ -82,25 +82,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T07:08:18.683486+00:00",
-      "runs_today": 5,
+      "last_run": "2026-11-28T08:20:09.034389+00:00",
+      "runs_today": 6,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T13:23:18.683486+06:00",
-        "2026-11-28T13:38:18.683486+06:00",
-        "2026-11-28T13:53:18.683486+06:00",
-        "2026-11-28T14:08:18.683486+06:00",
-        "2026-11-28T14:23:18.683486+06:00"
+        "2026-11-28T14:35:09.034389+06:00",
+        "2026-11-28T14:50:09.034389+06:00",
+        "2026-11-28T15:05:09.034389+06:00",
+        "2026-11-28T15:20:09.034389+06:00",
+        "2026-11-28T15:35:09.034389+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T13:52:00+06:00",
         "2026-11-28T14:57:00+06:00",
         "2026-11-28T16:07:00+06:00",
         "2026-11-28T17:08:00+06:00",
-        "2026-11-28T18:10:00+06:00"
+        "2026-11-28T18:10:00+06:00",
+        "2026-11-28T18:54:00+06:00"
       ],
       "success": 71,
-      "fail": 30,
+      "fail": 31,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -154,25 +154,25 @@
       "interval_minutes": 15,
       "posts_per_day": 24,
       "schedule_times": [],
-      "last_run": "2026-11-28T07:08:54.905286+00:00",
-      "runs_today": 5,
+      "last_run": "2026-11-28T08:20:32.520050+00:00",
+      "runs_today": 6,
       "posts_today": 0,
       "next_runs": [
-        "2026-11-28T13:23:54.905286+06:00",
-        "2026-11-28T13:38:54.905286+06:00",
-        "2026-11-28T13:53:54.905286+06:00",
-        "2026-11-28T14:08:54.905286+06:00",
-        "2026-11-28T14:23:54.905286+06:00"
+        "2026-11-28T14:35:32.520050+06:00",
+        "2026-11-28T14:50:32.520050+06:00",
+        "2026-11-28T15:05:32.520050+06:00",
+        "2026-11-28T15:20:32.520050+06:00",
+        "2026-11-28T15:35:32.520050+06:00"
       ],
       "next_post_times": [
-        "2026-11-28T13:56:00+06:00",
         "2026-11-28T15:01:00+06:00",
         "2026-11-28T16:07:00+06:00",
         "2026-11-28T16:51:00+06:00",
-        "2026-11-28T17:55:00+06:00"
+        "2026-11-28T17:55:00+06:00",
+        "2026-11-28T19:00:00+06:00"
       ],
       "success": 18,
-      "fail": 43,
+      "fail": 44,
       "last_error": "post failed or skipped",
       "color": "",
       "notes": "",
@@ -214,12 +214,30 @@
       "bsky_image_ratio": "16:9"
     }
   ],
-  "account_handles": [],
-  "accounts_detail": [],
+  "account_handles": [
+    "primonewstoday.bsky.social"
+  ],
+  "accounts_detail": [
+    {
+      "handle": "primonewstoday.bsky.social",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "reddit_accounts_detail": [],
   "tumblr_accounts_detail": [],
   "threads_accounts_detail": [],
-  "mastodon_accounts_detail": [],
+  "mastodon_accounts_detail": [
+    {
+      "key": "mastodon.social",
+      "instance": "https://mastodon.social",
+      "username": "",
+      "enabled": true,
+      "posts_limit": 0,
+      "posts_today": 0
+    }
+  ],
   "telegram_accounts_detail": [],
   "nostr_accounts_detail": [],
   "lemmy_accounts_detail": [],
@@ -234,12 +252,12 @@
       "detail": "2 key(s) configured"
     },
     "blogger": {
-      "ok": true,
-      "detail": "refresh token present"
+      "ok": false,
+      "detail": "no BLOGGER_REFRESH_TOKEN secret"
     },
     "bluesky": {
-      "ok": false,
-      "detail": "no BLUESKY_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "reddit": {
       "ok": false,
@@ -254,8 +272,8 @@
       "detail": "no THREADS_ACCOUNTS secret"
     },
     "mastodon": {
-      "ok": false,
-      "detail": "no MASTODON_ACCOUNTS secret"
+      "ok": true,
+      "detail": "1 account(s)"
     },
     "telegram": {
       "ok": false,
@@ -276,16 +294,10 @@
   },
   "issues": [
     {
-      "level": "warning",
+      "level": "error",
       "code": "health",
-      "message": "No Bluesky accounts - posts and replies are skipped",
-      "time": "2026-11-28T07:09:44.163018+00:00"
-    },
-    {
-      "level": "warning",
-      "code": "health",
-      "message": "Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-      "time": "2026-11-28T07:09:44.164268+00:00"
+      "message": "Blogger refresh token missing - cannot publish",
+      "time": "2026-11-28T08:20:06.061963+00:00"
     }
   ],
   "dry_run": false,
@@ -295,18 +307,270 @@
   },
   "trending": [
     "Victoria votes in state election",
-    "Most famous person you're related to",
     "Israeli strikes in Gaza",
-    "Grand Theft Auto VI",
+    "Most famous person you're related to",
     "WWE's AI-voiced Bronson Reed tribute",
+    "Banned Nvidia chips reported in Shanghai",
+    "Spurs vs. Lakers NBA Cup game",
+    "Grand Theft Auto VI",
     "Thanksgiving Day celebrations",
-    "Boreen daily trivia scores",
-    "Anthropic's Claude AI outage and use",
-    "NBA Cup group play games",
-    "Banned Nvidia chips reported in Shanghai"
+    "Gates Foundation funds AI school tools",
+    "Macy's parade postponed to Saturday"
   ],
   "recent_posts": [],
   "logs": [
+    {
+      "level": "info",
+      "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+      "created_at": "2026-11-28T08:20:32.520096+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+      "created_at": "2026-11-28T08:20:32.519106+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "warning",
+      "message": "card 'mastodon.social': mastodon submit failed",
+      "created_at": "2026-11-28T08:20:32.517493+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "warning",
+      "message": "mastodon status post failed (HTTP 403)",
+      "created_at": "2026-11-28T08:20:22.515239+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-28T08:20:22.365452+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-28T08:20:22.363189+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon submit: empty result, retry 1/2 in 5s",
+      "created_at": "2026-11-28T08:20:17.057234+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon status post failed (HTTP 403)",
+      "created_at": "2026-11-28T08:20:17.055033+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "mastodon: media upload failed - posting text-only",
+      "created_at": "2026-11-28T08:20:16.877406+00:00",
+      "card": ""
+    },
+    {
+      "level": "warning",
+      "message": "mastodon media upload failed (HTTP 403)",
+      "created_at": "2026-11-28T08:20:16.875227+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Italy says drone in deadly Kuwait attack was ' - ACCEPTED real photo (from bing-images)",
+      "created_at": "2026-11-28T08:20:14.463813+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "promo category: war news",
+      "created_at": "2026-11-28T08:20:14.462730+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: ACCEPTED relevant photo for 'Iran war live: Italy says drone in deadly Kuwait attack was ': https://www.aljazeera.com/wp-content/uploads/2026/11/image-1795823699.jpg?resize=1920%2C1080&quality (from bing-images, query 'Iran war live: Italy says drone in deadly Kuwait attack was made in Iran - Al Jazeera', page: https://www.youtube.com/watch?v=B5PLIOefr74 | Iran war live: Italy says drone in deadly Kuwait attac - matches 9 key entities (attack, deadly, drone, iran))",
+      "created_at": "2026-11-28T08:20:14.461619+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "vision: YES - photo matches 'Iran war live: Italy says drone in deadly Kuwait a' (. The image is an infrared or thermal-imaging still depicting a military attack or drone strike, which aligns with the news headline regarding a deadl)",
+      "created_at": "2026-11-28T08:20:14.460063+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo: candidate rejected (download/verify failed): https://www.theweek.in/content/dam/week/week/news/defence/images/2026/3/16/mq-9a.jpg",
+      "created_at": "2026-11-28T08:20:11.026465+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "bing-images: 4 candidate(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
+      "created_at": "2026-11-28T08:20:10.845143+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "google-images: 0 candidate(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
+      "created_at": "2026-11-28T08:20:10.478181+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "wikimedia: search HTTP 429 for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
+      "created_at": "2026-11-28T08:20:10.358193+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "openverse: 0 result(s) for 'Iran war live: Italy says drone in deadly Kuwait attack was '",
+      "created_at": "2026-11-28T08:20:10.238666+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pixabay: API key not configured - skipping",
+      "created_at": "2026-11-28T08:20:09.862415+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "pexels: API key not configured - skipping",
+      "created_at": "2026-11-28T08:20:09.861472+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "photo candidate: 'Iran war live: Italy says drone in deadly Kuwait attack was ' - rejected (no og:image)",
+      "created_at": "2026-11-28T08:20:09.860304+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMivwFBVV95cUxQYzBBRkZMZURBWnVObzlNUWJSQ2RMMmRtSUdWN1QwMVpaZExyRVNwOFBHRXRnTDhvaG1) - skipping, og:image would be the logo",
+      "created_at": "2026-11-28T08:20:09.849580+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-28T08:20:09.037282+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+      "created_at": "2026-11-28T08:20:09.035849+00:00",
+      "card": "mastodon.social"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+      "created_at": "2026-11-28T08:20:09.034426+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+      "created_at": "2026-11-28T08:20:09.033465+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "warning",
+      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+      "created_at": "2026-11-28T08:20:09.031962+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: published 1920x1080 (ratio 1.78) - unchanged",
+      "created_at": "2026-11-28T08:20:08.483142+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "prepare_bsky_image: original 1920x1080 (ratio 1.78) - kept, no crop",
+      "created_at": "2026-11-28T08:20:08.482205+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
+      "created_at": "2026-11-28T08:20:08.480492+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-28T08:20:08.372041+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+      "created_at": "2026-11-28T08:20:08.370537+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "warning",
+      "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+      "created_at": "2026-11-28T08:20:08.368963+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+      "created_at": "2026-11-28T08:20:07.196920+00:00",
+      "card": "Adsterra Blogger"
+    },
+    {
+      "level": "info",
+      "message": "ai health: groq ok (openai/gpt-oss-120b)",
+      "created_at": "2026-11-28T08:20:07.195324+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: gemini ok (gemini-4-hydrogen)",
+      "created_at": "2026-11-28T08:20:06.910918+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+      "created_at": "2026-11-28T08:20:06.063041+00:00",
+      "card": ""
+    },
+    {
+      "level": "error",
+      "message": "[health] Blogger refresh token missing - cannot publish",
+      "created_at": "2026-11-28T08:20:06.061969+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run #206 started (--only bluesky)",
+      "created_at": "2026-11-28T08:20:06.043546+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "worker run finished",
+      "created_at": "2026-11-28T07:09:48.233852+00:00",
+      "card": ""
+    },
+    {
+      "level": "info",
+      "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
+      "created_at": "2026-11-28T07:09:48.227521+00:00",
+      "card": ""
+    },
     {
       "level": "info",
       "message": "no card due - nothing published this run",
@@ -353,258 +617,6 @@
       "level": "info",
       "message": "worker run finished",
       "created_at": "2026-11-28T07:08:55.056192+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "trending (bluesky): ['Victoria votes in state election', \"Most famous person you're related to\", 'Israeli strikes in Gaza', 'Grand Theft Auto VI', \"WWE's AI-voiced Bronson Reed tribute\"]",
-      "created_at": "2026-11-28T07:08:55.050657+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-      "created_at": "2026-11-28T07:08:54.905317+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "info",
-      "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-      "created_at": "2026-11-28T07:08:54.904076+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "warning",
-      "message": "card 'mastodon.social': mastodon submit failed",
-      "created_at": "2026-11-28T07:08:54.902392+00:00",
-      "card": "mastodon.social"
-    },
-    {
-      "level": "warning",
-      "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T07:08:44.899847+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T07:08:44.667647+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T07:08:44.665344+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon submit: empty result, retry 1/2 in 5s",
-      "created_at": "2026-11-28T07:08:39.230439+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon status post failed (HTTP 403)",
-      "created_at": "2026-11-28T07:08:39.228180+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "mastodon: media upload failed - posting text-only",
-      "created_at": "2026-11-28T07:08:38.789814+00:00",
-      "card": ""
-    },
-    {
-      "level": "warning",
-      "message": "mastodon media upload failed (HTTP 403)",
-      "created_at": "2026-11-28T07:08:38.787074+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo candidate: 'Ukraine is bowed but still unbroken as freezing weather sets' - ACCEPTED real photo (from openverse)",
-      "created_at": "2026-11-28T07:08:31.417571+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "promo category: war news",
-      "created_at": "2026-11-28T07:08:31.416614+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: ACCEPTED relevant photo for 'Ukraine is bowed but still unbroken as freezing weather sets': https://live.staticflickr.com/65535/51939489510_3dfd4a1fba_b.jpg (from openverse, query 'Ukraine', page: https://www.flickr.com/photos/165930373@N06/51939489510 | Responsibility for war crimes of the Russi - page names the entity (Ukraine))",
-      "created_at": "2026-11-28T07:08:31.415516+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: YES - photo matches 'Ukraine is bowed but still unbroken as freezing we' (The photo shows Ukrainian President Volodymyr Zelenskyy, who is the central figure representing Ukraine's leadership amidst the ongoing war and condit)",
-      "created_at": "2026-11-28T07:08:31.414058+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (vision NO): https://live.staticflickr.com/3907/14630940496_a9c96d4f8e_b.jpg",
-      "created_at": "2026-11-28T07:08:26.151654+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "vision: NO - photo rejected for 'Ukraine is bowed but still unbroken as freezing we' (, the photo depicts women in traditional attire in a sunny, green forest setting, which does not relate to the headline about freezing weather in Ukra)",
-      "created_at": "2026-11-28T07:08:26.150157+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-28T07:08:22.374329+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine'",
-      "created_at": "2026-11-28T07:08:22.232916+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-28T07:08:22.054331+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 5 result(s) for 'Ukraine'",
-      "created_at": "2026-11-28T07:08:21.541901+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:21.506752+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:21.505714+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: topical search found nothing for 'Ukraine is bowed but still unbroken as freezing we' - trying entity search 'Ukraine'",
-      "created_at": "2026-11-28T07:08:21.504682+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/59868657/r/il/963d84/7056148439/il_fullxfull.7056148439_ggte.jpg (page: https://www.etsy.com/listing/1744642482/jujutsu-kaisen-cosplay-suguru-geto-and | Jujutsu Kaisen Sugu - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:21.502791+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/54689242/c/1080/1080/0/389/il/8f799a/6575029756/il_800x800.6575029756_fx4n. (page: https://shopee.ph/Jujutsu-Kaisen-cosplay-costume-Geto-Suguru-cosplay-Set-and-wig-Cassock-Halloween-c - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:21.501594+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/59868657/r/il/2bcad0/7008166944/il_1080xN.7008166944_o2gm.jpg (page: https://www.etsy.com/market/jujutsu_kaisen_geto_cosplay | Jujutsu Kaisen Suguru Geto Cosplay Costume - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:21.500470+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://i.etsystatic.com/55367214/c/2266/2266/0/83/il/e9870d/6402696266/il_800x800.6402696266_n3zt.j (page: https://www.etsy.com/listing/4333057921/jujutsu-kaisen-suguru-geto-cosplay | Jujutsu Kaisen Geto Cos - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:21.499310+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 4 candidate(s) for 'Ukraine bowed but still unbroken'",
-      "created_at": "2026-11-28T07:08:21.496930+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine bowed but still unbroken'",
-      "created_at": "2026-11-28T07:08:21.366636+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine bowed but still unbroken'",
-      "created_at": "2026-11-28T07:08:21.235992+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine bowed but still unbroken'",
-      "created_at": "2026-11-28T07:08:21.146410+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:20.771460+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:20.769916+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://wallpapers.com/images/hd/black-screen-background-0hs654ce3dfbthdl.jpg (page: [500+] Black Screen Backgrounds | Wallpapers.com - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:20.754882+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "bing-images: 1 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:20.731872+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "google-images: 0 candidate(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:20.580979+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "wikimedia: search HTTP 429 for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:20.449106+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "openverse: 0 result(s) for 'Ukraine is bowed but still unbroken as freezing weather sets'",
-      "created_at": "2026-11-28T07:08:20.366042+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pixabay: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:19.895082+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "pexels: API key not configured - skipping",
-      "created_at": "2026-11-28T07:08:19.894046+00:00",
-      "card": ""
-    },
-    {
-      "level": "info",
-      "message": "photo: rejected (irrelevant to 'Ukraine is bowed but still unbroken as freezing we'): https://assets.unsw.press/media/images/9781510756632.original.jpg (page: https://www.roadandtrack.com/car-culture/car-accessories/g37678498/road-trip-books-to-inspire-you-to - only 0 of 9 key entities in the source page)",
-      "created_at": "2026-11-28T07:08:19.892949+00:00",
       "card": ""
     }
   ]
