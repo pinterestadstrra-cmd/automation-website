@@ -1,8 +1,8 @@
 {
   "run_card_now": "",
   "test_card_now": "",
-  "runs": 200,
-  "last_run": "2026-11-28T03:56:01.919024+00:00",
+  "runs": 201,
+  "last_run": "2026-11-28T04:57:09.018454+00:00",
   "bsky_post_counts": {
     "2026-11-24": {
       "primonewstoday.bsky.social": 17
@@ -386,23 +386,23 @@
     },
     "Adsterra Blogger": {
       "success": 71,
-      "fail": 27,
+      "fail": 28,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T03:56:29.678269+00:00"
+      "last_run": "2026-11-28T04:58:07.513517+00:00"
     },
     "mastodon.social": {
       "success": 18,
-      "fail": 40,
+      "fail": 41,
       "last_ok": false,
       "last_error": "post failed or skipped",
-      "last_run": "2026-11-28T03:58:35.614503+00:00"
+      "last_run": "2026-11-28T04:58:45.879297+00:00"
     }
   },
   "file_card_runs": {
     "BlueSky Trend": "2026-11-24T01:06:35.755799+00:00",
-    "Adsterra Blogger": "2026-11-28T03:56:29.678273+00:00",
-    "mastodon.social": "2026-11-28T03:58:35.614509+00:00"
+    "Adsterra Blogger": "2026-11-28T04:58:07.513520+00:00",
+    "mastodon.social": "2026-11-28T04:58:45.879300+00:00"
   },
   "file_card_runs_today": {
     "BlueSky Trend": {
@@ -411,11 +411,11 @@
     },
     "Adsterra Blogger": {
       "date": "2026-11-28",
-      "count": 3
+      "count": 4
     },
     "mastodon.social": {
       "date": "2026-11-28",
-      "count": 3
+      "count": 4
     }
   },
   "consecutive_failures": 0,
@@ -424,7 +424,7 @@
       "level": "error",
       "code": "health",
       "message": "Blogger refresh token missing - cannot publish",
-      "time": "2026-11-28T03:56:01.920749+00:00"
+      "time": "2026-11-28T04:57:09.020585+00:00"
     }
   ],
   "posted_urls": [],
@@ -534,11 +534,11 @@
       "next_retry": "2026-11-24T00:57:11.858989+00:00"
     },
     "Adsterra Blogger": {
-      "fails": 10,
+      "fails": 11,
       "next_retry": ""
     },
     "mastodon.social": {
-      "fails": 10,
+      "fails": 11,
       "next_retry": ""
     }
   },
@@ -642,11 +642,11 @@
     ]
   },
   "mastodon_post_counts": {
-    "2026-11-26": {
-      "mastodon.social": 6
-    },
     "2026-11-25": {
       "mastodon.social": 9
+    },
+    "2026-11-26": {
+      "mastodon.social": 6
     }
   },
   "last_mastodon_post_at": {

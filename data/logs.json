@@ -2,6 +2,264 @@
   {
     "level": "info",
     "message": "worker run finished",
+    "created_at": "2026-11-28T04:58:45.997659+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "trending (bluesky): [\"Most famous person you're related to\", 'Congress nears ban on Chinese vehicles', 'Israeli strikes in Gaza', 'NBA Cup group play games', 'Thanksgiving Day celebrations']",
+    "created_at": "2026-11-28T04:58:45.990654+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T04:58:45.879332+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T04:58:45.877740+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "card 'mastodon.social': mastodon submit failed",
+    "created_at": "2026-11-28T04:58:45.875820+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T04:58:35.873405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T04:58:35.714122+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T04:58:35.711393+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon submit: empty result, retry 1/2 in 5s",
+    "created_at": "2026-11-28T04:58:30.401102+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon status post failed (HTTP 403)",
+    "created_at": "2026-11-28T04:58:30.398714+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "mastodon: media upload failed - posting text-only",
+    "created_at": "2026-11-28T04:58:30.223165+00:00",
+    "card": ""
+  },
+  {
+    "level": "warning",
+    "message": "mastodon media upload failed (HTTP 403)",
+    "created_at": "2026-11-28T04:58:30.220806+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - ACCEPTED real photo (from bing-images)",
+    "created_at": "2026-11-28T04:58:23.332220+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "promo category: war news",
+    "created_at": "2026-11-28T04:58:23.330996+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo: ACCEPTED relevant photo for 'Ukraine war briefing: Zelenskyy criticises Trump for calling': https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/09/1200/675/zelenskyy-4. (from bing-images, query 'Ukraine war briefing: Zelenskyy criticises Trump for calling Putin his ‘friend’; Kyiv deploys new laser weapon - The Guardian', page: https://www.foxnews.com/politics/trump-announces-face-face-talks-putin-next-week-three-way-talks-ukr - matches 5 key entities (call, putin, trump, ukraine))",
+    "created_at": "2026-11-28T04:58:23.329678+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "vision: YES - photo matches 'Ukraine war briefing: Zelenskyy criticises Trump f' (. The photo shows Ukrainian President Volodymyr Zelenskyy, who is the subject of the news headline regarding his comments on Donald Trump and Vladimir)",
+    "created_at": "2026-11-28T04:58:23.327838+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "bing-images: 4 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+    "created_at": "2026-11-28T04:58:08.979773+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "google-images: 0 candidate(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+    "created_at": "2026-11-28T04:58:08.862595+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "wikimedia: search HTTP 429 for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+    "created_at": "2026-11-28T04:58:08.745808+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "openverse: 0 result(s) for 'Ukraine war briefing: Zelenskyy criticises Trump for calling'",
+    "created_at": "2026-11-28T04:58:08.684685+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pixabay: API key not configured - skipping",
+    "created_at": "2026-11-28T04:58:08.326642+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "pexels: API key not configured - skipping",
+    "created_at": "2026-11-28T04:58:08.325625+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Ukraine war briefing: Zelenskyy criticises Trump for calling' - rejected (no og:image)",
+    "created_at": "2026-11-28T04:58:08.324352+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "og:image: no publisher redirect (Google News page, final URL https://news.google.com/rss/articles/CBMi5wFBVV95cUxOcDZrYTlOdTVmYnJEelBReDNXdF9CRXAyZHUyVlhQNjczRTk0Q0RNM0FYdWlHY3RQc3R) - skipping, og:image would be the logo",
+    "created_at": "2026-11-28T04:58:08.322046+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran war updates: IRGC says tanker hit in Hormuz, drone down' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T04:58:08.032314+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "photo candidate: 'Iran War Updates: U.S. forces disable commercial ship that a' - skipped (already prepared in the ready queue)",
+    "created_at": "2026-11-28T04:58:08.030405+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T04:58:07.517125+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'mastodon.social': settings type=mastodon_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=False others=False 0/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0 instance=mastodon.social",
+    "created_at": "2026-11-28T04:58:07.515551+00:00",
+    "card": "mastodon.social"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger' ran (skipped: post failed or skipped)",
+    "created_at": "2026-11-28T04:58:07.513554+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': retries exhausted (2) - waiting for the normal interval",
+    "created_at": "2026-11-28T04:58:07.512320+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T04:58:07.510829+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: published 773x435 (ratio 1.78) - unchanged",
+    "created_at": "2026-11-28T04:58:07.410316+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "prepare_bsky_image: original 773x435 (ratio 1.78) - kept, no crop",
+    "created_at": "2026-11-28T04:58:07.409068+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': posted from ready queue - 'Iran War Updates: U.S. forces disable commercial ship that a'",
+    "created_at": "2026-11-28T04:58:07.406934+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T04:58:07.200819+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': reply run done: 0 own + 0 others replies sent (lookback 7 day(s))",
+    "created_at": "2026-11-28T04:58:07.199387+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "warning",
+    "message": "bluesky login failed for primonewstoday.bsky.social: 401 AccountTakedown: Account has been taken down",
+    "created_at": "2026-11-28T04:58:07.197662+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
+    "created_at": "2026-11-28T04:58:06.021705+00:00",
+    "card": "Adsterra Blogger"
+  },
+  {
+    "level": "info",
+    "message": "ai health: groq ok (openai/gpt-oss-120b)",
+    "created_at": "2026-11-28T04:58:06.019764+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: gemini ok (gemini-4-hydrogen)",
+    "created_at": "2026-11-28T04:58:05.718583+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
+    "created_at": "2026-11-28T04:57:09.021963+00:00",
+    "card": ""
+  },
+  {
+    "level": "error",
+    "message": "[health] Blogger refresh token missing - cannot publish",
+    "created_at": "2026-11-28T04:57:09.020594+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run #201 started (--only bluesky)",
+    "created_at": "2026-11-28T04:57:09.018479+00:00",
+    "card": ""
+  },
+  {
+    "level": "info",
+    "message": "worker run finished",
     "created_at": "2026-11-28T03:58:35.781185+00:00",
     "card": ""
   },
@@ -940,263 +1198,5 @@
     "message": "card 'Adsterra Blogger': settings type=bluesky_post posts/day=24 posts/run=1 interval=15m image_ratio=16:9 tone=dramatic spread=even replies: own=True others=True 10/run lookback=7d days=[0, 1, 2, 3, 4, 5, 6] jitter=10m week_cap=0 month_cap=0 retry=30m/2 replies/day=0",
     "created_at": "2026-11-28T02:58:26.340955+00:00",
     "card": "Adsterra Blogger"
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T02:58:26.338187+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T02:58:25.947867+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T02:58:07.550884+00:00",
-    "card": ""
-  },
-  {
-    "level": "error",
-    "message": "[health] Blogger refresh token missing - cannot publish",
-    "created_at": "2026-11-28T02:58:07.549492+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #199 started (--only bluesky)",
-    "created_at": "2026-11-28T02:58:07.547858+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T02:52:32.431395+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Gates Foundation funds AI school tools', 'Victoria votes in state election', 'Thanksgiving Day celebrations', \"WWE's AI-voiced Bronson Reed tribute\", \"Most famous person you're related to\"]",
-    "created_at": "2026-11-28T02:52:32.420470+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "no card due - nothing published this run",
-    "created_at": "2026-11-28T02:52:32.374941+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: groq ok (openai/gpt-oss-120b)",
-    "created_at": "2026-11-28T02:52:32.371796+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: gemini ok (gemini-4-hydrogen)",
-    "created_at": "2026-11-28T02:52:32.008093+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "ai health: Gemini 10 key(s), Groq 2 key(s) configured",
-    "created_at": "2026-11-28T02:52:30.092423+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] Mastodon card(s) exist but no Mastodon account - add one in the Mastodon tab",
-    "created_at": "2026-11-28T02:52:30.091147+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "[health] No Bluesky accounts - posts and replies are skipped",
-    "created_at": "2026-11-28T02:52:30.090042+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run #198 started (--only blogger)",
-    "created_at": "2026-11-28T02:52:30.088613+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "worker run finished",
-    "created_at": "2026-11-28T02:06:06.412502+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "trending (bluesky): ['Gates Foundation funds AI school tools', 'Bronson Reed dies at 38', \"Most famous person you're related to\", 'Hackers breach Air Force cloud platform', 'Army detonates lead azide in Iowa']",
-    "created_at": "2026-11-28T02:06:06.405588+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social' ran (skipped: post failed or skipped)",
-    "created_at": "2026-11-28T02:06:06.385072+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "info",
-    "message": "card 'mastodon.social': retries exhausted (2) - waiting for the normal interval",
-    "created_at": "2026-11-28T02:06:06.383667+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "card 'mastodon.social': mastodon submit failed",
-    "created_at": "2026-11-28T02:06:06.378362+00:00",
-    "card": "mastodon.social"
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T02:05:56.375609+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T02:05:56.186983+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T02:05:56.183636+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon submit: empty result, retry 1/2 in 5s",
-    "created_at": "2026-11-28T02:05:50.613104+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon status post failed (HTTP 403)",
-    "created_at": "2026-11-28T02:05:50.610605+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "mastodon: media upload failed - posting text-only",
-    "created_at": "2026-11-28T02:05:50.276840+00:00",
-    "card": ""
-  },
-  {
-    "level": "warning",
-    "message": "mastodon media upload failed (HTTP 403)",
-    "created_at": "2026-11-28T02:05:50.274241+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo candidate: 'Trump: Iran war will be over ‘sort of whenever I want it to ' - ACCEPTED real photo (from bing-images)",
-    "created_at": "2026-11-28T02:05:44.136516+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "promo category: war news",
-    "created_at": "2026-11-28T02:05:44.135417+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: ACCEPTED relevant photo for 'Trump: Iran war will be over ‘sort of whenever I want it to ': https://media.cnn.com/api/v1/images/stellar/prod/still-22502621-3045094-347-still-crop.jpg?c=16x9&q= (from bing-images, query 'Trump: Iran war will be over ‘sort of whenever I want it to be’', page: https://www.msn.com/en-in/news/world/trump-says-iran-war-could-be-over-soon-reveals-big-strait-of-ho - matches 3 key entities (iran, trump, war))",
-    "created_at": "2026-11-28T02:05:44.134157+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "vision: YES - photo matches 'Trump: Iran war will be over ‘sort of whenever I w' (\n\nReason: The photo features Donald Trump speaking at a podium with presidential seals, which matches the subject of the news headline.)",
-    "created_at": "2026-11-28T02:05:44.132505+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:35.107073+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.985211+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.876078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "openverse: 0 result(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.857979+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pixabay: API key not configured - skipping",
-    "created_at": "2026-11-28T02:05:34.810509+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "pexels: API key not configured - skipping",
-    "created_at": "2026-11-28T02:05:34.809308+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://thepoliticalprepper.com/wp-content/uploads/2026/10/President_Donald_Trump_Signing_An_Executi (page: https://www.dailycorinthian.com/news/national/trump/image_450379d6-fe37-57af-9046-6ead93aa3c92.html  - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-28T02:05:34.808078+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://c.ndtvimg.com/2026-11/190s7vhc_trump-bloomberg_625x300_02_November_26.jpeg (page: https://thepoliticalprepper.com/trump-americans-remember-family-god-holiday-season/ | Trump Bets On  - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-28T02:05:34.806842+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://bloximages.chicago2.vip.townnews.com/wvnews.com/content/tncms/assets/v3/editorial/6/85/68529 (page: https://www.ndtv.com/world-news/trump-bets-on-his-rallies-speeches-for-republicans-midterms-win-1226 - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-28T02:05:34.805442+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "photo: rejected (irrelevant to 'Trump: Iran war will be over ‘sort of whenever I w'): https://nationalsecurityjournal.org/wp-content/uploads/2026/11/Donald-Trump-GOP-Creative-Commons-Pho (page: https://www.wvnews.com/newsfeed/us/trump/image_6852999f-f750-5284-ae27-908298237cba.html | Something - only 1 of 7 key entities in the source page)",
-    "created_at": "2026-11-28T02:05:34.804216+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "bing-images: 4 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.801152+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "google-images: 0 candidate(s) for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.651484+00:00",
-    "card": ""
-  },
-  {
-    "level": "info",
-    "message": "wikimedia: search HTTP 429 for 'Trump: Iran war will be over ‘sort of whenever I want it to '",
-    "created_at": "2026-11-28T02:05:34.467289+00:00",
-    "card": ""
   }
 ]
